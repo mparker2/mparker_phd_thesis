@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with matplotlib (http://matplotlib.org/) -->
+<svg height="288pt" version="1.1" viewBox="0 0 432 288" width="432pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+*{stroke-linecap:butt;stroke-linejoin:round;}
+  </style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 288 
+L 432 288 
+L 432 0 
+L 0 0 
+z
+" style="fill:#ffffff;"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path clip-path="url(#p2e2382974a)" d="M 205.003203 225.680341 
+C 190.809156 217.289012 179.044557 205.340964 170.873841 191.018786 
+C 162.703125 176.696608 158.405061 160.488947 158.405061 144 
+C 158.405061 127.511053 162.703125 111.303392 170.873841 96.981214 
+C 179.044557 82.659036 190.809156 70.710988 205.003203 62.319659 
+C 191.627346 56.905328 177.124059 54.858597 162.772249 56.359947 
+C 148.420438 57.861297 134.654728 62.865262 122.688985 70.93059 
+C 110.723242 78.995919 100.919832 89.878363 94.143225 102.618305 
+C 87.366617 115.358247 83.822032 129.569874 83.822032 144 
+C 83.822032 158.430126 87.366617 172.641753 94.143225 185.381695 
+C 100.919832 198.121637 110.723242 209.004081 122.688985 217.06941 
+C 134.654728 225.134738 148.420438 230.138703 162.772249 231.640053 
+C 177.124059 233.141403 191.627346 231.094672 205.003203 225.680341 
+" style="fill:#0072b2;"/>
+   </g>
+   <g id="patch_3">
+    <path clip-path="url(#p2e2382974a)" d="M 205.003203 62.319659 
+C 221.268418 68.903556 235.202184 80.198169 245.009728 94.748667 
+C 254.817271 109.299164 260.058605 126.452781 260.058605 144 
+C 260.058605 161.547219 254.817271 178.700836 245.009728 193.251333 
+C 235.202184 207.801831 221.268418 219.096444 205.003203 225.680341 
+C 219.411437 234.198294 235.820196 238.754129 252.557458 238.883614 
+C 269.294721 239.0131 285.772003 234.711685 300.310301 226.417673 
+C 314.848599 218.123662 326.936743 206.128674 335.342977 191.654975 
+C 343.749211 177.181276 348.177968 160.737764 348.177968 144 
+C 348.177968 127.262236 343.749211 110.818724 335.342977 96.345025 
+C 326.936743 81.871326 314.848599 69.876338 300.310301 61.582327 
+C 285.772003 53.288315 269.294721 48.9869 252.557458 49.116386 
+C 235.820196 49.245871 219.411437 53.801706 205.003203 62.319659 
+" style="fill:#d55e00;"/>
+   </g>
+   <g id="patch_4">
+    <path clip-path="url(#p2e2382974a)" d="M 205.003203 225.680341 
+C 221.268418 219.096444 235.202184 207.801831 245.009728 193.251333 
+C 254.817271 178.700836 260.058605 161.547219 260.058605 144 
+C 260.058605 126.452781 254.817271 109.299164 245.009728 94.748667 
+C 235.202184 80.198169 221.268418 68.903556 205.003203 62.319659 
+C 190.809156 70.710988 179.044557 82.659036 170.873841 96.981214 
+C 162.703125 111.303392 158.405061 127.511053 158.405061 144 
+C 158.405061 160.488947 162.703125 176.696608 170.873841 191.018786 
+C 179.044557 205.340964 190.809156 217.289012 205.003203 225.680341 
+" style="fill:#009e73;stroke:#009e73;stroke-linejoin:miter;stroke-width:0.3;"/>
+   </g>
+   <g id="text_1">
+    <text style="fill:#262626;font-family:Arial;font-size:24px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 121.113546, 150.204375)" x="121.113546" y="150.204375">549</text>
+   </g>
+   <g id="text_2">
+    <text style="fill:#262626;font-family:Arial;font-size:24px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 304.118287, 150.204375)" x="304.118287" y="150.204375">720</text>
+   </g>
+   <g id="text_3">
+    <text style="fill:#262626;font-family:Arial;font-size:24px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 209.231833, 150.204375)" x="209.231833" y="150.204375">523</text>
+   </g>
+   <g id="text_4">
+    <text style="fill:#262626;font-family:Arial;font-size:28.8px;font-style:normal;font-weight:normal;" transform="translate(103.162318 261.545524)">NMM</text>
+    <text style="fill:#262626;font-family:Arial;font-size:28.8px;font-style:normal;font-weight:normal;" transform="translate(61.474318 292.006924)">downreg</text>
+   </g>
+   <g id="text_5">
+    <text style="fill:#262626;font-family:Arial;font-size:28.8px;font-style:normal;font-weight:normal;" transform="translate(253.291515 268.313691)">Berberine</text>
+    <text style="fill:#262626;font-family:Arial;font-size:28.8px;font-style:normal;font-weight:normal;" transform="translate(253.291515 298.775091)">downreg</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p2e2382974a">
+   <rect height="230.16" width="304.743029" x="63.628485" y="28.92"/>
+  </clipPath>
+ </defs>
+</svg>
