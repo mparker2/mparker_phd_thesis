@@ -9,12 +9,7 @@ TODO:
   * Fix tables so they are numbered separately from figures
   * Change expression vs splice percent scatter so that expression is logCPM normalised
   * NMM splicing section - figures:
-   * Diagram showing splice site classification.
-   * Frequency of different splice site classes
-   * Relative expression of different splice site classes
-   * Frequency of different splice site classes in DE set.
    * G Quadruplex enrichments within or flanking DE spliced
-   * Change in percent spliced over EXTs.
  * Discussion
  * References
  * Appendix:
