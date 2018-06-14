@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"
+  "http://www.w3.org/TR/SVG/DTD/svg10.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny"
+     width="777px" height="569px" viewport-fill="#ffffff" >
+<desc>
+Created with Chemtool 1.6.13 from file /home/matthew/Documents/papers_and_thesis/thesis/introduction/figures/raw/drugs/berberine.svg 
+</desc>
+<g>
+<line x1="267" y1="318" x2="322" y2="286"
+style="stroke-width:2; stroke:#000000" />
+<line x1="322" y1="286" x2="377" y2="318"
+style="stroke-width:2; stroke:#000000" />
+<line x1="368" y1="320" x2="324" y2="295"
+style="stroke-width:2; stroke:#000000" />
+<line x1="377" y1="318" x2="377" y2="382"
+style="stroke-width:2; stroke:#000000" />
+<line x1="377" y1="382" x2="322" y2="414"
+style="stroke-width:2; stroke:#000000" />
+<line x1="324" y1="405" x2="368" y2="380"
+style="stroke-width:2; stroke:#000000" />
+<line x1="322" y1="414" x2="267" y2="382"
+style="stroke-width:2; stroke:#000000" />
+<line x1="267" y1="382" x2="267" y2="318"
+style="stroke-width:2; stroke:#000000" />
+<line x1="274" y1="325" x2="274" y2="375"
+style="stroke-width:2; stroke:#000000" />
+<line x1="377" y1="318" x2="432" y2="286"
+style="stroke-width:2; stroke:#000000" />
+<line x1="432" y1="286" x2="487" y2="318"
+style="stroke-width:2; stroke:#000000" />
+<line x1="478" y1="320" x2="434" y2="295"
+style="stroke-width:2; stroke:#000000" />
+<line x1="487" y1="318" x2="487" y2="369"
+style="stroke-width:2; stroke:#000000" />
+<line x1="476" y1="387" x2="432" y2="414"
+style="stroke-width:2; stroke:#000000" />
+<line x1="434" y1="405" x2="467" y2="385"
+style="stroke-width:2; stroke:#000000" />
+<line x1="432" y1="414" x2="377" y2="382"
+style="stroke-width:2; stroke:#000000" />
+<line x1="497" y1="387" x2="542" y2="414"
+style="stroke-width:2; stroke:#000000" />
+<line x1="542" y1="414" x2="596" y2="382"
+style="stroke-width:2; stroke:#000000" />
+<line x1="596" y1="382" x2="596" y2="318"
+style="stroke-width:2; stroke:#000000" />
+<line x1="596" y1="318" x2="542" y2="288"
+style="stroke-width:2; stroke:#000000" />
+<line x1="542" y1="288" x2="487" y2="318"
+style="stroke-width:2; stroke:#000000" />
+<line x1="542" y1="288" x2="542" y2="224"
+style="stroke-width:2; stroke:#000000" />
+<line x1="549" y1="231" x2="549" y2="281"
+style="stroke-width:2; stroke:#000000" />
+<line x1="542" y1="224" x2="596" y2="192"
+style="stroke-width:2; stroke:#000000" />
+<line x1="596" y1="192" x2="650" y2="224"
+style="stroke-width:2; stroke:#000000" />
+<line x1="641" y1="226" x2="598" y2="201"
+style="stroke-width:2; stroke:#000000" />
+<line x1="650" y1="224" x2="650" y2="287"
+style="stroke-width:2; stroke:#000000" />
+<line x1="650" y1="287" x2="596" y2="317"
+style="stroke-width:2; stroke:#000000" />
+<line x1="598" y1="308" x2="641" y2="285"
+style="stroke-width:2; stroke:#000000" />
+<line x1="596" y1="192" x2="610" y2="143"
+style="stroke-width:2; stroke:#000000" />
+<line x1="650" y1="224" x2="690" y2="194"
+style="stroke-width:2; stroke:#000000" />
+<line x1="626" y1="132" x2="676" y2="132"
+style="stroke-width:2; stroke:#000000" />
+<line x1="676" y1="132" x2="695" y2="177"
+style="stroke-width:2; stroke:#000000" />
+<line x1="322" y1="414" x2="322" y2="465"
+style="stroke-width:2; stroke:#000000" />
+<line x1="267" y1="382" x2="222" y2="408"
+style="stroke-width:2; stroke:#000000" />
+<line x1="212" y1="426" x2="212" y2="464"
+style="stroke-width:2; stroke:#000000" />
+<line x1="332" y1="483" x2="366" y2="503"
+style="stroke-width:2; stroke:#000000" />
+<text x="606" y="140" style="font-family:Helvetica; font-size:18pt; fill:#000000;text-anchor:start;" > 
+<tspan>
+O</tspan>
+</text>
+<text x="692" y="196" style="font-family:Helvetica; font-size:18pt; fill:#000000;text-anchor:start;" > 
+<tspan>
+O</tspan>
+</text>
+<text x="204" y="422" style="font-family:Helvetica; font-size:18pt; fill:#000000;text-anchor:start;" > 
+<tspan>
+O</tspan>
+</text>
+<text x="314" y="486" style="font-family:Helvetica; font-size:18pt; fill:#000000;text-anchor:start;" > 
+<tspan>
+O</tspan>
+</text>
+<text x="479" y="390" style="font-family:Helvetica; font-size:18pt; fill:#000000;text-anchor:start;" > 
+<tspan>
+N+</tspan>
+</text>
+<text x="204" y="485" style="font-family:Helvetica; font-size:18pt; fill:#000000;text-anchor:start;" > 
+<tspan>
+CH3</tspan>
+</text>
+<text x="369" y="518" style="font-family:Helvetica; font-size:18pt; fill:#000000;text-anchor:start;" > 
+<tspan>
+CH3</tspan>
+</text>
+</g>
+</svg>
