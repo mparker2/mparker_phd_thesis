@@ -106,7 +106,7 @@ Harkness & Mittermaier showed that sequences which are able to form a variety of
 
 \newpage
 
-![**PG4 Register does not vary over CDSs**](figures/pg4_register.svg)
+![**PG4 Register does not vary over CDSs** **a)** Diagram showing how a sequence with multiple G-runs can form multiple overlapping PG4 registers and topologies. **b)** Cumulative metagene profiles showing distribution of PG4 clusters with different numbers of PG4 registers on the coding strand (top panel) and template strand (bottom panel). \label{g4netx}](figures/pg4_register.svg)
 
 \newpage
 
