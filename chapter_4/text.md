@@ -48,7 +48,7 @@ Finally, we correlated the density of two and three or more tetrad PG4s in diffe
 
 \newpage
 
-![**PG4 density of Plant Genomes** **a)** and **b)** Scatter plots showing log10 genome size vs. the average **a)** three tetrad or more and **b)** two tetrad PG4 density per Megabase for 22 Monocotyledons, 21 Dicotyledons, 3 Non-flowering plants and 4 metazoans. Plant genomes are much poorer in three tetrad PG4s than the metazoans *H. sapiens* and *M. musculus*, but have more comparable densities of two tetrad PG4s. **c)** Scatter plot showing the relationship between three tetrad and two tetrad PG4 densities. *M. musculus* and *H. sapiens* do not follow the same pattern of relative PG4 densities as plants. \label{pg4_genomes}](figures/pg4_density_plant_genomes.svg){height=750px}
+![**PG4 density of Plant Genomes** **a)** and **b)** Scatter plots showing log10 genome size vs. the average **a)** three tetrad or more and **b)** two tetrad PG4 density per Megabase for 22 Monocotyledons, 21 Dicotyledons, 3 Non-flowering plants and 4 metazoans. Plant genomes are much poorer in three tetrad PG4s than the metazoans *H. sapiens* and *M. musculus*, but have more comparable densities of two tetrad PG4s. **c)** Scatter plot showing the relationship between three tetrad and two tetrad PG4 densities. *M. musculus* and *H. sapiens* do not follow the same pattern of relative PG4 densities as plants. \label{pg4_genomes}](chapter_4/figures/pg4_density_plant_genomes.png){height=750px}
 
 \newpage
 
@@ -60,7 +60,7 @@ In order to identify whether these PG4s are simply a product of higher local GC 
 
 \newpage
 
-![**Metagene Profile of GC content and PG4 density** Metagene profiles showing the **a)** G content, **b)** three or more tetrad PG4 content and **c)** two tetrad PG4 content of protein coding genes on the coding (blue) and template (orange) strands. Green and yellow lines show the average coding and template PG4 contents for genes where the sequence has been shuffled in 20bp windows, maintaining mononucleotide and dinucleotide frequencies. G content metaprofiles are identical to the real metaprofiles in these shuffled controls. \label{pg4_genomes}](figures/gc_g4_content_metagene.svg){height=750px}
+![**Metagene Profile of GC content and PG4 density** Metagene profiles showing the **a)** G content, **b)** three or more tetrad PG4 content and **c)** two tetrad PG4 content of protein coding genes on the coding (blue) and template (orange) strands. Green and yellow lines show the average coding and template PG4 contents for genes where the sequence has been shuffled in 20bp windows, maintaining mononucleotide and dinucleotide frequencies. G content metaprofiles are identical to the real metaprofiles in these shuffled controls. \label{pg4_genomes}](chapter_4/figures/gc_g4_content_metagene.png){height=750px}
 
 \newpage
 
@@ -74,7 +74,7 @@ As shown in Fig \ref{metagene}c, there is a higher density of PG4s at the start 
 
 \newpage
 
-![**Reverse Translation Simulation shows that PG4s are enriched at the Start Codon proximal region of the template strand.** Metagene profiles showing **a)** G content **b)** Quadparser PG4s and **c)** G4Seeqer PG4s for real CDS regions (blue) vs. reverse translation simulated potential coding sequences (PCS) (orange). \label{revtrans}](figures/reverse_translation.svg){height=750px}
+![**Reverse Translation Simulation shows that PG4s are enriched at the Start Codon proximal region of the template strand.** Metagene profiles showing **a)** G content **b)** Quadparser PG4s and **c)** G4Seeqer PG4s for real CDS regions (blue) vs. reverse translation simulated potential coding sequences (PCS) (orange). \label{revtrans}](chapter_4/figures/reverse_translation.png){height=750px}
 
 \newpage
 
@@ -90,7 +90,7 @@ Analysis of the frame of the first G in G-runs vs. their hardcoded status identi
 
 \newpage
 
-![**54% of CDS PG4 G-runs are hardcoded by protein sequence.** **a)** Frequency plot showing the total number of G-runs contributing to PG4s which are hardcoded and repetitive. Left and right panels show frequencies on coding and template strands, respectively. Hardcoded G-runs are defined as those GG dinucleotides that cannot be removed from the sequence without changing the amino acid sequence which is coded for. Repetitive G-runs are defined as those which contribute to PG4s where all G-runs are part of codons which encode the same sequence. **b)** Frequency plot showing the total number of hardcoded G-runs for each overlapping PG4 register on the coding (blue) and template (orange) strands, respectively. **c)** Frequency plots showing start frame of CDS G-runs vs. hardcoded status. Left and right panels show frequencies on coding and template strands, respectively. \label{hardcoded}](figures/pg4_g_run_hardcoded_freq.svg){height=750px}
+![**54% of CDS PG4 G-runs are hardcoded by protein sequence.** **a)** Frequency plot showing the total number of G-runs contributing to PG4s which are hardcoded and repetitive. Left and right panels show frequencies on coding and template strands, respectively. Hardcoded G-runs are defined as those GG dinucleotides that cannot be removed from the sequence without changing the amino acid sequence which is coded for. Repetitive G-runs are defined as those which contribute to PG4s where all G-runs are part of codons which encode the same sequence. **b)** Frequency plot showing the total number of hardcoded G-runs for each overlapping PG4 register on the coding (blue) and template (orange) strands, respectively. **c)** Frequency plots showing start frame of CDS G-runs vs. hardcoded status. Left and right panels show frequencies on coding and template strands, respectively. \label{hardcoded}](chapter_4/figures/pg4_g_run_hardcoded_freq.png){height=750px}
 
 \newpage
 
@@ -98,7 +98,7 @@ To identify the location of these non-hardcoded template PG4s in the CDS, we plo
 
 \newpage
 
-![**Non-hardcoded PG4s levels are greater at the start codon proximal region of CDSs, on the template strand.** **a)** Cumulative metagene profiles showing the distribution of PG4s with different numbers of hardcoded G-runs on the **a)** coding and **b)** template strands, respectively. \label{hc_metagene}](figures/cds_hardcoded_metagene.svg)
+![**Non-hardcoded PG4s levels are greater at the start codon proximal region of CDSs, on the template strand.** **a)** Cumulative metagene profiles showing the distribution of PG4s with different numbers of hardcoded G-runs on the **a)** coding and **b)** template strands, respectively. \label{hc_metagene}](chapter_4/figures/cds_hardcoded_metagene.png)
 
 \newpage
 
@@ -106,7 +106,7 @@ Harkness & Mittermaier showed that sequences which are able to form a variety of
 
 \newpage
 
-![**PG4 Register does not vary over CDSs** **a)** Diagram showing how a sequence with multiple G-runs can form multiple overlapping PG4 registers and topologies. **b)** Cumulative metagene profiles showing distribution of PG4 clusters with different numbers of PG4 registers on the coding strand (top panel) and template strand (bottom panel). \label{g4netx}](figures/pg4_register.svg)
+![**PG4 Register does not vary over CDSs** **a)** Diagram showing how a sequence with multiple G-runs can form multiple overlapping PG4 registers and topologies. **b)** Cumulative metagene profiles showing distribution of PG4 clusters with different numbers of PG4 registers on the coding strand (top panel) and template strand (bottom panel). \label{g4netx}](chapter_4/figures/pg4_register.png)
 
 \newpage
 
@@ -116,7 +116,7 @@ On the template strand, we found that the most common PG4 G-run motif was prolin
 
 \newpage
 
-![**Protein motifs that are coded by PG4 G-runs.** Frequency plots showing the 10 most common amino acids motifs which PG4 G-runs contribute to the coding of. Left and right panels are for coding and template strands, respectively. Bars are coloured by the frequency of **a)** hardcoded and **b)** repetitive G-runs, respectively. \label{protmotif}](figures/pg4_protein_motifs.svg){height=750px}
+![**Protein motifs that are coded by PG4 G-runs.** Frequency plots showing the 10 most common amino acids motifs which PG4 G-runs contribute to the coding of. Left and right panels are for coding and template strands, respectively. Bars are coloured by the frequency of **a)** hardcoded and **b)** repetitive G-runs, respectively. \label{protmotif}](chapter_4/figures/pg4_protein_motifs.png){height=750px}
 
 \newpage
 
@@ -135,3 +135,5 @@ To further explore the levels of hardcoded vs. non-hardcoded PG4s in Arabidopsis
 The most common amino acids which contribute to hardcoded PG4s are glycine (codon GGN) on the coding strand, and proline (codon CCN) on the template strand. G-runs encoding these amino acids also tend to be repetitive, i.e. contribute to PG4s in which all G-runs encode the same amino acid motif. Polyproline and polyglycine rich motifs are common in the Arabidopsis genome. Polyglycine rich proteins (GRPs) are involved in a number of processes, including cell elongation, plant defense, and osmotic or salt stress (Mangeon et al. 2010). A number of RNA-binding GRPs which have RNA chaperone activity are regulated by osmotic stresses and by abscisic acid (Mangeon et al. 2010). Interestingly, the cellular concentration of G4 stabilising potassium cations is increased during these stresses, suggesting that G4s may be more favourable. Mullen et al. have previously suggested that intracellular potassium concentrations might regulate two tetrad G4 formation in Arabidopsis mRNAs, causing conformational changes in the RNA (Mullen et al. 2012). Furthermore, Kim et al. used SELEX to identify that the stress responsive RNA chaperone GRP7 binds preferentially to G-rich single stranded DNA or RNA (Kim et al. 2007), though they did not test whether these formed G4s. It is possible that GRPs are involved in a feedback mechanism, stabilising mRNAs (including their own mRNAs) during stress by either binding to or resolving G4s in the mRNA.
 
 Polyproline rich proteins are often structural proteins, and are a major constituent of the plant cell wall. Proline rich motifs form PG4s in the template strand of DNA. These will not form in the mRNA, but may cause issues for Pol II using transcription. This will be discussed further in the following chapters.
+
+\newpage
