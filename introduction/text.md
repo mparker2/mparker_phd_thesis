@@ -152,10 +152,26 @@ G4s in 3' UTRs have the potential to act as *cis* regulatory elements controllin
 
 \newpage
 
-### Chromatin Remodelling and DNA methylation
+### Chromatin Remodelling
 
 Chromatin conformational dynamics are important regulatory mechanisms for gene expression. The major protein component of chromatin is made up of histones, which assemble into the nucleosomes around which DNA is wrapped. Chromatin remodelling is the process by which modifications are made to histones. These modifications include switching of histone isoforms, covalent modifications, and histone sliding. The latter involves the use of energy from ATP hydrolysis to translocate histones along the DNA polymer without ever removing them (Langst & Manelyte 2015).
 
-One class of remodellers is SWI/SNF complexes, which are able to slide or eject nucleosomes. ATRX is an X-linked SWI/SNF family member, which is mutated in ATR-X syndrome, an intellectual disability disorder. ATRX has been shown to locate at heterochromatic and pericentromeric regions, as well as at telomeres (McDowell et al. 1999). During ATR-X syndrome, global DNA methylation patterns at these regions are disregulated (Gibbons et al. 2000). ATRX mutation also effects gene expression. Gibbons et al. identified gene expression changes in the alpha globin gene cluster in response to ATRX mutation (Gibbons et al. 1991). More recently, Law et al. performed ChIP-seq using an ATRX specific antibody to identify other gene targets. They found that ATRX binds specifically to G-rich tandem repeats which form G4s *in vitro*.
+One class of remodellers is SWI/SNF complexes, which are able to slide or eject nucleosomes. ATRX is an X-linked SWI/SNF family member, which is mutated in ATR-X syndrome, an intellectual disability disorder. ATRX has been shown to locate at heterochromatic and pericentromeric regions, as well as at telomeres (McDowell et al. 1999), regions which are enriched in G-rich PG4 structures. During ATR-X syndrome, global DNA methylation patterns at these regions are disregulated (Gibbons et al. 2000). Downregulation of ATRX during the S-phase of the cell cycle, when DNA replication occurs, results in an increase in the DNA damage response marker gamma-H2AX at telomeric regions (Wong et al. 2010). Heaphy et al. showed that human pancreatic cancers which had lost the expression of ATRX or its partner protein DAXX had elongated telomeres that were characteristic of the Alternative Lengthening of Telomeres pathway. This pathway is telomerase independent, suggesting that ATRX is important for normal telomere repair (Heaphy et al. 2011).
+
+ATRX mutation also effects gene expression. Gibbons et al. identified gene expression changes in the alpha globin gene cluster in response to ATRX mutation (Gibbons et al. 1991). More recently, Law et al. performed ChIP-seq using an ATRX specific antibody to identify other gene targets. They found that ATRX binds specifically to G-rich tandem repeats which form G4s *in vitro*. Furthermore, the strength of the effect of ATRX mutation on gene expression was proportional to the number of tandem G-rich repeats. This suggests that the effect is increased by the number or stability of G4s (Law et al. 2010).
+
+G4 formation is highly dependent upon chromatin status, and G4s isolated by BG4 ChIPseq have been shown to form in regions of open chromatin (Hänsel-Hertsch et al. 2016). Hänsel-Hertsch et al. showed that treatment of cells with the histone deacetylase inhibitors, which cause a relaxation of the chromatin, also increased the number of G4 loci identified by ChIPseq (Hänsel-Hertsch et al. 2016).
+
+## Role of G-Quadruplexes *in planta*
+
+### G-Quadruplex Distribution
+
+### Translational Regulation
+
+### Plant Development
+
+### Stress Response
+
+## Summary
 
 \newpage
