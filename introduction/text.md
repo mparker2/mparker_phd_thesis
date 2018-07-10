@@ -14,11 +14,11 @@ The structure of G4s is highly polymorphic. Quadruplexes can form between multip
 
 \newpage
 
-![**Structure of a G-Quadruplex** **a)** The molecular structure of a G-quartet. Four Guanosines (only guanine base is shown, sugar-phosphate is represented as R) interact through Hoogsteen base pairing around a central monovalent cation. **b)** Cartoon showing the basic structure of a three tetrad G4. Three G-quartets are stacked through interactions between delocalised pi electrons. The structure is made up of four pillars of homopolymeric G-runs (shown in orange) joined by loop sequences. Potassium cations (shown in blue) sit between each tetrad. **c)** Cartoons showing how loop arrangement can contribute to the structural polymorphism of G4s. Loops can be lateral, diagonal or propeller like, resulting in anti-parallel, anti-parallel, and parallel G4s respectively. Anti-parallel G4s with all lateral loops are referred to as "chair"-like, whilst anti-parallel G4s with a diagonal loop are referred to as basket like. G4s can also contain a mix of parallel and anti-parallel strands. \label{g4_struct}](introduction/figures/g4_structure.png)
+![**Structure of a G-Quadruplex** **a)** The molecular structure of a G-quartet. Four Guanosines (only guanine base is shown, sugar-phosphate is represented as R) interact through Hoogsteen base pairing around a central monovalent cation. **b)** Cartoon showing the basic structure of a three tetrad G4. Three G-quartets are stacked through interactions between delocalised pi electrons. The structure is made up of four pillars of homopolymeric G-runs (shown in orange) joined by loop sequences. Potassium cations (shown in blue) sit between each tetrad. **c)** Cartoons showing how loop arrangement can contribute to the structural polymorphism of G4s. Loops can be lateral, diagonal or propeller like, resulting in anti-parallel, anti-parallel, and parallel G4s respectively. Anti-parallel G4s with all lateral loops are referred to as "chair"-like, whilst anti-parallel G4s with a diagonal loop are referred to as basket like. G4s can also contain a mix of parallel and anti-parallel strands. \label{g4_struct}](figures/g4_structure.png)
 
 \newpage
 
-![**The Human Telomeric Sequence forms a G-Quadruplex** **a)** top and **b)** side view of a parallel G4 structure solved by X-ray crystallography (PDB: 1KF1, Parkinson et al. 2002). The sequence used is (TTAGGG)4, corresponding to four of the human telomeric repeat. Gs are coloured in yellow, As in green and Ts in orange. Potassium cations are coloured in purple.](introduction/figures/xray_structure.png){height=750px}
+![**The Human Telomeric Sequence forms a G-Quadruplex** **a)** top and **b)** side view of a parallel G4 structure solved by X-ray crystallography (PDB: 1KF1, Parkinson et al. 2002). The sequence used is (TTAGGG)4, corresponding to four of the human telomeric repeat. Gs are coloured in yellow, As in green and Ts in orange. Potassium cations are coloured in purple.](figures/xray_structure.png){height=750px}
 
 \newpage
 
@@ -58,7 +58,7 @@ Studies of the structure of G4s has led to the development of a variety of G4-bi
 
 \newpage
 
-![**G-Quadruplex Stabilising Ligands** Structures and mode of action of Pyridostatin, NMM, and Berberine. Pyridostatin is thought to bind to all G4s equally well (Müller et al 2010), whilst NMM is known to prefer parallel G4s (Nicoludis et al. 2012). Berberine has been reported to bind to both parallel and anti-parallel G4s (Bazzicalupi et al. 2013, Li et al 2017). Crystal structures of human telomeric DNA (parallel G4 form) in complex with NMM and Berberine are from PDB entries 4FXM and 3R6R respectively (Nicoludis et al. 2012, Bazzicalupi et al. 2013). Potassium ions and solvent molecules have been hidden for visualisation purposes. \label{drugs}](introduction/figures/drugs.png)
+![**G-Quadruplex Stabilising Ligands** Structures and mode of action of Pyridostatin, NMM, and Berberine. Pyridostatin is thought to bind to all G4s equally well (Müller et al 2010), whilst NMM is known to prefer parallel G4s (Nicoludis et al. 2012). Berberine has been reported to bind to both parallel and anti-parallel G4s (Bazzicalupi et al. 2013, Li et al 2017). Crystal structures of human telomeric DNA (parallel G4 form) in complex with NMM and Berberine are from PDB entries 4FXM and 3R6R respectively (Nicoludis et al. 2012, Bazzicalupi et al. 2013). Potassium ions and solvent molecules have been hidden for visualisation purposes. \label{drugs}](figures/drugs.png)
 
 \newpage
 
@@ -100,7 +100,7 @@ In humans, DNA replication occurs from tens to hundreds of thousands of origins 
 
 \newpage
 
-![**Role of G4s in DNA replication** \label{replic}](introduction/figures/replication.png)
+![**Role of G4s in DNA replication** \label{replic}](figures/replication.png)
 
 \newpage
 
@@ -148,7 +148,7 @@ Interestingly, study of the VEGF 5' UTR has identified a G4 which acts as a posi
 
 G4s in 3' UTRs have the potential to act as *cis* regulatory elements controlling translation efficiency or mRNA stability. One hypothesised method of action is through competition between G4 structures and unstructured UTRs which can bind microRNAs (miRNAs). miRNAs are short (20-25bp) regulatory RNAs which act through complementarity to their target mRNA. Hybridisation of miRNAs to their targets results in changes in mRNA degradation through P-body localisation, or translational repression# (Ambros 2004). The local structure of 3' UTRs has been identified as a key modulator of their binding efficiency (Long et al. 2007). Rouleau et al. performed a characterisation of the overlap between predicted miRNA binding sites and PG4 sequences in human 3' UTRs (Rouleau et al. 2017). The authors found that 54% of PG4s in 3' UTRs overlapped with at least one predicted miRNA target site, though the enrichment or statistical significance of this overlap were not calculated. A candidate mRNA, FADS2, which is regulated by mir331-3p, was tested for G4 formation. Rouleau et al. showed that a 3' UTR sequence which binds mir331-3p also forms a G4, and that G4 formation prevents miRNA binding *in vitro*.
 
-![**G4 function in translation and mRNA stability**](introduction/figures/mRNA_stability_translation.png)
+![**G4 function in translation and mRNA stability**](figures/mRNA_stability_translation.png)
 
 \newpage
 
