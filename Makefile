@@ -1,6 +1,6 @@
 clean :
-	rm */tmp.md
-	rm */figures/*.png
+	rm -f */tmp.md
+	rm -f */figures/*.png
 full :
 	# replace figure urls to include chapter directory and png
 	for CHAPTER_TEXT in $$(ls */text.md); do \
