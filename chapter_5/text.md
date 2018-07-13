@@ -197,11 +197,11 @@ A recently published study by Tokan et al. provides the first analysis of differ
 
 \newpage
 
-![**NMM expression change of Arabidopsis orthologs in *Zea mays* \label{maize_venn}](figures/zmays_athaliana_nmm_expression_venn.svg){height=750px}
+![**NMM expression change of Arabidopsis orthologs in *Zea mays*** Venn diagrams showing the overlap between the set of genes **a)** upregulated and **b)** downregulated by NMM in Arabidopsis and the unique set of Arabidopsis orthologs for *Z. mays* genes regulated by NMM. P values were calculated by hypergeometric test compared to the unique set of *Arabidopsis* genes with at least one *Z. mays* ortholog. \label{maize_venn}](figures/zmays_athaliana_nmm_expression_venn.svg){height=750px}
 
 \newpage
 
-![**Distribution of Two tetrad PG4s in *Z. mays* genes regulated by NMM* \label{maize_pg4}](figures/zmays_nmm_g4_distribution.svg){height=750px}
+![**Distribution of Two tetrad PG4s in *Z. mays* genes regulated by NMM** Bar plots showing the average PG4 densities of *Z. mays* genes up or downregulated by NMM, for **a)** CDSs, **b)** 5' UTRs and **c)** introns, respectively. In each figure, left and right panels represent coding and template strand, respectively. Errorbars are 68% confidence intervals for bootstrapped means. \label{maize_pg4}](figures/zmays_nmm_g4_distribution.svg){height=750px}
 
 \newpage
 
