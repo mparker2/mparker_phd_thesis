@@ -191,6 +191,20 @@ Next we investigated whether there were any similarities in the expression profi
 
 \newpage
 
+### NMM affects gene expression in *Zea mays*:
+
+A recently published study by Tokan et al. provides the first analysis of differential expression during NMM treatment in a crop plant, *Zea mays*. Their paper focussed on the effect of NMM on the expression of transposable elements, however, we reanalysed their data to identify whether protein-coding genes in maize respond to NMM similarly to Arabidopsis. We found a strong overlap between genes differentially regulated in Arabidopsis and their orthologs in maize, in both the up- and downregulated genesets (Fig. \ref{maize_venn}a and b respectively). Furthermore, we found that maize genes which were differentially regulated by NMM tended to have greater two tetrad PG4 densities in their CDSs. Unlike Arabidopsis, however, this increase in PG4 density was not restricted to the template strand, and not only in downregulated genes. Genes which are upregulated by NMM in maize are also more likely to contain CDS PG4s on both the coding and template strands (Fig \ref{maize_pg4}a). This suggests some other mechanism of G4 regulation beyond Pol II stalling. Whilst 5' UTRs of maize genes tend to have high densities of PG4s on the template strand (Fig \ref{maize_pg4}b, right panel), we did not see a greater level of PG4s in either up- or downregulated sets. In fact, downregulated genes appear to have fewer template strand PG4s in the 5'UTR (Fig \ref{maize_pg4}b, right panel). Interestingly, upregulated genes also tended to have greater levels of coding and template PG4s in introns (Fig \ref{maize_pg4}c).
+
+\newpage
+
+![**NMM expression change of Arabidopsis orthologs in *Zea mays* \label{maize_venn}](figures/zmays_athaliana_nmm_expression_venn.svg){height=750px}
+
+\newpage
+
+![**Distribution of Two tetrad PG4s in *Z. mays* genes regulated by NMM* \label{maize_pg4}](figures/zmays_nmm_g4_distribution.svg){height=750px}
+
+\newpage
+
 ## Discussion:
 
 We have conducted the first in detail analysis of the effects of G4 stabilisation in a higher plant, Arabidopsis thaliana. To determine how gene expression is altered by G4 stabilisation, we carried out a microarray analysis of plants treated with the G4 binding drug, NMM. NMM treatment had very strong effects on gene expression, particularly in genes which contained large numbers of parallel two tetrad G4s in the transcribed gene body. Moderately downregulated genes had large numbers of G4s in their 5' UTRs, whilst very strongly downregulated genes contained large numbers of G4s throughout the exonic regions of the gene. This is contrary to evidence from human systems which has suggested G4s influence transcription most when located in the promoter region. Furthermore, we find that the effect on gene expression is entirely strand dependent: only template stranded G4s strongly affect expression. Many previous studies have suggested that two tetrad G4s are not biologically relevant due to their relative instability compared to three tetrad G4s. The majority of these studies have been focussed upon their role in human biology. However, several other studies have shown that two tetrad G4s are stable *in vitro* and at physiological temperatures. In organisms that exist at lower temperatures it is entirely credible that two tetrad G4s may play a role. Indeed, here we find that the strongest effect of NMM treatment is on genes predicted to form only two tetrad G4s.
