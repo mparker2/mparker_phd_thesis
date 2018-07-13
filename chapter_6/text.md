@@ -1,6 +1,5 @@
 # Effect of G-Quadruplexes on expression and splicing of the Extensin gene family
-
-\newpage
+\label{chap:extensins}
 
 ## Introduction
 

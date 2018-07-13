@@ -1,6 +1,5 @@
 # Global effect of G Quadruplex stabilisation on gene expression:
 \label{chap:global_nmm}
-\newpage
 
 ## Introduction:
 
@@ -158,7 +157,7 @@ Rodriguez et al. showed that treatment of human cells with Pyridostatin (PDS), a
 
 \newpage
 
-![**NMM does not activate DNA damage response** **a)** Barplot showing normalised log2 expression of seven DNA damage responsive genes: AGO2, PARP1, RPA1E, BRCA1, GRG, RAD51, and RAD17, in the presence and absence of NMM. Errorbars are standard errors calculated by `puma`. Asterisks denote significant results. **b)** Venn diagram showing the overlap between NMM upregulated genes and genes upregulated in response to gamma irradiation. \label{damage}](figures/dna_damage_response.svg)
+![**NMM does not activate DNA damage response** **a)** Barplot showing normalised log2 expression of seven DNA damage responsive genes: AGO2, PARP1, RPA1E, BRCA1, GRG, RAD51, and RAD17, in the presence and absence of NMM. Errorbars are standard errors calculated by `puma`. Asterisks denote significant results. **b)** Venn diagram showing the overlap between NMM upregulated genes and genes upregulated in response to gamma irradiation. \label{damage}](figures/dna_damage_response.svg){height=750px}
 
 \newpage
 
@@ -168,11 +167,11 @@ Because G4s require potassium cations or other divalent cations for formation, i
 
 \newpage
 
-![**Drought downregulated genes are enriched in PG4s** Heatmaps showing fractions of genes containing at least one predicted G4 in their gene body for drought upregulated genes vs all genes (top row) and drought downregulated genes vs all genes (bottom row) (For down and upregulated genes, FDR < 0.05 and absolute logFC > 0.5). PG4 predictions for the coding strand are in the left hand column whilst PG4 predictions for template strand are on the right. P values for each heatmap are calculated using Chi-squared tests. Genes downregulated by drought stress show a particularly strong enrichment of PG4s, and particularly on the template strand. \label{drought_g4_sq}](figures/drought_g4_presence_absence_chisquared.svg)
+![**Drought downregulated genes are enriched in PG4s** Heatmaps showing fractions of genes containing at least one predicted G4 in their gene body for drought upregulated genes vs all genes (top row) and drought downregulated genes vs all genes (bottom row) (For down and upregulated genes, FDR < 0.05 and absolute logFC > 0.5). PG4 predictions for the coding strand are in the left hand column whilst PG4 predictions for template strand are on the right. P values for each heatmap are calculated using Chi-squared tests. Genes downregulated by drought stress show a particularly strong enrichment of PG4s, and particularly on the template strand. \label{drought_g4_sq}](figures/drought_g4_presence_absence_chisquared.svg){height=750px}
 
 \newpage
 
-![**Distribution of PG4s in genes differentially regulated by Drought stress.** Bar plots showing the average PG4 densities of genes up or downregulated by Drought stress, for **a)** full gene body (exons and introns), **b)** coding regions, **c)** 5' UTR, **d)** 3' UTR, and **e)** introns, respectively. In each figure, left and right panels represent coding and template strand, respectively. Genesets are separated into three categories by strength of regulation: green: not differentially expressed, blue: moderately differentially expressed (PPLR < 0.05, logFC > 0.5), orange: strongly differentially expressed (PPLR < 0.05, logFC > 1). Errorbars are 68% confidence intervals for mean generated using 1000 bootstrapped samples. Genes which are downregulated by drought stress tend to have higher PG4 densities on the template strand of coding regions and 5' UTRs. Genes which are upregulated by drought stress are more likely to contain PG4s in their 3' UTRs. \label{drought_g4}](figures/drought_regulated_g4_distribution.svg)
+![**Distribution of PG4s in genes differentially regulated by Drought stress.** Bar plots showing the average PG4 densities of genes up or downregulated by Drought stress, for **a)** full gene body (exons and introns), **b)** coding regions, **c)** 5' UTR, **d)** 3' UTR, and **e)** introns, respectively. In each figure, left and right panels represent coding and template strand, respectively. Genesets are separated into three categories by strength of regulation: green: not differentially expressed, blue: moderately differentially expressed (PPLR < 0.05, logFC > 0.5), orange: strongly differentially expressed (PPLR < 0.05, logFC > 1). Errorbars are 68% confidence intervals for mean generated using 1000 bootstrapped samples. Genes which are downregulated by drought stress tend to have higher PG4 densities on the template strand of coding regions and 5' UTRs. Genes which are upregulated by drought stress are more likely to contain PG4s in their 3' UTRs. \label{drought_g4}](figures/drought_regulated_g4_distribution.svg){height=750px}
 
 \newpage
 
@@ -180,7 +179,7 @@ Next we investigated whether there were any similarities in the expression profi
 
 \newpage
 
-![**Overlap of genes downregulated by NMM with those downregulated by Drought stress.** **a)** Venn diagram reporting the overlap of genes downregulated by NMM with those downregulated by drought stress. **c)** Bar plot showing the average PG4 densities in 5' UTRs of NMM and drought stress downregulated genesets. Left and right panels show densities on the coding and template strands, respectively. Both  genesets show an greater exonic G4 density on the template strand than genes not regulated by either drug, however genes which are regulated by both drugs had the greatest average PG4 density in 5' UTRs. Bar colours match set colours from Fig 3b. Errorbars are 68% confidence intervals for mean generated using 1000 bootstrapped samples. \label{nmm_drought}](figures/nmm_drought_venn.svg)
+![**Overlap of genes downregulated by NMM with those downregulated by Drought stress.** **a)** Venn diagram reporting the overlap of genes downregulated by NMM with those downregulated by drought stress. **c)** Bar plot showing the average PG4 densities in 5' UTRs of NMM and drought stress downregulated genesets. Left and right panels show densities on the coding and template strands, respectively. Both  genesets show an greater exonic G4 density on the template strand than genes not regulated by either drug, however genes which are regulated by both drugs had the greatest average PG4 density in 5' UTRs. Bar colours match set colours from Fig 3b. Errorbars are 68% confidence intervals for mean generated using 1000 bootstrapped samples. \label{nmm_drought}](figures/nmm_drought_venn.svg){height=750px}
 
 \newpage
 
@@ -190,7 +189,7 @@ A recently published study by Tokan et al. provides the first analysis of differ
 
 \newpage
 
-![**NMM expression change of Arabidopsis orthologs in *Zea mays*** Venn diagrams showing the overlap between the set of genes **a)** upregulated and **b)** downregulated by NMM in Arabidopsis and the unique set of Arabidopsis orthologs for *Z. mays* genes regulated by NMM. P values were calculated by hypergeometric test compared to the unique set of *Arabidopsis* genes with at least one *Z. mays* ortholog. \label{maize_venn}](figures/zmays_athaliana_nmm_expression_venn.svg){height=750px}
+![**NMM expression change of Arabidopsis and *Zea mays* orthologs** Venn diagrams showing the overlap between the set of genes **a)** upregulated and **b)** downregulated by NMM in Arabidopsis and the unique set of Arabidopsis orthologs for *Z. mays* genes regulated by NMM. P values were calculated by hypergeometric test compared to the unique set of *Arabidopsis* genes with at least one *Z. mays* ortholog. \label{maize_venn}](figures/zmays_athaliana_nmm_expression_venn.svg){height=750px}
 
 \newpage
 

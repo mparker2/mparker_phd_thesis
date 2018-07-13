@@ -1,6 +1,5 @@
 # A Recurrent Neural Network to Predict G Quadruplex Structure
-
-\newpage
+\label{chap:g4seeqer}
 
 ## Introduction:
 

@@ -1,0 +1,24 @@
+\newpage
+{
+\section{Table of Contents}
+\hypersetup{linkcolor=black}
+\makeatletter
+\renewcommand\tableofcontents{%
+        \@starttoc{toc}%
+}
+\makeatother
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+\newpage
+{
+\section{List of Figures}
+\hypersetup{linkcolor=black}
+\makeatletter
+\renewcommand\listoffigures{
+        \@starttoc{lof}
+}
+\makeatother
+\listoffigures
+}
+\newpage
