@@ -1,6 +1,8 @@
 clean :
 	rm -f */tmp.md
 	rm -f */figures/*.png
+	rm -f title_pages/acronyms.sorted.csv
+
 pdf :
 	# replace figure urls to include chapter directory and png
 	# also add bold text at end for pandoc-shortcaption
@@ -12,9 +14,10 @@ pdf :
 		perl -pe 's|(!\[\*\*(.*?)\*\*.*png)|\1 "\2"|' > $$CHAPTER_TEMP; \
 	done
 	# create png versions of svgs
-#	for IMG in $$(ls */figures/*.svg); do \
-#		inkscape -d 300 -e $${IMG%%.svg}.png $$IMG; \
+	for IMG in $$(ls */figures/*.svg); do \
+		inkscape -d 300 -e $${IMG%%.svg}.png $$IMG; \
 	done
+	sort -k1,1 -t',' title_pages/acronyms.csv > title_pages/acronyms.sorted.csv
 	# pandoc doesn't accept markdown include-before-body with tex template
 	# SO we have to render the abstract first
 	pandoc \
@@ -41,8 +44,9 @@ pdf :
 		chapter_5/tmp.md \
 		chapter_6/tmp.md \
 		discussion/tmp.md ;
-#	rm */tmp.md
-#	rm */figures/*.png
+	rm */tmp.md
+	rm */figures/*.png
+	rm title_pages/acronyms.sorted.csv
 
 tex :
 	# replace figure urls to include chapter directory and png

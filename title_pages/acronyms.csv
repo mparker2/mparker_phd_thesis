@@ -1,0 +1,74 @@
+acronym,definition
+ATAC-seq,Assay for transposase-accessible chromatin using sequencing
+ATP,Adenosine triphosphate
+ATR-X/ATRX,Alpha-thalassemia mental retardation syndrome/protein
+AUC,Area under the curve
+BG4,G-Quadruplex binding antibody
+BLAT,BLAST-like alignment tool
+CD,Circular dichroism
+CDS,Coding sequence
+ChIP-seq,Chromatin immunoprecipitation with sequencing
+CHX,Cyclohexamide
+CNN,Convolutional neural network
+CPM,Counts per million
+CTD,Carboxy-terminal domain
+DMSO,Dimethyl sulfoxide
+DNA,Deoxyribonucleic Acid
+DNase,Deoxyribonuclease
+DPE,Downstream promoter element
+DSB,Double strand break
+ENA,European nucleotide archive
+FDR,False discovery rate
+FISH, Fluorescent in situ hybridisation
+G4,G-Quadruplex
+GC content/skew,Guanine and cytosine content/skew
+GEM,Genome multitool
+GEO,Gene expression omnibus
+GO,Gene ontology
+GRO,Global run-on sequencing
+HDAC,Histone deacetylase
+HEK,Human embryonic kidney
+hnRNP,Heterogeneous ribonucleoprotein particle 
+IRES,Internal ribosome entry site
+LogFC,Log fold change
+LRX,Leucine rich repeat extensin
+LSTM,Long short term memory
+MA plot,Mean average plot
+miRNA,MicroRNA
+MLP,Multi layer perceptron
+mRNA,Messenger RNA
+MS,Murashige \& Skoog media
+NER,Nucleotide excision repair
+NMM,N-methyl mesoporphyrin IX
+NMR,Nuclear magnetic resonance
+NOESY,Nuclear Overhauser effect spectroscopy
+PCR,Polymerase chain reaction
+PCS,Potential coding sequence
+PDB,Protein data bank
+PDS,Pyridostatin
+PG4,Putative G-Quadruplex
+PIC,Preinitiation complex
+Pol II,RNA Polymerase II
+PPLR,Probability of positive log ratio
+PR,Precision recall
+pre-mRNA,Precursor mRNA
+qPCR,Quantitative polymerase chain reaction
+RMA,Robust multichip average
+RNA,Ribonucleic acid
+RNA-seq,RNA sequencing
+ROC,Receiver operator characteristic
+RT,Reverse transcriptase
+SCE,Sister chromatid exchange
+SELEX,Systematic evolution of ligands by exponential enrichment
+smFRET,Single molecule Förster resonance energy transfer
+snRNA,Small nuclear RNA
+SOM,Self organising maps
+SP3/4/5,Serine proline 3/4/5 motif
+STAR,Spliced transcript alignment to a reference
+SWI/SNF,Switch/Sucrose non-fermentable
+TFIIH,Transcription initiation factor complex
+TSS,Transcriptional start site
+TTS,Transcriptional termination site
+UMAP,Uniform manifold approximation and projection
+UTR,Untranslated region
+UV,Ultraviolet
