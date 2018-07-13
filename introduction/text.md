@@ -166,6 +166,8 @@ G4 formation is highly dependent upon chromatin status, and G4s isolated by BG4 
 
 ### G-Quadruplex Distribution
 
+Whilst the majority of G4 studies have been performed in mammalian systems, particularly *H. sapiens*, there is a growing body of evidence for the function of G4s in plant species including *Arabidopsis thaliana*, *Zea mays*, and *Oryza sativa*. 
+
 ### Translational Regulation
 
 ### Plant Development
