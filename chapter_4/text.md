@@ -59,7 +59,7 @@ In order to identify whether these PG4s are simply a product of higher local GC 
 
 \newpage
 
-![**Metagene Profile of GC content and PG4 density** Metagene profiles showing the **a)** G content, **b)** three or more tetrad PG4 content and **c)** two tetrad PG4 content of protein coding genes on the coding (blue) and template (orange) strands. Green and yellow lines show the average coding and template PG4 contents for genes where the sequence has been shuffled in 20bp windows, maintaining mononucleotide and dinucleotide frequencies. G content metaprofiles are identical to the real metaprofiles in these shuffled controls. \label{pg4_genomes}](figures/gc_g4_content_metagene.svg){height=750px}
+![**Metagene Profile of GC content and PG4 density** Metagene profiles showing the **a)** G content, **b)** three or more tetrad PG4 content and **c)** two tetrad PG4 content of protein coding genes on the coding (blue) and template (orange) strands. Green and yellow lines show the average coding and template PG4 contents for genes where the sequence has been shuffled in 20bp windows, maintaining mononucleotide and dinucleotide frequencies. G content metaprofiles are identical to the real metaprofiles in these shuffled controls. \label{metagene}](figures/gc_g4_content_metagene.svg){height=750px}
 
 \newpage
 
