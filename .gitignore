@@ -2,3 +2,5 @@
 *.png
 tmp.md
 *.bak
+tmp.tex
+title_pages/acronyms.sorted.csv
