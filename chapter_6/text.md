@@ -91,6 +91,21 @@ For barplots of spliced read percentages in Extensin genes, `pysam` [@Heger2014]
 
 \newpage
 
+### Primer Sequences used:
+
+\DTLloaddb{primers}{chapter_6/primers.csv}
+\begin{center}
+\begin{longtable}{ll}\toprule
+    \textbf{Name} & \textbf{Sequence}%
+    \DTLforeach*{primers}{\Name=name,\Sequence=sequence}{%
+        \DTLiffirstrow{\\\cmidrule{1-2}}{\\}%
+        \Name & \texttt{\Sequence}
+    }%
+\end{longtable}
+\end{center}
+
+\newpage
+
 ## Results
 
 ### Gene Ontology shows plant cell wall specific genes are enriched in PG4s and downregulated by NMM
