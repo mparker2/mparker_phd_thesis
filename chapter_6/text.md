@@ -91,7 +91,7 @@ For barplots of spliced read percentages in Extensin genes, `pysam` [@Heger2014]
 
 \newpage
 
-### Primer Sequences used:
+### Primer Sequences used
 
 \DTLloaddb{primers}{chapter_6/primers.csv}
 \begin{center}
@@ -202,7 +202,7 @@ To experimentally confirm whether Extensin gene exitron splicing exists, we perf
 
 \newpage
 
-### NMM treated plants do not have increased splicing of Extensin genes.
+### NMM treated plants do not have increased splicing of Extensin genes
 
 We hypothesise that G4s cause the exitronic splicing of Extensin genes, by slowing down Pol II elongation. To test whether increased stabilisation of G4s changes this splicing pattern, we performed RNAseq of root tissue from plants treated with NMM using 220bp paired reads, to identify novel splicing isoforms. Mapping parameters for `STAR` [@Dobin2013] were made more stringent than defaults in an attempt to increase the precision of mapping over Extensin genes without attenuating recall of splice junctions too strongly. A common method for conducting differential splicing analysis is to use differential exon usage methods such as `DEXseq` [@Anders2012]. This is sometimes conducted on exon "chunks" which are the contiguous genomic ranges which each appear in a distinct set of transcripts of a gene. Since there are many overlapping exitrons in the Extensin genes, these chunks would be extremely short and be complex to interpret. Furthermore, if spliced transcripts are in lower abundance than full length transcripts, a large change in the use of a particular exitron may only lead to a small change in the expression of the exon chunk which is being spliced out. We therefore opted for counting the number of reads which support each unique junction in a gene (junction counts), and performing differential junction usage on this. The downside to this analysis is that the number of reads supporting each junction may be lower than the number per exon, leading to reduced power to detect differential usage.
 
