@@ -59,10 +59,10 @@
   </macro>
   <citation et-al-min="3" et-al-use-first="1" disambiguate-add-year-suffix="true" collapse="year">
     <sort>
+      <key macro="issued"/>
       <key macro="author-short" names-min="1" names-use-first="1"/>
       <key macro="author-count" names-min="3" names-use-first="3"/>
       <key macro="author" names-min="3" names-use-first="1"/>
-      <key macro="issued"/>
       <key variable="title"/>
     </sort>
     <layout prefix="(" suffix=")" delimiter="; ">
