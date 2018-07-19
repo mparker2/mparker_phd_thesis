@@ -2,9 +2,11 @@
 
 ## The G-Quadruplex
 
+\label{sec:intro_g4s}
+
 ### What is a Quadruplex?
 
-\autoref{}
+\label{ssec:what_is_a_g4}
 
 The genome is often referred to as the "blueprint" for life. This metaphor suggests a static set of instructions, which simply encodes data and does not change its form. In reality, however, chromosomes are highly dynamic structures which are able to undergo various covalent modifications to the DNA and proteins, as well as change topologies on a global and local scale [@Misteli2007]. At the global level, changes in how the chromatin is packed result in the closing off or opening up of specific regions, changing the level of transcription of the genes contained within them. Genes which are far apart in sequence space can be brought together through looping to allow co-regulation [@Feuerborn2015]. At the smaller scale, the DNA itself is able to fold into a number of different shapes, including various types of duplex, triplex, and quadruplex. Examples include B-DNA (the classic double helix), A-DNA (duplex), R-loops (triplex) [@Roberts1992; @Korzheva2000], i-motifs (quadruplex) [@Gehring1993; @Tua2000; @Zeraati2018] and G-Quadruplexes [@Gellert1962; @Sen1988; @Sundquist1989; @Hansel2016]. These structures have different relative stabilities depending on the conditions of their local environment, e.g. the local concentration of solutes, complementary RNAs, or stabilising proteins, the level of molecular crowding, or the intracellular pH [@Gehring1993; @Schultze1999; @Gaynutdinov2008; Rajendran2010; @Heddi2011; @Zhou2016]. Furthermore, some structures form only in DNA containing specific sequence attributes, such as high GC content [@Huppert2005]. Whilst non-B forms of DNA have been known to form *in vitro* for some time, it is only recently that evidence of their formation *in vivo*, and their effects on biological systems, has begun to accumulate.
 
@@ -25,6 +27,8 @@ The structure of G4s is highly polymorphic. Quadruplexes can form between multip
 \newpage
 
 ### G-Quadruplex Prediction from Sequence
+
+\label{ssec:predict_g4s}
 
 Genomic G4s form in sequences with high G4 content and high GC skew. Because of the dependence of G4 structure on sequence, it is theoretically possible to predict the genome-wide prevalence of G4s from sequence information alone, assuming that other conditions such as potassium concentration are held constant. The first attempt to characterise putative G4s (PG4s) at whole genome scale was conducted by Huppert and Balasubramanian in 2005. They formulated rules describing the general patterns that PG4 forming sequences tend to follow. Their first observation was that intermolecular G4s are unlikely to be common *in vivo* due to low strand concentration of the DNA. They also noted that the pillars of the G4 tended to be formed from contiguous guanine homopolymers, or G-runs: there have to be four such G-runs in close proximity to create a PG4. The length of the shortest G-run will determine the maximum number of stacked tetrads which can be formed. A minimum of three tetrads was suggested for prediction: whilst 2 tetrad G4s are possible, they are less stable. Finally, they suggested that to make folding of the G4 favourable, the length of the loop sequences connecting the G-runs should be relatively short. They suggested, using evidence from molecular modelling and CD spectroscopy, an upper limit of 7bp. Again, whilst loops of much longer length are possible, they were thought likely to be unstable. Their observations were combined to create the folding pattern $G_XN_{1-7}G_XN_{1-7}G_XN_{1-7}G_X$, where $X \geq 3$. This was named the Quadparser method [@Huppert2005], and can be applied to search genomes using simple regular expression machinery.
 
@@ -47,6 +51,8 @@ Sequences which have high PG4 forming ability on the positive strand will theref
 \newpage
 
 ### Methods used in the characterisation of G-Quadruplexes
+
+\label{ssec:biophys_char_g4s}
 
 Gellert et al. first characterised G4 structure using X-ray diffraction of fibres from dehydrated guanine gels [@Gellert1962]. Since then, biophysical techniques have become key in the study of G4 structures *in vitro*. Since the advent of chemical DNA oligonucleotide synthesis in the 1980s, it has become relatively cheap to order high purity single stranded oligonucleotides for PG4 sequences, and produce micromolar concentration solutions which can be probed by EMSA, FRET, CD spectroscopy or NMR.
 
@@ -72,9 +78,11 @@ A number of techniques have been employed for whole genome or transcriptome mapp
 
 Yoshida et al. also used a similar method to identify G4 clusters in human genomic DNA, by PCR amplifying sequences in the presence and absence of the G4 binding ligand telomestatin [@Yoshida2018]. They showed that regions which contained G4s were amplified with lower efficiency in the presence of telomestatin, due to polymerase stalling events. This resulted in a quantifiable reduction in the number of reads mapping to G4 containing regions of the genome in the drug positive samples, relative to the drug negative samples. The authors identified that regions of the genome which were predicted to form G4 clusters, rather than just single G4s, were most effective at stalling polymerase [@Yoshida2018].
 
-G4s which form in RNA *in vitro* can also be mapped globally, using a technique called rG4-seq, developed by Kwok et al. This method again utilised stalling at G4s, in the presence of potassium or pyridostatin, this time by the RNA templated DNA polymerase Reverse transcriptase (RT) [@Kwok2016]. They identified positions in mRNAs where a reproducible drop in reads occurred in samples where RT mediated DNA synthesis was conducted in the G4 stabilising conditions, relative to unstabilised controls. Guo and Bartel elaborated on this technique to map RNA G4s *in vivo*, by treating cells with dimethyl sulphate (DMS) prior to *in vitro* RT stalling. DMS can penetrate into living cells and methylate the N7 position of guanines that are not involved Hoogsteen base paired structures, i.e. G4s [@Wells2000]. This methylation prevents the refolding of mRNA into G4s *in vitro*, thereby abolishing RT stalling compared to untreated mRNAs [@Guo2016]. Guo and Bartel identified that the majority of G4s in yeast and human mRNAs are maintained in an unfolded state *in vivo* [@Guo2016]. The biological implications of this are discussed in section \ref{}.
+G4s which form in RNA *in vitro* can also be mapped globally, using a technique called rG4-seq, developed by Kwok et al. This method again utilised stalling at G4s, in the presence of potassium or pyridostatin, this time by the RNA templated DNA polymerase Reverse transcriptase (RT) [@Kwok2016]. They identified positions in mRNAs where a reproducible drop in reads occurred in samples where RT mediated DNA synthesis was conducted in the G4 stabilising conditions, relative to unstabilised controls. Guo and Bartel elaborated on this technique to map RNA G4s *in vivo*, by treating cells with dimethyl sulphate (DMS) prior to *in vitro* RT stalling. DMS can penetrate into living cells and methylate the N7 position of guanines that are not involved Hoogsteen base paired structures, i.e. G4s [@Wells2000]. This methylation prevents the refolding of mRNA into G4s *in vitro*, thereby abolishing RT stalling compared to untreated mRNAs [@Guo2016]. Guo and Bartel identified that the majority of G4s in yeast and human mRNAs are maintained in an unfolded state *in vivo* [@Guo2016]. The biological implications of this are discussed in \autoref{ssec:mrna_stability}.
 
 ### G-Quadruplex stability prediction using Machine Learning
+
+\label{ssec:g4_machine_learning}
 
 A growing number of G4 forming oligonucleotide sequences have now been characterised *in vitro* by various methods, particularly by CD spectroscopy and UV melting, and the melting temperatures have been published online. The number of these is now great enough that several groups have utilised them to train machine learning models to predict G4 forming potential. Stegle et al. used a Gaussian Process model incorporating extracted features from Quadparser conforming G4s [@Stegle2009]. These features were the number of tetrads, the length of each of the three loops, the total loop length, and the frequencies of adenine, cytosine and guanine in the sequence, as well as the raw sequence itself. A second kernel which incorporated features about the conditions the melting temperature was acquired under, i.e. the concentrations of potassium, sodium, ammonium, and magnesium ions, was also used in the model. They trained this model on a set of 260 DNA G4 melting temperatures which were acquired from a literature search. In a cross validation experiment using 100 random 50% hold out splits, the authors were able to achieve a good level of test set accuracy with an average of 80% of predictions within 5 degrees of the true melting temperature [@Stegle2009]. Furthermore, their model was interpretable, and they were able to identify tetrad number and the length of the central loop as the most important sequence features in PG4 stability. The authors employed active learning to identify candidates from human promoter sequences with high uncertainty in the model, and used CD spectroscopy to characterise them.
 
@@ -86,7 +94,11 @@ Finally, the more recent efforts to produce high-throughput methods for identify
 
 ## Biological Roles of G-Quadruplexes
 
+\label{sec:biological_roles}
+
 ### Genome Stability & DNA Replication
+
+\label{ssec:genome_stability}
 
 The distribution of G4s in genomes has been predicted from sequence for a wide variety of organisms [@Huppert2005; @Hershman2008; @Du2008; @Mullen2010; @Garg2016], and has been experimentally determined by the techniques mentioned above for the human genome. There is conclusive evidence that G4s are not uniformly distributed throughout genomes, but tend to be clustered at functional locations. By far the strongest enrichment of G4s is seen at telomeres. G4s are also found more than would be expected in origins of replication, gene promoters, and inside gene bodies, particularly the 5' and 3' untranslated regions (UTRs). In these locations, it has been demonstrated that G4 formation has effects on the processes of DNA replication, genome stability, transcription, and translation.
 
@@ -107,6 +119,8 @@ In humans, DNA replication occurs from tens to hundreds of thousands of origins 
 \newpage
 
 ### Transcription
+
+\label{ssec:transcription}
 
 Transcription is the process by which DNA is copied into messenger RNA (mRNA) or non-coding RNA (ncRNA), by a DNA-templated RNA polymerase. In eukaryotic systems, all mRNA is transcribed by RNA Polymerase II (Pol II). Initiation of transcription is often catalysed by general or specific transcription factors which bind to the promoter region, upstream of the transcriptional start site (TSS). Human promoter sequences are enriched for PG4 motifs conforming to the Quadparser motif [@Eddy2006; @Huppert2007]. Tumour suppressor genes have fewer promoter PG4s than might be expected by chance, whilst proto-oncogenes contain more than might be expected (Eddy & Maizels 2006). These also overlap with regions of open chromatin, detected by methods such as DNase Hypersensitivity sequencing (DNase-seq) or Assay for Transposable-Accessible Chromatin by Sequencing (ATAC-seq), suggesting they are often actively transcribed [@Huppert2007]. Hänsel-Hertsch et al. used the BG4 antibody to perform ChIP-seq of G4 structures in conjunction with ATAC-seq and RNA-seq, in normal human keratinocytes and an immortalised cell line [@Hansel2016]. They found that BG4 peaks were indeed associated with open promoters, and were found upstream of expressed genes [@Hansel2016]. Interestingly, many more BG4 peaks were identified in the immortalised cells than in normal cells, despite having similar levels of open chromatin. Furthermore, genes which only had a promoter BG4 peak in the immortalised cells tended to be more highly expressed in those cells compared to the normal cells, suggesting that promoter G4s may increase gene expression. This increase in expression may be the result of recruitment of positive transcription factors.
 
@@ -134,6 +148,8 @@ The enrichment of G4s in promoters and promoter proximal regions suggests that p
 
 ### mRNA Processing
 
+\label{ssec:mrna_processing}
+
 Nascent pre-mRNA which is newly transcribed by Pol II must undergo 5' capping, splicing, RNA modification, poly-adenylation and quality control before it can mature into mRNA which is exported to the cytoplasm. Many of these processes occur co-transcriptionally and are tightly co-ordinated to prevent mistakes. Multiple independent studies in different organisms estimate that between 75%-85% of splicing is conducted in a cotranscriptional manner [@CarrilloOesterreich2010; @Ameur2011; @Khodor2011; @Girard2012; @Tilgner2012; @Windhager2012]. Oesterreich et al. found that in yeast, 10% of intron splicing is complete when Pol II is only 26bp downstream of the intron acceptor site, and 50% complete when Pol II is 45bp downstream. [@CarrilloOesterreich2016]. By modifying Pol II to increase its speed 2.3x, they also showed that splicing could become rate limiting when elongation rate is greater. Furthermore, modifications to splice site sequences in a reporter reduced the rate of splicing, presumably by reducing the strength of recognition by snRNAs, and thereby the rate of spliceosome assembly [@CarrilloOesterreich2016]. This indicates that interplay of splice site strength and Pol II elongation speed determine the relative efficiency of splicing.
 
 It has been estimated that greater than 90% of human genes undergo some form of alternative splicing [@Wang2008]. During this process, different donor and acceptor sites compete to be utilised. The most common form of alternative splicing in humans is exon skipping, where constitutive donor and acceptor sites are paired such that an intervening exon is removed from the mature mRNA [@Kim2007]. Other forms include alternate donor or acceptor usage, where the other site used is constitutive, or intron retention, where splice sites are simply not used at all [@Wang2015]. Regulation of alternative splicing can occur via protein splicing factors, as well as through changes in Pol II elongation speed [@DelaMata2010; @Jonkers2015]. Through this mechanism, alternative splicing may be linked to changes in Pol II speed as it transcribes through template stranded G4s or other DNA structures.
@@ -153,7 +169,9 @@ A model gene for the study of this G-rich motif dependent splicing is Bcl-X, a r
 
 ### mRNA Stability and Translation
 
-G4s which form in mRNA have the potential to be more stable than those formed in DNA, because RNAs tend to form more complex structures and do not have to compete with double stranded forms. Furthermore, structural studies have suggested that the extra hydroxyl groups in ribose compared to deoxy-ribose allow RNA G4s to form more hydrogen bonds within the Quadruplex structure [@Collie2010]. This increases the enthalpic favourability of the RNA G4 whilst also reducing the entropic cost of hydrogen bonds with ordered water molecules. Kwok et al. have used rG4-seq to identify mRNA G4s that form *in vitro* in the presence of potassium or pyridostatin, by their ability to stall RT. They found a total of 3383 G4s in mRNAs, of which 62% were contained in the 3' UTR, 16% in the 5' UTR and 21% were in the CDS [@Kwok2016]. Simulation of RNA folding with the RNA G4 region constrained yielded very different structures on average to folding without constraints, suggesting that G4 formation might act as a molecular switch, changing the overall structure of the mRNA [@Kwok2016]. RNA G4s have been implicated in a number of regulatory roles, including translational regulation in the 5' UTR, and mRNA stability in the 3' UTR.
+\label{ssec:mrna_stability}
+
+G4s which form in mRNA have the potential to be more stable than those formed in DNA, because RNAs tend to form more complex structures and do not have to compete with double stranded forms. Furthermore, structural studies have suggested that the extra hydroxyl groups in ribose compared to deoxy-ribose allow RNA G4s to form more hydrogen bonds within the Quadruplex structure [@Collie2010]. This increases the enthalpic favourability of the RNA G4 whilst also reducing the entropic cost of hydrogen bonds with ordered water molecules. Analysis of yeast and human mRNAs using DMS-seq and SHAPE-seq have shown that eukaryotic mRNAs are much less structured *in vivo* than predicted from *in silico* and *in vitro* analyses [@Rouskin2014; @Ding2014; @Loughrey2014; @Spitale2015]. Rouskin et al. showed that this reduction in structure was ATP-dependent, suggesting that active unwinding of mRNA secondary structure occurs regularly *in vivo* [@Rouskin2014]. Kwok et al. have used rG4-seq to identify mRNA G4s that form *in vitro* in the presence of potassium or pyridostatin, by their ability to stall RT. They found a total of 3383 G4s in mRNAs, of which 62% were contained in the 3' UTR, 16% in the 5' UTR and 21% were in the CDS [@Kwok2016]. Simulation of RNA folding with the RNA G4 region constrained yielded very different structures on average to folding without constraints, suggesting that G4 formation might act as a molecular switch, changing the overall structure of the mRNA [@Kwok2016]. RNA G4s have been implicated in a number of regulatory roles, including translational regulation in the 5' UTR, and mRNA stability in the 3' UTR. Guo and Bartel used a similar DMS-seq method to identify G4s which fold *in vivo*, but found that the majority were in an unfolded state [@Guo2016]. This unfolding was not dependent on the cellular levels of ATP, suggesting that RNA G4s may be kept unfolded *in vivo* through some passive process, e.g. through protein binding to ssDNA [@Guo2016].
 
 Translational initiation in eukaryotes begins with the binding of a 43S preinitiation complex (PIC) to the 5' cap of the linear mRNA [@Hinnebusch2014]. The PIC is pre-loaded with a Methionine aminoacyl-tRNA, and scans along the 5' UTR of the mRNA until the first methionine codon AUG is identified. This identification catalyses the recruitment of the large 60S subunit of the ribosome, to produce a translationally active complex [@Hinnebusch2014]. The 5' UTR of the mRNA often contains structures such as hairpins which must be resolved by RNA helicases to allow the passage of the PIC. G4s which form in the 5' UTR can have similar consequences, impeding the scanning of the PIC, or, if close enough to the m7G cap, preventing the loading of the complex onto the mRNA [@Bugaut2012].
 
@@ -171,6 +189,8 @@ G4s in 3' UTRs have the potential to act as *cis* regulatory elements controllin
 
 ### Chromatin Remodelling
 
+\label{ssec:chromatin}
+
 Chromatin conformational dynamics are important regulatory mechanisms for gene expression. The major protein component of chromatin is made up of histones, which assemble into the nucleosomes around which DNA is wrapped. Chromatin remodelling is the process by which modifications are made to histones. These modifications include switching of histone isoforms, covalent modifications, and histone sliding. The latter involves the use of energy from ATP hydrolysis to translocate histones along the DNA polymer without ever removing them [@Langst2015].
 
 One class of remodellers is SWI/SNF complexes, which are able to slide or eject nucleosomes. ATRX is an X-linked SWI/SNF family member, which is mutated in ATR-X syndrome, an intellectual disability disorder. ATRX has been shown to locate at heterochromatic and pericentromeric regions, as well as at telomeres [@McDowell1999], regions which are enriched in G-rich PG4 structures. During ATR-X syndrome, global DNA methylation patterns at these regions are disregulated [@Gibbons2000]. Downregulation of ATRX during the S-phase of the cell cycle, when DNA replication occurs, results in an increase in the DNA damage response marker gamma-H2AX at telomeric regions [@Wong2010]. Heaphy et al. showed that human pancreatic cancers which had lost the expression of ATRX or its partner protein DAXX had elongated telomeres that were characteristic of the Alternative Lengthening of Telomeres pathway. This pathway is telomerase independent, suggesting that ATRX is important for normal telomere repair [@Heaphy2011].
@@ -183,11 +203,17 @@ G4 formation is highly dependent upon chromatin status, and G4s isolated by BG4 
 
 ## Role of G-Quadruplexes *in planta*
 
+\label{sec:g4s_in_plants}
+
 ### G-Quadruplex Distribution
+
+\label{ssec:plant_distribution}
 
 Whilst the majority of G4 studies have been performed in mammalian systems, particularly *H. sapiens*, there is a growing body of evidence for functions of G4s in plant species including *Arabidopsis thaliana*, *Zea mays*, and *Oryza sativa* [@Mullen2010; @Andorf2014; @Wang2015; @Garg2016]. Monocotyledonous flowering plants such as *O. sativa* and *Z. mays* generally have higher GC content than dicotyledonous flowering plants and non-flowering plants [@Smarda2014]. Monocots also have higher PG4 content, presumably as a result of this [@Garg2016]. Three tetrad PG4 densities of plants tend to be lower than those of the well studied *H. sapiens* and *M. musculus*, however. *Arabidopsis thaliana*, the model plant, has a small genome and low PG4 density, with only 1200 three tetrad PG4s [@Mullen2010]. This represented a greater than two fold depletion of PG4s over what was expected in a windowed markov chain modelled genome [@Mullen2010]. Mullen et al. noted that Arabidopsis contains 43000 two tetrad PG4s, however, which they suggested might be stable at the temperature ranges that Arabidopsis lives at [@Mullen2010; @Mullen2012]. Garg et al. identified 1331 genes which have conserved two tetrad or greater PG4s in all dicot species tested, suggesting functional conservation of these motifs [@Garg2016].
 
 ### Translational Regulation
+
+\label{ssec:plant_translation}
 
 An enrichment of PG4s in 5' UTRs has been identified in a number of plant species, including *A. thaliana* [@Mullen2010; @Garg2016], *Z. mays* [@Andorf2014], and *O. sativa* [@Wang2015]. Several of these have been shown to form in RNA [@Kwok2015; @Cho2018]. Kwok et al. identified a PG4 motif on the coding strand of the ATR gene in Arabidopsis, which forms in the 5' UTR of the mRNA [@Kwok2015]. They showed using a transient reporter gene assay that this G4 inhibits translation, but not transcription, presumably by preventing scanning of the UTR by the ribosomal PIC [@Kwok2015].
 
@@ -195,15 +221,23 @@ Cho et al. also identified an RNA G4 which forms in the 5'UTR of SMXL4/5, a gene
 
 ### Plant Development
 
+\label{ssec:plant_dev}
+
+
 It is plausible that molecular mechanisms involving G4s are central to many plant development pathways [@Cho2018; @Nakagawa2012]. Nakagawa et al. analysed the effects of the G4 binding agents NMM and Berberine on Arabidopsis development, and found that both drugs caused defects in leaf polarity [@Nakagawa2012]. Furthermore, plants with double mutations in the genes *ASYMMETRIC LEAVES 1* and *2* were hypersensitive to G4 binding agents [@Nakagawa2012].
 
 ### Stress Response
+
+\label{ssec:plant_stress}
 
 Analysis by Mullen et al. identified that the greatest enrichment of two tetrads in the Arabidopsis genome was inside genic regions, and that these PG4s might form in mRNA [@Mullen2010]. Furthermore, they demonstrated that many two tetrad PG4s are only strongly stable in high potassium concentrations, and postulated that these might act as molecular switches sensing environmental salt concentrations [@Mullen2012]. Since cellular potassium concentrations are increased from around 100mM to as much as 600mM during osmotic stresses (e.g. drought stress) [@Walker1996; @Hummel2010], they suggested that drought stress responsive genes could contain these molecular switches. Analysis of the *Z. mays* genome by Andorf et al. has shown that PG4s are indeed enriched in a number of gene ontology classes involved in stress response, including hypoxia response and nutrient deprivation responsive genes [@Andorf2014].
 
 \newpage
 
 ## Summary
+
+\label{ssec:intro_summary}
+
 
 There is now clear evidence for the *in vivo* function of DNA and RNA G4s in a wide range of molecular processes, including genome stability, replication, transcription, mRNA processing, and translation. In this thesis, we will introduce a new method for the detection of DNA and RNA G4s, using information learned from high throughput sequencing datasets [@Chambers2015; @Kwok2016]. We will then apply this and other methods to the detection of PG4s in the Arabidopsis genome, and identify their enrichment in various genic features including 5'UTRs and CDSs. Finally, we will attempt to identify the effect of G4 stabilisation on Arabidopsis gene expression by treating plants with the G4 binding agent NMM. We will attempt to shed some light on whether the G4 rich genes affected by NMM are naturally regulated through G4 dependent mechanisms.
 
