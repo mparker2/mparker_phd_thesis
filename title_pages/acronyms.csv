@@ -12,11 +12,13 @@ CHX,Cyclohexamide
 CNN,Convolutional neural network
 CPM,Counts per million
 CTD,Carboxy-terminal domain
-DMSO,Dimethyl sulfoxide
+DMS,Dimethyl sulphate
+DMSO,Dimethyl sulphoxide
 DNA,Deoxyribonucleic Acid
 DNase,Deoxyribonuclease
 DPE,Downstream promoter element
 DSB,Double strand break
+EMSA,Electrophoretic mobility shift assay
 ENA,European nucleotide archive
 FDR,False discovery rate
 FISH, Fluorescent in situ hybridisation
@@ -64,6 +66,7 @@ smFRET,Single molecule Förster resonance energy transfer
 snRNA,Small nuclear RNA
 SOM,Self organising maps
 SP3/4/5,Serine proline 3/4/5 motif
+ssDNA,Single stranded DNA
 STAR,Spliced transcript alignment to a reference
 SWI/SNF,Switch/Sucrose non-fermentable
 TFIIH,Transcription initiation factor complex

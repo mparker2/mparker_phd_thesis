@@ -1,6 +1,7 @@
 \newpage
 {
-\section{Table of Contents}
+\section*{Table of Contents}
+\addcontentsline{toc}{chapter}{Table of Contents}
 \hypersetup{linkcolor=black}
 \makeatletter
 \renewcommand\tableofcontents{%
@@ -12,7 +13,8 @@
 }
 \newpage
 {
-\section{List of Figures}
+\section*{List of Figures}
+\addcontentsline{toc}{chapter}{List of Figures}
 \hypersetup{linkcolor=black}
 \makeatletter
 \renewcommand\listoffigures{
@@ -23,7 +25,8 @@
 }
 \newpage
 {
-\section{Acronyms and Abbreviations}
+\section*{Acronyms and Abbreviations}
+\addcontentsline{toc}{chapter}{Acronyms and Abbreviations}
 \DTLloaddb{acronyms}{title_pages/acronyms.sorted.csv}
 \begin{center}
 \begin{longtable}{ll}\toprule

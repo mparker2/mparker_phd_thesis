@@ -1,4 +1,5 @@
-# Acknowledgements
+\section*{Acknowledgements} 
+\addcontentsline{toc}{chapter}{Acknowledgements}
 
 Firstly I would like to thank my supervisor, Karim Sorefan, for guiding me through the project, but also allowing me to take it in the directions I wanted to go, i.e. away from the bench, out of the lab door, and towards the computer! Thanks also to Ian Sudbery for his guidance in the world of bioinformatics, and for allowing me to join his lab's meetings and journal club, without which I would have been stuck with only the wet lab biologists for company. Also thanks to Marta Milo who has helped me with a number of statistics problems over the last four years, and Stuart Casson, for asking good questions in lab meetings. I'd also like to thank Jeremy Craven, whose Python course, which I took at undergraduate level, was what first got me hooked on programming and bioinformatics.
 

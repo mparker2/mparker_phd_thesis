@@ -29,10 +29,12 @@ pdf :
 	pandoc \
 		-o "mparker_thesis_draft_`date +%d%m%y`.pdf" \
 		--template "style/template.tex" \
+		--number-sections \
 		-V fontsize=12pt \
 		-V papersize=a4paper \
 		-V documentclass=report \
 		--pdf-engine=xelatex \
+		-V secnumdepth=4 \
 		--filter ./pandoc-shortcaption/pandoc_shortcaption/__main__.py \
 		--read=markdown \
 		--include-before-body title_pages/title_pages.tex \
@@ -78,9 +80,11 @@ docx :
 	pandoc \
 		-o "mparker_thesis_draft_`date +%d%m%y`.docx" \
 		--template "style/template.tex" \
+		--number-sections \
 		-V fontsize=12pt \
 		-V papersize=a4paper \
 		-V documentclass=report \
+		-v secnumdepth=3 \
 		--filter ./pandoc-shortcaption/pandoc_shortcaption/__main__.py \
 		--read=markdown \
 		--write=docx \
