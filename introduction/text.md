@@ -68,13 +68,15 @@ Studies of the structure of G4s has led to the development of a variety of G4-bi
 * **external groove binding ligands**, which insert into the groove of the G4 helix, or interact with loop sequences [@Monchaud2008]. 
 
 Small molecules which bind G4s include:
-- **N-methyl-mesoporphyrin (NMM)**, an external stacking porphyrin ligand [@Nicoludis2012]; TMPyP4, another porphyrin derived ligand with multiple binding modes including external stacking and intercalation [@Haq1999; @Phan2005];
--  **Pyridostatin**, an external stacking molecule specifically designed for G4 binding [@Rodriguez2008];
--  **Berberine**, a naturally occurring alkaloid and G4 external stacking agent (Fig \ref{drugs}) [@Wu1999; @Franceschin2006]. These molecules have been used to study G4s *in vitro* and also *in vivo*. G4 binding ligands have been shown to have different binding affinities for G4s derived from different sequences, hinting at the potential of drugs targeting G4s in specific gene promoters [@Weldon2018].
+- **N-methyl-mesoporphyrin (NMM)**, an external stacking porphyrin ligand [@Nicoludis2012]; TMPyP4, another porphyrin derived ligand with multiple binding modes including external stacking and intercalation [@Haq1999; @Phan2005] (Fig \ref{drugs}a);
+-  **Pyridostatin**, an external stacking molecule specifically designed for G4 binding [@Rodriguez2008] (Fig \ref{drugs}b);
+-  **Berberine**, a naturally occurring alkaloid and G4 external stacking agent (Fig \ref{drugs}c) [@Wu1999; @Franceschin2006]. 
+
+These molecules have been used to study G4s *in vitro* and also *in vivo*. G4 binding ligands have been shown to have different binding affinities for G4s derived from different sequences, hinting at the potential of drugs targeting G4s in specific gene promoters [@Weldon2018].
 
 \newpage
 
-![**G-Quadruplex Stabilising Ligands** Structures and mode of action of Pyridostatin, NMM, and Berberine. Pyridostatin is thought to bind to all G4s equally well (Müller et al 2010), whilst NMM is known to prefer parallel G4s (Nicoludis et al. 2012). Berberine has been reported to bind to both parallel and anti-parallel G4s (Bazzicalupi et al. 2013, Li et al 2017). Crystal structures of human telomeric DNA (parallel G4 form) in complex with NMM and Berberine are from PDB entries 4FXM and 3R6R respectively (Nicoludis et al. 2012, Bazzicalupi et al. 2013). Potassium ions and solvent molecules have been hidden for visualisation purposes. \label{drugs}](figures/drugs.svg)
+![**G-Quadruplex Stabilising Ligands** Structures and mode of action of Pyridostatin (a), NMM (b), and Berberine(c). Pyridostatin is thought to bind to all G4s equally well (Müller et al 2010), whilst NMM is known to prefer parallel G4s (Nicoludis et al. 2012). Berberine has been reported to bind to both parallel and anti-parallel G4s (Bazzicalupi et al. 2013, Li et al 2017). Crystal structures of human telomeric DNA (parallel G4 form) in complex with NMM and Berberine are from PDB entries 4FXM and 3R6R respectively (Nicoludis et al. 2012, Bazzicalupi et al. 2013). Potassium ions and solvent molecules have been hidden for visualisation purposes. \label{drugs}](figures/drugs.svg)
 
 \newpage
 
@@ -314,8 +316,8 @@ ZvdXIgYSBHNCBpbiBvbmUgb2YgdGhlIHN0cmFuZHMgb3ZlciB0
 aGUgaGVsaXg/IE9yIGlzIGl0IGFzc3VtZWQgdGhhdCBpbiBhbG
 wgY2FzZXMgc29tZXRoaW5nIGVsc2UgaXMgaG9sZGluZyB0aGUg
 RE5BIGluIHNpbmdsZSBzdHJhbmRlZCBzdGF0ZT8iLCJjcmVhdG
-VkIjoxNTMyMzQzOTU5MTMyfX0sImhpc3RvcnkiOlsxNDE0MjIw
-NTc5LC02NTAxMjI5MDUsLTMzNDg1OTIzLC04ODk3MzI3NzAsND
+VkIjoxNTMyMzQzOTU5MTMyfX0sImhpc3RvcnkiOlsxOTE0MzUy
+NjAwLC02NTAxMjI5MDUsLTMzNDg1OTIzLC04ODk3MzI3NzAsND
 c2NTE3MjU4LC0xODE1MjQwOTQ2LDE2NjAyMzk4OTEsMTYwMTM5
 NzMzNSwyODg3MjMxMCwtMTkzNjc0MzI1NSwxMTM0MjA3NjIwLC
 0xMzAyOTUwODQwLC0zNzc4Mzk1MTVdfQ==
