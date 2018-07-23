@@ -142,7 +142,7 @@ Transcription progresses by using the template strand as an antisense copy to re
 
 \newpage
 
-![**Possible Mechanisms for DNA and RNA G4 function in transcription and gene expression** Adapted from Figure 4. Rhodes and Lipps, 2015. **a)** Possible mechanism for function of G4s located in the coding strand. Since G4s form from single stranded DNA, G4s in the coding strand may promote melting of double stranded DNA, increasing transcription levels. G4s which form in the coding strand of the exonic DNA of a gene will also be present in the mRNA produced from that locus, and G4s which form in the coding strand of introns will be present in pre-mRNA. These RNA G4s might also influence gene expression through alteration of pre-mRNA splicing, mRNA stability, or translation. **b)** Possible mechanism for the function of G4s located in the template strand. The template strand of genes is scanned by RNA Polymerase II during transcription, and G4s which form in ahead of the transcription complex may cause slowing or stalling if they cannot be correctly resolved. RNA Polymerase II translocation speed is linked to a number of co-transcriptional processes, including splicing. \label{mech}](figures/transcription.svg)
+![**Possible Mechanisms for DNA and RNA G4 function in transcription and gene expression** Adapted from Figure 4. Rhodes and Lipps, 2015. **a)** Possible mechanism for function of G4s located in the coding strand. Since G4s form from single stranded DNA, G4s in the coding strand may promote melting of double stranded DNA, increasing transcription levels. G4s which form in the coding strand of the exonic DNA of a gene will also be present in the mRNA produced from that locus, and G4s which form in the coding strand of introns will be present in pre-mRNA. These RNA G4s might also influence gene expression through alteration of pre-mRNA splicing, mRNA stability, or translation. **b)** Possible mechanism for the function of G4s located in the template strand. The template strand of genes is scanned by RNA Polymerase II during transcription, and G4s which form in ahead of the transcription complex may cause slowing or stalling if they cannot be correctly resolved. RNA Polymerase II translocation speed is linked to a number of co-transcriptional processes, including splicing **[REF]**. \label{mech}](figures/transcription.svg)
 
 \newpage
 
@@ -446,11 +446,11 @@ NlIGluIHRoaXMgcGFyYSBkb2Vzbid0IHNlZW0gdG8gYmVsb25n
 LiBMYXN0IHNlbnRlbmNlIG9mIGxhc3QgcGFyYSBmZWVscyBsaW
 tlIGl0IGRvZXNuLiBcblxuTmlldGhlciBldmlkZW5jZSBub3Ig
 Y2l0YXRpb24gaW4gbWlkZGxlIHNlbnRlbmNlLiIsImNyZWF0ZW
-QiOjE1MzIzNjI3MjA2MjZ9fSwiaGlzdG9yeSI6Wy0zNDE4Nzc5
-NDUsNjM1NzI3NjkzLC03NjQ0MDA1NDMsMTg1NDg3NzUxNSw3Nj
-A5MzEzODQsLTE3MDIyMDA0NjUsLTUxMzUyNDM0NywxNjA0NzU1
-NDQsLTU1NzI0MTc2NiwzMjg0MTk3NTEsMTA3MDI3ODIzNCw4Nj
-gxNzkxNjUsLTY1MDEyMjkwNSwtMzM0ODU5MjMsLTg4OTczMjc3
-MCw0NzY1MTcyNTgsLTE4MTUyNDA5NDYsMTY2MDIzOTg5MSwxNj
-AxMzk3MzM1LDI4ODcyMzEwXX0=
+QiOjE1MzIzNjI3MjA2MjZ9fSwiaGlzdG9yeSI6Wy04NzYzMjk0
+NjAsLTM0MTg3Nzk0NSw2MzU3Mjc2OTMsLTc2NDQwMDU0MywxOD
+U0ODc3NTE1LDc2MDkzMTM4NCwtMTcwMjIwMDQ2NSwtNTEzNTI0
+MzQ3LDE2MDQ3NTU0NCwtNTU3MjQxNzY2LDMyODQxOTc1MSwxMD
+cwMjc4MjM0LDg2ODE3OTE2NSwtNjUwMTIyOTA1LC0zMzQ4NTky
+MywtODg5NzMyNzcwLDQ3NjUxNzI1OCwtMTgxNTI0MDk0NiwxNj
+YwMjM5ODkxLDE2MDEzOTczMzVdfQ==
 -->
