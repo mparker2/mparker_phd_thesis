@@ -62,7 +62,7 @@ Nuclear magnetic resonance spectroscopy (NMR), specifically Proton-exchange spec
 
 Finally, since folded G4s with short loops and flanking sequence are relatively globular, a number of G4 structures have been crystallised from oligomers. The structures of these crystals have then been solved by X-ray crystallography [@Parkinson2002; @Nicoludis2012].
 
-Studies of the structure of G4s has led to the development of a variety of G4-binding ligands, which might have potential as anti-cancer agents [@Mergny1998; @Neidle2010; @Balasubramanian2011]. These have a wide range of structures and bind to the various G4 topologies with different strengths [@Monchaud2008]. The major classes of G4 binding ligands are: external stacking ligands, which have delocalised pi electron systems, and stack on the the hydrophobic surfaces of the outer G4 tetrads; intercalating ligands, which bind in the groove between stacked tetrads; and external groove binding ligands, which insert into the groove of the G4 helix, or interact with loop sequences [@Monchaud2008]. Small molecules which bind G4s include: N-methyl-mesoporphyrin (NMM), an external stacking porphyrin ligand [@Nicoludis2012]; TMPyP4, another porphyrin derived ligand with multiple binding modes including external stacking and intercalation [@Haq1999; @Phan2005]; Pyridostatin, an external stacking molecule specifically designed for G4 binding [@Rodriguez2008]; and Berberine, a naturally occurring alkaloid and G4 external stacking agent (Fig \ref{drugs}) [@Wu1999; @Franceschin2006]. These molecules have been used to study G4s *in vitro* and also *in vivo*. G4 binding ligands have been shown to have different binding affinities for G4s derived from different sequences, hinting at the potential of drugs targeting G4s in specific gene promoters [@Weldon2018].
+Studies of the structure of G4s has led to the development of a variety of G4-binding ligands, which might have potential as anti-cancer agents [@Mergny1998; @Neidle2010; @Balasubramanian2011]. These have a wide range of structures and bind to the various G4 topologies with different strengths [@Monchaud2008]. The two major classes of G4 binding ligands are: external stacking ligands, which have delocalised pi electron systems, and stack on the the hydrophobic surfaces of the outer G4 tetrads; intercalating ligands, which bind in the groove between stacked tetrads; and external groove binding ligands, which insert into the groove of the G4 helix, or interact with loop sequences [@Monchaud2008]. Small molecules which bind G4s include: N-methyl-mesoporphyrin (NMM), an external stacking porphyrin ligand [@Nicoludis2012]; TMPyP4, another porphyrin derived ligand with multiple binding modes including external stacking and intercalation [@Haq1999; @Phan2005]; Pyridostatin, an external stacking molecule specifically designed for G4 binding [@Rodriguez2008]; and Berberine, a naturally occurring alkaloid and G4 external stacking agent (Fig \ref{drugs}) [@Wu1999; @Franceschin2006]. These molecules have been used to study G4s *in vitro* and also *in vivo*. G4 binding ligands have been shown to have different binding affinities for G4s derived from different sequences, hinting at the potential of drugs targeting G4s in specific gene promoters [@Weldon2018].
 
 \newpage
 
@@ -306,8 +306,8 @@ ZvdXIgYSBHNCBpbiBvbmUgb2YgdGhlIHN0cmFuZHMgb3ZlciB0
 aGUgaGVsaXg/IE9yIGlzIGl0IGFzc3VtZWQgdGhhdCBpbiBhbG
 wgY2FzZXMgc29tZXRoaW5nIGVsc2UgaXMgaG9sZGluZyB0aGUg
 RE5BIGluIHNpbmdsZSBzdHJhbmRlZCBzdGF0ZT8iLCJjcmVhdG
-VkIjoxNTMyMzQzOTU5MTMyfX0sImhpc3RvcnkiOls0NzY1MTcy
-NTgsLTE4MTUyNDA5NDYsMTY2MDIzOTg5MSwxNjAxMzk3MzM1LD
-I4ODcyMzEwLC0xOTM2NzQzMjU1LDExMzQyMDc2MjAsLTEzMDI5
-NTA4NDAsLTM3NzgzOTUxNV19
+VkIjoxNTMyMzQzOTU5MTMyfX0sImhpc3RvcnkiOlstODg5NzMy
+NzcwLDQ3NjUxNzI1OCwtMTgxNTI0MDk0NiwxNjYwMjM5ODkxLD
+E2MDEzOTczMzUsMjg4NzIzMTAsLTE5MzY3NDMyNTUsMTEzNDIw
+NzYyMCwtMTMwMjk1MDg0MCwtMzc3ODM5NTE1XX0=
 -->
