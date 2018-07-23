@@ -116,7 +116,7 @@ Perhaps the best characterised biological role for is at the telomeres. Telomere
 
 Telomeres are coated in architectural proteins, called telomere end binding proteins (TEBPs), which protect the DNA from recognition by DNA damage response pathways. Giraldo & Rhodes showed that a yeast TEBP, RAP1, induces formation of G4 structures in telomeres *in vitro* [@Giraldo1994]. More recently, immunofluorescence experiments using the BG4 antibody showed that G4 foci overlap with fluorescent foci produced by Fluorescent *In Situ* Hybridisation (FISH) of the telomeric repeat in human HEK 293T cells [@Moye2015]. These results suggest that telomeric sequences do form G4s *in vivo*, which may be bound and stabilised by TEBPs. Furthermore, Moye et al. identified that telomerase, the template-independent DNA polymerase which synthesises new telomeric repeats, is able to bind to and partially unwind parallel G4s, but not anti-parallel G4s [@Moye2015]. There is therefore the suggestion of a G4 regulated mechanism for telomere maintenance.
 
-G4s seem to also play roles in other aspects of DNA replication. It is well documented that G4s are capable of stalling polymerases *in vitro*. There is also growing evidence that without the assistance of G4 unwinding helicases, G4s might cause polymerase stalling *in vivo*, also. Work by Rodriguez et al. demonstrated that treatment of human cancer cells with pyridostatin causes an increase in the DNA damage marker γH2AX, suggesting an increase in double strand breaks (DSB) [@Rodriguez2012]. This damage was ameliorated by treatment with a DNA replication inhibitor, suggesting the damage was caused during replication. This is likely to be the result of replication fork collapse at G4 DNA blockages. The DNA helicase FANCJ, which is a tumour-suppressor gene often mutated in breast and ovarian cancers, is involved in DSB repair and has been shown to preferentially bind and unwind G4s [@Wu2016]. Mutation of the FANCJ ortholog DOG1 in *C. elegans* results in genome instability, and accumulation of deletions upstream of G4s [@Kruisselbrink2008].
+G4s seem to also play roles in other aspects of DNA replication. It is well documented that G4s are capable of stalling polymerases *in vitro*. There is also growing evidence that without the assistance of G4 unwinding helicases, G4s might cause polymerase stalling *in vivo*. Work by Rodriguez et al. demonstrated that treatment of human cancer cells with G4 stabiliser pyridostatin causes an increase in the DNA damage marker γH2AX, suggesting an increase in double strand breaks (DSB) [@Rodriguez2012]. This damage was ameliorated by treatment with a DNA replication inhibitor, suggesting the damage was caused during replication. This is likely to be the result of replication fork collapse at G4 DNA blockages. The DNA helicase FANCJ, which is a tumour-suppressor gene often mutated in breast and ovarian cancers, is involved in DSB repair and has been shown to preferentially bind and unwind G4s [@Wu2016]. Mutation of the FANCJ ortholog DOG1 in *C. elegans* results in genome instability, and accumulation of deletions upstream of G4s [@Kruisselbrink2008].
 
 The Bloom gene (BLM) encodes a DNA helicase which, when mutated in humans, causes Bloom's Disease [@German1993]. This is characterised by a reduction in genome stability resulting from a large increase in sister chromatid exchange events (SCE). SCEs are caused by double strand breaks, which are repaired via homologous recombination [@Wu2007]. BLM has been shown to prevent SCEs by unwinding Holliday Junctions (a common form of branched duplex), and restarting collapsed replication forks [@Davies2007]. Work by Sun et al. first showed that BLM is also capable of binding and resolving G4s *in vitro* [@Sun1998]. Recently, van Wietmarschen et al. used a single cell sequencing technique to map the locations of SCEs in cells lacking function BLM, and found that many SCEs were at sites predicted to form G4s [@VanWietmarschen2016]. This suggests that direct action of helicases is required to prevent genome instability at G4 loci.
 
@@ -386,10 +386,11 @@ FsbCBwcmV0dHkgZmFjdHVhbC4gUGVyaGFwcyB5b3Ugc2hvdWxk
 IGFkZCBzb21lIGNyaXRpY2FsIGV2YWx1YXRpb24gb24gdG9wLi
 BXaGljaCBtb2RlbHMgYXJlIHRoZSBiZXN0LiBXaGF0cyB3cm9u
 ZyB3aXRoIHRoZSBvdGhlcnMuLi4iLCJjcmVhdGVkIjoxNTMyMz
-U2NTcxNjQ1fX0sImhpc3RvcnkiOlstNTEzNTI0MzQ3LDE2MDQ3
-NTU0NCwtNTU3MjQxNzY2LDMyODQxOTc1MSwxMDcwMjc4MjM0LD
-g2ODE3OTE2NSwtNjUwMTIyOTA1LC0zMzQ4NTkyMywtODg5NzMy
-NzcwLDQ3NjUxNzI1OCwtMTgxNTI0MDk0NiwxNjYwMjM5ODkxLD
-E2MDEzOTczMzUsMjg4NzIzMTAsLTE5MzY3NDMyNTUsMTEzNDIw
-NzYyMCwtMTMwMjk1MDg0MCwtMzc3ODM5NTE1XX0=
+U2NTcxNjQ1fX0sImhpc3RvcnkiOlstMTcwMjIwMDQ2NSwtNTEz
+NTI0MzQ3LDE2MDQ3NTU0NCwtNTU3MjQxNzY2LDMyODQxOTc1MS
+wxMDcwMjc4MjM0LDg2ODE3OTE2NSwtNjUwMTIyOTA1LC0zMzQ4
+NTkyMywtODg5NzMyNzcwLDQ3NjUxNzI1OCwtMTgxNTI0MDk0Ni
+wxNjYwMjM5ODkxLDE2MDEzOTczMzUsMjg4NzIzMTAsLTE5MzY3
+NDMyNTUsMTEzNDIwNzYyMCwtMTMwMjk1MDg0MCwtMzc3ODM5NT
+E1XX0=
 -->
