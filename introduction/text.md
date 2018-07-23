@@ -132,7 +132,7 @@ In humans, DNA replication occurs from tens to hundreds of thousands of origins 
 
 \label{ssec:transcription}
 
-Transcription is the process by which DNA is copied into messenger RNA (mRNA) or non-coding RNA (ncRNA), by a DNA-templated RNA polymerase. In eukaryotic systems, all mRNA is transcribed by RNA Polymerase II (Pol II). Initiation of transcription is often catalysed by general or specific transcription factors which bind to the promoter region, upstream of the transcriptional start site (TSS). Human promoter sequences are enriched for PG4 motifs conforming to the Quadparser motif [@Eddy2006; @Huppert2007]. Tumour suppressor genes have fewer promoter PG4s than might be expected by chance, whilst proto-oncogenes contain more than might be expected [@Eddy2006]. PG4s also overlap with regions of open chromatin, detected by methods such as DNase Hypersensitivity sequencing (DNase-seq) or Assay for Transposable-Accessible Chromatin by Sequencing (ATAC-seq), suggesting they are often actively transcribed [@Huppert2007]. Hänsel-Hertsch et al. used the BG4 antibody to perform ChIP-seq of G4 structures in conjunction with ATAC-seq and RNA-seq, in normal human keratinocytes and an immortalised cell line [@Hansel2016]. They found that BG4 peaks were indeed associated with open promoters, and were found upstream of expressed genes [@Hansel2016]. Interestingly, many more BG4 peaks were identified in the immortalised cells than in normal cells, despite having similar levels of open chromatin. Furthermore, genes which only had a promoter BG4 peak in the immortalised cells tended to be more highly expressed in those cells compared to the normal cells, suggesting that promoter G4s may increase gene expression. This increase in expression may be the result of recruitment of positive transcription factors.
+Transcription is the process by which DNA is copied into messenger RNA (mRNA) or non-coding RNA (ncRNA), by a DNA-templated RNA polymerase. In eukaryotic systems, all mRNA is transcribed by RNA Polymerase II (Pol II). Initiation of transcription is often catalysed by general or specific transcription factors which bind to the promoter region, upstream of the transcriptional start site (TSS). Human promoter sequences are enriched for PG4 motifs conforming to the Quadparser motif [@Eddy2006; @Huppert2007]. Tumour suppressor genes have fewer promoter PG4s than might be expected by chance, whilst proto-oncogenes contain more than might be expected [@Eddy2006]. PG4s also overlap with regions of open chromatin, detected by methods such as DNase Hypersensitivity sequencing (DNase-seq) or Assay for Transposable-Accessible Chromatin by Sequencing (ATAC-seq), suggesting they are often actively transcribed [@Huppert2007]. Hänsel-Hertsch et al. used the BG4 antibody to perform ChIP-seq of G4 structures in conjunction with ATAC-seq and RNA-seq, in normal human keratinocytes and an immortalised cell line [@Hansel2016]. They found that BG4 peaks were indeed associated with open promoters, and were found upstream of expressed genes [@Hansel2016]. Interestingly, many more BG4 peaks were identified in the immortalised cells than in normal cells, despite having similar levels of open chromatin. Furthermore, genes which only had a promoter BG4 peak in the immortalised cells tended to be more highly expressed in those cells compared to the normal cells, suggesting that promoter G4s may increase gene expression. A potential mechanism for this increase in expression might be the result of recruitment of positive transcription factors.
 
 Perhaps the most well-studied promoter G4 is the Nuclease Hypersensitive Element III (NHEIII) found in the promoter of the c-MYC oncogene. The NHEIII contains a number of G-rich tracts which have been shown to form G4s *in vitro* by a variety of methods [@Simonsson1998; @Siddiqui-Jain2002; @Seenisamy2004; @Ambrus2005]. Formation of a G4 by this region has a strongly repressive effect on gene expression. Siddiqui-Jain et al. found that treatment of cells with the G4 stabilising agent TMPyP4 led to repression of c-MYC, whilst G4 abolishing mutations in a c-MYC promoter luciferase assay caused a three-fold increase in expression [@Siddiqui-Jain2002]. Pull-down of NHEIII binding factors by González et al. identified Nucleolin as a potential G4 interacting partner [@Gonzalez2009]. Nucleolin is a multi-functional protein implicated in ribosome synthesis, transcription and chromatin remodelling. González et al. went on to show that Nucleolin binds to the c-MYC promoter *in vivo*, and that nucleolin overexpression results in downregulation of c-MYC gene expression [@Gonzalez2009], by promoting G4 formation [@Gonzalez2010].
 
@@ -300,52 +300,52 @@ lodURZOGdRT0lqY3dGIjp7InRleHQiOiJUaGVzZSIsInN0YXJ0
 IjoyOTk3NCwiZW5kIjoyOTk2OX0sIm5NWWcwWnczR09UMEV3OT
 kiOnsidGV4dCI6IlRoaXMgaW5jcmVhc2UgaW4gZXhwcmVzc2lv
 biBtYXkgYmUgdGhlIHJlc3VsdCBvZiByZWNydWl0bWVudCBvZi
-Bwb3NpdGl2ZSB0cmFuc2PigKYiLCJzdGFydCI6MzA5MjIsImVu
-ZCI6MzEwMTd9LCIyVWZxMTRxMWpFOFFiak9KIjp7InRleHQiOi
+Bwb3NpdGl2ZSB0cmFuc2PigKYiLCJzdGFydCI6MzA5MzcsImVu
+ZCI6MzEwNDV9LCIyVWZxMTRxMWpFOFFiak9KIjp7InRleHQiOi
 JUaGUgTkhFSUlJIGNvbnRhaW5zIGEgbnVtYmVyIG9mIEctcmlj
 aCB0cmFjdHMgd2hpY2ggaGF2ZSBiZWVuIHNob3duIHRvIGZvcm
-0gRzRz4oCmIiwic3RhcnQiOjMxMTU4LCJlbmQiOjMxMjcyfSwi
+0gRzRz4oCmIiwic3RhcnQiOjMxMTg2LCJlbmQiOjMxMzAwfSwi
 cE9HZzRhZjVpOGQzcVFNayI6eyJ0ZXh0IjoiZXZlbiB3aGVuIG
 90aGVyIGZhY3RvcnMgc3VjaCBhcyBnZW5lIGZ1bmN0aW9uIGFy
 ZSBjb250cm9sbGVkIGZvci4gSXQgaGFzIGJlZW4gc+KApiIsIn
-N0YXJ0IjozMjQ5MSwiZW5kIjozMjcxNH0sIkxRM3hIQnQ3dHRP
+N0YXJ0IjozMjUxOSwiZW5kIjozMjc0Mn0sIkxRM3hIQnQ3dHRP
 MUdISmUiOnsidGV4dCI6IlRyYW5zY3JpcHRpb24gcHJvZ3Jlc3
 NlcyBieSB1c2luZyB0aGUgdGVtcGxhdGUgc3RyYW5kIGFzIGFu
-IGFudGlzZW5zZSBjb3B5IHRvIHLigKYiLCJzdGFydCI6MzI5Nj
-EsImVuZCI6MzM2MzF9LCJ5SXNIZ3FZbEhvd0h2Z1E4Ijp7InRl
+IGFudGlzZW5zZSBjb3B5IHRvIHLigKYiLCJzdGFydCI6MzI5OD
+ksImVuZCI6MzM2NTl9LCJ5SXNIZ3FZbEhvd0h2Z1E4Ijp7InRl
 eHQiOiJJdCBpcyBhbHNvIHBvc3NpYmxlLCBob3dldmVyLCB0aG
 F0IHRoaXMgZWZmZWN0IGNvdWxkIGJlIHBhcnRpYWxseSBkdWUg
-dG8gZ3JlYXRl4oCmIiwic3RhcnQiOjM1MzE3LCJlbmQiOjM1ND
-MwfSwiNUU5RnRXZWVXdzRUd0t6dCI6eyJ0ZXh0IjoiVGhlIEc0
+dG8gZ3JlYXRl4oCmIiwic3RhcnQiOjM1MzQ1LCJlbmQiOjM1ND
+U4fSwiNUU5RnRXZWVXdzRUd0t6dCI6eyJ0ZXh0IjoiVGhlIEc0
 LWZvcm1pbmcgcG90ZW50aWFsIG9mIHRoZXNlIGdlbmVzIGFsc2
 8gdGVuZGVkIHRvIGJlIGdyZWF0ZXIgb24gdGhlIGNvZGluZ+KA
-piIsInN0YXJ0IjozNzQ4NiwiZW5kIjozNzU3Mn0sInY5RHJBeT
+piIsInN0YXJ0IjozNzUxNCwiZW5kIjozNzYwMH0sInY5RHJBeT
 J4OVpWcFI0aUgiOnsidGV4dCI6IiFbKipHLVF1YWRydXBsZXhl
 cyBjb250cm9sIHRoZSBzcGxpY2luZyBvZiBCY2wtWCBwcmUtbV
 JOQSoqICoqYSkqKiBEaWFncmFtIHNob3figKYiLCJzdGFydCI6
-NDQ2MDUsImVuZCI6NDUxMDZ9LCJNcDU5MXlyUWF6cHVtVDBBIj
+NDQ2MzMsImVuZCI6NDUxMzR9LCJNcDU5MXlyUWF6cHVtVDBBIj
 p7InRleHQiOiJiZWNhdXNlIFJOQXMgdGVuZCB0byBmb3JtIG1v
-cmUgY29tcGxleCBzdHJ1Y3R1cmVzIiwic3RhcnQiOjQ1MjY5LC
-JlbmQiOjQ1MzE4fSwieDFpSmx3b3A4b25uRHdhMiI6eyJ0ZXh0
-IjoiU0hBUEUtc2VxIiwic3RhcnQiOjQ1NzcyLCJlbmQiOjQ1Nz
-gxfSwiaWhNTFdDRFU3bkQxa3Z5VSI6eyJ0ZXh0IjoiRzQgZm9y
+cmUgY29tcGxleCBzdHJ1Y3R1cmVzIiwic3RhcnQiOjQ1Mjk3LC
+JlbmQiOjQ1MzQ2fSwieDFpSmx3b3A4b25uRHdhMiI6eyJ0ZXh0
+IjoiU0hBUEUtc2VxIiwic3RhcnQiOjQ1ODAwLCJlbmQiOjQ1OD
+A5fSwiaWhNTFdDRFU3bkQxa3Z5VSI6eyJ0ZXh0IjoiRzQgZm9y
 bWF0aW9uIG1pZ2h0IGFjdCBhcyBhIG1vbGVjdWxhciBzd2l0Y2
-giLCJzdGFydCI6NDY1ODEsImVuZCI6NDY2MjV9LCJUZklLRkFZ
+giLCJzdGFydCI6NDY2MDksImVuZCI6NDY2NTN9LCJUZklLRkFZ
 NGpZSWtZRVA4Ijp7InRleHQiOiJNb25vY290cyBhbHNvIGhhdm
-UgaGlnaGVyIFBHNCBjb250ZW50LCIsInN0YXJ0Ijo1NzQ2Niwi
-ZW5kIjo1NzUwNH0sIk5odGZBdEhQSlNqVlAzNHciOnsidGV4dC
+UgaGlnaGVyIFBHNCBjb250ZW50LCIsInN0YXJ0Ijo1NzQ5NCwi
+ZW5kIjo1NzUzMn0sIk5odGZBdEhQSlNqVlAzNHciOnsidGV4dC
 I6Im1pZ2h0IGJlIHN0YWJsZSBhdCB0aGUgdGVtcGVyYXR1cmUg
-cmFuZ2VzIiwic3RhcnQiOjU4MDQzLCJlbmQiOjU4MDg0fSwiQk
+cmFuZ2VzIiwic3RhcnQiOjU4MDcxLCJlbmQiOjU4MTEyfSwiQk
 VBa2lCYnQ4Q0ZuMzJvdSI6eyJ0ZXh0IjoiQSBQRzQgbW90aWYi
-LCJzdGFydCI6NTk0NzUsImVuZCI6NTk0ODZ9LCJxREluZlQydG
+LCJzdGFydCI6NTk1MDMsImVuZCI6NTk1MTR9LCJxREluZlQydG
 lwcFFlNEQzIjp7InRleHQiOiJBbmFseXNpcyBieSBNdWxsZW4g
 ZXQgYWwuIGlkZW50aWZpZWQgdGhhdCB0aGUgZ3JlYXRlc3QgZW
 5yaWNobWVudCBvZiB0d28gdGV0cmFk4oCmIiwic3RhcnQiOjYw
-MjEzLCJlbmQiOjYxMTI4fSwiZ1pSOUhQbTdndjVoQmNXbyI6ey
+MjQxLCJlbmQiOjYxMTU2fSwiZ1pSOUhQbTdndjVoQmNXbyI6ey
 J0ZXh0IjoiIyMgUm9sZSBvZiBHLVF1YWRydXBsZXhlcyAqaW4g
-cGxhbnRhKiIsInN0YXJ0Ijo1Njg2NiwiZW5kIjo1NjkwM30sIm
+cGxhbnRhKiIsInN0YXJ0Ijo1Njg5NCwiZW5kIjo1NjkzMX0sIm
 9qNDE2V1pQNTljMGlIUzAiOnsidGV4dCI6Ikl0IGlzIHBsYXVz
-aWJsZSB0aGF0Iiwic3RhcnQiOjU5NzA4LCJlbmQiOjU5NzI4fX
+aWJsZSB0aGF0Iiwic3RhcnQiOjU5NzM2LCJlbmQiOjU5NzU2fX
 0sImNvbW1lbnRzIjp7InJvZDZBR1QzZkl2OXdVS0YiOnsiZGlz
 Y3Vzc2lvbklkIjoiVmNDZ0RKUjIzVzBxSTdlZSIsInN1YiI6Ij
 EwMjIwNTc5NzI3Njk0MTAxMDY3NyIsInRleHQiOiJUbyB3aGF0
@@ -572,10 +572,10 @@ JnaXZzdVhQTnRSOEp0Ijp7ImRpc2N1c3Npb25JZCI6Im9PMkRz
 T2tqQUxrR3lUT00iLCJzdWIiOiIxMDg1MjAwMjkzMDIyOTQ2NT
 A0MTciLCJ0ZXh0IjoiaXMgdGhpcyBhbiBpbXByb3ZlbWVudD8i
 LCJjcmVhdGVkIjoxNTMyMzgyOTkzMDEwfX0sImhpc3RvcnkiOl
-stODgzNjY2NDA4LDE4NTg4MDY3MzAsLTExODQ4ODcxMTYsNzg3
-OTIzMjE1LC0yMDg0NzEyNDQ2LDEwNTE3NDc2ODksLTEyNTc1Mj
-Y1MzUsLTU1MzkwOTMzMSwxMDI4NjcxNDYsNjgxMTQ4MTc4LC04
-NzYzMjk0NjAsLTM0MTg3Nzk0NSw2MzU3Mjc2OTMsLTc2NDQwMD
-U0MywxODU0ODc3NTE1LDc2MDkzMTM4NCwtMTcwMjIwMDQ2NSwt
-NTEzNTI0MzQ3LDE2MDQ3NTU0NCwtNTU3MjQxNzY2XX0=
+stMTAwNTQwMDAwNCwxODU4ODA2NzMwLC0xMTg0ODg3MTE2LDc4
+NzkyMzIxNSwtMjA4NDcxMjQ0NiwxMDUxNzQ3Njg5LC0xMjU3NT
+I2NTM1LC01NTM5MDkzMzEsMTAyODY3MTQ2LDY4MTE0ODE3OCwt
+ODc2MzI5NDYwLC0zNDE4Nzc5NDUsNjM1NzI3NjkzLC03NjQ0MD
+A1NDMsMTg1NDg3NzUxNSw3NjA5MzEzODQsLTE3MDIyMDA0NjUs
+LTUxMzUyNDM0NywxNjA0NzU1NDQsLTU1NzI0MTc2Nl19
 -->
