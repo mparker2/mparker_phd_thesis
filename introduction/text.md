@@ -112,7 +112,7 @@ Finally, the more recent efforts to produce high-throughput methods for identify
 
 The distribution of G4s in genomes has been predicted from sequence for a wide variety of organisms [@Huppert2005; @Hershman2008; @Du2008; @Mullen2010; @Garg2016], and has been experimentally determined by the techniques mentioned above for the human genome. There is conclusive evidence that G4s are not uniformly distributed throughout genomes, but tend to be clustered at functional locations. By far the strongest enrichment of G4s is seen at telomeres. G4s are also found more than would be expected in origins of replication, gene promoters, and inside gene bodies, particularly the 5' and 3' untranslated regions (UTRs). In these locations, it has been demonstrated that G4 formation has effects on the processes of DNA replication, genome stability, transcription, and translation.
 
-Perhaps the best characterised biological role for is at Telomeres are the protein-DNA structures found at the ends of linear eukaryotic chromosomes. They consist of thousands of tandem repeats of a G-rich sequence [@Moyzis1988], with a single stranded overhang of around 100-200bp [@Makarov1997]. Due to functional limitations in templated DNA replication, the very ends of these cannot be duplicated during cell division. This means that without intervention, the chromosome will gradually shorten with each division. Telomeres therefore serve as protective caps that prevent the loss of important coding DNA from the genome. In humans, the telomeric repeat is (TTAGGG)n [@Moyzis1988]. This has been identified through various methods as a G4 forming sequence.
+Perhaps the best characterised biological role for is at the telomeres. Telomeres are the protein-DNA structures found at the ends of linear eukaryotic chromosomes. They consist of thousands of tandem repeats of a G-rich sequence [@Moyzis1988], with a single stranded overhang of around 100-200bp [@Makarov1997]. Due to functional limitations in templated DNA replication, the very ends of these cannot be duplicated during cell division. This means that without intervention, the chromosome will gradually shorten with each division. Telomeres therefore serve as protective caps that prevent the loss of important coding DNA from the genome. In humans, the telomeric repeat is (TTAGGG)n [@Moyzis1988]. This has been identified through various methods as a G4 forming sequence.
 
 Telomeres are coated in architectural proteins, called telomere end binding proteins (TEBPs), which protect the DNA from recognition by DNA damage response pathways. Giraldo & Rhodes showed that a yeast TEBP, RAP1, induces formation of G4 structures in telomeres *in vitro* [@Giraldo1994]. More recently, immunofluorescence experiments using the BG4 antibody showed that G4 foci overlap with fluorescent foci produced by Fluorescent *In Situ* Hybridisation (FISH) of the telomeric repeat in human HEK 293T cells [@Moye2015]. These results suggest that telomeric sequences do form G4s *in vivo*, which may be bound and stabilised by TEBPs. Furthermore, Moye et al. identified that telomerase, the template-independent DNA polymerase which synthesises new telomeric repeats, is able to bind to and partially unwind parallel G4s, but not anti-parallel G4s [@Moye2015]. There is therefore the suggestion of a G4 regulated mechanism for telomere maintenance.
 
@@ -386,10 +386,10 @@ FsbCBwcmV0dHkgZmFjdHVhbC4gUGVyaGFwcyB5b3Ugc2hvdWxk
 IGFkZCBzb21lIGNyaXRpY2FsIGV2YWx1YXRpb24gb24gdG9wLi
 BXaGljaCBtb2RlbHMgYXJlIHRoZSBiZXN0LiBXaGF0cyB3cm9u
 ZyB3aXRoIHRoZSBvdGhlcnMuLi4iLCJjcmVhdGVkIjoxNTMyMz
-U2NTcxNjQ1fX0sImhpc3RvcnkiOlstMTY5NzQ1NTkyMiwxNjA0
-NzU1NDQsLTU1NzI0MTc2NiwzMjg0MTk3NTEsMTA3MDI3ODIzNC
-w4NjgxNzkxNjUsLTY1MDEyMjkwNSwtMzM0ODU5MjMsLTg4OTcz
-Mjc3MCw0NzY1MTcyNTgsLTE4MTUyNDA5NDYsMTY2MDIzOTg5MS
-wxNjAxMzk3MzM1LDI4ODcyMzEwLC0xOTM2NzQzMjU1LDExMzQy
-MDc2MjAsLTEzMDI5NTA4NDAsLTM3NzgzOTUxNV19
+U2NTcxNjQ1fX0sImhpc3RvcnkiOlstNTEzNTI0MzQ3LDE2MDQ3
+NTU0NCwtNTU3MjQxNzY2LDMyODQxOTc1MSwxMDcwMjc4MjM0LD
+g2ODE3OTE2NSwtNjUwMTIyOTA1LC0zMzQ4NTkyMywtODg5NzMy
+NzcwLDQ3NjUxNzI1OCwtMTgxNTI0MDk0NiwxNjYwMjM5ODkxLD
+E2MDEzOTczMzUsMjg4NzIzMTAsLTE5MzY3NDMyNTUsMTEzNDIw
+NzYyMCwtMTMwMjk1MDg0MCwtMzc3ODM5NTE1XX0=
 -->
