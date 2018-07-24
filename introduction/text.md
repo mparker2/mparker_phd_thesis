@@ -71,7 +71,7 @@ Small molecules which bind G4s include:
 - **N-methyl-mesoporphyrin (NMM)**, an external stacking porphyrin ligand [@Nicoludis2012]; TMPyP4, another porphyrin derived ligand with multiple binding modes including external stacking and intercalation [@Haq1999; @Phan2005] (Fig \ref{drugs}a).  NMM is known to prefer parallel G4s [@Nicoludis2012];
 - **TMPyP4**, another porphyrin derived ligand with multiple binding modes including external stacking and intercalation [@Haq1999; @Phan2005];
 -  **Pyridostatin**, an external stacking molecule specifically designed for G4 binding [@Rodriguez2008] (Fig \ref{drugs}b).  Pyridostatin is thought to bind to all G4s equally well [@Muller2010];
--  **Berberine**, a naturally occurring alkaloid and G4 external stacking agent (Fig \ref{drugs}c) [@Wu1999; @Franceschin2006]. Berberine has been reported to bind to both parallel and anti-parallel G4s [@Bazzicalupi2013; @Li2017).
+-  **Berberine**, a naturally occurring alkaloid and G4 external stacking agent (Fig \ref{drugs}c) [@Wu1999; @Franceschin2006]. Berberine has been reported to bind to both parallel and anti-parallel G4s [@Bazzicalupi2013; @Li2017].
 
 These molecules have been used to study G4s *in vitro* and also *in vivo*. G4 binding ligands have been shown to have different binding affinities for G4s derived from different sequences, hinting at the potential of drugs targeting G4s in specific gene promoters [@Weldon2018].
 
@@ -573,7 +573,7 @@ JnaXZzdVhQTnRSOEp0Ijp7ImRpc2N1c3Npb25JZCI6Im9PMkRz
 T2tqQUxrR3lUT00iLCJzdWIiOiIxMDg1MjAwMjkzMDIyOTQ2NT
 A0MTciLCJ0ZXh0IjoiaXMgdGhpcyBhbiBpbXByb3ZlbWVudD8i
 LCJjcmVhdGVkIjoxNTMyMzgyOTkzMDEwfX0sImhpc3RvcnkiOl
-sxODcwODE2MDI1LDIwOTk2MTI5MjgsMTEwMjU5MzQyMywxMDIx
+stMjA2NjE3Nzc5LDIwOTk2MTI5MjgsMTEwMjU5MzQyMywxMDIx
 NTIzOTk2LC0xMDA1NDAwMDA0LDE4NTg4MDY3MzAsLTExODQ4OD
 cxMTYsNzg3OTIzMjE1LC0yMDg0NzEyNDQ2LDEwNTE3NDc2ODks
 LTEyNTc1MjY1MzUsLTU1MzkwOTMzMSwxMDI4NjcxNDYsNjgxMT
