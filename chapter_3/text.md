@@ -231,5 +231,12 @@ We present G4Seeqer, the first Convolutional/Recurrent Neural Network model for 
 
 \newpage
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjU2NTgxMzc0XX0=
+eyJkaXNjdXNzaW9ucyI6eyJHdWtoM3JqY3h3dWhXSHRpIjp7In
+N0YXJ0IjoxNTYwLCJlbmQiOjE1OTAsInRleHQiOiJwcm9kdWNp
+bmcgbWFueSBmYWxzZSBwb3NpdGl2ZXMifX0sImNvbW1lbnRzIj
+p7IjZseFpiZEswQTV6OHFaeGsiOnsiZGlzY3Vzc2lvbklkIjoi
+R3VraDNyamN4d3VoV0h0aSIsInN1YiI6IjEwMjIwNTc5NzI3Nj
+k0MTAxMDY3NyIsInRleHQiOiJIb3cgbWFueSBmYWxzZSBwb3Np
+dGl2ZXM/IiwiY3JlYXRlZCI6MTUzMjUxODU3MjExMX19LCJoaX
+N0b3J5IjpbODU2NTE0NDg1LDI1NjU4MTM3NF19
 -->
