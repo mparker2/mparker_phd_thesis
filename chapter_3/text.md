@@ -31,7 +31,7 @@ To ground truth score these sequences, `bedtools map` was used to intersect them
 
 Intervals files and corresponding mismatch scores were read into Python using `pandas` and histograms of log transformed mismatch scores were plotted using `matplotlib` [@VanRossum1995; @Mckinney2011; @Hunter2007]. The threshold of approximately 3 for separating G4-forming and non-G4 forming sequences was chosen using `scipy` to determine the local minimum in the histogram [@Jones2001]. Joint plots of percentage mismatch score against G4Hunter score were plotted using `seaborn` [@Waskom2014].
 
-Since positive training examples were outweighed in the dataset by a factor of 10:1, random under-sampling of negative examples was conducted using `imblanced-learn` to attain a ratio of 2:1 [@Lemaitre2001]. This filtered dataset was shuffled and written to disk in bed format, and `bedtools getfasta` was used to extract sequences for each interval from hg19 [@Quinlan2010]. Sequences were then one hot encoded and loaded into HDF5 format for training using `h5py` [@Collette2013]. For training of models on trinucleotide content, trinucleotide content statistics were extracted and loaded into HDF5 format.
+Since positive training examples were outweighed by negative ones in this dataset by a factor of 10:1, random under-sampling of negative examples was conducted using `imblanced-learn` to attain a ratio of 2:1 [@Lemaitre2001]. This filtered dataset was shuffled and written to disk in bed format, and `bedtools getfasta` was used to extract sequences for each interval from hg19 [@Quinlan2010]. Sequences were then one hot encoded and loaded into HDF5 format for training using `h5py` [@Collette2013]. For training of models on trinucleotide content, trinucleotide content statistics were extracted and loaded into HDF5 format.
 
 ### Model Training and Validation
 
@@ -255,7 +255,7 @@ IjoiQWxtb3N0IGNlcnRhaW5seSB5b3VyIGF1ZGllbmNlIHdpbG
 wgbm90IGJlIGEgbWFjaGluZSBsZWFybmluZyBleHBlcnQuIFlv
 dSBuZWVkIHRvIGV4cGxhaW4gdGhlIG1ldGhvZCwgYW5kIHdoeS
 B5b3UgYXJlIGRvaW5nIGl0IHRoaXMgd2F5LiIsImNyZWF0ZWQi
-OjE1MzI1MTkyNjQ5MjV9fSwiaGlzdG9yeSI6WzgzNjQzMTMwNi
-wxMDg2ODE4MjMyLDgzNjQzMTMwNiw4NTY1MTQ0ODUsMjU2NTgx
-Mzc0XX0=
+OjE1MzI1MTkyNjQ5MjV9fSwiaGlzdG9yeSI6WzExMzEzMzU2ND
+AsODM2NDMxMzA2LDEwODY4MTgyMzIsODM2NDMxMzA2LDg1NjUx
+NDQ4NSwyNTY1ODEzNzRdfQ==
 -->
