@@ -97,7 +97,7 @@ To produce candidate regions for model training, we ran the modified G4hunter me
 
 To created training sequences, the 50bp candidate regions from the G4hunter method were increased in size by 39bp in each direction to produce intervals of 128bp in length, since previous work has suggested that flanking regions are an important determinant of G4 stability. Clusters of overlapping intervals were filtered to produce only the interval with the highest G4Hunter score (in cases of ties, a random highest scoring interval was selected). This produced a total of 6,237,943 candidate intervals. Each candidate interval was then scored by mapping the value of the maximum scoring overlapping window from the G4seq dataset [@Chambers2015], which contains percentage mismatches (%mm) from sequencing in the presence of potassium vs. absence of potassium, in 12bp windows. Regions of high %mm on the positive strand indicate a G4 structure on the negative strand, and vice versa.
 
-Plotting the distribution of the log of the %mm scores produced a bimodal distribution with a peak around 1 (corresponding to 2-3% mismatch) and another around 3.5 (corresponding to approximately 30% mismatch) (Fig. \ref{training_data}a). We determined the local minimum in the histogram between the two peaks to be approximately 3 (around 20% mismatch), therefore we used this value to split the data into G4 positive and G4 negative subsets. This yielded more than 10 times more G4 negative sequences than positive, however (5809719 negative to 428224 positive). Since maintaining such an imbalance in the training data would produce a poor classifier, we undersampled the G4 negative class to a ratio of 2:1, yielding a total of 1284672 sequences.
+Plotting the distribution of the log of the %mm scores produced a bimodal distribution with a peak around 1 (corresponding to 2-3% mismatch) and another around 3.5 (corresponding to approximately 30% mismatch) (Fig. \ref{training_data}a). We determined the local minimum in the histogram between the two peaks to be approximately 3 (around 20% mismatch), therefore we used this value to split the data into G4 positive and G4 negative subsets. This yielded more than 10 times as many G4 negative sequences than positive, however (5,809,719 negative to 428,224 positive). Since maintaining such an imbalance in the training data would produce a poor classifier, we undersampled the G4 negative class to a ratio of 2:1, yielding a total of 1,284,672 sequences.
 
 \newpage
 
@@ -380,8 +380,8 @@ A2OTQzN30sIktJa1ZSRVBQdW02Q1RPb0wiOnsiZGlzY3Vzc2lv
 bklkIjoiQUlxbXN3RlZCenlEWEV4RiIsInN1YiI6IjEwMjIwNT
 c5NzI3Njk0MTAxMDY3NyIsInRleHQiOiJDb21tYSBmb3JtYXQg
 YmlnIG51bWJlcnMgbGlrZSB0aGVzZS4iLCJjcmVhdGVkIjoxNT
-MyODc2MDkwOTc0fX0sImhpc3RvcnkiOlsyMTA1MTQ1OTQsLTk3
-NjQwNjM5OSwtMTczNjA4MDUzNiw1MTA3MDU0NDMsMTk3MjY1NT
-MzMSw4MzY0MzEzMDYsMTA4NjgxODIzMiw4MzY0MzEzMDYsODU2
-NTE0NDg1LDI1NjU4MTM3NF19
+MyODc2MDkwOTc0fX0sImhpc3RvcnkiOlstOTc4MTU0MDY4LC05
+NzY0MDYzOTksLTE3MzYwODA1MzYsNTEwNzA1NDQzLDE5NzI2NT
+UzMzEsODM2NDMxMzA2LDEwODY4MTgyMzIsODM2NDMxMzA2LDg1
+NjUxNDQ4NSwyNTY1ODEzNzRdfQ==
 -->
