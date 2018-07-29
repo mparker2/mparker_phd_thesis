@@ -43,7 +43,7 @@ Models were validated on 10% of the total data held out for testing purposes. Re
 
 ### BG4 Analysis
 
-NarrowPeak BED files of BG4 ChIP-seq peaks were downloaded from GEO accession GSE76688 [@Hansel2016]. To accommodate Quadron's flanking sequence requirements, the size of the BG4 intervals was increased by 50bp in each direction using `awk` [@Aho1988]. A BG4-negative peak set was generated using `bedtools shuffle` [@Quinlan2010]. Shuffling was performed such that an equal number of simliarly sized intervals were selected that excluded gaps in the genome or BG4-positive peaks. Positive and negative peaks were concatenated and sequences were extracted using `bedtools getfasta` [@Quinlan2010]. Predictions were made on these sequences using G4Seeqer/G4Hunter/Quadron, and the maximum scoring interval per peak was assigned as the overall score of the peak. Where a model did not make any predictions in a peak, it was assigned a score of zero. Receiver Operator Characteristic (ROC) and Precision Recall (PR) curves were generated using `scikit-learn` and plotted with `matplotlib` [@Pedregosa2011; @Hunter2007].
+NarrowPeak BED files of BG4 ChIP-seq peaks were downloaded from GEO accession GSE76688 [@Hansel2016]. To accommodate Quadron's flanking sequence requirements, the size of the BG4 intervals was increased by 50bp in each direction using `awk` [@Aho1988]. A BG4-negative peak set was generated using `bedtools shuffle` [@Quinlan2010]. Shuffling was performed such that an equal number of simliarly sized intervals were selected that excluded gaps in the genome or BG4-positive peaks. Positive and negative peaks were concatenated and sequences were extracted using `bedtools getfasta` [@Quinlan2010]. Predictions were made on these sequences using G4Seeqer/G4Hunter/Quadron, and the maximum scoring interval per peak was assigned as the overall score of the peak. Where a model did not make any predictions in a peak, it was assigned a score of zero. Receiver Operator Characteristic (ROC, false positive rate plotted against true positive rate) and Precision Recall (PR, precision plotted against recall) curves were generated using `scikit-learn` and plotted with `matplotlib` [@Pedregosa2011; @Hunter2007].
 
 ### rG4seq Training Data Preprocessing
 
@@ -285,7 +285,7 @@ dXNlIGVhY2ggYWxnb3JpdGhtIHByZWRpY3RzIHRoZSBzY29yZS
 Bmb3IgYW4gaW50ZXJ2YWwsIGFuZCB0aGVzZSBpbnRlcnZhbHMg
 YXJlIGdlbmVyYWxseSBzbWFsbGVyIHRoYW4gdGhlIHBlYWtzPy
 BCZSBtb3JlIGV4cGxpY3QuIiwiY3JlYXRlZCI6MTUzMjg3NTEw
-MzYxMX19LCJoaXN0b3J5IjpbMTE5NDg2Mzk3MSwxOTcyNjU1Mz
-MxLDgzNjQzMTMwNiwxMDg2ODE4MjMyLDgzNjQzMTMwNiw4NTY1
-MTQ0ODUsMjU2NTgxMzc0XX0=
+MzYxMX19LCJoaXN0b3J5IjpbNTEwNzA1NDQzLDE5NzI2NTUzMz
+EsODM2NDMxMzA2LDEwODY4MTgyMzIsODM2NDMxMzA2LDg1NjUx
+NDQ4NSwyNTY1ODEzNzRdfQ==
 -->
