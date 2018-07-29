@@ -43,7 +43,7 @@ Models were validated on 10% of the total data held out for testing purposes. Re
 
 ### BG4 Analysis
 
-NarrowPeak BED files of BG4 ChIP-seq peaks were downloaded from GEO accession GSE76688 [@Hansel2016]. To accommodate Quadron's flanking sequence requirements, the size of the BG4 intervals was increased by 50bp in each direction using `awk` [@Aho1988]. A BG4-negative peak set was generated using `bedtools shuffle` [@Quinlan2010]. Shuffling was done excluding gaps in the genome or BG4-positive peaks. Positive and negative peaks were concatenated and sequences were extracted using `bedtools getfasta` [@Quinlan2010]. Predictions were made on these sequences using G4Seeqer/G4Hunter/Quadron, and the maximum scoring interval per peak was assigned as the overall score of the peak. Where a model did not make any predictions in a peak, it was assigned a score of zero. Receiver Operator Characteristic (ROC) and Precision Recall (PR) curves were generated using `scikit-learn` and plotted with `matplotlib` [@Pedregosa2011; @Hunter2007].
+NarrowPeak BED files of BG4 ChIP-seq peaks were downloaded from GEO accession GSE76688 [@Hansel2016]. To accommodate Quadron's flanking sequence requirements, the size of the BG4 intervals was increased by 50bp in each direction using `awk` [@Aho1988]. A BG4-negative peak set was generated using `bedtools shuffle` [@Quinlan2010]. Shuffling was performed so as to exclude gaps in the genome or BG4-positive peaks. Positive and negative peaks were concatenated and sequences were extracted using `bedtools getfasta` [@Quinlan2010]. Predictions were made on these sequences using G4Seeqer/G4Hunter/Quadron, and the maximum scoring interval per peak was assigned as the overall score of the peak. Where a model did not make any predictions in a peak, it was assigned a score of zero. Receiver Operator Characteristic (ROC) and Precision Recall (PR) curves were generated using `scikit-learn` and plotted with `matplotlib` [@Pedregosa2011; @Hunter2007].
 
 ### rG4seq Training Data Preprocessing
 
@@ -243,35 +243,40 @@ ZyBhIGR5bmFtaWMgcHJvZ3JhbW1pbmcgdGVjaG5pcXVlIGNvbW
 1v4oCmIn0sIm1qdmM3VkdFSDcxNzdUbm0iOnsic3RhcnQiOjg0
 OTAsImVuZCI6ODc4MiwidGV4dCI6IlRoZSBjb252b2x1dGlvbm
 FsIHBvcnRpb24gb2YgRzRTZWVxZXIgd2FzIG1hZGUgdXAgb2Yg
-dHdvIGNvbnZvbHV0aW9uYWwgbGF5ZXJzIHfigKYifX0sImNvbW
-1lbnRzIjp7IjZseFpiZEswQTV6OHFaeGsiOnsiZGlzY3Vzc2lv
-bklkIjoiR3VraDNyamN4d3VoV0h0aSIsInN1YiI6IjEwMjIwNT
-c5NzI3Njk0MTAxMDY3NyIsInRleHQiOiJIb3cgbWFueSBmYWxz
-ZSBwb3NpdGl2ZXM/IiwiY3JlYXRlZCI6MTUzMjUxODU3MjExMX
-0sInFaeDRvNjZYcEtuSFZFVVciOnsiZGlzY3Vzc2lvbklkIjoi
-V0RDM1lpQXdsakVxVERkVyIsInN1YiI6IjEwMjIwNTc5NzI3Nj
-k0MTAxMDY3NyIsInRleHQiOiJXaGF0IGlzIGEgY29udm9sdXRp
-b25hbCBhbmQgcmVjdXJyZW50IG5ldXJhbCBuZXR3b3JrPyBIb3
-cgZG9lcyBpdCB3b3JrPyBIb3cgaXMgaXQgZGlmZmVyZW50IGZy
-b20gb3RoZXIgbWFjaGluZSBsZWFybmluZyBhbGdvcyBvciBvdG
-hlciBOTnM/IFxuXG5XaHkgZGlkIHlvdSBjaG9vc2UgdG8gdXNl
-IGEgQ1JOTj8iLCJjcmVhdGVkIjoxNTMyNTE5MjE1MzEzfSwiak
-hNOXhsYlYzTTliNURQaCI6eyJkaXNjdXNzaW9uSWQiOiJXREMz
-WWlBd2xqRXFURGRXIiwic3ViIjoiMTAyMjA1Nzk3Mjc2OTQxMD
-EwNjc3IiwidGV4dCI6IkFsbW9zdCBjZXJ0YWlubHkgeW91ciBh
-dWRpZW5jZSB3aWxsIG5vdCBiZSBhIG1hY2hpbmUgbGVhcm5pbm
-cgZXhwZXJ0LiBZb3UgbmVlZCB0byBleHBsYWluIHRoZSBtZXRo
-b2QsIGFuZCB3aHkgeW91IGFyZSBkb2luZyBpdCB0aGlzIHdheS
-4iLCJjcmVhdGVkIjoxNTMyNTE5MjY0OTI1fSwiNjlBR0k5N0x2
-dlRkWlRTSSI6eyJkaXNjdXNzaW9uSWQiOiJBcFBuMFVBS1JzRT
-FtMXFjIiwic3ViIjoiMTAyMjA1Nzk3Mjc2OTQxMDEwNjc3Iiwi
-dGV4dCI6IldoYXQgaXMgdGhpcyBhbGdvcml0aG0/IFJlZmVyZW
-5jZSBvciBkZXNjcmlwdG9uIiwiY3JlYXRlZCI6MTUzMjg3NDgw
-ODkzNX0sIklMSnU3U1AwMGpqTmtlUTQiOnsiZGlzY3Vzc2lvbk
-lkIjoibWp2YzdWR0VINzE3N1RubSIsInN1YiI6IjEwMjIwNTc5
-NzI3Njk0MTAxMDY3NyIsInRleHQiOiJIb3cgZGlkIHlvdSBkZW
-NpZGUgdG8gdXNlIHRoaXMgYXJjaGV0ZWN0dXJlPyIsImNyZWF0
-ZWQiOjE1MzI4NzQ4MzY0NzZ9fSwiaGlzdG9yeSI6Wy03ODE0ND
-QwNDQsODM2NDMxMzA2LDEwODY4MTgyMzIsODM2NDMxMzA2LDg1
-NjUxNDQ4NSwyNTY1ODEzNzRdfQ==
+dHdvIGNvbnZvbHV0aW9uYWwgbGF5ZXJzIHfigKYifSwidTBsSG
+I3OVdhbkhnTFJMbiI6eyJzdGFydCI6OTIzNiwiZW5kIjo5MjM5
+LCJ0ZXh0IjoiTUxQIn19LCJjb21tZW50cyI6eyI2bHhaYmRLME
+E1ejhxWnhrIjp7ImRpc2N1c3Npb25JZCI6Ikd1a2gzcmpjeHd1
+aFdIdGkiLCJzdWIiOiIxMDIyMDU3OTcyNzY5NDEwMTA2NzciLC
+J0ZXh0IjoiSG93IG1hbnkgZmFsc2UgcG9zaXRpdmVzPyIsImNy
+ZWF0ZWQiOjE1MzI1MTg1NzIxMTF9LCJxWng0bzY2WHBLbkhWRV
+VXIjp7ImRpc2N1c3Npb25JZCI6IldEQzNZaUF3bGpFcVREZFci
+LCJzdWIiOiIxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZXh0Ij
+oiV2hhdCBpcyBhIGNvbnZvbHV0aW9uYWwgYW5kIHJlY3VycmVu
+dCBuZXVyYWwgbmV0d29yaz8gSG93IGRvZXMgaXQgd29yaz8gSG
+93IGlzIGl0IGRpZmZlcmVudCBmcm9tIG90aGVyIG1hY2hpbmUg
+bGVhcm5pbmcgYWxnb3Mgb3Igb3RoZXIgTk5zPyBcblxuV2h5IG
+RpZCB5b3UgY2hvb3NlIHRvIHVzZSBhIENSTk4/IiwiY3JlYXRl
+ZCI6MTUzMjUxOTIxNTMxM30sImpITTl4bGJWM005YjVEUGgiOn
+siZGlzY3Vzc2lvbklkIjoiV0RDM1lpQXdsakVxVERkVyIsInN1
+YiI6IjEwMjIwNTc5NzI3Njk0MTAxMDY3NyIsInRleHQiOiJBbG
+1vc3QgY2VydGFpbmx5IHlvdXIgYXVkaWVuY2Ugd2lsbCBub3Qg
+YmUgYSBtYWNoaW5lIGxlYXJuaW5nIGV4cGVydC4gWW91IG5lZW
+QgdG8gZXhwbGFpbiB0aGUgbWV0aG9kLCBhbmQgd2h5IHlvdSBh
+cmUgZG9pbmcgaXQgdGhpcyB3YXkuIiwiY3JlYXRlZCI6MTUzMj
+UxOTI2NDkyNX0sIjY5QUdJOTdMdnZUZFpUU0kiOnsiZGlzY3Vz
+c2lvbklkIjoiQXBQbjBVQUtSc0UxbTFxYyIsInN1YiI6IjEwMj
+IwNTc5NzI3Njk0MTAxMDY3NyIsInRleHQiOiJXaGF0IGlzIHRo
+aXMgYWxnb3JpdGhtPyBSZWZlcmVuY2Ugb3IgZGVzY3JpcHRvbi
+IsImNyZWF0ZWQiOjE1MzI4NzQ4MDg5MzV9LCJJTEp1N1NQMDBq
+ak5rZVE0Ijp7ImRpc2N1c3Npb25JZCI6Im1qdmM3VkdFSDcxNz
+dUbm0iLCJzdWIiOiIxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0
+ZXh0IjoiSG93IGRpZCB5b3UgZGVjaWRlIHRvIHVzZSB0aGlzIG
+FyY2hldGVjdHVyZT8iLCJjcmVhdGVkIjoxNTMyODc0ODM2NDc2
+fSwidkpXMmJ4dmg4Mk42a1h3SSI6eyJkaXNjdXNzaW9uSWQiOi
+J1MGxIYjc5V2FuSGdMUkxuIiwic3ViIjoiMTAyMjA1Nzk3Mjc2
+OTQxMDEwNjc3IiwidGV4dCI6IkRlZmluZSIsImNyZWF0ZWQiOj
+E1MzI4NzQ4NTc1MTl9fSwiaGlzdG9yeSI6WzE5NzI2NTUzMzEs
+ODM2NDMxMzA2LDEwODY4MTgyMzIsODM2NDMxMzA2LDg1NjUxND
+Q4NSwyNTY1ODEzNzRdfQ==
 -->
