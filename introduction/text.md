@@ -218,7 +218,7 @@ ATRX mutation also effects gene expression. Gibbons et al. identified gene expre
 
 G4s are not the only DNA or RNA structures which occur specifically in sequences with high GC content and skew. Another structure is the R loop, which can form when transcription of a C-rich template strand to a G-rich RNA molecule occurs [@Reaban1994; @Li2005; @Ginno2012; @Ginno2013]. This RNA molecule is complementary to the template strand, and can therefore form a DNA:RNA hybrid duplex, leaving the coding strand of the DNA in a single stranded form [@Skourti-Stathaki2014]. Once formed, these hybrids are more thermodynamically stable than normal DNA:DNA duplexes [@Roberts1992]. This could be partially explained to the formation of G4 structures in the G-rich single stranded DNA of the coding strand, which has been shown to occur during transcription in bacterial plasmids [@Duquette2004].
 
-R loop formation has been identified as a key component of class switch recombination (CSR) of immunoglobulin genes [@Daniels1995; @Reaban1990; @Yu2003]. CSR is the process by which the constant region of the immunoglobulin heavy chain (IgH) gene is switched, changing the properties of the resultant antibody [@Stavenezer1996]. Transcription of the IgH gene produces a long non-coding RNA (lncRNA) with a constitutive first exon containing the variable antigen binding domain. Splicing to an alter
+R loop formation has been identified as a key component of class switch recombination (CSR) of immunoglobulin genes [@Daniels1995; @Reaban1990; @Yu2003]. CSR is the process by which the constant region of the immunoglobulin heavy chain (IgH) gene is switched, changing the properties of the resultant antibody [@Stavenezer1996]. Transcription of the IgH gene produces a long non-coding RNA (lncRNA) with a constitutive first exon containing the variable antigen binding domain. Splicing to an alternative second exon is determined by the pattern of cytokines that the cell is 
 
 \newpage
 
@@ -333,20 +333,20 @@ V4dCI6Ikc0IGZvcm1hdGlvbiBtaWdodCBhY3QgYXMgYSBtb2xl
 Y3VsYXIgc3dpdGNoIiwic3RhcnQiOjQ3OTQ2LCJlbmQiOjQ3OT
 kwfSwiVGZJS0ZBWTRqWUlrWUVQOCI6eyJ0ZXh0IjoiTW9ub2Nv
 dHMgYWxzbyBoYXZlIGhpZ2hlciBQRzQgY29udGVudCwiLCJzdG
-FydCI6NjAxODYsImVuZCI6NjAyMjR9LCJOaHRmQXRIUEpTalZQ
+FydCI6NjAyNjQsImVuZCI6NjAzMDJ9LCJOaHRmQXRIUEpTalZQ
 MzR3Ijp7InRleHQiOiJtaWdodCBiZSBzdGFibGUgYXQgdGhlIH
-RlbXBlcmF0dXJlIHJhbmdlcyIsInN0YXJ0Ijo2MDc2MywiZW5k
-Ijo2MDgwNH0sIkJFQWtpQmJ0OENGbjMyb3UiOnsidGV4dCI6Ik
-EgUEc0IG1vdGlmIiwic3RhcnQiOjYyMTk1LCJlbmQiOjYyMjA2
+RlbXBlcmF0dXJlIHJhbmdlcyIsInN0YXJ0Ijo2MDg0MSwiZW5k
+Ijo2MDg4Mn0sIkJFQWtpQmJ0OENGbjMyb3UiOnsidGV4dCI6Ik
+EgUEc0IG1vdGlmIiwic3RhcnQiOjYyMjczLCJlbmQiOjYyMjg0
 fSwicURJbmZUMnRpcHBRZTREMyI6eyJ0ZXh0IjoiQW5hbHlzaX
 MgYnkgTXVsbGVuIGV0IGFsLiBpZGVudGlmaWVkIHRoYXQgdGhl
 IGdyZWF0ZXN0IGVucmljaG1lbnQgb2YgdHdvIHRldHJhZOKApi
-IsInN0YXJ0Ijo2MjkzMywiZW5kIjo2Mzg0OH0sImdaUjlIUG03
+IsInN0YXJ0Ijo2MzAxMSwiZW5kIjo2MzkyNn0sImdaUjlIUG03
 Z3Y1aEJjV28iOnsidGV4dCI6IiMjIFJvbGUgb2YgRy1RdWFkcn
-VwbGV4ZXMgKmluIHBsYW50YSoiLCJzdGFydCI6NTk1ODYsImVu
-ZCI6NTk2MjN9LCJvajQxNldaUDU5YzBpSFMwIjp7InRleHQiOi
-JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2MjQyOCwi
-ZW5kIjo2MjQ0OH19LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
+VwbGV4ZXMgKmluIHBsYW50YSoiLCJzdGFydCI6NTk2NjQsImVu
+ZCI6NTk3MDF9LCJvajQxNldaUDU5YzBpSFMwIjp7InRleHQiOi
+JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2MjUwNiwi
+ZW5kIjo2MjUyNn19LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
 l3VUtGIjp7ImRpc2N1c3Npb25JZCI6IlZjQ2dESlIyM1cwcUk3
 ZWUiLCJzdWIiOiIxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZX
 h0IjoiVG8gd2hhdCBleHRlbnQgaXMgYSBxdWFkcnVwbGV4IGEg
@@ -556,11 +556,11 @@ cyB5b3UgY291ZGwgc2F5IHNvbWV0aGluZyBsaWtlIFwiLCBvZi
 Bjb3Vyc2UgdGhpcyBkb2Vzbid0IGFkZHJlc3MgdGhlIHF1ZXN0
 aW9uIG9mIHdodGhlciB0aGVzZSBzZXF1ZW5jZXMgZm9ybSBHNH
 MgKmluIHZpdm8qXCIiLCJjcmVhdGVkIjoxNTMyNDQ5NjQ5MTk0
-fX0sImhpc3RvcnkiOlstMTA2OTAwMjQ0NiwtMTkyMzgyMjQ5Ni
-wtMTc3NTYyOTQyOCwxNDY0MzQxODYyLDk1OTgxNDg2OCwxNzYz
-NDM0MzE0LC0xNzE5NDkyMjE1LDE3MjA1NzI0ODQsMjA0OTc4OT
-MyMCwtMTQwMDI5OTY0OCw3OTExNDIyOTUsMTk4NjA5Njc2NSwt
-NzI2NjYzMzUxLDE2MzM3NjQ5MzUsMzAyNjQwMzg0LDE2MzM3Nj
-Q5MzUsMzAyNjQwMzg0LDE2MzM3NjQ5MzUsLTEzMjY3MTU0NjQs
-LTkxNDE5NjA3XX0=
+fX0sImhpc3RvcnkiOlsxMjU2MDE1NTA1LC0xOTIzODIyNDk2LC
+0xNzc1NjI5NDI4LDE0NjQzNDE4NjIsOTU5ODE0ODY4LDE3NjM0
+MzQzMTQsLTE3MTk0OTIyMTUsMTcyMDU3MjQ4NCwyMDQ5Nzg5Mz
+IwLC0xNDAwMjk5NjQ4LDc5MTE0MjI5NSwxOTg2MDk2NzY1LC03
+MjY2NjMzNTEsMTYzMzc2NDkzNSwzMDI2NDAzODQsMTYzMzc2ND
+kzNSwzMDI2NDAzODQsMTYzMzc2NDkzNSwtMTMyNjcxNTQ2NCwt
+OTE0MTk2MDddfQ==
 -->
