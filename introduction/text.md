@@ -214,7 +214,7 @@ ATRX mutation also effects gene expression. Gibbons et al. identified gene expre
 
 ### Other G-rich Nucleic Acid Structures
 
-G4s are not the only DNA or RNA structures which occur specifically in sequences with high GC content and skew. Another structure is the R loop, which can form when transcription of a C-rich template strand to a G-rich RNA molecule occurs [@Reaban1994; @Li2005; @Ginno2012; @Ginno2013]. This RNA molecule is complementary to the template strand, and can therefore form a DNA:RNA hybrid duplex, leaving the coding strand of the DNA in a single stranded form [@Skourti-Stathaki2014]. Once formed, these hybrids are more thermodynamically stable than normal DNA:DNA duplexes [@Roberts1992]. This could be partially explained to the formation of G4 structures in the G-rich single stranded DNA of the coding strand, which has been  [@Duquette2004].
+G4s are not the only DNA or RNA structures which occur specifically in sequences with high GC content and skew. Another structure is the R loop, which can form when transcription of a C-rich template strand to a G-rich RNA molecule occurs [@Reaban1994; @Li2005; @Ginno2012; @Ginno2013]. This RNA molecule is complementary to the template strand, and can therefore form a DNA:RNA hybrid duplex, leaving the coding strand of the DNA in a single stranded form [@Skourti-Stathaki2014]. Once formed, these hybrids are more thermodynamically stable than normal DNA:DNA duplexes [@Roberts1992]. This could be partially explained to the formation of G4 structures in the G-rich single stranded DNA of the coding strand, which has been shown to occur during transcription in bacterial plasmids [@Duquette2004].
 
 \newpage
 
@@ -329,20 +329,20 @@ V4dCI6Ikc0IGZvcm1hdGlvbiBtaWdodCBhY3QgYXMgYSBtb2xl
 Y3VsYXIgc3dpdGNoIiwic3RhcnQiOjQ3MDY2LCJlbmQiOjQ3MT
 EwfSwiVGZJS0ZBWTRqWUlrWUVQOCI6eyJ0ZXh0IjoiTW9ub2Nv
 dHMgYWxzbyBoYXZlIGhpZ2hlciBQRzQgY29udGVudCwiLCJzdG
-FydCI6NTg3NDksImVuZCI6NTg3ODd9LCJOaHRmQXRIUEpTalZQ
+FydCI6NTg4MDYsImVuZCI6NTg4NDR9LCJOaHRmQXRIUEpTalZQ
 MzR3Ijp7InRleHQiOiJtaWdodCBiZSBzdGFibGUgYXQgdGhlIH
-RlbXBlcmF0dXJlIHJhbmdlcyIsInN0YXJ0Ijo1OTMyNiwiZW5k
-Ijo1OTM2N30sIkJFQWtpQmJ0OENGbjMyb3UiOnsidGV4dCI6Ik
-EgUEc0IG1vdGlmIiwic3RhcnQiOjYwNzU4LCJlbmQiOjYwNzY5
+RlbXBlcmF0dXJlIHJhbmdlcyIsInN0YXJ0Ijo1OTM4MywiZW5k
+Ijo1OTQyNH0sIkJFQWtpQmJ0OENGbjMyb3UiOnsidGV4dCI6Ik
+EgUEc0IG1vdGlmIiwic3RhcnQiOjYwODE1LCJlbmQiOjYwODI2
 fSwicURJbmZUMnRpcHBRZTREMyI6eyJ0ZXh0IjoiQW5hbHlzaX
 MgYnkgTXVsbGVuIGV0IGFsLiBpZGVudGlmaWVkIHRoYXQgdGhl
 IGdyZWF0ZXN0IGVucmljaG1lbnQgb2YgdHdvIHRldHJhZOKApi
-IsInN0YXJ0Ijo2MTQ5NiwiZW5kIjo2MjQxMX0sImdaUjlIUG03
+IsInN0YXJ0Ijo2MTU1MywiZW5kIjo2MjQ2OH0sImdaUjlIUG03
 Z3Y1aEJjV28iOnsidGV4dCI6IiMjIFJvbGUgb2YgRy1RdWFkcn
-VwbGV4ZXMgKmluIHBsYW50YSoiLCJzdGFydCI6NTgxNDksImVu
-ZCI6NTgxODZ9LCJvajQxNldaUDU5YzBpSFMwIjp7InRleHQiOi
-JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2MDk5MSwi
-ZW5kIjo2MTAxMX19LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
+VwbGV4ZXMgKmluIHBsYW50YSoiLCJzdGFydCI6NTgyMDYsImVu
+ZCI6NTgyNDN9LCJvajQxNldaUDU5YzBpSFMwIjp7InRleHQiOi
+JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2MTA0OCwi
+ZW5kIjo2MTA2OH19LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
 l3VUtGIjp7ImRpc2N1c3Npb25JZCI6IlZjQ2dESlIyM1cwcUk3
 ZWUiLCJzdWIiOiIxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZX
 h0IjoiVG8gd2hhdCBleHRlbnQgaXMgYSBxdWFkcnVwbGV4IGEg
@@ -552,11 +552,11 @@ cyB5b3UgY291ZGwgc2F5IHNvbWV0aGluZyBsaWtlIFwiLCBvZi
 Bjb3Vyc2UgdGhpcyBkb2Vzbid0IGFkZHJlc3MgdGhlIHF1ZXN0
 aW9uIG9mIHdodGhlciB0aGVzZSBzZXF1ZW5jZXMgZm9ybSBHNH
 MgKmluIHZpdm8qXCIiLCJjcmVhdGVkIjoxNTMyNDQ5NjQ5MTk0
-fX0sImhpc3RvcnkiOls1NDk1OTgzOTIsMTYzMzc2NDkzNSwzMD
-I2NDAzODQsMTYzMzc2NDkzNSwzMDI2NDAzODQsMTYzMzc2NDkz
-NSwtMTMyNjcxNTQ2NCwtOTE0MTk2MDcsNjE0NjQwOTEyLDE2Nz
-UzODY5NDcsLTExMTUwNjk3MzUsLTEzMzE0ODY0NzEsLTM4ODkz
-NTg4LC0xNzI0ODc1MTQyLC03MjExMzA4MSwtMjA2NjE3Nzc5LD
-IwOTk2MTI5MjgsMTEwMjU5MzQyMywxMDIxNTIzOTk2LC0xMDA1
-NDAwMDA0XX0=
+fX0sImhpc3RvcnkiOlstNzI2NjYzMzUxLDE2MzM3NjQ5MzUsMz
+AyNjQwMzg0LDE2MzM3NjQ5MzUsMzAyNjQwMzg0LDE2MzM3NjQ5
+MzUsLTEzMjY3MTU0NjQsLTkxNDE5NjA3LDYxNDY0MDkxMiwxNj
+c1Mzg2OTQ3LC0xMTE1MDY5NzM1LC0xMzMxNDg2NDcxLC0zODg5
+MzU4OCwtMTcyNDg3NTE0MiwtNzIxMTMwODEsLTIwNjYxNzc3OS
+wyMDk5NjEyOTI4LDExMDI1OTM0MjMsMTAyMTUyMzk5NiwtMTAw
+NTQwMDAwNF19
 -->
