@@ -208,6 +208,8 @@ Chromatin conformational dynamics are important regulatory mechanisms for gene e
 
 G4s have been shown to cause transient and non-heritable changes to epigenetic status through the causing of DSB, which are known to induce phosphorylation of H2AX (gamma-H2AX) via an ATM-dependent pathway [@Rodriguez2013; @Shanbhag2010; @Ayrapetov2014]. A number of authors have also reported heritable epigenetic changes to the BU-1 and beta-globin gene loci caused by G4s in chicken cell lines [@Guilbaud2017; @Sarkies2010; @Sarkies2011; @Schiavone2014; @Schiavone2016]. These changes occur in cells lacking G4 resolving helicases, such as REV1, FANCJ, WRN and BLM [@Sarkies2010; @Sarkies2012; @Schiavone2014]; polymerases, such as PrimPol [@Schivone2016]; or in cells treated with G4 stabilising agents, such as NMM, PhenDC3 and PDS [@Guilbaud2017]. None of these conditions caused DSB or mutations in the BU-1 gene, but did cause loss of active chromatin marker H3K4me3, and gain of repressive H3K9me3, as well as an increase in repressive DNA methylation. There was a concommitant decrease in gene expression accompanying these changes [@Sarkies2010; @Sarkies2011; @Schiavone2014; @Schiavone2016; @Guilbaud2017]. During replication, parental histones from upstream of the replication fork are removed; and recycled into the newly synthesised DNA behind the replication machinery [@DeKoning2007]. This recycling maintains the epigenetic status of replicated DNA. Sarkies et al. proposed that in the absence of G4 unwinding helicases, or in the presence of a stabilising drug, leading strand synthesis is stalled at the G4, and uncoupled from histone recycling. This leads to the incorporation of newly synthesised H3/4 without the correct epigenetic markers, rather than parental histones [@Sarkies2010; @Sarkies2011; @Schiavone2014; @Schiavone2016; @Guilbaud2017]. Abolishment of the G4 motif through mutation removed this heritable change in epigenetic status. Furthermore, switching of the strand of the G4, which was suggested to switch the replication strand of the G4 from the leading to the lagging strand, also abolished the heritable change in expression [@Sarkies2010; @Sarkies2012; @Schiavone2014; @Schiavone2016].
 
+\new
+
 Chromatin remodelling is the process by which modifications are made to histones. These modifications include switching of histone isoforms, covalent modifications, and histone sliding. The latter involves the use of energy from ATP hydrolysis to translocate histones along the DNA polymer without ever removing them [@Langst2015]. One class of remodellers is SWI/SNF complexes, which are able to slide or eject nucleosomes. ATRX is an X-linked SWI/SNF family member, which is mutated in ATR-X syndrome, an intellectual disability disorder. The ATRX protein has been shown to locate at heterochromatic and pericentromeric regions, as well as at telomeres [@McDowell1999], regions which are enriched in G-rich PG4 structures. During ATR-X syndrome, global DNA methylation patterns at these regions are disregulated [@Gibbons2000]. Knockdown of ATRX during the S-phase of the cell cycle, when DNA replication occurs, results in an increase in the DSB response marker gamma-H2AX at telomeric regions [@Wong2010]. Heaphy et al. showed that human pancreatic cancers which had lost the expression of ATRX or its partner protein DAXX had elongated telomeres that were characteristic of the Alternative Lengthening of Telomeres pathway. This pathway is telomerase independent, suggesting that ATRX is important for normal telomere repair [@Heaphy2011].
 
 ATRX mutation also effects gene expression. Gibbons et al. identified gene expression changes in the alpha globin gene cluster in response to ATRX mutation [@Gibbons1991]. More recently, Law et al. performed ChIP-seq using an ATRX specific antibody to identify other gene targets. They found that ATRX binds specifically to G-rich tandem repeats which form G4s *in vitro*. Furthermore, the strength of the effect of ATRX mutation on gene expression was proportional to the number of tandem G-rich repeats. This suggests that the effect is increased by the number or stability of G4s [@Law2010].
@@ -337,20 +339,20 @@ V4dCI6Ikc0IGZvcm1hdGlvbiBtaWdodCBhY3QgYXMgYSBtb2xl
 Y3VsYXIgc3dpdGNoIiwic3RhcnQiOjQ3OTQ2LCJlbmQiOjQ3OT
 kwfSwiVGZJS0ZBWTRqWUlrWUVQOCI6eyJ0ZXh0IjoiTW9ub2Nv
 dHMgYWxzbyBoYXZlIGhpZ2hlciBQRzQgY29udGVudCwiLCJzdG
-FydCI6NjE4ODgsImVuZCI6NjE5MjZ9LCJOaHRmQXRIUEpTalZQ
+FydCI6NjE4OTQsImVuZCI6NjE5MzJ9LCJOaHRmQXRIUEpTalZQ
 MzR3Ijp7InRleHQiOiJtaWdodCBiZSBzdGFibGUgYXQgdGhlIH
-RlbXBlcmF0dXJlIHJhbmdlcyIsInN0YXJ0Ijo2MjQ2NSwiZW5k
-Ijo2MjUwNn0sIkJFQWtpQmJ0OENGbjMyb3UiOnsidGV4dCI6Ik
-EgUEc0IG1vdGlmIiwic3RhcnQiOjYzODk3LCJlbmQiOjYzOTA4
+RlbXBlcmF0dXJlIHJhbmdlcyIsInN0YXJ0Ijo2MjQ3MSwiZW5k
+Ijo2MjUxMn0sIkJFQWtpQmJ0OENGbjMyb3UiOnsidGV4dCI6Ik
+EgUEc0IG1vdGlmIiwic3RhcnQiOjYzOTAzLCJlbmQiOjYzOTE0
 fSwicURJbmZUMnRpcHBRZTREMyI6eyJ0ZXh0IjoiQW5hbHlzaX
 MgYnkgTXVsbGVuIGV0IGFsLiBpZGVudGlmaWVkIHRoYXQgdGhl
 IGdyZWF0ZXN0IGVucmljaG1lbnQgb2YgdHdvIHRldHJhZOKApi
-IsInN0YXJ0Ijo2NDYzNSwiZW5kIjo2NTU1MH0sImdaUjlIUG03
+IsInN0YXJ0Ijo2NDY0MSwiZW5kIjo2NTU1Nn0sImdaUjlIUG03
 Z3Y1aEJjV28iOnsidGV4dCI6IiMjIFJvbGUgb2YgRy1RdWFkcn
-VwbGV4ZXMgKmluIHBsYW50YSoiLCJzdGFydCI6NjEyODgsImVu
-ZCI6NjEzMjV9LCJvajQxNldaUDU5YzBpSFMwIjp7InRleHQiOi
-JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2NDEzMCwi
-ZW5kIjo2NDE1MH19LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
+VwbGV4ZXMgKmluIHBsYW50YSoiLCJzdGFydCI6NjEyOTQsImVu
+ZCI6NjEzMzF9LCJvajQxNldaUDU5YzBpSFMwIjp7InRleHQiOi
+JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2NDEzNiwi
+ZW5kIjo2NDE1Nn19LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
 l3VUtGIjp7ImRpc2N1c3Npb25JZCI6IlZjQ2dESlIyM1cwcUk3
 ZWUiLCJzdWIiOiIxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZX
 h0IjoiVG8gd2hhdCBleHRlbnQgaXMgYSBxdWFkcnVwbGV4IGEg
@@ -560,11 +562,11 @@ cyB5b3UgY291ZGwgc2F5IHNvbWV0aGluZyBsaWtlIFwiLCBvZi
 Bjb3Vyc2UgdGhpcyBkb2Vzbid0IGFkZHJlc3MgdGhlIHF1ZXN0
 aW9uIG9mIHdodGhlciB0aGVzZSBzZXF1ZW5jZXMgZm9ybSBHNH
 MgKmluIHZpdm8qXCIiLCJjcmVhdGVkIjoxNTMyNDQ5NjQ5MTk0
-fX0sImhpc3RvcnkiOlsxNTQzOTg3NTUxLC03NDY1NDgyNTAsLT
-k3MjY1OTg4NCwtMTkyMzgyMjQ5NiwtMTc3NTYyOTQyOCwxNDY0
-MzQxODYyLDk1OTgxNDg2OCwxNzYzNDM0MzE0LC0xNzE5NDkyMj
-E1LDE3MjA1NzI0ODQsMjA0OTc4OTMyMCwtMTQwMDI5OTY0OCw3
-OTExNDIyOTUsMTk4NjA5Njc2NSwtNzI2NjYzMzUxLDE2MzM3Nj
-Q5MzUsMzAyNjQwMzg0LDE2MzM3NjQ5MzUsMzAyNjQwMzg0LDE2
-MzM3NjQ5MzVdfQ==
+fX0sImhpc3RvcnkiOlsyMDgyODUwMDk1LDE1NDM5ODc1NTEsLT
+c0NjU0ODI1MCwtOTcyNjU5ODg0LC0xOTIzODIyNDk2LC0xNzc1
+NjI5NDI4LDE0NjQzNDE4NjIsOTU5ODE0ODY4LDE3NjM0MzQzMT
+QsLTE3MTk0OTIyMTUsMTcyMDU3MjQ4NCwyMDQ5Nzg5MzIwLC0x
+NDAwMjk5NjQ4LDc5MTE0MjI5NSwxOTg2MDk2NzY1LC03MjY2Nj
+MzNTEsMTYzMzc2NDkzNSwzMDI2NDAzODQsMTYzMzc2NDkzNSwz
+MDI2NDAzODRdfQ==
 -->
