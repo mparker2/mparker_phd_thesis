@@ -99,7 +99,7 @@ A growing number of G4 forming oligonucleotide sequences have now been character
 
 Stegle et al. implemented a Gaussian Process model incorporating extracted features from Quadparser conforming G4s [@Stegle2009]. These features were the number of tetrads, the length of each of the three loops, the total loop length, and the frequencies of adenine, cytosine and guanine in the sequence, as well as the raw sequence itself. A second kernel which incorporated features about the conditions the melting temperature was acquired under, i.e. the concentrations of potassium, sodium, ammonium, and magnesium ions, was also used in the model. They trained this model on a set of 260 DNA G4 melting temperatures which were acquired from a literature search. In a cross validation experiment using 100 random 50% hold out splits, the authors were able to achieve a good level of test set accuracy with an average of 80% of predictions within 5 degrees of the true melting temperature [@Stegle2009]. Furthermore, their model was interpretable, and they were able to identify tetrad number and the length of the central loop as the most important sequence features in PG4 stability. The authors employed active learning to identify candidates from human promoter sequences with high uncertainty in the model, and used CD spectroscopy to characterise them.
 
-Whilst Stegle et al.'s model was successful on Quadparser conforming motifs, it is estimated that ~70% of G4s in the human genome do not conform to this motif [@Chambers2015]. More recently, Garant et al. published a method for predicting RNA G4s which was trained on a set of 368 experimentally determined sequences, 149 of which were G4 positive and 179 of which were G4 negative [@Garant2017]. From these sequences the trinucleotide contents were extracted, and used to train a densely connected multi-layer perceptron model, with a single hidden layer containing 35 nodes. This trinucleotide trained model had the advantage being more flexible for G4s that do not conform to the Quadparser motif. Their model achieved an average AUC score of 0.92 on hold out sets in a 5 fold cross validation experiment. When tested on the rG4-seq dataset of RT stalled RNA G4s [@Kwok2016], the method did not perform as well as G4Hunter [@Bedrat2016].  suggesting that some positional information is lost when sequences are converted to trinucleotide content.
+Whilst Stegle et al.'s model was successful on Quadparser conforming motifs, it is estimated that ~70% of G4s in the human genome do not conform to this motif [@Chambers2015]. More recently, Garant et al. published a method for predicting RNA G4s which was trained on a set of 368 experimentally determined sequences, 149 of which were G4 positive and 179 of which were G4 negative [@Garant2017]. From these sequences the trinucleotide contents were extracted, and used to train a densely connected multi-layer perceptron model, with a single hidden layer containing 35 nodes. This trinucleotide trained model had the advantage being more flexible for G4s that do not conform to the Quadparser motif. Their model achieved an average AUC score of 0.92 on hold out sets in a 5 fold cross validation experiment. When tested on the rG4-seq dataset of RT stalled RNA G4s [@Kwok2016], the method did not perform as well as G4Hunter [@Bedrat2016]. This is indicative that some positional information is lost when sequences are converted to trinucleotide content.
 
 Finally, the more recent efforts to produce high-throughput methods for identifying genomic G4s, such as G4-seq developed by Chambers et al., have created much better in depth datasets for training machine learning models. Sahakyan et al. used the G4-seq dataset in their model. This was a extreme gradient boosted machine model developed using `xgboost` [@Chen2016], which regressed the percentage mismatch score of sequences from the G4-seq dataset which conform to the Quadparser method [@Sahakyan2017]. The authors extracted features from Quadparser conforming PG4s similar to those employed by Stegle et al., including tetrad number, loop length, and mono-, di- and triunucleotide contents of the PG4, and flanking regions. This model was very successful at identifying Quadparser conforming motifs which did or did not actually form G4s, achieving a root mean squared error score of 8.14 (units used were mismatch score in G4-seq experiment, in percentage format) [@Sahakyan2017]. The method could not identify non-Quadparser conforming G4 motifs, however, which make up a large proportion of experimentally characterised G4s [@Chambers2015].
 
@@ -291,60 +291,60 @@ p7InRleHQiOiJ0aGF0IHJlZ2lvbnMiLCJzdGFydCI6MTg5NDEs
 ImVuZCI6MTg5NDF9LCJId3ZHb2lPOW9MZkh0dUNGIjp7InRleH
 QiOiJUaGlzIG1vZGVsIHdhcyB2ZXJ5IHN1Y2Nlc3NmdWwgYXQg
 aWRlbnRpZnlpbmcgUXVhZHBhcnNlciBjb25mb3JtaW5nIG1vdG
-lmcyB3aGlj4oCmIiwic3RhcnQiOjI0MjY1LCJlbmQiOjI0NTIy
+lmcyB3aGlj4oCmIiwic3RhcnQiOjI0MjcyLCJlbmQiOjI0NTI5
 fSwic0hNSzA5NHIyc0FqRlphZiI6eyJ0ZXh0IjoiRy1RdWFkcn
 VwbGV4IHN0YWJpbGl0eSBwcmVkaWN0aW9uIHVzaW5nIE1hY2hp
 bmUgTGVhcm5pbmciLCJzdGFydCI6MjAyMzEsImVuZCI6MjAyOD
 d9LCJDdFdWQmI3RkI5MWxMaU54Ijp7InRleHQiOiJHNHMgd2l0
 aCBsb29wIGxlbmd0aCBvZiB1cCB0byAxNWJwIiwic3RhcnQiOj
-I5ODUyLCJlbmQiOjI5ODk2fSwicjhpOWhzQ3RRVkNBcm5rMCI6
+I5ODU5LCJlbmQiOjI5OTAzfSwicjhpOWhzQ3RRVkNBcm5rMCI6
 eyJ0ZXh0IjoiKEVkZHkgJiBNYWl6ZWxzIDIwMDYpIiwic3Rhcn
-QiOjMxMjkzLCJlbmQiOjMxMzAxfSwiMlVmcTE0cTFqRThRYmpP
+QiOjMxMzAwLCJlbmQiOjMxMzA4fSwiMlVmcTE0cTFqRThRYmpP
 SiI6eyJ0ZXh0IjoiVGhlIE5IRUlJSSBjb250YWlucyBhIG51bW
 JlciBvZiBHLXJpY2ggdHJhY3RzIHdoaWNoIGhhdmUgYmVlbiBz
-aG93biB0byBmb3JtIEc0c+KApiIsInN0YXJ0IjozMjUyMSwiZW
-5kIjozMjYzNX0sInBPR2c0YWY1aThkM3FRTWsiOnsidGV4dCI6
+aG93biB0byBmb3JtIEc0c+KApiIsInN0YXJ0IjozMjUyOCwiZW
+5kIjozMjY0Mn0sInBPR2c0YWY1aThkM3FRTWsiOnsidGV4dCI6
 ImV2ZW4gd2hlbiBvdGhlciBmYWN0b3JzIHN1Y2ggYXMgZ2VuZS
 BmdW5jdGlvbiBhcmUgY29udHJvbGxlZCBmb3IuIEl0IGhhcyBi
-ZWVuIHPigKYiLCJzdGFydCI6MzM4NTQsImVuZCI6MzQwNzd9LC
+ZWVuIHPigKYiLCJzdGFydCI6MzM4NjEsImVuZCI6MzQwODR9LC
 JMUTN4SEJ0N3R0TzFHSEplIjp7InRleHQiOiJUcmFuc2NyaXB0
 aW9uIHByb2dyZXNzZXMgYnkgdXNpbmcgdGhlIHRlbXBsYXRlIH
 N0cmFuZCBhcyBhbiBhbnRpc2Vuc2UgY29weSB0byBy4oCmIiwi
-c3RhcnQiOjM0MzI0LCJlbmQiOjM0OTk0fSwieUlzSGdxWWxIb3
+c3RhcnQiOjM0MzMxLCJlbmQiOjM1MDAxfSwieUlzSGdxWWxIb3
 dIdmdROCI6eyJ0ZXh0IjoiSXQgaXMgYWxzbyBwb3NzaWJsZSwg
 aG93ZXZlciwgdGhhdCB0aGlzIGVmZmVjdCBjb3VsZCBiZSBwYX
 J0aWFsbHkgZHVlIHRvIGdyZWF0ZeKApiIsInN0YXJ0IjozNjY3
-MCwiZW5kIjozNjc4M30sIjVFOUZ0V2VlV3c0VHdLenQiOnsidG
+NywiZW5kIjozNjc5MH0sIjVFOUZ0V2VlV3c0VHdLenQiOnsidG
 V4dCI6IlRoZSBHNC1mb3JtaW5nIHBvdGVudGlhbCBvZiB0aGVz
 ZSBnZW5lcyBhbHNvIHRlbmRlZCB0byBiZSBncmVhdGVyIG9uIH
-RoZSBjb2RpbmfigKYiLCJzdGFydCI6Mzg4MzksImVuZCI6Mzg5
-MjV9LCJ2OURyQXkyeDlaVnBSNGlIIjp7InRleHQiOiIhWyoqRy
+RoZSBjb2RpbmfigKYiLCJzdGFydCI6Mzg4NDYsImVuZCI6Mzg5
+MzJ9LCJ2OURyQXkyeDlaVnBSNGlIIjp7InRleHQiOiIhWyoqRy
 1RdWFkcnVwbGV4ZXMgY29udHJvbCB0aGUgc3BsaWNpbmcgb2Yg
 QmNsLVggcHJlLW1STkEqKiAqKmEpKiogRGlhZ3JhbSBzaG934o
-CmIiwic3RhcnQiOjQ1OTU4LCJlbmQiOjQ2NDkyfSwiTXA1OTF5
+CmIiwic3RhcnQiOjQ1OTY1LCJlbmQiOjQ2NDk5fSwiTXA1OTF5
 clFhenB1bVQwQSI6eyJ0ZXh0IjoiYmVjYXVzZSBSTkFzIHRlbm
 QgdG8gZm9ybSBtb3JlIGNvbXBsZXggc3RydWN0dXJlcyIsInN0
-YXJ0Ijo0NjY1NSwiZW5kIjo0NjY1Nn0sIngxaUpsd29wOG9ubk
-R3YTIiOnsidGV4dCI6IlNIQVBFLXNlcSIsInN0YXJ0Ijo0NzEx
-MywiZW5kIjo0NzEyMn0sImloTUxXQ0RVN25EMWt2eVUiOnsidG
+YXJ0Ijo0NjY2MiwiZW5kIjo0NjY2M30sIngxaUpsd29wOG9ubk
+R3YTIiOnsidGV4dCI6IlNIQVBFLXNlcSIsInN0YXJ0Ijo0NzEy
+MCwiZW5kIjo0NzEyOX0sImloTUxXQ0RVN25EMWt2eVUiOnsidG
 V4dCI6Ikc0IGZvcm1hdGlvbiBtaWdodCBhY3QgYXMgYSBtb2xl
-Y3VsYXIgc3dpdGNoIiwic3RhcnQiOjQ3OTIyLCJlbmQiOjQ3OT
-Y2fSwiVGZJS0ZBWTRqWUlrWUVQOCI6eyJ0ZXh0IjoiTW9ub2Nv
+Y3VsYXIgc3dpdGNoIiwic3RhcnQiOjQ3OTI5LCJlbmQiOjQ3OT
+czfSwiVGZJS0ZBWTRqWUlrWUVQOCI6eyJ0ZXh0IjoiTW9ub2Nv
 dHMgYWxzbyBoYXZlIGhpZ2hlciBQRzQgY29udGVudCwiLCJzdG
-FydCI6NTk2NjIsImVuZCI6NTk3MDB9LCJOaHRmQXRIUEpTalZQ
+FydCI6NTk2NjksImVuZCI6NTk3MDd9LCJOaHRmQXRIUEpTalZQ
 MzR3Ijp7InRleHQiOiJtaWdodCBiZSBzdGFibGUgYXQgdGhlIH
-RlbXBlcmF0dXJlIHJhbmdlcyIsInN0YXJ0Ijo2MDIzOSwiZW5k
-Ijo2MDI4MH0sIkJFQWtpQmJ0OENGbjMyb3UiOnsidGV4dCI6Ik
-EgUEc0IG1vdGlmIiwic3RhcnQiOjYxNjcxLCJlbmQiOjYxNjgy
+RlbXBlcmF0dXJlIHJhbmdlcyIsInN0YXJ0Ijo2MDI0NiwiZW5k
+Ijo2MDI4N30sIkJFQWtpQmJ0OENGbjMyb3UiOnsidGV4dCI6Ik
+EgUEc0IG1vdGlmIiwic3RhcnQiOjYxNjc4LCJlbmQiOjYxNjg5
 fSwicURJbmZUMnRpcHBRZTREMyI6eyJ0ZXh0IjoiQW5hbHlzaX
 MgYnkgTXVsbGVuIGV0IGFsLiBpZGVudGlmaWVkIHRoYXQgdGhl
 IGdyZWF0ZXN0IGVucmljaG1lbnQgb2YgdHdvIHRldHJhZOKApi
-IsInN0YXJ0Ijo2MjQwOSwiZW5kIjo2MzMyNH0sImdaUjlIUG03
+IsInN0YXJ0Ijo2MjQxNiwiZW5kIjo2MzMzMX0sImdaUjlIUG03
 Z3Y1aEJjV28iOnsidGV4dCI6IiMjIFJvbGUgb2YgRy1RdWFkcn
-VwbGV4ZXMgKmluIHBsYW50YSoiLCJzdGFydCI6NTkwNjIsImVu
-ZCI6NTkwOTl9LCJvajQxNldaUDU5YzBpSFMwIjp7InRleHQiOi
-JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2MTkwNCwi
-ZW5kIjo2MTkyNH19LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
+VwbGV4ZXMgKmluIHBsYW50YSoiLCJzdGFydCI6NTkwNjksImVu
+ZCI6NTkxMDZ9LCJvajQxNldaUDU5YzBpSFMwIjp7InRleHQiOi
+JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2MTkxMSwi
+ZW5kIjo2MTkzMX19LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
 l3VUtGIjp7ImRpc2N1c3Npb25JZCI6IlZjQ2dESlIyM1cwcUk3
 ZWUiLCJzdWIiOiIxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZX
 h0IjoiVG8gd2hhdCBleHRlbnQgaXMgYSBxdWFkcnVwbGV4IGEg
@@ -554,7 +554,7 @@ cyB5b3UgY291ZGwgc2F5IHNvbWV0aGluZyBsaWtlIFwiLCBvZi
 Bjb3Vyc2UgdGhpcyBkb2Vzbid0IGFkZHJlc3MgdGhlIHF1ZXN0
 aW9uIG9mIHdodGhlciB0aGVzZSBzZXF1ZW5jZXMgZm9ybSBHNH
 MgKmluIHZpdm8qXCIiLCJjcmVhdGVkIjoxNTMyNDQ5NjQ5MTk0
-fX0sImhpc3RvcnkiOlstNzMyNDc3OTExLDE3MjA1NzI0ODQsMj
+fX0sImhpc3RvcnkiOlstNDY4OTgyNjUyLDE3MjA1NzI0ODQsMj
 A0OTc4OTMyMCwtMTQwMDI5OTY0OCw3OTExNDIyOTUsMTk4NjA5
 Njc2NSwtNzI2NjYzMzUxLDE2MzM3NjQ5MzUsMzAyNjQwMzg0LD
 E2MzM3NjQ5MzUsMzAyNjQwMzg0LDE2MzM3NjQ5MzUsLTEzMjY3
