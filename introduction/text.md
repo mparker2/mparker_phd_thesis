@@ -222,7 +222,7 @@ R loop formation has been identified as a key component of class switch recombin
 
 \newpage
 
-![**An R-loop and G4 dependent mechanism for ** Schematic showing how 5' and 3' UTR G4s can effect translation of mRNAs. **a)** G4s in the 5' UTR of mRNAs can cause a reduction in gene expression by preventing scanning of the PIC along the UTR. **b)** and **d)** G4 formation in the 3'UTR could block the recognition of miRNA binding sites by Argonaute proteins. **c)** G4s which form in long and structured 5' UTRs can contribute to internal ribosome entry site (IRES) which promote cap independent initiation of translation](figures/mRNA_stability_translation.svg)
+![**An R-loop and G4 dependent mechanism for Class Switch Recombination** Schematic showing how 5' and 3' UTR G4s can effect translation of mRNAs. **a)** G4s in the 5' UTR of mRNAs can cause a reduction in gene expression by preventing scanning of the PIC along the UTR. **b)** and **d)** G4 formation in the 3'UTR could block the recognition of miRNA binding sites by Argonaute proteins. **c)** G4s which form in long and structured 5' UTRs can contribute to internal ribosome entry site (IRES) which promote cap independent initiation of translation](figures/mRNA_stability_translation.svg)
 
 \newpage
 
@@ -337,20 +337,20 @@ V4dCI6Ikc0IGZvcm1hdGlvbiBtaWdodCBhY3QgYXMgYSBtb2xl
 Y3VsYXIgc3dpdGNoIiwic3RhcnQiOjQ3OTQ2LCJlbmQiOjQ3OT
 kwfSwiVGZJS0ZBWTRqWUlrWUVQOCI6eyJ0ZXh0IjoiTW9ub2Nv
 dHMgYWxzbyBoYXZlIGhpZ2hlciBQRzQgY29udGVudCwiLCJzdG
-FydCI6NjE3NjQsImVuZCI6NjE4MDJ9LCJOaHRmQXRIUEpTalZQ
+FydCI6NjE3OTAsImVuZCI6NjE4Mjh9LCJOaHRmQXRIUEpTalZQ
 MzR3Ijp7InRleHQiOiJtaWdodCBiZSBzdGFibGUgYXQgdGhlIH
-RlbXBlcmF0dXJlIHJhbmdlcyIsInN0YXJ0Ijo2MjM0MSwiZW5k
-Ijo2MjM4Mn0sIkJFQWtpQmJ0OENGbjMyb3UiOnsidGV4dCI6Ik
-EgUEc0IG1vdGlmIiwic3RhcnQiOjYzNzczLCJlbmQiOjYzNzg0
+RlbXBlcmF0dXJlIHJhbmdlcyIsInN0YXJ0Ijo2MjM2NywiZW5k
+Ijo2MjQwOH0sIkJFQWtpQmJ0OENGbjMyb3UiOnsidGV4dCI6Ik
+EgUEc0IG1vdGlmIiwic3RhcnQiOjYzNzk5LCJlbmQiOjYzODEw
 fSwicURJbmZUMnRpcHBRZTREMyI6eyJ0ZXh0IjoiQW5hbHlzaX
 MgYnkgTXVsbGVuIGV0IGFsLiBpZGVudGlmaWVkIHRoYXQgdGhl
 IGdyZWF0ZXN0IGVucmljaG1lbnQgb2YgdHdvIHRldHJhZOKApi
-IsInN0YXJ0Ijo2NDUxMSwiZW5kIjo2NTQyNn0sImdaUjlIUG03
+IsInN0YXJ0Ijo2NDUzNywiZW5kIjo2NTQ1Mn0sImdaUjlIUG03
 Z3Y1aEJjV28iOnsidGV4dCI6IiMjIFJvbGUgb2YgRy1RdWFkcn
-VwbGV4ZXMgKmluIHBsYW50YSoiLCJzdGFydCI6NjExNjQsImVu
-ZCI6NjEyMDF9LCJvajQxNldaUDU5YzBpSFMwIjp7InRleHQiOi
-JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2NDAwNiwi
-ZW5kIjo2NDAyNn19LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
+VwbGV4ZXMgKmluIHBsYW50YSoiLCJzdGFydCI6NjExOTAsImVu
+ZCI6NjEyMjd9LCJvajQxNldaUDU5YzBpSFMwIjp7InRleHQiOi
+JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2NDAzMiwi
+ZW5kIjo2NDA1Mn19LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
 l3VUtGIjp7ImRpc2N1c3Npb25JZCI6IlZjQ2dESlIyM1cwcUk3
 ZWUiLCJzdWIiOiIxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZX
 h0IjoiVG8gd2hhdCBleHRlbnQgaXMgYSBxdWFkcnVwbGV4IGEg
@@ -560,11 +560,11 @@ cyB5b3UgY291ZGwgc2F5IHNvbWV0aGluZyBsaWtlIFwiLCBvZi
 Bjb3Vyc2UgdGhpcyBkb2Vzbid0IGFkZHJlc3MgdGhlIHF1ZXN0
 aW9uIG9mIHdodGhlciB0aGVzZSBzZXF1ZW5jZXMgZm9ybSBHNH
 MgKmluIHZpdm8qXCIiLCJjcmVhdGVkIjoxNTMyNDQ5NjQ5MTk0
-fX0sImhpc3RvcnkiOlsxNjgzMDc0MjQ4LC03NDY1NDgyNTAsLT
-k3MjY1OTg4NCwtMTkyMzgyMjQ5NiwtMTc3NTYyOTQyOCwxNDY0
-MzQxODYyLDk1OTgxNDg2OCwxNzYzNDM0MzE0LC0xNzE5NDkyMj
-E1LDE3MjA1NzI0ODQsMjA0OTc4OTMyMCwtMTQwMDI5OTY0OCw3
-OTExNDIyOTUsMTk4NjA5Njc2NSwtNzI2NjYzMzUxLDE2MzM3Nj
-Q5MzUsMzAyNjQwMzg0LDE2MzM3NjQ5MzUsMzAyNjQwMzg0LDE2
-MzM3NjQ5MzVdfQ==
+fX0sImhpc3RvcnkiOls0ODkzNzQ5MDYsLTc0NjU0ODI1MCwtOT
+cyNjU5ODg0LC0xOTIzODIyNDk2LC0xNzc1NjI5NDI4LDE0NjQz
+NDE4NjIsOTU5ODE0ODY4LDE3NjM0MzQzMTQsLTE3MTk0OTIyMT
+UsMTcyMDU3MjQ4NCwyMDQ5Nzg5MzIwLC0xNDAwMjk5NjQ4LDc5
+MTE0MjI5NSwxOTg2MDk2NzY1LC03MjY2NjMzNTEsMTYzMzc2ND
+kzNSwzMDI2NDAzODQsMTYzMzc2NDkzNSwzMDI2NDAzODQsMTYz
+Mzc2NDkzNV19
 -->
