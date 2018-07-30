@@ -218,7 +218,7 @@ ATRX mutation also effects gene expression. Gibbons et al. identified gene expre
 
 G4s are not the only DNA or RNA structures which occur specifically in sequences with high GC content and skew. Another structure is the R loop, which can form when transcription of a C-rich template strand to a G-rich RNA molecule occurs [@Reaban1994; @Li2005; @Ginno2012; @Ginno2013]. This RNA molecule is complementary to the template strand, and can therefore form a DNA:RNA hybrid duplex, leaving the coding strand of the DNA in a single stranded form [@Skourti-Stathaki2014]. Once formed, these hybrids are more thermodynamically stable than normal DNA:DNA duplexes [@Roberts1992]. This could be partially explained to the formation of G4 structures in the G-rich single stranded DNA of the coding strand, which has been shown to occur during transcription in bacterial plasmids [@Duquette2004].
 
-R loop formation has been identified as a key component of class switch recombination (CSR) of immunoglobulin genes [@Daniels1995; @Reaban1990; @Yu2003]. CSR is the process by which the constant region of the immunoglobulin heavy chain (IgH) gene is switched, changing the properties of the resultant antibody [@Stavenezer1996]. Transcription of the IgH gene produces a long non-coding RNA (lncRNA) with a constitutive 
+R loop formation has been identified as a key component of class switch recombination (CSR) of immunoglobulin genes [@Daniels1995; @Reaban1990; @Yu2003]. CSR is the process by which the constant region of the immunoglobulin heavy chain (IgH) gene is switched, changing the properties of the resultant antibody [@Stavenezer1996]. Transcription of the IgH gene produces a long non-coding RNA (lncRNA) with a constitutive first exon containing the variable antigen binding domain. Splicing to an alter
 
 \newpage
 
@@ -333,20 +333,20 @@ V4dCI6Ikc0IGZvcm1hdGlvbiBtaWdodCBhY3QgYXMgYSBtb2xl
 Y3VsYXIgc3dpdGNoIiwic3RhcnQiOjQ3OTQ2LCJlbmQiOjQ3OT
 kwfSwiVGZJS0ZBWTRqWUlrWUVQOCI6eyJ0ZXh0IjoiTW9ub2Nv
 dHMgYWxzbyBoYXZlIGhpZ2hlciBQRzQgY29udGVudCwiLCJzdG
-FydCI6NjAxMDcsImVuZCI6NjAxNDV9LCJOaHRmQXRIUEpTalZQ
+FydCI6NjAxODYsImVuZCI6NjAyMjR9LCJOaHRmQXRIUEpTalZQ
 MzR3Ijp7InRleHQiOiJtaWdodCBiZSBzdGFibGUgYXQgdGhlIH
-RlbXBlcmF0dXJlIHJhbmdlcyIsInN0YXJ0Ijo2MDY4NCwiZW5k
-Ijo2MDcyNX0sIkJFQWtpQmJ0OENGbjMyb3UiOnsidGV4dCI6Ik
-EgUEc0IG1vdGlmIiwic3RhcnQiOjYyMTE2LCJlbmQiOjYyMTI3
+RlbXBlcmF0dXJlIHJhbmdlcyIsInN0YXJ0Ijo2MDc2MywiZW5k
+Ijo2MDgwNH0sIkJFQWtpQmJ0OENGbjMyb3UiOnsidGV4dCI6Ik
+EgUEc0IG1vdGlmIiwic3RhcnQiOjYyMTk1LCJlbmQiOjYyMjA2
 fSwicURJbmZUMnRpcHBRZTREMyI6eyJ0ZXh0IjoiQW5hbHlzaX
 MgYnkgTXVsbGVuIGV0IGFsLiBpZGVudGlmaWVkIHRoYXQgdGhl
 IGdyZWF0ZXN0IGVucmljaG1lbnQgb2YgdHdvIHRldHJhZOKApi
-IsInN0YXJ0Ijo2Mjg1NCwiZW5kIjo2Mzc2OX0sImdaUjlIUG03
+IsInN0YXJ0Ijo2MjkzMywiZW5kIjo2Mzg0OH0sImdaUjlIUG03
 Z3Y1aEJjV28iOnsidGV4dCI6IiMjIFJvbGUgb2YgRy1RdWFkcn
-VwbGV4ZXMgKmluIHBsYW50YSoiLCJzdGFydCI6NTk1MDcsImVu
-ZCI6NTk1NDR9LCJvajQxNldaUDU5YzBpSFMwIjp7InRleHQiOi
-JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2MjM0OSwi
-ZW5kIjo2MjM2OX19LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
+VwbGV4ZXMgKmluIHBsYW50YSoiLCJzdGFydCI6NTk1ODYsImVu
+ZCI6NTk2MjN9LCJvajQxNldaUDU5YzBpSFMwIjp7InRleHQiOi
+JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2MjQyOCwi
+ZW5kIjo2MjQ0OH19LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
 l3VUtGIjp7ImRpc2N1c3Npb25JZCI6IlZjQ2dESlIyM1cwcUk3
 ZWUiLCJzdWIiOiIxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZX
 h0IjoiVG8gd2hhdCBleHRlbnQgaXMgYSBxdWFkcnVwbGV4IGEg
@@ -556,11 +556,11 @@ cyB5b3UgY291ZGwgc2F5IHNvbWV0aGluZyBsaWtlIFwiLCBvZi
 Bjb3Vyc2UgdGhpcyBkb2Vzbid0IGFkZHJlc3MgdGhlIHF1ZXN0
 aW9uIG9mIHdodGhlciB0aGVzZSBzZXF1ZW5jZXMgZm9ybSBHNH
 MgKmluIHZpdm8qXCIiLCJjcmVhdGVkIjoxNTMyNDQ5NjQ5MTk0
-fX0sImhpc3RvcnkiOlszMzI3MTcxNDYsLTE5MjM4MjI0OTYsLT
-E3NzU2Mjk0MjgsMTQ2NDM0MTg2Miw5NTk4MTQ4NjgsMTc2MzQz
-NDMxNCwtMTcxOTQ5MjIxNSwxNzIwNTcyNDg0LDIwNDk3ODkzMj
-AsLTE0MDAyOTk2NDgsNzkxMTQyMjk1LDE5ODYwOTY3NjUsLTcy
-NjY2MzM1MSwxNjMzNzY0OTM1LDMwMjY0MDM4NCwxNjMzNzY0OT
-M1LDMwMjY0MDM4NCwxNjMzNzY0OTM1LC0xMzI2NzE1NDY0LC05
-MTQxOTYwN119
+fX0sImhpc3RvcnkiOlstMTA2OTAwMjQ0NiwtMTkyMzgyMjQ5Ni
+wtMTc3NTYyOTQyOCwxNDY0MzQxODYyLDk1OTgxNDg2OCwxNzYz
+NDM0MzE0LC0xNzE5NDkyMjE1LDE3MjA1NzI0ODQsMjA0OTc4OT
+MyMCwtMTQwMDI5OTY0OCw3OTExNDIyOTUsMTk4NjA5Njc2NSwt
+NzI2NjYzMzUxLDE2MzM3NjQ5MzUsMzAyNjQwMzg0LDE2MzM3Nj
+Q5MzUsMzAyNjQwMzg0LDE2MzM3NjQ5MzUsLTEzMjY3MTU0NjQs
+LTkxNDE5NjA3XX0=
 -->
