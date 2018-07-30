@@ -218,7 +218,7 @@ ATRX mutation also effects gene expression. Gibbons et al. identified gene expre
 
 G4s are not the only DNA or RNA structures which occur specifically in sequences with high GC content and skew. Another structure is the R loop, which can form when transcription of a C-rich template strand to a G-rich RNA molecule occurs [@Reaban1994; @Li2005; @Ginno2012; @Ginno2013]. This RNA molecule is complementary to the template strand, and can therefore form a DNA:RNA hybrid duplex, leaving the coding strand of the DNA in a single stranded form [@Skourti-Stathaki2014]. Once formed, these hybrids are more thermodynamically stable than normal DNA:DNA duplexes [@Roberts1992]. This could be partially explained to the formation of G4 structures in the G-rich single stranded DNA of the coding strand, which has been shown to occur during transcription in bacterial plasmids [@Duquette2004].
 
-R loop formation has been identified as a key component of class switch recombination (CSB) of immunoglobulin genes [@Daniels1995; @Reaban1990; @Yu2003]. CSB is the process by which the constant heavy-chain region of the antibody coding gene is switched, changing the properties of the resultant antibody.
+R loop formation has been identified as a key component of class switch recombination (CSB) of immunoglobulin genes [@Daniels1995; @Reaban1990; @Yu2003]. CSB is the process by which the constant heavy-chain region of the antibody coding gene is switched, changing the properties of the resultant antibody [@Stavenezer1996].
 
 \newpage
 
@@ -333,20 +333,20 @@ V4dCI6Ikc0IGZvcm1hdGlvbiBtaWdodCBhY3QgYXMgYSBtb2xl
 Y3VsYXIgc3dpdGNoIiwic3RhcnQiOjQ3OTQ2LCJlbmQiOjQ3OT
 kwfSwiVGZJS0ZBWTRqWUlrWUVQOCI6eyJ0ZXh0IjoiTW9ub2Nv
 dHMgYWxzbyBoYXZlIGhpZ2hlciBQRzQgY29udGVudCwiLCJzdG
-FydCI6NTk5OTMsImVuZCI6NjAwMzF9LCJOaHRmQXRIUEpTalZQ
+FydCI6NjAwMTEsImVuZCI6NjAwNDl9LCJOaHRmQXRIUEpTalZQ
 MzR3Ijp7InRleHQiOiJtaWdodCBiZSBzdGFibGUgYXQgdGhlIH
-RlbXBlcmF0dXJlIHJhbmdlcyIsInN0YXJ0Ijo2MDU3MCwiZW5k
-Ijo2MDYxMX0sIkJFQWtpQmJ0OENGbjMyb3UiOnsidGV4dCI6Ik
-EgUEc0IG1vdGlmIiwic3RhcnQiOjYyMDAyLCJlbmQiOjYyMDEz
+RlbXBlcmF0dXJlIHJhbmdlcyIsInN0YXJ0Ijo2MDU4OCwiZW5k
+Ijo2MDYyOX0sIkJFQWtpQmJ0OENGbjMyb3UiOnsidGV4dCI6Ik
+EgUEc0IG1vdGlmIiwic3RhcnQiOjYyMDIwLCJlbmQiOjYyMDMx
 fSwicURJbmZUMnRpcHBRZTREMyI6eyJ0ZXh0IjoiQW5hbHlzaX
 MgYnkgTXVsbGVuIGV0IGFsLiBpZGVudGlmaWVkIHRoYXQgdGhl
 IGdyZWF0ZXN0IGVucmljaG1lbnQgb2YgdHdvIHRldHJhZOKApi
-IsInN0YXJ0Ijo2Mjc0MCwiZW5kIjo2MzY1NX0sImdaUjlIUG03
+IsInN0YXJ0Ijo2Mjc1OCwiZW5kIjo2MzY3M30sImdaUjlIUG03
 Z3Y1aEJjV28iOnsidGV4dCI6IiMjIFJvbGUgb2YgRy1RdWFkcn
-VwbGV4ZXMgKmluIHBsYW50YSoiLCJzdGFydCI6NTkzOTMsImVu
-ZCI6NTk0MzB9LCJvajQxNldaUDU5YzBpSFMwIjp7InRleHQiOi
-JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2MjIzNSwi
-ZW5kIjo2MjI1NX19LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
+VwbGV4ZXMgKmluIHBsYW50YSoiLCJzdGFydCI6NTk0MTEsImVu
+ZCI6NTk0NDh9LCJvajQxNldaUDU5YzBpSFMwIjp7InRleHQiOi
+JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2MjI1Mywi
+ZW5kIjo2MjI3M319LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
 l3VUtGIjp7ImRpc2N1c3Npb25JZCI6IlZjQ2dESlIyM1cwcUk3
 ZWUiLCJzdWIiOiIxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZX
 h0IjoiVG8gd2hhdCBleHRlbnQgaXMgYSBxdWFkcnVwbGV4IGEg
@@ -556,11 +556,11 @@ cyB5b3UgY291ZGwgc2F5IHNvbWV0aGluZyBsaWtlIFwiLCBvZi
 Bjb3Vyc2UgdGhpcyBkb2Vzbid0IGFkZHJlc3MgdGhlIHF1ZXN0
 aW9uIG9mIHdodGhlciB0aGVzZSBzZXF1ZW5jZXMgZm9ybSBHNH
 MgKmluIHZpdm8qXCIiLCJjcmVhdGVkIjoxNTMyNDQ5NjQ5MTk0
-fX0sImhpc3RvcnkiOlstMTc3NTYyOTQyOCwxNDY0MzQxODYyLD
-k1OTgxNDg2OCwxNzYzNDM0MzE0LC0xNzE5NDkyMjE1LDE3MjA1
-NzI0ODQsMjA0OTc4OTMyMCwtMTQwMDI5OTY0OCw3OTExNDIyOT
-UsMTk4NjA5Njc2NSwtNzI2NjYzMzUxLDE2MzM3NjQ5MzUsMzAy
-NjQwMzg0LDE2MzM3NjQ5MzUsMzAyNjQwMzg0LDE2MzM3NjQ5Mz
-UsLTEzMjY3MTU0NjQsLTkxNDE5NjA3LDYxNDY0MDkxMiwxNjc1
-Mzg2OTQ3XX0=
+fX0sImhpc3RvcnkiOls0MTU5NTkyNzksLTE3NzU2Mjk0MjgsMT
+Q2NDM0MTg2Miw5NTk4MTQ4NjgsMTc2MzQzNDMxNCwtMTcxOTQ5
+MjIxNSwxNzIwNTcyNDg0LDIwNDk3ODkzMjAsLTE0MDAyOTk2ND
+gsNzkxMTQyMjk1LDE5ODYwOTY3NjUsLTcyNjY2MzM1MSwxNjMz
+NzY0OTM1LDMwMjY0MDM4NCwxNjMzNzY0OTM1LDMwMjY0MDM4NC
+wxNjMzNzY0OTM1LC0xMzI2NzE1NDY0LC05MTQxOTYwNyw2MTQ2
+NDA5MTJdfQ==
 -->
