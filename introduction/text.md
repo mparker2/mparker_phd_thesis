@@ -222,7 +222,7 @@ R loop formation has been identified as a key component of class switch recombin
 
 \newpage
 
-![**An R-loop and G4 dependent mechanism for Class Switch Recombination** **a)** Schematic showing the formation of an R-loop from G-rich RNA and C-rich template DNA, behind transcribing RNA Polymerase II. The G-rich coding strand is left in a single stranded form, and may fold into G4s. **b)** Proposed mechanism for Class Switch Recombination of IgH gene through R-loop formation. Transcription and splicing of the IgH locus results in a G-rich intron lariat which is debranched by DBR1. This folds into RNA G4s which recruit AID. Resolution of G4s by DDX1 promotes R loop formation and a](figures/rloops.svg)
+![**An R-loop and G4 dependent mechanism for Class Switch Recombination** **a)** Schematic showing the formation of an R-loop from G-rich RNA and C-rich template DNA, behind transcribing RNA Polymerase II. The G-rich coding strand is left in a single stranded form, and may fold into G4s. **b)** Proposed mechanism for Class Switch Recombination of IgH gene through R-loop formation. Transcription and splicing of the IgH locus results in a G-rich intron lariat which is debranched by DBR1. This folds into RNA G4s which recruit AID. Resolution of G4s by DDX1 promotes R loop formation and targets AID to the switch region, causing ](figures/rloops.svg)
 
 \newpage
 
@@ -337,20 +337,20 @@ V4dCI6Ikc0IGZvcm1hdGlvbiBtaWdodCBhY3QgYXMgYSBtb2xl
 Y3VsYXIgc3dpdGNoIiwic3RhcnQiOjQ3OTQ2LCJlbmQiOjQ3OT
 kwfSwiVGZJS0ZBWTRqWUlrWUVQOCI6eyJ0ZXh0IjoiTW9ub2Nv
 dHMgYWxzbyBoYXZlIGhpZ2hlciBQRzQgY29udGVudCwiLCJzdG
-FydCI6NjE4MTAsImVuZCI6NjE4NDh9LCJOaHRmQXRIUEpTalZQ
+FydCI6NjE4NTEsImVuZCI6NjE4ODl9LCJOaHRmQXRIUEpTalZQ
 MzR3Ijp7InRleHQiOiJtaWdodCBiZSBzdGFibGUgYXQgdGhlIH
-RlbXBlcmF0dXJlIHJhbmdlcyIsInN0YXJ0Ijo2MjM4NywiZW5k
-Ijo2MjQyOH0sIkJFQWtpQmJ0OENGbjMyb3UiOnsidGV4dCI6Ik
-EgUEc0IG1vdGlmIiwic3RhcnQiOjYzODE5LCJlbmQiOjYzODMw
+RlbXBlcmF0dXJlIHJhbmdlcyIsInN0YXJ0Ijo2MjQyOCwiZW5k
+Ijo2MjQ2OX0sIkJFQWtpQmJ0OENGbjMyb3UiOnsidGV4dCI6Ik
+EgUEc0IG1vdGlmIiwic3RhcnQiOjYzODYwLCJlbmQiOjYzODcx
 fSwicURJbmZUMnRpcHBRZTREMyI6eyJ0ZXh0IjoiQW5hbHlzaX
 MgYnkgTXVsbGVuIGV0IGFsLiBpZGVudGlmaWVkIHRoYXQgdGhl
 IGdyZWF0ZXN0IGVucmljaG1lbnQgb2YgdHdvIHRldHJhZOKApi
-IsInN0YXJ0Ijo2NDU1NywiZW5kIjo2NTQ3Mn0sImdaUjlIUG03
+IsInN0YXJ0Ijo2NDU5OCwiZW5kIjo2NTUxM30sImdaUjlIUG03
 Z3Y1aEJjV28iOnsidGV4dCI6IiMjIFJvbGUgb2YgRy1RdWFkcn
-VwbGV4ZXMgKmluIHBsYW50YSoiLCJzdGFydCI6NjEyMTAsImVu
-ZCI6NjEyNDd9LCJvajQxNldaUDU5YzBpSFMwIjp7InRleHQiOi
-JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2NDA1Miwi
-ZW5kIjo2NDA3Mn19LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
+VwbGV4ZXMgKmluIHBsYW50YSoiLCJzdGFydCI6NjEyNTEsImVu
+ZCI6NjEyODh9LCJvajQxNldaUDU5YzBpSFMwIjp7InRleHQiOi
+JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2NDA5Mywi
+ZW5kIjo2NDExM319LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
 l3VUtGIjp7ImRpc2N1c3Npb25JZCI6IlZjQ2dESlIyM1cwcUk3
 ZWUiLCJzdWIiOiIxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZX
 h0IjoiVG8gd2hhdCBleHRlbnQgaXMgYSBxdWFkcnVwbGV4IGEg
@@ -560,11 +560,11 @@ cyB5b3UgY291ZGwgc2F5IHNvbWV0aGluZyBsaWtlIFwiLCBvZi
 Bjb3Vyc2UgdGhpcyBkb2Vzbid0IGFkZHJlc3MgdGhlIHF1ZXN0
 aW9uIG9mIHdodGhlciB0aGVzZSBzZXF1ZW5jZXMgZm9ybSBHNH
 MgKmluIHZpdm8qXCIiLCJjcmVhdGVkIjoxNTMyNDQ5NjQ5MTk0
-fX0sImhpc3RvcnkiOlstMTQ0NTc4NDA0OSwtNzQ2NTQ4MjUwLC
-05NzI2NTk4ODQsLTE5MjM4MjI0OTYsLTE3NzU2Mjk0MjgsMTQ2
-NDM0MTg2Miw5NTk4MTQ4NjgsMTc2MzQzNDMxNCwtMTcxOTQ5Mj
-IxNSwxNzIwNTcyNDg0LDIwNDk3ODkzMjAsLTE0MDAyOTk2NDgs
-NzkxMTQyMjk1LDE5ODYwOTY3NjUsLTcyNjY2MzM1MSwxNjMzNz
-Y0OTM1LDMwMjY0MDM4NCwxNjMzNzY0OTM1LDMwMjY0MDM4NCwx
-NjMzNzY0OTM1XX0=
+fX0sImhpc3RvcnkiOlstMjY1MTc1MzY0LC03NDY1NDgyNTAsLT
+k3MjY1OTg4NCwtMTkyMzgyMjQ5NiwtMTc3NTYyOTQyOCwxNDY0
+MzQxODYyLDk1OTgxNDg2OCwxNzYzNDM0MzE0LC0xNzE5NDkyMj
+E1LDE3MjA1NzI0ODQsMjA0OTc4OTMyMCwtMTQwMDI5OTY0OCw3
+OTExNDIyOTUsMTk4NjA5Njc2NSwtNzI2NjYzMzUxLDE2MzM3Nj
+Q5MzUsMzAyNjQwMzg0LDE2MzM3NjQ5MzUsMzAyNjQwMzg0LDE2
+MzM3NjQ5MzVdfQ==
 -->
