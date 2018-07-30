@@ -218,7 +218,7 @@ ATRX mutation also effects gene expression. Gibbons et al. identified gene expre
 
 G4s are not the only DNA or RNA structures which occur specifically in sequences with high GC content and skew. Another structure is the R loop, which can form when transcription of a C-rich template strand to a G-rich RNA molecule occurs [@Reaban1994; @Li2005; @Ginno2012; @Ginno2013]. This RNA molecule is complementary to the template strand, and can therefore form a DNA:RNA hybrid duplex, leaving the coding strand of the DNA in a single stranded form [@Skourti-Stathaki2014]. Once formed, these hybrids are more thermodynamically stable than normal DNA:DNA duplexes [@Roberts1992]. This could be partially explained to the formation of G4 structures in the G-rich single stranded DNA of the coding strand, which has been shown to occur during transcription in bacterial plasmids [@Duquette2004].
 
-R loop formation has been identified as a key component of class switch recombination (CSR) of immunoglobulin genes [@Daniels1995; @Reaban1990; @Yu2003]. CSR is the process by which the constant region of the immunoglobulin heavy chain (IgH) gene is switched, changing the properties of the resultant antibody [@Stavenezer1996]. Transcription of the IgH gene produces a long non-coding RNA (lncRNA) with a constitutive first exon containing the variable antigen binding domain. Splicing to an alternative second exon is determined by the pattern of cytokines that the cell is exposed to. The intron lariat removed by this splicing is debranched and re-linearised by the enzyme DRB1
+R loop formation has been identified as a key component of class switch recombination (CSR) of immunoglobulin genes [@Daniels1995; @Reaban1990; @Yu2003]. CSR is the process by which the constant region of the immunoglobulin heavy chain (IgH) gene is switched, changing the properties of the resultant antibody [@Stavenezer1996]. This process is mediated by the  Transcription of the IgH gene produces a long non-coding RNA (lncRNA) with a constitutive first exon containing the variable antigen binding domain. Splicing to an alternative second exon is determined by the pattern of cytokines that the cell is exposed to. The intron lariat removed by this splicing is debranched and re-linearised by the enzyme DBR1 [
 
 \newpage
 
@@ -333,20 +333,20 @@ V4dCI6Ikc0IGZvcm1hdGlvbiBtaWdodCBhY3QgYXMgYSBtb2xl
 Y3VsYXIgc3dpdGNoIiwic3RhcnQiOjQ3OTQ2LCJlbmQiOjQ3OT
 kwfSwiVGZJS0ZBWTRqWUlrWUVQOCI6eyJ0ZXh0IjoiTW9ub2Nv
 dHMgYWxzbyBoYXZlIGhpZ2hlciBQRzQgY29udGVudCwiLCJzdG
-FydCI6NjAzNjksImVuZCI6NjA0MDd9LCJOaHRmQXRIUEpTalZQ
+FydCI6NjA0MDQsImVuZCI6NjA0NDJ9LCJOaHRmQXRIUEpTalZQ
 MzR3Ijp7InRleHQiOiJtaWdodCBiZSBzdGFibGUgYXQgdGhlIH
-RlbXBlcmF0dXJlIHJhbmdlcyIsInN0YXJ0Ijo2MDk0NiwiZW5k
-Ijo2MDk4N30sIkJFQWtpQmJ0OENGbjMyb3UiOnsidGV4dCI6Ik
-EgUEc0IG1vdGlmIiwic3RhcnQiOjYyMzc4LCJlbmQiOjYyMzg5
+RlbXBlcmF0dXJlIHJhbmdlcyIsInN0YXJ0Ijo2MDk4MSwiZW5k
+Ijo2MTAyMn0sIkJFQWtpQmJ0OENGbjMyb3UiOnsidGV4dCI6Ik
+EgUEc0IG1vdGlmIiwic3RhcnQiOjYyNDEzLCJlbmQiOjYyNDI0
 fSwicURJbmZUMnRpcHBRZTREMyI6eyJ0ZXh0IjoiQW5hbHlzaX
 MgYnkgTXVsbGVuIGV0IGFsLiBpZGVudGlmaWVkIHRoYXQgdGhl
 IGdyZWF0ZXN0IGVucmljaG1lbnQgb2YgdHdvIHRldHJhZOKApi
-IsInN0YXJ0Ijo2MzExNiwiZW5kIjo2NDAzMX0sImdaUjlIUG03
+IsInN0YXJ0Ijo2MzE1MSwiZW5kIjo2NDA2Nn0sImdaUjlIUG03
 Z3Y1aEJjV28iOnsidGV4dCI6IiMjIFJvbGUgb2YgRy1RdWFkcn
-VwbGV4ZXMgKmluIHBsYW50YSoiLCJzdGFydCI6NTk3NjksImVu
-ZCI6NTk4MDZ9LCJvajQxNldaUDU5YzBpSFMwIjp7InRleHQiOi
-JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2MjYxMSwi
-ZW5kIjo2MjYzMX19LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
+VwbGV4ZXMgKmluIHBsYW50YSoiLCJzdGFydCI6NTk4MDQsImVu
+ZCI6NTk4NDF9LCJvajQxNldaUDU5YzBpSFMwIjp7InRleHQiOi
+JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2MjY0Niwi
+ZW5kIjo2MjY2Nn19LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
 l3VUtGIjp7ImRpc2N1c3Npb25JZCI6IlZjQ2dESlIyM1cwcUk3
 ZWUiLCJzdWIiOiIxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZX
 h0IjoiVG8gd2hhdCBleHRlbnQgaXMgYSBxdWFkcnVwbGV4IGEg
@@ -556,11 +556,11 @@ cyB5b3UgY291ZGwgc2F5IHNvbWV0aGluZyBsaWtlIFwiLCBvZi
 Bjb3Vyc2UgdGhpcyBkb2Vzbid0IGFkZHJlc3MgdGhlIHF1ZXN0
 aW9uIG9mIHdodGhlciB0aGVzZSBzZXF1ZW5jZXMgZm9ybSBHNH
 MgKmluIHZpdm8qXCIiLCJjcmVhdGVkIjoxNTMyNDQ5NjQ5MTk0
-fX0sImhpc3RvcnkiOlsxNDA0ODkyMDM0LC05NzI2NTk4ODQsLT
-E5MjM4MjI0OTYsLTE3NzU2Mjk0MjgsMTQ2NDM0MTg2Miw5NTk4
-MTQ4NjgsMTc2MzQzNDMxNCwtMTcxOTQ5MjIxNSwxNzIwNTcyND
-g0LDIwNDk3ODkzMjAsLTE0MDAyOTk2NDgsNzkxMTQyMjk1LDE5
-ODYwOTY3NjUsLTcyNjY2MzM1MSwxNjMzNzY0OTM1LDMwMjY0MD
-M4NCwxNjMzNzY0OTM1LDMwMjY0MDM4NCwxNjMzNzY0OTM1LC0x
-MzI2NzE1NDY0XX0=
+fX0sImhpc3RvcnkiOlstMjA5OTU4MTUyOCwtOTcyNjU5ODg0LC
+0xOTIzODIyNDk2LC0xNzc1NjI5NDI4LDE0NjQzNDE4NjIsOTU5
+ODE0ODY4LDE3NjM0MzQzMTQsLTE3MTk0OTIyMTUsMTcyMDU3Mj
+Q4NCwyMDQ5Nzg5MzIwLC0xNDAwMjk5NjQ4LDc5MTE0MjI5NSwx
+OTg2MDk2NzY1LC03MjY2NjMzNTEsMTYzMzc2NDkzNSwzMDI2ND
+AzODQsMTYzMzc2NDkzNSwzMDI2NDAzODQsMTYzMzc2NDkzNSwt
+MTMyNjcxNTQ2NF19
 -->
