@@ -174,7 +174,7 @@ A model gene for the study of this G-rich motif dependent splicing is Bcl-X, a r
 
 \newpage
 
-![**G-Quadruplexes control the splicing of Bcl-X pre-mRNA** **a)** Diagram showing the splice isoforms Bcl-XS and Bcl-XL, which are derived from alternative splicing of exon 2. **b)** RNA structure of Bcl-X-681 (a synthetic transcript derived from Bcl-X) showing positions of G4s and splice donor/acceptor sites. Formation of a G4 near Bcl-XS donor site promotes usage of the XS splice donor. Formation of a G4 near Bcl-XL donor site inhibits usage of the XL splice donor](./figures/bclx_splicing.svg)
+![**G-Quadruplexes control the splicing of Bcl-X pre-mRNA** **a)** Diagram showing the splice isoforms Bcl-XS and Bcl-XL, which are derived from alternative splicing of exon 2. **b)** RNA structure of Bcl-X-681 (a synthetic transcript derived from Bcl-X) showing positions of G4s and splice donor/acceptor sites. Formation of a G4 near Bcl-XS donor site promotes usage of the XS splice donor. Formation of a G4 near Bcl-XL donor site inhibits usage of the XL splice donor. Adapted from Weldon et al. 2018](./figures/bclx_splicing.svg)
 
 \newpage
 
@@ -182,7 +182,7 @@ A model gene for the study of this G-rich motif dependent splicing is Bcl-X, a r
 
 \label{ssec:mrna_stability}
 
-G4s which form in mRNA have the potential to be more stable than those formed in DNA, because RNAs tend to form more complex structures and do not have to compete with double stranded forms. Furthermore, structural studies have suggested that the extra hydroxyl groups in ribose compared to deoxy-ribose allow RNA G4s to form more hydrogen bonds within the Quadruplex structure [@Collie2010]. This increases the enthalpic favourability of the RNA G4 whilst also reducing the entropic cost of hydrogen bonds with ordered water molecules. Analysis of yeast and human mRNAs using DMS-seq and SHAPE-seq have shown that eukaryotic mRNAs are much less structured *in vivo* than predicted from *in silico* and *in vitro* analyses [@Rouskin2014; @Ding2014; @Loughrey2014; @Spitale2015]. Rouskin et al. showed that this reduction in structure was ATP-dependent, suggesting that active unwinding of mRNA secondary structure occurs regularly *in vivo* [@Rouskin2014]. Kwok et al. have used rG4-seq to identify mRNA G4s that form *in vitro* in the presence of potassium or pyridostatin, by their ability to stall RT. They found a total of 3383 G4s in mRNAs, of which 62% were contained in the 3' UTR, 16% in the 5' UTR and 21% were in the CDS [@Kwok2016]. Simulation of RNA folding with the RNA G4 region constrained yielded very different structures on average to folding without constraints, suggesting that G4 formation might act as a molecular switch, changing the overall structure of the mRNA [@Kwok2016]. RNA G4s have been implicated in a number of regulatory roles, including translational regulation in the 5' UTR, and mRNA stability in the 3' UTR. Guo and Bartel used a similar DMS-seq method to identify G4s which fold *in vivo*, but found that the majority were in an unfolded state [@Guo2016]. This unfolding was not dependent on the cellular levels of ATP, suggesting that RNA G4s may be kept unfolded *in vivo* through some passive process, e.g. through protein binding to ssDNA [@Guo2016]. Biffi et al. have used the BG4 antibody to visualise RNase sensitive G4 structures in the cytoplasm of human cells, however, suggesting that at least a fraction of RNA G4s are formed *in vivo* [@Biffi2014].
+G4s which form in mRNA have the potential to be more stable than those formed in DNA, as they may not have to compete with double stranded forms. Furthermore, structural studies have suggested that the extra hydroxyl groups in ribose compared to deoxy-ribose allow RNA G4s to form more hydrogen bonds within the Quadruplex structure [@Collie2010]. This increases the enthalpic favourability of the RNA G4 whilst also reducing the entropic cost of hydrogen bonds with ordered water molecules. Analysis of yeast and human mRNAs using DMS-seq and SHAPE-seq have shown that eukaryotic mRNAs are much less structured *in vivo* than predicted from *in silico* and *in vitro* analyses [@Rouskin2014; @Ding2014; @Loughrey2014; @Spitale2015]. Rouskin et al. showed that this reduction in structure was ATP-dependent, suggesting that active unwinding of mRNA secondary structure occurs regularly *in vivo* [@Rouskin2014]. Kwok et al. have used rG4-seq to identify mRNA G4s that form *in vitro* in the presence of potassium or pyridostatin, by their ability to stall RT. They found a total of 3383 G4s in mRNAs, of which 62% were contained in the 3' UTR, 16% in the 5' UTR and 21% were in the CDS [@Kwok2016]. Simulation of RNA folding with the RNA G4 region constrained yielded very different structures on average to folding without constraints, suggesting that G4 formation might act as a molecular switch, changing the overall structure of the mRNA [@Kwok2016]. RNA G4s have been implicated in a number of regulatory roles, including translational regulation in the 5' UTR, and mRNA stability in the 3' UTR. Guo and Bartel used a similar DMS-seq method to identify G4s which fold *in vivo*, but found that the majority were in an unfolded state [@Guo2016]. This unfolding was not dependent on the cellular levels of ATP, suggesting that RNA G4s may be kept unfolded *in vivo* through some passive process, e.g. through protein binding to ssDNA [@Guo2016]. Biffi et al. have used the BG4 antibody to visualise RNase sensitive G4 structures in the cytoplasm of human cells, however, suggesting that at least a fraction of RNA G4s are formed *in vivo* [@Biffi2014].
 
 Translational initiation in eukaryotes begins with the binding of a 43S preinitiation complex (PIC) to the 5' cap of the linear mRNA [@Hinnebusch2014]. The PIC is pre-loaded with a Methionine aminoacyl-tRNA, and scans along the 5' UTR of the mRNA until the first methionine codon AUG is identified. This identification catalyses the recruitment of the large 60S subunit of the ribosome, to produce a translationally active complex [@Hinnebusch2014]. The 5' UTR of the mRNA often contains structures such as hairpins which must be resolved by RNA helicases to allow the passage of the PIC. G4s which form in the 5' UTR can have similar consequences, impeding the scanning of the PIC, or, if close enough to the m7G cap, preventing the loading of the complex onto the mRNA [@Bugaut2012].
 
@@ -319,30 +319,30 @@ RoZSBjb2RpbmfigKYiLCJzdGFydCI6Mzc5NzEsImVuZCI6Mzgw
 NTd9LCJ2OURyQXkyeDlaVnBSNGlIIjp7InRleHQiOiIhWyoqRy
 1RdWFkcnVwbGV4ZXMgY29udHJvbCB0aGUgc3BsaWNpbmcgb2Yg
 QmNsLVggcHJlLW1STkEqKiAqKmEpKiogRGlhZ3JhbSBzaG934o
-CmIiwic3RhcnQiOjQ1MDkwLCJlbmQiOjQ1NTkxfSwiTXA1OTF5
+CmIiwic3RhcnQiOjQ1MDkwLCJlbmQiOjQ1NjI0fSwiTXA1OTF5
 clFhenB1bVQwQSI6eyJ0ZXh0IjoiYmVjYXVzZSBSTkFzIHRlbm
 QgdG8gZm9ybSBtb3JlIGNvbXBsZXggc3RydWN0dXJlcyIsInN0
-YXJ0Ijo0NTc1NCwiZW5kIjo0NTgwM30sIngxaUpsd29wOG9ubk
-R3YTIiOnsidGV4dCI6IlNIQVBFLXNlcSIsInN0YXJ0Ijo0NjI1
-NywiZW5kIjo0NjI2Nn0sImloTUxXQ0RVN25EMWt2eVUiOnsidG
+YXJ0Ijo0NTc4NywiZW5kIjo0NTc4OH0sIngxaUpsd29wOG9ubk
+R3YTIiOnsidGV4dCI6IlNIQVBFLXNlcSIsInN0YXJ0Ijo0NjI0
+NSwiZW5kIjo0NjI1NH0sImloTUxXQ0RVN25EMWt2eVUiOnsidG
 V4dCI6Ikc0IGZvcm1hdGlvbiBtaWdodCBhY3QgYXMgYSBtb2xl
-Y3VsYXIgc3dpdGNoIiwic3RhcnQiOjQ3MDY2LCJlbmQiOjQ3MT
-EwfSwiVGZJS0ZBWTRqWUlrWUVQOCI6eyJ0ZXh0IjoiTW9ub2Nv
+Y3VsYXIgc3dpdGNoIiwic3RhcnQiOjQ3MDU0LCJlbmQiOjQ3MD
+k4fSwiVGZJS0ZBWTRqWUlrWUVQOCI6eyJ0ZXh0IjoiTW9ub2Nv
 dHMgYWxzbyBoYXZlIGhpZ2hlciBQRzQgY29udGVudCwiLCJzdG
-FydCI6NTg4MDYsImVuZCI6NTg4NDR9LCJOaHRmQXRIUEpTalZQ
+FydCI6NTg3OTQsImVuZCI6NTg4MzJ9LCJOaHRmQXRIUEpTalZQ
 MzR3Ijp7InRleHQiOiJtaWdodCBiZSBzdGFibGUgYXQgdGhlIH
-RlbXBlcmF0dXJlIHJhbmdlcyIsInN0YXJ0Ijo1OTM4MywiZW5k
-Ijo1OTQyNH0sIkJFQWtpQmJ0OENGbjMyb3UiOnsidGV4dCI6Ik
-EgUEc0IG1vdGlmIiwic3RhcnQiOjYwODE1LCJlbmQiOjYwODI2
+RlbXBlcmF0dXJlIHJhbmdlcyIsInN0YXJ0Ijo1OTM3MSwiZW5k
+Ijo1OTQxMn0sIkJFQWtpQmJ0OENGbjMyb3UiOnsidGV4dCI6Ik
+EgUEc0IG1vdGlmIiwic3RhcnQiOjYwODAzLCJlbmQiOjYwODE0
 fSwicURJbmZUMnRpcHBRZTREMyI6eyJ0ZXh0IjoiQW5hbHlzaX
 MgYnkgTXVsbGVuIGV0IGFsLiBpZGVudGlmaWVkIHRoYXQgdGhl
 IGdyZWF0ZXN0IGVucmljaG1lbnQgb2YgdHdvIHRldHJhZOKApi
-IsInN0YXJ0Ijo2MTU1MywiZW5kIjo2MjQ2OH0sImdaUjlIUG03
+IsInN0YXJ0Ijo2MTU0MSwiZW5kIjo2MjQ1Nn0sImdaUjlIUG03
 Z3Y1aEJjV28iOnsidGV4dCI6IiMjIFJvbGUgb2YgRy1RdWFkcn
-VwbGV4ZXMgKmluIHBsYW50YSoiLCJzdGFydCI6NTgyMDYsImVu
-ZCI6NTgyNDN9LCJvajQxNldaUDU5YzBpSFMwIjp7InRleHQiOi
-JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2MTA0OCwi
-ZW5kIjo2MTA2OH19LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
+VwbGV4ZXMgKmluIHBsYW50YSoiLCJzdGFydCI6NTgxOTQsImVu
+ZCI6NTgyMzF9LCJvajQxNldaUDU5YzBpSFMwIjp7InRleHQiOi
+JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2MTAzNiwi
+ZW5kIjo2MTA1Nn19LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
 l3VUtGIjp7ImRpc2N1c3Npb25JZCI6IlZjQ2dESlIyM1cwcUk3
 ZWUiLCJzdWIiOiIxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZX
 h0IjoiVG8gd2hhdCBleHRlbnQgaXMgYSBxdWFkcnVwbGV4IGEg
@@ -552,11 +552,11 @@ cyB5b3UgY291ZGwgc2F5IHNvbWV0aGluZyBsaWtlIFwiLCBvZi
 Bjb3Vyc2UgdGhpcyBkb2Vzbid0IGFkZHJlc3MgdGhlIHF1ZXN0
 aW9uIG9mIHdodGhlciB0aGVzZSBzZXF1ZW5jZXMgZm9ybSBHNH
 MgKmluIHZpdm8qXCIiLCJjcmVhdGVkIjoxNTMyNDQ5NjQ5MTk0
-fX0sImhpc3RvcnkiOlstNzI2NjYzMzUxLDE2MzM3NjQ5MzUsMz
-AyNjQwMzg0LDE2MzM3NjQ5MzUsMzAyNjQwMzg0LDE2MzM3NjQ5
-MzUsLTEzMjY3MTU0NjQsLTkxNDE5NjA3LDYxNDY0MDkxMiwxNj
-c1Mzg2OTQ3LC0xMTE1MDY5NzM1LC0xMzMxNDg2NDcxLC0zODg5
-MzU4OCwtMTcyNDg3NTE0MiwtNzIxMTMwODEsLTIwNjYxNzc3OS
-wyMDk5NjEyOTI4LDExMDI1OTM0MjMsMTAyMTUyMzk5NiwtMTAw
-NTQwMDAwNF19
+fX0sImhpc3RvcnkiOlsxOTg2MDk2NzY1LC03MjY2NjMzNTEsMT
+YzMzc2NDkzNSwzMDI2NDAzODQsMTYzMzc2NDkzNSwzMDI2NDAz
+ODQsMTYzMzc2NDkzNSwtMTMyNjcxNTQ2NCwtOTE0MTk2MDcsNj
+E0NjQwOTEyLDE2NzUzODY5NDcsLTExMTUwNjk3MzUsLTEzMzE0
+ODY0NzEsLTM4ODkzNTg4LC0xNzI0ODc1MTQyLC03MjExMzA4MS
+wtMjA2NjE3Nzc5LDIwOTk2MTI5MjgsMTEwMjU5MzQyMywxMDIx
+NTIzOTk2XX0=
 -->
