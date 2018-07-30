@@ -145,7 +145,7 @@ Transcription progresses by using the template strand as an antisense copy to re
 
 \newpage
 
-![**Possible Mechanisms for DNA and RNA G4 function in transcription and gene expression** Adapted from Figure 4. Rhodes and Lipps, 2015. **a)** Possible mechanism for function of G4s located in the coding strand. Since G4s form from single stranded DNA, G4s in the coding strand may promote melting of double stranded DNA, increasing transcription levels. G4s which form in the coding strand of the exonic DNA of a gene will also be present in the mRNA produced from that locus, and G4s which form in the coding strand of introns will be present in pre-mRNA. These RNA G4s might also influence gene expression through alteration of pre-mRNA splicing, mRNA stability, or translation. **b)** Possible mechanism for the function of G4s located in the template strand. The template strand of genes is scanned by RNA Polymerase II during transcription, and G4s which form in ahead of the transcription complex may cause slowing or stalling if they cannot be correctly resolved. RNA Polymerase II translocation speed is linked to a number of co-transcriptional processes, including splicing **[REF]**. \label{mech}](figures/transcription.svg)
+![**Possible Mechanisms for DNA and RNA G4 function in transcription and gene expression** **a)** Possible mechanism for function of G4s located in the coding strand. Since G4s form from single stranded DNA, G4s in the coding strand may promote melting of double stranded DNA, increasing transcription levels. G4s which form in the coding strand of the exonic DNA of a gene will also be present in the mRNA produced from that locus, and G4s which form in the coding strand of introns will be present in pre-mRNA. These RNA G4s might also influence gene expression through alteration of pre-mRNA splicing, mRNA stability, or translation. **b)** Possible mechanism for the function of G4s located in the template strand. The template strand of genes is scanned by RNA Polymerase II during transcription, and G4s which form in ahead of the transcription complex may cause slowing or stalling if they cannot be correctly resolved. RNA Polymerase II translocation speed is linked to a number of co-transcriptional processes, including splicing. Adapted from Figure 4. Rhodes and Lipps, 2015. \label{mech}](figures/transcription.svg)
 
 \newpage
 
@@ -313,38 +313,38 @@ N0cmFuZCBhcyBhbiBhbnRpc2Vuc2UgY29weSB0byBy4oCmIiwi
 c3RhcnQiOjM0MTI2LCJlbmQiOjM0Nzk2fSwieUlzSGdxWWxIb3
 dIdmdROCI6eyJ0ZXh0IjoiSXQgaXMgYWxzbyBwb3NzaWJsZSwg
 aG93ZXZlciwgdGhhdCB0aGlzIGVmZmVjdCBjb3VsZCBiZSBwYX
-J0aWFsbHkgZHVlIHRvIGdyZWF0ZeKApiIsInN0YXJ0IjozNjQ4
-MiwiZW5kIjozNjU5NX0sIjVFOUZ0V2VlV3c0VHdLenQiOnsidG
+J0aWFsbHkgZHVlIHRvIGdyZWF0ZeKApiIsInN0YXJ0IjozNjQ3
+MiwiZW5kIjozNjU4NX0sIjVFOUZ0V2VlV3c0VHdLenQiOnsidG
 V4dCI6IlRoZSBHNC1mb3JtaW5nIHBvdGVudGlhbCBvZiB0aGVz
 ZSBnZW5lcyBhbHNvIHRlbmRlZCB0byBiZSBncmVhdGVyIG9uIH
-RoZSBjb2RpbmfigKYiLCJzdGFydCI6Mzg2NTEsImVuZCI6Mzg3
-Mzd9LCJ2OURyQXkyeDlaVnBSNGlIIjp7InRleHQiOiIhWyoqRy
+RoZSBjb2RpbmfigKYiLCJzdGFydCI6Mzg2NDEsImVuZCI6Mzg3
+Mjd9LCJ2OURyQXkyeDlaVnBSNGlIIjp7InRleHQiOiIhWyoqRy
 1RdWFkcnVwbGV4ZXMgY29udHJvbCB0aGUgc3BsaWNpbmcgb2Yg
 QmNsLVggcHJlLW1STkEqKiAqKmEpKiogRGlhZ3JhbSBzaG934o
-CmIiwic3RhcnQiOjQ1NzcwLCJlbmQiOjQ2MzA0fSwiTXA1OTF5
+CmIiwic3RhcnQiOjQ1NzYwLCJlbmQiOjQ2Mjk0fSwiTXA1OTF5
 clFhenB1bVQwQSI6eyJ0ZXh0IjoiYmVjYXVzZSBSTkFzIHRlbm
 QgdG8gZm9ybSBtb3JlIGNvbXBsZXggc3RydWN0dXJlcyIsInN0
-YXJ0Ijo0NjQ2NywiZW5kIjo0NjQ2OH0sIngxaUpsd29wOG9ubk
-R3YTIiOnsidGV4dCI6IlNIQVBFLXNlcSIsInN0YXJ0Ijo0Njky
-NSwiZW5kIjo0NjkzNH0sImloTUxXQ0RVN25EMWt2eVUiOnsidG
+YXJ0Ijo0NjQ1NywiZW5kIjo0NjQ1OH0sIngxaUpsd29wOG9ubk
+R3YTIiOnsidGV4dCI6IlNIQVBFLXNlcSIsInN0YXJ0Ijo0Njkx
+NSwiZW5kIjo0NjkyNH0sImloTUxXQ0RVN25EMWt2eVUiOnsidG
 V4dCI6Ikc0IGZvcm1hdGlvbiBtaWdodCBhY3QgYXMgYSBtb2xl
-Y3VsYXIgc3dpdGNoIiwic3RhcnQiOjQ3NzM0LCJlbmQiOjQ3Nz
-c4fSwiVGZJS0ZBWTRqWUlrWUVQOCI6eyJ0ZXh0IjoiTW9ub2Nv
+Y3VsYXIgc3dpdGNoIiwic3RhcnQiOjQ3NzI0LCJlbmQiOjQ3Nz
+Y4fSwiVGZJS0ZBWTRqWUlrWUVQOCI6eyJ0ZXh0IjoiTW9ub2Nv
 dHMgYWxzbyBoYXZlIGhpZ2hlciBQRzQgY29udGVudCwiLCJzdG
-FydCI6NTk0NzQsImVuZCI6NTk1MTJ9LCJOaHRmQXRIUEpTalZQ
+FydCI6NTk0NjQsImVuZCI6NTk1MDJ9LCJOaHRmQXRIUEpTalZQ
 MzR3Ijp7InRleHQiOiJtaWdodCBiZSBzdGFibGUgYXQgdGhlIH
-RlbXBlcmF0dXJlIHJhbmdlcyIsInN0YXJ0Ijo2MDA1MSwiZW5k
-Ijo2MDA5Mn0sIkJFQWtpQmJ0OENGbjMyb3UiOnsidGV4dCI6Ik
-EgUEc0IG1vdGlmIiwic3RhcnQiOjYxNDgzLCJlbmQiOjYxNDk0
+RlbXBlcmF0dXJlIHJhbmdlcyIsInN0YXJ0Ijo2MDA0MSwiZW5k
+Ijo2MDA4Mn0sIkJFQWtpQmJ0OENGbjMyb3UiOnsidGV4dCI6Ik
+EgUEc0IG1vdGlmIiwic3RhcnQiOjYxNDczLCJlbmQiOjYxNDg0
 fSwicURJbmZUMnRpcHBRZTREMyI6eyJ0ZXh0IjoiQW5hbHlzaX
 MgYnkgTXVsbGVuIGV0IGFsLiBpZGVudGlmaWVkIHRoYXQgdGhl
 IGdyZWF0ZXN0IGVucmljaG1lbnQgb2YgdHdvIHRldHJhZOKApi
-IsInN0YXJ0Ijo2MjIyMSwiZW5kIjo2MzEzNn0sImdaUjlIUG03
+IsInN0YXJ0Ijo2MjIxMSwiZW5kIjo2MzEyNn0sImdaUjlIUG03
 Z3Y1aEJjV28iOnsidGV4dCI6IiMjIFJvbGUgb2YgRy1RdWFkcn
-VwbGV4ZXMgKmluIHBsYW50YSoiLCJzdGFydCI6NTg4NzQsImVu
-ZCI6NTg5MTF9LCJvajQxNldaUDU5YzBpSFMwIjp7InRleHQiOi
-JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2MTcxNiwi
-ZW5kIjo2MTczNn19LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
+VwbGV4ZXMgKmluIHBsYW50YSoiLCJzdGFydCI6NTg4NjQsImVu
+ZCI6NTg5MDF9LCJvajQxNldaUDU5YzBpSFMwIjp7InRleHQiOi
+JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2MTcwNiwi
+ZW5kIjo2MTcyNn19LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
 l3VUtGIjp7ImRpc2N1c3Npb25JZCI6IlZjQ2dESlIyM1cwcUk3
 ZWUiLCJzdWIiOiIxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZX
 h0IjoiVG8gd2hhdCBleHRlbnQgaXMgYSBxdWFkcnVwbGV4IGEg
@@ -554,11 +554,11 @@ cyB5b3UgY291ZGwgc2F5IHNvbWV0aGluZyBsaWtlIFwiLCBvZi
 Bjb3Vyc2UgdGhpcyBkb2Vzbid0IGFkZHJlc3MgdGhlIHF1ZXN0
 aW9uIG9mIHdodGhlciB0aGVzZSBzZXF1ZW5jZXMgZm9ybSBHNH
 MgKmluIHZpdm8qXCIiLCJjcmVhdGVkIjoxNTMyNDQ5NjQ5MTk0
-fX0sImhpc3RvcnkiOlstMTQwMDI5OTY0OCw3OTExNDIyOTUsMT
-k4NjA5Njc2NSwtNzI2NjYzMzUxLDE2MzM3NjQ5MzUsMzAyNjQw
-Mzg0LDE2MzM3NjQ5MzUsMzAyNjQwMzg0LDE2MzM3NjQ5MzUsLT
-EzMjY3MTU0NjQsLTkxNDE5NjA3LDYxNDY0MDkxMiwxNjc1Mzg2
-OTQ3LC0xMTE1MDY5NzM1LC0xMzMxNDg2NDcxLC0zODg5MzU4OC
-wtMTcyNDg3NTE0MiwtNzIxMTMwODEsLTIwNjYxNzc3OSwyMDk5
-NjEyOTI4XX0=
+fX0sImhpc3RvcnkiOlsyMDQ5Nzg5MzIwLC0xNDAwMjk5NjQ4LD
+c5MTE0MjI5NSwxOTg2MDk2NzY1LC03MjY2NjMzNTEsMTYzMzc2
+NDkzNSwzMDI2NDAzODQsMTYzMzc2NDkzNSwzMDI2NDAzODQsMT
+YzMzc2NDkzNSwtMTMyNjcxNTQ2NCwtOTE0MTk2MDcsNjE0NjQw
+OTEyLDE2NzUzODY5NDcsLTExMTUwNjk3MzUsLTEzMzE0ODY0Nz
+EsLTM4ODkzNTg4LC0xNzI0ODc1MTQyLC03MjExMzA4MSwtMjA2
+NjE3Nzc5XX0=
 -->
