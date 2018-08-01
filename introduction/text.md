@@ -8,7 +8,7 @@
 
 \label{ssec:what_is_a_g4}
 
-The genome is often referred to as the "blueprint" for life. This metaphor suggests a static set of instructions, which simply encodes data and does not change its form. In reality, however, chromosomes are highly dynamic structures which are able to undergo various covalent modifications to the DNA and proteins, as well as change topologies on a global and local scale [@Misteli2007]. At the global level, changes in how the chromatin is packed result in the closing off or opening up of specific regions, changing the level of transcription of the genes contained within them. Genes and regulatory sequences which are far apart in sequence space can be brought together through looping to allow co-regulation [@Feuerborn2015]. At the smaller scale, the DNA itself is able to fold into a number of different shapes, including various types of duplex, triplex, and quadruplex. Examples include B-DNA (the classic double helix), A-DNA (duplex), R-loops (three stranded) [@Roberts1992; @Korzheva2000], i-motifs (quadruplex) [@Gehring1993; @Tua2000; @Zeraati2018] and G-Quadruplexes [@Gellert1962; @Sen1988; @Sundquist1989; @Hansel2016]. These structures have different relative stabilities depending on the conditions of their local environment, e.g. the local concentration of solutes, complementary RNAs, or stabilising proteins, the level of molecular crowding, or the intracellular pH [@Gehring1993; @Schultze1999; @Gaynutdinov2008; Rajendran2010; @Heddi2011; @Zhou2016]. Furthermore, some structures form only in DNA containing specific sequence attributes, such as high GC content [@Huppert2005]. Whilst non-B forms of DNA have been known to form *in vitro* for some time, it is only recently that evidence of their formation *in vivo*, and their effects on biological systems, has begun to accumulate.
+The genome is often referred to as the "blueprint" for life. This metaphor suggests a static set of instructions, which simply encodes data and does not change its form. In reality, however, chromosomes are highly dynamic structures which are able to undergo various covalent modifications to the DNA and proteins, as well as change topologies on a global and local scale [@Misteli2007]. At the global level, changes in how the chromatin is packed result in the closing off or opening up of specific regions, changing the level of transcription of the genes contained within them. Genes and regulatory sequences which are far apart in sequence space can be brought together through looping to allow co-regulation [@Feuerborn2015]. At the smaller scale, the DNA itself is able to fold into a number of different shapes, including various types of duplex, triplex, and quadruplex. Examples include B-DNA (the classic double helix), A-DNA (duplex), R-loops (three stre) [@Roberts1992; @Korzheva2000], i-motifs (quadruplex) [@Gehring1993; @Tua2000; @Zeraati2018] and G-Quadruplexes [@Gellert1962; @Sen1988; @Sundquist1989; @Hansel2016]. These structures have different relative stabilities depending on the conditions of their local environment, e.g. the local concentration of solutes, complementary RNAs, or stabilising proteins, the level of molecular crowding, or the intracellular pH [@Gehring1993; @Schultze1999; @Gaynutdinov2008; Rajendran2010; @Heddi2011; @Zhou2016]. Furthermore, some structures form only in DNA containing specific sequence attributes, such as high GC content [@Huppert2005]. Whilst non-B forms of DNA have been known to form *in vitro* for some time, it is only recently that evidence of their formation *in vivo*, and their effects on biological systems, has begun to accumulate.
 
 One of the more well studied non-B DNA/RNA forms is the G-Quadruplex (G4), a guanine rich, four stranded DNA helix. The properties of guanine which allow G4s to form were first hinted at by German chemist Ivar Bang in 1910, more than four decades before Watson, Crick and Franklin deduced the structure of the double helix. Bang noted that guanosine nucleotides in concentrations of around 25 mg/ml will form a viscous gel [@Bang1910]. It was not until 1962, however, that Gellert et al. were able to use the technique of X-ray diffraction to identify the interactions which caused this property. They noted that guanine monomers were able to interact to form square, planar quartets, which then stacked to form a helical structure [@Gellert1962].
 
@@ -102,6 +102,12 @@ Stegle et al. implemented a Gaussian Process model incorporating extracted featu
 Whilst Stegle et al.'s model was successful on Quadparser conforming motifs, it is estimated that ~70% of G4s in the human genome do not conform to this motif [@Chambers2015]. More recently, Garant et al. published a method for predicting RNA G4s which was trained on a set of 368 experimentally determined sequences, 149 of which were G4 positive and 179 of which were G4 negative [@Garant2017]. From these sequences the trinucleotide contents were extracted, and used to train a densely connected multi-layer perceptron model, with a single hidden layer containing 35 nodes. This trinucleotide trained model had the advantage being more flexible for G4s that do not conform to the Quadparser motif. Their model achieved an average AUC score of 0.92 on hold out sets in a 5 fold cross validation experiment. When tested on the rG4-seq dataset of RT stalled RNA G4s [@Kwok2016], the method did not perform as well as G4Hunter [@Bedrat2016]. This indicates that some positional information is lost when sequences are converted to trinucleotide content features.
 
 Finally, the more recent efforts to produce high-throughput methods for identifying genomic G4s, such as G4-seq developed by Chambers et al., have created much better in depth datasets for training machine learning models. Sahakyan et al. used the G4-seq dataset in their model. This was a extreme gradient boosted machine model developed using `xgboost` [@Chen2016], which regressed the percentage mismatch score of sequences from the G4-seq dataset which conform to the Quadparser method [@Sahakyan2017]. The authors extracted features from Quadparser conforming PG4s similar to those employed by Stegle et al., including tetrad number, loop length, and mono-, di- and triunucleotide contents of the PG4, and flanking regions. This model was very successful at identifying Quadparser conforming motifs which did or did not actually form G4s, achieving a root mean squared error score of 8.14 (units used were mismatch score in G4-seq experiment, in percentage format) [@Sahakyan2017]. The method could not identify non-Quadparser conforming G4 motifs, however, which make up a large proportion of experimentally characterised G4s [@Chambers2015].
+
+\newpage
+
+### Other G-rich Nucleic Acid Structures
+
+G4s are not the only DNA or RNA structures which occur specifically in sequences with high GC content and skew. Another structure is the R loop, which can form when transcription of a C-rich template strand to a G-rich RNA molecule occurs [@Reaban1994; @Li2005; @Ginno2012; @Ginno2013]. This RNA molecule is complementary to the template strand, and can therefore form a DNA:RNA hybrid duplex, leaving the coding strand of the DNA in a single stranded form [@Skourti-Stathaki2014]. Once formed, these hybrids are more thermodynamically stable than normal DNA:DNA duplexes [@Roberts1992]. This could be partially explained to the formation of G4 structures in the G-rich single stranded DNA of the coding strand [@Duquette2004].
 
 \newpage
 
@@ -279,84 +285,84 @@ RleHQiOiJhcyB3ZWxsIGFzIGNoYW5nZSB0b3BvbG9naWVzIG9u
 IGEiLCJzdGFydCI6Mzc5LCJlbmQiOjQxMn0sIjVTWVhPNnU1Yn
 laUDJZa2giOnsidGV4dCI6IiFbKipTdHJ1Y3R1cmUgb2YgYSBH
 LVF1YWRydXBsZXgqKiAqKmEpKiogVGhlIG1vbGVjdWxhciBzdH
-J1Y3R1cmUgb2YgYSBHLXF1YXJ0ZXTigKYiLCJzdGFydCI6NTQ2
-MSwiZW5kIjo2NTAyfSwiVVN3ZWJmOUh6QW5CcWs2UiI6eyJ0ZX
+J1Y3R1cmUgb2YgYSBHLXF1YXJ0ZXTigKYiLCJzdGFydCI6NTQ1
+NywiZW5kIjo2NDk4fSwiVVN3ZWJmOUh6QW5CcWs2UiI6eyJ0ZX
 h0IjoiIyMjIEctUXVhZHJ1cGxleCBQcmVkaWN0aW9uIGZyb20g
-U2VxdWVuY2UiLCJzdGFydCI6Njk4NiwiZW5kIjo3MDI3fSwiRW
+U2VxdWVuY2UiLCJzdGFydCI6Njk4MiwiZW5kIjo3MDIzfSwiRW
 s0SWo2UUVFSVJOdFRvQyI6eyJ0ZXh0IjoiZiBkaXNvcmRlcmVk
-IHNpbmdsZSBzdHJhbmRlZCBETkEiLCJzdGFydCI6MTE2MTAsIm
-VuZCI6MTE2NDJ9LCJScVFYUnFDWUs5ODdGRWpHIjp7InRleHQi
+IHNpbmdsZSBzdHJhbmRlZCBETkEiLCJzdGFydCI6MTE2MDYsIm
+VuZCI6MTE2Mzh9LCJScVFYUnFDWUs5ODdGRWpHIjp7InRleHQi
 OiIhWyoqRy1RdWFkcnVwbGV4IFN0YWJpbGlzaW5nIExpZ2FuZH
 MqKiBTdHJ1Y3R1cmVzIGFuZCBtb2RlIG9mIGFjdGlvbiBvZiBQ
-eXJpZG9z4oCmIiwic3RhcnQiOjE1Mjg5LCJlbmQiOjE1NzE0fS
+eXJpZG9z4oCmIiwic3RhcnQiOjE1Mjg1LCJlbmQiOjE1NzEwfS
 wiSWpMVVJSYU92YUFDZUh3biI6eyJ0ZXh0IjoiT25lIGNvbW1v
 biBhcHByb2FjaCB0byBzdHVkeWluZyB0aGUgZWZmZWN0IG9mIE
 c0IHN0YWJpbGlzYXRpb24gb24gYmlvbG9naWNhbCBwcuKApiIs
-InN0YXJ0IjoxNTg4MSwiZW5kIjoxNjA1MH0sIktiSUJOUUtJME
+InN0YXJ0IjoxNTg3NywiZW5kIjoxNjA0Nn0sIktiSUJOUUtJME
 9zaUJET1AiOnsidGV4dCI6Ik5hdHVyYWxseSBmbHVvcmVzY2Vu
-dCIsInN0YXJ0IjoxNjIxNiwiZW5kIjoxNjIzN30sIm9PMkRzT2
+dCIsInN0YXJ0IjoxNjIxMiwiZW5kIjoxNjIzM30sIm9PMkRzT2
 tqQUxrR3lUT00iOnsidGV4dCI6Ii4gVGhlIGF1dGhvcnMgc2hv
 d2VkIHVzaW5nIHRoaXMgdGVjaG5pcXVlIHRoYXQgb25seSAzMC
 Ugb2YgZXhwZXJpbWVudGFsbHkgb2JzZXLigKYiLCJzdGFydCI6
-MTgxMzAsImVuZCI6MTgyOTB9LCJ0R3Jycnd5ekZqbzA1TXl6Ij
-p7InRleHQiOiJ0aGF0IHJlZ2lvbnMiLCJzdGFydCI6MTg5NDEs
-ImVuZCI6MTg5NDF9LCJId3ZHb2lPOW9MZkh0dUNGIjp7InRleH
+MTgxMjYsImVuZCI6MTgyODZ9LCJ0R3Jycnd5ekZqbzA1TXl6Ij
+p7InRleHQiOiJ0aGF0IHJlZ2lvbnMiLCJzdGFydCI6MTg5Mzcs
+ImVuZCI6MTg5Mzd9LCJId3ZHb2lPOW9MZkh0dUNGIjp7InRleH
 QiOiJUaGlzIG1vZGVsIHdhcyB2ZXJ5IHN1Y2Nlc3NmdWwgYXQg
 aWRlbnRpZnlpbmcgUXVhZHBhcnNlciBjb25mb3JtaW5nIG1vdG
-lmcyB3aGlj4oCmIiwic3RhcnQiOjI0Mjc3LCJlbmQiOjI0NTM0
+lmcyB3aGlj4oCmIiwic3RhcnQiOjI0MjczLCJlbmQiOjI0NTMw
 fSwic0hNSzA5NHIyc0FqRlphZiI6eyJ0ZXh0IjoiRy1RdWFkcn
 VwbGV4IHN0YWJpbGl0eSBwcmVkaWN0aW9uIHVzaW5nIE1hY2hp
-bmUgTGVhcm5pbmciLCJzdGFydCI6MjAyMzEsImVuZCI6MjAyOD
-d9LCJDdFdWQmI3RkI5MWxMaU54Ijp7InRleHQiOiJHNHMgd2l0
+bmUgTGVhcm5pbmciLCJzdGFydCI6MjAyMjcsImVuZCI6MjAyOD
+N9LCJDdFdWQmI3RkI5MWxMaU54Ijp7InRleHQiOiJHNHMgd2l0
 aCBsb29wIGxlbmd0aCBvZiB1cCB0byAxNWJwIiwic3RhcnQiOj
-I5ODY0LCJlbmQiOjI5OTA4fSwicjhpOWhzQ3RRVkNBcm5rMCI6
+MwNjQxLCJlbmQiOjMwNjg1fSwicjhpOWhzQ3RRVkNBcm5rMCI6
 eyJ0ZXh0IjoiKEVkZHkgJiBNYWl6ZWxzIDIwMDYpIiwic3Rhcn
-QiOjMxMzA1LCJlbmQiOjMxMzEzfSwiMlVmcTE0cTFqRThRYmpP
+QiOjMyMDgyLCJlbmQiOjMyMDkwfSwiMlVmcTE0cTFqRThRYmpP
 SiI6eyJ0ZXh0IjoiVGhlIE5IRUlJSSBjb250YWlucyBhIG51bW
 JlciBvZiBHLXJpY2ggdHJhY3RzIHdoaWNoIGhhdmUgYmVlbiBz
-aG93biB0byBmb3JtIEc0c+KApiIsInN0YXJ0IjozMjUzMywiZW
-5kIjozMjY0N30sInBPR2c0YWY1aThkM3FRTWsiOnsidGV4dCI6
+aG93biB0byBmb3JtIEc0c+KApiIsInN0YXJ0IjozMzMxMCwiZW
+5kIjozMzQyNH0sInBPR2c0YWY1aThkM3FRTWsiOnsidGV4dCI6
 ImV2ZW4gd2hlbiBvdGhlciBmYWN0b3JzIHN1Y2ggYXMgZ2VuZS
 BmdW5jdGlvbiBhcmUgY29udHJvbGxlZCBmb3IuIEl0IGhhcyBi
-ZWVuIHPigKYiLCJzdGFydCI6MzM4NjYsImVuZCI6MzQwODl9LC
+ZWVuIHPigKYiLCJzdGFydCI6MzQ2NDMsImVuZCI6MzQ4NjZ9LC
 JMUTN4SEJ0N3R0TzFHSEplIjp7InRleHQiOiJUcmFuc2NyaXB0
 aW9uIHByb2dyZXNzZXMgYnkgdXNpbmcgdGhlIHRlbXBsYXRlIH
 N0cmFuZCBhcyBhbiBhbnRpc2Vuc2UgY29weSB0byBy4oCmIiwi
-c3RhcnQiOjM0MzM2LCJlbmQiOjM1MDE4fSwieUlzSGdxWWxIb3
+c3RhcnQiOjM1MTEzLCJlbmQiOjM1Nzk1fSwieUlzSGdxWWxIb3
 dIdmdROCI6eyJ0ZXh0IjoiSXQgaXMgYWxzbyBwb3NzaWJsZSwg
 aG93ZXZlciwgdGhhdCB0aGlzIGVmZmVjdCBjb3VsZCBiZSBwYX
-J0aWFsbHkgZHVlIHRvIGdyZWF0ZeKApiIsInN0YXJ0IjozNjY5
-NCwiZW5kIjozNjgwN30sIjVFOUZ0V2VlV3c0VHdLenQiOnsidG
+J0aWFsbHkgZHVlIHRvIGdyZWF0ZeKApiIsInN0YXJ0IjozNzQ3
+MSwiZW5kIjozNzU4NH0sIjVFOUZ0V2VlV3c0VHdLenQiOnsidG
 V4dCI6IlRoZSBHNC1mb3JtaW5nIHBvdGVudGlhbCBvZiB0aGVz
 ZSBnZW5lcyBhbHNvIHRlbmRlZCB0byBiZSBncmVhdGVyIG9uIH
-RoZSBjb2RpbmfigKYiLCJzdGFydCI6Mzg4NjMsImVuZCI6Mzg5
-NDl9LCJ2OURyQXkyeDlaVnBSNGlIIjp7InRleHQiOiIhWyoqRy
+RoZSBjb2RpbmfigKYiLCJzdGFydCI6Mzk2NDAsImVuZCI6Mzk3
+MjZ9LCJ2OURyQXkyeDlaVnBSNGlIIjp7InRleHQiOiIhWyoqRy
 1RdWFkcnVwbGV4ZXMgY29udHJvbCB0aGUgc3BsaWNpbmcgb2Yg
 QmNsLVggcHJlLW1STkEqKiAqKmEpKiogRGlhZ3JhbSBzaG934o
-CmIiwic3RhcnQiOjQ1OTgyLCJlbmQiOjQ2NTE2fSwiTXA1OTF5
+CmIiwic3RhcnQiOjQ2NzU5LCJlbmQiOjQ3MjkzfSwiTXA1OTF5
 clFhenB1bVQwQSI6eyJ0ZXh0IjoiYmVjYXVzZSBSTkFzIHRlbm
 QgdG8gZm9ybSBtb3JlIGNvbXBsZXggc3RydWN0dXJlcyIsInN0
-YXJ0Ijo0NjY3OSwiZW5kIjo0NjY4MH0sIngxaUpsd29wOG9ubk
-R3YTIiOnsidGV4dCI6IlNIQVBFLXNlcSIsInN0YXJ0Ijo0NzEz
-NywiZW5kIjo0NzE0Nn0sImloTUxXQ0RVN25EMWt2eVUiOnsidG
+YXJ0Ijo0NzQ1NiwiZW5kIjo0NzQ1N30sIngxaUpsd29wOG9ubk
+R3YTIiOnsidGV4dCI6IlNIQVBFLXNlcSIsInN0YXJ0Ijo0Nzkx
+NCwiZW5kIjo0NzkyM30sImloTUxXQ0RVN25EMWt2eVUiOnsidG
 V4dCI6Ikc0IGZvcm1hdGlvbiBtaWdodCBhY3QgYXMgYSBtb2xl
-Y3VsYXIgc3dpdGNoIiwic3RhcnQiOjQ3OTQ2LCJlbmQiOjQ3OT
-kwfSwiVGZJS0ZBWTRqWUlrWUVQOCI6eyJ0ZXh0IjoiTW9ub2Nv
+Y3VsYXIgc3dpdGNoIiwic3RhcnQiOjQ4NzIzLCJlbmQiOjQ4Nz
+Y3fSwiVGZJS0ZBWTRqWUlrWUVQOCI6eyJ0ZXh0IjoiTW9ub2Nv
 dHMgYWxzbyBoYXZlIGhpZ2hlciBQRzQgY29udGVudCwiLCJzdG
-FydCI6NjI1NzQsImVuZCI6NjI2MTJ9LCJOaHRmQXRIUEpTalZQ
+FydCI6NjMzNTEsImVuZCI6NjMzODl9LCJOaHRmQXRIUEpTalZQ
 MzR3Ijp7InRleHQiOiJtaWdodCBiZSBzdGFibGUgYXQgdGhlIH
-RlbXBlcmF0dXJlIHJhbmdlcyIsInN0YXJ0Ijo2MzE1MSwiZW5k
-Ijo2MzE5Mn0sIkJFQWtpQmJ0OENGbjMyb3UiOnsidGV4dCI6Ik
-EgUEc0IG1vdGlmIiwic3RhcnQiOjY0NTgzLCJlbmQiOjY0NTk0
+RlbXBlcmF0dXJlIHJhbmdlcyIsInN0YXJ0Ijo2MzkyOCwiZW5k
+Ijo2Mzk2OX0sIkJFQWtpQmJ0OENGbjMyb3UiOnsidGV4dCI6Ik
+EgUEc0IG1vdGlmIiwic3RhcnQiOjY1MzYwLCJlbmQiOjY1Mzcx
 fSwicURJbmZUMnRpcHBRZTREMyI6eyJ0ZXh0IjoiQW5hbHlzaX
 MgYnkgTXVsbGVuIGV0IGFsLiBpZGVudGlmaWVkIHRoYXQgdGhl
 IGdyZWF0ZXN0IGVucmljaG1lbnQgb2YgdHdvIHRldHJhZOKApi
-IsInN0YXJ0Ijo2NTMyMSwiZW5kIjo2NjIzNn0sImdaUjlIUG03
+IsInN0YXJ0Ijo2NjA5OCwiZW5kIjo2NzAxM30sImdaUjlIUG03
 Z3Y1aEJjV28iOnsidGV4dCI6IiMjIFJvbGUgb2YgRy1RdWFkcn
-VwbGV4ZXMgKmluIHBsYW50YSoiLCJzdGFydCI6NjE5NzQsImVu
-ZCI6NjIwMTF9LCJvajQxNldaUDU5YzBpSFMwIjp7InRleHQiOi
-JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2NDgxNiwi
-ZW5kIjo2NDgzNn19LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
+VwbGV4ZXMgKmluIHBsYW50YSoiLCJzdGFydCI6NjI3NTEsImVu
+ZCI6NjI3ODh9LCJvajQxNldaUDU5YzBpSFMwIjp7InRleHQiOi
+JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2NTU5Mywi
+ZW5kIjo2NTYxM319LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
 l3VUtGIjp7ImRpc2N1c3Npb25JZCI6IlZjQ2dESlIyM1cwcUk3
 ZWUiLCJzdWIiOiIxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZX
 h0IjoiVG8gd2hhdCBleHRlbnQgaXMgYSBxdWFkcnVwbGV4IGEg
@@ -566,11 +572,11 @@ cyB5b3UgY291ZGwgc2F5IHNvbWV0aGluZyBsaWtlIFwiLCBvZi
 Bjb3Vyc2UgdGhpcyBkb2Vzbid0IGFkZHJlc3MgdGhlIHF1ZXN0
 aW9uIG9mIHdodGhlciB0aGVzZSBzZXF1ZW5jZXMgZm9ybSBHNH
 MgKmluIHZpdm8qXCIiLCJjcmVhdGVkIjoxNTMyNDQ5NjQ5MTk0
-fX0sImhpc3RvcnkiOlsyMTMxODE2NDY3LDkyMzIwNDI3NCwxNT
-Q4Nzk0OTgxLDQ5NzY2ODY0MywxNTQzOTg3NTUxLC03NDY1NDgy
-NTAsLTk3MjY1OTg4NCwtMTkyMzgyMjQ5NiwtMTc3NTYyOTQyOC
-wxNDY0MzQxODYyLDk1OTgxNDg2OCwxNzYzNDM0MzE0LC0xNzE5
-NDkyMjE1LDE3MjA1NzI0ODQsMjA0OTc4OTMyMCwtMTQwMDI5OT
-Y0OCw3OTExNDIyOTUsMTk4NjA5Njc2NSwtNzI2NjYzMzUxLDE2
-MzM3NjQ5MzVdfQ==
+fX0sImhpc3RvcnkiOls1NzY2NzAzNzksMjEzMTgxNjQ2Nyw5Mj
+MyMDQyNzQsMTU0ODc5NDk4MSw0OTc2Njg2NDMsMTU0Mzk4NzU1
+MSwtNzQ2NTQ4MjUwLC05NzI2NTk4ODQsLTE5MjM4MjI0OTYsLT
+E3NzU2Mjk0MjgsMTQ2NDM0MTg2Miw5NTk4MTQ4NjgsMTc2MzQz
+NDMxNCwtMTcxOTQ5MjIxNSwxNzIwNTcyNDg0LDIwNDk3ODkzMj
+AsLTE0MDAyOTk2NDgsNzkxMTQyMjk1LDE5ODYwOTY3NjUsLTcy
+NjY2MzM1MV19
 -->
