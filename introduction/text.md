@@ -226,7 +226,7 @@ ATRX mutation also effects gene expression. Gibbons et al. identified gene expre
 
 \newpage
 
-### Other G-rich Nucleic Acid Structures
+### G4 and R loop formation in Class Switch Recombination of Immunoglobulins
 
 R loop formation has been identified as a key component of class switch recombination (CSR) of immunoglobulin genes [@Daniels1995; @Reaban1990; @Yu2003]. CSR is the process by which the constant region of the immunoglobulin heavy chain (IgH) gene is switched, changing the properties of the resultant antibody [@Stavenezer1996]. This process is mediated by the activation-induced cytidine deaminase (AID), an enzyme which deaminates cytosines in ssDNA, within the switch regions of the IgH locus. This deamination results in DSB, causing the recombination of the gene. Transcription of the IgH gene produces a long non-coding RNA (lncRNA) with a constitutive first exon containing the variable antigen binding domain. Splicing to an alternative second exon is determined by the pattern of cytokines that the cell is exposed to. The intron lariat removed by this splicing is debranched and re-linearised by the enzyme DBR1 [@Zheng2015]. This intron lariat then forms an R-loop with the switch region of the IgH, resulting in ssDNA on the coding strand which becomes the substrate for AID. Zheng et al. showed that AID is able to bind specifically to G4 DNA and RNA, and that targeting of AID to the switch region is via binding to the debranched RNA lariat [@Zheng2015]. Furthermore, Ribeiro de Almeida et al. identified that resolution of G4s in the intron derived RNA is required for R-loop formation and CSR. This G4 unwinding was found to occur via the RNA Helicase DDX1 [@RibeirodeAlmeida2018].
 
@@ -347,20 +347,20 @@ V4dCI6Ikc0IGZvcm1hdGlvbiBtaWdodCBhY3QgYXMgYSBtb2xl
 Y3VsYXIgc3dpdGNoIiwic3RhcnQiOjQ4NzIzLCJlbmQiOjQ4Nz
 Y3fSwiVGZJS0ZBWTRqWUlrWUVQOCI6eyJ0ZXh0IjoiTW9ub2Nv
 dHMgYWxzbyBoYXZlIGhpZ2hlciBQRzQgY29udGVudCwiLCJzdG
-FydCI6NjI1NDgsImVuZCI6NjI1ODZ9LCJOaHRmQXRIUEpTalZQ
+FydCI6NjI1ODQsImVuZCI6NjI2MjJ9LCJOaHRmQXRIUEpTalZQ
 MzR3Ijp7InRleHQiOiJtaWdodCBiZSBzdGFibGUgYXQgdGhlIH
-RlbXBlcmF0dXJlIHJhbmdlcyIsInN0YXJ0Ijo2MzEyNSwiZW5k
-Ijo2MzE2Nn0sIkJFQWtpQmJ0OENGbjMyb3UiOnsidGV4dCI6Ik
-EgUEc0IG1vdGlmIiwic3RhcnQiOjY0NTU3LCJlbmQiOjY0NTY4
+RlbXBlcmF0dXJlIHJhbmdlcyIsInN0YXJ0Ijo2MzE2MSwiZW5k
+Ijo2MzIwMn0sIkJFQWtpQmJ0OENGbjMyb3UiOnsidGV4dCI6Ik
+EgUEc0IG1vdGlmIiwic3RhcnQiOjY0NTkzLCJlbmQiOjY0NjA0
 fSwicURJbmZUMnRpcHBRZTREMyI6eyJ0ZXh0IjoiQW5hbHlzaX
 MgYnkgTXVsbGVuIGV0IGFsLiBpZGVudGlmaWVkIHRoYXQgdGhl
 IGdyZWF0ZXN0IGVucmljaG1lbnQgb2YgdHdvIHRldHJhZOKApi
-IsInN0YXJ0Ijo2NTI5NSwiZW5kIjo2NjIxMH0sImdaUjlIUG03
+IsInN0YXJ0Ijo2NTMzMSwiZW5kIjo2NjI0Nn0sImdaUjlIUG03
 Z3Y1aEJjV28iOnsidGV4dCI6IiMjIFJvbGUgb2YgRy1RdWFkcn
-VwbGV4ZXMgKmluIHBsYW50YSoiLCJzdGFydCI6NjE5NDgsImVu
-ZCI6NjE5ODV9LCJvajQxNldaUDU5YzBpSFMwIjp7InRleHQiOi
-JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2NDc5MCwi
-ZW5kIjo2NDgxMH19LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
+VwbGV4ZXMgKmluIHBsYW50YSoiLCJzdGFydCI6NjE5ODQsImVu
+ZCI6NjIwMjF9LCJvajQxNldaUDU5YzBpSFMwIjp7InRleHQiOi
+JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2NDgyNiwi
+ZW5kIjo2NDg0Nn19LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
 l3VUtGIjp7ImRpc2N1c3Npb25JZCI6IlZjQ2dESlIyM1cwcUk3
 ZWUiLCJzdWIiOiIxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZX
 h0IjoiVG8gd2hhdCBleHRlbnQgaXMgYSBxdWFkcnVwbGV4IGEg
@@ -570,11 +570,11 @@ cyB5b3UgY291ZGwgc2F5IHNvbWV0aGluZyBsaWtlIFwiLCBvZi
 Bjb3Vyc2UgdGhpcyBkb2Vzbid0IGFkZHJlc3MgdGhlIHF1ZXN0
 aW9uIG9mIHdodGhlciB0aGVzZSBzZXF1ZW5jZXMgZm9ybSBHNH
 MgKmluIHZpdm8qXCIiLCJjcmVhdGVkIjoxNTMyNDQ5NjQ5MTk0
-fX0sImhpc3RvcnkiOlstMTM0MTg0NDA4OSwxOTI2MzY2MDMzLD
-YxNDc3NDQ1MCw1NzY2NzAzNzksMjEzMTgxNjQ2Nyw5MjMyMDQy
-NzQsMTU0ODc5NDk4MSw0OTc2Njg2NDMsMTU0Mzk4NzU1MSwtNz
-Q2NTQ4MjUwLC05NzI2NTk4ODQsLTE5MjM4MjI0OTYsLTE3NzU2
-Mjk0MjgsMTQ2NDM0MTg2Miw5NTk4MTQ4NjgsMTc2MzQzNDMxNC
-wtMTcxOTQ5MjIxNSwxNzIwNTcyNDg0LDIwNDk3ODkzMjAsLTE0
-MDAyOTk2NDhdfQ==
+fX0sImhpc3RvcnkiOlstMjIzMDY3MzQ2LDE5MjYzNjYwMzMsNj
+E0Nzc0NDUwLDU3NjY3MDM3OSwyMTMxODE2NDY3LDkyMzIwNDI3
+NCwxNTQ4Nzk0OTgxLDQ5NzY2ODY0MywxNTQzOTg3NTUxLC03ND
+Y1NDgyNTAsLTk3MjY1OTg4NCwtMTkyMzgyMjQ5NiwtMTc3NTYy
+OTQyOCwxNDY0MzQxODYyLDk1OTgxNDg2OCwxNzYzNDM0MzE0LC
+0xNzE5NDkyMjE1LDE3MjA1NzI0ODQsMjA0OTc4OTMyMCwtMTQw
+MDI5OTY0OF19
 -->
