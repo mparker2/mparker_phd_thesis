@@ -111,7 +111,7 @@ Plotting the distribution of the log of the %mm scores produced a bimodal distri
 
 \label{ssec:results_model_choice}
 
-Previously published G quadruplex prediction methods which utilise machine learning techniques have used derived features such as trinucleotide content to feed to models [@Garant2017; @Sahakyan2017]. These features result in the loss of some spatial information about the sequence, however. For example, the sequence `GGTGGTGGTGGGGGG` has the same trinucleotide composition as `GGGTGGGTGGGTGGG`, but is unlikely to have equivalent G4 forming propensity. Furthermore, Quadron derived features require input sequences to conform to the QuadParser regular expression [@Huppert2005], meaning that Quadron is only able to improve the precision of the QuadParser method, and not the recall. We opted for a neural network involving convolutional layers (those often used for image classification) that could make predictions directly from the sequence itself, without any derived features whatsoever. This allows us to make no assumptions about potential G4 patterns in the dataset. The overall architecture selected was a convolutional-recurrent neural network (Fig. \ref{architecture}), which has previously been used to identify regulatory motifs in DNA [@Quang2016]. The first layers of the architecture consists of two one dimensional convolutional layers with a kernel size of 3. Convolutional layers contain a number of separate filters which are convolved over the data to generate an output function. The numbers (or weights) in these filters are determined by training. Each filter captures different local features in the sequence.  A maximum pooling layer then reduces the size of the output feature space by half. These features are then fed to a bidirectional Long Short Term Memory (LSTM) layer, which is able to learn and recognise long distance relationships between features in the sequence. The model outputs a single value between zero and one of the probability of G4 formation. The dataset was split into three for training and testing: 1332565 sequences (~80%) were used for training, 166571 (~10%) for in-training model validation, and 166576 (~10%) for post-training model testing.
+Previously published G quadruplex prediction methods which utilise machine learning techniques have used derived features such as trinucleotide content to feed to models [@Garant2017; @Sahakyan2017]. These features result in the loss of some spatial information about the sequence, however. For example, the sequence `GGTGGTGGTGGGGGG` has the same trinucleotide composition as `GGGTGGGTGGGTGGG`, but is unlikely to have equivalent G4 forming propensity. Furthermore, Quadron derived features require input sequences to conform to the QuadParser regular expression [@Huppert2005], meaning that Quadron is only able to improve the precision of the QuadParser method, and not the recall. We opted for a neural network involving convolutional layers (those often used for image classification) that could make predictions directly from the sequence itself, without any derived features whatsoever. This allows us to make no assumptions about potential G4 patterns in the dataset. The overall architecture selected was a convolutional-recurrent neural network (Fig. \ref{architecture}), which has previously been used to identify regulatory motifs in DNA [@Quang2016]. The first layers of the architecture consists of two one dimensional convolutional layers with a kernel size of 3. Convolutional layers contain a number of separate filters which are convolved over the data to generate an output function. The numbers (or weights) in these filters are determined by training. Each filter captures different local features in the sequence.  A maximum pooling layer then reduces the size of the output feature space by half. These features are then fed to a bidirectional Long Short Term Memory (LSTM) layer. LS which is able to learn and recognise long distance relationships between features in the sequence. The model outputs a single value between zero and one of the probability of G4 formation. The dataset was split into three for training and testing: 1332565 sequences (~80%) were used for training, 166571 (~10%) for in-training model validation, and 166576 (~10%) for post-training model testing.
 
 \newpage
 
@@ -295,56 +295,56 @@ IGFuZCB0cmFpbmluZyIsInN0YXJ0IjoyNDM2NSwiZW5kIjoyND
 M5M30sImwwY0d3Qk8yemZ3ZW9HV3kiOnsidGV4dCI6IldlIGZv
 dW5kIHRoYXQgbmVpdGhlciBHNEh1bnRlciBbQEJlZHJhdDIwMT
 ZdIG5vciB0aGUgRzRSTkEtbGlrZSBtZXRob2QgcGVyZm9ybWXi
-gKYiLCJzdGFydCI6Mjc5OTEsImVuZCI6MjgxOTF9LCIzU2tTRE
+gKYiLCJzdGFydCI6Mjc5OTQsImVuZCI6MjgxOTR9LCIzU2tTRE
 JsbnY4VTk2TVI1Ijp7InRleHQiOiJTaW5jZSB0aGVzZSBzZXF1
 ZW5jZXMgb25seSBhY2NvdW50IGZvciBhIDI1JSBvZiBhbGwgdG
 hlIHBvdGVudGlhbCBQRzQgZm9ybWluZyBz4oCmIiwic3RhcnQi
-OjI5NTQ2LCJlbmQiOjI5NjM4fSwiY1hoUlZ1N1NZeUs2bzlXZS
+OjI5NTQ5LCJlbmQiOjI5NjQxfSwiY1hoUlZ1N1NZeUs2bzlXZS
 I6eyJ0ZXh0IjoiRm9yIGVhY2ggQkc0IGludGVydmFsLCB0aGUg
 aGlnaGVzdCBzY29yaW5nIG92ZXJsYXBwaW5nIHByZWRpY3Rpb2
-4gZm9yIGVhY2ggbW9kZeKApiIsInN0YXJ0IjozMTY3NywiZW5k
-IjozMTc3M30sIk9kZGxvRzhkeEQzUEZ0NXYiOnsidGV4dCI6Il
+4gZm9yIGVhY2ggbW9kZeKApiIsInN0YXJ0IjozMTY4MCwiZW5k
+IjozMTc3Nn0sIk9kZGxvRzhkeEQzUEZ0NXYiOnsidGV4dCI6Il
 RoZXNlIHJlc3VsdHMgc3VnZ2VzdCB0aGF0IHRoZSBpbmZvcm1h
 dGlvbiB3aXRoaW4gdGhlIEc0U2VxIGRhdGFzZXQsIHdoZW4gY2
-FwdHXigKYiLCJzdGFydCI6MzIyNzUsImVuZCI6MzI0MjR9LCJW
+FwdHXigKYiLCJzdGFydCI6MzIyNzgsImVuZCI6MzI0Mjd9LCJW
 TnppS2tXbUg4V3M4ejNhIjp7InRleHQiOiJUaGVzZSByZXN1bH
 RzIHN1Z2dlc3QgdGhhdCB0aGUgaW5mb3JtYXRpb24gd2l0aGlu
 IHRoZSBHNFNlcSBkYXRhc2V0LCB3aGVuIGNhcHR14oCmIiwic3
-RhcnQiOjMyMjc1LCJlbmQiOjMyNDI0fSwiYVk4bkJJVlBHa0xR
+RhcnQiOjMyMjc4LCJlbmQiOjMyNDI3fSwiYVk4bkJJVlBHa0xR
 VHJlUyI6eyJ0ZXh0IjoiUmVjZWl2ZXIgT3BlcmF0b3IgQ2hhcm
 FjdGVyaXN0aWMgKFJPQykgY3VydmUgc2hvd2luZyB0aGUgcGVy
-Zm9ybWFuY2Ugb2YgRzRTZWVxZeKApiIsInN0YXJ0IjozMjQ5Ni
-wiZW5kIjozMjcwNn0sIkF3VWV3TXJXRkhLSE9SRm0iOnsidGV4
+Zm9ybWFuY2Ugb2YgRzRTZWVxZeKApiIsInN0YXJ0IjozMjQ5OS
+wiZW5kIjozMjcwOX0sIkF3VWV3TXJXRkhLSE9SRm0iOnsidGV4
 dCI6InJHNFNlZXFlciwgRzRTZWVxZXIgYW5kIHRoZSBHNFJOQS
-IsInN0YXJ0IjozNzAyMiwiZW5kIjozNzA1NX0sIm92eVY0dTNN
+IsInN0YXJ0IjozNzAyNSwiZW5kIjozNzA1OH0sIm92eVY0dTNN
 OFdPN0JHVm4iOnsidGV4dCI6Im5ldXJhbCBuZXR3b3JrIiwic3
-RhcnQiOjM3NDA0LCJlbmQiOjM3NDE4fSwiOU90MUdXV1dlMFZ5
+RhcnQiOjM3NDA3LCJlbmQiOjM3NDIxfSwiOU90MUdXV1dlMFZ5
 QnQ0diI6eyJ0ZXh0IjoiV2UgaWRlbnRpZmllZCBQRzQgc2VxdW
 VuY2VzIHNjb3JpbmcgbW9yZSB0aGFuIDAuOSBmb3Igd2hpY2gg
-YSBzaW5nbGUgRy0+SCBjaGFuZ+KApiIsInN0YXJ0IjozOTE5MS
-wiZW5kIjozOTQwMH0sImRza3FTazl4WEVDUWh0TmgiOnsidGV4
+YSBzaW5nbGUgRy0+SCBjaGFuZ+KApiIsInN0YXJ0IjozOTE5NC
+wiZW5kIjozOTQwM30sImRza3FTazl4WEVDUWh0TmgiOnsidGV4
 dCI6IlRoaXMgY291bGQgYmUgZHVlIHRvIGEgcmVkdWN0aW9uIG
 luIEc0IHN0YWJpbGl0eSB3aXRoIGxvb3AgbGVuZ3RoLCBidXQg
-Y291bGQgZXHigKYiLCJzdGFydCI6NDA5NDIsImVuZCI6NDExMz
-h9LCJncnNsQkZCMkZhNGlYakdmIjp7InRleHQiOiJBZ2Fpbiwg
+Y291bGQgZXHigKYiLCJzdGFydCI6NDA5NDUsImVuZCI6NDExND
+F9LCJncnNsQkZCMkZhNGlYakdmIjp7InRleHQiOiJBZ2Fpbiwg
 ZGlzdGFuY2Ugd2FzIGZvdW5kIHRvIGNvcnJlbGF0ZSBuZWdhdG
 l2ZWx5IHdpdGggJW1tIHNjb3JlIChTcGVhcm1hbnMgcmhv4oCm
-Iiwic3RhcnQiOjQyOTQ2LCJlbmQiOjQzMTI5fSwib2NYNmkxeW
+Iiwic3RhcnQiOjQyOTQ5LCJlbmQiOjQzMTMyfSwib2NYNmkxeW
 RiVGR1elJEcSI6eyJ0ZXh0Ijoib3hwbG90IHNob3dpbmcgdGhl
 IHJlbGF0aW9uc2hpcCBiZXR3ZWVuICVtbSBzY29yZSBhbmQgZG
 lzdGFuY2UgdG8gbmV4dCBHLWhhaXJwaeKApiIsInN0YXJ0Ijo0
-MzYzNiwiZW5kIjo0Mzg5NH0sInVtS2xGbmc4M1VYZWl2WnUiOn
+MzYzOSwiZW5kIjo0Mzg5N30sInVtS2xGbmc4M1VYZWl2WnUiOn
 sidGV4dCI6IlRoZSBQRzQgc3BhY2Ugb2YgdGhlICpNLiBtdXNj
 dWx1cyogZ2Vub21lIHdhcyBhbHNvIG1lYXN1cmVkLCBhbmQgZm
-91bmQgdG8gY29udGHigKYiLCJzdGFydCI6NTA1NDYsImVuZCI6
-NTA3NDB9LCJjUWRSbmZyVVpscUtWYlJuIjp7InRleHQiOiIyRC
+91bmQgdG8gY29udGHigKYiLCJzdGFydCI6NTA1NDksImVuZCI6
+NTA3NDN9LCJjUWRSbmZyVVpscUtWYlJuIjp7InRleHQiOiIyRC
 BLZXJuZWwgZGVuc2l0eSBlc3RpbWF0ZSBwbG90IHNob3dpbmcg
 ZGlzdHJpYnV0aW9uIG9mIGFsbCBwb3NzaWJsZSAgdGV0cmFkIF
-F14oCmIiwic3RhcnQiOjUyMDQ3LCJlbmQiOjUyMzE0fSwiaXlk
+F14oCmIiwic3RhcnQiOjUyMDUwLCJlbmQiOjUyMzE3fSwiaXlk
 MWE3SlE1c1lXaWZpdSI6eyJ0ZXh0IjoiSXQgaXMgYWJsZSB0by
 Bwcm9jZXNzIHRoZSB3aG9sZSBodW1hbiBnZW5vbWUgaW4gYXBw
 cm94aW1hdGVseSAxIGhvdXIgb24gYSA4IGNvcuKApiIsInN0YX
-J0Ijo1Mjg4NiwiZW5kIjo1MzAwMX19LCJjb21tZW50cyI6eyI2
+J0Ijo1Mjg4OSwiZW5kIjo1MzAwNH19LCJjb21tZW50cyI6eyI2
 bHhaYmRLMEE1ejhxWnhrIjp7ImRpc2N1c3Npb25JZCI6Ikd1a2
 gzcmpjeHd1aFdIdGkiLCJzdWIiOiIxMDIyMDU3OTcyNzY5NDEw
 MTA2NzciLCJ0ZXh0IjoiSG93IG1hbnkgZmFsc2UgcG9zaXRpdm
@@ -556,7 +556,7 @@ NyZWF0ZWQiOjE1MzMxNDM5Mjk5MTR9LCJYU3dVZENEdks3VEVV
 bjJIIjp7ImRpc2N1c3Npb25JZCI6IkI2YndIS0NUSzRmV0hLeV
 oiLCJzdWIiOiIxMDg1MjAwMjkzMDIyOTQ2NTA0MTciLCJ0ZXh0
 IjoiYmV0dGVyPyIsImNyZWF0ZWQiOjE1MzMxNDQwNDM4ODd9fS
-wiaGlzdG9yeSI6WzI1MTQ1MDI4MiwxNDY0NjI0OTIsLTE2ODUz
+wiaGlzdG9yeSI6Wzg0ODQyNjAxMSwxNDY0NjI0OTIsLTE2ODUz
 MTk3MzEsLTE0NzA3NjMyMDIsLTE1NTc0MjIwNDIsMTY4MTk4ND
 M4MSw1MTU1MDcwNjksLTQ4NDE3MDQwOSwxNDUxNTk3NTksMTA2
 MjgyMDI5OSwyNTYwMTc1MjksMTA2MjgyMDI5OSwtNjE3OTc5Nz
