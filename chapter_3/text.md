@@ -7,7 +7,7 @@ Because of the dependence of G4 structure largely on sequence information, it is
 
 More recently there has been a large increase in the number of available methods for predicting G4s [@Bedrat2016; @Hon2017; @Garant2017; @Sahakyan2017]. The contribution from Bedrat et al., named G4Hunter, is a scoring method based on a run length encoding the input sequence. Runs of Gs score positively whilst runs of Cs score negatively. It can be used with a sliding window approach to score an entire genome, with thresholding to identify high scoring PG4s. Whilst this approach is much more tolerant of imperfections which violate the Quadparser method, it is arguably too tolerant, producing many false positives. Furthermore, it does not take into account flanking A and T sequences which may contribute to the stability of the G4, e.g. through reducing the favourability of double stranded DNA.
 
-Some middle ground is required to improve existing methods. The key to finding this middle ground may come from the fields of data science and machine learning. There is a current global interest in machine learning approaches, due to increases in computational power which allow larger datasets to be analysed. These techniques have been adopted by bioinformaticians for making global predictions of functional sequences such as splice sites or transcription factor binding motifs. For example, Mapleson et al. have developed a tool called `portcullis` which is able to filter out spurious splice sites caused by mapping errors from RNAseq data. This is done by training a random forest model on the fly using features derived from high and low confidence splice sites in the dataset. The trained model is then used to classify all other ambiguous splice sites in the dataset as either true or false positives [@Mapleson2017]. Neural networks have also been used to identify sequence motifs. Alipanahi et al. developed a convolutional neural network called `DeepBind` which they applied to identify transcription factor binding motifs and other regulatory sequences, using data from Protein binding microarrays (PBMs), SELEX or ChIP-seq for training [@Alipanahi2015]. Quang et al. were able to improve on this model by using a hybrid convolutional and recurrent neural network [@Quang2016]. This neural network architecture will be explained in detail in \autoref{ssec:methods_model}.
+Some middle ground is required to improve existing methods. The key to finding this middle ground may come from the fields of data science and machine learning. There is a current global interest in machine learning approaches, due to increases in computational power which allow larger datasets to be analysed. These techniques have been adopted by bioinformaticians for making global predictions of functional sequences such as splice sites or transcription factor binding motifs. For example, Mapleson et al. have developed a tool called `portcullis` which is able to filter out spurious splice sites caused by mapping errors from RNAseq data. This is done by training a random forest model on the fly using features derived from high and low confidence splice sites in the dataset. The trained model is then used to classify all other ambiguous splice sites in the dataset as either true or false positives [@Mapleson2017]. Neural networks have also been used to identify sequence motifs. Alipanahi et al. developed a convolutional neural network called `DeepBind` which they applied to identify transcription factor binding motifs and other regulatory sequences, using data from Protein binding microarrays (PBMs), SELEX or ChIP-seq for training [@Alipanahi2015]. Quang et al. were able to improve on this model by using a hybrid convolutional and recurrent neural network [@Quang2016]. This neural network architecture will be explained in detail in \autoref{ssec:results_model_choice}.
 
 Machine Learning approaches have already been brought to bear on the problem of G4 prediction. For example, Garant et al. developed G4RNA screener, a densely connected neural network which is trained on the trinucleotide contents of input sequences [@Garant2017]. This model was trained by using a set of melting temperatures of RNA G4s obtained from a literature search. Currently this database contains only 368 sequences, however. Given the almost inconceivable number of potential G4 forming sequences (there are more than $10^{12}$ sequences which could match the original Quadparser pattern, not including flanking sequences), it is probable that this dataset does not capture all of the variety of possible RNA G4 forming sequences. To do this, a more high throughput method for measuring G4 forming propensity is required.
 
@@ -36,7 +36,6 @@ Intervals files and corresponding mismatch scores were read into Python using `p
 Since positive training examples were outweighed by negative ones in this dataset by a factor of 10:1, random under-sampling of negative examples was conducted using `imblanced-learn` to attain a ratio of 2:1 [@Lemaitre2001]. This filtered dataset was shuffled and written to disk in bed format, and `bedtools getfasta` was used to extract sequences for each interval from hg19 [@Quinlan2010]. Sequences were then one hot encoded, i.e. represented as binary matrices of size 128x4, and loaded into HDF5 format for training using `h5py` [@Collette2013]. For training of models on trinucleotide content, trinucleotide content statistics were extracted and loaded into HDF5 format.
 
 ### Model Training and Validation
-
 
 All models were trained in Python using `Keras` with `TensorFlow` backend [@Chollet2018; @Abadi2016]. The trinucleotide Multi-Layer Perceptron (MLP) model contained three hidden layers with 16 units per layer. These were trained using the ADAM optimiser and binary crossentropy loss function, with a dropout rate of 0.2 on all layers. The convolutional portion of G4Seeqer was made up of two convolutional layers with 8 filters and kernel size of 3 and ReLu activation, followed by a maximum pooling layer with step size of 2. This was connected to a bidirectional Long Short Term Memory layer with 8 units and Tanh activation. The final hidden layer was a fully connected layer with 16 units, ReLu activation and a dropout rate of 0.5. G4Seeqer was trained using the RMSprop optimiser and binary crossentropy loss function.
 
@@ -109,6 +108,8 @@ Plotting the distribution of the log of the %mm scores produced a bimodal distri
 \newpage
 
 ### Model selection and training
+
+\label{ssec:results_model_choice}
 
 Previously published G quadruplex prediction methods which utilise machine learning techniques have used derived features such as trinucleotide content to feed to models [@Garant2017; @Sahakyan2017]. These features result in the loss of some spatial information about the sequence, however. For example, the sequence `GGTGGTGGTGGGGGG` has the same trinucleotide composition as `GGGTGGGTGGGTGGG`, but is unlikely to have equivalent G4 forming propensity. Furthermore, Quadron derived features require input sequences to conform to the QuadParser regular expression [@Huppert2005], meaning that Quadron is only able to improve the precision of the QuadParser method, and not the recall. We opted for a neural network involving convolutional layers (those often used for image classification) that could make predictions directly from the sequence itself, without any derived features whatsoever. This allows us to make no assumptions about potential G4 patterns in the dataset. The overall architecture selected was a convolutional-recurrent neural network (Fig. \ref{architecture}), which has previously been used to identify regulatory motifs in DNA [@Quang2016]. The architecture consists of two one dimensional convolutional layers with a kernel size of 3, to capture local features in the sequence. A maximum pooling layer then reduces the size of the feature space by half. These features are then fed to a bidirectional Long Short Term Memory (LSTM) layer, which is able to learn and recognise long distance relationships between features in the sequence. The model outputs a single value between zero and one of the probability of G4 formation. The dataset was split into three for training and testing: 1332565 sequences (~80%) were used for training, 166571 (~10%) for in-training model validation, and 166576 (~10%) for post-training model testing.
 
@@ -239,111 +240,111 @@ RleHQiOiJwcm9kdWNpbmcgbWFueSBmYWxzZSBwb3NpdGl2ZXMi
 LCJzdGFydCI6MTU2MCwiZW5kIjoxNTkwfSwiV0RDM1lpQXdsak
 VxVERkVyI6eyJ0ZXh0IjoiaG93ZXZlciBhIGNvbnZvbHV0aW9u
 YWwgYW5kIHJlY3VycmVudCBuZXVyYWwgbmV0d29yayIsInN0YX
-J0Ijo2MDE5LCJlbmQiOjYwNzF9LCJtanZjN1ZHRUg3MTc3VG5t
+J0Ijo2MDI2LCJlbmQiOjYwNzh9LCJtanZjN1ZHRUg3MTc3VG5t
 Ijp7InRleHQiOiJUaGUgY29udm9sdXRpb25hbCBwb3J0aW9uIG
 9mIEc0U2VlcWVyIHdhcyBtYWRlIHVwIG9mIHR3byBjb252b2x1
-dGlvbmFsIGxheWVycyB34oCmIiwic3RhcnQiOjk4NzAsImVuZC
-I6MTAxNjJ9LCJ1MGxIYjc5V2FuSGdMUkxuIjp7InRleHQiOiJN
-TFAiLCJzdGFydCI6MTA3MTAsImVuZCI6MTA3MTB9LCJyOFZpZU
+dGlvbmFsIGxheWVycyB34oCmIiwic3RhcnQiOjk4NzYsImVuZC
+I6MTAxNjh9LCJ1MGxIYjc5V2FuSGdMUkxuIjp7InRleHQiOiJN
+TFAiLCJzdGFydCI6MTA3MTYsImVuZCI6MTA3MTZ9LCJyOFZpZU
 83Z1BDOXVITWIwIjp7InRleHQiOiJpbnRlcnZhbCBwZXIiLCJz
-dGFydCI6MTIzODAsImVuZCI6MTIzOTJ9LCJpWUZpeFpPZjBiS3
+dGFydCI6MTIzODYsImVuZCI6MTIzOTh9LCJpWUZpeFpPZjBiS3
 JyUmROIjp7InRleHQiOiJPZiB0aGUgMzM4MyBpZGVudGlmaWVk
 IFJOQSBHNHMgaW4gdGhlIHJHNHNlcSBkYXRhc2V0LCAyODExIC
-g4MyUpIG92ZXJsYXBwZWQgd2l04oCmIiwic3RhcnQiOjEzMzAx
-LCJlbmQiOjEzMzk5fSwiQmhuTzVPMFBweUpSRkVzRSI6eyJ0ZX
-h0Ijoib25lIGhvdCBlbmNvZGVkIiwic3RhcnQiOjkyMzMsImVu
-ZCI6OTI0OH0sIlNCUGZOb0V0S3ljQXBMYkYiOnsidGV4dCI6Im
+g4MyUpIG92ZXJsYXBwZWQgd2l04oCmIiwic3RhcnQiOjEzMzA3
+LCJlbmQiOjEzNDA1fSwiQmhuTzVPMFBweUpSRkVzRSI6eyJ0ZX
+h0Ijoib25lIGhvdCBlbmNvZGVkIiwic3RhcnQiOjkyNDAsImVu
+ZCI6OTI1NX0sIlNCUGZOb0V0S3ljQXBMYkYiOnsidGV4dCI6Im
 FwcGxpZWQgdG8gaHVtYW4gcHJvbW90ZXIgcmVnaW9ucyBmcm9t
 IHRoZSBFTlNFTUJMIHJlZ3VsYXRvcnkgYnVpbGQiLCJzdGFydC
-I6MTUyMTYsImVuZCI6MTUzMDV9LCJvb1Y3R3BhMWkxR3VGYnly
+I6MTUyMjIsImVuZCI6MTUzMTF9LCJvb1Y3R3BhMWkxR3VGYnly
 Ijp7InRleHQiOiJQeXRob24gc2NyaXB0cy4iLCJzdGFydCI6MT
-Y0NTksImVuZCI6MTY0NjB9LCJSTnJaMk1USVlvTlZYYm96Ijp7
+Y0NjUsImVuZCI6MTY0NjZ9LCJSTnJaMk1USVlvTlZYYm96Ijp7
 InRleHQiOiJwYWRkZWQgdXNpbmcgcmFuZG9tbHkgZ2VuZXJhdG
-VkIHNlcXVlbmNlcyB0byAxMjhicCIsInN0YXJ0IjoxNzI3MSwi
-ZW5kIjoxNzMyMH0sIlBxUGJ5TTg5WHNnRnoxalUiOnsidGV4dC
+VkIHNlcXVlbmNlcyB0byAxMjhicCIsInN0YXJ0IjoxNzI3Nywi
+ZW5kIjoxNzMyNn0sIlBxUGJ5TTg5WHNnRnoxalUiOnsidGV4dC
 I6IkVycm9yYmFycyBhcmUgNjglIGNvbmZpZGVuY2UgaW50ZXJ2
-YWxzLiIsInN0YXJ0IjoxNzU5NiwiZW5kIjoxNzcyNn0sImJMUG
+YWxzLiIsInN0YXJ0IjoxNzYwMiwiZW5kIjoxNzczMn0sImJMUG
 JNd3lzWXpXT1dlTGoiOnsidGV4dCI6IjUwMDAgcmFuZG9tbHkg
-Z2VuZXJhdGVkIHNlcXVlbmNlcy4iLCJzdGFydCI6MTc5NTgsIm
-VuZCI6MTc5OTJ9LCJCNmJ3SEtDVEs0ZldIS3laIjp7InRleHQi
+Z2VuZXJhdGVkIHNlcXVlbmNlcy4iLCJzdGFydCI6MTc5NjQsIm
+VuZCI6MTc5OTh9LCJCNmJ3SEtDVEs0ZldIS3laIjp7InRleHQi
 OiJycyBhcmUgNjglIGNvbmZpZGVuY2UgaW50ZXJ2YWxzIFsiLC
-JzdGFydCI6MTgzNTgsImVuZCI6MTg1NDR9LCJuTjFvN3BMeFM5
+JzdGFydCI6MTgzNjQsImVuZCI6MTg1NTB9LCJuTjFvN3BMeFM5
 aktEM0tyIjp7InRleHQiOiJHLXJlZ2lzdGVyIHdhcyBjb3VudG
-VkIiwic3RhcnQiOjE4ODY2LCJlbmQiOjE4ODg4fSwidXUwclJW
+VkIiwic3RhcnQiOjE4ODcyLCJlbmQiOjE4ODk0fSwidXUwclJW
 N2sxcE5Tb1lzRiI6eyJ0ZXh0IjoiSW5zdGVhZCB3ZSBkZWNpZG
 VkIHRvIHVzZSBhbiBleGlzdGluZyBtZXRob2QsIHRoZSBHNGh1
 bnRlciBhbGdvcml0aG0gcHJvcG9zZWQgYuKApiIsInN0YXJ0Ij
-oyMDM2OCwiZW5kIjoyMDYwNn0sInh6U1pLMDBBcUpUMXNCVHoi
+oyMDM3NCwiZW5kIjoyMDYxMn0sInh6U1pLMDBBcUpUMXNCVHoi
 OnsidGV4dCI6IlNpbmNlIHdlIHdpc2hlZCB0byBtYWtlIGFzIG
 ZldyBhc3N1bXB0aW9ucyBhcyBwb3NzaWJsZSwgYW5kIGdpdmVu
-IHRoYXQgdGhlIEc0c2XigKYiLCJzdGFydCI6MjExMTksImVuZC
-I6MjEzMTF9LCJCcG1sUkdhbHdLR3JQU2doIjp7InRleHQiOiJ0
+IHRoYXQgdGhlIEc0c2XigKYiLCJzdGFydCI6MjExMjUsImVuZC
+I6MjEzMTd9LCJCcG1sUkdhbHdLR3JQU2doIjp7InRleHQiOiJ0
 IGFsc28gcHJvZHVjZWQgc2lnbmlmaWNhbnRseSBtb3JlIHNlcX
 VlbmNlcyB0aGF0IGRpZCBub3QgY29uZm9ybSB0byB0aGUgUXVh
-ZHBh4oCmIiwic3RhcnQiOjIxOTcxLCJlbmQiOjIyMTEwfSwiQU
+ZHBh4oCmIiwic3RhcnQiOjIxOTc3LCJlbmQiOjIyMTE2fSwiQU
 lxbXN3RlZCenlEWEV4RiI6eyJ0ZXh0IjoiNiwyMzcsOTQzIiwi
-c3RhcnQiOjIyNjIyLCJlbmQiOjIyNjMxfSwiRGhCcWJSU25iNH
+c3RhcnQiOjIyNjI4LCJlbmQiOjIyNjM3fSwiRGhCcWJSU25iNH
 NmbjNYMiI6eyJ0ZXh0IjoiU2luY2UgbWFpbnRhaW5pbmcgc3Vj
 aCBhbiBpbWJhbGFuY2UgaW4gdGhlIHRyYWluaW5nIGRhdGEgd2
-91bGQgcHJvZHVjZSBhIHBvb3IgY+KApiIsInN0YXJ0IjoyMzYw
-NiwiZW5kIjoyMzc5M30sIlNYbE1TajN6NjhxU2xMRWEiOnsidG
+91bGQgcHJvZHVjZSBhIHBvb3IgY+KApiIsInN0YXJ0IjoyMzYx
+MiwiZW5kIjoyMzc5OX0sIlNYbE1TajN6NjhxU2xMRWEiOnsidG
 V4dCI6Ik9yYW5nZSBsaW5lIHNob3dzIGxvd2VzcyBjdXJ2ZSBm
-aXQuIiwic3RhcnQiOjI0MjUzLCJlbmQiOjI0Mjg4fSwiZGdLVT
+aXQuIiwic3RhcnQiOjI0MjU5LCJlbmQiOjI0Mjk0fSwiZGdLVT
 lld2dKWmZKaXNoWSI6eyJ0ZXh0IjoiTW9kZWwgc2VsZWN0aW9u
-IGFuZCB0cmFpbmluZyIsInN0YXJ0IjoyNDM1OSwiZW5kIjoyND
-M4N30sImwwY0d3Qk8yemZ3ZW9HV3kiOnsidGV4dCI6IldlIGZv
+IGFuZCB0cmFpbmluZyIsInN0YXJ0IjoyNDM2NSwiZW5kIjoyND
+M5M30sImwwY0d3Qk8yemZ3ZW9HV3kiOnsidGV4dCI6IldlIGZv
 dW5kIHRoYXQgbmVpdGhlciBHNEh1bnRlciBbQEJlZHJhdDIwMT
 ZdIG5vciB0aGUgRzRSTkEtbGlrZSBtZXRob2QgcGVyZm9ybWXi
-gKYiLCJzdGFydCI6Mjc3MDgsImVuZCI6Mjc5MDh9LCIzU2tTRE
+gKYiLCJzdGFydCI6Mjc3NDksImVuZCI6Mjc5NDl9LCIzU2tTRE
 JsbnY4VTk2TVI1Ijp7InRleHQiOiJTaW5jZSB0aGVzZSBzZXF1
 ZW5jZXMgb25seSBhY2NvdW50IGZvciBhIDI1JSBvZiBhbGwgdG
 hlIHBvdGVudGlhbCBQRzQgZm9ybWluZyBz4oCmIiwic3RhcnQi
-OjI5MjYzLCJlbmQiOjI5MzU1fSwiY1hoUlZ1N1NZeUs2bzlXZS
+OjI5MzA0LCJlbmQiOjI5Mzk2fSwiY1hoUlZ1N1NZeUs2bzlXZS
 I6eyJ0ZXh0IjoiRm9yIGVhY2ggQkc0IGludGVydmFsLCB0aGUg
 aGlnaGVzdCBzY29yaW5nIG92ZXJsYXBwaW5nIHByZWRpY3Rpb2
-4gZm9yIGVhY2ggbW9kZeKApiIsInN0YXJ0IjozMTM5NCwiZW5k
-IjozMTQ5MH0sIk9kZGxvRzhkeEQzUEZ0NXYiOnsidGV4dCI6Il
+4gZm9yIGVhY2ggbW9kZeKApiIsInN0YXJ0IjozMTQzNSwiZW5k
+IjozMTUzMX0sIk9kZGxvRzhkeEQzUEZ0NXYiOnsidGV4dCI6Il
 RoZXNlIHJlc3VsdHMgc3VnZ2VzdCB0aGF0IHRoZSBpbmZvcm1h
 dGlvbiB3aXRoaW4gdGhlIEc0U2VxIGRhdGFzZXQsIHdoZW4gY2
-FwdHXigKYiLCJzdGFydCI6MzE5OTIsImVuZCI6MzIxNDF9LCJW
+FwdHXigKYiLCJzdGFydCI6MzIwMzMsImVuZCI6MzIxODJ9LCJW
 TnppS2tXbUg4V3M4ejNhIjp7InRleHQiOiJUaGVzZSByZXN1bH
 RzIHN1Z2dlc3QgdGhhdCB0aGUgaW5mb3JtYXRpb24gd2l0aGlu
 IHRoZSBHNFNlcSBkYXRhc2V0LCB3aGVuIGNhcHR14oCmIiwic3
-RhcnQiOjMxOTkyLCJlbmQiOjMyMTQxfSwiYVk4bkJJVlBHa0xR
+RhcnQiOjMyMDMzLCJlbmQiOjMyMTgyfSwiYVk4bkJJVlBHa0xR
 VHJlUyI6eyJ0ZXh0IjoiUmVjZWl2ZXIgT3BlcmF0b3IgQ2hhcm
 FjdGVyaXN0aWMgKFJPQykgY3VydmUgc2hvd2luZyB0aGUgcGVy
-Zm9ybWFuY2Ugb2YgRzRTZWVxZeKApiIsInN0YXJ0IjozMjIxMy
-wiZW5kIjozMjQyM30sIkF3VWV3TXJXRkhLSE9SRm0iOnsidGV4
+Zm9ybWFuY2Ugb2YgRzRTZWVxZeKApiIsInN0YXJ0IjozMjI1NC
+wiZW5kIjozMjQ2NH0sIkF3VWV3TXJXRkhLSE9SRm0iOnsidGV4
 dCI6InJHNFNlZXFlciwgRzRTZWVxZXIgYW5kIHRoZSBHNFJOQS
-IsInN0YXJ0IjozNjczOSwiZW5kIjozNjc3Mn0sIm92eVY0dTNN
+IsInN0YXJ0IjozNjc4MCwiZW5kIjozNjgxM30sIm92eVY0dTNN
 OFdPN0JHVm4iOnsidGV4dCI6Im5ldXJhbCBuZXR3b3JrIiwic3
-RhcnQiOjM3MTIxLCJlbmQiOjM3MTM1fSwiOU90MUdXV1dlMFZ5
+RhcnQiOjM3MTYyLCJlbmQiOjM3MTc2fSwiOU90MUdXV1dlMFZ5
 QnQ0diI6eyJ0ZXh0IjoiV2UgaWRlbnRpZmllZCBQRzQgc2VxdW
 VuY2VzIHNjb3JpbmcgbW9yZSB0aGFuIDAuOSBmb3Igd2hpY2gg
-YSBzaW5nbGUgRy0+SCBjaGFuZ+KApiIsInN0YXJ0IjozODkwOC
-wiZW5kIjozOTExN30sImRza3FTazl4WEVDUWh0TmgiOnsidGV4
+YSBzaW5nbGUgRy0+SCBjaGFuZ+KApiIsInN0YXJ0IjozODk0OS
+wiZW5kIjozOTE1OH0sImRza3FTazl4WEVDUWh0TmgiOnsidGV4
 dCI6IlRoaXMgY291bGQgYmUgZHVlIHRvIGEgcmVkdWN0aW9uIG
 luIEc0IHN0YWJpbGl0eSB3aXRoIGxvb3AgbGVuZ3RoLCBidXQg
-Y291bGQgZXHigKYiLCJzdGFydCI6NDA2NTksImVuZCI6NDA4NT
-V9LCJncnNsQkZCMkZhNGlYakdmIjp7InRleHQiOiJBZ2Fpbiwg
+Y291bGQgZXHigKYiLCJzdGFydCI6NDA3MDAsImVuZCI6NDA4OT
+Z9LCJncnNsQkZCMkZhNGlYakdmIjp7InRleHQiOiJBZ2Fpbiwg
 ZGlzdGFuY2Ugd2FzIGZvdW5kIHRvIGNvcnJlbGF0ZSBuZWdhdG
 l2ZWx5IHdpdGggJW1tIHNjb3JlIChTcGVhcm1hbnMgcmhv4oCm
-Iiwic3RhcnQiOjQyNjYzLCJlbmQiOjQyODQ2fSwib2NYNmkxeW
+Iiwic3RhcnQiOjQyNzA0LCJlbmQiOjQyODg3fSwib2NYNmkxeW
 RiVGR1elJEcSI6eyJ0ZXh0Ijoib3hwbG90IHNob3dpbmcgdGhl
 IHJlbGF0aW9uc2hpcCBiZXR3ZWVuICVtbSBzY29yZSBhbmQgZG
 lzdGFuY2UgdG8gbmV4dCBHLWhhaXJwaeKApiIsInN0YXJ0Ijo0
-MzM1MywiZW5kIjo0MzYxMX0sInVtS2xGbmc4M1VYZWl2WnUiOn
+MzM5NCwiZW5kIjo0MzY1Mn0sInVtS2xGbmc4M1VYZWl2WnUiOn
 sidGV4dCI6IlRoZSBQRzQgc3BhY2Ugb2YgdGhlICpNLiBtdXNj
 dWx1cyogZ2Vub21lIHdhcyBhbHNvIG1lYXN1cmVkLCBhbmQgZm
-91bmQgdG8gY29udGHigKYiLCJzdGFydCI6NTAyNjMsImVuZCI6
-NTA0NTd9LCJjUWRSbmZyVVpscUtWYlJuIjp7InRleHQiOiIyRC
+91bmQgdG8gY29udGHigKYiLCJzdGFydCI6NTAzMDQsImVuZCI6
+NTA0OTh9LCJjUWRSbmZyVVpscUtWYlJuIjp7InRleHQiOiIyRC
 BLZXJuZWwgZGVuc2l0eSBlc3RpbWF0ZSBwbG90IHNob3dpbmcg
 ZGlzdHJpYnV0aW9uIG9mIGFsbCBwb3NzaWJsZSAgdGV0cmFkIF
-F14oCmIiwic3RhcnQiOjUxNzY0LCJlbmQiOjUyMDMxfSwiaXlk
+F14oCmIiwic3RhcnQiOjUxODA1LCJlbmQiOjUyMDcyfSwiaXlk
 MWE3SlE1c1lXaWZpdSI6eyJ0ZXh0IjoiSXQgaXMgYWJsZSB0by
 Bwcm9jZXNzIHRoZSB3aG9sZSBodW1hbiBnZW5vbWUgaW4gYXBw
 cm94aW1hdGVseSAxIGhvdXIgb24gYSA4IGNvcuKApiIsInN0YX
-J0Ijo1MjYwMywiZW5kIjo1MjcxOH19LCJjb21tZW50cyI6eyI2
+J0Ijo1MjY0NCwiZW5kIjo1Mjc1OX19LCJjb21tZW50cyI6eyI2
 bHhaYmRLMEE1ejhxWnhrIjp7ImRpc2N1c3Npb25JZCI6Ikd1a2
 gzcmpjeHd1aFdIdGkiLCJzdWIiOiIxMDIyMDU3OTcyNzY5NDEw
 MTA2NzciLCJ0ZXh0IjoiSG93IG1hbnkgZmFsc2UgcG9zaXRpdm
@@ -555,7 +556,7 @@ NyZWF0ZWQiOjE1MzMxNDM5Mjk5MTR9LCJYU3dVZENEdks3VEVV
 bjJIIjp7ImRpc2N1c3Npb25JZCI6IkI2YndIS0NUSzRmV0hLeV
 oiLCJzdWIiOiIxMDg1MjAwMjkzMDIyOTQ2NTA0MTciLCJ0ZXh0
 IjoiYmV0dGVyPyIsImNyZWF0ZWQiOjE1MzMxNDQwNDM4ODd9fS
-wiaGlzdG9yeSI6WzExNTIzMjcwMDUsMTQ2NDYyNDkyLC0xNjg1
+wiaGlzdG9yeSI6WzEyMTQ5OTY4MDgsMTQ2NDYyNDkyLC0xNjg1
 MzE5NzMxLC0xNDcwNzYzMjAyLC0xNTU3NDIyMDQyLDE2ODE5OD
 QzODEsNTE1NTA3MDY5LC00ODQxNzA0MDksMTQ1MTU5NzU5LDEw
 NjI4MjAyOTksMjU2MDE3NTI5LDEwNjI4MjAyOTksLTYxNzk3OT
