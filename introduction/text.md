@@ -248,7 +248,7 @@ R loop formation has been identified as a key component of class switch recombin
 
 \label{ssec:plant_distribution}
 
-Whilst the majority of G4 studies have been performed in mammalian systems, particularly *H. sapiens*, there is a growing body of evidence for functions of G4s in plant species including *Arabidopsis thaliana*, *Zea mays*, and *Oryza sativa* [@Mullen2010; @Takahashi2012; @Andorf2014; @Wang2015; @Garg2016; @Yadov2017]. Monocotyledonous flowering plants such as *O. sativa* and *Z. mays* generally have higher GC content than dicotyledonous flowering plants and non-flowering plants [@Smarda2014]. Monocots also have higher PG4 content, presumably as a result of this [@Garg2016]. Three tetrad PG4 densities of plants tend to be lower than those of the well studied *H. sapiens* and *M. musculus*, however. *Arabidopsis thaliana*, the model plant, has a small genome and low PG4 density, with only 1200 three tetrad PG4s [@Mullen2010]. This represented a greater than two fold depletion of PG4s over what was expected in a windowed markov chain modelled genome [@Mullen2010]. Mullen et al. noted that Arabidopsis contains 43000 two tetrad PG4s, however, which they suggested might be stable at the temperature ranges that Arabidopsis lives at [@Mullen2010; @Mullen2012]. Garg et al. identified 1331 genes which have conserved two tetrad or greater PG4s in all dicot species tested, suggesting functional conservation of these motifs [@Garg2016]. Takahashi et al. analysed the plant species *O. sativa*, *P. trichocarpa*, *V. vinifera* and *A. thaliana*, and found an enrichment of PG4s at the TSS of genes, particularly on the template strand of the gene [@Takahashi2012].
+Whilst the majority of G4 studies have been performed in mammalian systems, particularly *H. sapiens*, there is a growing body of evidence for functions of G4s in plant species including *Arabidopsis thaliana*, *Zea mays*, and *Oryza sativa* [@Mullen2010; @Takahashi2012; @Andorf2014; @Wang2015; @Garg2016; @Yadav2017]. Monocotyledonous flowering plants such as *O. sativa* and *Z. mays* generally have higher GC content than dicotyledonous flowering plants and non-flowering plants [@Smarda2014]. Monocots also have higher PG4 content, presumably as a result of this [@Garg2016]. Three tetrad PG4 densities of plants tend to be lower than those of the well studied *H. sapiens* and *M. musculus*, however. *Arabidopsis thaliana*, the model plant, has a small genome and low PG4 density, with only 1200 three tetrad PG4s [@Mullen2010]. This represented a greater than two fold depletion of PG4s over what was expected in a windowed markov chain modelled genome [@Mullen2010]. Mullen et al. noted that Arabidopsis contains 43000 two tetrad PG4s, however, which they suggested might be stable at the temperature ranges that Arabidopsis lives at [@Mullen2010; @Mullen2012]. Garg et al. identified 1331 genes which have conserved two tetrad or greater PG4s in all dicot species tested, suggesting functional conservation of these motifs [@Garg2016]. Takahashi et al. analysed the plant species *O. sativa*, *P. trichocarpa*, *V. vinifera* and *A. thaliana*, and found an enrichment of PG4s at the TSS of genes, particularly on the template strand of the gene [@Takahashi2012].
 
 ### G Quadruplexes in Plant Telomeres
 
@@ -273,7 +273,7 @@ Given the evolutionarily ancient role of G4s in phloem development [@Cho2018], i
 
 \label{ssec:plant_stress}
 
-Analysis by Mullen et al. identified that the greatest enrichment of two tetrads in the Arabidopsis genome was inside genic regions, and that these PG4s might form in mRNA [@Mullen2010]. Furthermore, they demonstrated that many two tetrad PG4s are only strongly stable in high potassium concentrations, and postulated that these might act as molecular switches sensing environmental salt concentrations [@Mullen2012]. Since cellular potassium concentrations are increased from around 100mM to as much as 600mM during osmotic stresses (e.g. drought stress) [@Walker1996; @Hummel2010], they suggested that drought stress responsive genes could contain these molecular switches. Yadav et al. found that 16% of the Arabidopsis genome is drought responsive, and of these, 45% contain  Analysis of the *Z. mays* genome by Andorf et al. has shown that PG4s are indeed enriched in a number of gene ontology classes involved in stress response, including hypoxia response and nutrient deprivation responsive genes [@Andorf2014].
+Analysis by Mullen et al. identified that the greatest enrichment of two tetrads in the Arabidopsis genome was inside genic regions, and that these PG4s might form in mRNA [@Mullen2010]. Furthermore, they demonstrated that many two tetrad PG4s are only strongly stable in high potassium concentrations, and postulated that these might act as molecular switches sensing environmental salt concentrations [@Mullen2012]. Since cellular potassium concentrations are increased from around 100mM to as much as 600mM during osmotic stresses (e.g. drought stress) [@Walker1996; @Hummel2010], they suggested that drought stress responsive genes could contain these molecular switches. Yadav et al. found that 16% of the Arabidopsis genome is drought responsive, and of these, 45% contain PG4s [@Yadav2017] Analysis of the *Z. mays* genome by Andorf et al. has shown that PG4s are indeed enriched in a number of gene ontology classes involved in stress response, including hypoxia response and nutrient deprivation responsive genes [@Andorf2014].
 
 \newpage
 
@@ -363,7 +363,7 @@ EgUEc0IG1vdGlmIiwic3RhcnQiOjY3MDYwLCJlbmQiOjY3MDcx
 fSwicURJbmZUMnRpcHBRZTREMyI6eyJ0ZXh0IjoiQW5hbHlzaX
 MgYnkgTXVsbGVuIGV0IGFsLiBpZGVudGlmaWVkIHRoYXQgdGhl
 IGdyZWF0ZXN0IGVucmljaG1lbnQgb2YgdHdvIHRldHJhZOKApi
-IsInN0YXJ0Ijo2Nzg1MSwiZW5kIjo2ODg3MH0sImdaUjlIUG03
+IsInN0YXJ0Ijo2Nzg1MSwiZW5kIjo2ODg4N30sImdaUjlIUG03
 Z3Y1aEJjV28iOnsidGV4dCI6IiMjIFJvbGUgb2YgRy1RdWFkcn
 VwbGV4ZXMgKmluIHBsYW50YSoiLCJzdGFydCI6NjMzMTcsImVu
 ZCI6NjMzNTR9LCJvajQxNldaUDU5YzBpSFMwIjp7InRleHQiOi
@@ -578,7 +578,7 @@ cyB5b3UgY291ZGwgc2F5IHNvbWV0aGluZyBsaWtlIFwiLCBvZi
 Bjb3Vyc2UgdGhpcyBkb2Vzbid0IGFkZHJlc3MgdGhlIHF1ZXN0
 aW9uIG9mIHdodGhlciB0aGVzZSBzZXF1ZW5jZXMgZm9ybSBHNH
 MgKmluIHZpdm8qXCIiLCJjcmVhdGVkIjoxNTMyNDQ5NjQ5MTk0
-fX0sImhpc3RvcnkiOlstMTQ4MzE5NTcyNiwtMTQ4Mjk0NjIzMC
+fX0sImhpc3RvcnkiOlstMTgwOTA1ODMxNSwtMTQ4Mjk0NjIzMC
 wtMTE0ODcyNzMsLTQyNzIxNDQxMCw4MDAyNzYyMTMsMTgxOTMz
 Njg0NSwtMTI3NzU5NjUyMiwxNjM2OTc2MzE1LC0xMDQ5NjM1OD
 MxLDEyNzg4MTMyNTEsLTk4MTg0MjQ0NSwxNDI2NTI5MzAxLDE1
