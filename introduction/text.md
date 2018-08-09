@@ -250,7 +250,7 @@ R loop formation has been identified as a key component of class switch recombin
 
 Whilst the majority of G4 studies have been performed in mammalian systems, particularly *H. sapiens*, there is a growing body of evidence for functions of G4s in plant species including *Arabidopsis thaliana*, *Zea mays*, and *Oryza sativa* [@Mullen2010; @Andorf2014; @Wang2015; @Garg2016]. Monocotyledonous flowering plants such as *O. sativa* and *Z. mays* generally have higher GC content than dicotyledonous flowering plants and non-flowering plants [@Smarda2014]. Monocots also have higher PG4 content, presumably as a result of this [@Garg2016]. Three tetrad PG4 densities of plants tend to be lower than those of the well studied *H. sapiens* and *M. musculus*, however. *Arabidopsis thaliana*, the model plant, has a small genome and low PG4 density, with only 1200 three tetrad PG4s [@Mullen2010]. This represented a greater than two fold depletion of PG4s over what was expected in a windowed markov chain modelled genome [@Mullen2010]. Mullen et al. noted that Arabidopsis contains 43000 two tetrad PG4s, however, which they suggested might be stable at the temperature ranges that Arabidopsis lives at [@Mullen2010; @Mullen2012]. Garg et al. identified 1331 genes which have conserved two tetrad or greater PG4s in all dicot species tested, suggesting functional conservation of these motifs [@Garg2016].
 
-The  
+Arab
 
 ### Translational Regulation
 
@@ -357,16 +357,16 @@ FydCI6NjM5MTcsImVuZCI6NjM5NTV9LCJOaHRmQXRIUEpTalZQ
 MzR3Ijp7InRleHQiOiJtaWdodCBiZSBzdGFibGUgYXQgdGhlIH
 RlbXBlcmF0dXJlIHJhbmdlcyIsInN0YXJ0Ijo2NDQ5NCwiZW5k
 Ijo2NDUzNX0sIkJFQWtpQmJ0OENGbjMyb3UiOnsidGV4dCI6Ik
-EgUEc0IG1vdGlmIiwic3RhcnQiOjY1OTMzLCJlbmQiOjY1OTQ0
+EgUEc0IG1vdGlmIiwic3RhcnQiOjY1OTMyLCJlbmQiOjY1OTQz
 fSwicURJbmZUMnRpcHBRZTREMyI6eyJ0ZXh0IjoiQW5hbHlzaX
 MgYnkgTXVsbGVuIGV0IGFsLiBpZGVudGlmaWVkIHRoYXQgdGhl
 IGdyZWF0ZXN0IGVucmljaG1lbnQgb2YgdHdvIHRldHJhZOKApi
-IsInN0YXJ0Ijo2NjY3MSwiZW5kIjo2NzU4Nn0sImdaUjlIUG03
+IsInN0YXJ0Ijo2NjY3MCwiZW5kIjo2NzU4NX0sImdaUjlIUG03
 Z3Y1aEJjV28iOnsidGV4dCI6IiMjIFJvbGUgb2YgRy1RdWFkcn
 VwbGV4ZXMgKmluIHBsYW50YSoiLCJzdGFydCI6NjMzMTcsImVu
 ZCI6NjMzNTR9LCJvajQxNldaUDU5YzBpSFMwIjp7InRleHQiOi
-JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2NjE2Niwi
-ZW5kIjo2NjE4Nn19LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
+JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2NjE2NSwi
+ZW5kIjo2NjE4NX19LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
 l3VUtGIjp7ImRpc2N1c3Npb25JZCI6IlZjQ2dESlIyM1cwcUk3
 ZWUiLCJzdWIiOiIxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZX
 h0IjoiVG8gd2hhdCBleHRlbnQgaXMgYSBxdWFkcnVwbGV4IGEg
@@ -576,11 +576,11 @@ cyB5b3UgY291ZGwgc2F5IHNvbWV0aGluZyBsaWtlIFwiLCBvZi
 Bjb3Vyc2UgdGhpcyBkb2Vzbid0IGFkZHJlc3MgdGhlIHF1ZXN0
 aW9uIG9mIHdodGhlciB0aGVzZSBzZXF1ZW5jZXMgZm9ybSBHNH
 MgKmluIHZpdm8qXCIiLCJjcmVhdGVkIjoxNTMyNDQ5NjQ5MTk0
-fX0sImhpc3RvcnkiOlstMTI3NzU5NjUyMiwxNjM2OTc2MzE1LC
-0xMDQ5NjM1ODMxLDEyNzg4MTMyNTEsLTk4MTg0MjQ0NSwxNDI2
-NTI5MzAxLDE1OTc5MjYwMDYsMTQyNjUyOTMwMSwxOTI2MzY2MD
-MzLDYxNDc3NDQ1MCw1NzY2NzAzNzksMjEzMTgxNjQ2Nyw5MjMy
-MDQyNzQsMTU0ODc5NDk4MSw0OTc2Njg2NDMsMTU0Mzk4NzU1MS
-wtNzQ2NTQ4MjUwLC05NzI2NTk4ODQsLTE5MjM4MjI0OTYsLTE3
-NzU2Mjk0MjhdfQ==
+fX0sImhpc3RvcnkiOlsxNDA2OTQ5NDY3LC0xMjc3NTk2NTIyLD
+E2MzY5NzYzMTUsLTEwNDk2MzU4MzEsMTI3ODgxMzI1MSwtOTgx
+ODQyNDQ1LDE0MjY1MjkzMDEsMTU5NzkyNjAwNiwxNDI2NTI5Mz
+AxLDE5MjYzNjYwMzMsNjE0Nzc0NDUwLDU3NjY3MDM3OSwyMTMx
+ODE2NDY3LDkyMzIwNDI3NCwxNTQ4Nzk0OTgxLDQ5NzY2ODY0My
+wxNTQzOTg3NTUxLC03NDY1NDgyNTAsLTk3MjY1OTg4NCwtMTky
+MzgyMjQ5Nl19
 -->
