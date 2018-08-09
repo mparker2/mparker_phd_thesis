@@ -256,7 +256,7 @@ Arabidopsis telomeres are made up of the heptameric sequence TTTAGGG [@Richard19
 
 ### Transposable Elements
 
-Transposable elements (TEs) are discrete regions of DNA which are able to copy or translocate themselves from one region of the genome to another [@Kejnovsky2015]. The most common family of plant TEs are long terminal repeat (LTR) retrotransposons, which duplicate themselves through transcription followed by reverse transcription [@Kejnovsky2015]. 
+Transposable elements (TEs) are discrete regions of DNA which are able to copy or translocate themselves from one region of the genome to another [@Kejnovsky2015]. The most common family of plant TEs are long terminal repeat (LTR) retrotransposons, which duplicate themselves through transcription followed by reverse transcription [@Kejnovsky2015]. Lexa et al. have shown that plant LTR retrotransposons are enriched 
 
 ### Translational Regulation
 
@@ -363,16 +363,16 @@ FydCI6NjM5NDUsImVuZCI6NjM5ODN9LCJOaHRmQXRIUEpTalZQ
 MzR3Ijp7InRleHQiOiJtaWdodCBiZSBzdGFibGUgYXQgdGhlIH
 RlbXBlcmF0dXJlIHJhbmdlcyIsInN0YXJ0Ijo2NDUyMiwiZW5k
 Ijo2NDU2M30sIkJFQWtpQmJ0OENGbjMyb3UiOnsidGV4dCI6Ik
-EgUEc0IG1vdGlmIiwic3RhcnQiOjY3NDM5LCJlbmQiOjY3NDUw
+EgUEc0IG1vdGlmIiwic3RhcnQiOjY3NTA3LCJlbmQiOjY3NTE4
 fSwicURJbmZUMnRpcHBRZTREMyI6eyJ0ZXh0IjoiQW5hbHlzaX
 MgYnkgTXVsbGVuIGV0IGFsLiBpZGVudGlmaWVkIHRoYXQgdGhl
 IGdyZWF0ZXN0IGVucmljaG1lbnQgb2YgdHdvIHRldHJhZOKApi
-IsInN0YXJ0Ijo2ODIzMCwiZW5kIjo2OTI1NX0sImdaUjlIUG03
+IsInN0YXJ0Ijo2ODI5OCwiZW5kIjo2OTMyM30sImdaUjlIUG03
 Z3Y1aEJjV28iOnsidGV4dCI6IiMjIFJvbGUgb2YgRy1RdWFkcn
 VwbGV4ZXMgKmluIHBsYW50YSoiLCJzdGFydCI6NjMzMTcsImVu
 ZCI6NjMzNTR9LCJvajQxNldaUDU5YzBpSFMwIjp7InRleHQiOi
-JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2NzY3Nywi
-ZW5kIjo2Nzc3MX19LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
+JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2Nzc0NSwi
+ZW5kIjo2NzgzOX19LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
 l3VUtGIjp7ImRpc2N1c3Npb25JZCI6IlZjQ2dESlIyM1cwcUk3
 ZWUiLCJzdWIiOiIxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZX
 h0IjoiVG8gd2hhdCBleHRlbnQgaXMgYSBxdWFkcnVwbGV4IGEg
@@ -582,7 +582,7 @@ cyB5b3UgY291ZGwgc2F5IHNvbWV0aGluZyBsaWtlIFwiLCBvZi
 Bjb3Vyc2UgdGhpcyBkb2Vzbid0IGFkZHJlc3MgdGhlIHF1ZXN0
 aW9uIG9mIHdodGhlciB0aGVzZSBzZXF1ZW5jZXMgZm9ybSBHNH
 MgKmluIHZpdm8qXCIiLCJjcmVhdGVkIjoxNTMyNDQ5NjQ5MTk0
-fX0sImhpc3RvcnkiOlsxNjQwMzExMDQ5LDE0ODEzNDE3MjcsMz
+fX0sImhpc3RvcnkiOlstNDUwNDg1OTIyLDE0ODEzNDE3MjcsMz
 k5NDEzNzM5LDM2MTEwNDkyNSwtMTQ4Mjk0NjIzMCwtMTE0ODcy
 NzMsLTQyNzIxNDQxMCw4MDAyNzYyMTMsMTgxOTMzNjg0NSwtMT
 I3NzU5NjUyMiwxNjM2OTc2MzE1LC0xMDQ5NjM1ODMxLDEyNzg4
