@@ -273,7 +273,7 @@ Given the evolutionarily ancient role of G4s in phloem development [@Cho2018], i
 
 \label{ssec:plant_stress}
 
-Analysis by Mullen et al. identified that the greatest enrichment of two tetrads in the Arabidopsis genome was inside genic regions, and that these PG4s might form in mRNA [@Mullen2010]. Furthermore, they demonstrated that many two tetrad PG4s are only strongly stable in high potassium concentrations, and postulated that these might act as molecular switches sensing environmental salt concentrations [@Mullen2012]. Since cellular potassium concentrations are increased from around 100mM to as much as 600mM during osmotic stresses (e.g. drought stress) [@Walker1996; @Hummel2010], they suggested that drought stress responsive genes could contain these molecular switches. Analysis of the *Z. mays* genome by Andorf et al. has shown that PG4s are indeed enriched in a number of gene ontology classes involved in stress response, including hypoxia response and nutrient deprivation responsive genes [@Andorf2014].
+Analysis by Mullen et al. identified that the greatest enrichment of two tetrads in the Arabidopsis genome was inside genic regions, and that these PG4s might form in mRNA [@Mullen2010]. Furthermore, they demonstrated that many two tetrad PG4s are only strongly stable in high potassium concentrations, and postulated that these might act as molecular switches sensing environmental salt concentrations [@Mullen2012]. Since cellular potassium concentrations are increased from around 100mM to as much as 600mM during osmotic stresses (e.g. drought stress) [@Walker1996; @Hummel2010], they suggested that drought stress responsive genes could contain these molecular switches. Yadav et al. found that 16% of the Arabidopsis genome is drought responsive, and of these, 45% contain  Analysis of the *Z. mays* genome by Andorf et al. has shown that PG4s are indeed enriched in a number of gene ontology classes involved in stress response, including hypoxia response and nutrient deprivation responsive genes [@Andorf2014].
 
 \newpage
 
@@ -363,7 +363,7 @@ EgUEc0IG1vdGlmIiwic3RhcnQiOjY3MDYwLCJlbmQiOjY3MDcx
 fSwicURJbmZUMnRpcHBRZTREMyI6eyJ0ZXh0IjoiQW5hbHlzaX
 MgYnkgTXVsbGVuIGV0IGFsLiBpZGVudGlmaWVkIHRoYXQgdGhl
 IGdyZWF0ZXN0IGVucmljaG1lbnQgb2YgdHdvIHRldHJhZOKApi
-IsInN0YXJ0Ijo2Nzg1MSwiZW5kIjo2ODc2Nn0sImdaUjlIUG03
+IsInN0YXJ0Ijo2Nzg1MSwiZW5kIjo2ODg3MH0sImdaUjlIUG03
 Z3Y1aEJjV28iOnsidGV4dCI6IiMjIFJvbGUgb2YgRy1RdWFkcn
 VwbGV4ZXMgKmluIHBsYW50YSoiLCJzdGFydCI6NjMzMTcsImVu
 ZCI6NjMzNTR9LCJvajQxNldaUDU5YzBpSFMwIjp7InRleHQiOi
@@ -578,11 +578,11 @@ cyB5b3UgY291ZGwgc2F5IHNvbWV0aGluZyBsaWtlIFwiLCBvZi
 Bjb3Vyc2UgdGhpcyBkb2Vzbid0IGFkZHJlc3MgdGhlIHF1ZXN0
 aW9uIG9mIHdodGhlciB0aGVzZSBzZXF1ZW5jZXMgZm9ybSBHNH
 MgKmluIHZpdm8qXCIiLCJjcmVhdGVkIjoxNTMyNDQ5NjQ5MTk0
-fX0sImhpc3RvcnkiOlstMTQ4Mjk0NjIzMCwtMTE0ODcyNzMsLT
-QyNzIxNDQxMCw4MDAyNzYyMTMsMTgxOTMzNjg0NSwtMTI3NzU5
-NjUyMiwxNjM2OTc2MzE1LC0xMDQ5NjM1ODMxLDEyNzg4MTMyNT
-EsLTk4MTg0MjQ0NSwxNDI2NTI5MzAxLDE1OTc5MjYwMDYsMTQy
-NjUyOTMwMSwxOTI2MzY2MDMzLDYxNDc3NDQ1MCw1NzY2NzAzNz
-ksMjEzMTgxNjQ2Nyw5MjMyMDQyNzQsMTU0ODc5NDk4MSw0OTc2
-Njg2NDNdfQ==
+fX0sImhpc3RvcnkiOlstMTQ4MzE5NTcyNiwtMTQ4Mjk0NjIzMC
+wtMTE0ODcyNzMsLTQyNzIxNDQxMCw4MDAyNzYyMTMsMTgxOTMz
+Njg0NSwtMTI3NzU5NjUyMiwxNjM2OTc2MzE1LC0xMDQ5NjM1OD
+MxLDEyNzg4MTMyNTEsLTk4MTg0MjQ0NSwxNDI2NTI5MzAxLDE1
+OTc5MjYwMDYsMTQyNjUyOTMwMSwxOTI2MzY2MDMzLDYxNDc3ND
+Q1MCw1NzY2NzAzNzksMjEzMTgxNjQ2Nyw5MjMyMDQyNzQsMTU0
+ODc5NDk4MV19
 -->
