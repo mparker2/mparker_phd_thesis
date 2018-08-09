@@ -254,6 +254,8 @@ Whilst the majority of G4 studies have been performed in mammalian systems, part
 
 Arabidopsis telomeres are made up of the heptameric sequence TTTAGGG [@Richard1988]. This is slightly different sequence repeat from that found in most vertebrates, including *H. sapiens* [@Kim2018]. A number of plants species have also been reported to contain the same TTAGGG repeat as vertebrates, however [@Kim2018]. Both Arabidopsis and *O. sativa* have been shown to be sensitive to the telomerase inhibitor telomestatin [@Zhang2006]. Telomestatin is a G4 binding agent which has been shown to interact with the human telomeric repeat, and inhibit telomerase causing telomere shortening *in vivo* [@Kim2002]. Zhang et al. showed that sensitivity of cultured Arabidopsis and *O. sativa* cells to telomestatin occurs via the same method of telomere shortening, suggesting that plant telomeres may also form G4s *in vivo* [@Zhang2006].
 
+### Transposable Elements
+
 ### Translational Regulation
 
 \label{ssec:plant_translation}
@@ -359,16 +361,16 @@ FydCI6NjM5NDUsImVuZCI6NjM5ODN9LCJOaHRmQXRIUEpTalZQ
 MzR3Ijp7InRleHQiOiJtaWdodCBiZSBzdGFibGUgYXQgdGhlIH
 RlbXBlcmF0dXJlIHJhbmdlcyIsInN0YXJ0Ijo2NDUyMiwiZW5k
 Ijo2NDU2M30sIkJFQWtpQmJ0OENGbjMyb3UiOnsidGV4dCI6Ik
-EgUEc0IG1vdGlmIiwic3RhcnQiOjY3MDYwLCJlbmQiOjY3MDcx
+EgUEc0IG1vdGlmIiwic3RhcnQiOjY3MDg3LCJlbmQiOjY3MDk4
 fSwicURJbmZUMnRpcHBRZTREMyI6eyJ0ZXh0IjoiQW5hbHlzaX
 MgYnkgTXVsbGVuIGV0IGFsLiBpZGVudGlmaWVkIHRoYXQgdGhl
 IGdyZWF0ZXN0IGVucmljaG1lbnQgb2YgdHdvIHRldHJhZOKApi
-IsInN0YXJ0Ijo2Nzg1MSwiZW5kIjo2ODg3N30sImdaUjlIUG03
+IsInN0YXJ0Ijo2Nzg3OCwiZW5kIjo2ODkwM30sImdaUjlIUG03
 Z3Y1aEJjV28iOnsidGV4dCI6IiMjIFJvbGUgb2YgRy1RdWFkcn
 VwbGV4ZXMgKmluIHBsYW50YSoiLCJzdGFydCI6NjMzMTcsImVu
 ZCI6NjMzNTR9LCJvajQxNldaUDU5YzBpSFMwIjp7InRleHQiOi
-JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2NzI5OCwi
-ZW5kIjo2NzM5Mn19LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
+JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2NzMyNSwi
+ZW5kIjo2NzQxOX19LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
 l3VUtGIjp7ImRpc2N1c3Npb25JZCI6IlZjQ2dESlIyM1cwcUk3
 ZWUiLCJzdWIiOiIxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZX
 h0IjoiVG8gd2hhdCBleHRlbnQgaXMgYSBxdWFkcnVwbGV4IGEg
@@ -578,11 +580,11 @@ cyB5b3UgY291ZGwgc2F5IHNvbWV0aGluZyBsaWtlIFwiLCBvZi
 Bjb3Vyc2UgdGhpcyBkb2Vzbid0IGFkZHJlc3MgdGhlIHF1ZXN0
 aW9uIG9mIHdodGhlciB0aGVzZSBzZXF1ZW5jZXMgZm9ybSBHNH
 MgKmluIHZpdm8qXCIiLCJjcmVhdGVkIjoxNTMyNDQ5NjQ5MTk0
-fX0sImhpc3RvcnkiOlszNjExMDQ5MjUsLTE0ODI5NDYyMzAsLT
-ExNDg3MjczLC00MjcyMTQ0MTAsODAwMjc2MjEzLDE4MTkzMzY4
-NDUsLTEyNzc1OTY1MjIsMTYzNjk3NjMxNSwtMTA0OTYzNTgzMS
-wxMjc4ODEzMjUxLC05ODE4NDI0NDUsMTQyNjUyOTMwMSwxNTk3
-OTI2MDA2LDE0MjY1MjkzMDEsMTkyNjM2NjAzMyw2MTQ3NzQ0NT
-AsNTc2NjcwMzc5LDIxMzE4MTY0NjcsOTIzMjA0Mjc0LDE1NDg3
-OTQ5ODFdfQ==
+fX0sImhpc3RvcnkiOlszOTk0MTM3MzksMzYxMTA0OTI1LC0xND
+gyOTQ2MjMwLC0xMTQ4NzI3MywtNDI3MjE0NDEwLDgwMDI3NjIx
+MywxODE5MzM2ODQ1LC0xMjc3NTk2NTIyLDE2MzY5NzYzMTUsLT
+EwNDk2MzU4MzEsMTI3ODgxMzI1MSwtOTgxODQyNDQ1LDE0MjY1
+MjkzMDEsMTU5NzkyNjAwNiwxNDI2NTI5MzAxLDE5MjYzNjYwMz
+MsNjE0Nzc0NDUwLDU3NjY3MDM3OSwyMTMxODE2NDY3LDkyMzIw
+NDI3NF19
 -->
