@@ -256,7 +256,7 @@ Arabidopsis telomeres are made up of the heptameric sequence TTTAGGG [@Richard19
 
 ### Transposable Elements
 
-Transposable elements (TEs) are discrete regions of DNA which are able to copy or translocate themselves from one region of the genome to another [@Kejnovsky2015]. The most common family of plant TEs are long terminal repeat (LTR) retrotransposons, which duplicate themselves through transcription followed by reverse transcription [@Kejnovsky2015]. Lexa et al. have shown that plant LTR retrotransposons are enriched in motifs which form G4s *in vitro* [@Lexa2013]. These are most commonly found in the LTRs of the TEs, at the 5' end in the positive strand and at the 3' end in the negative strand [@Lexa2013]. The authors also noted that younger TEs with greater homology d
+Transposable elements (TEs) are discrete regions of DNA which are able to copy or translocate themselves from one region of the genome to another [@Kejnovsky2015]. The most common family of plant TEs are long terminal repeat (LTR) retrotransposons, which duplicate themselves through transcription followed by reverse transcription [@Kejnovsky2015]. Lexa et al. have shown that plant LTR retrotransposons are enriched in motifs which form G4s *in vitro* [@Lexa2013]. These are most commonly found in the LTRs of the TEs, at the 5' end in the positive strand and at the 3' end in the negative strand [@Lexa2013]. The authors also noted that younger TEs with greater homology between LTRs were also more likely to contain PG4s with longer G-runs. 
 
 ### Translational Regulation
 
@@ -363,16 +363,16 @@ FydCI6NjM5NDUsImVuZCI6NjM5ODN9LCJOaHRmQXRIUEpTalZQ
 MzR3Ijp7InRleHQiOiJtaWdodCBiZSBzdGFibGUgYXQgdGhlIH
 RlbXBlcmF0dXJlIHJhbmdlcyIsInN0YXJ0Ijo2NDUyMiwiZW5k
 Ijo2NDU2M30sIkJFQWtpQmJ0OENGbjMyb3UiOnsidGV4dCI6Ik
-EgUEc0IG1vdGlmIiwic3RhcnQiOjY3NzY0LCJlbmQiOjY3Nzc1
+EgUEc0IG1vdGlmIiwic3RhcnQiOjY3ODM0LCJlbmQiOjY3ODQ1
 fSwicURJbmZUMnRpcHBRZTREMyI6eyJ0ZXh0IjoiQW5hbHlzaX
 MgYnkgTXVsbGVuIGV0IGFsLiBpZGVudGlmaWVkIHRoYXQgdGhl
 IGdyZWF0ZXN0IGVucmljaG1lbnQgb2YgdHdvIHRldHJhZOKApi
-IsInN0YXJ0Ijo2ODU1NSwiZW5kIjo2OTU4MH0sImdaUjlIUG03
+IsInN0YXJ0Ijo2ODYyNSwiZW5kIjo2OTY1MH0sImdaUjlIUG03
 Z3Y1aEJjV28iOnsidGV4dCI6IiMjIFJvbGUgb2YgRy1RdWFkcn
 VwbGV4ZXMgKmluIHBsYW50YSoiLCJzdGFydCI6NjMzMTcsImVu
 ZCI6NjMzNTR9LCJvajQxNldaUDU5YzBpSFMwIjp7InRleHQiOi
-JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2ODAwMiwi
-ZW5kIjo2ODA5Nn19LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
+JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2ODA3Miwi
+ZW5kIjo2ODE2Nn19LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
 l3VUtGIjp7ImRpc2N1c3Npb25JZCI6IlZjQ2dESlIyM1cwcUk3
 ZWUiLCJzdWIiOiIxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZX
 h0IjoiVG8gd2hhdCBleHRlbnQgaXMgYSBxdWFkcnVwbGV4IGEg
@@ -582,11 +582,11 @@ cyB5b3UgY291ZGwgc2F5IHNvbWV0aGluZyBsaWtlIFwiLCBvZi
 Bjb3Vyc2UgdGhpcyBkb2Vzbid0IGFkZHJlc3MgdGhlIHF1ZXN0
 aW9uIG9mIHdodGhlciB0aGVzZSBzZXF1ZW5jZXMgZm9ybSBHNH
 MgKmluIHZpdm8qXCIiLCJjcmVhdGVkIjoxNTMyNDQ5NjQ5MTk0
-fX0sImhpc3RvcnkiOls4MjY3NDExNjcsMTQ4MTM0MTcyNywzOT
-k0MTM3MzksMzYxMTA0OTI1LC0xNDgyOTQ2MjMwLC0xMTQ4NzI3
-MywtNDI3MjE0NDEwLDgwMDI3NjIxMywxODE5MzM2ODQ1LC0xMj
-c3NTk2NTIyLDE2MzY5NzYzMTUsLTEwNDk2MzU4MzEsMTI3ODgx
-MzI1MSwtOTgxODQyNDQ1LDE0MjY1MjkzMDEsMTU5NzkyNjAwNi
-wxNDI2NTI5MzAxLDE5MjYzNjYwMzMsNjE0Nzc0NDUwLDU3NjY3
-MDM3OV19
+fX0sImhpc3RvcnkiOlstMTk2NDc4Njg2NCwxNDgxMzQxNzI3LD
+M5OTQxMzczOSwzNjExMDQ5MjUsLTE0ODI5NDYyMzAsLTExNDg3
+MjczLC00MjcyMTQ0MTAsODAwMjc2MjEzLDE4MTkzMzY4NDUsLT
+EyNzc1OTY1MjIsMTYzNjk3NjMxNSwtMTA0OTYzNTgzMSwxMjc4
+ODEzMjUxLC05ODE4NDI0NDUsMTQyNjUyOTMwMSwxNTk3OTI2MD
+A2LDE0MjY1MjkzMDEsMTkyNjM2NjAzMyw2MTQ3NzQ0NTAsNTc2
+NjcwMzc5XX0=
 -->
