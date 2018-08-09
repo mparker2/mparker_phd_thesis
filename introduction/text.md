@@ -267,7 +267,7 @@ Cho et al. also identified an RNA G4 which forms in the 5'UTR of SMXL4/5, a gene
 \label{ssec:plant_dev}
 
 
-It is plausible that molecular mechanisms involving G4s are central to many plant development pathways [@Cho2018; @Nakagawa2012]. Nakagawa et al. analysed the effects of the G4 binding agents NMM and Berberine on Arabidopsis development, and found that both drugs caused defects in leaf polarity [@Nakagawa2012]. Furthermore, plants with double mutations in the genes *ASYMMETRIC LEAVES 1* and *2* were hypersensitive to G4 binding agents [@Nakagawa2012].
+Given the evolutionarily ancient role of G4s in phloem development, it is plausible that molecular mechanisms involving G4s are central to many plant development pathways [@Cho2018; @Nakagawa2012]. Nakagawa et al. analysed the effects of the G4 binding agents NMM and Berberine on Arabidopsis development, and found that both drugs caused defects in leaf polarity [@Nakagawa2012]. Furthermore, plants with double mutations in the genes *ASYMMETRIC LEAVES 1* and *2* were hypersensitive to G4 binding agents [@Nakagawa2012].
 
 ### Stress Response
 
@@ -363,12 +363,12 @@ EgUEc0IG1vdGlmIiwic3RhcnQiOjY3MDYwLCJlbmQiOjY3MDcx
 fSwicURJbmZUMnRpcHBRZTREMyI6eyJ0ZXh0IjoiQW5hbHlzaX
 MgYnkgTXVsbGVuIGV0IGFsLiBpZGVudGlmaWVkIHRoYXQgdGhl
 IGdyZWF0ZXN0IGVucmljaG1lbnQgb2YgdHdvIHRldHJhZOKApi
-IsInN0YXJ0Ijo2Nzc5OCwiZW5kIjo2ODcxM30sImdaUjlIUG03
+IsInN0YXJ0Ijo2Nzg2NiwiZW5kIjo2ODc4MX0sImdaUjlIUG03
 Z3Y1aEJjV28iOnsidGV4dCI6IiMjIFJvbGUgb2YgRy1RdWFkcn
 VwbGV4ZXMgKmluIHBsYW50YSoiLCJzdGFydCI6NjMzMTcsImVu
 ZCI6NjMzNTR9LCJvajQxNldaUDU5YzBpSFMwIjp7InRleHQiOi
-JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2NzI5Mywi
-ZW5kIjo2NzMxM319LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
+JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2NzI5OCwi
+ZW5kIjo2NzM4MX19LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
 l3VUtGIjp7ImRpc2N1c3Npb25JZCI6IlZjQ2dESlIyM1cwcUk3
 ZWUiLCJzdWIiOiIxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZX
 h0IjoiVG8gd2hhdCBleHRlbnQgaXMgYSBxdWFkcnVwbGV4IGEg
@@ -578,11 +578,11 @@ cyB5b3UgY291ZGwgc2F5IHNvbWV0aGluZyBsaWtlIFwiLCBvZi
 Bjb3Vyc2UgdGhpcyBkb2Vzbid0IGFkZHJlc3MgdGhlIHF1ZXN0
 aW9uIG9mIHdodGhlciB0aGVzZSBzZXF1ZW5jZXMgZm9ybSBHNH
 MgKmluIHZpdm8qXCIiLCJjcmVhdGVkIjoxNTMyNDQ5NjQ5MTk0
-fX0sImhpc3RvcnkiOlstMTE0ODcyNzMsLTQyNzIxNDQxMCw4MD
-AyNzYyMTMsMTgxOTMzNjg0NSwtMTI3NzU5NjUyMiwxNjM2OTc2
-MzE1LC0xMDQ5NjM1ODMxLDEyNzg4MTMyNTEsLTk4MTg0MjQ0NS
-wxNDI2NTI5MzAxLDE1OTc5MjYwMDYsMTQyNjUyOTMwMSwxOTI2
-MzY2MDMzLDYxNDc3NDQ1MCw1NzY2NzAzNzksMjEzMTgxNjQ2Ny
-w5MjMyMDQyNzQsMTU0ODc5NDk4MSw0OTc2Njg2NDMsMTU0Mzk4
-NzU1MV19
+fX0sImhpc3RvcnkiOls4NDkxMjkzNDgsLTExNDg3MjczLC00Mj
+cyMTQ0MTAsODAwMjc2MjEzLDE4MTkzMzY4NDUsLTEyNzc1OTY1
+MjIsMTYzNjk3NjMxNSwtMTA0OTYzNTgzMSwxMjc4ODEzMjUxLC
+05ODE4NDI0NDUsMTQyNjUyOTMwMSwxNTk3OTI2MDA2LDE0MjY1
+MjkzMDEsMTkyNjM2NjAzMyw2MTQ3NzQ0NTAsNTc2NjcwMzc5LD
+IxMzE4MTY0NjcsOTIzMjA0Mjc0LDE1NDg3OTQ5ODEsNDk3NjY4
+NjQzXX0=
 -->
