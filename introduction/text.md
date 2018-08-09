@@ -213,7 +213,7 @@ G4s in 3' UTRs have the potential to act as *cis* regulatory elements controllin
 Chromatin conformational dynamics are important regulatory mechanisms for gene expression. The major protein component of chromatin is made up of histones, which assemble into the nucleosomes around which DNA is wrapped. G4 formation is highly dependent upon chromatin status, and G4s isolated by BG4 ChIPseq have been shown to form in regions of open chromatin [@Hansel2016]. Hänsel-Hertsch et al. showed that treatment of cells with the histone deacetylase inhibitors, which cause a relaxation of the chromatin, also increased the number of G4 loci identified by ChIPseq [@Hansel2016].
 
 <<<<<<< Updated upstream
-G4s have been shown to cause transient and non-heritable changes to epigenetic status through the causing of DSB, which are known to induce phosphorylation of H2AX (gamma-H2AX) via an ATM-dependent pathway [@Rodriguez2012; @Shanbhag2010; @Ayrapetov2014]. A number of authors have also reported heritable epigenetic changes to the BU-1 and beta-globin gene loci caused by G4s in chicken cell lines [@Guilbaud2017; @Sarkies2010; @Sarkies2011; @Schiavone2014; @Schiavone2016]. These changes occur in cells lacking G4 resolving helicases, such as REV1, FANCJ, WRN and BLM [@Sarkies2010; @Sarkies2012; @Eddy2014; @Schiavone2014]; polymerases, such as PrimPol [@Schiavone2016]; or in cells treated with G4 stabilising agents, such as NMM, PhenDC3 and PDS [@Guilbaud2017]. None of these conditions caused DSB or mutations in the BU-1 gene, but did cause loss of active chromatin marker H3K4me3, and gain of repressive H3K9me3, as well as an increase in repressive DNA methylation. There was a concommitant decrease in gene expression accompanying these changes [@Sarkies2010; @Sarkies2011; @Schiavone2014; @Schiavone2016; @Guilbaud2017]. During replication, parental histones from upstream of the replication fork are removed; and recycled into the newly synthesised DNA behind the replication machinery [@DeKoning2007]. This recycling maintains the epigenetic status of replicated DNA. Sarkies et al. proposed that in the absence of G4 unwinding helicases, or in the presence of a stabilising drug, leading strand synthesis is stalled at the G4, and uncoupled from histone recycling. This leads to the incorporation of newly synthesised H3/4 without the correct epigenetic markers, rather than parental histones [@Sarkies2010; @Sarkies2011; @Schiavone2014; @Schiavone2016; @Guilbaud2017]. Abolishment of the G4 motif through mutation removed this heritable change in epigenetic status. Furthermore, switching of the strand of the G4, which was suggested to switch the replication strand of the G4 from the leading to the lagging strand, also abolished the heritable change in expression [@Sarkies2010; @Sarkies2012; @Schiavone2014; @Schiavone2016].
+G4s have been shown to cause transient and non-heritable changes to epigenetic status through the causing of DSB, which are known to induce phosphorylation of H2AX (gamma-H2AX) via an ATM-dependent pathway [@Rodriguez2012; @Shanbhag2010; @Ayrapetov2014]. A number of authors have also reported heritable epigenetic changes to the BU-1 and beta-globin gene loci caused by G4s in chicken cell lines [@Guilbaud2017; @Sarkies2010; @Sarkies2012; @Schiavone2014; @Schiavone2016]. These changes occur in cells lacking G4 resolving helicases, such as REV1, FANCJ, WRN and BLM [@Sarkies2010; @Sarkies2012; @Eddy2014; @Schiavone2014]; polymerases, such as PrimPol [@Schiavone2016]; or in cells treated with G4 stabilising agents, such as NMM, PhenDC3 and PDS [@Guilbaud2017]. None of these conditions caused DSB or mutations in the BU-1 gene, but did cause loss of active chromatin marker H3K4me3, and gain of repressive H3K9me3, as well as an increase in repressive DNA methylation. There was a concommitant decrease in gene expression accompanying these changes [@Sarkies2010; @Sarkies2012; @Schiavone2014; @Schiavone2016; @Guilbaud2017]. During replication, parental histones from upstream of the replication fork are removed; and recycled into the newly synthesised DNA behind the replication machinery [@DeKoning2007]. This recycling maintains the epigenetic status of replicated DNA. Sarkies et al. proposed that in the absence of G4 unwinding helicases, or in the presence of a stabilising drug, leading strand synthesis is stalled at the G4, and uncoupled from histone recycling. This leads to the incorporation of newly synthesised H3/4 without the correct epigenetic markers, rather than parental histones [@Sarkies2010; @Sarkies2012; @Schiavone2014; @Schiavone2016; @Guilbaud2017]. Abolishment of the G4 motif through mutation removed this heritable change in epigenetic status. Furthermore, switching of the strand of the G4, which was suggested to switch the replication strand of the G4 from the leading to the lagging strand, also abolished the heritable change in expression [@Sarkies2010; @Sarkies2012; @Schiavone2014; @Schiavone2016].
 
 \newpage
 
@@ -221,7 +221,7 @@ G4s have been shown to cause transient and non-heritable changes to epigenetic s
 
 \newpage
 =======
-G4s have been shown to cause transient and non-heritable changes to epigenetic status through the causing of DSB, which are known to induce phosphorylation of H2AX (gamma-H2AX) via an ATM-dependent pathway [@Rodriguez2012; @Shanbhag2010; @Ayrapetov2014]. A number of authors have also reported heritable epigenetic changes to the BU-1 and beta-globin gene loci caused by G4s in chicken cell lines [@Guilbaud2017; @Sarkies2010; @Sarkies2011; @Schiavone2014; @Schiavone2016]. These changes occur in cells lacking G4 resolving helicases, such as REV1, FANCJ, WRN and BLM [@Sarkies2010; @Sarkies2012; @Eddy2013; @Schiavone2014]; polymerases, such as PrimPol [@Schiavone2016]; or in cells treated with G4 stabilising agents, such as NMM, PhenDC3 and PDS [@Guilbaud2017]. None of these conditions caused DSB or mutations in the BU-1 gene, but did cause loss of active chromatin marker H3K4me3, and gain of repressive H3K9me3, as well as an increase in repressive DNA methylation. There was a concommitant decrease in gene expression accompanying these changes [@Sarkies2010; @Sarkies2011; @Schiavone2014; @Schiavone2016; @Guilbaud2017]. During replication, parental histones from upstream of the replication fork are removed; and recycled into the newly synthesised DNA behind the replication machinery [@DeKoning2007]. This recycling maintains the epigenetic status of replicated DNA. Sarkies et al. proposed that in the absence of G4 unwinding helicases, or in the presence of a stabilising drug, leading strand synthesis is stalled at the G4, and uncoupled from histone recycling. This leads to the incorporation of newly synthesised H3/4 without the correct epigenetic markers, rather than parental histones [@Sarkies2010; @Sarkies2011; @Schiavone2014; @Schiavone2016; @Guilbaud2017]. Abolishment of the G4 motif through mutation removed this heritable change in epigenetic status. Furthermore, switching of the strand of the G4, which was suggested to switch the replication strand of the G4 from the leading to the lagging strand, also abolished the heritable change in expression [@Sarkies2010; @Sarkies2012; @Schiavone2014; @Schiavone2016].
+G4s have been shown to cause transient and non-heritable changes to epigenetic status through the causing of DSB, which are known to induce phosphorylation of H2AX (gamma-H2AX) via an ATM-dependent pathway [@Rodriguez2012; @Shanbhag2010; @Ayrapetov2014]. A number of authors have also reported heritable epigenetic changes to the BU-1 and beta-globin gene loci caused by G4s in chicken cell lines [@Guilbaud2017; @Sarkies2010; @Sarkies2012; @Schiavone2014; @Schiavone2016]. These changes occur in cells lacking G4 resolving helicases, such as REV1, FANCJ, WRN and BLM [@Sarkies2010; @Sarkies2012; @Eddy2014; @Schiavone2014]; polymerases, such as PrimPol [@Schiavone2016]; or in cells treated with G4 stabilising agents, such as NMM, PhenDC3 and PDS [@Guilbaud2017]. None of these conditions caused DSB or mutations in the BU-1 gene, but did cause loss of active chromatin marker H3K4me3, and gain of repressive H3K9me3, as well as an increase in repressive DNA methylation. There was a concommitant decrease in gene expression accompanying these changes [@Sarkies2010; @Sarkies2012; @Schiavone2014; @Schiavone2016; @Guilbaud2017]. During replication, parental histones from upstream of the replication fork are removed; and recycled into the newly synthesised DNA behind the replication machinery [@DeKoning2007]. This recycling maintains the epigenetic status of replicated DNA. Sarkies et al. proposed that in the absence of G4 unwinding helicases, or in the presence of a stabilising drug, leading strand synthesis is stalled at the G4, and uncoupled from histone recycling. This leads to the incorporation of newly synthesised H3/4 without the correct epigenetic markers, rather than parental histones [@Sarkies2010; @Sarkies2012; @Schiavone2014; @Schiavone2016; @Guilbaud2017]. Abolishment of the G4 motif through mutation removed this heritable change in epigenetic status. Furthermore, switching of the strand of the G4, which was suggested to switch the replication strand of the G4 from the leading to the lagging strand, also abolished the heritable change in expression [@Sarkies2010; @Sarkies2012; @Schiavone2014; @Schiavone2016].
 >>>>>>> Stashed changes
 
 Chromatin remodelling is the process by which modifications are made to histones. These modifications include switching of histone isoforms, covalent modifications, and histone sliding. The latter involves the use of energy from ATP hydrolysis to translocate histones along the DNA polymer without ever removing them [@Langst2015]. One class of remodellers is SWI/SNF complexes, which are able to slide or eject nucleosomes. ATRX is an X-linked SWI/SNF family member, which is mutated in ATR-X syndrome, an intellectual disability disorder. The ATRX protein has been shown to locate at heterochromatic and pericentromeric regions, as well as at telomeres [@McDowell1999], regions which are enriched in G-rich PG4 structures. During ATR-X syndrome, global DNA methylation patterns at these regions are disregulated [@Gibbons2000]. Knockdown of ATRX during the S-phase of the cell cycle, when DNA replication occurs, results in an increase in the DSB response marker gamma-H2AX at telomeric regions [@Wong2010]. Heaphy et al. showed that human pancreatic cancers which had lost the expression of ATRX or its partner protein DAXX had elongated telomeres that were characteristic of the Alternative Lengthening of Telomeres pathway. This pathway is telomerase independent, suggesting that ATRX is important for normal telomere repair [@Heaphy2011].
@@ -236,7 +236,7 @@ ATRX mutation also effects gene expression. Gibbons et al. identified gene expre
 
 R loops have been characterised *in vitro* in a number of organisms, from initial studies in *E. coli* [@Drolet1995] to genome wide profiling in *S. cerevisiae* [@Chan2014] and *H. sapiens* cell lines [@Chen2017]. R loops have been implicated in maintaining chromatin status and gene expression [@Powell2013; @Chen2015], as well as termination of transcription [@Skourti-Stathaki2011; @Skourti-Stathaki2011]. Chen et al. used an inactive RNase H enzyme, which binds specifically to RNA:DNA heteroduplexes, to immunoprecipitate R-loops in human chromatin [@Chen2017]. They identified a large number of R loop peaks located at promoter proximal regions, suggesting R loop formation early in transcription. The authors found that R loops were more common on genes that showed higher levels of proximal pausing, suggesting that R loop formation may be associated with the pausing of Pol II [@Chen2017]. Furthermore, regions containing R loops were also strongly associated with coding strand G4s, with 54% of R loop peaks containing a G4 observed by G4seq [@Chen2017; @Chambers2015]. G4 formation in the coding strand, which is in a single stranded state in the R loop, may help to stabilise the RNA:DNA hybrid [@Duquette2004]. 
 
-R loop formation has been identified as a key component of class switch recombination (CSR) of immunoglobulin genes [@Daniels1995; @Reaban1990; @Yu2003]. CSR is the process by which the constant region of the immunoglobulin heavy chain (IgH) gene is switched, changing the properties of the resultant antibody [@Stavenezer1996]. This process is mediated by the activation-induced cytidine deaminase (AID), an enzyme which deaminates cytosines in ssDNA, within the switch regions of the IgH locus. This deamination results in DSB, causing the recombination of the gene. Transcription of the IgH gene produces a long non-coding RNA (lncRNA) with a constitutive first exon containing the variable antigen binding domain. Splicing to an alternative second exon is determined by the pattern of cytokines that the cell is exposed to. The intron lariat removed by this splicing is debranched and re-linearised by the enzyme DBR1 [@Zheng2015]. This intron lariat then forms an R-loop with the switch region of the IgH, resulting in ssDNA on the coding strand which becomes the substrate for AID. Zheng et al. showed that AID is able to bind specifically to G4 DNA and RNA, and that targeting of AID to the switch region is via binding to the debranched RNA lariat [@Zheng2015]. Furthermore, Ribeiro de Almeida et al. identified that resolution of G4s in the intron derived RNA is required for R-loop formation and CSR. This G4 unwinding was found to occur via the RNA Helicase DDX1 [@RibeirodeAlmeida2018].
+R loop formation has been identified as a key component of class switch recombination (CSR) of immunoglobulin genes [@Daniels1995; @Reaban1990; @Yu2003]. CSR is the process by which the constant region of the immunoglobulin heavy chain (IgH) gene is switched, changing the properties of the resultant antibody [@Stavnezer1996]. This process is mediated by the activation-induced cytidine deaminase (AID), an enzyme which deaminates cytosines in ssDNA, within the switch regions of the IgH locus. This deamination results in DSB, causing the recombination of the gene. Transcription of the IgH gene produces a long non-coding RNA (lncRNA) with a constitutive first exon containing the variable antigen binding domain. Splicing to an alternative second exon is determined by the pattern of cytokines that the cell is exposed to. The intron lariat removed by this splicing is debranched and re-linearised by the enzyme DBR1 [@Zheng2015]. This intron lariat then forms an R-loop with the switch region of the IgH, resulting in ssDNA on the coding strand which becomes the substrate for AID. Zheng et al. showed that AID is able to bind specifically to G4 DNA and RNA, and that targeting of AID to the switch region is via binding to the debranched RNA lariat [@Zheng2015]. Furthermore, Ribeiro de Almeida et al. identified that resolution of G4s in the intron derived RNA is required for R-loop formation and CSR. This G4 unwinding was found to occur via the RNA Helicase DDX1 [@RibeirodeAlmeida2018].
 
 \newpage
 
@@ -256,11 +256,11 @@ Whilst the majority of G4 studies have been performed in mammalian systems, part
 
 ### G-Quadruplexes in plant telomeres
 
-Arabidopsis telomeres are made up of the heptameric sequence TTTAGGG [@Richard1988]. This is slightly different sequence repeat from that found in most vertebrates, including *H. sapiens* [@Kim2018]. A number of plants species have also been reported to contain the same TTAGGG repeat as vertebrates, however [@Kim2018]. Both Arabidopsis and *O. sativa* have been shown to be sensitive to the telomerase inhibitor telomestatin [@Zhang2006]. Telomestatin is a G4 binding agent which has been shown to interact with the human telomeric repeat, and inhibit telomerase causing telomere shortening *in vivo* [@Kim2002]. Zhang et al. showed that sensitivity of cultured Arabidopsis and *O. sativa* cells to telomestatin occurs via the same method of telomere shortening, suggesting that plant telomeres may also form G4s *in vivo* [@Zhang2006].
+Arabidopsis telomeres are made up of the heptameric sequence TTTAGGG [@Richards1988]. This is slightly different sequence repeat from that found in most vertebrates, including *H. sapiens* [@Kim2018]. A number of plants species have also been reported to contain the same TTAGGG repeat as vertebrates, however [@Kim2018]. Both Arabidopsis and *O. sativa* have been shown to be sensitive to the telomerase inhibitor telomestatin [@Zhang2006]. Telomestatin is a G4 binding agent which has been shown to interact with the human telomeric repeat, and inhibit telomerase causing telomere shortening *in vivo* [@Kim2002]. Zhang et al. showed that sensitivity of cultured Arabidopsis and *O. sativa* cells to telomestatin occurs via the same method of telomere shortening, suggesting that plant telomeres may also form G4s *in vivo* [@Zhang2006].
 
 ### Transposable Elements
 
-Transposable elements (TEs) are discrete regions of DNA which are able to copy or translocate themselves from one region of the genome to another [@Kejnovsky2015]. The most common family of plant TEs are long terminal repeat (LTR) retrotransposons, which duplicate themselves through transcription followed by reverse transcription [@Kejnovsky2015]. Lexa et al. have shown that plant LTR retrotransposons are enriched in motifs which form G4s *in vitro* [@Lexa2013]. These are most commonly found in the LTRs of the TEs, at the 5' end in the positive strand and at the 3' end in the negative strand [@Lexa2013]. The authors also noted that younger TEs with greater homology between LTRs were also more likely to contain PG4s with longer G-runs. They argued that this suggests a function for G4s in the life cycle of the TE [@Lexa2013]. Tokan et al. also demonstrated that treatment of *Z. mays* with the G4 stabilising drug NMM caused downregulation of some highly expressed LTR retrotransposons [@Tokan2018]. Kejnovsky and Lexa identified that G4s are also common in LTR fragments which occur throughout plant genomes as a result of ectopic recombination [@Kejnovsky2014]. This is a potential mechanism for the introduction of G4s into new regions of the genome, where they may evolve some evolutionary purpose [@Kejnovsky2014].
+Transposable elements (TEs) are discrete regions of DNA which are able to copy or translocate themselves from one region of the genome to another [@Kejnovsky2015]. The most common family of plant TEs are long terminal repeat (LTR) retrotransposons, which duplicate themselves through transcription followed by reverse transcription [@Kejnovsky2015]. Lexa et al. have shown that plant LTR retrotransposons are enriched in motifs which form G4s *in vitro* [@Lexa2014]. These are most commonly found in the LTRs of the TEs, at the 5' end in the positive strand and at the 3' end in the negative strand [@Lexa2014]. The authors also noted that younger TEs with greater homology between LTRs were also more likely to contain PG4s with longer G-runs. They argued that this suggests a function for G4s in the life cycle of the TE [@Lexa2014]. Tokan et al. also demonstrated that treatment of *Z. mays* with the G4 stabilising drug NMM caused downregulation of some highly expressed LTR retrotransposons [@Tokan2018]. Kejnovsky and Lexa identified that G4s are also common in LTR fragments which occur throughout plant genomes as a result of ectopic recombination [@Kejnovsky2014]. This is a potential mechanism for the introduction of G4s into new regions of the genome, where they may evolve some evolutionary purpose [@Kejnovsky2014].
 
 ### Translational Regulation
 
@@ -292,304 +292,3 @@ Analysis by Mullen et al. identified that the greatest enrichment of two tetrads
 There is now clear evidence for the *in vivo* function of DNA and RNA G4s in a wide range of molecular processes, including genome stability, replication, transcription, mRNA processing, and translation. In this thesis, we will introduce a new method for the detection of DNA and RNA G4s, using information learned from high throughput sequencing datasets [@Chambers2015; @Kwok2016]. We will then apply this and other methods to the detection of PG4s in the Arabidopsis genome, and identify their enrichment in various genic features including 5'UTRs and CDSs. Finally, we will attempt to identify the effect of G4 stabilisation on Arabidopsis gene expression by treating plants with the G4 binding agent NMM. We will attempt to shed some light on whether the G4 rich genes affected by NMM are naturally regulated through G4 dependent mechanisms.
 
 \newpage
-<!--stackedit_data:
-eyJkaXNjdXNzaW9ucyI6eyJWY0NnREpSMjNXMHFJN2VlIjp7In
-RleHQiOiJhcyB3ZWxsIGFzIGNoYW5nZSB0b3BvbG9naWVzIG9u
-IGEiLCJzdGFydCI6Mzc5LCJlbmQiOjQxMn0sIjVTWVhPNnU1Yn
-laUDJZa2giOnsidGV4dCI6IiFbKipTdHJ1Y3R1cmUgb2YgYSBH
-LVF1YWRydXBsZXgqKiAqKmEpKiogVGhlIG1vbGVjdWxhciBzdH
-J1Y3R1cmUgb2YgYSBHLXF1YXJ0ZXTigKYiLCJzdGFydCI6NTQ1
-NywiZW5kIjo2NDk4fSwiVVN3ZWJmOUh6QW5CcWs2UiI6eyJ0ZX
-h0IjoiIyMjIEctUXVhZHJ1cGxleCBQcmVkaWN0aW9uIGZyb20g
-U2VxdWVuY2UiLCJzdGFydCI6Njk4MiwiZW5kIjo3MDIzfSwiRW
-s0SWo2UUVFSVJOdFRvQyI6eyJ0ZXh0IjoiZiBkaXNvcmRlcmVk
-IHNpbmdsZSBzdHJhbmRlZCBETkEiLCJzdGFydCI6MTE2MDYsIm
-VuZCI6MTE2Mzh9LCJScVFYUnFDWUs5ODdGRWpHIjp7InRleHQi
-OiIhWyoqRy1RdWFkcnVwbGV4IFN0YWJpbGlzaW5nIExpZ2FuZH
-MqKiBTdHJ1Y3R1cmVzIGFuZCBtb2RlIG9mIGFjdGlvbiBvZiBQ
-eXJpZG9z4oCmIiwic3RhcnQiOjE1Mjg1LCJlbmQiOjE1NzEwfS
-wiSWpMVVJSYU92YUFDZUh3biI6eyJ0ZXh0IjoiT25lIGNvbW1v
-biBhcHByb2FjaCB0byBzdHVkeWluZyB0aGUgZWZmZWN0IG9mIE
-c0IHN0YWJpbGlzYXRpb24gb24gYmlvbG9naWNhbCBwcuKApiIs
-InN0YXJ0IjoxNTg3NywiZW5kIjoxNjA0Nn0sIktiSUJOUUtJME
-9zaUJET1AiOnsidGV4dCI6Ik5hdHVyYWxseSBmbHVvcmVzY2Vu
-dCIsInN0YXJ0IjoxNjIxMiwiZW5kIjoxNjIzM30sIm9PMkRzT2
-tqQUxrR3lUT00iOnsidGV4dCI6Ii4gVGhlIGF1dGhvcnMgc2hv
-d2VkIHVzaW5nIHRoaXMgdGVjaG5pcXVlIHRoYXQgb25seSAzMC
-Ugb2YgZXhwZXJpbWVudGFsbHkgb2JzZXLigKYiLCJzdGFydCI6
-MTgxMjYsImVuZCI6MTgyODZ9LCJ0R3Jycnd5ekZqbzA1TXl6Ij
-p7InRleHQiOiJ0aGF0IHJlZ2lvbnMiLCJzdGFydCI6MTg5Mzcs
-ImVuZCI6MTg5Mzd9LCJId3ZHb2lPOW9MZkh0dUNGIjp7InRleH
-QiOiJUaGlzIG1vZGVsIHdhcyB2ZXJ5IHN1Y2Nlc3NmdWwgYXQg
-aWRlbnRpZnlpbmcgUXVhZHBhcnNlciBjb25mb3JtaW5nIG1vdG
-lmcyB3aGlj4oCmIiwic3RhcnQiOjI0MjczLCJlbmQiOjI0NTMw
-fSwic0hNSzA5NHIyc0FqRlphZiI6eyJ0ZXh0IjoiRy1RdWFkcn
-VwbGV4IHN0YWJpbGl0eSBwcmVkaWN0aW9uIHVzaW5nIE1hY2hp
-bmUgTGVhcm5pbmciLCJzdGFydCI6MjAyMjcsImVuZCI6MjAyOD
-N9LCJDdFdWQmI3RkI5MWxMaU54Ijp7InRleHQiOiJHNHMgd2l0
-aCBsb29wIGxlbmd0aCBvZiB1cCB0byAxNWJwIiwic3RhcnQiOj
-MwNzgyLCJlbmQiOjMwODI2fSwicjhpOWhzQ3RRVkNBcm5rMCI6
-eyJ0ZXh0IjoiKEVkZHkgJiBNYWl6ZWxzIDIwMDYpIiwic3Rhcn
-QiOjMyMjIzLCJlbmQiOjMyMjMxfSwiMlVmcTE0cTFqRThRYmpP
-SiI6eyJ0ZXh0IjoiVGhlIE5IRUlJSSBjb250YWlucyBhIG51bW
-JlciBvZiBHLXJpY2ggdHJhY3RzIHdoaWNoIGhhdmUgYmVlbiBz
-aG93biB0byBmb3JtIEc0c+KApiIsInN0YXJ0IjozMzQ1MSwiZW
-5kIjozMzU2NX0sInBPR2c0YWY1aThkM3FRTWsiOnsidGV4dCI6
-ImV2ZW4gd2hlbiBvdGhlciBmYWN0b3JzIHN1Y2ggYXMgZ2VuZS
-BmdW5jdGlvbiBhcmUgY29udHJvbGxlZCBmb3IuIEl0IGhhcyBi
-ZWVuIHPigKYiLCJzdGFydCI6MzQ3ODQsImVuZCI6MzUwMDd9LC
-JMUTN4SEJ0N3R0TzFHSEplIjp7InRleHQiOiJUcmFuc2NyaXB0
-aW9uIHByb2dyZXNzZXMgYnkgdXNpbmcgdGhlIHRlbXBsYXRlIH
-N0cmFuZCBhcyBhbiBhbnRpc2Vuc2UgY29weSB0byBy4oCmIiwi
-c3RhcnQiOjM1MjU0LCJlbmQiOjM1OTM2fSwieUlzSGdxWWxIb3
-dIdmdROCI6eyJ0ZXh0IjoiSXQgaXMgYWxzbyBwb3NzaWJsZSwg
-aG93ZXZlciwgdGhhdCB0aGlzIGVmZmVjdCBjb3VsZCBiZSBwYX
-J0aWFsbHkgZHVlIHRvIGdyZWF0ZeKApiIsInN0YXJ0IjozNzYx
-MiwiZW5kIjozNzcyNX0sIjVFOUZ0V2VlV3c0VHdLenQiOnsidG
-V4dCI6IlRoZSBHNC1mb3JtaW5nIHBvdGVudGlhbCBvZiB0aGVz
-ZSBnZW5lcyBhbHNvIHRlbmRlZCB0byBiZSBncmVhdGVyIG9uIH
-RoZSBjb2RpbmfigKYiLCJzdGFydCI6Mzk3ODEsImVuZCI6Mzk4
-Njd9LCJ2OURyQXkyeDlaVnBSNGlIIjp7InRleHQiOiIhWyoqRy
-1RdWFkcnVwbGV4ZXMgY29udHJvbCB0aGUgc3BsaWNpbmcgb2Yg
-QmNsLVggcHJlLW1STkEqKiAqKmEpKiogRGlhZ3JhbSBzaG934o
-CmIiwic3RhcnQiOjQ2OTAwLCJlbmQiOjQ3NDM0fSwiTXA1OTF5
-clFhenB1bVQwQSI6eyJ0ZXh0IjoiYmVjYXVzZSBSTkFzIHRlbm
-QgdG8gZm9ybSBtb3JlIGNvbXBsZXggc3RydWN0dXJlcyIsInN0
-YXJ0Ijo0NzU5NywiZW5kIjo0NzU5OH0sIngxaUpsd29wOG9ubk
-R3YTIiOnsidGV4dCI6IlNIQVBFLXNlcSIsInN0YXJ0Ijo0ODA1
-NSwiZW5kIjo0ODA2NH0sImloTUxXQ0RVN25EMWt2eVUiOnsidG
-V4dCI6Ikc0IGZvcm1hdGlvbiBtaWdodCBhY3QgYXMgYSBtb2xl
-Y3VsYXIgc3dpdGNoIiwic3RhcnQiOjQ4ODY0LCJlbmQiOjQ4OT
-A4fSwiVGZJS0ZBWTRqWUlrWUVQOCI6eyJ0ZXh0IjoiTW9ub2Nv
-dHMgYWxzbyBoYXZlIGhpZ2hlciBQRzQgY29udGVudCwiLCJzdG
-FydCI6NjM5NDUsImVuZCI6NjM5ODN9LCJOaHRmQXRIUEpTalZQ
-MzR3Ijp7InRleHQiOiJtaWdodCBiZSBzdGFibGUgYXQgdGhlIH
-RlbXBlcmF0dXJlIHJhbmdlcyIsInN0YXJ0Ijo2NDUyMiwiZW5k
-Ijo2NDU2M30sIkJFQWtpQmJ0OENGbjMyb3UiOnsidGV4dCI6Ik
-EgUEc0IG1vdGlmIiwic3RhcnQiOjY4NDE4LCJlbmQiOjY4NDI5
-fSwicURJbmZUMnRpcHBRZTREMyI6eyJ0ZXh0IjoiQW5hbHlzaX
-MgYnkgTXVsbGVuIGV0IGFsLiBpZGVudGlmaWVkIHRoYXQgdGhl
-IGdyZWF0ZXN0IGVucmljaG1lbnQgb2YgdHdvIHRldHJhZOKApi
-IsInN0YXJ0Ijo2OTIwOSwiZW5kIjo3MDIzNH0sImdaUjlIUG03
-Z3Y1aEJjV28iOnsidGV4dCI6IiMjIFJvbGUgb2YgRy1RdWFkcn
-VwbGV4ZXMgKmluIHBsYW50YSoiLCJzdGFydCI6NjMzMTcsImVu
-ZCI6NjMzNTR9LCJvajQxNldaUDU5YzBpSFMwIjp7InRleHQiOi
-JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2ODY1Niwi
-ZW5kIjo2ODc1MH19LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
-l3VUtGIjp7ImRpc2N1c3Npb25JZCI6IlZjQ2dESlIyM1cwcUk3
-ZWUiLCJzdWIiOiIxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZX
-h0IjoiVG8gd2hhdCBleHRlbnQgaXMgYSBxdWFkcnVwbGV4IGEg
-XCJjaGFuZ2VcIiB0byBzb21lIGJhc2UgbGluZSBzdGF0ZSwgb3
-IgaXMgaXQgYW4gaW5uYXRlIHByb3BlcnR5IG9mIHRoZSBzZXF1
-ZW5jZT8iLCJjcmVhdGVkIjoxNTMxODM3NTMyOTY5fSwiekhTY1
-dpTEpkMVc2SWNORyI6eyJkaXNjdXNzaW9uSWQiOiI1U1lYTzZ1
-NWJ5WlAyWWtoIiwic3ViIjoiMTAyMjA1Nzk3Mjc2OTQxMDEwNj
-c3IiwidGV4dCI6IklzIHRoaXMgZmlndXJlIGVudGlyZWx5IHlv
-dXIgb3duIGNyZWF0aW9uPyBOb3QgZXZlbiBpbnNwaXJlZCBieS
-BhIHJlZmVyZW5jZT8iLCJjcmVhdGVkIjoxNTMxODQ1MDUyMzA0
-fSwiVjJmNWJNdzBOcFVHeFgwQyI6eyJkaXNjdXNzaW9uSWQiOi
-JVU3dlYmY5SHpBbkJxazZSIiwic3ViIjoiMTAyMjA1Nzk3Mjc2
-OTQxMDEwNjc3IiwidGV4dCI6IkkgZmVlbCBsaWtlIHRoaXMgc2
-VjdGlvbiBjb3VsZCBiZW5lZml0IGZyb20gc29tZSBhY3RhdWwg
-bnVtYmVycyBvbiB0aGUgcGVyZm9ybWFuY2Ugb2YgdGhlc2UgYW
-xnb3JpdGhtcz8gV2lsbCB5b3UgaW5jbHVkZSB0aGVzZSBpbiB0
-aGUgY2hhcHRlciBvbiB5b3VyIG5ldyBtZXRob2Q/IGF0IHRoZS
-Btb21lbnQgc3RhdGVtZW50cyBsaWtlIFwibWFueSBmYWxzZSBw
-b3NpdGl2ZXNcIiBzZWVtIHVuc3VwcG9ydGVkLiIsImNyZWF0ZW
-QiOjE1MzIzNDM3NTU4MjZ9LCJza2QwTnpCNkhLRklhcnBKIjp7
-ImRpc2N1c3Npb25JZCI6IkVrNElqNlFFRUlSTnRUb0MiLCJzdW
-IiOiIxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZXh0IjoiSXMg
-aXQgZ2VuZXJhbGx5IHRoZSBjYXNlIHRoYXQgcGVvcGxlIGFzay
-BpZiB0aGUgc2luZ2xlIHN0cmFuZGVkIG9saWdvIHdpbGwgZm9y
-bSBhIEc0PyBXaGF0IGFib3V0IHRoZSBkb3VibGUgaGVsaXg/IE
-lzbid0IHRoZSBrZXkgcXVlc3Rpb24gd2hldGhlciBhIGRvdWJs
-ZSBzdHJhbmRlZCBtb2xlY3VsZSB3aWxsIGZhdm91ciBhIEc0IG
-luIG9uZSBvZiB0aGUgc3RyYW5kcyBvdmVyIHRoZSBoZWxpeD8g
-T3IgaXMgaXQgYXNzdW1lZCB0aGF0IGluIGFsbCBjYXNlcyBzb2
-1ldGhpbmcgZWxzZSBpcyBob2xkaW5nIHRoZSBETkEgaW4gc2lu
-Z2xlIHN0cmFuZGVkIHN0YXRlPyIsImNyZWF0ZWQiOjE1MzIzND
-M5NTkxMzJ9LCJvalpNZEZReWRQbTRZc1lqIjp7ImRpc2N1c3Np
-b25JZCI6IlJxUVhScUNZSzk4N0ZFakciLCJzdWIiOiIxMDIyMD
-U3OTcyNzY5NDEwMTA2NzciLCJ0ZXh0IjoiSnVzdCB1c2UgdGhl
-IGZpZ3VyZSBsZWdlbmQgdG8gZGVzY3JpYmUgdGhlIGZpZ3VyZS
-wgcmF0aGVyIHRoYW4gdG8gY29udmV5IG5ldyBpbmZvcm1hdGlv
-bi4gU29tZSBvZiB0aGlzIHN0dWZmIHNob3VsZCBkZWZpbmF0ZW
-x5IGJlIGluIHRoZSBtYWluIHRleHQuIEFsc28gYnJlYWsgdXAg
-aW50byBwYW5uZWxzLiIsImNyZWF0ZWQiOjE1MzIzNDU3NTI0Mj
-R9LCI1TzlqU3pzcFljSGdheXJBIjp7ImRpc2N1c3Npb25JZCI6
-IklqTFVSUmFPdmFBQ2VId24iLCJzdWIiOiIxMDIyMDU3OTcyNz
-Y5NDEwMTA2NzciLCJ0ZXh0IjoiVGhpcyByZWFkcyBhcyB0aG91
-Z2ggaXQgaXMgYSBkaXJlY3QgZm9sbG93IG9uIGZyb20gdGhlIH
-ByZXZpb3VzIHNlbnRlbmNlLCBidXQgaW4gdGhhdCBzZW50ZW5j
-ZSB5b3UgYXJlIHRhbGtpbmcgYWJvdXQgdGhlICpmb3JtYXRpb2
-4qIG9mIEc0cyBhbmQgaW4gdGhpcyBzZW50ZW5jZSB5b3Ugc2Vl
-bSB0byBiZSB0YWxraW5nIGFib3V0IHRoZSBiaW9sb2dpY2FsIG
-NvbnNlcXVlbmNlcyBvZiB0aGVpciBmb3JtYXRpb24uIiwiY3Jl
-YXRlZCI6MTUzMjM0NTg1NTU1NH0sIkh6RU5JVTF0Nk94NnZXQ0
-YiOnsiZGlzY3Vzc2lvbklkIjoiS2JJQk5RS0kwT3NpQkRPUCIs
-InN1YiI6IjEwMjIwNTc5NzI3Njk0MTAxMDY3NyIsInRleHQiOi
-JBcmUgc29tZSBvZiB0aGUgRzQgYmluZGluZyBtb2xlY3VsZXMg
-eW91IHRhbGtlZCBhYm91dCBiZWZvcmUgbmF0dXJhbGx5IGZsdW
-9yZXNjZW50PyIsImNyZWF0ZWQiOjE1MzIzNDYxMDMzNTR9LCJD
-c25iZm5XeWpWbG1SblQyIjp7ImRpc2N1c3Npb25JZCI6Im9PMk
-RzT2tqQUxrR3lUT00iLCJzdWIiOiIxMDIyMDU3OTcyNzY5NDEw
-MTA2NzciLCJ0ZXh0IjoiU2hvdWxkIG1ha2UgdGhlIHBvaW50IH
-RoYXQgdGhpcyBpcyBvbmx5IHNlcXVlbmNlIHdpdGggdGhlICpj
-YXBhY2l0eSogdG8gZm9ybSBHNHMsIG5vdCBzZXF1ZW5jZSB0aG
-F0IGlzIGluIGEgRzQgY29uZmlybWF0aW9uICppbiB2aXZvKi4g
-WW91IHNob3VsZCBkaXNjdXNzIGhvdyB3ZWxsIGFubm90YXRpb2
-5zIGJ5IENEIHNwZWMsIEJHNCBjaGlwc2VxLCBHNC1zZXEgZXRj
-IGFncmVlIHdpdGggZWFjaCBvdGhlci4iLCJjcmVhdGVkIjoxNT
-MyMzQ2MTk0NjM2fSwia3Q1Vk5keHFaR3pNdVZEaCI6eyJkaXNj
-dXNzaW9uSWQiOiJ0R3Jycnd5ekZqbzA1TXl6Iiwic3ViIjoiMT
-AyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6ImRvbid0IGxp
-a2UgdGhpcyB3b3JkaW5nLiIsImNyZWF0ZWQiOjE1MzIzNDYyNT
-U5MTN9LCIxbm1uWmFaTHFOd2lxUmxmIjp7ImRpc2N1c3Npb25J
-ZCI6Ikh3dkdvaU85b0xmSHR1Q0YiLCJzdWIiOiIxMDIyMDU3OT
-cyNzY5NDEwMTA2NzciLCJ0ZXh0IjoiU2hvdWxkIHlvdSBtYWtl
-IGl0IGV4cGxpY3QgdGhhdCBpdCBjYW5ub3QgZmluZCBub24tY2
-9uZm9ybWluZyBHNHMuIiwiY3JlYXRlZCI6MTUzMjM1NjUyNDA1
-NH0sIkZTSGlNMUJRQlk4dUdEaEMiOnsiZGlzY3Vzc2lvbklkIj
-oic0hNSzA5NHIyc0FqRlphZiIsInN1YiI6IjEwMjIwNTc5NzI3
-Njk0MTAxMDY3NyIsInRleHQiOiJUaGlzIHNlY3Rpb24gaXMgYW
-xsIHByZXR0eSBmYWN0dWFsLiBQZXJoYXBzIHlvdSBzaG91bGQg
-YWRkIHNvbWUgY3JpdGljYWwgZXZhbHVhdGlvbiBvbiB0b3AuIF
-doaWNoIG1vZGVscyBhcmUgdGhlIGJlc3QuIFdoYXRzIHdyb25n
-IHdpdGggdGhlIG90aGVycy4uLiIsImNyZWF0ZWQiOjE1MzIzNT
-Y1NzE2NDV9LCJNMzhLYWFYa2wxellVR2t2Ijp7ImRpc2N1c3Np
-b25JZCI6IkN0V1ZCYjdGQjkxbExpTngiLCJzdWIiOiIxMDIyMD
-U3OTcyNzY5NDEwMTA2NzciLCJ0ZXh0IjoiUmVtaW5kIG1lIGlm
-IHRoaXMgaXMgbG9uZyBvciBzaG9ydD8iLCJjcmVhdGVkIjoxNT
-MyMzU3MDMzMDA5fSwiRFRhZmdIWmhqYXpNVFU4TyI6eyJkaXNj
-dXNzaW9uSWQiOiJyOGk5aHNDdFFWQ0FybmswIiwic3ViIjoiMT
-AyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6IlVuIGZvcm1h
-dHRlZCBjaXRhdGlvbi4iLCJjcmVhdGVkIjoxNTMyMzYwODU2Nj
-kzfSwiWGpiVnZyQXBVVVFScjE4diI6eyJkaXNjdXNzaW9uSWQi
-OiIyVWZxMTRxMWpFOFFiak9KIiwic3ViIjoiMTAyMjA1Nzk3Mj
-c2OTQxMDEwNjc3IiwidGV4dCI6IldoYXQgZGlkIEJHNCBjaGlw
-IHNheSBhYm91dCB0aGlzIHJlZ2lvbj8iLCJjcmVhdGVkIjoxNT
-MyMzYxMTEyMjY3fSwidWlWZ1VyMlZZYjdVbmlqQiI6eyJkaXNj
-dXNzaW9uSWQiOiJwT0dnNGFmNWk4ZDNxUU1rIiwic3ViIjoiMT
-AyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6Ik9yIHRoYXQg
-aGlnaGx5IHRyYW5zY3JpYmVkIGdlbmVzIHNwZW5kIG1vcmUgb2
-YgdGhlcmUgdGltZSBpbiBhIHNpbmdsZSBzdHJhbmRlZCBzdGF0
-ZSwgZmF2b3VyaW5nIEc0IGZvcm1hdGlvbj8iLCJjcmVhdGVkIj
-oxNTMyMzYyNTU2OTk5fSwiNVRZRmhpaEdpdW05V3JtUyI6eyJk
-aXNjdXNzaW9uSWQiOiJMUTN4SEJ0N3R0TzFHSEplIiwic3ViIj
-oiMTAyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6Ik1pZGRs
-ZSBzZW50ZW5jZSBpbiB0aGlzIHBhcmEgZG9lc24ndCBzZWVtIH
-RvIGJlbG9uZy4gTGFzdCBzZW50ZW5jZSBvZiBsYXN0IHBhcmEg
-ZmVlbHMgbGlrZSBpdCBkb2Vzbi4gXG5cbk5pZXRoZXIgZXZpZG
-VuY2Ugbm9yIGNpdGF0aW9uIGluIG1pZGRsZSBzZW50ZW5jZS4i
-LCJjcmVhdGVkIjoxNTMyMzYyNzIwNjI2fSwiaGwzVExqdmdzT2
-93UXJHMCI6eyJkaXNjdXNzaW9uSWQiOiJ5SXNIZ3FZbEhvd0h2
-Z1E4Iiwic3ViIjoiMTAyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidG
-V4dCI6IkNhbiB0aGlzIGJlIHRlc3RlZCBieSBjb21wYXJpbmcg
-c2ltaWxhcmx5IEctcmljaCBzZXF1ZW5jZXMgdGhhdCBlaXRoZX
-IgZG8gb3IgZG8gbm90IG1hdGNoIHRoZSBRdWFkcGFyc2VyIG1v
-dGlmPyIsImNyZWF0ZWQiOjE1MzIzNjQwNjQzMDR9LCJRUWI4Y0
-pTdTZ3VjVINlhvIjp7ImRpc2N1c3Npb25JZCI6IjVFOUZ0V2Vl
-V3c0VHdLenQiLCJzdWIiOiIxMDIyMDU3OTcyNzY5NDEwMTA2Nz
-ciLCJ0ZXh0IjoiQXMgaW4gdGhlIEc0IGZvcm1pbmcgcG90ZW50
-aWFsIGlzIGhpZ2ggQU5EIHRoYXQgcG90ZW50aWFsIHRlbmRzIH
-RvIGJlIGdyZWF0ZXIgb24gdGhlIHRoZSBjb2Rpbmcgc3RyYW5k
-IHRoYW4gdGhlIHRlbXBsYXRlIHN0YXJ0P1xuXG5PUlxuXG5UaG
-UgRzQgZm9ybWluZyBwb3RlbnRpYWwgd2FzIGhpZ2ggb24gdGhl
-IHRlbXBsYXRlIHN0cmFuZCBhbmQgYWxzbyB0aGUgY29kaW5nIH
-N0cmFuZD8iLCJjcmVhdGVkIjoxNTMyMzY0Mjc1NTI3fSwiWlVn
-U3M3eERlNHN4VkVyaCI6eyJkaXNjdXNzaW9uSWQiOiJ2OURyQX
-kyeDlaVnBSNGlIIiwic3ViIjoiMTAyMjA1Nzk3Mjc2OTQxMDEw
-Njc3IiwidGV4dCI6IklzIHRoaXMgeW91cidzIG9yIGlzIGl0IG
-FkYXB0ZWQgZnJvbSBzb21ld2hlcmU/IiwiY3JlYXRlZCI6MTUz
-MjM2NTE1ODI3Mn0sIkRzVlZvMDFkcDFNbE53MDciOnsiZGlzY3
-Vzc2lvbklkIjoiTXA1OTF5clFhenB1bVQwQSIsInN1YiI6IjEw
-MjIwNTc5NzI3Njk0MTAxMDY3NyIsInRleHQiOiJSTkEgZm9ybX
-MgY29tcGxleCBzdHJ1Y3R1cmUgYmVjYXVzZSBSTkEgZm9ybXMg
-Y29tcGxleCBzdHJ1Y3R1cmU/IiwiY3JlYXRlZCI6MTUzMjM2Nz
-k3NTMyOH0sImwzSjQxS0lGMjZLSExZVUwiOnsiZGlzY3Vzc2lv
-bklkIjoieDFpSmx3b3A4b25uRHdhMiIsInN1YiI6IjEwMjIwNT
-c5NzI3Njk0MTAxMDY3NyIsInRleHQiOiJXaGF0IHdvdWxkIEc0
-cyBsb29rIGxpa2UgaW4gU0hBUEUtc2VxPyIsImNyZWF0ZWQiOj
-E1MzIzNjgwNDc2NTF9LCJvbzNFZmpWNm84UzR0UGJ1Ijp7ImRp
-c2N1c3Npb25JZCI6ImloTUxXQ0RVN25EMWt2eVUiLCJzdWIiOi
-IxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZXh0IjoiT25seSBp
-ZiBmb3JtYXRpb24gb2YgRzQgd2FzIGl0c2VsZiByZWd1bGF0aW
-9uPyIsImNyZWF0ZWQiOjE1MzIzNjgxMTcxMDd9LCJpQ3dQallU
-WjllWHZhYWdpIjp7ImRpc2N1c3Npb25JZCI6IlRmSUtGQVk0al
-lJa1lFUDgiLCJzdWIiOiIxMDIyMDU3OTcyNzY5NDEwMTA2Nzci
-LCJ0ZXh0IjoiaXMgdGhpcyBkZXRlcm1pbmVkIGp1c3QgdGhyb3
-VnaCBRdWFkcGFyc2VyIG1hdGNoZXM/IiwiY3JlYXRlZCI6MTUz
-MjM3NjM5ODgxOX0sImtKOW5acWhjSkVobXdYQUsiOnsiZGlzY3
-Vzc2lvbklkIjoiTmh0ZkF0SFBKU2pWUDM0dyIsInN1YiI6IjEw
-MjIwNTc5NzI3Njk0MTAxMDY3NyIsInRleHQiOiJUaGlzIGlzIH
-RoZSBmaXJzdCB0aW1lIHlvdSd2ZSBtZW50aW9uZWQgdGhlIGRp
-ZmZlcmVuY2VzIGluIHRlbXBlcmF0dXJlIGFuZCB0aGVpciBlZm
-ZlY3Qgb24gc3RhYmlsaXRpZXMgb2YgRzRzLiBQZXJoYXBzIHlv
-dSBzaG91bGQgbWFrZSBtb3JlIG9mIHRoaXMgc29tZXdoZXJlPy
-IsImNyZWF0ZWQiOjE1MzIzNzY0OTY2Njh9LCJwZ1ZYMGhaU1Ns
-YnNvSXBlIjp7ImRpc2N1c3Npb25JZCI6IkJFQWtpQmJ0OENGbj
-Myb3UiLCJzdWIiOiIxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0
-ZXh0IjoiSXMgaXQgdGhlIHNhbWUgbW90aWYgb3IgZG9lcyBpdC
-Btb3ZlIGFyb3VuZD8iLCJjcmVhdGVkIjoxNTMyMzc2NjIyMTQz
-fSwiQlBHN1NGQmdHUTAySm1ldiI6eyJkaXNjdXNzaW9uSWQiOi
-JxREluZlQydGlwcFFlNEQzIiwic3ViIjoiMTAyMjA1Nzk3Mjc2
-OTQxMDEwNjc3IiwidGV4dCI6IkhvdyBkb2VzIHRoaXMgaW50ZX
-JhY3Qgd2l0aCBjb2RvbiBiaWFzPyBDb3VsZCBpdCBleHBhbGlu
-LCBvciBiZSBleHBsYWluZWQgYnkgY29kb24gYmlhcz8gSSBrbm
-93IHRoYXQgeW91IHdpbGwgY29tZSBiYWNrIHRvIHRoaXMgcXVl
-c2l0b24sIGJ1dCBpdCBtaWdodCBiZSB3b3J0aCBwb2ludGluZy
-B0aGlzIG91dC4iLCJjcmVhdGVkIjoxNTMyMzc2Nzg0MTIxfSwi
-QTJGSXBjNXEzT2duYUVyciI6eyJkaXNjdXNzaW9uSWQiOiJnWl
-I5SFBtN2d2NWhCY1dvIiwic3ViIjoiMTAyMjA1Nzk3Mjc2OTQx
-MDEwNjc3IiwidGV4dCI6IklzIHRoaXMgcmVhbGx5IGV2ZXJ5IH
-BhcGVyIG9uIEc0cyBpbiBwbGFudHMhISEgVmlyZ2luIHRlcnJp
-dG9yeSBpbmRlZWQhIiwiY3JlYXRlZCI6MTUzMjM3Njg1MjMxNX
-0sIkkxZHJvZ1NBb3k2Y0cweUYiOnsiZGlzY3Vzc2lvbklkIjoi
-b2o0MTZXWlA1OWMwaUhTMCIsInN1YiI6IjEwMjIwNTc5NzI3Nj
-k0MTAxMDY3NyIsInRleHQiOiJJIGZlZWwgbGlrZSB0aGlzIGlz
-IHNvbWV0aGluZyB5b3Ugd291bGQgc2F5IGFmdGVyIHlvdSBoYW
-QgZmluaXNoZWQgcmV2aWV3aW5nIHRoZSBldmlkZW5jZS5cblxu
-U2luY2UgeW91IGFscmVhZHkgdGFsa2VkIGFib3V0IHBobG9lbS
-BkZXZlbG9wbWVudCBpbiB0aGUgbGFzdCBwYXJhLCB3aHkgbm90
-IHN0YXJ0IHdpdGggc29tZSBsaWtlIGxpa2UgXCJmdXJ0aGVyIG
-V2aWRlbmNlIGZvciBhIHJvbGUgb2YgRzRzIGluIGRldmVsb3Bt
-ZW50IGNvbWVzIGZyb20uLi5cIlxuXG5Zb3UgY291bGQgZmluaX
-NoIHdpdGggYSBqdWRnZW1lbnQgb24gdGhlIGV2aWRlbmNlIHRv
-IHRoZSBlZmZlY3QgdGhhdCBpdCBpcyBwbGF1c2libGUuIiwiY3
-JlYXRlZCI6MTUzMjM3NzA1MTg0NH0sInlKdmR5MXpCSElveUpO
-d0IiOnsiZGlzY3Vzc2lvbklkIjoiVmNDZ0RKUjIzVzBxSTdlZS
-IsInN1YiI6IjEwODUyMDAyOTMwMjI5NDY1MDQxNyIsInRleHQi
-OiJJIHRoaW5rIHdoYXQgaSdtIHRyeWluZyB0byBnZXQgYXQgaX
-MgdGhhdCB0aGUgbW9sZWN1bGUgaXMgcGxhc3RpYyBhbmQgY2Fu
-IGhhdmUgbWFueSBkaWZmZXJlbnQgc3RhdGVzLCB3aGljaCBtaW
-dodCBoYXZlIGRpZmZlcmVudCBiaW9sb2dpY2FsIGltcGxpY2F0
-aW9ucyIsImNyZWF0ZWQiOjE1MzIzODI1MzU4OTR9LCJEOWRFYV
-A0OWxQNTJ2b2Z3Ijp7ImRpc2N1c3Npb25JZCI6IjVTWVhPNnU1
-YnlaUDJZa2giLCJzdWIiOiIxMDg1MjAwMjkzMDIyOTQ2NTA0MT
-ciLCJ0ZXh0IjoidGhlcmUgaXMgYSBmaWd1cmUgbGlrZSB0aGlz
-IGluIGV2ZXJ5IEc0IHBhcGVyIHNpbmNlIGFib3V0IDIwMDUsIE
-kgY291bGQgY2l0ZSBhIHBvcHVsYXIgcmV2aWV3PyIsImNyZWF0
-ZWQiOjE1MzIzODI2NTQxODV9LCJueUJnaXZzdVhQTnRSOEp0Ij
-p7ImRpc2N1c3Npb25JZCI6Im9PMkRzT2tqQUxrR3lUT00iLCJz
-dWIiOiIxMDg1MjAwMjkzMDIyOTQ2NTA0MTciLCJ0ZXh0IjoiaX
-MgdGhpcyBhbiBpbXByb3ZlbWVudD8iLCJjcmVhdGVkIjoxNTMy
-MzgyOTkzMDEwfSwiWjBVZFhvSmY5VVV5NjV0eSI6eyJkaXNjdX
-NzaW9uSWQiOiI1U1lYTzZ1NWJ5WlAyWWtoIiwic3ViIjoiMTAy
-MjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6Ik5haCwgYXMgbG
-9uZyBhcyB0aGUgYXN0aGV0aWMgb2YgaXQgaXNuJ3QgYWN0dWFs
-bHkgY29waWVkIGZyb20gc29tZXdoZXJlLiIsImNyZWF0ZWQiOj
-E1MzI0NDkzODE0ODJ9LCJNOU0zUEtyWlZ5Wk5tUDVqIjp7ImRp
-c2N1c3Npb25JZCI6Im9PMkRzT2tqQUxrR3lUT00iLCJzdWIiOi
-IxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZXh0IjoiUGVyaGFw
-cyB5b3UgY291ZGwgc2F5IHNvbWV0aGluZyBsaWtlIFwiLCBvZi
-Bjb3Vyc2UgdGhpcyBkb2Vzbid0IGFkZHJlc3MgdGhlIHF1ZXN0
-aW9uIG9mIHdodGhlciB0aGVzZSBzZXF1ZW5jZXMgZm9ybSBHNH
-MgKmluIHZpdm8qXCIiLCJjcmVhdGVkIjoxNTMyNDQ5NjQ5MTk0
-fX0sImhpc3RvcnkiOlstNzg3NjE3NDU4LDc3NjU4OTYzLC0xND
-E4MTMzMDM3LDE0ODEzNDE3MjcsMzk5NDEzNzM5LDM2MTEwNDky
-NSwtMTQ4Mjk0NjIzMCwtMTE0ODcyNzMsLTQyNzIxNDQxMCw4MD
-AyNzYyMTMsMTgxOTMzNjg0NSwtMTI3NzU5NjUyMiwxNjM2OTc2
-MzE1LC0xMDQ5NjM1ODMxLDEyNzg4MTMyNTEsLTk4MTg0MjQ0NS
-wxNDI2NTI5MzAxLDE1OTc5MjYwMDYsMTQyNjUyOTMwMSwxOTI2
-MzY2MDMzXX0=
--->
