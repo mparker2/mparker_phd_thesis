@@ -248,7 +248,7 @@ R loop formation has been identified as a key component of class switch recombin
 
 \label{ssec:plant_distribution}
 
-Whilst the majority of G4 studies have been performed in mammalian systems, particularly *H. sapiens*, there is a growing body of evidence for functions of G4s in plant species including *Arabidopsis thaliana*, *Zea mays*, and *Oryza sativa* [@Mullen2010; @Andorf2014; @Wang2015; @Garg2016]. Monocotyledonous flowering plants such as *O. sativa* and *Z. mays* generally have higher GC content than dicotyledonous flowering plants and non-flowering plants [@Smarda2014]. Monocots also have higher PG4 content, presumably as a result of this [@Garg2016]. Three tetrad PG4 densities of plants tend to be lower than those of the well studied *H. sapiens* and *M. musculus*, however. *Arabidopsis thaliana*, the model plant, has a small genome and low PG4 density, with only 1200 three tetrad PG4s [@Mullen2010]. This represented a greater than two fold depletion of PG4s over what was expected in a windowed markov chain modelled genome [@Mullen2010]. Mullen et al. noted that Arabidopsis contains 43000 two tetrad PG4s, however, which they suggested might be stable at the temperature ranges that Arabidopsis lives at [@Mullen2010; @Mullen2012]. Garg et al. identified 1331 genes which have conserved two tetrad or greater PG4s in all dicot species tested, suggesting functional conservation of these motifs [@Garg2016].
+Whilst the majority of G4 studies have been performed in mammalian systems, particularly *H. sapiens*, there is a growing body of evidence for functions of G4s in plant species including *Arabidopsis thaliana*, *Zea mays*, and *Oryza sativa* [@Mullen2010; @Andorf2014; @Wang2015; @Garg2016; Yadov2017]. Monocotyledonous flowering plants such as *O. sativa* and *Z. mays* generally have higher GC content than dicotyledonous flowering plants and non-flowering plants [@Smarda2014]. Monocots also have higher PG4 content, presumably as a result of this [@Garg2016]. Three tetrad PG4 densities of plants tend to be lower than those of the well studied *H. sapiens* and *M. musculus*, however. *Arabidopsis thaliana*, the model plant, has a small genome and low PG4 density, with only 1200 three tetrad PG4s [@Mullen2010]. This represented a greater than two fold depletion of PG4s over what was expected in a windowed markov chain modelled genome [@Mullen2010]. Mullen et al. noted that Arabidopsis contains 43000 two tetrad PG4s, however, which they suggested might be stable at the temperature ranges that Arabidopsis lives at [@Mullen2010; @Mullen2012]. Garg et al. identified 1331 genes which have conserved two tetrad or greater PG4s in all dicot species tested, suggesting functional conservation of these motifs [@Garg2016].
 
 ### G Quadruplexes in Plant Telomeres
 
@@ -355,20 +355,20 @@ V4dCI6Ikc0IGZvcm1hdGlvbiBtaWdodCBhY3QgYXMgYSBtb2xl
 Y3VsYXIgc3dpdGNoIiwic3RhcnQiOjQ4ODY0LCJlbmQiOjQ4OT
 A4fSwiVGZJS0ZBWTRqWUlrWUVQOCI6eyJ0ZXh0IjoiTW9ub2Nv
 dHMgYWxzbyBoYXZlIGhpZ2hlciBQRzQgY29udGVudCwiLCJzdG
-FydCI6NjM5MTcsImVuZCI6NjM5NTV9LCJOaHRmQXRIUEpTalZQ
+FydCI6NjM5MjgsImVuZCI6NjM5NjZ9LCJOaHRmQXRIUEpTalZQ
 MzR3Ijp7InRleHQiOiJtaWdodCBiZSBzdGFibGUgYXQgdGhlIH
-RlbXBlcmF0dXJlIHJhbmdlcyIsInN0YXJ0Ijo2NDQ5NCwiZW5k
-Ijo2NDUzNX0sIkJFQWtpQmJ0OENGbjMyb3UiOnsidGV4dCI6Ik
-EgUEc0IG1vdGlmIiwic3RhcnQiOjY2ODA1LCJlbmQiOjY2ODE2
+RlbXBlcmF0dXJlIHJhbmdlcyIsInN0YXJ0Ijo2NDUwNSwiZW5k
+Ijo2NDU0Nn0sIkJFQWtpQmJ0OENGbjMyb3UiOnsidGV4dCI6Ik
+EgUEc0IG1vdGlmIiwic3RhcnQiOjY2ODE2LCJlbmQiOjY2ODI3
 fSwicURJbmZUMnRpcHBRZTREMyI6eyJ0ZXh0IjoiQW5hbHlzaX
 MgYnkgTXVsbGVuIGV0IGFsLiBpZGVudGlmaWVkIHRoYXQgdGhl
 IGdyZWF0ZXN0IGVucmljaG1lbnQgb2YgdHdvIHRldHJhZOKApi
-IsInN0YXJ0Ijo2NzU0MywiZW5kIjo2ODQ1OH0sImdaUjlIUG03
+IsInN0YXJ0Ijo2NzU1NCwiZW5kIjo2ODQ2OX0sImdaUjlIUG03
 Z3Y1aEJjV28iOnsidGV4dCI6IiMjIFJvbGUgb2YgRy1RdWFkcn
 VwbGV4ZXMgKmluIHBsYW50YSoiLCJzdGFydCI6NjMzMTcsImVu
 ZCI6NjMzNTR9LCJvajQxNldaUDU5YzBpSFMwIjp7InRleHQiOi
-JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2NzAzOCwi
-ZW5kIjo2NzA1OH19LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
+JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2NzA0OSwi
+ZW5kIjo2NzA2OX19LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
 l3VUtGIjp7ImRpc2N1c3Npb25JZCI6IlZjQ2dESlIyM1cwcUk3
 ZWUiLCJzdWIiOiIxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZX
 h0IjoiVG8gd2hhdCBleHRlbnQgaXMgYSBxdWFkcnVwbGV4IGEg
@@ -578,11 +578,11 @@ cyB5b3UgY291ZGwgc2F5IHNvbWV0aGluZyBsaWtlIFwiLCBvZi
 Bjb3Vyc2UgdGhpcyBkb2Vzbid0IGFkZHJlc3MgdGhlIHF1ZXN0
 aW9uIG9mIHdodGhlciB0aGVzZSBzZXF1ZW5jZXMgZm9ybSBHNH
 MgKmluIHZpdm8qXCIiLCJjcmVhdGVkIjoxNTMyNDQ5NjQ5MTk0
-fX0sImhpc3RvcnkiOlstNDI3MjE0NDEwLDgwMDI3NjIxMywxOD
-E5MzM2ODQ1LC0xMjc3NTk2NTIyLDE2MzY5NzYzMTUsLTEwNDk2
-MzU4MzEsMTI3ODgxMzI1MSwtOTgxODQyNDQ1LDE0MjY1MjkzMD
-EsMTU5NzkyNjAwNiwxNDI2NTI5MzAxLDE5MjYzNjYwMzMsNjE0
-Nzc0NDUwLDU3NjY3MDM3OSwyMTMxODE2NDY3LDkyMzIwNDI3NC
-wxNTQ4Nzk0OTgxLDQ5NzY2ODY0MywxNTQzOTg3NTUxLC03NDY1
-NDgyNTBdfQ==
+fX0sImhpc3RvcnkiOlstMjA1MTM2NjE1LC00MjcyMTQ0MTAsOD
+AwMjc2MjEzLDE4MTkzMzY4NDUsLTEyNzc1OTY1MjIsMTYzNjk3
+NjMxNSwtMTA0OTYzNTgzMSwxMjc4ODEzMjUxLC05ODE4NDI0ND
+UsMTQyNjUyOTMwMSwxNTk3OTI2MDA2LDE0MjY1MjkzMDEsMTky
+NjM2NjAzMyw2MTQ3NzQ0NTAsNTc2NjcwMzc5LDIxMzE4MTY0Nj
+csOTIzMjA0Mjc0LDE1NDg3OTQ5ODEsNDk3NjY4NjQzLDE1NDM5
+ODc1NTFdfQ==
 -->
