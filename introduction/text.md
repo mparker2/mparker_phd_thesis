@@ -250,7 +250,7 @@ R loop formation has been identified as a key component of class switch recombin
 
 Whilst the majority of G4 studies have been performed in mammalian systems, particularly *H. sapiens*, there is a growing body of evidence for functions of G4s in plant species including *Arabidopsis thaliana*, *Zea mays*, and *Oryza sativa* [@Mullen2010; @Andorf2014; @Wang2015; @Garg2016]. Monocotyledonous flowering plants such as *O. sativa* and *Z. mays* generally have higher GC content than dicotyledonous flowering plants and non-flowering plants [@Smarda2014]. Monocots also have higher PG4 content, presumably as a result of this [@Garg2016]. Three tetrad PG4 densities of plants tend to be lower than those of the well studied *H. sapiens* and *M. musculus*, however. *Arabidopsis thaliana*, the model plant, has a small genome and low PG4 density, with only 1200 three tetrad PG4s [@Mullen2010]. This represented a greater than two fold depletion of PG4s over what was expected in a windowed markov chain modelled genome [@Mullen2010]. Mullen et al. noted that Arabidopsis contains 43000 two tetrad PG4s, however, which they suggested might be stable at the temperature ranges that Arabidopsis lives at [@Mullen2010; @Mullen2012]. Garg et al. identified 1331 genes which have conserved two tetrad or greater PG4s in all dicot species tested, suggesting functional conservation of these motifs [@Garg2016].
 
-Arabidopsis telomeres are made up of the heptameric sequence TTTAGGG [@Richard1988]. This is slightly different sequence repeat from that found in most vertebrates, including *H. sapiens* [@Kim2018]. A number of plants species have also been reported to contain the same TTAGGG repeat as vertebrates, however [@Kim2018]. Both Arabidopsis and *O. sativa* have been shown to be sensitive to the telomerase inhibitor telomestatin [@Zhang2006]. Telomestatin is a G4 binding agent which has been shown to interact with the human telomeric repeat, and inhibit telomerase
+Arabidopsis telomeres are made up of the heptameric sequence TTTAGGG [@Richard1988]. This is slightly different sequence repeat from that found in most vertebrates, including *H. sapiens* [@Kim2018]. A number of plants species have also been reported to contain the same TTAGGG repeat as vertebrates, however [@Kim2018]. Both Arabidopsis and *O. sativa* have been shown to be sensitive to the telomerase inhibitor telomestatin [@Zhang2006]. Telomestatin is a G4 binding agent which has been shown to interact with the human telomeric repeat, and inhibit telomerase causing telomere shortening *in vivo* [@Kim2002]. Zhang et al. showed that sensitivity of cultured Arabidop
 
 ### Translational Regulation
 
@@ -357,16 +357,16 @@ FydCI6NjM5MTcsImVuZCI6NjM5NTV9LCJOaHRmQXRIUEpTalZQ
 MzR3Ijp7InRleHQiOiJtaWdodCBiZSBzdGFibGUgYXQgdGhlIH
 RlbXBlcmF0dXJlIHJhbmdlcyIsInN0YXJ0Ijo2NDQ5NCwiZW5k
 Ijo2NDUzNX0sIkJFQWtpQmJ0OENGbjMyb3UiOnsidGV4dCI6Ik
-EgUEc0IG1vdGlmIiwic3RhcnQiOjY2NDkyLCJlbmQiOjY2NTAz
+EgUEc0IG1vdGlmIiwic3RhcnQiOjY2NjAwLCJlbmQiOjY2NjEx
 fSwicURJbmZUMnRpcHBRZTREMyI6eyJ0ZXh0IjoiQW5hbHlzaX
 MgYnkgTXVsbGVuIGV0IGFsLiBpZGVudGlmaWVkIHRoYXQgdGhl
 IGdyZWF0ZXN0IGVucmljaG1lbnQgb2YgdHdvIHRldHJhZOKApi
-IsInN0YXJ0Ijo2NzIzMCwiZW5kIjo2ODE0NX0sImdaUjlIUG03
+IsInN0YXJ0Ijo2NzMzOCwiZW5kIjo2ODI1M30sImdaUjlIUG03
 Z3Y1aEJjV28iOnsidGV4dCI6IiMjIFJvbGUgb2YgRy1RdWFkcn
 VwbGV4ZXMgKmluIHBsYW50YSoiLCJzdGFydCI6NjMzMTcsImVu
 ZCI6NjMzNTR9LCJvajQxNldaUDU5YzBpSFMwIjp7InRleHQiOi
-JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2NjcyNSwi
-ZW5kIjo2Njc0NX19LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
+JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2NjgzMywi
+ZW5kIjo2Njg1M319LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
 l3VUtGIjp7ImRpc2N1c3Npb25JZCI6IlZjQ2dESlIyM1cwcUk3
 ZWUiLCJzdWIiOiIxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZX
 h0IjoiVG8gd2hhdCBleHRlbnQgaXMgYSBxdWFkcnVwbGV4IGEg
@@ -576,11 +576,11 @@ cyB5b3UgY291ZGwgc2F5IHNvbWV0aGluZyBsaWtlIFwiLCBvZi
 Bjb3Vyc2UgdGhpcyBkb2Vzbid0IGFkZHJlc3MgdGhlIHF1ZXN0
 aW9uIG9mIHdodGhlciB0aGVzZSBzZXF1ZW5jZXMgZm9ybSBHNH
 MgKmluIHZpdm8qXCIiLCJjcmVhdGVkIjoxNTMyNDQ5NjQ5MTk0
-fX0sImhpc3RvcnkiOlsxMDQxNDQ5NTU2LDE4MTkzMzY4NDUsLT
-EyNzc1OTY1MjIsMTYzNjk3NjMxNSwtMTA0OTYzNTgzMSwxMjc4
-ODEzMjUxLC05ODE4NDI0NDUsMTQyNjUyOTMwMSwxNTk3OTI2MD
-A2LDE0MjY1MjkzMDEsMTkyNjM2NjAzMyw2MTQ3NzQ0NTAsNTc2
-NjcwMzc5LDIxMzE4MTY0NjcsOTIzMjA0Mjc0LDE1NDg3OTQ5OD
-EsNDk3NjY4NjQzLDE1NDM5ODc1NTEsLTc0NjU0ODI1MCwtOTcy
-NjU5ODg0XX0=
+fX0sImhpc3RvcnkiOls2MTc4NjA3NDEsMTgxOTMzNjg0NSwtMT
+I3NzU5NjUyMiwxNjM2OTc2MzE1LC0xMDQ5NjM1ODMxLDEyNzg4
+MTMyNTEsLTk4MTg0MjQ0NSwxNDI2NTI5MzAxLDE1OTc5MjYwMD
+YsMTQyNjUyOTMwMSwxOTI2MzY2MDMzLDYxNDc3NDQ1MCw1NzY2
+NzAzNzksMjEzMTgxNjQ2Nyw5MjMyMDQyNzQsMTU0ODc5NDk4MS
+w0OTc2Njg2NDMsMTU0Mzk4NzU1MSwtNzQ2NTQ4MjUwLC05NzI2
+NTk4ODRdfQ==
 -->
