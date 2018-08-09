@@ -230,7 +230,7 @@ ATRX mutation also effects gene expression. Gibbons et al. identified gene expre
 
 \label{ssec:rloop_csr}
 
-R loops have been characterised *in vitro* in a number of organisms, from initial studies in *E. coli* [@Drolet1995] to genome wide profiling in *S. cerevisiae* [@Chan2014] and *H. sapiens* cell lines [@Chen2017]. R loops have been implicated in maintaining chromatin status and gene expression [@Powell2013; @Chen2015], as well as termination of transcription [@Skourti-Stathaki2011; @Skourti-Stathaki2011]. Chen et al. used an inactive RNase H enzyme, which binds specifically to RNA:DNA heteroduplexes, to immunoprecipitate R-loops in human chromatin [@Chen2017]. They identified a large number of R loop peaks located at promoter proximal regions, suggesting R loop formation early in transcription. The authors found that R loops were more common on genes that showed higher levels of proximal pausing, suggesting that R loop formation may be associated with the pausing of Pol II [@Chen2017]. Furthermore, regions containing R loops were also 
+R loops have been characterised *in vitro* in a number of organisms, from initial studies in *E. coli* [@Drolet1995] to genome wide profiling in *S. cerevisiae* [@Chan2014] and *H. sapiens* cell lines [@Chen2017]. R loops have been implicated in maintaining chromatin status and gene expression [@Powell2013; @Chen2015], as well as termination of transcription [@Skourti-Stathaki2011; @Skourti-Stathaki2011]. Chen et al. used an inactive RNase H enzyme, which binds specifically to RNA:DNA heteroduplexes, to immunoprecipitate R-loops in human chromatin [@Chen2017]. They identified a large number of R loop peaks located at promoter proximal regions, suggesting R loop formation early in transcription. The authors found that R loops were more common on genes that showed higher levels of proximal pausing, suggesting that R loop formation may be associated with the pausing of Pol II [@Chen2017]. Furthermore, regions containing R loops were also strongly associated with coding strand 
 
 R loop formation has been identified as a key component of class switch recombination (CSR) of immunoglobulin genes [@Daniels1995; @Reaban1990; @Yu2003]. CSR is the process by which the constant region of the immunoglobulin heavy chain (IgH) gene is switched, changing the properties of the resultant antibody [@Stavenezer1996]. This process is mediated by the activation-induced cytidine deaminase (AID), an enzyme which deaminates cytosines in ssDNA, within the switch regions of the IgH locus. This deamination results in DSB, causing the recombination of the gene. Transcription of the IgH gene produces a long non-coding RNA (lncRNA) with a constitutive first exon containing the variable antigen binding domain. Splicing to an alternative second exon is determined by the pattern of cytokines that the cell is exposed to. The intron lariat removed by this splicing is debranched and re-linearised by the enzyme DBR1 [@Zheng2015]. This intron lariat then forms an R-loop with the switch region of the IgH, resulting in ssDNA on the coding strand which becomes the substrate for AID. Zheng et al. showed that AID is able to bind specifically to G4 DNA and RNA, and that targeting of AID to the switch region is via binding to the debranched RNA lariat [@Zheng2015]. Furthermore, Ribeiro de Almeida et al. identified that resolution of G4s in the intron derived RNA is required for R-loop formation and CSR. This G4 unwinding was found to occur via the RNA Helicase DDX1 [@RibeirodeAlmeida2018].
 
@@ -351,20 +351,20 @@ V4dCI6Ikc0IGZvcm1hdGlvbiBtaWdodCBhY3QgYXMgYSBtb2xl
 Y3VsYXIgc3dpdGNoIiwic3RhcnQiOjQ4ODY0LCJlbmQiOjQ4OT
 A4fSwiVGZJS0ZBWTRqWUlrWUVQOCI6eyJ0ZXh0IjoiTW9ub2Nv
 dHMgYWxzbyBoYXZlIGhpZ2hlciBQRzQgY29udGVudCwiLCJzdG
-FydCI6NjM2NDIsImVuZCI6NjM2ODB9LCJOaHRmQXRIUEpTalZQ
+FydCI6NjM2ODEsImVuZCI6NjM3MTl9LCJOaHRmQXRIUEpTalZQ
 MzR3Ijp7InRleHQiOiJtaWdodCBiZSBzdGFibGUgYXQgdGhlIH
-RlbXBlcmF0dXJlIHJhbmdlcyIsInN0YXJ0Ijo2NDIxOSwiZW5k
-Ijo2NDI2MH0sIkJFQWtpQmJ0OENGbjMyb3UiOnsidGV4dCI6Ik
-EgUEc0IG1vdGlmIiwic3RhcnQiOjY1NjUxLCJlbmQiOjY1NjYy
+RlbXBlcmF0dXJlIHJhbmdlcyIsInN0YXJ0Ijo2NDI1OCwiZW5k
+Ijo2NDI5OX0sIkJFQWtpQmJ0OENGbjMyb3UiOnsidGV4dCI6Ik
+EgUEc0IG1vdGlmIiwic3RhcnQiOjY1NjkwLCJlbmQiOjY1NzAx
 fSwicURJbmZUMnRpcHBRZTREMyI6eyJ0ZXh0IjoiQW5hbHlzaX
 MgYnkgTXVsbGVuIGV0IGFsLiBpZGVudGlmaWVkIHRoYXQgdGhl
 IGdyZWF0ZXN0IGVucmljaG1lbnQgb2YgdHdvIHRldHJhZOKApi
-IsInN0YXJ0Ijo2NjM4OSwiZW5kIjo2NzMwNH0sImdaUjlIUG03
+IsInN0YXJ0Ijo2NjQyOCwiZW5kIjo2NzM0M30sImdaUjlIUG03
 Z3Y1aEJjV28iOnsidGV4dCI6IiMjIFJvbGUgb2YgRy1RdWFkcn
-VwbGV4ZXMgKmluIHBsYW50YSoiLCJzdGFydCI6NjMwNDIsImVu
-ZCI6NjMwNzl9LCJvajQxNldaUDU5YzBpSFMwIjp7InRleHQiOi
-JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2NTg4NCwi
-ZW5kIjo2NTkwNH19LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
+VwbGV4ZXMgKmluIHBsYW50YSoiLCJzdGFydCI6NjMwODEsImVu
+ZCI6NjMxMTh9LCJvajQxNldaUDU5YzBpSFMwIjp7InRleHQiOi
+JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2NTkyMywi
+ZW5kIjo2NTk0M319LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
 l3VUtGIjp7ImRpc2N1c3Npb25JZCI6IlZjQ2dESlIyM1cwcUk3
 ZWUiLCJzdWIiOiIxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZX
 h0IjoiVG8gd2hhdCBleHRlbnQgaXMgYSBxdWFkcnVwbGV4IGEg
@@ -574,11 +574,11 @@ cyB5b3UgY291ZGwgc2F5IHNvbWV0aGluZyBsaWtlIFwiLCBvZi
 Bjb3Vyc2UgdGhpcyBkb2Vzbid0IGFkZHJlc3MgdGhlIHF1ZXN0
 aW9uIG9mIHdodGhlciB0aGVzZSBzZXF1ZW5jZXMgZm9ybSBHNH
 MgKmluIHZpdm8qXCIiLCJjcmVhdGVkIjoxNTMyNDQ5NjQ5MTk0
-fX0sImhpc3RvcnkiOlstMTg4MTM0NTQ1LC0xMDQ5NjM1ODMxLD
-EyNzg4MTMyNTEsLTk4MTg0MjQ0NSwxNDI2NTI5MzAxLDE1OTc5
-MjYwMDYsMTQyNjUyOTMwMSwxOTI2MzY2MDMzLDYxNDc3NDQ1MC
-w1NzY2NzAzNzksMjEzMTgxNjQ2Nyw5MjMyMDQyNzQsMTU0ODc5
-NDk4MSw0OTc2Njg2NDMsMTU0Mzk4NzU1MSwtNzQ2NTQ4MjUwLC
-05NzI2NTk4ODQsLTE5MjM4MjI0OTYsLTE3NzU2Mjk0MjgsMTQ2
-NDM0MTg2Ml19
+fX0sImhpc3RvcnkiOls5NzAxODIxNTIsLTEwNDk2MzU4MzEsMT
+I3ODgxMzI1MSwtOTgxODQyNDQ1LDE0MjY1MjkzMDEsMTU5Nzky
+NjAwNiwxNDI2NTI5MzAxLDE5MjYzNjYwMzMsNjE0Nzc0NDUwLD
+U3NjY3MDM3OSwyMTMxODE2NDY3LDkyMzIwNDI3NCwxNTQ4Nzk0
+OTgxLDQ5NzY2ODY0MywxNTQzOTg3NTUxLC03NDY1NDgyNTAsLT
+k3MjY1OTg4NCwtMTkyMzgyMjQ5NiwtMTc3NTYyOTQyOCwxNDY0
+MzQxODYyXX0=
 -->
