@@ -230,7 +230,7 @@ ATRX mutation also effects gene expression. Gibbons et al. identified gene expre
 
 \label{ssec:rloop_csr}
 
-R loops have been characterised *in vitro* in a number of organisms, from initial studies in *E. coli* [@Drolet1995] to genome wide profiling in *S. cerevisiae* [@Chan2014] and *H. sapiens* cell lines [@Chen2017]. R loops have been implicated in maintaining chromatin status and gene expression [@Powell2013; @Chen2015], as well as termination of transcription [@Skourti-Stathaki2011; @Skourti-Stathaki2011]. Chen et al. used an inactive RNase H enzyme, which binds specifically to RNA:DNA heteroduplexes, to immunoprecipitate R-loops in human chromatin [@Chen2017]. They identified 
+R loops have been characterised *in vitro* in a number of organisms, from initial studies in *E. coli* [@Drolet1995] to genome wide profiling in *S. cerevisiae* [@Chan2014] and *H. sapiens* cell lines [@Chen2017]. R loops have been implicated in maintaining chromatin status and gene expression [@Powell2013; @Chen2015], as well as termination of transcription [@Skourti-Stathaki2011; @Skourti-Stathaki2011]. Chen et al. used an inactive RNase H enzyme, which binds specifically to RNA:DNA heteroduplexes, to immunoprecipitate R-loops in human chromatin [@Chen2017]. They identified a large number of R loop peaks located at promoter proximal regions, suggesting R loop formation early in transcription. The prese
 
 R loop formation has been identified as a key component of class switch recombination (CSR) of immunoglobulin genes [@Daniels1995; @Reaban1990; @Yu2003]. CSR is the process by which the constant region of the immunoglobulin heavy chain (IgH) gene is switched, changing the properties of the resultant antibody [@Stavenezer1996]. This process is mediated by the activation-induced cytidine deaminase (AID), an enzyme which deaminates cytosines in ssDNA, within the switch regions of the IgH locus. This deamination results in DSB, causing the recombination of the gene. Transcription of the IgH gene produces a long non-coding RNA (lncRNA) with a constitutive first exon containing the variable antigen binding domain. Splicing to an alternative second exon is determined by the pattern of cytokines that the cell is exposed to. The intron lariat removed by this splicing is debranched and re-linearised by the enzyme DBR1 [@Zheng2015]. This intron lariat then forms an R-loop with the switch region of the IgH, resulting in ssDNA on the coding strand which becomes the substrate for AID. Zheng et al. showed that AID is able to bind specifically to G4 DNA and RNA, and that targeting of AID to the switch region is via binding to the debranched RNA lariat [@Zheng2015]. Furthermore, Ribeiro de Almeida et al. identified that resolution of G4s in the intron derived RNA is required for R-loop formation and CSR. This G4 unwinding was found to occur via the RNA Helicase DDX1 [@RibeirodeAlmeida2018].
 
@@ -351,20 +351,20 @@ V4dCI6Ikc0IGZvcm1hdGlvbiBtaWdodCBhY3QgYXMgYSBtb2xl
 Y3VsYXIgc3dpdGNoIiwic3RhcnQiOjQ4ODY0LCJlbmQiOjQ4OT
 A4fSwiVGZJS0ZBWTRqWUlrWUVQOCI6eyJ0ZXh0IjoiTW9ub2Nv
 dHMgYWxzbyBoYXZlIGhpZ2hlciBQRzQgY29udGVudCwiLCJzdG
-FydCI6NjMyNzYsImVuZCI6NjMzMTR9LCJOaHRmQXRIUEpTalZQ
+FydCI6NjM0MDYsImVuZCI6NjM0NDR9LCJOaHRmQXRIUEpTalZQ
 MzR3Ijp7InRleHQiOiJtaWdodCBiZSBzdGFibGUgYXQgdGhlIH
-RlbXBlcmF0dXJlIHJhbmdlcyIsInN0YXJ0Ijo2Mzg1MywiZW5k
-Ijo2Mzg5NH0sIkJFQWtpQmJ0OENGbjMyb3UiOnsidGV4dCI6Ik
-EgUEc0IG1vdGlmIiwic3RhcnQiOjY1Mjg1LCJlbmQiOjY1Mjk2
+RlbXBlcmF0dXJlIHJhbmdlcyIsInN0YXJ0Ijo2Mzk4MywiZW5k
+Ijo2NDAyNH0sIkJFQWtpQmJ0OENGbjMyb3UiOnsidGV4dCI6Ik
+EgUEc0IG1vdGlmIiwic3RhcnQiOjY1NDE1LCJlbmQiOjY1NDI2
 fSwicURJbmZUMnRpcHBRZTREMyI6eyJ0ZXh0IjoiQW5hbHlzaX
 MgYnkgTXVsbGVuIGV0IGFsLiBpZGVudGlmaWVkIHRoYXQgdGhl
 IGdyZWF0ZXN0IGVucmljaG1lbnQgb2YgdHdvIHRldHJhZOKApi
-IsInN0YXJ0Ijo2NjAyMywiZW5kIjo2NjkzOH0sImdaUjlIUG03
+IsInN0YXJ0Ijo2NjE1MywiZW5kIjo2NzA2OH0sImdaUjlIUG03
 Z3Y1aEJjV28iOnsidGV4dCI6IiMjIFJvbGUgb2YgRy1RdWFkcn
-VwbGV4ZXMgKmluIHBsYW50YSoiLCJzdGFydCI6NjI2NzYsImVu
-ZCI6NjI3MTN9LCJvajQxNldaUDU5YzBpSFMwIjp7InRleHQiOi
-JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2NTUxOCwi
-ZW5kIjo2NTUzOH19LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
+VwbGV4ZXMgKmluIHBsYW50YSoiLCJzdGFydCI6NjI4MDYsImVu
+ZCI6NjI4NDN9LCJvajQxNldaUDU5YzBpSFMwIjp7InRleHQiOi
+JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2NTY0OCwi
+ZW5kIjo2NTY2OH19LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
 l3VUtGIjp7ImRpc2N1c3Npb25JZCI6IlZjQ2dESlIyM1cwcUk3
 ZWUiLCJzdWIiOiIxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZX
 h0IjoiVG8gd2hhdCBleHRlbnQgaXMgYSBxdWFkcnVwbGV4IGEg
@@ -574,11 +574,11 @@ cyB5b3UgY291ZGwgc2F5IHNvbWV0aGluZyBsaWtlIFwiLCBvZi
 Bjb3Vyc2UgdGhpcyBkb2Vzbid0IGFkZHJlc3MgdGhlIHF1ZXN0
 aW9uIG9mIHdodGhlciB0aGVzZSBzZXF1ZW5jZXMgZm9ybSBHNH
 MgKmluIHZpdm8qXCIiLCJjcmVhdGVkIjoxNTMyNDQ5NjQ5MTk0
-fX0sImhpc3RvcnkiOlstMTA0OTYzNTgzMSwxMjc4ODEzMjUxLC
-05ODE4NDI0NDUsMTQyNjUyOTMwMSwxNTk3OTI2MDA2LDE0MjY1
-MjkzMDEsMTkyNjM2NjAzMyw2MTQ3NzQ0NTAsNTc2NjcwMzc5LD
-IxMzE4MTY0NjcsOTIzMjA0Mjc0LDE1NDg3OTQ5ODEsNDk3NjY4
-NjQzLDE1NDM5ODc1NTEsLTc0NjU0ODI1MCwtOTcyNjU5ODg0LC
-0xOTIzODIyNDk2LC0xNzc1NjI5NDI4LDE0NjQzNDE4NjIsOTU5
-ODE0ODY4XX0=
+fX0sImhpc3RvcnkiOls1OTM5MjEzNjcsLTEwNDk2MzU4MzEsMT
+I3ODgxMzI1MSwtOTgxODQyNDQ1LDE0MjY1MjkzMDEsMTU5Nzky
+NjAwNiwxNDI2NTI5MzAxLDE5MjYzNjYwMzMsNjE0Nzc0NDUwLD
+U3NjY3MDM3OSwyMTMxODE2NDY3LDkyMzIwNDI3NCwxNTQ4Nzk0
+OTgxLDQ5NzY2ODY0MywxNTQzOTg3NTUxLC03NDY1NDgyNTAsLT
+k3MjY1OTg4NCwtMTkyMzgyMjQ5NiwtMTc3NTYyOTQyOCwxNDY0
+MzQxODYyXX0=
 -->
