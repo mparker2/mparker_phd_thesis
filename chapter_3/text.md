@@ -233,7 +233,7 @@ Whilst the Human genome contains a large number of G4 forming sequences, this is
 
 ### Conclusion
 
-We present G4Seeqer, the first Convolutional/Recurrent Neural Network model for prediction of G Quadruplex forming structures. G4Seeqer is implemented in Python, using Cython for speed-up of G4Hunter candidate region proposal, and `Keras` with `Tensorflow` backend for neural network prediction [@Chollet2018; @Abadi2016]. Weights have been trained on the G4Seq dataset [@Chambers2015] and transfer learned to the rG4Seq dataset [@Kwok2016], to produce models tailored for DNA and RNA G4s, respectively. It is able to process the whole human genome in approximately 1 hour on a 8 core i7 desktop computer with 16GB RAM. Because G4Seeqer is trained directly upon sequences from the human genome, rather than on derived sequence features, it is able to identify patterns in the G4Seq dataset that have not previously been reported, as well as removing false positive sequences which are flagged by pattern matching techniques. This greatly improves the accuracy of the model on various *in vitro* and *in vivo* datasets, from stabilities determined by UV melting to genomic regions identified by BG4 ChIP-seq [@Hansel2016].
+We present G4Seeqer, the first Convolutional/Recurrent Neural Network model for prediction of G Quadruplex forming structures. G4Seeqer is implemented in Python, using Cython for speed-up of G4Hunter candidate region proposal, and `Keras` with `Tensorflow` backend for neural network prediction [@Chollet2018; @Abadi2016]. Weights have been trained on the G4Seq dataset [@Chambers2015] and transfer learned to the rG4Seq dataset [@Kwok2016], to produce models tailored for DNA and RNA G4s, respectively. It is able to make predictions on the whole human genome in approximately 1 hour on a 8 core i7 desktop computer with 16GB RAM. Because G4Seeqer is trained directly upon sequences from the human genome, rather than on derived sequence features, it is able to identify patterns in the G4Seq dataset that have not previously been reported, as well as removing false positive sequences which are flagged by pattern matching techniques. This greatly improves the accuracy of the model on various *in vitro* and *in vivo* datasets, from stabilities determined by UV melting to genomic regions identified by BG4 ChIP-seq [@Hansel2016].
 
 \newpage
 <!--stackedit_data:
@@ -344,7 +344,7 @@ NzaWJsZSAgdGV0cmFkIFF14oCmIiwic3RhcnQiOjUxODY3LCJl
 bmQiOjUyMTM0fSwiaXlkMWE3SlE1c1lXaWZpdSI6eyJ0ZXh0Ij
 oiSXQgaXMgYWJsZSB0byBwcm9jZXNzIHRoZSB3aG9sZSBodW1h
 biBnZW5vbWUgaW4gYXBwcm94aW1hdGVseSAxIGhvdXIgb24gYS
-A4IGNvcuKApiIsInN0YXJ0Ijo1MjcwNiwiZW5kIjo1MjgyMX19
+A4IGNvcuKApiIsInN0YXJ0Ijo1MjcwNiwiZW5kIjo1MjgzM319
 LCJjb21tZW50cyI6eyI2bHhaYmRLMEE1ejhxWnhrIjp7ImRpc2
 N1c3Npb25JZCI6Ikd1a2gzcmpjeHd1aFdIdGkiLCJzdWIiOiIx
 MDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZXh0IjoiSG93IG1hbn
@@ -553,11 +553,11 @@ LCJjcmVhdGVkIjoxNTMzMTQzOTI5OTE0fSwiWFN3VWRDRHZLN1
 RFVW4ySCI6eyJkaXNjdXNzaW9uSWQiOiJCNmJ3SEtDVEs0ZldI
 S3laIiwic3ViIjoiMTA4NTIwMDI5MzAyMjk0NjUwNDE3IiwidG
 V4dCI6ImJldHRlcj8iLCJjcmVhdGVkIjoxNTMzMTQ0MDQzODg3
-fX0sImhpc3RvcnkiOlstNTU4NzkxNzQ5LC0xOTI5MDQ4MjkwLD
-E0MDA2MTI2NjgsLTE5NjgyMTM3MjgsNDI2NDI5NDYyLC0xNjI4
-MjE0OTI0LDEzNjIyOTg5MDMsMTQ2NDYyNDkyLC0xNjg1MzE5Nz
-MxLC0xNDcwNzYzMjAyLC0xNTU3NDIyMDQyLDE2ODE5ODQzODEs
-NTE1NTA3MDY5LC00ODQxNzA0MDksMTQ1MTU5NzU5LDEwNjI4Mj
-AyOTksMjU2MDE3NTI5LDEwNjI4MjAyOTksLTYxNzk3OTc4Niwt
-MTQyNDc4MjU1Nl19
+fX0sImhpc3RvcnkiOlstMjA3MjkzMzAwMCwtNTU4NzkxNzQ5LC
+0xOTI5MDQ4MjkwLDE0MDA2MTI2NjgsLTE5NjgyMTM3MjgsNDI2
+NDI5NDYyLC0xNjI4MjE0OTI0LDEzNjIyOTg5MDMsMTQ2NDYyND
+kyLC0xNjg1MzE5NzMxLC0xNDcwNzYzMjAyLC0xNTU3NDIyMDQy
+LDE2ODE5ODQzODEsNTE1NTA3MDY5LC00ODQxNzA0MDksMTQ1MT
+U5NzU5LDEwNjI4MjAyOTksMjU2MDE3NTI5LDEwNjI4MjAyOTks
+LTYxNzk3OTc4Nl19
 -->
