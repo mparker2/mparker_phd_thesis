@@ -193,8 +193,6 @@ We also noted that G4Seeqer was positively labelling certain sequences which con
 
 \newpage
 
-In order to study how interactions between pairs mutations might affect predicted G4 stability, we developed a pairwise mutation map, in which pairs of Gs in each sequence were combinatorially mutated to Ts. We then analysed the resultant mutation maps to identify pairs of G->T transversions which interact to reduce predicted G4 forming potential more strongly than each individual mutation. Perhaps unsurprisingly, we found that in sequences which had more than four G-runs, or had G4s containing features which might form G-triplexes or G-hairpins, mutations which disrupted peripheral G-runs did not have a strong effect on predicted stability. Combinations of mutations which disrupt multiple G-runs had a much stronger effect on stability, however.
-
 ### Loop Length and G4 stability
 
 To determine whether G4Seeqer probability scores supported previous work on the relationship between G4 loop length and stability, we first downloaded UV melting temperatures for three tetrad G4 sequences from Table 1 of Guédin et al. 2010. The majority of these G4 sequences contain only runs of Gs and Ts. In each experiment, one or two of the three T loops were held at a constant length of either 1 or 3, and the other loops varied from 1 up to 15 bp in length [@Guedin2010]. For each sequence, we produced 1000 sequences padded to 128bp (the input length of G4Seeqer) using randomly generated bases, and used G4Seeqer to predict the stability. We found a very strong correlation (Spearmans rho 0.93, p = 1.1e-35) between empirically determined melting temperature in potassium, and G4Seeqer score (Fig. \ref{tm}), suggesting that G4Seeqer is successfully capturing information about G4 structure which is transferable between conditions. The midpoint of the curve appears to suggest that a melting temperature of around 65 degrees Celsius is required for significant mismatches to occur in the G4Seq dataset. We also noted that G4seeqer output was more variable for sequences with lower melting temperatures, suggesting that sequence context may be more important for these G4s.
@@ -339,14 +337,14 @@ aeKApiIsInN0YXJ0Ijo0Mzk5NywiZW5kIjo0NDI1NX0sInVtS2
 xGbmc4M1VYZWl2WnUiOnsidGV4dCI6IlRoZSBQRzQgc3BhY2Ug
 b2YgdGhlICpNLiBtdXNjdWx1cyogZ2Vub21lIHdhcyBhbHNvIG
 1lYXN1cmVkLCBhbmQgZm91bmQgdG8gY29udGHigKYiLCJzdGFy
-dCI6NTA5MDcsImVuZCI6NTExMDF9LCJjUWRSbmZyVVpscUtWYl
+dCI6NTAxNTAsImVuZCI6NTAzNDR9LCJjUWRSbmZyVVpscUtWYl
 JuIjp7InRleHQiOiIyRCBLZXJuZWwgZGVuc2l0eSBlc3RpbWF0
 ZSBwbG90IHNob3dpbmcgZGlzdHJpYnV0aW9uIG9mIGFsbCBwb3
-NzaWJsZSAgdGV0cmFkIFF14oCmIiwic3RhcnQiOjUyNDA4LCJl
-bmQiOjUyNjc1fSwiaXlkMWE3SlE1c1lXaWZpdSI6eyJ0ZXh0Ij
+NzaWJsZSAgdGV0cmFkIFF14oCmIiwic3RhcnQiOjUxNjUxLCJl
+bmQiOjUxOTE4fSwiaXlkMWE3SlE1c1lXaWZpdSI6eyJ0ZXh0Ij
 oiSXQgaXMgYWJsZSB0byBwcm9jZXNzIHRoZSB3aG9sZSBodW1h
 biBnZW5vbWUgaW4gYXBwcm94aW1hdGVseSAxIGhvdXIgb24gYS
-A4IGNvcuKApiIsInN0YXJ0Ijo1MzI0NywiZW5kIjo1MzM2Mn19
+A4IGNvcuKApiIsInN0YXJ0Ijo1MjQ5MCwiZW5kIjo1MjYwNX19
 LCJjb21tZW50cyI6eyI2bHhaYmRLMEE1ejhxWnhrIjp7ImRpc2
 N1c3Npb25JZCI6Ikd1a2gzcmpjeHd1aFdIdGkiLCJzdWIiOiIx
 MDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZXh0IjoiSG93IG1hbn
@@ -555,7 +553,7 @@ LCJjcmVhdGVkIjoxNTMzMTQzOTI5OTE0fSwiWFN3VWRDRHZLN1
 RFVW4ySCI6eyJkaXNjdXNzaW9uSWQiOiJCNmJ3SEtDVEs0ZldI
 S3laIiwic3ViIjoiMTA4NTIwMDI5MzAyMjk0NjUwNDE3IiwidG
 V4dCI6ImJldHRlcj8iLCJjcmVhdGVkIjoxNTMzMTQ0MDQzODg3
-fX0sImhpc3RvcnkiOlstMTYxNzEyODg5LC0xOTY4MjEzNzI4LD
+fX0sImhpc3RvcnkiOlsxNDAwNjEyNjY4LC0xOTY4MjEzNzI4LD
 QyNjQyOTQ2MiwtMTYyODIxNDkyNCwxMzYyMjk4OTAzLDE0NjQ2
 MjQ5MiwtMTY4NTMxOTczMSwtMTQ3MDc2MzIwMiwtMTU1NzQyMj
 A0MiwxNjgxOTg0MzgxLDUxNTUwNzA2OSwtNDg0MTcwNDA5LDE0
