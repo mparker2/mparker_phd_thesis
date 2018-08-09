@@ -250,7 +250,7 @@ R loop formation has been identified as a key component of class switch recombin
 
 Whilst the majority of G4 studies have been performed in mammalian systems, particularly *H. sapiens*, there is a growing body of evidence for functions of G4s in plant species including *Arabidopsis thaliana*, *Zea mays*, and *Oryza sativa* [@Mullen2010; @Takahashi2012; @Andorf2014; @Wang2015; @Garg2016; @Yadav2017]. Monocotyledonous flowering plants such as *O. sativa* and *Z. mays* generally have higher GC content than dicotyledonous flowering plants and non-flowering plants [@Smarda2014]. Monocots also have higher PG4 content, presumably as a result of this [@Garg2016]. Three tetrad PG4 densities of plants tend to be lower than those of the well studied *H. sapiens* and *M. musculus*, however. *Arabidopsis thaliana*, the model plant, has a small genome and low PG4 density, with only 1200 three tetrad PG4s [@Mullen2010]. This represented a greater than two fold depletion of PG4s over what was expected in a windowed markov chain modelled genome [@Mullen2010]. Mullen et al. noted that Arabidopsis contains 43000 two tetrad PG4s, however, which they suggested might be stable at the temperature ranges that Arabidopsis lives at [@Mullen2010; @Mullen2012]. Garg et al. identified 1331 genes which have conserved two tetrad or greater PG4s in all dicot species tested, suggesting functional conservation of these motifs [@Garg2016]. Takahashi et al. analysed the plant species *O. sativa*, *P. trichocarpa*, *V. vinifera* and *A. thaliana*, and found an enrichment of PG4s at the TSS of genes, particularly on the template strand of the gene [@Takahashi2012].
 
-### G Quadruplexes in Plant Telomeres
+### G-Quadruplexes in plant telomeres
 
 Arabidopsis telomeres are made up of the heptameric sequence TTTAGGG [@Richard1988]. This is slightly different sequence repeat from that found in most vertebrates, including *H. sapiens* [@Kim2018]. A number of plants species have also been reported to contain the same TTAGGG repeat as vertebrates, however [@Kim2018]. Both Arabidopsis and *O. sativa* have been shown to be sensitive to the telomerase inhibitor telomestatin [@Zhang2006]. Telomestatin is a G4 binding agent which has been shown to interact with the human telomeric repeat, and inhibit telomerase causing telomere shortening *in vivo* [@Kim2002]. Zhang et al. showed that sensitivity of cultured Arabidopsis and *O. sativa* cells to telomestatin occurs via the same method of telomere shortening, suggesting that plant telomeres may also form G4s *in vivo* [@Zhang2006].
 
@@ -582,11 +582,11 @@ cyB5b3UgY291ZGwgc2F5IHNvbWV0aGluZyBsaWtlIFwiLCBvZi
 Bjb3Vyc2UgdGhpcyBkb2Vzbid0IGFkZHJlc3MgdGhlIHF1ZXN0
 aW9uIG9mIHdodGhlciB0aGVzZSBzZXF1ZW5jZXMgZm9ybSBHNH
 MgKmluIHZpdm8qXCIiLCJjcmVhdGVkIjoxNTMyNDQ5NjQ5MTk0
-fX0sImhpc3RvcnkiOls3NzY1ODk2MywtMTQxODEzMzAzNywxND
-gxMzQxNzI3LDM5OTQxMzczOSwzNjExMDQ5MjUsLTE0ODI5NDYy
-MzAsLTExNDg3MjczLC00MjcyMTQ0MTAsODAwMjc2MjEzLDE4MT
-kzMzY4NDUsLTEyNzc1OTY1MjIsMTYzNjk3NjMxNSwtMTA0OTYz
-NTgzMSwxMjc4ODEzMjUxLC05ODE4NDI0NDUsMTQyNjUyOTMwMS
-wxNTk3OTI2MDA2LDE0MjY1MjkzMDEsMTkyNjM2NjAzMyw2MTQ3
-NzQ0NTBdfQ==
+fX0sImhpc3RvcnkiOls3Mzg4MjY1OTIsNzc2NTg5NjMsLTE0MT
+gxMzMwMzcsMTQ4MTM0MTcyNywzOTk0MTM3MzksMzYxMTA0OTI1
+LC0xNDgyOTQ2MjMwLC0xMTQ4NzI3MywtNDI3MjE0NDEwLDgwMD
+I3NjIxMywxODE5MzM2ODQ1LC0xMjc3NTk2NTIyLDE2MzY5NzYz
+MTUsLTEwNDk2MzU4MzEsMTI3ODgxMzI1MSwtOTgxODQyNDQ1LD
+E0MjY1MjkzMDEsMTU5NzkyNjAwNiwxNDI2NTI5MzAxLDE5MjYz
+NjYwMzNdfQ==
 -->
