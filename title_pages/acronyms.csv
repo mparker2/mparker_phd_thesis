@@ -1,4 +1,5 @@
 acronym,definition
+AID,Activation-induced cytidine deaminase
 ATAC-seq,Assay for transposase-accessible chromatin using sequencing
 ATP,Adenosine triphosphate
 ATR-X/ATRX,Alpha-thalassemia mental retardation syndrome/protein
@@ -11,6 +12,7 @@ ChIP-seq,Chromatin immunoprecipitation with sequencing
 CHX,Cyclohexamide
 CNN,Convolutional neural network
 CPM,Counts per million
+CSR,Class switch recombination
 CTD,Carboxy-terminal domain
 DMS,Dimethyl sulphate
 DMSO,Dimethyl sulphoxide
@@ -30,9 +32,11 @@ GO,Gene ontology
 GRO,Global run-on sequencing
 HDAC,Histone deacetylase
 HEK,Human embryonic kidney
-hnRNP,Heterogeneous ribonucleoprotein particle 
+hnRNP,Heterogeneous ribonucleoprotein particle
+IgH,Immunoglobulin Heavy Chain
 IRES,Internal ribosome entry site
 LogFC,Log fold change
+lncRNA,Long non-coding RNA
 LRX,Leucine rich repeat extensin
 LSTM,Long short term memory
 MA plot,Mean average plot
