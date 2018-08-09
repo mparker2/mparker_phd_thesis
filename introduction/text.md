@@ -230,7 +230,7 @@ ATRX mutation also effects gene expression. Gibbons et al. identified gene expre
 
 \label{ssec:rloop_csr}
 
-R loops have been characterised *in vitro* in a number of organisms, from 
+R loops have been characterised *in vitro* in a number of organisms, from *E. coli* [@Drolet1995] to *S. cerevisiae* [@Chen2014]
 
 R loop formation has been identified as a key component of class switch recombination (CSR) of immunoglobulin genes [@Daniels1995; @Reaban1990; @Yu2003]. CSR is the process by which the constant region of the immunoglobulin heavy chain (IgH) gene is switched, changing the properties of the resultant antibody [@Stavenezer1996]. This process is mediated by the activation-induced cytidine deaminase (AID), an enzyme which deaminates cytosines in ssDNA, within the switch regions of the IgH locus. This deamination results in DSB, causing the recombination of the gene. Transcription of the IgH gene produces a long non-coding RNA (lncRNA) with a constitutive first exon containing the variable antigen binding domain. Splicing to an alternative second exon is determined by the pattern of cytokines that the cell is exposed to. The intron lariat removed by this splicing is debranched and re-linearised by the enzyme DBR1 [@Zheng2015]. This intron lariat then forms an R-loop with the switch region of the IgH, resulting in ssDNA on the coding strand which becomes the substrate for AID. Zheng et al. showed that AID is able to bind specifically to G4 DNA and RNA, and that targeting of AID to the switch region is via binding to the debranched RNA lariat [@Zheng2015]. Furthermore, Ribeiro de Almeida et al. identified that resolution of G4s in the intron derived RNA is required for R-loop formation and CSR. This G4 unwinding was found to occur via the RNA Helicase DDX1 [@RibeirodeAlmeida2018].
 
@@ -351,20 +351,20 @@ V4dCI6Ikc0IGZvcm1hdGlvbiBtaWdodCBhY3QgYXMgYSBtb2xl
 Y3VsYXIgc3dpdGNoIiwic3RhcnQiOjQ4ODY0LCJlbmQiOjQ4OT
 A4fSwiVGZJS0ZBWTRqWUlrWUVQOCI6eyJ0ZXh0IjoiTW9ub2Nv
 dHMgYWxzbyBoYXZlIGhpZ2hlciBQRzQgY29udGVudCwiLCJzdG
-FydCI6NjI3NjcsImVuZCI6NjI4MDV9LCJOaHRmQXRIUEpTalZQ
+FydCI6NjI4MjEsImVuZCI6NjI4NTl9LCJOaHRmQXRIUEpTalZQ
 MzR3Ijp7InRleHQiOiJtaWdodCBiZSBzdGFibGUgYXQgdGhlIH
-RlbXBlcmF0dXJlIHJhbmdlcyIsInN0YXJ0Ijo2MzM0NCwiZW5k
-Ijo2MzM4NX0sIkJFQWtpQmJ0OENGbjMyb3UiOnsidGV4dCI6Ik
-EgUEc0IG1vdGlmIiwic3RhcnQiOjY0Nzc2LCJlbmQiOjY0Nzg3
+RlbXBlcmF0dXJlIHJhbmdlcyIsInN0YXJ0Ijo2MzM5OCwiZW5k
+Ijo2MzQzOX0sIkJFQWtpQmJ0OENGbjMyb3UiOnsidGV4dCI6Ik
+EgUEc0IG1vdGlmIiwic3RhcnQiOjY0ODMwLCJlbmQiOjY0ODQx
 fSwicURJbmZUMnRpcHBRZTREMyI6eyJ0ZXh0IjoiQW5hbHlzaX
 MgYnkgTXVsbGVuIGV0IGFsLiBpZGVudGlmaWVkIHRoYXQgdGhl
 IGdyZWF0ZXN0IGVucmljaG1lbnQgb2YgdHdvIHRldHJhZOKApi
-IsInN0YXJ0Ijo2NTUxNCwiZW5kIjo2NjQyOX0sImdaUjlIUG03
+IsInN0YXJ0Ijo2NTU2OCwiZW5kIjo2NjQ4M30sImdaUjlIUG03
 Z3Y1aEJjV28iOnsidGV4dCI6IiMjIFJvbGUgb2YgRy1RdWFkcn
-VwbGV4ZXMgKmluIHBsYW50YSoiLCJzdGFydCI6NjIxNjcsImVu
-ZCI6NjIyMDR9LCJvajQxNldaUDU5YzBpSFMwIjp7InRleHQiOi
-JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2NTAwOSwi
-ZW5kIjo2NTAyOX19LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
+VwbGV4ZXMgKmluIHBsYW50YSoiLCJzdGFydCI6NjIyMjEsImVu
+ZCI6NjIyNTh9LCJvajQxNldaUDU5YzBpSFMwIjp7InRleHQiOi
+JJdCBpcyBwbGF1c2libGUgdGhhdCIsInN0YXJ0Ijo2NTA2Mywi
+ZW5kIjo2NTA4M319LCJjb21tZW50cyI6eyJyb2Q2QUdUM2ZJdj
 l3VUtGIjp7ImRpc2N1c3Npb25JZCI6IlZjQ2dESlIyM1cwcUk3
 ZWUiLCJzdWIiOiIxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZX
 h0IjoiVG8gd2hhdCBleHRlbnQgaXMgYSBxdWFkcnVwbGV4IGEg
@@ -574,11 +574,11 @@ cyB5b3UgY291ZGwgc2F5IHNvbWV0aGluZyBsaWtlIFwiLCBvZi
 Bjb3Vyc2UgdGhpcyBkb2Vzbid0IGFkZHJlc3MgdGhlIHF1ZXN0
 aW9uIG9mIHdodGhlciB0aGVzZSBzZXF1ZW5jZXMgZm9ybSBHNH
 MgKmluIHZpdm8qXCIiLCJjcmVhdGVkIjoxNTMyNDQ5NjQ5MTk0
-fX0sImhpc3RvcnkiOlszMjg2MTY4MCwtOTgxODQyNDQ1LDE0Mj
-Y1MjkzMDEsMTU5NzkyNjAwNiwxNDI2NTI5MzAxLDE5MjYzNjYw
-MzMsNjE0Nzc0NDUwLDU3NjY3MDM3OSwyMTMxODE2NDY3LDkyMz
-IwNDI3NCwxNTQ4Nzk0OTgxLDQ5NzY2ODY0MywxNTQzOTg3NTUx
-LC03NDY1NDgyNTAsLTk3MjY1OTg4NCwtMTkyMzgyMjQ5NiwtMT
-c3NTYyOTQyOCwxNDY0MzQxODYyLDk1OTgxNDg2OCwxNzYzNDM0
-MzE0XX0=
+fX0sImhpc3RvcnkiOlsxNzkxNjkyMDg5LC05ODE4NDI0NDUsMT
+QyNjUyOTMwMSwxNTk3OTI2MDA2LDE0MjY1MjkzMDEsMTkyNjM2
+NjAzMyw2MTQ3NzQ0NTAsNTc2NjcwMzc5LDIxMzE4MTY0NjcsOT
+IzMjA0Mjc0LDE1NDg3OTQ5ODEsNDk3NjY4NjQzLDE1NDM5ODc1
+NTEsLTc0NjU0ODI1MCwtOTcyNjU5ODg0LC0xOTIzODIyNDk2LC
+0xNzc1NjI5NDI4LDE0NjQzNDE4NjIsOTU5ODE0ODY4LDE3NjM0
+MzQzMTRdfQ==
 -->
