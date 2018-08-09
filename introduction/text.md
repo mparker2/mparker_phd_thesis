@@ -285,7 +285,6 @@ Analysis by Mullen et al. identified that the greatest enrichment of two tetrads
 
 \label{ssec:intro_summary}
 
-
 There is now clear evidence for the *in vivo* function of DNA and RNA G4s in a wide range of molecular processes, including genome stability, replication, transcription, mRNA processing, and translation. In this thesis, we will introduce a new method for the detection of DNA and RNA G4s, using information learned from high throughput sequencing datasets [@Chambers2015; @Kwok2016]. We will then apply this and other methods to the detection of PG4s in the Arabidopsis genome, and identify their enrichment in various genic features including 5'UTRs and CDSs. Finally, we will attempt to identify the effect of G4 stabilisation on Arabidopsis gene expression by treating plants with the G4 binding agent NMM. We will attempt to shed some light on whether the G4 rich genes affected by NMM are naturally regulated through G4 dependent mechanisms.
 
 \newpage
@@ -582,11 +581,11 @@ cyB5b3UgY291ZGwgc2F5IHNvbWV0aGluZyBsaWtlIFwiLCBvZi
 Bjb3Vyc2UgdGhpcyBkb2Vzbid0IGFkZHJlc3MgdGhlIHF1ZXN0
 aW9uIG9mIHdodGhlciB0aGVzZSBzZXF1ZW5jZXMgZm9ybSBHNH
 MgKmluIHZpdm8qXCIiLCJjcmVhdGVkIjoxNTMyNDQ5NjQ5MTk0
-fX0sImhpc3RvcnkiOls3Mzg4MjY1OTIsNzc2NTg5NjMsLTE0MT
-gxMzMwMzcsMTQ4MTM0MTcyNywzOTk0MTM3MzksMzYxMTA0OTI1
-LC0xNDgyOTQ2MjMwLC0xMTQ4NzI3MywtNDI3MjE0NDEwLDgwMD
-I3NjIxMywxODE5MzM2ODQ1LC0xMjc3NTk2NTIyLDE2MzY5NzYz
-MTUsLTEwNDk2MzU4MzEsMTI3ODgxMzI1MSwtOTgxODQyNDQ1LD
-E0MjY1MjkzMDEsMTU5NzkyNjAwNiwxNDI2NTI5MzAxLDE5MjYz
-NjYwMzNdfQ==
+fX0sImhpc3RvcnkiOlstNzg3NjE3NDU4LDc3NjU4OTYzLC0xND
+E4MTMzMDM3LDE0ODEzNDE3MjcsMzk5NDEzNzM5LDM2MTEwNDky
+NSwtMTQ4Mjk0NjIzMCwtMTE0ODcyNzMsLTQyNzIxNDQxMCw4MD
+AyNzYyMTMsMTgxOTMzNjg0NSwtMTI3NzU5NjUyMiwxNjM2OTc2
+MzE1LC0xMDQ5NjM1ODMxLDEyNzg4MTMyNTEsLTk4MTg0MjQ0NS
+wxNDI2NTI5MzAxLDE1OTc5MjYwMDYsMTQyNjUyOTMwMSwxOTI2
+MzY2MDMzXX0=
 -->
