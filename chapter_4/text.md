@@ -29,7 +29,7 @@ Relative frequency of codon usage for all Arabidopsis CDS sequences was calculat
 
 ### Hardcoded PG4 Analysis
 
-For hardcoded PG4 analysis, all overlapping two tetrad PG4 registers in CDSs were predicted using network analysis with `networkx` [@Hagberg2008]. G-runs were extracted from these PG4s, and the position, frame, and resultant protein sequence coded for by each G-run was calculated. Hardcoded G-runs were identified by analysing whether it would be possible to use synonymous codons which do not change the protein sequence, which would abolish the G-run. PG4s which had G-runs which all code for the same protein motif were labelled as repetitive. For G-run frequency plots, G-runs which contribute to multiple PG4s were deduplicated to give only one G-run per position. G-runs which contributed to both repetitive and non-repetitive PG4 registers were labelled as non-repetitive. For hardcoded PG4 metagene profiles, PG4s were binned into 100 equally sized bins per CDS, based on the midpoint of the PG4. All overlapping PG4s were counted in the profile. The total number of PG4s per bin was counted, and cumulative frequency metagene profiles were plotted using `matplotlib` [@Hunter2007]. Frequency plots of hardcoded PG4s/G-runs, repetitiveness, and protein motifs were produced using `seaborn` [@Waskom2014].
+For hardcoded PG4 analysis, all overlapping two tetrad PG4 registers in CDSs were predicted using network analysis with `networkx` [@Hagberg2008]. G-runs were extracted from these PG4s, and the position, frame, and resultant protein sequence coded for by each G-run was calculated. Hardcoded G-runs were identified by analysing whether it would be possible to use synonymous codons which do not change the protein sequence, which would abolish the G-run. PG4s which had G-runs which all code for the same amino-acid or pair of amino acids (which we refer two as the protein motif of a G-run) were labelled as repetitive. For G-run frequency plots, G-runs which contribute to multiple PG4s were deduplicated to give only one G-run per position. G-runs which contributed to both repetitive and non-repetitive PG4 registers were labelled as non-repetitive. For hardcoded PG4 metagene profiles, PG4s were binned into 100 equally sized bins per CDS, based on the midpoint of the PG4. All overlapping PG4s were counted in the profile. The total number of PG4s per bin was counted, and cumulative frequency metagene profiles were plotted using `matplotlib` [@Hunter2007]. Frequency plots of hardcoded PG4s/G-runs, repetitiveness, and protein motifs were produced using `seaborn` [@Waskom2014].
 
 \newpage
 
@@ -37,13 +37,13 @@ For hardcoded PG4 analysis, all overlapping two tetrad PG4 registers in CDSs wer
 
 ### The genome of *Arabidopsis thaliana* poor in three tetrad PG4s, but not two tetrad PG4s
 
-To compare the PG4 density of the Arabidopsis genome to other organisms, we downloaded the set of 48 land plant genomes available in Ensembl Plants Release 39, which included 22 Monocotyledons, 23 Dicotyledons, and 3 Non-flowering plants. The genomes of the metazoans *Drosophila melanogaster* (fruit fly), *Danio rerio* (zebrafish), *Mus musculus* (mouse) and *Homo sapiens* (human) were also analysed. PG4s with three or more were identified using the Quadparser method and the average density per Megabase was calculated for each genome. Arabidopsis has the smallest genome of any of the sequenced plants, estimated at 135Mb (119Mb in the golden path sequence). It also has one of the lowest three tetrad PG4 densities. Only 1284 non-overlapping PG4s with three or more tetrads are predicted to form in the whole Arabidopsis genome, with an average density of 10.4 PG4s/Mb. In comparison, the human genome is extremely PG4 dense, with an average of 123 PG4s/Mb. Monocot plants also tend to have much greater PG4 densities than Dicots (median density 59 PG4s/Mb vs. 3.3 PG4s/Mb). This is likely to result from a greater GC content in Monocot genomes. Non-flowering plants such as the bryophyte *Physcomitrella patens* had PG4 densities which resembled those of the Dicots more closely. We did not find a correlation between PG4 density and genome size (Spearmans rho = -0.02).
+To compare the PG4 density of the Arabidopsis genome to other organisms, we downloaded the set of 48 land plant genomes available in Ensembl Plants Release 39, which included 22 Monocotyledons, 23 Dicotyledons, and 3 Non-flowering plants. The genomes of the metazoans *Drosophila melanogaster* (fruit fly), *Danio rerio* (zebrafish), *Mus musculus* (mouse) and *Homo sapiens* (human) were also analysed. PG4s with three or more tetrads were identified using the Quadparser method and the average density per Megabase was calculated for each genome. Arabidopsis has the smallest genome of any of the sequenced plants, estimated at 135Mb (119Mb in the golden path sequence). It also has one of the lowest three tetrad PG4 densities (see figure/table X). Only 1284 non-overlapping PG4s with three or more tetrads are predicted to form in the whole Arabidopsis genome, with an average density of 10.4 PG4s/Mb. In comparison, the human genome is extremely PG4 dense, with an average of 123 PG4s/Mb. Monocot plants also tend to have much greater PG4 densities than Dicots (median density 59 PG4s/Mb vs. 3.3 PG4s/Mb). This is likely to result from a greater GC content in Monocot genomes. Non-flowering plants such as the bryophyte *Physcomitrella patens* (XXX PG4s/Mb) had PG4 densities which resembled those of the Dicots more closely. We did not find a correlation between PG4 density and genome size (Spearmans rho = -0.02).
 
-We noted that the PG4 densities of the warm blooded mammals *M. musculus* and *H. sapiens* are much greater than those of *D. melanogaster* or *D. rerio*, or any of the plants. The PG4 density of *Mus musculus*  is 227 PG4s/Mb, more than twice that of any plant analysed. We hypothesised that this greater density may be in part due to the homothermic nature of mammmals, which could mean their body temperatures are high enough that three tetrad PG4s are less stable. Since the melting temperatures of three tetrad G4s can reach up to 100 Degrees Celsius, it is feasible that at the physiological temperature ranges that plants live in, three tetrad G4s may be more difficult to resolve, leading to problems during replication or transcription. Two tetrad G4s, which are known to form *in vitro* [@Macaya1993, @Mullen2012], but have been historically considered too unstable to be prevalent *in vivo* [@Huppert2005], might in fact be more useful as molecular switches in plants, since they melt at lower temperatures.
+We noted that the PG4 densities of the warm blooded mammals *M. musculus* and *H. sapiens* are much greater than those of *D. melanogaster* or *D. rerio*, or any of the plants. The PG4 density of *Mus musculus*  is 227 PG4s/Mb, more than twice that of any plant analysed. We hypothesised that this greater density may be in part due to the homothermic nature of mammmals, which could mean their body temperatures are high enough that three tetrad PG4s are less stable. Since the melting temperatures of three tetrad G4s can reach up to 100 Degrees Celsius, it is feasible that at the physiological temperature ranges that plants live in, three tetrad G4s may be more difficult to resolve, leading to problems during replication or transcription. 
 
-To determine whether plants have greater numbers of two tetrad PG4s, we again performed prediction using using the Quadparser method. Since three tetrad PG4s contain subpatterns which conform to the two tetrad Quadparser pattern, we filtered out any two tetrad PG4s which overlapped with three tetrad PG4s. We found that plants tend to contain a lot more two tetrad PG4s, with several species of Monocot in fact having higher average densities than *M. musculus* or *H. sapiens*. Arabidopsis was also more dense in two tetrad PG4s, with 959 PG4s/Mb. This was significantly higher than the median Dicotyledon density (228 PG4s/Mb), perhaps indicating a stronger role for these two tetrad G4s in Arabidopsis.
+Two tetrad G4s, which are known to form *in vitro* [@Macaya1993, @Mullen2012], but have been historically considered too unstable to be prevalent *in vivo* [@Huppert2005], might in fact be more useful as molecular switches in plants, since they melt at lower temperatures. To determine whether plants have greater numbers of two tetrad PG4s, we again performed prediction using using the Quadparser method. Since three tetrad PG4s contain subpatterns which conform to the two tetrad Quadparser pattern, we filtered out any two tetrad PG4s which overlapped with three tetrad PG4s. We found that plants tend to contain a lot more two tetrad PG4s, with several species of Monocot in fact having higher average densities than *M. musculus* or *H. sapiens*. Arabidopsis was also more dense in two tetrad PG4s, with 959 PG4s/Mb. This was significantly higher than the median Dicotyledon density (228 PG4s/Mb), perhaps indicating a stronger role for these two tetrad G4s in Arabidopsis.
 
-Finally, we correlated the density of two and three or more tetrad PG4s in different organisms. Unsurprisingly, we found a very strong correlation (Spearmans rho = 0.95), however *M. musculus* and *H. sapiens* were found to be clear outliers from the plants, and showed a much greater three tetrad density than might have been expected from the regression line. We suggest that this indicates that two tetrad PG4s may play a regulatory role in plants which could be similar to have performed by three tetrad PG4s in warm-blooded mammals. 
+Finally, we correlated the density of two and three or more tetrad PG4s in different organisms. Unsurprisingly, we found a very strong correlation (Spearmans rho = 0.95), however *M. musculus* and *H. sapiens* were found to be clear outliers from the plants, and showed a much greater three tetrad density than might have been expected from the regression line. We suggest that this indicates that two tetrad PG4s may play a regulatory role in plants which could be similar to that performed by three tetrad PG4s in warm-blooded mammals. 
 
 \newpage
 
@@ -65,9 +65,9 @@ In order to identify whether these PG4s are simply a product of higher local GC 
 
 ### Reverse translation permutation testing reveals codon usage bias towards G4 formation in template strand 5' UTRs
 
-The enrichment of two tetrad PG4s inside coding regions in Arabidopsis could be indicative of a function for G4s in transcriptional or translational regulation, however, it is also possible that these sequences could be a byproduct of specific protein motifs which are encoded by GC rich codons. In order to explore this, we developed a novel sequence permutation method which we call "reverse translation". First, we calculated the codon usage table (the quantifiable bias in usage of synonymous codons) from all CDS sequences. The sequences were then translated into their protein product sequence, then reverse translated back into potential coding sequences (PCSs) with randomly selected codons, but using the codon usage table as weights. These PCSs are therefore sequences which might be expected to code for the given protein, assuming that the codon bias is identical across all genes and all positions in genes. We performed 100 reverse translation shufflings for each CDS and then calculated the GC and PG4 content of each PCS using the Quadparser method and G4Seeqer.
+The enrichment of two tetrad PG4s inside coding regions in Arabidopsis could be indicative of a function for G4s in transcriptional or translational regulation, however, it is also possible that these sequences could be a byproduct of specific protein motifs which are encoded by GC rich codons. In order to explore this, we developed a novel sequence permutation method which we call "reverse translation". First, we calculated the codon usage table (the quantifiable bias in usage of synonymous codons) from all CDS sequences. The sequences were then translated into their protein product sequence, then reverse translated back into potential coding sequences (PCSs) with randomly selected codons, but using the codon usage table as weights. These PCSs are therefore sequences which might be expected to code for the given protein. It is important to note that this assumes that the codon bias is identical across all genes and all positions in genes. We performed 100 reverse translation shufflings for each CDS and then calculated the GC and PG4 content of each PCS using the Quadparser method and G4Seeqer.
 
-The GC content of CDSs is greatest towards the start and end of the interval, and dips in the middle (Fig \ref{revtrans}a). This is due to a greater G content at the start codon proximal end on the template strand, and a greater G content at the start codon distal end on the coding strand. When we performed reverse translation using a single codon usage table, some of this bias was abolished. This indicates that most of the GC content of the CDS is not hardcoded into the sequence by the protein content. Codon usage is therefore presumably different at the start and end of the gene.
+The GC content of CDSs is greatest towards the start and end of the interval, and dips in the middle (Fig \ref{revtrans}a). This is due to a greater G content close to the start codon  on the template strand, and a greater G content close to the stop codon on the coding strand. When we performed reverse translation using a single codon usage table, some of this bias was abolished. This indicates that most of the GC content of the CDS is not hardcoded into the sequence by the protein content. Codon usage is therefore presumably different at the start and end of the gene.
 
 As shown in Fig \ref{metagene}c, there is a higher density of PG4s at the start of the CDS on the template strand, and a higher density towards the end of the CDS on the coding strand. This is also seen in Fig \ref{revtrans}b & c. PCS sequences demonstrate the same biases in PG4 distribution using both Quadparser and G4Seeqer predictions. This demonstrates that unlike GC content, the PG4 content of some genes is hardcoded by protein sequence (Fig \ref{revtrans}b & c). This may be due to the repetitive nature of some protein motifs. PCS PG4 content is higher than the real PG4 levels across the coding strand however, suggesting that codons which reduce PG4 forming potential on this strand may be selected for. On the template strand, we see strong enrichment of PG4s in real sequences over expected levels from PCSs in the first 50% of the CDS (Fig \ref{revtrans}b & c). This suggests that C rich codons may be selected for at the start of genes to increase the G4 forming potential of the template strand. We wondered whether CDS G4s might be selected for in genes which have short 5' UTRs which might not be able to contain G4s, however we did not see any correlation between the length of 5' UTRs and the presence of G4s in the first 100bp of CDS regions (Spearmans rho 0.014).
 
@@ -79,7 +79,7 @@ As shown in Fig \ref{metagene}c, there is a higher density of PG4s at the start 
 
 ### Protein motifs hardcode G4 forming potential into coding regions
 
-Our reverse translation method indicates that the PG4 forming potential of may arise from protein sequence, i.e. if protein sequence is evolutionarily constrained, then PG4s are hardcoded into the CDS. We performed an analysis of which protein motifs most often lead to two tetrad PG4s. All overlapping PG4s and the G-runs that form them were predicted, and the amino acids which are encoded by each G-run was identified. The G-run was then classified as either hardcoded or not, depending on whether or not the same amino acids could be encoded differently without introducing a G-run in the same position. We also identified repetitive and non-repetitive G-runs. G-runs were considered repetitive if the protein motifs that they encode were the same for all G-runs in the G4.
+Our reverse translation method indicates that the PG4 forming potential of may arise from protein sequence, i.e. if protein sequence is evolutionarily constrained, then PG4s are hardcoded into the CDS. We performed an analysis of which amino acid or amino acid pairs (which we refer to as protein motifs) most often lead to two tetrad PG4s. All overlapping PG4s and the G-runs that form them were predicted, and the amino acids which are encoded by each G-run was identified. The G-run was then classified as either hardcoded or not, depending on whether or not the same amino acids could be encoded differently without introducing a G-run in the same position. We also identified repetitive and non-repetitive G-runs. G-runs were considered repetitive if the protein motifs that they encode were the same for all G-runs in the G4.
 
 Our analysis shows that 58% of PG4 G-runs on the coding strand, and 48% on the template strand, are hardcoded. Of these hardcoded PG4s, around 51% and 60% are found in repetitive PG4s on the coding and template strand, respectively. On the other hand, most non-hardcoded PG4s on both strands are also non-repetitive (Fig \ref{hardcoded}a). This suggests the presence of a number of entirely hardcoded PG4s which are encoded by repetitive protein motifs.
 
@@ -131,8 +131,247 @@ Reverse translation identifies that the levels of template strand PG4s are great
 
 To further explore the levels of hardcoded vs. non-hardcoded PG4s in Arabidopsis CDSs, we identified, for each overlapping PG4 register, whether each G-run was hardcoded or not. The one or two amino acid motif which was contributed to by each G-run was also determined. We found that greater than 50% of all PG4 G-runs are hardcoded, and 34% of all PG4s are totally hardcoded. The start codon proximal end of the template strand contains the greatest number of non-hardcoded PG4s, explaining the strong enrichment in this region compared to PCSs.
 
-The most common amino acids which contribute to hardcoded PG4s are glycine (codon GGN) on the coding strand, and proline (codon CCN) on the template strand. G-runs encoding these amino acids also tend to be repetitive, i.e. contribute to PG4s in which all G-runs encode the same amino acid motif. Poly-proline and poly-glycine rich motifs are common in the Arabidopsis genome, and have some similar properties, including a tendency to be intronless. Poly-glycine rich proteins (GRPs) are involved in a number of processes, including cell elongation, plant defense, and osmotic or salt stress [@Mangeon2010]. A number of RNA-binding GRPs which have RNA chaperone activity are regulated by osmotic stresses and by abscisic acid [@Mangeon2010]. Interestingly, the cellular concentration of G4 stabilising potassium cations is increased during these stresses, suggesting that G4s may be more favourable. Mullen et al. have previously suggested that intracellular potassium concentrations might regulate two tetrad G4 formation in Arabidopsis mRNAs, causing conformational changes in the RNA [@Mullen2012]. Furthermore, Kim et al. used SELEX to identify that the stress responsive RNA chaperone GRP7 binds preferentially to G-rich single stranded DNA or RNA [@Kim2006], though they did not test whether these formed G4s. It is possible that GRPs are involved in a feedback mechanism, stabilising mRNAs (including their own mRNAs) during stress by either binding to or resolving G4s in the mRNA.
+The most common amino acids which contribute to hardcoded PG4s are glycine (codon GGN) on the coding strand, and proline (codon CCN) on the template strand. G-runs encoding these amino acids also tend to be repetitive, i.e. contribute to PG4s in which all G-runs encode the same amino acid motif. Genes with poly-proline and poly-glycine rich motifs are common in the Arabidopsis genome, and have some similar properties, including a tendency to be intronless. Poly-glycine rich proteins (GRPs) are involved in a number of processes, including cell elongation, plant defense, and osmotic or salt stress [@Mangeon2010]. A number of RNA-binding GRPs which have RNA chaperone activity are regulated by osmotic stresses and by abscisic acid [@Mangeon2010]. Interestingly, the cellular concentration of G4 stabilising potassium cations is increased during these stresses, suggesting that G4s may be more favourable. Mullen et al. have previously suggested that intracellular potassium concentrations might regulate two tetrad G4 formation in Arabidopsis mRNAs, causing conformational changes in the RNA [@Mullen2012]. Furthermore, Kim et al. used SELEX to identify that the stress responsive RNA chaperone GRP7 binds preferentially to G-rich single stranded DNA or RNA [@Kim2006], though they did not test whether these formed G4s. It is possible that GRPs are involved in a feedback mechanism, stabilising mRNAs (including their own mRNAs) during stress by either binding to or resolving G4s in the mRNA.
 
 Poly-proline rich proteins are often structural proteins, and are a major constituent of the plant cell wall. Proline rich motifs form PG4s in the template strand of DNA. These will not form in the mRNA, but may cause issues for Pol II using transcription. This will be discussed further in \ref{chap:global_nmm} and \ref{chap:extensins}.
 
 \newpage
+<!--stackedit_data:
+eyJkaXNjdXNzaW9ucyI6eyJDdkwzSDRhZ0ppbnFTU2ZtIjp7In
+N0YXJ0IjoyNjEwLCJlbmQiOjI3MzgsInRleHQiOiI3MCUgb2Yg
+dGhyZWUgdGV0cmFkIFBHNHMgd2VyZSBmb3VuZCBpbiBpbnRlcm
+dlbmljIHJlZ2lvbnMsIGFuZCBvZiB0aGVzZSwgMjAlIGNv4oCm
+In0sIjE4ajFmR3NhR0tGYVd6dXIiOnsic3RhcnQiOjI4MjksIm
+VuZCI6Mjk1NCwidGV4dCI6Ik11bGxlbiBldCBhbC4gZm91bmQg
+dGhhdCB0aGUgUEc0IGRlbnNpdHkgb2YgaW50ZXJnZW5pYyByZW
+dpb25zIHdhcyBzdGlsbCBoaWdoZXLigKYifSwiRXptYTI0c3B1
+MDJ0S0ZGVCI6eyJzdGFydCI6MzUwNCwiZW5kIjozODE0LCJ0ZX
+h0IjoiSW4gdGhpcyBjaGFwdGVyLCB3ZSBicmllZmx5IGV4YW1p
+bmUgdGhlIFBHNCBkZW5zaXR5IG9mIEFyYWJpZG9wc2lzIGNvbX
+BhcmVkIHRv4oCmIn0sInp6VmVudUFxbFJKdUJGUE8iOnsic3Rh
+cnQiOjQzMTcsImVuZCI6NDMyOSwidGV4dCI6ImBnNHByZWRpY3
+RgLCJ9LCJmWlVDbW5razd3MTU0WmpqIjp7InN0YXJ0Ijo0MzM0
+LCJlbmQiOjQzNTIsInRleHQiOiJuIGhvdXNlIFF1YWRwYXJzZX
+IifSwiWUlGTGlIdkN1azBEbWpJOCI6eyJzdGFydCI6NTQwOSwi
+ZW5kIjo1NTQ3LCJ0ZXh0IjoiR0MgQmVkIGZpbGVzIG9mIG5vbi
+1vdmVybGFwcGluZyBQRzRzIHdlcmUgY29udmVydGVkIGludG8g
+QmlnV2lnIGZvcm1hdCB1c2luZyBgYuKApiJ9LCJBbnc2S1Z1b3
+d1akF3djRxIjp7InN0YXJ0Ijo1NTkyLCJlbmQiOjU2ODUsInRl
+eHQiOiJPdmVybGFwcGluZyB0cmFuc2NyaXB0cyBvZiB0aGUgc2
+FtZSBnZW5lIHdlcmUgZmxhdHRlbmVkIGludG8gYSBzaW5nbGUg
+YmVkMTIgaW504oCmIn0sIlBub2dmV1doa09zbDlSMGoiOnsic3
+RhcnQiOjY2MjQsImVuZCI6NjY1MCwidGV4dCI6InJlaW50ZXJw
+b2xhdGVkIHRvIDEwMCBiaW5zIn0sIm5WdWJEb0dQSEFGZm5vQm
+giOnsic3RhcnQiOjY1MzcsImVuZCI6NjU1OSwidGV4dCI6Indl
+cmUgZ2VuZXJhdGVkIHBlciBDRFMifSwiUkFQWnpuQVp2eFRtUX
+lIWSI6eyJzdGFydCI6NzIzMywiZW5kIjo3MjY1LCJ0ZXh0Ijoi
+cHJlZGljdGVkIHVzaW5nIG5ldHdvcmsgYW5hbHlzaXMifSwiZU
+JTZUt6clBXcE1xOHFOcSI6eyJzdGFydCI6NzQ5OSwiZW5kIjo3
+NTc0LCJ0ZXh0IjoicG9zc2libGUgdG8gdXNlIHN5bm9ueW1vdX
+MgY29kb25zIHdoaWNoIGRvIG5vdCBjaGFuZ2UgdGhlIHByb3Rl
+aW4gc2VxdWVuY2UsIn0sInZuaVZxR01lbzNYdlZucloiOnsic3
+RhcnQiOjkyMjgsImVuZCI6OTMwNSwidGV4dCI6InQgYWxzbyBo
+YXMgb25lIG9mIHRoZSBsb3dlc3QgdGhyZWUgdGV0cmFkIFBHNC
+BkZW5zaXRpZXMuIn0sInhFd0ZROVJrT1k0TTk1WHQiOnsic3Rh
+cnQiOjk2MjAsImVuZCI6OTY2MiwidGV4dCI6IihtZWRpYW4gZG
+Vuc2l0eSA1OSBQRzRzL01iIHZzLiAzLjMgUEc0cy9NYiJ9LCJT
+MHBkUElTNVVHWE1rQ3FKIjp7InN0YXJ0IjoxMDQ0NiwiZW5kIj
+oxMDcyMiwidGV4dCI6IlNpbmNlIHRoZSBtZWx0aW5nIHRlbXBl
+cmF0dXJlcyBvZiB0aHJlZSB0ZXRyYWQgRzRzIGNhbiByZWFjaC
+B1cCB0byAxMDAgRGVncmVlc+KApiJ9LCJJMkgyYlBQY0hCbEVN
+U3ZrIjp7InN0YXJ0IjoxMTQ3OCwiZW5kIjoxMTcwNCwidGV4dC
+I6IkFyYWJpZG9wc2lzIHdhcyBhbHNvIG1vcmUgZGVuc2UgaW4g
+dHdvIHRldHJhZCBQRzRzLCB3aXRoIDk1OSBQRzRzL01iLiBUaG
+lzIHdhc+KApiJ9LCJXZHdiVThNTlVlcThFNFZ1Ijp7InN0YXJ0
+IjoxMjA2OCwiZW5kIjoxMjI0MywidGV4dCI6IldlIHN1Z2dlc3
+QgdGhhdCB0aGlzIGluZGljYXRlcyB0aGF0IHR3byB0ZXRyYWQg
+UEc0cyBtYXkgcGxheSBhIHJlZ3VsYXRvcnkgcm9sZeKApiJ9LC
+J4OUZxNVdQb2pZWnc5QXNiIjp7InN0YXJ0IjoxNTA5NSwiZW5k
+IjoxNTY4MywidGV4dCI6IiFbKipNZXRhZ2VuZSBQcm9maWxlIG
+9mIEdDIGNvbnRlbnQgYW5kIFBHNCBkZW5zaXR5KiogTWV0YWdl
+bmUgcHJvZmlsZXMgc2hvd2luZ+KApiJ9LCIyWmlpNlhJQVIzaU
+xUVldaIjp7InN0YXJ0IjoxNjA2MiwiZW5kIjoxNjA4NSwidGV4
+dCI6InNwZWNpZmljIHByb3RlaW4gbW90aWZzIn0sInV1ajBaak
+JIZzZ3YlhCQVIiOnsic3RhcnQiOjE2OTQwLCJlbmQiOjE2OTU3
+LCJ0ZXh0IjoiVGhlIEdDIGNvbnRlbnQgb2YifSwiYk1MSlA5RE
+VUSnBrSzg4eCI6eyJzdGFydCI6MTc5OTEsImVuZCI6MTgyMzQs
+InRleHQiOiJUaGlzIG1heSBiZSBkdWUgdG8gdGhlIHJlcGV0aX
+RpdmUgbmF0dXJlIG9mIHNvbWUgcHJvdGVpbiBtb3RpZnMuIFBD
+UyBQRzQgY29udGVu4oCmIn0sIlpOU29HMm9EeW5SM1d1NloiOn
+sic3RhcnQiOjE4NzgzLCJlbmQiOjE4ODA1LCJ0ZXh0IjoiKFNw
+ZWFybWFucyByaG8gMC4wMTQpLiJ9LCJqWHM4Nm5jdEtmdUcwTF
+Y5Ijp7InN0YXJ0IjoxODgxNywiZW5kIjoxOTE4OCwidGV4dCI6
+IiFbKipSZXZlcnNlIFRyYW5zbGF0aW9uIFNpbXVsYXRpb24gc2
+hvd3MgdGhhdCBQRzRzIGFyZSBlbnJpY2hlZCBhdCB0aGUgU3Rh
+cnQgQ2/igKYifSwiNnRSazRqTTVvN0FITVlvSyI6eyJzdGFydC
+I6MTkzMjUsImVuZCI6MTkzMzMsInRleHQiOiJ0aGF0IHRoZSJ9
+LCIxblZCU1lxT29tek5rNVd1Ijp7InN0YXJ0IjoyMDY0MCwiZW
+5kIjoyMDY1MiwidGV4dCI6IlBHNCByZWdpc3RlciJ9LCIyT2Jh
+MHl5UU5peWlraEowIjp7InN0YXJ0IjoyMDY5MywiZW5kIjoyMD
+g1NiwidGV4dCI6IldlIGZvdW5kIHRoYXQgb24gYm90aCBzdHJh
+bmRzLCB0aGUgZ3JlYXRlc3QgbnVtYmVyIG9mIFBHNHMgd2VyZS
+Bjb21wbGV0ZWx5IGhhcmTigKYifSwiNmVOdXc5TFBreHVVcHdD
+biI6eyJzdGFydCI6MjE4NTEsImVuZCI6MjIzMzEsInRleHQiOi
+JGcmVxdWVuY3kgcGxvdCBzaG93aW5nIHRoZSB0b3RhbCBudW1i
+ZXIgb2YgRy1ydW5zIGNvbnRyaWJ1dGluZyB0byBQRzRzIHdoaW
+NoIGFy4oCmIn0sIklsQ0hwVVczWmMyRDdxZWMiOnsic3RhcnQi
+OjIzNDQzLCJlbmQiOjIzNzg3LCJ0ZXh0IjoiIVsqKk5vbi1oYX
+JkY29kZWQgUEc0cyBsZXZlbHMgYXJlIGdyZWF0ZXIgYXQgdGhl
+IHN0YXJ0IGNvZG9uIHByb3hpbWFsIHJlZ2lvbiBvZuKApiJ9LC
+JEekl1OVZFSDc5bXdrZ2tjIjp7InN0YXJ0IjoyNzQzMiwiZW5k
+IjoyNzY1MSwidGV4dCI6IkZ1cnRoZXJtb3JlLCB0aGUgcmF0aW
+8gb2YgdHdvIHRldHJhZCB0byB0aHJlZSB0ZXRyYWQgUEc0cyBp
+biBwbGFudCBnZW5vbWVzIGlzIG3igKYifX0sImNvbW1lbnRzIj
+p7ImU2YXJMNHVHeHdSTTlKdFkiOnsiZGlzY3Vzc2lvbklkIjoi
+Q3ZMM0g0YWdKaW5xU1NmbSIsInN1YiI6IjEwMjIwNTc5NzI3Nj
+k0MTAxMDY3NyIsInRleHQiOiJJcyB0aGlzIHNpbWlsYXIgb3Ig
+ZGlmZmVyZW50IHRvIGh1bWFuIiwiY3JlYXRlZCI6MTUzNDM0Nz
+kwNTEzM30sInBtbXVVbTY3YUU1V0lSN3UiOnsiZGlzY3Vzc2lv
+bklkIjoiMThqMWZHc2FHS0ZhV3p1ciIsInN1YiI6IjEwMjIwNT
+c5NzI3Njk0MTAxMDY3NyIsInRleHQiOiJXaGF0IGlzIHRoaXMg
+bGlrZSBpbiBvdGhlciBvcmdhbmlzbXM/IiwiY3JlYXRlZCI6MT
+UzNDM0NzkyNTE2Nn0sInA0aE5JVndEblRCQkdhT08iOnsiZGlz
+Y3Vzc2lvbklkIjoiRXptYTI0c3B1MDJ0S0ZGVCIsInN1YiI6Ij
+EwMjIwNTc5NzI3Njk0MTAxMDY3NyIsInRleHQiOiJUSGlzIGFp
+bXMgcGFyYSBkb2Vzbid0IHJlYWxseSBleHBsYWluIHdoeSB5b3
+UgdW5kZXJ0b29rIHRoaXMgYW5hbHlzaXMsIGFuZCB3aGF0IHlv
+dSBob3BlZCB0byBwcm9kdWNlIGFib3ZlIGFuZCBiZXlvbmQgcH
+JldmlvdXMgYW5hbHlzZXMuIiwiY3JlYXRlZCI6MTUzNDM0Nzk5
+OTU0Mn0sIkhDeWhiRjMxRUpHVlIyQmYiOnsiZGlzY3Vzc2lvbk
+lkIjoienpWZW51QXFsUkp1QkZQTyIsInN1YiI6IjEwMjIwNTc5
+NzI3Njk0MTAxMDY3NyIsInRleHQiOiJDb2RlIGF2YWlsYWJsZS
+Bpbi4uLiIsImNyZWF0ZWQiOjE1MzQzNDgwNDQ1NjV9LCJWZ05i
+cjgycnRqNDU0cjd3Ijp7ImRpc2N1c3Npb25JZCI6ImZaVUNtbm
+trN3cxNTRaamoiLCJzdWIiOiIxMDIyMDU3OTcyNzY5NDEwMTA2
+NzciLCJ0ZXh0IjoiV2h5IGFuIGluIGhvdXNlIHZlcnNpb24/Ii
+wiY3JlYXRlZCI6MTUzNDM0ODA1NTkyOX0sIkxsbDZOV3ZFdXkw
+QWg4NlIiOnsiZGlzY3Vzc2lvbklkIjoiWUlGTGlIdkN1azBEbW
+pJOCIsInN1YiI6IjEwMjIwNTc5NzI3Njk0MTAxMDY3NyIsInRl
+eHQiOiJXaGF0IGlzIGEgR0MgQmVkIGZpbGUgb2Ygb3ZlcmxhcH
+BpbmcgUEc0cz8iLCJjcmVhdGVkIjoxNTM0MzQ4MTYxNjE0fSwi
+dmVQUlYzNWk3RUZaYVZuWiI6eyJkaXNjdXNzaW9uSWQiOiJBbn
+c2S1Z1b3d1akF3djRxIiwic3ViIjoiMTAyMjA1Nzk3Mjc2OTQx
+MDEwNjc3IiwidGV4dCI6IlRoaXMgaXMgc2ltaWxhciB0byB0aG
+Ugc3VwZXJ0cmFuc2NyaXB0IGNvbmNlcHQgb3V0bGluZWQgaW4g
+RGF2aWRzb24sIE5NIGV0IGFsIDIwMTcsIGdlbm9tZSBiaW9sb2
+d5IiwiY3JlYXRlZCI6MTUzNDM0ODM3NTkxNX0sImRORGVXMnNY
+a1pYaE4zdkoiOnsiZGlzY3Vzc2lvbklkIjoiUG5vZ2ZXV2hrT3
+NsOVIwaiIsInN1YiI6IjEwMjIwNTc5NzI3Njk0MTAxMDY3NyIs
+InRleHQiOiJXaGF0IGRvZXMgdGhpcyBtZWFuPyBIb3cgd2FzIH
+RoaXMgZG9uZT8iLCJjcmVhdGVkIjoxNTM0MzQ4NTQ5OTIzfSwi
+R0N3cjNTTWVtUWd6TENoTiI6eyJkaXNjdXNzaW9uSWQiOiJuVn
+ViRG9HUEhBRmZub0JoIiwic3ViIjoiMTAyMjA1Nzk3Mjc2OTQx
+MDEwNjc3IiwidGV4dCI6Im9uIGEgcGVyIGdlbmUgb3IgcGVyIH
+RyYW5zY3JpcHQuIERvIHlvdXIgc3VwZXJ0cmFuc2NyaXB0cywg
+dXNpbmcgZmlyc3Qgc3RhcnQgYW5kIGxhc3Qgc3RvcCBhbHdheX
+MgcHJlc2VydmUgZnJhbWU/IiwiY3JlYXRlZCI6MTUzNDM0ODU4
+OTYzNn0sInNMTkJKSGRaN2I1dEQzbEsiOnsiZGlzY3Vzc2lvbk
+lkIjoiUkFQWnpuQVp2eFRtUXlIWSIsInN1YiI6IjEwMjIwNTc5
+NzI3Njk0MTAxMDY3NyIsInRleHQiOiJFeHBsYWluIHlvdXIgYW
+xnb3JpdGhtIGZvciBkb2luZyB0aGlzLiBNaWdodCBhcyB3ZWxs
+IHNheSBcInVzaW5nIHNjaWVuY2VcIiBhcyBcInVzaW5nIG5ldH
+dvcmsgYW5hbHlzaXNcIi4iLCJjcmVhdGVkIjoxNTM0MzQ4NjU4
+ODM1fSwiNmZjWlNwRlVHbTZlUE1XQiI6eyJkaXNjdXNzaW9uSW
+QiOiJlQlNlS3pyUFdwTXE4cU5xIiwic3ViIjoiMTAyMjA1Nzk3
+Mjc2OTQxMDEwNjc3IiwidGV4dCI6IkhvdyBkaWQgeW91IGRvIH
+RoaXM/IFdoYXQgd2FzIHRoZSBhbGdvcml0aG0/LCB3aGVyZSBp
+cyB0aGUgY29kZT8iLCJjcmVhdGVkIjoxNTM0MzQ4NzEyMDE0fS
+wiZGt1VVV3eXl1VUFGdWQzYSI6eyJkaXNjdXNzaW9uSWQiOiJ2
+bmlWcUdNZW8zWHZWbnJaIiwic3ViIjoiMTAyMjA1Nzk3Mjc2OT
+QxMDEwNjc3IiwidGV4dCI6Ikxvb2tzIHRvIG1lIGxpa2UgaXQg
+aGFzIG9uZSBvZiB0aGUgaGlnaGVzdCBmb3IgRGljb3RzLiIsIm
+NyZWF0ZWQiOjE1MzQzNDg5MDI0NTJ9LCJQREZad2hFQ3E0TU1F
+TUtJIjp7ImRpc2N1c3Npb25JZCI6InhFd0ZROVJrT1k0TTk1WH
+QiLCJzdWIiOiIxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZXh0
+IjoiVGhpcyBtZWRpYW4gZG9lc24ndCBsb29rIHJpZ2h0IHRvIG
+1lIGZyb20gbG9va2luZyBhdCBmaWd1cmUgMy4xLiBBbHNvIGNv
+bW1lbnQgb24gaG93IEFUIGhhcyBhIG11Y2ggaGlnaGVyIGRlbn
+NpdHkgdGhhbiB0aGUgYXZlcmFnZS4iLCJjcmVhdGVkIjoxNTM0
+MzQ5MTE3NzIyfSwiZGRoOER4amt0Um1nWGthdCI6eyJkaXNjdX
+NzaW9uSWQiOiJTMHBkUElTNVVHWE1rQ3FKIiwic3ViIjoiMTAy
+MjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6IklzIGl0IHBvc3
+NpYmxlIHRvIHByZWRpY3QgdGhlIHN0YWJpbGl0eSBvZiBhIEc0
+IGF0IGRpZmZlcmVudCB0ZW1wZXJhdHVyZXM/IFdoYXQgd291bG
+QgYmUgdGhlIGRpZmZlcmVuY2UgaXMgJSBmb2xkZWQgYXQgdGhl
+IGRpZmZlcmVudCB0ZW1wZXJhdHVyZXMgd2UgYXJlIHRhbGtpbm
+cgYWJvdXQgaGVyZT8iLCJjcmVhdGVkIjoxNTM0MzQ5MjU5MDgz
+fSwiaGN5c1FORzNRcFFYRFNzMyI6eyJkaXNjdXNzaW9uSWQiOi
+JJMkgyYlBQY0hCbEVNU3ZrIiwic3ViIjoiMTAyMjA1Nzk3Mjc2
+OTQxMDEwNjc3IiwidGV4dCI6IlJhbmsgaW4gMiB0ZXRyYWQgcm
+F0ZSB2cyByYW5rIGluIDMgdGV0cmFkIHJhdGU/IiwiY3JlYXRl
+ZCI6MTUzNDM0OTM0NzQyNn0sIlRlSzVaVVE1N2tHb0JYd3EiOn
+siZGlzY3Vzc2lvbklkIjoiV2R3YlU4TU5VZXE4RTRWdSIsInN1
+YiI6IjEwMjIwNTc5NzI3Njk0MTAxMDY3NyIsInRleHQiOiJUb2
+8gc3Ryb25nPyIsImNyZWF0ZWQiOjE1MzQzNDk2MzI5NTJ9LCJ6
+MHU4a3lPV0t6cGZ4U1B1Ijp7ImRpc2N1c3Npb25JZCI6Ing5Rn
+E1V1BvalladzlBc2IiLCJzdWIiOiIxMDIyMDU3OTcyNzY5NDEw
+MTA2NzciLCJ0ZXh0IjoiWW91IHNob3VsZCBwZXJoYXBzIG1ha2
+UgdGhlIGxpbmVzIHRoaWNrZXIgb24gdGhlc2UgcGxvdHMuIE9y
+IGhhdmUgZGFzaGVkIGxpbmVzIGZvciB0aGUgc2h1ZmZsZWQuIE
+9yIGJvdGguIiwiY3JlYXRlZCI6MTUzNDM0OTc0MzE0Mn0sImtG
+UVBVQWxaeDJ0cWhER04iOnsiZGlzY3Vzc2lvbklkIjoiMlppaT
+ZYSUFSM2lMVFZXWiIsInN1YiI6IjEwMjIwNTc5NzI3Njk0MTAx
+MDY3NyIsInRleHQiOiJPciBkaWZmZXJlbmNlcyBpbiBjb2Rvbi
+BiaWFzIGFjcm9zcyB0aGUgZ2VuZS4gSGF2ZSB5b3UgcmVhZCBU
+dWxsZXIgZXQgYWwsIENlbGwgMjAxMD8iLCJjcmVhdGVkIjoxNT
+M0MzUwMDA2MDYyfSwiZGhYM2EzZ05RS25OTEpQMyI6eyJkaXNj
+dXNzaW9uSWQiOiJ1dWowWmpCSGc2d2JYQkFSIiwic3ViIjoiMT
+AyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6IkRvIHlvdSBt
+ZWFuIEctY29udGVudD8iLCJjcmVhdGVkIjoxNTM0MzUwMTM5ND
+U1fSwicld1SEZkQXMxWWM3bXBMayI6eyJkaXNjdXNzaW9uSWQi
+OiJiTUxKUDlERVRKcGtLODh4Iiwic3ViIjoiMTAyMjA1Nzk3Mj
+c2OTQxMDEwNjc3IiwidGV4dCI6IlRoaXMgaXMgb25seSByZWFs
+bHkgY2xlYXIgaW4gdGhlIEc0U2Vla2VyIGRhdGEuIFlvdSBkb2
+4ndCB0YWxrIG11Y2ggYWJvdXQgdGhlIGRpZmZlcmVuY2UgYmV0
+d2VlbiBHNGh1bnRlciBhbmQgRzRTZWVxZXIsIG9yIHdoeSB0aG
+lzIGlzIHRoZSBvbmx5IGFuYWx5c2lzIGluIHRoZSBjaGFwdGVy
+IHRoYXQgdXNlcyBHNFNlZXFlci4iLCJjcmVhdGVkIjoxNTM0Mz
+UwMzIyNTE5fSwiUmhhemVEa2owS3dJUVp1dSI6eyJkaXNjdXNz
+aW9uSWQiOiJaTlNvRzJvRHluUjNXdTZaIiwic3ViIjoiMTAyMj
+A1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6ImZpZ3VyZT8iLCJj
+cmVhdGVkIjoxNTM0MzUwMzMzMzk0fSwiaVRWZzZHaWsxdGlhMG
+FkOCI6eyJkaXNjdXNzaW9uSWQiOiJqWHM4Nm5jdEtmdUcwTFY5
+Iiwic3ViIjoiMTAyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dC
+I6IkxhYmVsIHRoZSBsZWZ0IGFuZCByaWdodCBwYW5lbHMuIiwi
+Y3JlYXRlZCI6MTUzNDM1MDM1NDExNX0sIjBsaHp4RkZ2WkpiTW
+JvUkIiOnsiZGlzY3Vzc2lvbklkIjoiNnRSazRqTTVvN0FITVlv
+SyIsInN1YiI6IjEwMjIwNTc5NzI3Njk0MTAxMDY3NyIsInRleH
+QiOiJPbiB0aGUgY29kaW5nIHN0cmFuZCwgbm90IHRoZSB0ZW1w
+bGF0ZSBzdHJhbmQuIiwiY3JlYXRlZCI6MTUzNDM1MDQwODA5M3
+0sIkJ1eXZCSUo2TDN2S2Y4dkciOnsiZGlzY3Vzc2lvbklkIjoi
+MW5WQlNZcU9vbXpOazVXdSIsInN1YiI6IjEwMjIwNTc5NzI3Nj
+k0MTAxMDY3NyIsInRleHQiOiJBIG5vbi1HNCBleHBlcnQgaXMg
+cHJvYmFibHkgZ29pbmcgdG8gbmVlZCB0byBiZSByZW1pbmRlZC
+BvZiB3aGF0IHlvdSBtZWFuIGJ5IFBHNCByZWdpc3Rlci4iLCJj
+cmVhdGVkIjoxNTM0MzUwNTAwMzU4fSwiaHBsRDJlazdpR1FnME
+9WVCI6eyJkaXNjdXNzaW9uSWQiOiIyT2JhMHl5UU5peWlraEow
+Iiwic3ViIjoiMTAyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dC
+I6IlRoZXJlIGlzIGFjdGF1bGx5IHZlcnkgbGl0dGxlIGRpZmVy
+ZW5jZSBvbiB0aGUgdGVtcGxhdGUgc3RyYW5kLiIsImNyZWF0ZW
+QiOjE1MzQzNTA1ODU3NzZ9LCJ5NkVLMzNzYXVjV2RmN282Ijp7
+ImRpc2N1c3Npb25JZCI6IjZlTnV3OUxQa3h1VXB3Q24iLCJzdW
+IiOiIxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZXh0IjoiTGFi
+ZWwgdGhlIGxlZnQgYW5kIHJpZ2h0IHBhbmVscyBvbiB0aGUgcG
+xvdC4iLCJjcmVhdGVkIjoxNTM0MzUwNjExODc2fSwiRE1aZXpy
+NDFydjQ5dkpwcyI6eyJkaXNjdXNzaW9uSWQiOiJJbENIcFVXM1
+pjMkQ3cWVjIiwic3ViIjoiMTAyMjA1Nzk3Mjc2OTQxMDEwNjc3
+IiwidGV4dCI6IklmIHRoZSBwdXJwb3NlIGhlcmUgaXMgdG8gZX
+hhbWluZSBpZiB0aGVyZSBpcyBhIGRpZmZlcmVuY2UgaW4gdGhl
+IGZyYWN0aW9uIG9mIEctcnVucyB3aGljaCBhcmUgaGFyZGNvZG
+VkIGlzIGRpZmZlcmVudCBhdCB0aGUgZGlmZmVyZW50IGVuZHMs
+IEknbSBub3Qgc3VyZSBodGlzIGlzIHRoZSBiZXN0IHdheSB0by
+BkbyBpdDogSSBtaWdodCBtYWtlIHRoZSBncmFwaCBhZGQgdXAg
+dG8gMTAwJSBhdCBhbGwgeCBsb2NhdGlvbnMuIFxuXG5BbHRlcm
+5hdGl2ZWx5IGlmIHRoZSBwb25pdCBpcyB0byBzaG93IHRoYXQg
+dGhlIHN0YXJ0LWNvZG9uIGJpYXMgaXMgb25seSBwcmVzZW50IG
+luIHRoZSAwLWhhcmRjb2RlZCBHLXJ1bnMsIHRoZW4gcGVyaGFw
+cyBpdCBpcyBiZXR0ZXIgdG8gc2hvdyB0aGUgbGluZXMgbm90IH
+N0YWNrZWQuIiwiY3JlYXRlZCI6MTUzNDM1MDgyMTYxNH0sIjR3
+TzdVZzJIWDUxM2hBY1EiOnsiZGlzY3Vzc2lvbklkIjoiRHpJdT
+lWRUg3OW13a2drYyIsInN1YiI6IjEwMjIwNTc5NzI3Njk0MTAx
+MDY3NyIsInRleHQiOiJDb3VsZCBub3QgdGhlIG9wcG9zaXRlIG
+FyZ3VlbWVudCBiZSBtYWRlOiB0aGluZ3MgdGhhdCBhcmUgbW9y
+ZSBjb21tb24gYXJlIGxlc3MgbGlrZWx5IHRvIGhhdmUgYW4gZW
+ZmZWN0LiIsImNyZWF0ZWQiOjE1MzQzNTA5Nzg5Nzh9fSwiaGlz
+dG9yeSI6Wy0xMjUxOTkwNTgzXX0=
+-->
