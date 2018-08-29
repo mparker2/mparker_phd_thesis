@@ -37,7 +37,7 @@ For hardcoded PG4 analysis, all overlapping two tetrad PG4 registers in CDSs wer
 
 ### The genome of *Arabidopsis thaliana* poor in three tetrad PG4s, but not two tetrad PG4s
 
-To compare the PG4 density of the Arabidopsis genome to other organisms, we downloaded the set of 48 land plant genomes available in Ensembl Plants Release 39, which included 22 Monocotyledons, 23 Dicotyledons, and 3 Non-flowering plants. The genomes of the metazoans *Drosophila melanogaster* (fruit fly), *Danio rerio* (zebrafish), *Mus musculus* (mouse) and *Homo sapiens* (human) were also analysed. PG4s with three or more tetrads were identified using the Quadparser method and the average density per Megabase was calculated for each genome. Arabidopsis has the smallest genome of any of the sequenced plants, estimated at 135Mb (119Mb in the golden path sequence). It also has one of the lowest three tetrad PG4 densities (see figure/table X). Only 1284 non-overlapping PG4s with three or more tetrads are predicted to form in the whole Arabidopsis genome, with an average density of 10.4 PG4s/Mb. In comparison, the human genome is extremely PG4 dense, with an average of 123 PG4s/Mb. Monocot plants also tend to have much greater PG4 densities than Dicots (median density 59 PG4s/Mb vs. 3.3 PG4s/Mb). This is likely to result from a greater GC content in Monocot genomes. Non-flowering plants such as the bryophyte *Physcomitrella patens* (XXX PG4s/Mb) had PG4 densities which resembled those of the Dicots more closely. We did not find a correlation between PG4 density and genome size (Spearmans rho = -0.02).
+To compare the PG4 density of the Arabidopsis genome to other organisms, we downloaded the set of 48 land plant genomes available in Ensembl Plants Release 39, which included 22 Monocotyledons, 23 Dicotyledons, and 3 Non-flowering plants. The genomes of the metazoans *Drosophila melanogaster* (fruit fly), *Danio rerio* (zebrafish), *Mus musculus* (mouse) and *Homo sapiens* (human) were also analysed. PG4s with three or more tetrads were identified using the Quadparser method and the average density per Megabase was calculated for each genome. Arabidopsis has the smallest genome of any of the sequenced plants, estimated at 135Mb (119Mb in the golden path sequence). It also has one of the lowest three tetrad PG4 densities (Fig \ref{pg4_genomes}a). Only 1284 non-overlapping PG4s with three or more tetrads are predicted to form in the whole Arabidopsis genome, with an average density of 10.4 PG4s/Mb. In comparison, the human genome is extremely PG4 dense, with an average of 123 PG4s/Mb. Monocot plants also tend to have much greater PG4 densities than Dicots (median density 59 PG4s/Mb vs. 3.3 PG4s/Mb). This is likely to result from a greater GC content in Monocot genomes. Non-flowering plants such as the bryophyte *Physcomitrella patens* (XXX PG4s/Mb) had PG4 densities which resembled those of the Dicots more closely. We did not find a correlation between PG4 density and genome size (Spearmans rho = -0.02).
 
 We noted that the PG4 densities of the warm blooded mammals *M. musculus* and *H. sapiens* are much greater than those of *D. melanogaster* or *D. rerio*, or any of the plants. The PG4 density of *Mus musculus*  is 227 PG4s/Mb, more than twice that of any plant analysed. We hypothesised that this greater density may be in part due to the homothermic nature of mammmals, which could mean their body temperatures are high enough that three tetrad PG4s are less stable. Since the melting temperatures of three tetrad G4s can reach up to 100 Degrees Celsius, it is feasible that at the physiological temperature ranges that plants live in, three tetrad G4s may be more difficult to resolve, leading to problems during replication or transcription. 
 
@@ -166,56 +166,56 @@ FuYWx5c2lzIn0sImVCU2VLenJQV3BNcThxTnEiOnsic3RhcnQi
 Ojc0OTYsImVuZCI6NzU3MSwidGV4dCI6InBvc3NpYmxlIHRvIH
 VzZSBzeW5vbnltb3VzIGNvZG9ucyB3aGljaCBkbyBub3QgY2hh
 bmdlIHRoZSBwcm90ZWluIHNlcXVlbmNlLCJ9LCJ2bmlWcUdNZW
-8zWHZWbnJaIjp7InN0YXJ0Ijo5MjI1LCJlbmQiOjkzMDIsInRl
+8zWHZWbnJaIjp7InN0YXJ0Ijo5MjI1LCJlbmQiOjkzMDYsInRl
 eHQiOiJ0IGFsc28gaGFzIG9uZSBvZiB0aGUgbG93ZXN0IHRocm
 VlIHRldHJhZCBQRzQgZGVuc2l0aWVzLiJ9LCJ4RXdGUTlSa09Z
-NE05NVh0Ijp7InN0YXJ0Ijo5NjE3LCJlbmQiOjk2NTksInRleH
+NE05NVh0Ijp7InN0YXJ0Ijo5NjIxLCJlbmQiOjk2NjMsInRleH
 QiOiIobWVkaWFuIGRlbnNpdHkgNTkgUEc0cy9NYiB2cy4gMy4z
 IFBHNHMvTWIifSwiUzBwZFBJUzVVR1hNa0NxSiI6eyJzdGFydC
-I6MTA0NDMsImVuZCI6MTA3MTksInRleHQiOiJTaW5jZSB0aGUg
+I6MTA0NDcsImVuZCI6MTA3MjMsInRleHQiOiJTaW5jZSB0aGUg
 bWVsdGluZyB0ZW1wZXJhdHVyZXMgb2YgdGhyZWUgdGV0cmFkIE
 c0cyBjYW4gcmVhY2ggdXAgdG8gMTAwIERlZ3JlZXPigKYifSwi
-STJIMmJQUGNIQmxFTVN2ayI6eyJzdGFydCI6MTE0NzUsImVuZC
-I6MTE3MDEsInRleHQiOiJBcmFiaWRvcHNpcyB3YXMgYWxzbyBt
+STJIMmJQUGNIQmxFTVN2ayI6eyJzdGFydCI6MTE0NzksImVuZC
+I6MTE3MDUsInRleHQiOiJBcmFiaWRvcHNpcyB3YXMgYWxzbyBt
 b3JlIGRlbnNlIGluIHR3byB0ZXRyYWQgUEc0cywgd2l0aCA5NT
 kgUEc0cy9NYi4gVGhpcyB3YXPigKYifSwiV2R3YlU4TU5VZXE4
-RTRWdSI6eyJzdGFydCI6MTIwNjUsImVuZCI6MTIyNDAsInRleH
+RTRWdSI6eyJzdGFydCI6MTIwNjksImVuZCI6MTIyNDQsInRleH
 QiOiJXZSBzdWdnZXN0IHRoYXQgdGhpcyBpbmRpY2F0ZXMgdGhh
 dCB0d28gdGV0cmFkIFBHNHMgbWF5IHBsYXkgYSByZWd1bGF0b3
 J5IHJvbGXigKYifSwieDlGcTVXUG9qWVp3OUFzYiI6eyJzdGFy
-dCI6MTUwOTIsImVuZCI6MTU2ODAsInRleHQiOiIhWyoqTWV0YW
+dCI6MTUwOTYsImVuZCI6MTU2ODQsInRleHQiOiIhWyoqTWV0YW
 dlbmUgUHJvZmlsZSBvZiBHQyBjb250ZW50IGFuZCBQRzQgZGVu
 c2l0eSoqIE1ldGFnZW5lIHByb2ZpbGVzIHNob3dpbmfigKYifS
-wiMlppaTZYSUFSM2lMVFZXWiI6eyJzdGFydCI6MTYwNTksImVu
-ZCI6MTYwODIsInRleHQiOiJzcGVjaWZpYyBwcm90ZWluIG1vdG
-lmcyJ9LCJ1dWowWmpCSGc2d2JYQkFSIjp7InN0YXJ0IjoxNjkz
-NywiZW5kIjoxNjk1NCwidGV4dCI6IlRoZSBHQyBjb250ZW50IG
-9mIn0sImJNTEpQOURFVEpwa0s4OHgiOnsic3RhcnQiOjE3OTg4
-LCJlbmQiOjE4MjMxLCJ0ZXh0IjoiVGhpcyBtYXkgYmUgZHVlIH
+wiMlppaTZYSUFSM2lMVFZXWiI6eyJzdGFydCI6MTYwNjMsImVu
+ZCI6MTYwODYsInRleHQiOiJzcGVjaWZpYyBwcm90ZWluIG1vdG
+lmcyJ9LCJ1dWowWmpCSGc2d2JYQkFSIjp7InN0YXJ0IjoxNjk0
+MSwiZW5kIjoxNjk1OCwidGV4dCI6IlRoZSBHQyBjb250ZW50IG
+9mIn0sImJNTEpQOURFVEpwa0s4OHgiOnsic3RhcnQiOjE3OTky
+LCJlbmQiOjE4MjM1LCJ0ZXh0IjoiVGhpcyBtYXkgYmUgZHVlIH
 RvIHRoZSByZXBldGl0aXZlIG5hdHVyZSBvZiBzb21lIHByb3Rl
 aW4gbW90aWZzLiBQQ1MgUEc0IGNvbnRlbuKApiJ9LCJaTlNvRz
-JvRHluUjNXdTZaIjp7InN0YXJ0IjoxODc4MCwiZW5kIjoxODgw
-MiwidGV4dCI6IihTcGVhcm1hbnMgcmhvIDAuMDE0KS4ifSwial
-hzODZuY3RLZnVHMExWOSI6eyJzdGFydCI6MTg4MTQsImVuZCI6
-MTkxODUsInRleHQiOiIhWyoqUmV2ZXJzZSBUcmFuc2xhdGlvbi
+JvRHluUjNXdTZaIjp7InN0YXJ0IjoxODc4NCwiZW5kIjoxODgw
+NiwidGV4dCI6IihTcGVhcm1hbnMgcmhvIDAuMDE0KS4ifSwial
+hzODZuY3RLZnVHMExWOSI6eyJzdGFydCI6MTg4MTgsImVuZCI6
+MTkxODksInRleHQiOiIhWyoqUmV2ZXJzZSBUcmFuc2xhdGlvbi
 BTaW11bGF0aW9uIHNob3dzIHRoYXQgUEc0cyBhcmUgZW5yaWNo
 ZWQgYXQgdGhlIFN0YXJ0IENv4oCmIn0sIjZ0Ums0ak01bzdBSE
-1Zb0siOnsic3RhcnQiOjE5MzIyLCJlbmQiOjE5MzMwLCJ0ZXh0
+1Zb0siOnsic3RhcnQiOjE5MzI2LCJlbmQiOjE5MzM0LCJ0ZXh0
 IjoidGhhdCB0aGUifSwiMW5WQlNZcU9vbXpOazVXdSI6eyJzdG
-FydCI6MjA2MzcsImVuZCI6MjA2NDksInRleHQiOiJQRzQgcmVn
+FydCI6MjA2NDEsImVuZCI6MjA2NTMsInRleHQiOiJQRzQgcmVn
 aXN0ZXIifSwiMk9iYTB5eVFOaXlpa2hKMCI6eyJzdGFydCI6Mj
-A2OTAsImVuZCI6MjA4NTMsInRleHQiOiJXZSBmb3VuZCB0aGF0
+A2OTQsImVuZCI6MjA4NTcsInRleHQiOiJXZSBmb3VuZCB0aGF0
 IG9uIGJvdGggc3RyYW5kcywgdGhlIGdyZWF0ZXN0IG51bWJlci
 BvZiBQRzRzIHdlcmUgY29tcGxldGVseSBoYXJk4oCmIn0sIjZl
-TnV3OUxQa3h1VXB3Q24iOnsic3RhcnQiOjIxODQ4LCJlbmQiOj
-IyMzI4LCJ0ZXh0IjoiRnJlcXVlbmN5IHBsb3Qgc2hvd2luZyB0
+TnV3OUxQa3h1VXB3Q24iOnsic3RhcnQiOjIxODUyLCJlbmQiOj
+IyMzMyLCJ0ZXh0IjoiRnJlcXVlbmN5IHBsb3Qgc2hvd2luZyB0
 aGUgdG90YWwgbnVtYmVyIG9mIEctcnVucyBjb250cmlidXRpbm
 cgdG8gUEc0cyB3aGljaCBhcuKApiJ9LCJJbENIcFVXM1pjMkQ3
-cWVjIjp7InN0YXJ0IjoyMzQ0MCwiZW5kIjoyMzc4NCwidGV4dC
+cWVjIjp7InN0YXJ0IjoyMzQ0NCwiZW5kIjoyMzc4OCwidGV4dC
 I6IiFbKipOb24taGFyZGNvZGVkIFBHNHMgbGV2ZWxzIGFyZSBn
 cmVhdGVyIGF0IHRoZSBzdGFydCBjb2RvbiBwcm94aW1hbCByZW
 dpb24gb2bigKYifSwiRHpJdTlWRUg3OW13a2drYyI6eyJzdGFy
-dCI6Mjc0MjksImVuZCI6Mjc2NDgsInRleHQiOiJGdXJ0aGVybW
+dCI6Mjc0MzMsImVuZCI6Mjc2NTIsInRleHQiOiJGdXJ0aGVybW
 9yZSwgdGhlIHJhdGlvIG9mIHR3byB0ZXRyYWQgdG8gdGhyZWUg
 dGV0cmFkIFBHNHMgaW4gcGxhbnQgZ2Vub21lcyBpcyBt4oCmIn
 19LCJjb21tZW50cyI6eyJlNmFyTDR1R3h3Uk05SnRZIjp7ImRp
@@ -365,5 +365,6 @@ MDEwNjc3IiwidGV4dCI6IkNvdWxkIG5vdCB0aGUgb3Bwb3NpdG
 UgYXJndWVtZW50IGJlIG1hZGU6IHRoaW5ncyB0aGF0IGFyZSBt
 b3JlIGNvbW1vbiBhcmUgbGVzcyBsaWtlbHkgdG8gaGF2ZSBhbi
 BlZmZlY3QuIiwiY3JlYXRlZCI6MTUzNDM1MDk3ODk3OH19LCJo
-aXN0b3J5IjpbLTM1MjYwMTIxOCwtMTI1MTk5MDU4M119
+aXN0b3J5IjpbLTYwOTQxNDU3OCwtMzUyNjAxMjE4LC0xMjUxOT
+kwNTgzXX0=
 -->
