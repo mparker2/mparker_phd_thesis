@@ -21,11 +21,11 @@ The genomes of 48 multicellular land plants were downloaded over FTP from Ensemb
 
 ### Metagene Profiles
 
-Shuffled genomes were generated in Python using `ushuffle` to shuffle sequences in 20bp windows, maintaining their nucleotide and dinucleotide contents [@Jiang2008]. G content on both strands was calculated in 20bp windows, using `bedtools makewindows`, `bedtools nuc` and `awk` [@Quinlan2010; @Aho1988]. Bed files of non-overlapping PG4s were converted into BigWig format using `bedtools genomecov` and `ucsc-bedGraphToBigWig` [@Kent2010]. Gene annotations were taken from Araport11. Overlapping transcripts of the same gene were flattened into a single bed12 interval per gene [@Davidson2017], with the leftmost TSS and start codon and the rightmost TTS and stop codon (or vice versa for genes on the negative strand). GC/PG4 coverage arrays for the 500bp upstream region, 5'UTR, CDS, 3'UTR and 500bp downstream region were then extracted for each gene using `pyBigWig` and reinterpolated to sizes of 50, 20, 100, 20, and 50 respectively [@Ryan2018]. Reinterpolation was conducted using piecew. These were then averaged across all genes to produce metaprofiles. Plots were generated using `matplotlib` and `seaborn` [@Waskom2014; @Hunter2007].
+Shuffled genomes were generated in Python using `ushuffle` to shuffle sequences in 20bp windows, maintaining their nucleotide and dinucleotide contents [@Jiang2008]. G content on both strands was calculated in 20bp windows, using `bedtools makewindows`, `bedtools nuc` and `awk` [@Quinlan2010; @Aho1988]. Bed files of non-overlapping PG4s were converted into BigWig format using `bedtools genomecov` and `ucsc-bedGraphToBigWig` [@Kent2010]. Gene annotations were taken from Araport11. Overlapping transcripts of the same gene were flattened into a single bed12 interval per gene [@Davidson2017], with the leftmost TSS and start codon and the rightmost TTS and stop codon (or vice versa for genes on the negative strand). GC/PG4 coverage arrays for the 500bp upstream region, 5'UTR, CDS, 3'UTR and 500bp downstream region were then extracted for each gene using `pyBigWig` and reinterpolated to sizes of 50, 20, 100, 20, and 50 respectively [@Ryan2018]. These were then averaged across all genes to produce metaprofiles. Plots were generated using `matplotlib` and `seaborn` [@Waskom2014; @Hunter2007].
 
 ### Reverse Translation Method
 
-Relative frequency of codon usage for all Arabidopsis CDS sequences was calculated in python. CDSs from multiple transcripts of the same gene were treated separately, since flattening may have resulted in a number of frame-shifts. Reverse translation was conducted by translating CDSs into protein, then randomly selecting codons to represent the protein, weighting each codon by its usage. 100 reverse translated potential coding sequences (PCSs) were generated per CDS. G content on each strand was calculated using 20bp windows and reinterpolated to 100 bins, for both real CDSs and PCSs. PG4 content was calculated using G4Seeqer and the overlapping Quadparser method. Overlapping PG4s were flattened into a single interval. PG4s were binned into 100 equally sized bins per gene, based on the midpoint of the PG4. Resultant profiles were stored in HDF5 format using `h5py` [@Collette2013]. Averaged profiles across all iterations of reverse translation, and all genes were generated and plotted using `matplotlib` [@Hunter2007].
+Relative frequency of codon usage for all Arabidopsis CDS sequences was calculated in python. CDSs from multiple transcripts of the same gene were treated separately, since flattening may have resulted in a number of frame-shifts. Reverse translation was conducted by translating CDSs into protein, then randomly selecting codons to represent the protein, weighting each codon by its usage. 100 reverse translated potential coding sequences (PCSs) were generated per CDS. G content on each strand was calculated using 20bp windows and reinterpolated to 100 bins, for both real CDSs and PCSs.  Reinterpolation was conducted using piecewise linear interpolation with 100 evenly spaced positions along the length of the sequePG4 content was calculated using G4Seeqer and the overlapping Quadparser method. Overlapping PG4s were flattened into a single interval. PG4s were binned into 100 equally sized bins per gene, based on the midpoint of the PG4. Resultant profiles were stored in HDF5 format using `h5py` [@Collette2013]. Averaged profiles across all iterations of reverse translation, and all genes were generated and plotted using `matplotlib` [@Hunter2007].
 
 ### Hardcoded PG4 Analysis
 
@@ -156,66 +156,66 @@ IifSwiQW53NktWdW93dWpBd3Y0cSI6eyJzdGFydCI6NTU4OSwi
 ZW5kIjo1NjgyLCJ0ZXh0IjoiT3ZlcmxhcHBpbmcgdHJhbnNjcm
 lwdHMgb2YgdGhlIHNhbWUgZ2VuZSB3ZXJlIGZsYXR0ZW5lZCBp
 bnRvIGEgc2luZ2xlIGJlZDEyIGludOKApiJ9LCJQbm9nZldXaG
-tPc2w5UjBqIjp7InN0YXJ0Ijo2ODE4LCJlbmQiOjY4NDQsInRl
+tPc2w5UjBqIjp7InN0YXJ0Ijo2Nzc0LCJlbmQiOjY4MDAsInRl
 eHQiOiJyZWludGVycG9sYXRlZCB0byAxMDAgYmlucyJ9LCJuVn
-ViRG9HUEhBRmZub0JoIjp7InN0YXJ0Ijo2NzMxLCJlbmQiOjY3
-NTMsInRleHQiOiJ3ZXJlIGdlbmVyYXRlZCBwZXIgQ0RTIn0sIl
-JBUFp6bkFadnhUbVF5SFkiOnsic3RhcnQiOjc0MjcsImVuZCI6
-NzQ1OSwidGV4dCI6InByZWRpY3RlZCB1c2luZyBuZXR3b3JrIG
+ViRG9HUEhBRmZub0JoIjp7InN0YXJ0Ijo2Njg3LCJlbmQiOjY3
+MDksInRleHQiOiJ3ZXJlIGdlbmVyYXRlZCBwZXIgQ0RTIn0sIl
+JBUFp6bkFadnhUbVF5SFkiOnsic3RhcnQiOjc1MTMsImVuZCI6
+NzU0NSwidGV4dCI6InByZWRpY3RlZCB1c2luZyBuZXR3b3JrIG
 FuYWx5c2lzIn0sImVCU2VLenJQV3BNcThxTnEiOnsic3RhcnQi
-Ojc2OTMsImVuZCI6Nzc2OCwidGV4dCI6InBvc3NpYmxlIHRvIH
+Ojc3NzksImVuZCI6Nzg1NCwidGV4dCI6InBvc3NpYmxlIHRvIH
 VzZSBzeW5vbnltb3VzIGNvZG9ucyB3aGljaCBkbyBub3QgY2hh
 bmdlIHRoZSBwcm90ZWluIHNlcXVlbmNlLCJ9LCJ2bmlWcUdNZW
-8zWHZWbnJaIjp7InN0YXJ0Ijo5NDIyLCJlbmQiOjk1MzQsInRl
+8zWHZWbnJaIjp7InN0YXJ0Ijo5NTA4LCJlbmQiOjk2MjAsInRl
 eHQiOiJ0IGFsc28gaGFzIG9uZSBvZiB0aGUgbG93ZXN0IHRocm
 VlIHRldHJhZCBQRzQgZGVuc2l0aWVzLiJ9LCJ4RXdGUTlSa09Z
-NE05NVh0Ijp7InN0YXJ0Ijo5ODQ5LCJlbmQiOjk4OTEsInRleH
+NE05NVh0Ijp7InN0YXJ0Ijo5OTM1LCJlbmQiOjk5NzcsInRleH
 QiOiIobWVkaWFuIGRlbnNpdHkgNTkgUEc0cy9NYiB2cy4gMy4z
 IFBHNHMvTWIifSwiUzBwZFBJUzVVR1hNa0NxSiI6eyJzdGFydC
-I6MTA2NzUsImVuZCI6MTA5NTEsInRleHQiOiJTaW5jZSB0aGUg
+I6MTA3NjEsImVuZCI6MTEwMzcsInRleHQiOiJTaW5jZSB0aGUg
 bWVsdGluZyB0ZW1wZXJhdHVyZXMgb2YgdGhyZWUgdGV0cmFkIE
 c0cyBjYW4gcmVhY2ggdXAgdG8gMTAwIERlZ3JlZXPigKYifSwi
-STJIMmJQUGNIQmxFTVN2ayI6eyJzdGFydCI6MTE3MDYsImVuZC
-I6MTE5MzIsInRleHQiOiJBcmFiaWRvcHNpcyB3YXMgYWxzbyBt
+STJIMmJQUGNIQmxFTVN2ayI6eyJzdGFydCI6MTE3OTIsImVuZC
+I6MTIwMTgsInRleHQiOiJBcmFiaWRvcHNpcyB3YXMgYWxzbyBt
 b3JlIGRlbnNlIGluIHR3byB0ZXRyYWQgUEc0cywgd2l0aCA5NT
 kgUEc0cy9NYi4gVGhpcyB3YXPigKYifSwiV2R3YlU4TU5VZXE4
-RTRWdSI6eyJzdGFydCI6MTIyOTYsImVuZCI6MTI0NzEsInRleH
+RTRWdSI6eyJzdGFydCI6MTIzODIsImVuZCI6MTI1NTcsInRleH
 QiOiJXZSBzdWdnZXN0IHRoYXQgdGhpcyBpbmRpY2F0ZXMgdGhh
 dCB0d28gdGV0cmFkIFBHNHMgbWF5IHBsYXkgYSByZWd1bGF0b3
 J5IHJvbGXigKYifSwieDlGcTVXUG9qWVp3OUFzYiI6eyJzdGFy
-dCI6MTUzMjMsImVuZCI6MTU5MTEsInRleHQiOiIhWyoqTWV0YW
+dCI6MTU0MDksImVuZCI6MTU5OTcsInRleHQiOiIhWyoqTWV0YW
 dlbmUgUHJvZmlsZSBvZiBHQyBjb250ZW50IGFuZCBQRzQgZGVu
 c2l0eSoqIE1ldGFnZW5lIHByb2ZpbGVzIHNob3dpbmfigKYifS
-wiMlppaTZYSUFSM2lMVFZXWiI6eyJzdGFydCI6MTYyOTAsImVu
-ZCI6MTYzMTMsInRleHQiOiJzcGVjaWZpYyBwcm90ZWluIG1vdG
-lmcyJ9LCJ1dWowWmpCSGc2d2JYQkFSIjp7InN0YXJ0IjoxNzE2
-OCwiZW5kIjoxNzE4NSwidGV4dCI6IlRoZSBHQyBjb250ZW50IG
-9mIn0sImJNTEpQOURFVEpwa0s4OHgiOnsic3RhcnQiOjE4MjE5
-LCJlbmQiOjE4NDYyLCJ0ZXh0IjoiVGhpcyBtYXkgYmUgZHVlIH
+wiMlppaTZYSUFSM2lMVFZXWiI6eyJzdGFydCI6MTYzNzYsImVu
+ZCI6MTYzOTksInRleHQiOiJzcGVjaWZpYyBwcm90ZWluIG1vdG
+lmcyJ9LCJ1dWowWmpCSGc2d2JYQkFSIjp7InN0YXJ0IjoxNzI1
+NCwiZW5kIjoxNzI3MSwidGV4dCI6IlRoZSBHQyBjb250ZW50IG
+9mIn0sImJNTEpQOURFVEpwa0s4OHgiOnsic3RhcnQiOjE4MzA1
+LCJlbmQiOjE4NTQ4LCJ0ZXh0IjoiVGhpcyBtYXkgYmUgZHVlIH
 RvIHRoZSByZXBldGl0aXZlIG5hdHVyZSBvZiBzb21lIHByb3Rl
 aW4gbW90aWZzLiBQQ1MgUEc0IGNvbnRlbuKApiJ9LCJaTlNvRz
-JvRHluUjNXdTZaIjp7InN0YXJ0IjoxOTAxMSwiZW5kIjoxOTAz
-MywidGV4dCI6IihTcGVhcm1hbnMgcmhvIDAuMDE0KS4ifSwial
-hzODZuY3RLZnVHMExWOSI6eyJzdGFydCI6MTkwNDUsImVuZCI6
-MTk0MTYsInRleHQiOiIhWyoqUmV2ZXJzZSBUcmFuc2xhdGlvbi
+JvRHluUjNXdTZaIjp7InN0YXJ0IjoxOTA5NywiZW5kIjoxOTEx
+OSwidGV4dCI6IihTcGVhcm1hbnMgcmhvIDAuMDE0KS4ifSwial
+hzODZuY3RLZnVHMExWOSI6eyJzdGFydCI6MTkxMzEsImVuZCI6
+MTk1MDIsInRleHQiOiIhWyoqUmV2ZXJzZSBUcmFuc2xhdGlvbi
 BTaW11bGF0aW9uIHNob3dzIHRoYXQgUEc0cyBhcmUgZW5yaWNo
 ZWQgYXQgdGhlIFN0YXJ0IENv4oCmIn0sIjZ0Ums0ak01bzdBSE
-1Zb0siOnsic3RhcnQiOjE5NTUzLCJlbmQiOjE5NTYxLCJ0ZXh0
+1Zb0siOnsic3RhcnQiOjE5NjM5LCJlbmQiOjE5NjQ3LCJ0ZXh0
 IjoidGhhdCB0aGUifSwiMW5WQlNZcU9vbXpOazVXdSI6eyJzdG
-FydCI6MjA4NjgsImVuZCI6MjA4ODAsInRleHQiOiJQRzQgcmVn
+FydCI6MjA5NTQsImVuZCI6MjA5NjYsInRleHQiOiJQRzQgcmVn
 aXN0ZXIifSwiMk9iYTB5eVFOaXlpa2hKMCI6eyJzdGFydCI6Mj
-A5MjEsImVuZCI6MjEwODQsInRleHQiOiJXZSBmb3VuZCB0aGF0
+EwMDcsImVuZCI6MjExNzAsInRleHQiOiJXZSBmb3VuZCB0aGF0
 IG9uIGJvdGggc3RyYW5kcywgdGhlIGdyZWF0ZXN0IG51bWJlci
 BvZiBQRzRzIHdlcmUgY29tcGxldGVseSBoYXJk4oCmIn0sIjZl
-TnV3OUxQa3h1VXB3Q24iOnsic3RhcnQiOjIyMDc5LCJlbmQiOj
-IyNTU5LCJ0ZXh0IjoiRnJlcXVlbmN5IHBsb3Qgc2hvd2luZyB0
+TnV3OUxQa3h1VXB3Q24iOnsic3RhcnQiOjIyMTY1LCJlbmQiOj
+IyNjQ1LCJ0ZXh0IjoiRnJlcXVlbmN5IHBsb3Qgc2hvd2luZyB0
 aGUgdG90YWwgbnVtYmVyIG9mIEctcnVucyBjb250cmlidXRpbm
 cgdG8gUEc0cyB3aGljaCBhcuKApiJ9LCJJbENIcFVXM1pjMkQ3
-cWVjIjp7InN0YXJ0IjoyMzY3MSwiZW5kIjoyNDAxNSwidGV4dC
+cWVjIjp7InN0YXJ0IjoyMzc1NywiZW5kIjoyNDEwMSwidGV4dC
 I6IiFbKipOb24taGFyZGNvZGVkIFBHNHMgbGV2ZWxzIGFyZSBn
 cmVhdGVyIGF0IHRoZSBzdGFydCBjb2RvbiBwcm94aW1hbCByZW
 dpb24gb2bigKYifSwiRHpJdTlWRUg3OW13a2drYyI6eyJzdGFy
-dCI6Mjc2NjAsImVuZCI6Mjc4NzksInRleHQiOiJGdXJ0aGVybW
+dCI6Mjc3NDYsImVuZCI6Mjc5NjUsInRleHQiOiJGdXJ0aGVybW
 9yZSwgdGhlIHJhdGlvIG9mIHR3byB0ZXRyYWQgdG8gdGhyZWUg
 dGV0cmFkIFBHNHMgaW4gcGxhbnQgZ2Vub21lcyBpcyBt4oCmIn
 19LCJjb21tZW50cyI6eyJlNmFyTDR1R3h3Uk05SnRZIjp7ImRp
@@ -365,7 +365,7 @@ MDEwNjc3IiwidGV4dCI6IkNvdWxkIG5vdCB0aGUgb3Bwb3NpdG
 UgYXJndWVtZW50IGJlIG1hZGU6IHRoaW5ncyB0aGF0IGFyZSBt
 b3JlIGNvbW1vbiBhcmUgbGVzcyBsaWtlbHkgdG8gaGF2ZSBhbi
 BlZmZlY3QuIiwiY3JlYXRlZCI6MTUzNDM1MDk3ODk3OH19LCJo
-aXN0b3J5IjpbNDM0MDI4NTU4LC0xNTc0MzU0ODIwLC0xMjQwND
-AwOTEwLC0xNDc2NjIzNTk2LC0zNTI2MDEyMTgsLTEyNTE5OTA1
-ODNdfQ==
+aXN0b3J5IjpbLTI0Mjg1NTk4OSwtMTU3NDM1NDgyMCwtMTI0MD
+QwMDkxMCwtMTQ3NjYyMzU5NiwtMzUyNjAxMjE4LC0xMjUxOTkw
+NTgzXX0=
 -->
