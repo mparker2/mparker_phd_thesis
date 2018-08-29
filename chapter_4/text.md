@@ -39,7 +39,7 @@ For hardcoded PG4 analysis, all overlapping two tetrad PG4 registers in CDSs wer
 
 To compare the PG4 density of the Arabidopsis genome to other organisms, we downloaded the set of 48 land plant genomes available in Ensembl Plants Release 39, which included 22 Monocotyledons, 23 Dicotyledons, and 3 Non-flowering plants. The genomes of the metazoans *Drosophila melanogaster* (fruit fly), *Danio rerio* (zebrafish), *Mus musculus* (mouse) and *Homo sapiens* (human) were also analysed. PG4s with three or more tetrads were identified using the Quadparser method and the average density per Megabase was calculated for each genome. Arabidopsis has the smallest genome of any of the sequenced plants, estimated at 135Mb (119Mb in the golden path sequence). It also has one of the lowest three tetrad PG4 densities amongst all organisms analysed (Fig \ref{pg4_genomes}a). Only 1284 non-overlapping PG4s with three or more tetrads are predicted to form in the whole Arabidopsis genome, with an average density of 10.4 PG4s/Mb. In comparison, the human genome is extremely PG4 dense, with an average of 123 PG4s/Mb. Monocot plants also tend to have much greater PG4 densities than Dicots (median density 59 PG4s/Mb vs. 3.3 PG4s/Mb). This is likely to result from a greater GC content in Monocot genomes. Non-flowering plants such as the bryophyte *Physcomitrella patens* (XXX PG4s/Mb) had PG4 densities which resembled those of the Dicots more closely. We did not find a correlation between PG4 density and genome size (Spearmans rho = -0.02).
 
-We noted that the PG4 densities of the warm blooded mammals *M. musculus* and *H. sapiens* are much greater than those of *D. melanogaster* or *D. rerio*, or any of the plants. The PG4 density of *Mus musculus*  is 227 PG4s/Mb, more than twice that of any plant analysed. We hypothesised that this greater density may be in part due to the homothermic nature of mammmals, which could mean their body temperatures are high enough that three tetrad PG4s are less stable. Since the melting temperatures of three tetrad G4s can reach up to 100 Degrees Celsius, it is feasible that at the physiological temperature ranges that plants live in, three tetrad G4s may be more difficult to resolve, leading to problems during replication or transcription. 
+We noted that the PG4 densities of the warm blooded mammals *M. musculus* and *H. sapiens* are much greater than those of *D. melanogaster* or *D. rerio*, or any of the plants. The PG4 density of *Mus musculus*  is 227 PG4s/Mb, more than twice that of any plant analysed. We hypothesised that this greater density may be in part due to the homothermic nature of mammmals, which could mean their body temperatures are high enough that three tetrad PG4s are less stable. Since the melting temperatures of three tetrad G4s can reach up to 100 Degrees Celsius, it is feasible that at the physiological temperature ranges that plants live in, three tetrad G4s may be more difficult to resolve, leading to problems during replication or transcription.
 
 Two tetrad G4s, which are known to form *in vitro* [@Macaya1993, @Mullen2012], but have been historically considered too unstable to be prevalent *in vivo* [@Huppert2005], might in fact be more useful as molecular switches in plants, since they melt at lower temperatures. To determine whether plants have greater numbers of two tetrad PG4s, we again performed prediction using using the Quadparser method. Since three tetrad PG4s contain subpatterns which conform to the two tetrad Quadparser pattern, we filtered out any two tetrad PG4s which overlapped with three tetrad PG4s. We found that plants tend to contain a lot more two tetrad PG4s, with several species of Monocot in fact having higher average densities than *M. musculus* or *H. sapiens*. Arabidopsis was also more dense in two tetrad PG4s, with 959 PG4s/Mb. This was significantly higher than the median Dicotyledon density (228 PG4s/Mb), perhaps indicating a stronger role for these two tetrad G4s in Arabidopsis.
 
@@ -175,47 +175,47 @@ IFBHNHMvTWIifSwiUzBwZFBJUzVVR1hNa0NxSiI6eyJzdGFydC
 I6MTA0NzgsImVuZCI6MTA3NTQsInRleHQiOiJTaW5jZSB0aGUg
 bWVsdGluZyB0ZW1wZXJhdHVyZXMgb2YgdGhyZWUgdGV0cmFkIE
 c0cyBjYW4gcmVhY2ggdXAgdG8gMTAwIERlZ3JlZXPigKYifSwi
-STJIMmJQUGNIQmxFTVN2ayI6eyJzdGFydCI6MTE1MTAsImVuZC
-I6MTE3MzYsInRleHQiOiJBcmFiaWRvcHNpcyB3YXMgYWxzbyBt
+STJIMmJQUGNIQmxFTVN2ayI6eyJzdGFydCI6MTE1MDksImVuZC
+I6MTE3MzUsInRleHQiOiJBcmFiaWRvcHNpcyB3YXMgYWxzbyBt
 b3JlIGRlbnNlIGluIHR3byB0ZXRyYWQgUEc0cywgd2l0aCA5NT
 kgUEc0cy9NYi4gVGhpcyB3YXPigKYifSwiV2R3YlU4TU5VZXE4
-RTRWdSI6eyJzdGFydCI6MTIxMDAsImVuZCI6MTIyNzUsInRleH
+RTRWdSI6eyJzdGFydCI6MTIwOTksImVuZCI6MTIyNzQsInRleH
 QiOiJXZSBzdWdnZXN0IHRoYXQgdGhpcyBpbmRpY2F0ZXMgdGhh
 dCB0d28gdGV0cmFkIFBHNHMgbWF5IHBsYXkgYSByZWd1bGF0b3
 J5IHJvbGXigKYifSwieDlGcTVXUG9qWVp3OUFzYiI6eyJzdGFy
-dCI6MTUxMjcsImVuZCI6MTU3MTUsInRleHQiOiIhWyoqTWV0YW
+dCI6MTUxMjYsImVuZCI6MTU3MTQsInRleHQiOiIhWyoqTWV0YW
 dlbmUgUHJvZmlsZSBvZiBHQyBjb250ZW50IGFuZCBQRzQgZGVu
 c2l0eSoqIE1ldGFnZW5lIHByb2ZpbGVzIHNob3dpbmfigKYifS
-wiMlppaTZYSUFSM2lMVFZXWiI6eyJzdGFydCI6MTYwOTQsImVu
-ZCI6MTYxMTcsInRleHQiOiJzcGVjaWZpYyBwcm90ZWluIG1vdG
+wiMlppaTZYSUFSM2lMVFZXWiI6eyJzdGFydCI6MTYwOTMsImVu
+ZCI6MTYxMTYsInRleHQiOiJzcGVjaWZpYyBwcm90ZWluIG1vdG
 lmcyJ9LCJ1dWowWmpCSGc2d2JYQkFSIjp7InN0YXJ0IjoxNjk3
-MiwiZW5kIjoxNjk4OSwidGV4dCI6IlRoZSBHQyBjb250ZW50IG
-9mIn0sImJNTEpQOURFVEpwa0s4OHgiOnsic3RhcnQiOjE4MDIz
-LCJlbmQiOjE4MjY2LCJ0ZXh0IjoiVGhpcyBtYXkgYmUgZHVlIH
+MSwiZW5kIjoxNjk4OCwidGV4dCI6IlRoZSBHQyBjb250ZW50IG
+9mIn0sImJNTEpQOURFVEpwa0s4OHgiOnsic3RhcnQiOjE4MDIy
+LCJlbmQiOjE4MjY1LCJ0ZXh0IjoiVGhpcyBtYXkgYmUgZHVlIH
 RvIHRoZSByZXBldGl0aXZlIG5hdHVyZSBvZiBzb21lIHByb3Rl
 aW4gbW90aWZzLiBQQ1MgUEc0IGNvbnRlbuKApiJ9LCJaTlNvRz
-JvRHluUjNXdTZaIjp7InN0YXJ0IjoxODgxNSwiZW5kIjoxODgz
-NywidGV4dCI6IihTcGVhcm1hbnMgcmhvIDAuMDE0KS4ifSwial
-hzODZuY3RLZnVHMExWOSI6eyJzdGFydCI6MTg4NDksImVuZCI6
-MTkyMjAsInRleHQiOiIhWyoqUmV2ZXJzZSBUcmFuc2xhdGlvbi
+JvRHluUjNXdTZaIjp7InN0YXJ0IjoxODgxNCwiZW5kIjoxODgz
+NiwidGV4dCI6IihTcGVhcm1hbnMgcmhvIDAuMDE0KS4ifSwial
+hzODZuY3RLZnVHMExWOSI6eyJzdGFydCI6MTg4NDgsImVuZCI6
+MTkyMTksInRleHQiOiIhWyoqUmV2ZXJzZSBUcmFuc2xhdGlvbi
 BTaW11bGF0aW9uIHNob3dzIHRoYXQgUEc0cyBhcmUgZW5yaWNo
 ZWQgYXQgdGhlIFN0YXJ0IENv4oCmIn0sIjZ0Ums0ak01bzdBSE
-1Zb0siOnsic3RhcnQiOjE5MzU3LCJlbmQiOjE5MzY1LCJ0ZXh0
+1Zb0siOnsic3RhcnQiOjE5MzU2LCJlbmQiOjE5MzY0LCJ0ZXh0
 IjoidGhhdCB0aGUifSwiMW5WQlNZcU9vbXpOazVXdSI6eyJzdG
-FydCI6MjA2NzIsImVuZCI6MjA2ODQsInRleHQiOiJQRzQgcmVn
+FydCI6MjA2NzEsImVuZCI6MjA2ODMsInRleHQiOiJQRzQgcmVn
 aXN0ZXIifSwiMk9iYTB5eVFOaXlpa2hKMCI6eyJzdGFydCI6Mj
-A3MjUsImVuZCI6MjA4ODgsInRleHQiOiJXZSBmb3VuZCB0aGF0
+A3MjQsImVuZCI6MjA4ODcsInRleHQiOiJXZSBmb3VuZCB0aGF0
 IG9uIGJvdGggc3RyYW5kcywgdGhlIGdyZWF0ZXN0IG51bWJlci
 BvZiBQRzRzIHdlcmUgY29tcGxldGVseSBoYXJk4oCmIn0sIjZl
-TnV3OUxQa3h1VXB3Q24iOnsic3RhcnQiOjIxODgzLCJlbmQiOj
-IyMzYzLCJ0ZXh0IjoiRnJlcXVlbmN5IHBsb3Qgc2hvd2luZyB0
+TnV3OUxQa3h1VXB3Q24iOnsic3RhcnQiOjIxODgyLCJlbmQiOj
+IyMzYyLCJ0ZXh0IjoiRnJlcXVlbmN5IHBsb3Qgc2hvd2luZyB0
 aGUgdG90YWwgbnVtYmVyIG9mIEctcnVucyBjb250cmlidXRpbm
 cgdG8gUEc0cyB3aGljaCBhcuKApiJ9LCJJbENIcFVXM1pjMkQ3
-cWVjIjp7InN0YXJ0IjoyMzQ3NSwiZW5kIjoyMzgxOSwidGV4dC
+cWVjIjp7InN0YXJ0IjoyMzQ3NCwiZW5kIjoyMzgxOCwidGV4dC
 I6IiFbKipOb24taGFyZGNvZGVkIFBHNHMgbGV2ZWxzIGFyZSBn
 cmVhdGVyIGF0IHRoZSBzdGFydCBjb2RvbiBwcm94aW1hbCByZW
 dpb24gb2bigKYifSwiRHpJdTlWRUg3OW13a2drYyI6eyJzdGFy
-dCI6Mjc0NjQsImVuZCI6Mjc2ODMsInRleHQiOiJGdXJ0aGVybW
+dCI6Mjc0NjMsImVuZCI6Mjc2ODIsInRleHQiOiJGdXJ0aGVybW
 9yZSwgdGhlIHJhdGlvIG9mIHR3byB0ZXRyYWQgdG8gdGhyZWUg
 dGV0cmFkIFBHNHMgaW4gcGxhbnQgZ2Vub21lcyBpcyBt4oCmIn
 19LCJjb21tZW50cyI6eyJlNmFyTDR1R3h3Uk05SnRZIjp7ImRp
@@ -365,6 +365,6 @@ MDEwNjc3IiwidGV4dCI6IkNvdWxkIG5vdCB0aGUgb3Bwb3NpdG
 UgYXJndWVtZW50IGJlIG1hZGU6IHRoaW5ncyB0aGF0IGFyZSBt
 b3JlIGNvbW1vbiBhcmUgbGVzcyBsaWtlbHkgdG8gaGF2ZSBhbi
 BlZmZlY3QuIiwiY3JlYXRlZCI6MTUzNDM1MDk3ODk3OH19LCJo
-aXN0b3J5IjpbLTE0NzY2MjM1OTYsLTM1MjYwMTIxOCwtMTI1MT
-k5MDU4M119
+aXN0b3J5IjpbLTEyNDA0MDA5MTAsLTE0NzY2MjM1OTYsLTM1Mj
+YwMTIxOCwtMTI1MTk5MDU4M119
 -->
