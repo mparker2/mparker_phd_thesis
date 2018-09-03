@@ -26,9 +26,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98517742"
-     inkscape:cx="659.88265"
-     inkscape:cy="337.80948"
+     inkscape:zoom="0.44006096"
+     inkscape:cx="482.51357"
+     inkscape:cy="705.65225"
      inkscape:document-units="px"
      inkscape:current-layer="axes_2-7"
      showgrid="false"
@@ -36,8 +36,8 @@
      fit-margin-left="5"
      fit-margin-right="5"
      fit-margin-bottom="5"
-     inkscape:window-width="1555"
-     inkscape:window-height="1051"
+     inkscape:window-width="1321"
+     inkscape:window-height="739"
      inkscape:window-x="45"
      inkscape:window-y="0"
      inkscape:window-maximized="1" />
@@ -1671,6 +1671,30 @@
              style="font-style:normal;font-weight:normal;font-size:20px;font-family:Arial;text-anchor:start;fill:#262626;stroke-linecap:butt;stroke-linejoin:round">Not hardcoded</text>
         </g>
       </g>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:39.01336288px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="344.09213"
+         y="36.737236"
+         id="text4802"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4804"
+           style="font-size:22.75779533px;stroke-linecap:butt;stroke-linejoin:round"
+           x="344.09213"
+           y="36.737236">Coding</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4806"
+         y="36.737236"
+         x="736.82666"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:39.01336288px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="36.737236"
+           x="736.82666"
+           style="font-size:22.75779533px;stroke-linecap:butt;stroke-linejoin:round"
+           id="tspan4808"
+           sodipodi:role="line">Template</tspan></text>
     </g>
     <g
        transform="matrix(0.75677655,0,0,0.75677655,34.063501,371.83562)"
