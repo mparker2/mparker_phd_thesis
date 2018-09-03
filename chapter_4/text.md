@@ -83,7 +83,7 @@ Our reverse translation method indicates that the PG4 forming potential of may a
 
 Our analysis shows that 58% of PG4 G-runs on the coding strand, and 48% on the template strand, are hardcoded. Of these hardcoded PG4s, around 51% and 60% are found in repetitive PG4s on the coding and template strand, respectively. On the other hand, most non-hardcoded PG4s on both strands are also non-repetitive (Fig \ref{hardcoded}a). This suggests the presence of a number of entirely hardcoded PG4s which are encoded by repetitive protein motifs.
 
-We counted the total number of hardcoded G-runs in each overlapping PG4 register on both strands (Fig \ref{hardcoded}b). We found that on both strands, the greatest number of PG4s were completely hardcoded, again suggesting a large number of PG4s encoded by repetitive protein motifs. On the template strand, however, we also found that 19% of PG4s had no G-runs hardcoded, suggesting the presence of template PG4s which are selected for specifically.
+Sequences which can fold into multiple different G4 conformations by using dWe counted the total number of hardcoded G-runs in each overlapping PG4 register on both strands (Fig \ref{hardcoded}b). We found that on both strands, the greatest number of PG4s were completely hardcoded, again suggesting a large number of PG4s encoded by repetitive protein motifs. On the template strand, however, we also found that 19% of PG4s had no G-runs hardcoded, suggesting the presence of template PG4s which are selected for specifically.
 
 Analysis of the frame of the first G in G-runs vs. their hardcoded status identifies that 46% and 48% of coding and template G-runs in PG4s are frame 0, i.e. are made up of the first two bases of a codon. These are all hardcoded. This is intuitive since the third position of codons is the "wobble" position which is most often degenerate amongst synonymous codons. Approximately one third and one fifth of coding strand G-runs in frames 1 and 2 are hardcoded, whilst all template strand G-runs in frames 1 and 2 are not hardcoded. Interestingly, 36% of G-runs on the coding strand are frame 2 whilst only 24% on the template strand are. This is most likely due to the relative frequencies of different amino acids whose codons may form G-runs.
 
@@ -202,20 +202,20 @@ IjoxOTgzMCwidGV4dCI6IiFbKipSZXZlcnNlIFRyYW5zbGF0aW
 Y2hlZCBhdCB0aGUgU3RhcnQgQ2/igKYifSwiNnRSazRqTTVvN0
 FITVlvSyI6eyJzdGFydCI6MTk5NjcsImVuZCI6MTk5NzUsInRl
 eHQiOiJ0aGF0IHRoZSJ9LCIxblZCU1lxT29tek5rNVd1Ijp7In
-N0YXJ0IjoyMTI5MCwiZW5kIjoyMTMwMiwidGV4dCI6IlBHNCBy
+N0YXJ0IjoyMTM2NiwiZW5kIjoyMTM3OCwidGV4dCI6IlBHNCBy
 ZWdpc3RlciJ9LCIyT2JhMHl5UU5peWlraEowIjp7InN0YXJ0Ij
-oyMTM0MywiZW5kIjoyMTUwNiwidGV4dCI6IldlIGZvdW5kIHRo
+oyMTQxOSwiZW5kIjoyMTU4MiwidGV4dCI6IldlIGZvdW5kIHRo
 YXQgb24gYm90aCBzdHJhbmRzLCB0aGUgZ3JlYXRlc3QgbnVtYm
 VyIG9mIFBHNHMgd2VyZSBjb21wbGV0ZWx5IGhhcmTigKYifSwi
-NmVOdXc5TFBreHVVcHdDbiI6eyJzdGFydCI6MjI1MDEsImVuZC
-I6MjI5ODEsInRleHQiOiJGcmVxdWVuY3kgcGxvdCBzaG93aW5n
+NmVOdXc5TFBreHVVcHdDbiI6eyJzdGFydCI6MjI1NzcsImVuZC
+I6MjMwNTcsInRleHQiOiJGcmVxdWVuY3kgcGxvdCBzaG93aW5n
 IHRoZSB0b3RhbCBudW1iZXIgb2YgRy1ydW5zIGNvbnRyaWJ1dG
 luZyB0byBQRzRzIHdoaWNoIGFy4oCmIn0sIklsQ0hwVVczWmMy
-RDdxZWMiOnsic3RhcnQiOjI0MDkzLCJlbmQiOjI0NDM3LCJ0ZX
+RDdxZWMiOnsic3RhcnQiOjI0MTY5LCJlbmQiOjI0NTEzLCJ0ZX
 h0IjoiIVsqKk5vbi1oYXJkY29kZWQgUEc0cyBsZXZlbHMgYXJl
 IGdyZWF0ZXIgYXQgdGhlIHN0YXJ0IGNvZG9uIHByb3hpbWFsIH
 JlZ2lvbiBvZuKApiJ9LCJEekl1OVZFSDc5bXdrZ2tjIjp7InN0
-YXJ0IjoyODA4MiwiZW5kIjoyODMwMSwidGV4dCI6IkZ1cnRoZX
+YXJ0IjoyODE1OCwiZW5kIjoyODM3NywidGV4dCI6IkZ1cnRoZX
 Jtb3JlLCB0aGUgcmF0aW8gb2YgdHdvIHRldHJhZCB0byB0aHJl
 ZSB0ZXRyYWQgUEc0cyBpbiBwbGFudCBnZW5vbWVzIGlzIG3igK
 YifX0sImNvbW1lbnRzIjp7ImU2YXJMNHVHeHdSTTlKdFkiOnsi
@@ -365,7 +365,7 @@ NDEwMTA2NzciLCJ0ZXh0IjoiQ291bGQgbm90IHRoZSBvcHBvc2
 l0ZSBhcmd1ZW1lbnQgYmUgbWFkZTogdGhpbmdzIHRoYXQgYXJl
 IG1vcmUgY29tbW9uIGFyZSBsZXNzIGxpa2VseSB0byBoYXZlIG
 FuIGVmZmVjdC4iLCJjcmVhdGVkIjoxNTM0MzUwOTc4OTc4fX0s
-Imhpc3RvcnkiOlstMjA2NjAzNDU0LDE3MTQ5ODY1ODksLTE2OD
-c0NDI1ODIsLTE1NzQzNTQ4MjAsLTEyNDA0MDA5MTAsLTE0NzY2
-MjM1OTYsLTM1MjYwMTIxOCwtMTI1MTk5MDU4M119
+Imhpc3RvcnkiOls3MDI4MDcwNTgsMTcxNDk4NjU4OSwtMTY4Nz
+Q0MjU4MiwtMTU3NDM1NDgyMCwtMTI0MDQwMDkxMCwtMTQ3NjYy
+MzU5NiwtMzUyNjAxMjE4LC0xMjUxOTkwNTgzXX0=
 -->
