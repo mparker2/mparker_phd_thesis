@@ -79,7 +79,7 @@ As shown in Fig \ref{metagene}c, there is a higher density of PG4s at the start 
 
 ### Protein motifs hardcode G4 forming potential into coding regions
 
-Our reverse translation method indicates that the PG4 forming potential of may arise from protein sequence, i.e. if protein sequence is evolutionarily constrained, then PG4s are hardcoded into the CDS. We performed an analysis of which amino acid or amino acid pairs (which we refer to as protein motifs) most often lead to two tetrad PG4s. All overlapping PG4s and the G-runs that form them were predicted, and the protein motifs which are encoded by each G-run was identified. The G-run was then classified as either hardcoded or not, depending on whether or not the same amino acids could be encoded differently without introducing a G-run in the same position. We also identified repetitive and non-repetitive G-runs. G-runs were considered repetitive if the protein motifs that they encode were the same for all G-runs in the G4.
+Our reverse translation method indicates that the PG4 forming potential of may arise from protein sequence, i.e. if protein sequence is evolutionarily constrained, then PG4s are hardcoded into the CDS. We performed an analysis of which amino acid or amino acid pairs (which we refer to as protein motifs) most often lead to two tetrad PG4s. All overlapping PG4s and the G-runs that form them were predicted, and the protein motifs which are encoded by each G-run was identified. The G-run was then classified as either hardcoded or not, depending on whether or not the same amino acids could be encoded by different codons which would remove the G-run at that position. We also identified repetitive and non-repetitive G-runs. G-runs were considered repetitive if the protein motifs that they encode were the same for all G-runs in the G4.
 
 Our analysis shows that 58% of PG4 G-runs on the coding strand, and 48% on the template strand, are hardcoded. Of these hardcoded PG4s, around 51% and 60% are found in repetitive PG4s on the coding and template strand, respectively. On the other hand, most non-hardcoded PG4s on both strands are also non-repetitive (Fig \ref{hardcoded}a). This suggests the presence of a number of entirely hardcoded PG4s which are encoded by repetitive protein motifs.
 
@@ -202,20 +202,20 @@ IjoxOTgzMCwidGV4dCI6IiFbKipSZXZlcnNlIFRyYW5zbGF0aW
 Y2hlZCBhdCB0aGUgU3RhcnQgQ2/igKYifSwiNnRSazRqTTVvN0
 FITVlvSyI6eyJzdGFydCI6MTk5NjcsImVuZCI6MTk5NzUsInRl
 eHQiOiJ0aGF0IHRoZSJ9LCIxblZCU1lxT29tek5rNVd1Ijp7In
-N0YXJ0IjoyMTI4NSwiZW5kIjoyMTI5NywidGV4dCI6IlBHNCBy
+N0YXJ0IjoyMTI5MCwiZW5kIjoyMTMwMiwidGV4dCI6IlBHNCBy
 ZWdpc3RlciJ9LCIyT2JhMHl5UU5peWlraEowIjp7InN0YXJ0Ij
-oyMTMzOCwiZW5kIjoyMTUwMSwidGV4dCI6IldlIGZvdW5kIHRo
+oyMTM0MywiZW5kIjoyMTUwNiwidGV4dCI6IldlIGZvdW5kIHRo
 YXQgb24gYm90aCBzdHJhbmRzLCB0aGUgZ3JlYXRlc3QgbnVtYm
 VyIG9mIFBHNHMgd2VyZSBjb21wbGV0ZWx5IGhhcmTigKYifSwi
-NmVOdXc5TFBreHVVcHdDbiI6eyJzdGFydCI6MjI0OTYsImVuZC
-I6MjI5NzYsInRleHQiOiJGcmVxdWVuY3kgcGxvdCBzaG93aW5n
+NmVOdXc5TFBreHVVcHdDbiI6eyJzdGFydCI6MjI1MDEsImVuZC
+I6MjI5ODEsInRleHQiOiJGcmVxdWVuY3kgcGxvdCBzaG93aW5n
 IHRoZSB0b3RhbCBudW1iZXIgb2YgRy1ydW5zIGNvbnRyaWJ1dG
 luZyB0byBQRzRzIHdoaWNoIGFy4oCmIn0sIklsQ0hwVVczWmMy
-RDdxZWMiOnsic3RhcnQiOjI0MDg4LCJlbmQiOjI0NDMyLCJ0ZX
+RDdxZWMiOnsic3RhcnQiOjI0MDkzLCJlbmQiOjI0NDM3LCJ0ZX
 h0IjoiIVsqKk5vbi1oYXJkY29kZWQgUEc0cyBsZXZlbHMgYXJl
 IGdyZWF0ZXIgYXQgdGhlIHN0YXJ0IGNvZG9uIHByb3hpbWFsIH
 JlZ2lvbiBvZuKApiJ9LCJEekl1OVZFSDc5bXdrZ2tjIjp7InN0
-YXJ0IjoyODA3NywiZW5kIjoyODI5NiwidGV4dCI6IkZ1cnRoZX
+YXJ0IjoyODA4MiwiZW5kIjoyODMwMSwidGV4dCI6IkZ1cnRoZX
 Jtb3JlLCB0aGUgcmF0aW8gb2YgdHdvIHRldHJhZCB0byB0aHJl
 ZSB0ZXRyYWQgUEc0cyBpbiBwbGFudCBnZW5vbWVzIGlzIG3igK
 YifX0sImNvbW1lbnRzIjp7ImU2YXJMNHVHeHdSTTlKdFkiOnsi
@@ -365,7 +365,7 @@ NDEwMTA2NzciLCJ0ZXh0IjoiQ291bGQgbm90IHRoZSBvcHBvc2
 l0ZSBhcmd1ZW1lbnQgYmUgbWFkZTogdGhpbmdzIHRoYXQgYXJl
 IG1vcmUgY29tbW9uIGFyZSBsZXNzIGxpa2VseSB0byBoYXZlIG
 FuIGVmZmVjdC4iLCJjcmVhdGVkIjoxNTM0MzUwOTc4OTc4fX0s
-Imhpc3RvcnkiOlstMTQ0MzE3MjU0NywxNzE0OTg2NTg5LC0xNj
-g3NDQyNTgyLC0xNTc0MzU0ODIwLC0xMjQwNDAwOTEwLC0xNDc2
-NjIzNTk2LC0zNTI2MDEyMTgsLTEyNTE5OTA1ODNdfQ==
+Imhpc3RvcnkiOlstMjA2NjAzNDU0LDE3MTQ5ODY1ODksLTE2OD
+c0NDI1ODIsLTE1NzQzNTQ4MjAsLTEyNDA0MDA5MTAsLTE0NzY2
+MjM1OTYsLTM1MjYwMTIxOCwtMTI1MTk5MDU4M119
 -->
