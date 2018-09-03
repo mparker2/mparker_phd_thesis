@@ -43,7 +43,7 @@ We noted that the PG4 densities of the warm blooded mammals *M. musculus* and *H
 
 Two tetrad G4s, which are known to form *in vitro* [@Macaya1993, @Mullen2012], but have been historically considered too unstable to be prevalent *in vivo* [@Huppert2005], might in fact be more useful as molecular switches in plants, since they melt at lower temperatures. To determine whether plants have greater numbers of two tetrad PG4s, we again performed prediction using using the Quadparser method. Since three tetrad PG4s contain subpatterns which conform to the two tetrad Quadparser pattern, we filtered out any two tetrad PG4s which overlapped with three tetrad PG4s. We found that plants tend to contain a lot more two tetrad PG4s, with several species of Monocot in fact having higher average densities than *M. musculus* or *H. sapiens*. Arabidopsis was also more dense in two tetrad PG4s, with 959 PG4s/Mb. This was significantly higher than the median Dicotyledon density (228 PG4s/Mb), perhaps indicating a stronger role for these two tetrad G4s in Arabidopsis.
 
-Finally, we correlated the density of two and three or more tetrad PG4s in different organisms. Unsurprisingly, we found a very strong correlation (Spearmans rho = 0.95), however *M. musculus* and *H. sapiens* were found to be clear outliers from the plants, and showed a much greater three tetrad density than might have been expected from the regression line. The 2 tetrad to three tetrad density ratios of the ectothermic animals *D. melanogaster* and *D. rario* were found to be much the difference in that two tetrad PG4s may play a regulatory role in plants which could be similar to that performed by three tetrad PG4s in warm-blooded mammals. 
+Finally, we correlated the density of two and three or more tetrad PG4s in different organisms. Unsurprisingly, we found a very strong correlation (Spearmans rho = 0.95), however *M. musculus* and *H. sapiens* were found to be clear outliers from the plants, and showed a much greater three tetrad density than might have been expected from the regression line. The 2 tetrad to three tetrad density ratios of the ectothermic animals *D. melanogaster* and *D. rario* were found to be much closer to that of the plant species, however. Given the lower temperatures at which plant cells live, one possibility is that that two tetrad PG4s may play a regulatory role in plants which could be similar to that performed by three tetrad PG4s in warm-blooded mammals. 
 
 \newpage
 
@@ -172,41 +172,41 @@ NxSiI6eyJzdGFydCI6MTEwNTgsImVuZCI6MTEzMzQsInRleHQi
 OiJTaW5jZSB0aGUgbWVsdGluZyB0ZW1wZXJhdHVyZXMgb2YgdG
 hyZWUgdGV0cmFkIEc0cyBjYW4gcmVhY2ggdXAgdG8gMTAwIERl
 Z3JlZXPigKYifSwiV2R3YlU4TU5VZXE4RTRWdSI6eyJzdGFydC
-I6MTI3MTMsImVuZCI6MTI5NjcsInRleHQiOiJXZSBzdWdnZXN0
+I6MTI3MTMsImVuZCI6MTMwNzUsInRleHQiOiJXZSBzdWdnZXN0
 IHRoYXQgdGhpcyBpbmRpY2F0ZXMgdGhhdCB0d28gdGV0cmFkIF
 BHNHMgbWF5IHBsYXkgYSByZWd1bGF0b3J5IHJvbGXigKYifSwi
-eDlGcTVXUG9qWVp3OUFzYiI6eyJzdGFydCI6MTU4MTksImVuZC
-I6MTY0MDcsInRleHQiOiIhWyoqTWV0YWdlbmUgUHJvZmlsZSBv
+eDlGcTVXUG9qWVp3OUFzYiI6eyJzdGFydCI6MTU5MjcsImVuZC
+I6MTY1MTUsInRleHQiOiIhWyoqTWV0YWdlbmUgUHJvZmlsZSBv
 ZiBHQyBjb250ZW50IGFuZCBQRzQgZGVuc2l0eSoqIE1ldGFnZW
 5lIHByb2ZpbGVzIHNob3dpbmfigKYifSwiMlppaTZYSUFSM2lM
-VFZXWiI6eyJzdGFydCI6MTY3ODYsImVuZCI6MTY4MDksInRleH
+VFZXWiI6eyJzdGFydCI6MTY4OTQsImVuZCI6MTY5MTcsInRleH
 QiOiJzcGVjaWZpYyBwcm90ZWluIG1vdGlmcyJ9LCJ1dWowWmpC
-SGc2d2JYQkFSIjp7InN0YXJ0IjoxNzY2NCwiZW5kIjoxNzY4MS
+SGc2d2JYQkFSIjp7InN0YXJ0IjoxNzc3MiwiZW5kIjoxNzc4OS
 widGV4dCI6IlRoZSBHQyBjb250ZW50IG9mIn0sImJNTEpQOURF
-VEpwa0s4OHgiOnsic3RhcnQiOjE4NzE1LCJlbmQiOjE4OTU4LC
+VEpwa0s4OHgiOnsic3RhcnQiOjE4ODIzLCJlbmQiOjE5MDY2LC
 J0ZXh0IjoiVGhpcyBtYXkgYmUgZHVlIHRvIHRoZSByZXBldGl0
 aXZlIG5hdHVyZSBvZiBzb21lIHByb3RlaW4gbW90aWZzLiBQQ1
 MgUEc0IGNvbnRlbuKApiJ9LCJaTlNvRzJvRHluUjNXdTZaIjp7
-InN0YXJ0IjoxOTUwNywiZW5kIjoxOTUyOSwidGV4dCI6IihTcG
+InN0YXJ0IjoxOTYxNSwiZW5kIjoxOTYzNywidGV4dCI6IihTcG
 Vhcm1hbnMgcmhvIDAuMDE0KS4ifSwialhzODZuY3RLZnVHMExW
-OSI6eyJzdGFydCI6MTk1NDEsImVuZCI6MTk5MTIsInRleHQiOi
+OSI6eyJzdGFydCI6MTk2NDksImVuZCI6MjAwMjAsInRleHQiOi
 IhWyoqUmV2ZXJzZSBUcmFuc2xhdGlvbiBTaW11bGF0aW9uIHNo
 b3dzIHRoYXQgUEc0cyBhcmUgZW5yaWNoZWQgYXQgdGhlIFN0YX
 J0IENv4oCmIn0sIjZ0Ums0ak01bzdBSE1Zb0siOnsic3RhcnQi
-OjIwMDQ5LCJlbmQiOjIwMDU3LCJ0ZXh0IjoidGhhdCB0aGUifS
-wiMk9iYTB5eVFOaXlpa2hKMCI6eyJzdGFydCI6MjE0MjYsImVu
-ZCI6MjE1ODksInRleHQiOiJXZSBmb3VuZCB0aGF0IG9uIGJvdG
+OjIwMTU3LCJlbmQiOjIwMTY1LCJ0ZXh0IjoidGhhdCB0aGUifS
+wiMk9iYTB5eVFOaXlpa2hKMCI6eyJzdGFydCI6MjE1MzQsImVu
+ZCI6MjE2OTcsInRleHQiOiJXZSBmb3VuZCB0aGF0IG9uIGJvdG
 ggc3RyYW5kcywgdGhlIGdyZWF0ZXN0IG51bWJlciBvZiBQRzRz
 IHdlcmUgY29tcGxldGVseSBoYXJk4oCmIn0sIjZlTnV3OUxQa3
-h1VXB3Q24iOnsic3RhcnQiOjIyNTg0LCJlbmQiOjIzMDY0LCJ0
+h1VXB3Q24iOnsic3RhcnQiOjIyNjkyLCJlbmQiOjIzMTcyLCJ0
 ZXh0IjoiRnJlcXVlbmN5IHBsb3Qgc2hvd2luZyB0aGUgdG90YW
 wgbnVtYmVyIG9mIEctcnVucyBjb250cmlidXRpbmcgdG8gUEc0
 cyB3aGljaCBhcuKApiJ9LCJJbENIcFVXM1pjMkQ3cWVjIjp7In
-N0YXJ0IjoyNDE3NiwiZW5kIjoyNDUyMCwidGV4dCI6IiFbKipO
+N0YXJ0IjoyNDI4NCwiZW5kIjoyNDYyOCwidGV4dCI6IiFbKipO
 b24taGFyZGNvZGVkIFBHNHMgbGV2ZWxzIGFyZSBncmVhdGVyIG
 F0IHRoZSBzdGFydCBjb2RvbiBwcm94aW1hbCByZWdpb24gb2bi
-gKYifSwiRHpJdTlWRUg3OW13a2drYyI6eyJzdGFydCI6MjgxNj
-UsImVuZCI6MjgzODQsInRleHQiOiJGdXJ0aGVybW9yZSwgdGhl
+gKYifSwiRHpJdTlWRUg3OW13a2drYyI6eyJzdGFydCI6MjgyNz
+MsImVuZCI6Mjg0OTIsInRleHQiOiJGdXJ0aGVybW9yZSwgdGhl
 IHJhdGlvIG9mIHR3byB0ZXRyYWQgdG8gdGhyZWUgdGV0cmFkIF
 BHNHMgaW4gcGxhbnQgZ2Vub21lcyBpcyBt4oCmIn19LCJjb21t
 ZW50cyI6eyJlNmFyTDR1R3h3Uk05SnRZIjp7ImRpc2N1c3Npb2
@@ -338,9 +338,9 @@ A1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6IkNvdWxkIG5vdCB0
 aGUgb3Bwb3NpdGUgYXJndWVtZW50IGJlIG1hZGU6IHRoaW5ncy
 B0aGF0IGFyZSBtb3JlIGNvbW1vbiBhcmUgbGVzcyBsaWtlbHkg
 dG8gaGF2ZSBhbiBlZmZlY3QuIiwiY3JlYXRlZCI6MTUzNDM1MD
-k3ODk3OH19LCJoaXN0b3J5IjpbLTE1MjgxODE3NDksLTExMzQ4
-MjQ4NzgsMTcwNzU4Nzc4OCwtOTM5MjgyODcyLC0xMDkxOTI1Nz
-E0LC00NTg5ODczNzksMTcxNDk4NjU4OSwtMTY4NzQ0MjU4Miwt
-MTU3NDM1NDgyMCwtMTI0MDQwMDkxMCwtMTQ3NjYyMzU5NiwtMz
-UyNjAxMjE4LC0xMjUxOTkwNTgzXX0=
+k3ODk3OH19LCJoaXN0b3J5IjpbLTI0OTQ0ODA2LC0xMTM0ODI0
+ODc4LDE3MDc1ODc3ODgsLTkzOTI4Mjg3MiwtMTA5MTkyNTcxNC
+wtNDU4OTg3Mzc5LDE3MTQ5ODY1ODksLTE2ODc0NDI1ODIsLTE1
+NzQzNTQ4MjAsLTEyNDA0MDA5MTAsLTE0NzY2MjM1OTYsLTM1Mj
+YwMTIxOCwtMTI1MTk5MDU4M119
 -->
