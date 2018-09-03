@@ -43,7 +43,7 @@ We noted that the PG4 densities of the warm blooded mammals *M. musculus* and *H
 
 Two tetrad G4s, which are known to form *in vitro* [@Macaya1993, @Mullen2012], but have been historically considered too unstable to be prevalent *in vivo* [@Huppert2005], might in fact be more useful as molecular switches in plants, since they melt at lower temperatures. To determine whether plants have greater numbers of two tetrad PG4s, we again performed prediction using using the Quadparser method. Since three tetrad PG4s contain subpatterns which conform to the two tetrad Quadparser pattern, we filtered out any two tetrad PG4s which overlapped with three tetrad PG4s. We found that plants tend to contain a lot more two tetrad PG4s, with several species of Monocot in fact having higher average densities than *M. musculus* or *H. sapiens*. Arabidopsis was also more dense in two tetrad PG4s, with 959 PG4s/Mb. This was significantly higher than the median Dicotyledon density (228 PG4s/Mb), perhaps indicating a stronger role for these two tetrad G4s in Arabidopsis.
 
-Finally, we correlated the density of two and three or more tetrad PG4s in different organisms. Unsurprisingly, we found a very strong correlation (Spearmans rho = 0.95), however *M. musculus* and *H. sapiens* were found to be clear outliers from the plants, and showed a much greater three tetrad density than might have been expected from the regression line. Given the difference ithat two tetrad PG4s may play a regulatory role in plants which could be similar to that performed by three tetrad PG4s in warm-blooded mammals. 
+Finally, we correlated the density of two and three or more tetrad PG4s in different organisms. Unsurprisingly, we found a very strong correlation (Spearmans rho = 0.95), however *M. musculus* and *H. sapiens* were found to be clear outliers from the plants, and showed a much greater three tetrad density than might have been expected from the regression line. Given the difference in that two tetrad PG4s may play a regulatory role in plants which could be similar to that performed by three tetrad PG4s in warm-blooded mammals. 
 
 \newpage
 
@@ -172,41 +172,41 @@ NxSiI6eyJzdGFydCI6MTEwNTgsImVuZCI6MTEzMzQsInRleHQi
 OiJTaW5jZSB0aGUgbWVsdGluZyB0ZW1wZXJhdHVyZXMgb2YgdG
 hyZWUgdGV0cmFkIEc0cyBjYW4gcmVhY2ggdXAgdG8gMTAwIERl
 Z3JlZXPigKYifSwiV2R3YlU4TU5VZXE4RTRWdSI6eyJzdGFydC
-I6MTI2ODUsImVuZCI6MTI4NDUsInRleHQiOiJXZSBzdWdnZXN0
+I6MTI2ODUsImVuZCI6MTI4NDcsInRleHQiOiJXZSBzdWdnZXN0
 IHRoYXQgdGhpcyBpbmRpY2F0ZXMgdGhhdCB0d28gdGV0cmFkIF
 BHNHMgbWF5IHBsYXkgYSByZWd1bGF0b3J5IHJvbGXigKYifSwi
-eDlGcTVXUG9qWVp3OUFzYiI6eyJzdGFydCI6MTU2OTcsImVuZC
-I6MTYyODUsInRleHQiOiIhWyoqTWV0YWdlbmUgUHJvZmlsZSBv
+eDlGcTVXUG9qWVp3OUFzYiI6eyJzdGFydCI6MTU2OTksImVuZC
+I6MTYyODcsInRleHQiOiIhWyoqTWV0YWdlbmUgUHJvZmlsZSBv
 ZiBHQyBjb250ZW50IGFuZCBQRzQgZGVuc2l0eSoqIE1ldGFnZW
 5lIHByb2ZpbGVzIHNob3dpbmfigKYifSwiMlppaTZYSUFSM2lM
-VFZXWiI6eyJzdGFydCI6MTY2NjQsImVuZCI6MTY2ODcsInRleH
+VFZXWiI6eyJzdGFydCI6MTY2NjYsImVuZCI6MTY2ODksInRleH
 QiOiJzcGVjaWZpYyBwcm90ZWluIG1vdGlmcyJ9LCJ1dWowWmpC
-SGc2d2JYQkFSIjp7InN0YXJ0IjoxNzU0MiwiZW5kIjoxNzU1OS
+SGc2d2JYQkFSIjp7InN0YXJ0IjoxNzU0NCwiZW5kIjoxNzU2MS
 widGV4dCI6IlRoZSBHQyBjb250ZW50IG9mIn0sImJNTEpQOURF
-VEpwa0s4OHgiOnsic3RhcnQiOjE4NTkzLCJlbmQiOjE4ODM2LC
+VEpwa0s4OHgiOnsic3RhcnQiOjE4NTk1LCJlbmQiOjE4ODM4LC
 J0ZXh0IjoiVGhpcyBtYXkgYmUgZHVlIHRvIHRoZSByZXBldGl0
 aXZlIG5hdHVyZSBvZiBzb21lIHByb3RlaW4gbW90aWZzLiBQQ1
 MgUEc0IGNvbnRlbuKApiJ9LCJaTlNvRzJvRHluUjNXdTZaIjp7
-InN0YXJ0IjoxOTM4NSwiZW5kIjoxOTQwNywidGV4dCI6IihTcG
+InN0YXJ0IjoxOTM4NywiZW5kIjoxOTQwOSwidGV4dCI6IihTcG
 Vhcm1hbnMgcmhvIDAuMDE0KS4ifSwialhzODZuY3RLZnVHMExW
-OSI6eyJzdGFydCI6MTk0MTksImVuZCI6MTk3OTAsInRleHQiOi
+OSI6eyJzdGFydCI6MTk0MjEsImVuZCI6MTk3OTIsInRleHQiOi
 IhWyoqUmV2ZXJzZSBUcmFuc2xhdGlvbiBTaW11bGF0aW9uIHNo
 b3dzIHRoYXQgUEc0cyBhcmUgZW5yaWNoZWQgYXQgdGhlIFN0YX
 J0IENv4oCmIn0sIjZ0Ums0ak01bzdBSE1Zb0siOnsic3RhcnQi
-OjE5OTI3LCJlbmQiOjE5OTM1LCJ0ZXh0IjoidGhhdCB0aGUifS
-wiMk9iYTB5eVFOaXlpa2hKMCI6eyJzdGFydCI6MjEzMDQsImVu
-ZCI6MjE0NjcsInRleHQiOiJXZSBmb3VuZCB0aGF0IG9uIGJvdG
+OjE5OTI5LCJlbmQiOjE5OTM3LCJ0ZXh0IjoidGhhdCB0aGUifS
+wiMk9iYTB5eVFOaXlpa2hKMCI6eyJzdGFydCI6MjEzMDYsImVu
+ZCI6MjE0NjksInRleHQiOiJXZSBmb3VuZCB0aGF0IG9uIGJvdG
 ggc3RyYW5kcywgdGhlIGdyZWF0ZXN0IG51bWJlciBvZiBQRzRz
 IHdlcmUgY29tcGxldGVseSBoYXJk4oCmIn0sIjZlTnV3OUxQa3
-h1VXB3Q24iOnsic3RhcnQiOjIyNDYyLCJlbmQiOjIyOTQyLCJ0
+h1VXB3Q24iOnsic3RhcnQiOjIyNDY0LCJlbmQiOjIyOTQ0LCJ0
 ZXh0IjoiRnJlcXVlbmN5IHBsb3Qgc2hvd2luZyB0aGUgdG90YW
 wgbnVtYmVyIG9mIEctcnVucyBjb250cmlidXRpbmcgdG8gUEc0
 cyB3aGljaCBhcuKApiJ9LCJJbENIcFVXM1pjMkQ3cWVjIjp7In
-N0YXJ0IjoyNDA1NCwiZW5kIjoyNDM5OCwidGV4dCI6IiFbKipO
+N0YXJ0IjoyNDA1NiwiZW5kIjoyNDQwMCwidGV4dCI6IiFbKipO
 b24taGFyZGNvZGVkIFBHNHMgbGV2ZWxzIGFyZSBncmVhdGVyIG
 F0IHRoZSBzdGFydCBjb2RvbiBwcm94aW1hbCByZWdpb24gb2bi
 gKYifSwiRHpJdTlWRUg3OW13a2drYyI6eyJzdGFydCI6MjgwND
-MsImVuZCI6MjgyNjIsInRleHQiOiJGdXJ0aGVybW9yZSwgdGhl
+UsImVuZCI6MjgyNjQsInRleHQiOiJGdXJ0aGVybW9yZSwgdGhl
 IHJhdGlvIG9mIHR3byB0ZXRyYWQgdG8gdGhyZWUgdGV0cmFkIF
 BHNHMgaW4gcGxhbnQgZ2Vub21lcyBpcyBt4oCmIn19LCJjb21t
 ZW50cyI6eyJlNmFyTDR1R3h3Uk05SnRZIjp7ImRpc2N1c3Npb2
@@ -338,9 +338,9 @@ A1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6IkNvdWxkIG5vdCB0
 aGUgb3Bwb3NpdGUgYXJndWVtZW50IGJlIG1hZGU6IHRoaW5ncy
 B0aGF0IGFyZSBtb3JlIGNvbW1vbiBhcmUgbGVzcyBsaWtlbHkg
 dG8gaGF2ZSBhbiBlZmZlY3QuIiwiY3JlYXRlZCI6MTUzNDM1MD
-k3ODk3OH19LCJoaXN0b3J5IjpbLTM5NDk4MzA4OCwxNzA3NTg3
-Nzg4LC05MzkyODI4NzIsLTEwOTE5MjU3MTQsLTQ1ODk4NzM3OS
-wxNzE0OTg2NTg5LC0xNjg3NDQyNTgyLC0xNTc0MzU0ODIwLC0x
-MjQwNDAwOTEwLC0xNDc2NjIzNTk2LC0zNTI2MDEyMTgsLTEyNT
-E5OTA1ODNdfQ==
+k3ODk3OH19LCJoaXN0b3J5IjpbLTExMzQ4MjQ4NzgsMTcwNzU4
+Nzc4OCwtOTM5MjgyODcyLC0xMDkxOTI1NzE0LC00NTg5ODczNz
+ksMTcxNDk4NjU4OSwtMTY4NzQ0MjU4MiwtMTU3NDM1NDgyMCwt
+MTI0MDQwMDkxMCwtMTQ3NjYyMzU5NiwtMzUyNjAxMjE4LC0xMj
+UxOTkwNTgzXX0=
 -->
