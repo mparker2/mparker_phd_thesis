@@ -97,7 +97,7 @@ To identify the location of these non-hardcoded template PG4s in the CDS, we plo
 
 \newpage
 
-![**Non-hardcoded PG4s levels are greater at the start codon proximal region of CDSs, on the template strand.** **a)** Cumulative metagene profiles showing the distribution of PG4s with different numbers of hardcoded G-runs on the **a)** coding and **b)** template strands, respectively. \label{hc_metagene}](figures/cds_hardcoded_metagene.svg)
+![**Non-hardcoded PG4s levels are greater at the start codon proximal region of CDSs, on the template strand.** **a)** Cumulative metagene profiles showing the distribution of PG4s with different numbers of hardcoded G-runs on the coding (upper panel) and template (lower panel) strands, respectively. **b)** Same data as shown in **a)**, represented as the proportion of all PG4s at a position. Coding and template strands are upper and lower panels, respectively. \label{hc_metagene}](figures/cds_hardcoded_metagene.svg){height=750px}
 
 \newpage
 
