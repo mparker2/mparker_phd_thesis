@@ -77,6 +77,9 @@ As shown in Fig \ref{metagene}c, there is a higher density of PG4s at the start 
 
 \newpage
 
+### Arabidopsis CDSs show 
+
+
 ### Protein motifs hardcode G4 forming potential into coding regions
 
 Our reverse translation method indicates that the PG4 forming potential of may arise from protein sequence, i.e. if protein sequence is evolutionarily constrained, then PG4s are hardcoded into the CDS. We performed an analysis of which amino acid or amino acid pairs (which we refer to as protein motifs) most often lead to two tetrad PG4s. All overlapping PG4s and the G-runs that form them were predicted, and the protein motifs which are encoded by each G-run was identified. The G-run was then classified as either hardcoded or not, depending on whether or not the same amino acids could be encoded by different codons which would remove the G-run at that position. We also identified repetitive and non-repetitive G-runs. G-runs were considered repetitive if the protein motifs that they encode were the same for all G-runs in the G4.
@@ -193,20 +196,20 @@ OSI6eyJzdGFydCI6MTk2MjUsImVuZCI6MTk5OTYsInRleHQiOi
 IhWyoqUmV2ZXJzZSBUcmFuc2xhdGlvbiBTaW11bGF0aW9uIHNo
 b3dzIHRoYXQgUEc0cyBhcmUgZW5yaWNoZWQgYXQgdGhlIFN0YX
 J0IENv4oCmIn0sIjZ0Ums0ak01bzdBSE1Zb0siOnsic3RhcnQi
-OjIwMTMzLCJlbmQiOjIwMTQxLCJ0ZXh0IjoidGhhdCB0aGUifS
-wiMk9iYTB5eVFOaXlpa2hKMCI6eyJzdGFydCI6MjE1MTAsImVu
-ZCI6MjE2NzMsInRleHQiOiJXZSBmb3VuZCB0aGF0IG9uIGJvdG
+OjIwMTYyLCJlbmQiOjIwMTcwLCJ0ZXh0IjoidGhhdCB0aGUifS
+wiMk9iYTB5eVFOaXlpa2hKMCI6eyJzdGFydCI6MjE1MzksImVu
+ZCI6MjE3MDIsInRleHQiOiJXZSBmb3VuZCB0aGF0IG9uIGJvdG
 ggc3RyYW5kcywgdGhlIGdyZWF0ZXN0IG51bWJlciBvZiBQRzRz
 IHdlcmUgY29tcGxldGVseSBoYXJk4oCmIn0sIjZlTnV3OUxQa3
-h1VXB3Q24iOnsic3RhcnQiOjIyNjY4LCJlbmQiOjIzMTQ4LCJ0
+h1VXB3Q24iOnsic3RhcnQiOjIyNjk3LCJlbmQiOjIzMTc3LCJ0
 ZXh0IjoiRnJlcXVlbmN5IHBsb3Qgc2hvd2luZyB0aGUgdG90YW
 wgbnVtYmVyIG9mIEctcnVucyBjb250cmlidXRpbmcgdG8gUEc0
 cyB3aGljaCBhcuKApiJ9LCJJbENIcFVXM1pjMkQ3cWVjIjp7In
-N0YXJ0IjoyNDI2MCwiZW5kIjoyNDYwNCwidGV4dCI6IiFbKipO
+N0YXJ0IjoyNDI4OSwiZW5kIjoyNDYzMywidGV4dCI6IiFbKipO
 b24taGFyZGNvZGVkIFBHNHMgbGV2ZWxzIGFyZSBncmVhdGVyIG
 F0IHRoZSBzdGFydCBjb2RvbiBwcm94aW1hbCByZWdpb24gb2bi
-gKYifSwiRHpJdTlWRUg3OW13a2drYyI6eyJzdGFydCI6MjgyND
-ksImVuZCI6Mjg0NjgsInRleHQiOiJGdXJ0aGVybW9yZSwgdGhl
+gKYifSwiRHpJdTlWRUg3OW13a2drYyI6eyJzdGFydCI6MjgyNz
+gsImVuZCI6Mjg0OTcsInRleHQiOiJGdXJ0aGVybW9yZSwgdGhl
 IHJhdGlvIG9mIHR3byB0ZXRyYWQgdG8gdGhyZWUgdGV0cmFkIF
 BHNHMgaW4gcGxhbnQgZ2Vub21lcyBpcyBt4oCmIn19LCJjb21t
 ZW50cyI6eyJlNmFyTDR1R3h3Uk05SnRZIjp7ImRpc2N1c3Npb2
@@ -338,9 +341,9 @@ A1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6IkNvdWxkIG5vdCB0
 aGUgb3Bwb3NpdGUgYXJndWVtZW50IGJlIG1hZGU6IHRoaW5ncy
 B0aGF0IGFyZSBtb3JlIGNvbW1vbiBhcmUgbGVzcyBsaWtlbHkg
 dG8gaGF2ZSBhbiBlZmZlY3QuIiwiY3JlYXRlZCI6MTUzNDM1MD
-k3ODk3OH19LCJoaXN0b3J5IjpbNDcxNjE2NjMxLC0xMTM0ODI0
-ODc4LDE3MDc1ODc3ODgsLTkzOTI4Mjg3MiwtMTA5MTkyNTcxNC
-wtNDU4OTg3Mzc5LDE3MTQ5ODY1ODksLTE2ODc0NDI1ODIsLTE1
-NzQzNTQ4MjAsLTEyNDA0MDA5MTAsLTE0NzY2MjM1OTYsLTM1Mj
-YwMTIxOCwtMTI1MTk5MDU4M119
+k3ODk3OH19LCJoaXN0b3J5IjpbLTQ1NzMwMjIwMiw0NzE2MTY2
+MzEsLTExMzQ4MjQ4NzgsMTcwNzU4Nzc4OCwtOTM5MjgyODcyLC
+0xMDkxOTI1NzE0LC00NTg5ODczNzksMTcxNDk4NjU4OSwtMTY4
+NzQ0MjU4MiwtMTU3NDM1NDgyMCwtMTI0MDQwMDkxMCwtMTQ3Nj
+YyMzU5NiwtMzUyNjAxMjE4LC0xMjUxOTkwNTgzXX0=
 -->
