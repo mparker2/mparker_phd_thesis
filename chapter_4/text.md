@@ -79,7 +79,7 @@ As shown in Fig \ref{metagene}c, there is a higher density of PG4s at the start 
 
 ### Arabidopsis CDSs show codon bias based on tRNA adaptation.
 
-One cause of codon bias is the relative abundances of tRNAs with different isoacceptors in the cell. Previous studies have shown that the number of tRNA genes which have anticodons able fully or partially recognise a codon, is correlated with the usage of a codon in CDSs [@DosReis2004]. The efficiency of a codon can therefore be estimated from the number  Man & Pilpel showed that amongst orthologous genes which are expressed relatively equally at the transcript level, those with higher tAI tend to be expressed more at the protein level [@Man2007]. Furthermore, Tuller et al. have demonstrated that the local tAI varies through the CDS, with the first 50 codons of the CDS exhibiting lower tAI th
+One cause of codon bias is the relative abundances of tRNAs with different isoacceptors in the cell. Previous studies have shown that the number of tRNA genes which have anticodons able fully or partially recognise a codon, is correlated with the usage of a codon in CDSs [@DosReis2004]. The efficiency of a codon can therefore be estimated from the number of tRNA genes with different anticodons, a measure referred to as the tRNA adaptation index (tAI) [@DosReis2004]. Man & Pilpel showed that amongst orthologous genes which are expressed relatively equally at the transcript level, those with higher tAI tend to be expressed more at the protein level [@Man2007]. Furthermore, Tuller et al. have demonstrated that the local tAI varies through the CDS, with the first 50 codons exhibiting lower tAI than the main body, an
 
 
 ### Protein motifs hardcode G4 forming potential into coding regions
@@ -198,20 +198,20 @@ OSI6eyJzdGFydCI6MTk2MjUsImVuZCI6MTk5OTYsInRleHQiOi
 IhWyoqUmV2ZXJzZSBUcmFuc2xhdGlvbiBTaW11bGF0aW9uIHNo
 b3dzIHRoYXQgUEc0cyBhcmUgZW5yaWNoZWQgYXQgdGhlIFN0YX
 J0IENv4oCmIn0sIjZ0Ums0ak01bzdBSE1Zb0siOnsic3RhcnQi
-OjIwOTAxLCJlbmQiOjIwOTA5LCJ0ZXh0IjoidGhhdCB0aGUifS
-wiMk9iYTB5eVFOaXlpa2hKMCI6eyJzdGFydCI6MjIyNzgsImVu
-ZCI6MjI0NDEsInRleHQiOiJXZSBmb3VuZCB0aGF0IG9uIGJvdG
+OjIxMDIzLCJlbmQiOjIxMDMxLCJ0ZXh0IjoidGhhdCB0aGUifS
+wiMk9iYTB5eVFOaXlpa2hKMCI6eyJzdGFydCI6MjI0MDAsImVu
+ZCI6MjI1NjMsInRleHQiOiJXZSBmb3VuZCB0aGF0IG9uIGJvdG
 ggc3RyYW5kcywgdGhlIGdyZWF0ZXN0IG51bWJlciBvZiBQRzRz
 IHdlcmUgY29tcGxldGVseSBoYXJk4oCmIn0sIjZlTnV3OUxQa3
-h1VXB3Q24iOnsic3RhcnQiOjIzNDM2LCJlbmQiOjIzOTE2LCJ0
+h1VXB3Q24iOnsic3RhcnQiOjIzNTU4LCJlbmQiOjI0MDM4LCJ0
 ZXh0IjoiRnJlcXVlbmN5IHBsb3Qgc2hvd2luZyB0aGUgdG90YW
 wgbnVtYmVyIG9mIEctcnVucyBjb250cmlidXRpbmcgdG8gUEc0
 cyB3aGljaCBhcuKApiJ9LCJJbENIcFVXM1pjMkQ3cWVjIjp7In
-N0YXJ0IjoyNTAyOCwiZW5kIjoyNTM3MiwidGV4dCI6IiFbKipO
+N0YXJ0IjoyNTE1MCwiZW5kIjoyNTQ5NCwidGV4dCI6IiFbKipO
 b24taGFyZGNvZGVkIFBHNHMgbGV2ZWxzIGFyZSBncmVhdGVyIG
 F0IHRoZSBzdGFydCBjb2RvbiBwcm94aW1hbCByZWdpb24gb2bi
-gKYifSwiRHpJdTlWRUg3OW13a2drYyI6eyJzdGFydCI6MjkwMT
-csImVuZCI6MjkyMzYsInRleHQiOiJGdXJ0aGVybW9yZSwgdGhl
+gKYifSwiRHpJdTlWRUg3OW13a2drYyI6eyJzdGFydCI6MjkxMz
+ksImVuZCI6MjkzNTgsInRleHQiOiJGdXJ0aGVybW9yZSwgdGhl
 IHJhdGlvIG9mIHR3byB0ZXRyYWQgdG8gdGhyZWUgdGV0cmFkIF
 BHNHMgaW4gcGxhbnQgZ2Vub21lcyBpcyBt4oCmIn19LCJjb21t
 ZW50cyI6eyJlNmFyTDR1R3h3Uk05SnRZIjp7ImRpc2N1c3Npb2
@@ -343,11 +343,10 @@ A1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6IkNvdWxkIG5vdCB0
 aGUgb3Bwb3NpdGUgYXJndWVtZW50IGJlIG1hZGU6IHRoaW5ncy
 B0aGF0IGFyZSBtb3JlIGNvbW1vbiBhcmUgbGVzcyBsaWtlbHkg
 dG8gaGF2ZSBhbiBlZmZlY3QuIiwiY3JlYXRlZCI6MTUzNDM1MD
-k3ODk3OH19LCJoaXN0b3J5IjpbMTI2MzE0MzU1NSwxNzQyNjgw
-OTgzLDE4MDcwMjgyMjYsMTk2MzY3OTY3MiwtNDU3MzAyMjAyLD
-Q3MTYxNjYzMSwtMTEzNDgyNDg3OCwxNzA3NTg3Nzg4LC05Mzky
-ODI4NzIsLTEwOTE5MjU3MTQsLTQ1ODk4NzM3OSwxNzE0OTg2NT
-g5LC0xNjg3NDQyNTgyLC0xNTc0MzU0ODIwLC0xMjQwNDAwOTEw
-LC0xNDc2NjIzNTk2LC0zNTI2MDEyMTgsLTEyNTE5OTA1ODNdfQ
-==
+k3ODk3OH19LCJoaXN0b3J5IjpbNjU4ODc3MzczLDE3NDI2ODA5
+ODMsMTgwNzAyODIyNiwxOTYzNjc5NjcyLC00NTczMDIyMDIsND
+cxNjE2NjMxLC0xMTM0ODI0ODc4LDE3MDc1ODc3ODgsLTkzOTI4
+Mjg3MiwtMTA5MTkyNTcxNCwtNDU4OTg3Mzc5LDE3MTQ5ODY1OD
+ksLTE2ODc0NDI1ODIsLTE1NzQzNTQ4MjAsLTEyNDA0MDA5MTAs
+LTE0NzY2MjM1OTYsLTM1MjYwMTIxOCwtMTI1MTk5MDU4M119
 -->
