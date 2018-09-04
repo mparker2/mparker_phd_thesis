@@ -79,7 +79,7 @@ As shown in Fig \ref{metagene}c, there is a higher density of PG4s at the start 
 
 ### Arabidopsis CDSs show codon bias based on tRNA adaptation.
 
-One cause of codon bias is the relative abundances of tRNAs with different isoacceptors in the cell. Previous studies have shown that the number of tRNA genes which have anticodons able fully or partially recognise a codon, is correlated with the usage of a codon in CDSs [@DosReis2004]. Man & Pilpel showed that amongst orthologous genes which are expressed relatively equally at the transcript level, those with higher tAI tend to be expressed more at the protein level.
+One cause of codon bias is the relative abundances of tRNAs with different isoacceptors in the cell. Previous studies have shown that the number of tRNA genes which have anticodons able fully or partially recognise a codon, is correlated with the usage of a codon in CDSs [@DosReis2004]. Man & Pilpel showed that amongst orthologous genes which are expressed relatively equally at the transcript level, those with higher tAI tend to be expressed more at the protein level [@Man2007]. Furthermore, Tuller et al. have demonstrated that the local tAI varies throiugh
 
 
 ### Protein motifs hardcode G4 forming potential into coding regions
@@ -198,20 +198,20 @@ OSI6eyJzdGFydCI6MTk2MjUsImVuZCI6MTk5OTYsInRleHQiOi
 IhWyoqUmV2ZXJzZSBUcmFuc2xhdGlvbiBTaW11bGF0aW9uIHNo
 b3dzIHRoYXQgUEc0cyBhcmUgZW5yaWNoZWQgYXQgdGhlIFN0YX
 J0IENv4oCmIn0sIjZ0Ums0ak01bzdBSE1Zb0siOnsic3RhcnQi
-OjIwNjcyLCJlbmQiOjIwNjgwLCJ0ZXh0IjoidGhhdCB0aGUifS
-wiMk9iYTB5eVFOaXlpa2hKMCI6eyJzdGFydCI6MjIwNDksImVu
-ZCI6MjIyMTIsInRleHQiOiJXZSBmb3VuZCB0aGF0IG9uIGJvdG
+OjIwNzYzLCJlbmQiOjIwNzcxLCJ0ZXh0IjoidGhhdCB0aGUifS
+wiMk9iYTB5eVFOaXlpa2hKMCI6eyJzdGFydCI6MjIxNDAsImVu
+ZCI6MjIzMDMsInRleHQiOiJXZSBmb3VuZCB0aGF0IG9uIGJvdG
 ggc3RyYW5kcywgdGhlIGdyZWF0ZXN0IG51bWJlciBvZiBQRzRz
 IHdlcmUgY29tcGxldGVseSBoYXJk4oCmIn0sIjZlTnV3OUxQa3
-h1VXB3Q24iOnsic3RhcnQiOjIzMjA3LCJlbmQiOjIzNjg3LCJ0
+h1VXB3Q24iOnsic3RhcnQiOjIzMjk4LCJlbmQiOjIzNzc4LCJ0
 ZXh0IjoiRnJlcXVlbmN5IHBsb3Qgc2hvd2luZyB0aGUgdG90YW
 wgbnVtYmVyIG9mIEctcnVucyBjb250cmlidXRpbmcgdG8gUEc0
 cyB3aGljaCBhcuKApiJ9LCJJbENIcFVXM1pjMkQ3cWVjIjp7In
-N0YXJ0IjoyNDc5OSwiZW5kIjoyNTE0MywidGV4dCI6IiFbKipO
+N0YXJ0IjoyNDg5MCwiZW5kIjoyNTIzNCwidGV4dCI6IiFbKipO
 b24taGFyZGNvZGVkIFBHNHMgbGV2ZWxzIGFyZSBncmVhdGVyIG
 F0IHRoZSBzdGFydCBjb2RvbiBwcm94aW1hbCByZWdpb24gb2bi
-gKYifSwiRHpJdTlWRUg3OW13a2drYyI6eyJzdGFydCI6Mjg3OD
-gsImVuZCI6MjkwMDcsInRleHQiOiJGdXJ0aGVybW9yZSwgdGhl
+gKYifSwiRHpJdTlWRUg3OW13a2drYyI6eyJzdGFydCI6Mjg4Nz
+ksImVuZCI6MjkwOTgsInRleHQiOiJGdXJ0aGVybW9yZSwgdGhl
 IHJhdGlvIG9mIHR3byB0ZXRyYWQgdG8gdGhyZWUgdGV0cmFkIF
 BHNHMgaW4gcGxhbnQgZ2Vub21lcyBpcyBt4oCmIn19LCJjb21t
 ZW50cyI6eyJlNmFyTDR1R3h3Uk05SnRZIjp7ImRpc2N1c3Npb2
@@ -343,11 +343,10 @@ A1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6IkNvdWxkIG5vdCB0
 aGUgb3Bwb3NpdGUgYXJndWVtZW50IGJlIG1hZGU6IHRoaW5ncy
 B0aGF0IGFyZSBtb3JlIGNvbW1vbiBhcmUgbGVzcyBsaWtlbHkg
 dG8gaGF2ZSBhbiBlZmZlY3QuIiwiY3JlYXRlZCI6MTUzNDM1MD
-k3ODk3OH19LCJoaXN0b3J5IjpbLTE1NTU1MzYwNDgsMTc0MjY4
-MDk4MywxODA3MDI4MjI2LDE5NjM2Nzk2NzIsLTQ1NzMwMjIwMi
-w0NzE2MTY2MzEsLTExMzQ4MjQ4NzgsMTcwNzU4Nzc4OCwtOTM5
-MjgyODcyLC0xMDkxOTI1NzE0LC00NTg5ODczNzksMTcxNDk4Nj
-U4OSwtMTY4NzQ0MjU4MiwtMTU3NDM1NDgyMCwtMTI0MDQwMDkx
-MCwtMTQ3NjYyMzU5NiwtMzUyNjAxMjE4LC0xMjUxOTkwNTgzXX
-0=
+k3ODk3OH19LCJoaXN0b3J5IjpbMTI1MjA1ODc5LDE3NDI2ODA5
+ODMsMTgwNzAyODIyNiwxOTYzNjc5NjcyLC00NTczMDIyMDIsND
+cxNjE2NjMxLC0xMTM0ODI0ODc4LDE3MDc1ODc3ODgsLTkzOTI4
+Mjg3MiwtMTA5MTkyNTcxNCwtNDU4OTg3Mzc5LDE3MTQ5ODY1OD
+ksLTE2ODc0NDI1ODIsLTE1NzQzNTQ4MjAsLTEyNDA0MDA5MTAs
+LTE0NzY2MjM1OTYsLTM1MjYwMTIxOCwtMTI1MTk5MDU4M119
 -->
