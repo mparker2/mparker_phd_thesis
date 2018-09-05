@@ -81,7 +81,7 @@ As shown in Fig \ref{metagene}c, there is a higher density of PG4s at the start 
 
 One cause of codon bias is the relative abundances of tRNAs with different isoacceptors in the cell. Previous studies have shown that the number of tRNA genes which have anticodons able fully or partially recognise a codon, is correlated with the usage of a codon in CDSs [@DosReis2004]. The efficiency of a codon can therefore be estimated from the number of tRNA genes with different anticodons, a measure referred to as the tRNA adaptation index (tAI) [@DosReis2004]. Man & Pilpel showed that amongst orthologous genes which are expressed relatively equally at the transcript level, those with higher tAI tend to be expressed more at the protein level [@Man2007]. Furthermore, Tuller et al. have demonstrated that the local tAI varies through the CDS, with the first 50 codons exhibiting lower tAI than the main body [@Tuller2014]. The authors showed that the variation in tAI through the CDS corresponded well to the ribosome occupancy, and suggested that lower tAI in the first 50 codons could form a slow "ramp" for translation initiation [@Tuller2014]. It is possible therefore that the selection of C rich codons, which introduce PG4s at the start codon proximal end of the template strand, could be a byproduct of the selection of low effiency codons which slow initial ribosomal elongation.
 
-To identify whether this is the case, we calculated the tAI for 
+To identify whether this is the case, we calculated the tAI for Arabidopsis using tRNA gene counts downloaded from the genomic tRNA database (gtRNAdb) [@ref]. Tuller et al. showed that the local tAI in *S. cerevisiae*
 
 ### Protein motifs hardcode G4 forming potential into coding regions
 
@@ -199,20 +199,20 @@ OSI6eyJzdGFydCI6MTk2MjUsImVuZCI6MTk5OTYsInRleHQiOi
 IhWyoqUmV2ZXJzZSBUcmFuc2xhdGlvbiBTaW11bGF0aW9uIHNo
 b3dzIHRoYXQgUEc0cyBhcmUgZW5yaWNoZWQgYXQgdGhlIFN0YX
 J0IENv4oCmIn0sIjZ0Ums0ak01bzdBSE1Zb0siOnsic3RhcnQi
-OjIxNTk2LCJlbmQiOjIxNjA0LCJ0ZXh0IjoidGhhdCB0aGUifS
-wiMk9iYTB5eVFOaXlpa2hKMCI6eyJzdGFydCI6MjI5NzMsImVu
-ZCI6MjMxMzYsInRleHQiOiJXZSBmb3VuZCB0aGF0IG9uIGJvdG
+OjIxNzQ5LCJlbmQiOjIxNzU3LCJ0ZXh0IjoidGhhdCB0aGUifS
+wiMk9iYTB5eVFOaXlpa2hKMCI6eyJzdGFydCI6MjMxMjYsImVu
+ZCI6MjMyODksInRleHQiOiJXZSBmb3VuZCB0aGF0IG9uIGJvdG
 ggc3RyYW5kcywgdGhlIGdyZWF0ZXN0IG51bWJlciBvZiBQRzRz
 IHdlcmUgY29tcGxldGVseSBoYXJk4oCmIn0sIjZlTnV3OUxQa3
-h1VXB3Q24iOnsic3RhcnQiOjI0MTMxLCJlbmQiOjI0NjExLCJ0
+h1VXB3Q24iOnsic3RhcnQiOjI0Mjg0LCJlbmQiOjI0NzY0LCJ0
 ZXh0IjoiRnJlcXVlbmN5IHBsb3Qgc2hvd2luZyB0aGUgdG90YW
 wgbnVtYmVyIG9mIEctcnVucyBjb250cmlidXRpbmcgdG8gUEc0
 cyB3aGljaCBhcuKApiJ9LCJJbENIcFVXM1pjMkQ3cWVjIjp7In
-N0YXJ0IjoyNTcyMywiZW5kIjoyNjA2NywidGV4dCI6IiFbKipO
+N0YXJ0IjoyNTg3NiwiZW5kIjoyNjIyMCwidGV4dCI6IiFbKipO
 b24taGFyZGNvZGVkIFBHNHMgbGV2ZWxzIGFyZSBncmVhdGVyIG
 F0IHRoZSBzdGFydCBjb2RvbiBwcm94aW1hbCByZWdpb24gb2bi
-gKYifSwiRHpJdTlWRUg3OW13a2drYyI6eyJzdGFydCI6Mjk3OT
-MsImVuZCI6MzAwMTIsInRleHQiOiJGdXJ0aGVybW9yZSwgdGhl
+gKYifSwiRHpJdTlWRUg3OW13a2drYyI6eyJzdGFydCI6Mjk5ND
+YsImVuZCI6MzAxNjUsInRleHQiOiJGdXJ0aGVybW9yZSwgdGhl
 IHJhdGlvIG9mIHR3byB0ZXRyYWQgdG8gdGhyZWUgdGV0cmFkIF
 BHNHMgaW4gcGxhbnQgZ2Vub21lcyBpcyBt4oCmIn19LCJjb21t
 ZW50cyI6eyJlNmFyTDR1R3h3Uk05SnRZIjp7ImRpc2N1c3Npb2
@@ -344,11 +344,11 @@ A1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6IkNvdWxkIG5vdCB0
 aGUgb3Bwb3NpdGUgYXJndWVtZW50IGJlIG1hZGU6IHRoaW5ncy
 B0aGF0IGFyZSBtb3JlIGNvbW1vbiBhcmUgbGVzcyBsaWtlbHkg
 dG8gaGF2ZSBhbiBlZmZlY3QuIiwiY3JlYXRlZCI6MTUzNDM1MD
-k3ODk3OH19LCJoaXN0b3J5IjpbNjA0MDQwMDUyLC0xNTcxMjc0
-NDIsMTc0MjY4MDk4MywxODA3MDI4MjI2LDE5NjM2Nzk2NzIsLT
-Q1NzMwMjIwMiw0NzE2MTY2MzEsLTExMzQ4MjQ4NzgsMTcwNzU4
-Nzc4OCwtOTM5MjgyODcyLC0xMDkxOTI1NzE0LC00NTg5ODczNz
-ksMTcxNDk4NjU4OSwtMTY4NzQ0MjU4MiwtMTU3NDM1NDgyMCwt
-MTI0MDQwMDkxMCwtMTQ3NjYyMzU5NiwtMzUyNjAxMjE4LC0xMj
-UxOTkwNTgzXX0=
+k3ODk3OH19LCJoaXN0b3J5IjpbMjA3NTc0NjIzMiwtMTU3MTI3
+NDQyLDE3NDI2ODA5ODMsMTgwNzAyODIyNiwxOTYzNjc5NjcyLC
+00NTczMDIyMDIsNDcxNjE2NjMxLC0xMTM0ODI0ODc4LDE3MDc1
+ODc3ODgsLTkzOTI4Mjg3MiwtMTA5MTkyNTcxNCwtNDU4OTg3Mz
+c5LDE3MTQ5ODY1ODksLTE2ODc0NDI1ODIsLTE1NzQzNTQ4MjAs
+LTEyNDA0MDA5MTAsLTE0NzY2MjM1OTYsLTM1MjYwMTIxOCwtMT
+I1MTk5MDU4M119
 -->
