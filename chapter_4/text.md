@@ -108,7 +108,7 @@ To identify the location of these non-hardcoded template PG4s in the CDS, we plo
 
 \newpage
 
-Harkness & Mittermaier showed that sequences which are able to form a variety of G4s through combinatorial interactions of greater than four G-runs are more entropically favourable, and therefore higher melting temperatures [@Harkness2016]. Different PG4 registers can be formed in sequences where there are extra Guanines in some G-runs, allowing "sliding" [@Harkness2016], or where there are five or more G-runs in close proximity, where G4s could be formed from any four G-runs. We were interested to see whether template strand PG4s at the start codon proximal end of CDSs tended to have more registers, which might make them more stable. We therefore identified all overlapping PG4 register clusters using network analysis (Figure \ref{g4netx}a), and produced metagene profiles for clusters with only 1, 2-5, 6-20, or greater than 20 registers. We found that 64% of PG4 clusters on both the coding and template strands of CDSs had greater than one register. The largest number of registers for a single cluster was 3096. This cluster was made up of 329 two base G-runs and was able to form a maximum of 75 non-overlapping PG4s. To identify whether the number of G-registers formed by PG4 clusters varied by CDS position, we binned PG4s into metagene profiles (Figure \ref{g4netx}b). We did not find much variation in the percentage of PG4s with G-register number greater than one, on either strand, however (mean 64%, standard deviation 3.5% for both strands).
+Harkness & Mittermaier showed that sequences which are able to form a variety of G4s through combinatorial interactions of greater than four G-runs are more entropically favourable, and therefore higher melting temperatures [@Harkness2016]. They termed these different conformations of the same locus different GDifferent PG4 registers can be formed in sequences where there are extra Guanines in some G-runs, allowing "sliding" [@Harkness2016], or where there are five or more G-runs in close proximity, where G4s could be formed from any four G-runs. We were interested to see whether template strand PG4s at the start codon proximal end of CDSs tended to have more registers, which might make them more stable. We therefore identified all overlapping PG4 register clusters using network analysis (Figure \ref{g4netx}a), and produced metagene profiles for clusters with only 1, 2-5, 6-20, or greater than 20 registers. We found that 64% of PG4 clusters on both the coding and template strands of CDSs had greater than one register. The largest number of registers for a single cluster was 3096. This cluster was made up of 329 two base G-runs and was able to form a maximum of 75 non-overlapping PG4s. To identify whether the number of G-registers formed by PG4 clusters varied by CDS position, we binned PG4s into metagene profiles (Figure \ref{g4netx}b). We did not find much variation in the percentage of PG4s with G-register number greater than one, on either strand, however (mean 64%, standard deviation 3.5% for both strands).
 
 \newpage
 
@@ -212,8 +212,8 @@ cyB3aGljaCBhcuKApiJ9LCJJbENIcFVXM1pjMkQ3cWVjIjp7In
 N0YXJ0IjoyNTcyMywiZW5kIjoyNjA2NywidGV4dCI6IiFbKipO
 b24taGFyZGNvZGVkIFBHNHMgbGV2ZWxzIGFyZSBncmVhdGVyIG
 F0IHRoZSBzdGFydCBjb2RvbiBwcm94aW1hbCByZWdpb24gb2bi
-gKYifSwiRHpJdTlWRUg3OW13a2drYyI6eyJzdGFydCI6Mjk3MT
-IsImVuZCI6Mjk5MzEsInRleHQiOiJGdXJ0aGVybW9yZSwgdGhl
+gKYifSwiRHpJdTlWRUg3OW13a2drYyI6eyJzdGFydCI6Mjk3OD
+MsImVuZCI6MzAwMDIsInRleHQiOiJGdXJ0aGVybW9yZSwgdGhl
 IHJhdGlvIG9mIHR3byB0ZXRyYWQgdG8gdGhyZWUgdGV0cmFkIF
 BHNHMgaW4gcGxhbnQgZ2Vub21lcyBpcyBt4oCmIn19LCJjb21t
 ZW50cyI6eyJlNmFyTDR1R3h3Uk05SnRZIjp7ImRpc2N1c3Npb2
@@ -345,11 +345,11 @@ A1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6IkNvdWxkIG5vdCB0
 aGUgb3Bwb3NpdGUgYXJndWVtZW50IGJlIG1hZGU6IHRoaW5ncy
 B0aGF0IGFyZSBtb3JlIGNvbW1vbiBhcmUgbGVzcyBsaWtlbHkg
 dG8gaGF2ZSBhbiBlZmZlY3QuIiwiY3JlYXRlZCI6MTUzNDM1MD
-k3ODk3OH19LCJoaXN0b3J5IjpbLTE1NzEyNzQ0MiwxNzQyNjgw
-OTgzLDE4MDcwMjgyMjYsMTk2MzY3OTY3MiwtNDU3MzAyMjAyLD
-Q3MTYxNjYzMSwtMTEzNDgyNDg3OCwxNzA3NTg3Nzg4LC05Mzky
-ODI4NzIsLTEwOTE5MjU3MTQsLTQ1ODk4NzM3OSwxNzE0OTg2NT
-g5LC0xNjg3NDQyNTgyLC0xNTc0MzU0ODIwLC0xMjQwNDAwOTEw
-LC0xNDc2NjIzNTk2LC0zNTI2MDEyMTgsLTEyNTE5OTA1ODNdfQ
-==
+k3ODk3OH19LCJoaXN0b3J5IjpbMTQ1NjI4OTk0MiwtMTU3MTI3
+NDQyLDE3NDI2ODA5ODMsMTgwNzAyODIyNiwxOTYzNjc5NjcyLC
+00NTczMDIyMDIsNDcxNjE2NjMxLC0xMTM0ODI0ODc4LDE3MDc1
+ODc3ODgsLTkzOTI4Mjg3MiwtMTA5MTkyNTcxNCwtNDU4OTg3Mz
+c5LDE3MTQ5ODY1ODksLTE2ODc0NDI1ODIsLTE1NzQzNTQ4MjAs
+LTEyNDA0MDA5MTAsLTE0NzY2MjM1OTYsLTM1MjYwMTIxOCwtMT
+I1MTk5MDU4M119
 -->
