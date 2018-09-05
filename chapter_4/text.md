@@ -81,7 +81,7 @@ As shown in Fig \ref{metagene}c, there is a higher density of PG4s at the start 
 
 One cause of codon bias is the relative abundances of tRNAs with different isoacceptors in the cell. Previous studies have shown that the number of tRNA genes which have anticodons able fully or partially recognise a codon, is correlated with the usage of a codon in CDSs [@DosReis2004]. The efficiency of a codon can therefore be estimated from the number of tRNA genes with different anticodons, a measure referred to as the tRNA adaptation index (tAI) [@DosReis2004]. Man & Pilpel showed that amongst orthologous genes which are expressed relatively equally at the transcript level, those with higher tAI tend to be expressed more at the protein level [@Man2007]. Furthermore, Tuller et al. have demonstrated that the local tAI varies through the CDS, with the first 50 codons exhibiting lower tAI than the main body [@Tuller2014]. The authors showed that the variation in tAI through the CDS corresponded well to the ribosome occupancy, and suggested that lower tAI in the first 50 codons could form a slow "ramp" for translation initiation [@Tuller2014]. It is possible therefore that the selection of C rich codons, which introduce PG4s at the start codon proximal end of the template strand, could be a byproduct of the selection of low effiency codons which slow initial ribosomal elongation.
 
-To identify whether this is the case, we calculated the tAI for Arabidopsis using tRNA gene counts downloaded from the genomic tRNA database (gtRNAdb) [@Chan2015]. Tuller et al. showed that the local tAI in *S. cerevisiae* is, on a lower for the first 50 codons of 
+To identify whether this is the case, we calculated the tAI for Arabidopsis using tRNA gene counts downloaded from the genomic tRNA database (gtRNAdb) [@Chan2015]. Tuller et al. showed that the local tAI in *S. cerevisiae* is, on average, lower for the first 50 codons of the CDS, whilst the final X codons before the terminator have greater than average tAI. We performed the same analysis for Arabidopsis, and found similar effects, however average tAI was only less 
 
 ### Protein motifs hardcode G4 forming potential into coding regions
 
@@ -199,20 +199,20 @@ OSI6eyJzdGFydCI6MTk2MjUsImVuZCI6MTk5OTYsInRleHQiOi
 IhWyoqUmV2ZXJzZSBUcmFuc2xhdGlvbiBTaW11bGF0aW9uIHNo
 b3dzIHRoYXQgUEc0cyBhcmUgZW5yaWNoZWQgYXQgdGhlIFN0YX
 J0IENv4oCmIn0sIjZ0Ums0ak01bzdBSE1Zb0siOnsic3RhcnQi
-OjIxNzk3LCJlbmQiOjIxODA1LCJ0ZXh0IjoidGhhdCB0aGUifS
-wiMk9iYTB5eVFOaXlpa2hKMCI6eyJzdGFydCI6MjMxNzQsImVu
-ZCI6MjMzMzcsInRleHQiOiJXZSBmb3VuZCB0aGF0IG9uIGJvdG
+OjIyMDAxLCJlbmQiOjIyMDA5LCJ0ZXh0IjoidGhhdCB0aGUifS
+wiMk9iYTB5eVFOaXlpa2hKMCI6eyJzdGFydCI6MjMzNzgsImVu
+ZCI6MjM1NDEsInRleHQiOiJXZSBmb3VuZCB0aGF0IG9uIGJvdG
 ggc3RyYW5kcywgdGhlIGdyZWF0ZXN0IG51bWJlciBvZiBQRzRz
 IHdlcmUgY29tcGxldGVseSBoYXJk4oCmIn0sIjZlTnV3OUxQa3
-h1VXB3Q24iOnsic3RhcnQiOjI0MzMyLCJlbmQiOjI0ODEyLCJ0
+h1VXB3Q24iOnsic3RhcnQiOjI0NTM2LCJlbmQiOjI1MDE2LCJ0
 ZXh0IjoiRnJlcXVlbmN5IHBsb3Qgc2hvd2luZyB0aGUgdG90YW
 wgbnVtYmVyIG9mIEctcnVucyBjb250cmlidXRpbmcgdG8gUEc0
 cyB3aGljaCBhcuKApiJ9LCJJbENIcFVXM1pjMkQ3cWVjIjp7In
-N0YXJ0IjoyNTkyNCwiZW5kIjoyNjI2OCwidGV4dCI6IiFbKipO
+N0YXJ0IjoyNjEyOCwiZW5kIjoyNjQ3MiwidGV4dCI6IiFbKipO
 b24taGFyZGNvZGVkIFBHNHMgbGV2ZWxzIGFyZSBncmVhdGVyIG
 F0IHRoZSBzdGFydCBjb2RvbiBwcm94aW1hbCByZWdpb24gb2bi
-gKYifSwiRHpJdTlWRUg3OW13a2drYyI6eyJzdGFydCI6Mjk5OT
-QsImVuZCI6MzAyMTMsInRleHQiOiJGdXJ0aGVybW9yZSwgdGhl
+gKYifSwiRHpJdTlWRUg3OW13a2drYyI6eyJzdGFydCI6MzAxOT
+gsImVuZCI6MzA0MTcsInRleHQiOiJGdXJ0aGVybW9yZSwgdGhl
 IHJhdGlvIG9mIHR3byB0ZXRyYWQgdG8gdGhyZWUgdGV0cmFkIF
 BHNHMgaW4gcGxhbnQgZ2Vub21lcyBpcyBt4oCmIn19LCJjb21t
 ZW50cyI6eyJlNmFyTDR1R3h3Uk05SnRZIjp7ImRpc2N1c3Npb2
@@ -344,11 +344,11 @@ A1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6IkNvdWxkIG5vdCB0
 aGUgb3Bwb3NpdGUgYXJndWVtZW50IGJlIG1hZGU6IHRoaW5ncy
 B0aGF0IGFyZSBtb3JlIGNvbW1vbiBhcmUgbGVzcyBsaWtlbHkg
 dG8gaGF2ZSBhbiBlZmZlY3QuIiwiY3JlYXRlZCI6MTUzNDM1MD
-k3ODk3OH19LCJoaXN0b3J5IjpbLTQyODAyMzYwMSwtMTU3MTI3
-NDQyLDE3NDI2ODA5ODMsMTgwNzAyODIyNiwxOTYzNjc5NjcyLC
-00NTczMDIyMDIsNDcxNjE2NjMxLC0xMTM0ODI0ODc4LDE3MDc1
-ODc3ODgsLTkzOTI4Mjg3MiwtMTA5MTkyNTcxNCwtNDU4OTg3Mz
-c5LDE3MTQ5ODY1ODksLTE2ODc0NDI1ODIsLTE1NzQzNTQ4MjAs
-LTEyNDA0MDA5MTAsLTE0NzY2MjM1OTYsLTM1MjYwMTIxOCwtMT
-I1MTk5MDU4M119
+k3ODk3OH19LCJoaXN0b3J5IjpbLTE1NTI3NDEwNTcsLTE1NzEy
+NzQ0MiwxNzQyNjgwOTgzLDE4MDcwMjgyMjYsMTk2MzY3OTY3Mi
+wtNDU3MzAyMjAyLDQ3MTYxNjYzMSwtMTEzNDgyNDg3OCwxNzA3
+NTg3Nzg4LC05MzkyODI4NzIsLTEwOTE5MjU3MTQsLTQ1ODk4Nz
+M3OSwxNzE0OTg2NTg5LC0xNjg3NDQyNTgyLC0xNTc0MzU0ODIw
+LC0xMjQwNDAwOTEwLC0xNDc2NjIzNTk2LC0zNTI2MDEyMTgsLT
+EyNTE5OTA1ODNdfQ==
 -->
