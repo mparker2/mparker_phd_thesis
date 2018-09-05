@@ -81,7 +81,7 @@ As shown in Fig \ref{metagene}c, there is a higher density of PG4s at the start 
 
 One cause of codon bias is the relative abundances of tRNAs with different isoacceptors in the cell. Previous studies have shown that the number of tRNA genes which have anticodons able fully or partially recognise a codon, is correlated with the usage of a codon in CDSs [@DosReis2004]. The efficiency of a codon can therefore be estimated from the number of tRNA genes with different anticodons, a measure referred to as the tRNA adaptation index (tAI) [@DosReis2004]. Man & Pilpel showed that amongst orthologous genes which are expressed relatively equally at the transcript level, those with higher tAI tend to be expressed more at the protein level [@Man2007]. Furthermore, Tuller et al. have demonstrated that the local tAI varies through the CDS, with the first 50 codons exhibiting lower tAI than the main body [@Tuller2014]. The authors showed that the variation in tAI through the CDS corresponded well to the ribosome occupancy, and suggested that lower tAI in the first 50 codons could form a slow "ramp" for translation initiation [@Tuller2014]. It is possible therefore that the selection of C rich codons, which introduce PG4s at the start codon proximal end of the template strand, could be a byproduct of the selection of low effiency codons which slow ribosomal elongation initially.
 
-To identify whether the higher levels of PG4s at the template
+To identify whether the enrichment of PG4s caused by  at the start of the CDS on the template strand
 
 
 ### Protein motifs hardcode G4 forming potential into coding regions
@@ -108,7 +108,7 @@ To identify the location of these non-hardcoded template PG4s in the CDS, we plo
 
 \newpage
 
-Harkness & Mittermaier showed that sequences which are able to form a variety of G4s through combinatorial interactions of greater than four G-runs are more entropically favourable, and therefore higher melting temperatures [@Harkness2016]. They termed these different conformations of the same locus different GDifferent PG4 registers can be formed in sequences where there are extra Guanines in some G-runs, allowing "sliding" [@Harkness2016], or where there are five or more G-runs in close proximity, where G4s could be formed from any four G-runs. We were interested to see whether template strand PG4s at the start codon proximal end of CDSs tended to have more registers, which might make them more stable. We therefore identified all overlapping PG4 register clusters using network analysis (Figure \ref{g4netx}a), and produced metagene profiles for clusters with only 1, 2-5, 6-20, or greater than 20 registers. We found that 64% of PG4 clusters on both the coding and template strands of CDSs had greater than one register. The largest number of registers for a single cluster was 3096. This cluster was made up of 329 two base G-runs and was able to form a maximum of 75 non-overlapping PG4s. To identify whether the number of G-registers formed by PG4 clusters varied by CDS position, we binned PG4s into metagene profiles (Figure \ref{g4netx}b). We did not find much variation in the percentage of PG4s with G-register number greater than one, on either strand, however (mean 64%, standard deviation 3.5% for both strands).
+Harkness & Mittermaier showed that sequences which are able to form a variety of G4s through combinatorial interactions of greater than four G-runs are more entropically favourable, and therefore higher melting temperatures [@Harkness2016]. They termed these different conformations of the same locus different "G-registers". Different registers can be formed in sequences where there are extra Guanines in some G-runs, allowing "sliding" [@Harkness2016], or where there are five or more G-runs in close proximity, where G4s could be formed from any four G-runs. We were interested to see whether template strand PG4s at the start codon proximal end of CDSs tended to have more registers, which might make them more stable. We therefore identified all overlapping PG4 register clusters using network analysis (Figure \ref{g4netx}a), and produced metagene profiles for clusters with only 1, 2-5, 6-20, or greater than 20 registers. We found that 64% of PG4 clusters on both the coding and template strands of CDSs had greater than one register. The largest number of registers for a single cluster was 3096. This cluster was made up of 329 two base G-runs and was able to form a maximum of 75 non-overlapping PG4s. To identify whether the number of G-registers formed by PG4 clusters varied by CDS position, we binned PG4s into metagene profiles (Figure \ref{g4netx}b). We did not find much variation in the percentage of PG4s with G-register number greater than one, on either strand, however (mean 64%, standard deviation 3.5% for both strands).
 
 \newpage
 
@@ -200,20 +200,20 @@ OSI6eyJzdGFydCI6MTk2MjUsImVuZCI6MTk5OTYsInRleHQiOi
 IhWyoqUmV2ZXJzZSBUcmFuc2xhdGlvbiBTaW11bGF0aW9uIHNo
 b3dzIHRoYXQgUEc0cyBhcmUgZW5yaWNoZWQgYXQgdGhlIFN0YX
 J0IENv4oCmIn0sIjZ0Ums0ak01bzdBSE1Zb0siOnsic3RhcnQi
-OjIxNTk2LCJlbmQiOjIxNjA0LCJ0ZXh0IjoidGhhdCB0aGUifS
-wiMk9iYTB5eVFOaXlpa2hKMCI6eyJzdGFydCI6MjI5NzMsImVu
-ZCI6MjMxMzYsInRleHQiOiJXZSBmb3VuZCB0aGF0IG9uIGJvdG
+OjIxNjM1LCJlbmQiOjIxNjQzLCJ0ZXh0IjoidGhhdCB0aGUifS
+wiMk9iYTB5eVFOaXlpa2hKMCI6eyJzdGFydCI6MjMwMTIsImVu
+ZCI6MjMxNzUsInRleHQiOiJXZSBmb3VuZCB0aGF0IG9uIGJvdG
 ggc3RyYW5kcywgdGhlIGdyZWF0ZXN0IG51bWJlciBvZiBQRzRz
 IHdlcmUgY29tcGxldGVseSBoYXJk4oCmIn0sIjZlTnV3OUxQa3
-h1VXB3Q24iOnsic3RhcnQiOjI0MTMxLCJlbmQiOjI0NjExLCJ0
+h1VXB3Q24iOnsic3RhcnQiOjI0MTcwLCJlbmQiOjI0NjUwLCJ0
 ZXh0IjoiRnJlcXVlbmN5IHBsb3Qgc2hvd2luZyB0aGUgdG90YW
 wgbnVtYmVyIG9mIEctcnVucyBjb250cmlidXRpbmcgdG8gUEc0
 cyB3aGljaCBhcuKApiJ9LCJJbENIcFVXM1pjMkQ3cWVjIjp7In
-N0YXJ0IjoyNTcyMywiZW5kIjoyNjA2NywidGV4dCI6IiFbKipO
+N0YXJ0IjoyNTc2MiwiZW5kIjoyNjEwNiwidGV4dCI6IiFbKipO
 b24taGFyZGNvZGVkIFBHNHMgbGV2ZWxzIGFyZSBncmVhdGVyIG
 F0IHRoZSBzdGFydCBjb2RvbiBwcm94aW1hbCByZWdpb24gb2bi
-gKYifSwiRHpJdTlWRUg3OW13a2drYyI6eyJzdGFydCI6Mjk3OD
-MsImVuZCI6MzAwMDIsInRleHQiOiJGdXJ0aGVybW9yZSwgdGhl
+gKYifSwiRHpJdTlWRUg3OW13a2drYyI6eyJzdGFydCI6Mjk4Mz
+IsImVuZCI6MzAwNTEsInRleHQiOiJGdXJ0aGVybW9yZSwgdGhl
 IHJhdGlvIG9mIHR3byB0ZXRyYWQgdG8gdGhyZWUgdGV0cmFkIF
 BHNHMgaW4gcGxhbnQgZ2Vub21lcyBpcyBt4oCmIn19LCJjb21t
 ZW50cyI6eyJlNmFyTDR1R3h3Uk05SnRZIjp7ImRpc2N1c3Npb2
@@ -345,11 +345,11 @@ A1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6IkNvdWxkIG5vdCB0
 aGUgb3Bwb3NpdGUgYXJndWVtZW50IGJlIG1hZGU6IHRoaW5ncy
 B0aGF0IGFyZSBtb3JlIGNvbW1vbiBhcmUgbGVzcyBsaWtlbHkg
 dG8gaGF2ZSBhbiBlZmZlY3QuIiwiY3JlYXRlZCI6MTUzNDM1MD
-k3ODk3OH19LCJoaXN0b3J5IjpbMTQ1NjI4OTk0MiwtMTU3MTI3
-NDQyLDE3NDI2ODA5ODMsMTgwNzAyODIyNiwxOTYzNjc5NjcyLC
-00NTczMDIyMDIsNDcxNjE2NjMxLC0xMTM0ODI0ODc4LDE3MDc1
-ODc3ODgsLTkzOTI4Mjg3MiwtMTA5MTkyNTcxNCwtNDU4OTg3Mz
-c5LDE3MTQ5ODY1ODksLTE2ODc0NDI1ODIsLTE1NzQzNTQ4MjAs
-LTEyNDA0MDA5MTAsLTE0NzY2MjM1OTYsLTM1MjYwMTIxOCwtMT
-I1MTk5MDU4M119
+k3ODk3OH19LCJoaXN0b3J5IjpbMjA5NzQ2MDE4LC0xNTcxMjc0
+NDIsMTc0MjY4MDk4MywxODA3MDI4MjI2LDE5NjM2Nzk2NzIsLT
+Q1NzMwMjIwMiw0NzE2MTY2MzEsLTExMzQ4MjQ4NzgsMTcwNzU4
+Nzc4OCwtOTM5MjgyODcyLC0xMDkxOTI1NzE0LC00NTg5ODczNz
+ksMTcxNDk4NjU4OSwtMTY4NzQ0MjU4MiwtMTU3NDM1NDgyMCwt
+MTI0MDQwMDkxMCwtMTQ3NjYyMzU5NiwtMzUyNjAxMjE4LC0xMj
+UxOTkwNTgzXX0=
 -->
