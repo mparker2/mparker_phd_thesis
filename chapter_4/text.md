@@ -85,7 +85,7 @@ To identify whether this is the case, we calculated the tAI for Arabidopsis usin
 
 In order to test whether C-rich codons, which might form PG4s on the template strand, could contribute to the lower efficiency at the start of the CDS, we grouped codons by wobble position, and compared the distribution of tAIs. Codons containing cytosine at the wobble position, which are most likely to contribute to softcoded PG4s, tended in fact to have high tAIs. This suggests that the enrichment of template strand PG4s is not merely a byproduct of low efficiency codons at the beginning of the gene.
 
-![**tRNA adaptation index of Arabidopsis Coding Regions.** **a)** Metagene profiles showing the mean tAI for the first and last 100 codons of Arabidopsis CDSs. **b)** Boxplot showing the distribution of tAIs for codons by third (or "wobble") base position. 
+![**tRNA adaptation index of Arabidopsis Coding Regions.** **a)** Metagene profiles showing the mean tAI for the first and last 100 codons of Arabidopsis CDSs. **b)** Boxplot showing the distribution of tAIs for codons by third (or "wobble") base position. \label{tai}](figures/trna_adaptation_index.svg) 
 
 ### Protein motifs hardcode G4 forming potential into coding regions
 
@@ -203,22 +203,22 @@ OSI6eyJ0ZXh0IjoiIVsqKlJldmVyc2UgVHJhbnNsYXRpb24gU2
 ltdWxhdGlvbiBzaG93cyB0aGF0IFBHNHMgYXJlIGVucmljaGVk
 IGF0IHRoZSBTdGFydCBDb+KApiIsInN0YXJ0IjoxOTYyNSwiZW
 5kIjoxOTk5Nn0sIjZ0Ums0ak01bzdBSE1Zb0siOnsidGV4dCI6
-InRoYXQgdGhlIiwic3RhcnQiOjIyODc0LCJlbmQiOjIyODgyfS
+InRoYXQgdGhlIiwic3RhcnQiOjIyOTIyLCJlbmQiOjIyOTMwfS
 wiMk9iYTB5eVFOaXlpa2hKMCI6eyJ0ZXh0IjoiV2UgZm91bmQg
 dGhhdCBvbiBib3RoIHN0cmFuZHMsIHRoZSBncmVhdGVzdCBudW
 1iZXIgb2YgUEc0cyB3ZXJlIGNvbXBsZXRlbHkgaGFyZOKApiIs
-InN0YXJ0IjoyNDI1MSwiZW5kIjoyNDQxNH0sIjZlTnV3OUxQa3
+InN0YXJ0IjoyNDI5OSwiZW5kIjoyNDQ2Mn0sIjZlTnV3OUxQa3
 h1VXB3Q24iOnsidGV4dCI6IkZyZXF1ZW5jeSBwbG90IHNob3dp
 bmcgdGhlIHRvdGFsIG51bWJlciBvZiBHLXJ1bnMgY29udHJpYn
 V0aW5nIHRvIFBHNHMgd2hpY2ggYXLigKYiLCJzdGFydCI6MjU0
-MDksImVuZCI6MjU4ODl9LCJJbENIcFVXM1pjMkQ3cWVjIjp7In
+NTcsImVuZCI6MjU5Mzd9LCJJbENIcFVXM1pjMkQ3cWVjIjp7In
 RleHQiOiIhWyoqTm9uLWhhcmRjb2RlZCBQRzRzIGxldmVscyBh
 cmUgZ3JlYXRlciBhdCB0aGUgc3RhcnQgY29kb24gcHJveGltYW
-wgcmVnaW9uIG9m4oCmIiwic3RhcnQiOjI3MDAxLCJlbmQiOjI3
-MzQ1fSwiRHpJdTlWRUg3OW13a2drYyI6eyJ0ZXh0IjoiRnVydG
+wgcmVnaW9uIG9m4oCmIiwic3RhcnQiOjI3MDQ5LCJlbmQiOjI3
+MzkzfSwiRHpJdTlWRUg3OW13a2drYyI6eyJ0ZXh0IjoiRnVydG
 hlcm1vcmUsIHRoZSByYXRpbyBvZiB0d28gdGV0cmFkIHRvIHRo
 cmVlIHRldHJhZCBQRzRzIGluIHBsYW50IGdlbm9tZXMgaXMgbe
-KApiIsInN0YXJ0IjozMTA3MSwiZW5kIjozMTI5MH19LCJjb21t
+KApiIsInN0YXJ0IjozMTExOSwiZW5kIjozMTMzOH19LCJjb21t
 ZW50cyI6eyJlNmFyTDR1R3h3Uk05SnRZIjp7ImRpc2N1c3Npb2
 5JZCI6IkN2TDNINGFnSmlucVNTZm0iLCJzdWIiOiIxMDIyMDU3
 OTcyNzY5NDEwMTA2NzciLCJ0ZXh0IjoiSXMgdGhpcyBzaW1pbG
@@ -348,7 +348,7 @@ A1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6IkNvdWxkIG5vdCB0
 aGUgb3Bwb3NpdGUgYXJndWVtZW50IGJlIG1hZGU6IHRoaW5ncy
 B0aGF0IGFyZSBtb3JlIGNvbW1vbiBhcmUgbGVzcyBsaWtlbHkg
 dG8gaGF2ZSBhbiBlZmZlY3QuIiwiY3JlYXRlZCI6MTUzNDM1MD
-k3ODk3OH19LCJoaXN0b3J5IjpbLTE1Mzc1MzM0OTAsMTE5NjUz
+k3ODk3OH19LCJoaXN0b3J5IjpbLTE4NzUzNTA2MzMsMTE5NjUz
 Mzc5OCwyODIzNDA0NDUsLTE1NzEyNzQ0MiwxNzQyNjgwOTgzLD
 E4MDcwMjgyMjYsMTk2MzY3OTY3MiwtNDU3MzAyMjAyLDQ3MTYx
 NjYzMSwtMTEzNDgyNDg3OCwxNzA3NTg3Nzg4LC05MzkyODI4Nz
