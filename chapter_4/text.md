@@ -89,7 +89,7 @@ In order to test whether C-rich codons, which might form PG4s on the template st
 
 ### Protein motifs hardcode G4 forming potential into coding regions
 
-Our reverse translation method indicates that much of the PG4 forming potential of CDSs may arise from protein sequence, i.e. if protein sequence is evolutionarily constrained, then PG4s are hardcoded into the CDS. This is particularly the case on the coding strand, where reverse translation methods  We performed an analysis of which amino acid or amino acid pairs (which we refer to as protein motifs) most often lead to two tetrad PG4s. All overlapping PG4s and the G-runs that form them were predicted, and the protein motifs which are encoded by each G-run was identified. The G-run was then classified as either hardcoded or not, depending on whether or not the same amino acids could be encoded by different codons which would remove the G-run at that position. We also identified repetitive and non-repetitive G-runs. G-runs were considered repetitive if the protein motifs that they encode were the same for all G-runs in the G4.
+Our reverse translation method indicates that much of the PG4 forming potential of CDSs may arise from protein sequence, i.e. if protein sequence is evolutionarily constrained, then PG4s are hardcoded into the CDS. This is particularly the case on the coding strand, where reverse translation methods did not have a strong effect on PG4 forming potential. We performed an analysis of which amino acid or amino acid pairs (which we refer to as protein motifs) most often lead to two tetrad PG4s. All overlapping PG4s and the G-runs that form them were predicted, and the protein motifs which are encoded by each G-run was identified. The G-run was then classified as either hardcoded or not, depending on whether or not the same amino acids could be encoded by different codons which would remove the G-run at that position. We also identified repetitive and non-repetitive G-runs. G-runs were considered repetitive if the protein motifs that they encode were the same for all G-runs in the G4.
 
 Our analysis shows that 58% of PG4 G-runs on the coding strand, and 48% on the template strand, are hardcoded. Of these hardcoded PG4s, around 51% and 60% are found in repetitive PG4s on the coding and template strand, respectively. On the other hand, most non-hardcoded PG4s on both strands are also non-repetitive (Fig \ref{hardcoded}a). This suggests the presence of a number of entirely hardcoded PG4s which are encoded by repetitive protein motifs.
 
@@ -207,18 +207,18 @@ InRoYXQgdGhlIiwic3RhcnQiOjIyOTIyLCJlbmQiOjIyOTM4fS
 wiMk9iYTB5eVFOaXlpa2hKMCI6eyJ0ZXh0IjoiV2UgZm91bmQg
 dGhhdCBvbiBib3RoIHN0cmFuZHMsIHRoZSBncmVhdGVzdCBudW
 1iZXIgb2YgUEc0cyB3ZXJlIGNvbXBsZXRlbHkgaGFyZOKApiIs
-InN0YXJ0IjoyNDM5OSwiZW5kIjoyNDU2Mn0sIjZlTnV3OUxQa3
+InN0YXJ0IjoyNDQ1MywiZW5kIjoyNDYxNn0sIjZlTnV3OUxQa3
 h1VXB3Q24iOnsidGV4dCI6IkZyZXF1ZW5jeSBwbG90IHNob3dp
 bmcgdGhlIHRvdGFsIG51bWJlciBvZiBHLXJ1bnMgY29udHJpYn
-V0aW5nIHRvIFBHNHMgd2hpY2ggYXLigKYiLCJzdGFydCI6MjU1
-NTcsImVuZCI6MjYwMzd9LCJJbENIcFVXM1pjMkQ3cWVjIjp7In
+V0aW5nIHRvIFBHNHMgd2hpY2ggYXLigKYiLCJzdGFydCI6MjU2
+MTEsImVuZCI6MjYwOTF9LCJJbENIcFVXM1pjMkQ3cWVjIjp7In
 RleHQiOiIhWyoqTm9uLWhhcmRjb2RlZCBQRzRzIGxldmVscyBh
 cmUgZ3JlYXRlciBhdCB0aGUgc3RhcnQgY29kb24gcHJveGltYW
-wgcmVnaW9uIG9m4oCmIiwic3RhcnQiOjI3MTQ5LCJlbmQiOjI3
-NDkzfSwiRHpJdTlWRUg3OW13a2drYyI6eyJ0ZXh0IjoiRnVydG
+wgcmVnaW9uIG9m4oCmIiwic3RhcnQiOjI3MjAzLCJlbmQiOjI3
+NTQ3fSwiRHpJdTlWRUg3OW13a2drYyI6eyJ0ZXh0IjoiRnVydG
 hlcm1vcmUsIHRoZSByYXRpbyBvZiB0d28gdGV0cmFkIHRvIHRo
 cmVlIHRldHJhZCBQRzRzIGluIHBsYW50IGdlbm9tZXMgaXMgbe
-KApiIsInN0YXJ0IjozMTIxOSwiZW5kIjozMTQzOH19LCJjb21t
+KApiIsInN0YXJ0IjozMTI3MywiZW5kIjozMTQ5Mn19LCJjb21t
 ZW50cyI6eyJlNmFyTDR1R3h3Uk05SnRZIjp7ImRpc2N1c3Npb2
 5JZCI6IkN2TDNINGFnSmlucVNTZm0iLCJzdWIiOiIxMDIyMDU3
 OTcyNzY5NDEwMTA2NzciLCJ0ZXh0IjoiSXMgdGhpcyBzaW1pbG
@@ -348,11 +348,11 @@ A1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6IkNvdWxkIG5vdCB0
 aGUgb3Bwb3NpdGUgYXJndWVtZW50IGJlIG1hZGU6IHRoaW5ncy
 B0aGF0IGFyZSBtb3JlIGNvbW1vbiBhcmUgbGVzcyBsaWtlbHkg
 dG8gaGF2ZSBhbiBlZmZlY3QuIiwiY3JlYXRlZCI6MTUzNDM1MD
-k3ODk3OH19LCJoaXN0b3J5IjpbMjEzOTQ2MTA4MCwxMTk2NTMz
-Nzk4LDI4MjM0MDQ0NSwtMTU3MTI3NDQyLDE3NDI2ODA5ODMsMT
-gwNzAyODIyNiwxOTYzNjc5NjcyLC00NTczMDIyMDIsNDcxNjE2
-NjMxLC0xMTM0ODI0ODc4LDE3MDc1ODc3ODgsLTkzOTI4Mjg3Mi
-wtMTA5MTkyNTcxNCwtNDU4OTg3Mzc5LDE3MTQ5ODY1ODksLTE2
-ODc0NDI1ODIsLTE1NzQzNTQ4MjAsLTEyNDA0MDA5MTAsLTE0Nz
-Y2MjM1OTYsLTM1MjYwMTIxOF19
+k3ODk3OH19LCJoaXN0b3J5IjpbMTUxODIwMDU0LDExOTY1MzM3
+OTgsMjgyMzQwNDQ1LC0xNTcxMjc0NDIsMTc0MjY4MDk4MywxOD
+A3MDI4MjI2LDE5NjM2Nzk2NzIsLTQ1NzMwMjIwMiw0NzE2MTY2
+MzEsLTExMzQ4MjQ4NzgsMTcwNzU4Nzc4OCwtOTM5MjgyODcyLC
+0xMDkxOTI1NzE0LC00NTg5ODczNzksMTcxNDk4NjU4OSwtMTY4
+NzQ0MjU4MiwtMTU3NDM1NDgyMCwtMTI0MDQwMDkxMCwtMTQ3Nj
+YyMzU5NiwtMzUyNjAxMjE4XX0=
 -->
