@@ -78,7 +78,7 @@ To contrast GRO/RNA seq ratios of G4 containing genes with non-G4 containing gen
 
 #### NMM causes global change in gene expression
 
-In order to test the effect of G4 stabilisation on gene expression in Arabidopsis, we conducted a microarray analysis using RNA from 7 day old seedlings treated with NMM for 6 hours. Control samples were treated with DMSO for 6 hours. Two biological replicates per condition were used for control samples, and three for treated samples. We found 858 and 1098 genes were differentially upregulated and downregulated respectively using a log fold change threshold of 1 (PPLR < 0.05). When a less stringent log fold change threshold of 0.5 was used (PPLR < 0.05), downregulated genes outnumbered upregulated by a ratio of 2:1 (3882 downregulated, 1930 upregulated), suggesting that NMM has a global effect on gene expression unlikely to be caused by a single transcription factor. An MA plot of average gene expression vs log fold change, with lowess curve fitting, showed that there appeared to be a slight skew towards downregulation in genes with higher average expression (Fig \ref{nmm}a). To more clearly visualise this skew we binned genes by average expression quartile (Fig \ref{nmm}b). This showed there was indeed a relationship between average expression and expression change upon NMM treatment, with highly expressed genes tending to be more downregulated by NMM treatment. This global pattern, which violates some of the assumptions that are usually used in microarray normalisation and analysis, suggests a widespread effect of NMM directly upon either transcription or mRNA stability.
+In order to test the effect of G4 stabilisation on gene expression in Arabidopsis, we conducted a microarray analysis using RNA from 7 day old seedlings treated with NMM for 6 hours. Control samples were treated with DMSO for 6 hours. Two biological replicates per condition were used for control samples, and three for treated samples. We found 1098 and 858 genes were differentially downregulated and upregulated respectively using a log fold change threshold of 1 (PPLR < 0.05). When a less stringent log fold change threshold of 0.5 was used (PPLR < 0.05), downregulated genes outnumbered upregulated by a ratio of 2:1 (3882 downregulated, 1930 upregulated), suggesting that NMM has a global effect on gene expression unlikely to be caused by a single transcription factor. An MA plot of average gene expression vs log fold change, with lowess curve fitting, showed that there appeared to be a slight skew towards downregulation in genes with higher average expression (Fig \ref{nmm}a). To more clearly visualise this skew we binned genes by average expression quartile (Fig \ref{nmm}b). This showed there was indeed a relationship between average expression and expression change upon NMM treatment, with highly expressed genes tending to be more downregulated by NMM treatment. This global pattern, which violates some of the assumptions that are usually used in microarray normalisation and analysis, suggests a widespread effect of NMM directly upon either transcription or mRNA stability.
 
 \newpage
 
@@ -209,7 +209,7 @@ Previous studies of PG4 localisation in Arabidopsis have highlighted a greater n
 \newpage
 <!--stackedit_data:
 eyJkaXNjdXNzaW9ucyI6eyJxekZrOU85eWhFTGYzMDR5Ijp7In
-RleHQiOiJ3ZSIsInN0YXJ0IjoxNjM4OCwiZW5kIjoxNjM4NX0s
+RleHQiOiJ3ZSIsInN0YXJ0IjoxNjM4OCwiZW5kIjoxNjM4OH0s
 IjVzWEhYN3V3MzZPTmU5aTciOnsidGV4dCI6IlBQTFIiLCJzdG
 FydCI6MTY3NzAsImVuZCI6MTY3NzR9LCJpb2hLM0FaU1hneEVa
 aFlhIjp7InRleHQiOiJuIE1BIHBsb3Qgb2YgYXZlcmFnZSBnZW
@@ -596,7 +596,7 @@ ZmZrUiI6eyJkaXNjdXNzaW9uSWQiOiJCYnllZFNJekFtc2hyT3
 N0Iiwic3ViIjoiZ286MTAyMjA1Nzk3Mjc2OTQxMDEwNjc3Iiwi
 dGV4dCI6IkRpZCB5b3UgZXZlciBjaGVjayBwcm9tb3RvciByZW
 dpb25zPyIsImNyZWF0ZWQiOjE1MzUzNTcwMDQ4ODF9fSwiaGlz
-dG9yeSI6WzEyMTY5MDU1NCwtNTE3MjQxMTUxLDEyMzAxMDQ2MD
-MsODIyOTM3OTUyLDEwNzEzOTY1ODcsLTEwNzA0Njc5MCwtMTgz
-Nzc4NjcxNyw3MTc3MzQyMzAsLTEyMzI5NzE0MTFdfQ==
+dG9yeSI6Wy0yMjI0MzU3ODEsLTUxNzI0MTE1MSwxMjMwMTA0Nj
+AzLDgyMjkzNzk1MiwxMDcxMzk2NTg3LC0xMDcwNDY3OTAsLTE4
+Mzc3ODY3MTcsNzE3NzM0MjMwLC0xMjMyOTcxNDExXX0=
 -->
