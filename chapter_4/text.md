@@ -85,7 +85,7 @@ To identify whether this is the case, we calculated the tAI for Arabidopsis usin
 
 In order to test whether C-rich codons, which might form PG4s on the template strand, could contribute to the lower efficiency at the start of the CDS, we grouped codons by wobble position, and compared the distribution of tAIs. Codons containing cytosine at the wobble position, which are most likely to contribute to softcoded PG4s, tended in fact to have high tAIs. This suggests that the enrichment of template strand PG4s is not merely a byproduct of low efficiency codons at the beginning of the gene.
 
-![**tRNA adaptation index of Arabidopsis Coding Regions.** **a)** Metagene profiles showing the mean tAI for the first and last 100 codons of Arabidopsis CDSs. **b)** Boxplot showing the distribution of tAIs for codons by third (or "wobble") base position. \label{tai}](figures/trna_adaptation_index.svg) 
+![**tRNA adaptation index of Arabidopsis Coding Regions.** **a)** Metagene profiles showing the mean tAI for the first and last 100 codons of Arabidopsis CDSs. **b)** Boxplot showing the distribution of tAIs for codons by third (or "wobble") base position. \label{tai}](figures/tRNA_adaptation_index.svg) 
 
 ### Protein motifs hardcode G4 forming potential into coding regions
 
@@ -348,7 +348,7 @@ A1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6IkNvdWxkIG5vdCB0
 aGUgb3Bwb3NpdGUgYXJndWVtZW50IGJlIG1hZGU6IHRoaW5ncy
 B0aGF0IGFyZSBtb3JlIGNvbW1vbiBhcmUgbGVzcyBsaWtlbHkg
 dG8gaGF2ZSBhbiBlZmZlY3QuIiwiY3JlYXRlZCI6MTUzNDM1MD
-k3ODk3OH19LCJoaXN0b3J5IjpbLTE4NzUzNTA2MzMsMTE5NjUz
+k3ODk3OH19LCJoaXN0b3J5IjpbLTEwNTc5OTI4NDEsMTE5NjUz
 Mzc5OCwyODIzNDA0NDUsLTE1NzEyNzQ0MiwxNzQyNjgwOTgzLD
 E4MDcwMjgyMjYsMTk2MzY3OTY3MiwtNDU3MzAyMjAyLDQ3MTYx
 NjYzMSwtMTEzNDgyNDg3OCwxNzA3NTg3Nzg4LC05MzkyODI4Nz
