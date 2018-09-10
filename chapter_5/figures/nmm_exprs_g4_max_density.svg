@@ -10,10 +10,10 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   height="325.46298pt"
+   height="360.48453pt"
    version="1.1"
-   viewBox="0 0 686.42389 325.46298"
-   width="686.42389pt"
+   viewBox="0 0 684.82392 360.48452"
+   width="684.82391pt"
    id="svg2"
    inkscape:version="0.91 r13725"
    sodipodi:docname="nmm_exprs_g4_max_density.svg"
@@ -41,21 +41,21 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1035"
-     inkscape:window-height="1896"
+     inkscape:window-width="1875"
+     inkscape:window-height="1051"
      id="namedview337"
      showgrid="false"
      fit-margin-top="10"
      fit-margin-left="10"
      fit-margin-right="10"
      fit-margin-bottom="10"
-     inkscape:zoom="1.3165712"
-     inkscape:cx="294.93941"
-     inkscape:cy="204.69749"
+     inkscape:zoom="0.5"
+     inkscape:cx="213.1335"
+     inkscape:cy="318.86143"
      inkscape:window-x="45"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="patch_1" />
+     inkscape:current-layer="figure_1" />
   <defs
      id="defs4"
      style="stroke-linecap:butt;stroke-linejoin:round">
@@ -68,7 +68,7 @@
   <g
      id="figure_1"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(-15.281094,-18.295)">
+     transform="translate(-16.881096,-15.924255)">
     <g
        id="patch_1"
        style="stroke-linecap:butt;stroke-linejoin:round" />
@@ -411,10 +411,10 @@
            style="stroke-linecap:butt;stroke-linejoin:round">
           <text
              style="font-style:normal;font-weight:normal;font-size:22px;font-family:Arial;text-anchor:middle;fill:#262626;stroke-linecap:butt;stroke-linejoin:round"
-             transform="matrix(0,-1,1,0,-114.19156,196.80844)"
-             x="41.308437"
-             y="155.5"
-             id="text118">NMM v DMSO log2FC</text>
+             transform="matrix(0,-1,1,0,0,0)"
+             x="-165.10004"
+             y="42.90844"
+             id="text118">Mean NMM v DMSO log2FC</text>
         </g>
       </g>
       <g
@@ -1094,6 +1094,30 @@
            inkscape:connector-curvature="0" />
       </g>
     </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.00000191px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="194.48117"
+       y="361.358"
+       id="text4346"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4348"
+         style="stroke-linecap:butt;stroke-linejoin:round"
+         x="194.48117"
+         y="361.358">Coding</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4350"
+       y="361.358"
+       x="525.68115"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.00000191px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="361.358"
+         x="525.68115"
+         style="stroke-linecap:butt;stroke-linejoin:round"
+         id="tspan4352"
+         sodipodi:role="line">Template</tspan></text>
   </g>
   <defs
      id="defs329">

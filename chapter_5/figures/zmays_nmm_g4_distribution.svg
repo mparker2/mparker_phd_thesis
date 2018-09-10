@@ -11,8 +11,8 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="183.40446mm"
-   height="262.70486mm"
-   viewBox="0 0 649.85834 930.844"
+   height="270.45605mm"
+   viewBox="0 0 649.85834 958.30885"
    id="svg4447"
    version="1.1"
    inkscape:version="0.91 r13725"
@@ -48,9 +48,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.54482422"
-     inkscape:cx="31.42463"
-     inkscape:cy="547.92272"
+     inkscape:zoom="0.44895611"
+     inkscape:cx="-51.824041"
+     inkscape:cy="618.27228"
      inkscape:document-units="px"
      inkscape:current-layer="figure_1-0"
      showgrid="false"
@@ -58,8 +58,8 @@
      fit-margin-left="5"
      fit-margin-right="5"
      fit-margin-bottom="5"
-     inkscape:window-width="1555"
-     inkscape:window-height="989"
+     inkscape:window-width="1875"
+     inkscape:window-height="1051"
      inkscape:window-x="45"
      inkscape:window-y="0"
      inkscape:window-maximized="1" />
@@ -79,7 +79,8 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-34.760171,-12.908461)">
+     transform="translate(-34.760171,-5.4435567)"
+     style="stroke-linecap:butt;stroke-linejoin:round">
     <g
        id="figure_1"
        transform="matrix(0.890286,0,0,0.890286,51.086717,24.433656)"
@@ -843,7 +844,7 @@
     </g>
     <g
        id="figure_1-1"
-       transform="matrix(0.890286,0,0,0.890286,51.086717,326.00854)"
+       transform="matrix(0.890286,0,0,0.890286,51.086717,336.00854)"
        style="stroke-linecap:butt;stroke-linejoin:round">
       <g
          id="axes_1-4"
@@ -1550,7 +1551,7 @@
        style="stroke-linecap:butt;stroke-linejoin:round">
       <g
          id="g7460"
-         transform="matrix(0.71222881,0,0,0.71222881,63.145761,-36.622738)"
+         transform="matrix(0.71222881,0,0,0.71222881,63.145761,-20.622738)"
          style="stroke-linecap:butt;stroke-linejoin:round">
         <g
            style="stroke-linecap:butt;stroke-linejoin:round"
@@ -2150,11 +2151,11 @@
       <text
          sodipodi:linespacing="125%"
          id="text7588"
-         y="-262.78903"
+         y="-254.789"
          x="63.390568"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          xml:space="preserve"><tspan
-           y="-262.78903"
+           y="-254.789"
            x="63.390568"
            style="stroke-linecap:butt;stroke-linejoin:round"
            id="tspan7590"
@@ -2163,14 +2164,122 @@
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          x="63.390568"
-         y="-22.789032"
+         y="-6.7890286"
          id="text7592"
          sodipodi:linespacing="125%"><tspan
            sodipodi:role="line"
            id="tspan7594"
            style="stroke-linecap:butt;stroke-linejoin:round"
            x="63.390568"
-           y="-22.789032">c</tspan></text>
+           y="-6.7890286">c</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="304.8793"
+         y="-504.01486"
+         id="text4577"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4579"
+           style="stroke-linecap:butt;stroke-linejoin:round"
+           x="304.8793"
+           y="-504.01486">CDS</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4581"
+         y="-259.21484"
+         x="296.20157"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="-259.21484"
+           x="296.20157"
+           style="stroke-linecap:butt;stroke-linejoin:round"
+           id="tspan4583"
+           sodipodi:role="line">5'UTR</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="299.20743"
+         y="-8.0148439"
+         id="text4585"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4587"
+           style="stroke-linecap:butt;stroke-linejoin:round"
+           x="299.20743"
+           y="-8.0148439">Intron</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="115.12428"
+         y="-492.43243"
+         id="text4589"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4591"
+           style="font-size:12px;stroke-linecap:butt;stroke-linejoin:round"
+           x="115.12428"
+           y="-492.43243">Coding</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4593"
+         y="-492.43243"
+         x="364.72424"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="-492.43243"
+           x="364.72424"
+           style="font-size:12px;stroke-linecap:butt;stroke-linejoin:round"
+           id="tspan4595"
+           sodipodi:role="line">Template</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4597"
+         y="-242.8324"
+         x="115.12428"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="-242.8324"
+           x="115.12428"
+           style="font-size:12px;stroke-linecap:butt;stroke-linejoin:round"
+           id="tspan4599"
+           sodipodi:role="line">Coding</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="364.72424"
+         y="-242.8324"
+         id="text4601"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4603"
+           style="font-size:12px;stroke-linecap:butt;stroke-linejoin:round"
+           x="364.72424"
+           y="-242.8324">Template</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="115.12428"
+         y="9.9676018"
+         id="text4605"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4607"
+           style="font-size:12px;stroke-linecap:butt;stroke-linejoin:round"
+           x="115.12428"
+           y="9.9676018">Coding</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4609"
+         y="9.9676018"
+         x="364.72424"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="9.9676018"
+           x="364.72424"
+           style="font-size:12px;stroke-linecap:butt;stroke-linejoin:round"
+           id="tspan4611"
+           sodipodi:role="line">Template</tspan></text>
     </g>
   </g>
 </svg>
