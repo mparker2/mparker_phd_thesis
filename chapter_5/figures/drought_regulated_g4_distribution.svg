@@ -86,9 +86,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.2604365"
-     inkscape:cx="363.07874"
-     inkscape:cy="172.18932"
+     inkscape:zoom="0.79060235"
+     inkscape:cx="297.68666"
+     inkscape:cy="198.916"
      inkscape:document-units="px"
      inkscape:current-layer="axes_2-9"
      showgrid="false"
@@ -96,8 +96,8 @@
      fit-margin-right="10"
      fit-margin-left="10"
      fit-margin-bottom="10"
-     inkscape:window-width="1035"
-     inkscape:window-height="1896"
+     inkscape:window-width="1875"
+     inkscape:window-height="1051"
      inkscape:window-x="45"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -110,7 +110,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1965,6 +1965,186 @@
                style="font-style:normal;font-weight:normal;font-size:20px;font-family:Arial;text-anchor:start;fill:#262626;stroke-linecap:butt;stroke-linejoin:round">Strongly DE</text>
           </g>
         </g>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65.88243103px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="318.52197"
+           y="6.1378894"
+           id="text5070"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan5072"
+             style="font-size:32.94121552px;stroke-linecap:butt;stroke-linejoin:round"
+             x="318.52197"
+             y="6.1378894">Full gene</tspan></text>
+        <text
+           sodipodi:linespacing="125%"
+           id="text5074"
+           y="9.6041059"
+           x="1095.9347"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65.88243103px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             y="9.6041059"
+             x="1095.9347"
+             style="font-size:32.94121552px;stroke-linecap:butt;stroke-linejoin:round"
+             id="tspan5076"
+             sodipodi:role="line">CDS</tspan></text>
+        <text
+           sodipodi:linespacing="125%"
+           id="text5078"
+           y="410.2168"
+           x="340.33267"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65.88243103px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             y="410.2168"
+             x="340.33267"
+             style="font-size:32.94121552px;stroke-linecap:butt;stroke-linejoin:round"
+             id="tspan5080"
+             sodipodi:role="line">5'UTR</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65.88243103px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="1084.016"
+           y="413.68304"
+           id="text5082"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan5084"
+             style="font-size:32.94121552px;stroke-linecap:butt;stroke-linejoin:round"
+             x="1084.016"
+             y="413.68304">3'UTR</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65.88243103px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="344.45837"
+           y="805.51141"
+           id="text5086"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan5088"
+             style="font-size:32.94121552px;stroke-linecap:butt;stroke-linejoin:round"
+             x="344.45837"
+             y="805.51141">Intron</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65.88243103px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="193.28558"
+           y="355.3226"
+           id="text5030"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan5032"
+             style="font-size:21.96080971px;stroke-linecap:butt;stroke-linejoin:round"
+             x="193.28558"
+             y="355.3226">Coding</tspan></text>
+        <text
+           sodipodi:linespacing="125%"
+           id="text5034"
+           y="355.3226"
+           x="509.52124"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65.88243103px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             y="355.3226"
+             x="509.52124"
+             style="font-size:21.96080971px;stroke-linecap:butt;stroke-linejoin:round"
+             id="tspan5036"
+             sodipodi:role="line">Template</tspan></text>
+        <text
+           sodipodi:linespacing="125%"
+           id="text5038"
+           y="355.3226"
+           x="896.03168"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65.88243103px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             y="355.3226"
+             x="896.03168"
+             style="font-size:21.96080971px;stroke-linecap:butt;stroke-linejoin:round"
+             id="tspan5040"
+             sodipodi:role="line">Coding</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65.88243103px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="1221.051"
+           y="355.3226"
+           id="text5042"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan5044"
+             style="font-size:21.96080971px;stroke-linecap:butt;stroke-linejoin:round"
+             x="1221.051"
+             y="355.3226">Template</tspan></text>
+        <text
+           sodipodi:linespacing="125%"
+           id="text5046"
+           y="755.00934"
+           x="184.50122"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65.88243103px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             y="755.00934"
+             x="184.50122"
+             style="font-size:21.96080971px;stroke-linecap:butt;stroke-linejoin:round"
+             id="tspan5048"
+             sodipodi:role="line">Coding</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65.88243103px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="500.73694"
+           y="755.00934"
+           id="text5050"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan5052"
+             style="font-size:21.96080971px;stroke-linecap:butt;stroke-linejoin:round"
+             x="500.73694"
+             y="755.00934">Template</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65.88243103px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="896.03168"
+           y="755.00934"
+           id="text5054"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan5056"
+             style="font-size:21.96080971px;stroke-linecap:butt;stroke-linejoin:round"
+             x="896.03168"
+             y="755.00934">Coding</tspan></text>
+        <text
+           sodipodi:linespacing="125%"
+           id="text5058"
+           y="755.00934"
+           x="1221.051"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65.88243103px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             y="755.00934"
+             x="1221.051"
+             style="font-size:21.96080971px;stroke-linecap:butt;stroke-linejoin:round"
+             id="tspan5060"
+             sodipodi:role="line">Template</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65.88243103px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="188.89339"
+           y="1150.3038"
+           id="text5062"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan5064"
+             style="font-size:21.96080971px;stroke-linecap:butt;stroke-linejoin:round"
+             x="188.89339"
+             y="1150.3038">Coding</tspan></text>
+        <text
+           sodipodi:linespacing="125%"
+           id="text5066"
+           y="1150.3038"
+           x="505.12909"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65.88243103px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             y="1150.3038"
+             x="505.12909"
+             style="font-size:21.96080971px;stroke-linecap:butt;stroke-linejoin:round"
+             id="tspan5068"
+             sodipodi:role="line">Template</tspan></text>
       </g>
     </g>
     <g

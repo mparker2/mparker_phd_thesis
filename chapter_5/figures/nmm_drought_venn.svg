@@ -61,9 +61,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.3502522"
-     inkscape:cx="294.52908"
-     inkscape:cy="345.63965"
+     inkscape:zoom="0.55632987"
+     inkscape:cx="260.9384"
+     inkscape:cy="317.19602"
      inkscape:document-units="px"
      inkscape:current-layer="figure_1-8"
      showgrid="false"
@@ -72,10 +72,11 @@
      fit-margin-right="10"
      fit-margin-bottom="10"
      inkscape:window-width="1875"
-     inkscape:window-height="1056"
+     inkscape:window-height="1051"
      inkscape:window-x="45"
      inkscape:window-y="0"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     showguides="false" />
   <metadata
      id="metadata7160">
     <rdf:RDF>
@@ -1013,6 +1014,30 @@
                inkscape:connector-curvature="0" />
           </g>
         </g>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.07200623px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="195.89809"
+           y="351.43417"
+           id="text4338"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan4340"
+             style="font-size:21.03600311px;stroke-linecap:butt;stroke-linejoin:round"
+             x="195.89809"
+             y="351.43417">Coding</tspan></text>
+        <text
+           sodipodi:linespacing="125%"
+           id="text4342"
+           y="351.43417"
+           x="524.05975"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.07200623px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             y="351.43417"
+             x="524.05975"
+             style="font-size:21.03600311px;stroke-linecap:butt;stroke-linejoin:round"
+             id="tspan4344"
+             sodipodi:role="line">Template</tspan></text>
       </g>
     </g>
     <text
