@@ -79,11 +79,7 @@ As shown in Fig \ref{metagene}c, there is a higher density of PG4s at the start 
 
 ### PG4 enrichment is not a result of selection for codons with low translational efficiency.
 
-One cause of codon bias is the relative abundances of tRNAs with different isoacceptors in the cell. Previous studies have shown that the number of tRNA genes which have anticodons able fully or partially recognise a codon, is correlated with the usage of a codon in CDSs [@DosReis2004]. The efficiency of a codon can therefore be estimated from the number of tRNA genes with different anticodons, a measure referred to as the tRNA adaptation index (tAI) [@DosReis2004]. Man & Pilpel showed that amongst orthologous genes which are expressed relatively equally at the transcript level, those with higher tAI tend to be expressed more at the protein level [@Man2007]. Furthermore, Tuller et al. have demonstrated that the local tAI varies through the CDS, with the first 50 codons exhibiting lower tAI than the main body [@Tuller2014]. The authors showed that the variation in tAI through the CDS corresponded well to the ribosome occupancy, and suggested that lower tAI in the first 50 codons could form a slow "ramp" for translation initiation [@Tuller2014]. It is possible therefore that the selection of C rich codons, which introduce PG4s at the start codon proximal end of the template strand, could be a byproduct of the selection of low effiency codons which slow initial ribosomal elongation.
-
-To identify whether this is the case, we calculated the tAI for Arabidopsis using tRNA gene counts downloaded from the genomic tRNA database (gtRNAdb) [@Chan2015]. Tuller et al. showed that the local tAI in *S. cerevisiae* is, on average, lower for the first 30-50 codons of the CDS, whilst the final 50 codons before the terminator have greater than average tAI. We performed the same analysis for Arabidopsis, and found similar effects, however average tAI was only lower for around the first 15 codons. This corresponds to around the first 45bp of CDS sequence.
-
-To further test where codon usage is most closely related to 
+One cause of codon bias is the relative abundances of tRNAs with different isoacceptors in the cell. Previous studies have shown that the number of tRNA genes which have anticodons able fully or partially recognise a codon, is correlated with the usage of a codon in CDSs [@DosReis2004]. The efficiency of a codon can therefore be estimated from the number of tRNA genes with different anticodons, a measure referred to as the tRNA adaptation index (tAI) [@DosReis2004]. Man & Pilpel showed that amongst orthologous genes which are expressed relatively equally at the transcript level, those with higher tAI tend to be expressed more at the protein level [@Man2007]. Furthermore, Tuller et al. have demonstrated that the local tAI varies through the CDS, with the first 50 codons exhibiting lower tAI than the main body [@Tuller2014]. The authors showed that the variation in tAI through the CDS corresponded well to the ribosome occupancy, and suggested that lower tAI in the first 50 codons could form a slow "ramp" for translation initiation [@Tuller2014]. It is possible therefore that the selection of C rich codons, which introduce PG4s at the start codon proximal end of the template strand, could be a byproduct of the selection of low efficiency codons which slow initial ribosomal elongation. In order to test this we calculated the tAI for 
 
 ### Protein motifs hardcode G4 forming potential into coding regions
 
@@ -201,22 +197,22 @@ OSI6eyJ0ZXh0IjoiIVsqKlJldmVyc2UgVHJhbnNsYXRpb24gU2
 ltdWxhdGlvbiBzaG93cyB0aGF0IFBHNHMgYXJlIGVucmljaGVk
 IGF0IHRoZSBTdGFydCBDb+KApiIsInN0YXJ0IjoxOTYyNSwiZW
 5kIjoxOTk5Nn0sIjZ0Ums0ak01bzdBSE1Zb0siOnsidGV4dCI6
-InRoYXQgdGhlIiwic3RhcnQiOjIyMTU5LCJlbmQiOjIyMTY3fS
+InRoYXQgdGhlIiwic3RhcnQiOjIxNTgxLCJlbmQiOjIxNTg5fS
 wiMk9iYTB5eVFOaXlpa2hKMCI6eyJ0ZXh0IjoiV2UgZm91bmQg
 dGhhdCBvbiBib3RoIHN0cmFuZHMsIHRoZSBncmVhdGVzdCBudW
 1iZXIgb2YgUEc0cyB3ZXJlIGNvbXBsZXRlbHkgaGFyZOKApiIs
-InN0YXJ0IjoyMzUzNiwiZW5kIjoyMzY5OX0sIjZlTnV3OUxQa3
+InN0YXJ0IjoyMjk1OCwiZW5kIjoyMzEyMX0sIjZlTnV3OUxQa3
 h1VXB3Q24iOnsidGV4dCI6IkZyZXF1ZW5jeSBwbG90IHNob3dp
 bmcgdGhlIHRvdGFsIG51bWJlciBvZiBHLXJ1bnMgY29udHJpYn
-V0aW5nIHRvIFBHNHMgd2hpY2ggYXLigKYiLCJzdGFydCI6MjQ2
-OTQsImVuZCI6MjUxNzR9LCJJbENIcFVXM1pjMkQ3cWVjIjp7In
+V0aW5nIHRvIFBHNHMgd2hpY2ggYXLigKYiLCJzdGFydCI6MjQx
+MTYsImVuZCI6MjQ1OTZ9LCJJbENIcFVXM1pjMkQ3cWVjIjp7In
 RleHQiOiIhWyoqTm9uLWhhcmRjb2RlZCBQRzRzIGxldmVscyBh
 cmUgZ3JlYXRlciBhdCB0aGUgc3RhcnQgY29kb24gcHJveGltYW
-wgcmVnaW9uIG9m4oCmIiwic3RhcnQiOjI2Mjg2LCJlbmQiOjI2
-NjMwfSwiRHpJdTlWRUg3OW13a2drYyI6eyJ0ZXh0IjoiRnVydG
+wgcmVnaW9uIG9m4oCmIiwic3RhcnQiOjI1NzA4LCJlbmQiOjI2
+MDUyfSwiRHpJdTlWRUg3OW13a2drYyI6eyJ0ZXh0IjoiRnVydG
 hlcm1vcmUsIHRoZSByYXRpbyBvZiB0d28gdGV0cmFkIHRvIHRo
 cmVlIHRldHJhZCBQRzRzIGluIHBsYW50IGdlbm9tZXMgaXMgbe
-KApiIsInN0YXJ0IjozMDM1NiwiZW5kIjozMDU3NX19LCJjb21t
+KApiIsInN0YXJ0IjoyOTc3OCwiZW5kIjoyOTk5N319LCJjb21t
 ZW50cyI6eyJlNmFyTDR1R3h3Uk05SnRZIjp7ImRpc2N1c3Npb2
 5JZCI6IkN2TDNINGFnSmlucVNTZm0iLCJzdWIiOiIxMDIyMDU3
 OTcyNzY5NDEwMTA2NzciLCJ0ZXh0IjoiSXMgdGhpcyBzaW1pbG
@@ -346,7 +342,7 @@ A1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6IkNvdWxkIG5vdCB0
 aGUgb3Bwb3NpdGUgYXJndWVtZW50IGJlIG1hZGU6IHRoaW5ncy
 B0aGF0IGFyZSBtb3JlIGNvbW1vbiBhcmUgbGVzcyBsaWtlbHkg
 dG8gaGF2ZSBhbiBlZmZlY3QuIiwiY3JlYXRlZCI6MTUzNDM1MD
-k3ODk3OH19LCJoaXN0b3J5IjpbMTk4NjI2MjQxNSwxMTk2NTMz
+k3ODk3OH19LCJoaXN0b3J5IjpbMTYzOTg1Njc5NCwxMTk2NTMz
 Nzk4LDI4MjM0MDQ0NSwtMTU3MTI3NDQyLDE3NDI2ODA5ODMsMT
 gwNzAyODIyNiwxOTYzNjc5NjcyLC00NTczMDIyMDIsNDcxNjE2
 NjMxLC0xMTM0ODI0ODc4LDE3MDc1ODc3ODgsLTkzOTI4Mjg3Mi
