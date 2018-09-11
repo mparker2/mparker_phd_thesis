@@ -86,11 +86,11 @@ In order to test the effect of G4 stabilisation on gene expression in Arabidopsi
 
 \newpage
 
-To support the hypothesis that NMM alters gene expression through G4 stabilisation, we correlated our results with processed data from a Berberine treatment array (Fig \ref{berberine}a) [@Nakagawa2012]. Berberine is another G4 stabilising drug, but with a very different structure and method of action (intercalation with G4s rather than hydrophobic stacking). Despite the differences in structure of the two drugs, and the very different conditions (plants were grown on Berberine for 14 days, compared with 6 hour treatment of 7 day old seedlings with NMM), the log fold changes from our data correlated well with the Berberine dataset (Pearsons R: 0.43, Spearman’s ρ: 0.44). There was a strong overlap between the genes downregulated by NMM and those downregulated by Berberine (Fig \ref{berberine}b, p=1.1e-36). These results suggest that the main effects on gene expression were through G4 interaction, with any off target effects being less significant contributors.
+To support the hypothesis that NMM alters gene expression through G4 stabilisation, we correlated our results with processed data from a Berberine treatment array (Fig \ref{berberine}a) [@Nakagawa2012]. Berberine is another G4 stabilising drug, but with a very different structure and method of action (intercalation with G4s rather than hydrophobic stacking). Despite the differences in structure of the two drugs, and the very different conditions (plants were grown on Berberine for 14 days, compared with 6 hour treatment of 7 day old seedlings with NMM), the log fold changes from our data correlated well with the Berberine dataset (Pearsons R: 0.43, Spearman’s ρ: 0.44). There was a strong overlap between the genes downregulated by NMM and those downregulated by Berberine (Fig \ref{berberine}b, p=1.1e-36). Furthermore, genes downregulated by Berberine were also found to contain more exonic PG4s than  These results suggest that the main effects on gene expression were through G4 interaction, with any off target effects being less significant contributors.
 
 \newpage
 
-![**Comparison of gene expression during NMM treatment with expression during Berberine treatment.** **a)** Scatter plot with regression line showing the correlation in expression change for NMM vs DMSO and Berberine vs Control. Processed Berberine data was taken from supplementary information of Nakagawa et al. 2012, however only differentially regulated genes were reported. **b)** Venn diagram reporting the overlap of genes downregulated by NMM with those downregulated by Berberine. **c)** Bar plot showing the average exonic PG4 densities of NMM and Berberine downregulated genesets, on the coding and template strands, respectively. Both  genesets show an greater exonic G4 density on the template strand than genes not regulated by either drug, however genes which are regulated by both drugs had the greatest average exonic PG4. Bar colours match set colours from Fig 3b. Errorbars are 68% confidence intervals for mean generated using 1000 bootstrapped samples. \label{berberine}](figures/nmm_berberine.svg)
+![**Comparison of gene expression during NMM treatment with expression during Berberine treatment.** **a)** Scatter plot with regression line showing the correlation in expression change for NMM vs DMSO and Berberine vs Control. Processed Berberine data was taken from supplementary information of Nakagawa et al. 2012, however only differentially regulated genes were reported. **b)** Venn diagram reporting the overlap of genes downregulated by NMM with those downregulated by Berberine. **c)** Bar plot showing the average exonic PG4 densities of NMM and Berberine downregulated genesets, on the coding and template strands, respectively. Bar colours match set colours from Fig 3b. Errorbars are 68% confidence intervals for mean generated using 1000 bootstrapped samples. \label{berberine}](figures/nmm_berberine.svg)
 
 \newpage
 
@@ -226,60 +226,60 @@ LCJzdGFydCI6MTgzMDMsImVuZCI6MTg1NjV9LCIxTGJOcENEdn
 ZueGZ2TTNQIjp7InRleHQiOiJCb3RoICBnZW5lc2V0cyBzaG93
 IGFuIGdyZWF0ZXIgZXhvbmljIEc0IGRlbnNpdHkgb24gdGhlIH
 RlbXBsYXRlIHN0cmFuZCB0aGFuIGdl4oCmIiwic3RhcnQiOjIw
-Nzk4LCJlbmQiOjIwOTk1fSwiekNXSVdXM3RGaGNrb0QxdyI6ey
+ODk0LCJlbmQiOjIwODk0fSwiekNXSVdXM3RGaGNrb0QxdyI6ey
 J0ZXh0IjoiY29kaW5nIGFuZCB0ZW1wbGF0ZSBzdHJhbmRzIiwi
-c3RhcnQiOjIwNzU1LCJlbmQiOjIwNzgyfSwieGpNbFFISkdsMl
-dHUUtRSCI6eyJ0ZXh0Ijoic3RyaWtpbmciLCJzdGFydCI6MjE3
-NTEsImVuZCI6MjE3NTF9LCJnYVJGVU5TZmJvTVllTTg1Ijp7In
+c3RhcnQiOjIwODUxLCJlbmQiOjIwODc4fSwieGpNbFFISkdsMl
+dHUUtRSCI6eyJ0ZXh0Ijoic3RyaWtpbmciLCJzdGFydCI6MjE2
+NDksImVuZCI6MjE2NDl9LCJnYVJGVU5TZmJvTVllTTg1Ijp7In
 RleHQiOiIqRGlzdHJpYnV0aW9uIG9mIFBHNHMgaW4gZ2VuZXMg
 ZGlmZmVyZW50aWFsbHkgcmVndWxhdGVkIGJ5IE5NTS4qKiBCYX
-IgcGxvdHMgc2hv4oCmIiwic3RhcnQiOjIzMDkxLCJlbmQiOjI0
-MTAyfSwiSXV2Qno0ZkF4Vk13MmU4dyI6eyJ0ZXh0IjoiY29tcG
+IgcGxvdHMgc2hv4oCmIiwic3RhcnQiOjIyOTg5LCJlbmQiOjI0
+MDAwfSwiSXV2Qno0ZkF4Vk13MmU4dyI6eyJ0ZXh0IjoiY29tcG
 FyZWQgdG8gcGVybXV0ZWQgcHJvZmlsZXMgYWNyb3NzIGFsbCBn
-ZW5lcy4iLCJzdGFydCI6MjUyNzcsImVuZCI6MjUzMjR9LCI2ck
+ZW5lcy4iLCJzdGFydCI6MjUxNzUsImVuZCI6MjUyMjJ9LCI2ck
 FQeFJhRTFjQmNuVExvIjp7InRleHQiOiJwcm9wZWxsZXItbGlr
-ZSBwYXJhbGxlbCBHNHMiLCJzdGFydCI6MjU3MTksImVuZCI6Mj
-U3NDZ9LCJROWtHa3l3Z2h2em13TUhEIjp7InRleHQiOiJtYXkg
+ZSBwYXJhbGxlbCBHNHMiLCJzdGFydCI6MjU2MTcsImVuZCI6Mj
+U2NDR9LCJROWtHa3l3Z2h2em13TUhEIjp7InRleHQiOiJtYXkg
 YmUgc3VmZmljaWVudCB0byBjYXVzZSBkb3ducmVndWxhdGlvbi
 BvZiBhbiBvdGhlcndpc2UgRzQgZnJlZSBnZW5lIGR1cmluZyBO
-4oCmIiwic3RhcnQiOjI3NTY4LCJlbmQiOjI3NjYwfSwiOFF2bU
+4oCmIiwic3RhcnQiOjI3NDY2LCJlbmQiOjI3NTU4fSwiOFF2bU
 RQeDJMWkxFakdCTiI6eyJ0ZXh0IjoiVGhpcyBzdWdnZXN0cyB0
 aGF0IGNsdXN0ZXJzIG9mIEc0cyBkbyBoYXZlIGEgc3Ryb25nZX
 IgZWZmZWN0IG9uIGdlbmUgZXhwcmVzc2lvIiwic3RhcnQiOjI3
-NDQzLCJlbmQiOjI3NTIxfSwicGxESDFuSWFsTHdvejI4cSI6ey
-J0ZXh0IjoibWVhbiIsInN0YXJ0IjoyNzc0OCwiZW5kIjoyNzc1
-Mn0sIjVieE5teUhmdjVORVJiZXciOnsidGV4dCI6IkxlZnQgYW
+MzQxLCJlbmQiOjI3NDE5fSwicGxESDFuSWFsTHdvejI4cSI6ey
+J0ZXh0IjoibWVhbiIsInN0YXJ0IjoyNzY0NiwiZW5kIjoyNzY1
+MH0sIjVieE5teUhmdjVORVJiZXciOnsidGV4dCI6IkxlZnQgYW
 5kIHJpZ2h0IHBhbmVscyBkZXBpY3QgY29kaW5nIGFuZCB0ZW1w
-bGF0ZSBzdHJhbmRzIiwic3RhcnQiOjI3OTkwLCJlbmQiOjI4MD
-Q2fSwiNVd4T0dxVnc5NkpoRGtFTSI6eyJ0ZXh0IjoiYnkgTk1N
-IHN0YWJpbGlzZWQgRzRzIGFwcGVhcnMiLCJzdGFydCI6MjgzMT
-ksImVuZCI6MjgzNDh9LCJvV1o5MWY4c0JvMkxvVjNDIjp7InRl
+bGF0ZSBzdHJhbmRzIiwic3RhcnQiOjI3ODg4LCJlbmQiOjI3OT
+Q0fSwiNVd4T0dxVnc5NkpoRGtFTSI6eyJ0ZXh0IjoiYnkgTk1N
+IHN0YWJpbGlzZWQgRzRzIGFwcGVhcnMiLCJzdGFydCI6MjgyMT
+csImVuZCI6MjgyNDZ9LCJvV1o5MWY4c0JvMkxvVjNDIjp7InRl
 eHQiOiJUaGlzIHdhcyBzdXJwcmlzaW5nIGFzIGl0IGlzIGluIG
 Rpc2FncmVlbWVudCB3aXRoIFBvbCBJSSBvY2N1cGFuY3kgcHJv
-ZmlsZXMgaW7igKYiLCJzdGFydCI6MjkzNzYsImVuZCI6Mjk1NT
-l9LCI0Z21IQ0h0alF2SXV0Y1h5Ijp7InRleHQiOiJ3YXMgZ3Jl
+ZmlsZXMgaW7igKYiLCJzdGFydCI6MjkyNzQsImVuZCI6Mjk0NT
+d9LCI0Z21IQ0h0alF2SXV0Y1h5Ijp7InRleHQiOiJ3YXMgZ3Jl
 YXRlciBQb2wgSUkgb2NjdXBhbmN5IGF0IHRoZSBUU1MgYW5kIG
 luIHRoZSBUU1MgcHJveGltYWwgcGFydCBvZiB0aGUgZ2Vu4oCm
-Iiwic3RhcnQiOjI5ODU4LCJlbmQiOjI5OTQzfSwiT1A3b3RFdl
+Iiwic3RhcnQiOjI5NzU2LCJlbmQiOjI5ODQxfSwiT1A3b3RFdl
 BZZnk1M0tDRyI6eyJ0ZXh0IjoibGFyZ2VzdCIsInN0YXJ0Ijoz
-MTgyMSwiZW5kIjozMTgyOH0sIm9uVWhpZExhbjdEUW4wZEsiOn
-sidGV4dCI6ImRhdGEgbm90IHNob3duIiwic3RhcnQiOjMxOTU0
-LCJlbmQiOjMxOTY4fSwiVlRSQjJVVVlpbEpwZTN2ViI6eyJ0ZX
-h0IjoiMDA5Iiwic3RhcnQiOjMyNjY5LCJlbmQiOjMyNjcyfSwi
+MTcxOSwiZW5kIjozMTcyNn0sIm9uVWhpZExhbjdEUW4wZEsiOn
+sidGV4dCI6ImRhdGEgbm90IHNob3duIiwic3RhcnQiOjMxODUy
+LCJlbmQiOjMxODY2fSwiVlRSQjJVVVlpbEpwZTN2ViI6eyJ0ZX
+h0IjoiMDA5Iiwic3RhcnQiOjMyNTY3LCJlbmQiOjMyNTcwfSwi
 U3k3dUxjdWtuNmxRYVZCdiI6eyJ0ZXh0IjoicHJlc2VudCBjb2
-RpbmcgYW5kIHRlbXBsYXRlIHN0cmFuZCIsInN0YXJ0IjozNDAw
-NywiZW5kIjozNDA0MX0sIkU2dmsxdlNPWnZWYmJhODEiOnsidG
+RpbmcgYW5kIHRlbXBsYXRlIHN0cmFuZCIsInN0YXJ0IjozMzkw
+NSwiZW5kIjozMzkzOX0sIkU2dmsxdlNPWnZWYmJhODEiOnsidG
 V4dCI6IlNjYXR0ZXIgcGxvdCBzaG93aW5nIG1lYXN1cmVkIGV4
 cHJlc3Npb24gaW4gbG9nMiBjb3VudHMgcGVyIG1pbGxpb24gKG
-xvZ0NQTSkgZm/igKYiLCJzdGFydCI6MzM1NTEsImVuZCI6MzM3
-Njd9LCI5QWczTVU3U0lvMjRjSHV1Ijp7InRleHQiOiIwLjkpIi
-wic3RhcnQiOjMzOTAzLCJlbmQiOjMzOTA3fSwiRWdRZGJUSkFt
+xvZ0NQTSkgZm/igKYiLCJzdGFydCI6MzM0NDksImVuZCI6MzM2
+NjV9LCI5QWczTVU3U0lvMjRjSHV1Ijp7InRleHQiOiIwLjkpIi
+wic3RhcnQiOjMzODAxLCJlbmQiOjMzODA1fSwiRWdRZGJUSkFt
 T0V1b1pmVSI6eyJ0ZXh0IjoiKmQpKiogMycgVVRSLCIsInN0YX
-J0IjozOTQ5MiwiZW5kIjozOTUwNX0sIlBhZWFweVBMdEl6ZFU3
-MWoiOnsidGV4dCI6InN0cm9uZyIsInN0YXJ0Ijo0MDQ0MSwiZW
-5kIjo0MDQ0N30sImkwVnY3NnkyWEFUY3JrelEiOnsidGV4dCI6
+J0IjozOTM5MCwiZW5kIjozOTQwM30sIlBhZWFweVBMdEl6ZFU3
+MWoiOnsidGV4dCI6InN0cm9uZyIsInN0YXJ0Ijo0MDMzOSwiZW
+5kIjo0MDM0NX0sImkwVnY3NnkyWEFUY3JrelEiOnsidGV4dCI6
 IipOTU0gZXhwcmVzc2lvbiBjaGFuZ2Ugb2YgQXJhYmlkb3BzaX
-MgYW5kICpaIiwic3RhcnQiOjQzMzY3LCJlbmQiOjQzNDExfSwi
+MgYW5kICpaIiwic3RhcnQiOjQzMjY1LCJlbmQiOjQzMzA5fSwi
 UVZRQlNnZ3ZLS1Nyd2tTZiI6eyJ0ZXh0IjoiY2F1c2VkIiwic3
 RhcnQiOjMzMTMsImVuZCI6MzMxOX0sInRITnhGNllPSkVlcWFi
 ZWwiOnsidGV4dCI6IiMjIyBQbGFudCBHcm93dGggQ29uZGl0aW
@@ -341,7 +341,7 @@ I6MTczODl9LCJ1VEJoaGRSdXZQOU1FZzNHIjp7InRleHQiOiJO
 TU0gY2F1c2VzIGdsb2JhbCBjaGFuZ2UgaW4gZ2VuZSBleHByZX
 NzaW9uIiwic3RhcnQiOjE2NjgzLCJlbmQiOjE2NzI2fSwiQmJ5
 ZWRTSXpBbXNock9zdCI6eyJ0ZXh0IjoicHJvbW90ZXIgcmVnaW
-9uIiwic3RhcnQiOjQ1MTA2LCJlbmQiOjQ1MTIxfX0sImNvbW1l
+9uIiwic3RhcnQiOjQ1MDA0LCJlbmQiOjQ1MDE5fX0sImNvbW1l
 bnRzIjp7Inp3ekd2VHdUSjVPcVluc3EiOnsiZGlzY3Vzc2lvbk
 lkIjoicXpGazlPOXloRUxmMzA0eSIsInN1YiI6ImdvOjEwMjIw
 NTc5NzI3Njk0MTAxMDY3NyIsInRleHQiOiJ3aG8gaXMgXCJ3ZV
@@ -596,10 +596,10 @@ ZmZrUiI6eyJkaXNjdXNzaW9uSWQiOiJCYnllZFNJekFtc2hyT3
 N0Iiwic3ViIjoiZ286MTAyMjA1Nzk3Mjc2OTQxMDEwNjc3Iiwi
 dGV4dCI6IkRpZCB5b3UgZXZlciBjaGVjayBwcm9tb3RvciByZW
 dpb25zPyIsImNyZWF0ZWQiOjE1MzUzNTcwMDQ4ODF9fSwiaGlz
-dG9yeSI6Wy0xNjk5NDgyMzgsMTI4NDQwNzEwOSwzMzQ2NjU0OD
-AsMTEwODAzNDE1MywxMDU3OTA1MDExLC0xMDIzODIyMDU3LC02
-MDg4NTI0MTAsLTE3MDA3MDY3MTMsLTIyMjQzNTc4MSwtNTE3Mj
-QxMTUxLDEyMzAxMDQ2MDMsODIyOTM3OTUyLDEwNzEzOTY1ODcs
-LTEwNzA0Njc5MCwtMTgzNzc4NjcxNyw3MTc3MzQyMzAsLTEyMz
-I5NzE0MTFdfQ==
+dG9yeSI6Wy03NTQ1Njg4MDUsLTE2OTk0ODIzOCwxMjg0NDA3MT
+A5LDMzNDY2NTQ4MCwxMTA4MDM0MTUzLDEwNTc5MDUwMTEsLTEw
+MjM4MjIwNTcsLTYwODg1MjQxMCwtMTcwMDcwNjcxMywtMjIyND
+M1NzgxLC01MTcyNDExNTEsMTIzMDEwNDYwMyw4MjI5Mzc5NTIs
+MTA3MTM5NjU4NywtMTA3MDQ2NzkwLC0xODM3Nzg2NzE3LDcxNz
+czNDIzMCwtMTIzMjk3MTQxMV19
 -->
