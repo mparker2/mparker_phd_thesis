@@ -110,7 +110,7 @@ We next investigated whether NMM regulated genes were enriched for PG4s. We firs
 
 The PG4 density of genes downregulated by both NMM and Berberine was also calculated (Fig \ref{berberine}c). We found that whilst the gene sets downregulated by either treatment were enriched in PG4s, those which were in the intersection of the two sets had the greatest average exonic PG4 density. This is further evidence that these drugs are regulating gene expression through G4 stabilisation.
 
-Previous studies have shown that NMM is highly selective towards parallel G4s [@Nicoludis2012a; @Nicoludis2012; @Tippana2014; @Kreig2015], and can induce anti-parallel G4s to switch structure [@Nicoludis2012a]. G4s with short loop lengths are more likely to form parallel structures [@Tippana2014]. In order to test if NMM was selective towards G4s with particular loop lengths, we used Self Organising Maps to cluster all predicted Arabidopsis 2 tetrad PG4s into 36 groups, based on the length of each loop 1-3, and the total loop length (Fig \ref{som}b). Each cluster contained between approximately 1000 and 8000 PG4s (Fig \ref{som}a). We then analysed the relative enrichment of each PG4 cluster on each strand, within genes which were downregulated by NMM, compared to permuted profiles across all genes. No particular PG4 cluster was strongly enriched on the coding strand of down-regulated genes (Fig \ref{som}c). One cluster, however, was strongly enriched on the template strand (Fig \ref{som}d). This cluster contained PG4s with very short loop lengths of 1-2bp and a total loop length of 5-6bp. This conformed well with our prior expectations, as G4s with short loop lengths are known to form propeller-like parallel G4s of the kind favoured by NMM [@Nicoludis2012a].
+Previous studies have shown that NMM is highly selective towards parallel G4s [@Nicoludis2012a; @Nicoludis2012; @Tippana2014; @Kreig2015], and can induce anti-parallel G4s to switch structure [@Nicoludis2012a]. G4s with short loop lengths are more likely to form parallel structures [@Tippana2014]. In order to test if NMM was selective towards G4s with particular loop lengths, we used Self Organising Maps to cluster all predicted Arabidopsis 2 tetrad PG4s into 36 groups, based on the length of each loop 1-3, and the total loop length (Fig \ref{som}b). Each cluster contained between approximately 1000 and 8000 PG4s (Fig \ref{som}a). We then analysed the relative enrichment of each PG4 cluster on each strand, within genes which were downregulated by NMM, compared to permuted profiles across all genes. No particular PG4 cluster was strongly enriched on the coding strand of down-regulated genes (Fig \ref{som}c). One cluster, however, was strongly enriched on the template strand (Fig \ref{som}d). This cluster contained PG4s with very short loop lengths of 1-2bp and a total loop length of 5-6bp. This conformed well with our prior expectations, as G4s with short loop lengths are known to form propeller-like parallel G4s of the kind favoured by NMM (Fig \ref [@Nicoludis2012a].
 
 \newpage
 
@@ -242,44 +242,44 @@ ZSBwYXJhbGxlbCBHNHMiLCJzdGFydCI6MjU3MTgsImVuZCI6Mj
 U3NDV9LCJROWtHa3l3Z2h2em13TUhEIjp7InRleHQiOiJtYXkg
 YmUgc3VmZmljaWVudCB0byBjYXVzZSBkb3ducmVndWxhdGlvbi
 BvZiBhbiBvdGhlcndpc2UgRzQgZnJlZSBnZW5lIGR1cmluZyBO
-4oCmIiwic3RhcnQiOjI3NTc4LCJlbmQiOjI3NjcwfSwiOFF2bU
+4oCmIiwic3RhcnQiOjI3NTg4LCJlbmQiOjI3NjgwfSwiOFF2bU
 RQeDJMWkxFakdCTiI6eyJ0ZXh0IjoiVGhpcyBzdWdnZXN0cyB0
 aGF0IGNsdXN0ZXJzIG9mIEc0cyBkbyBoYXZlIGEgc3Ryb25nZX
 IgZWZmZWN0IG9uIGdlbmUgZXhwcmVzc2lvIiwic3RhcnQiOjI3
-NDQyLCJlbmQiOjI3NTIwfSwicGxESDFuSWFsTHdvejI4cSI6ey
-J0ZXh0IjoibWVhbiIsInN0YXJ0IjoyNzc1OCwiZW5kIjoyNzc2
+NDUyLCJlbmQiOjI3NTMwfSwicGxESDFuSWFsTHdvejI4cSI6ey
+J0ZXh0IjoibWVhbiIsInN0YXJ0IjoyNzc2OCwiZW5kIjoyNzc3
 Mn0sIjVieE5teUhmdjVORVJiZXciOnsidGV4dCI6IkxlZnQgYW
 5kIHJpZ2h0IHBhbmVscyBkZXBpY3QgY29kaW5nIGFuZCB0ZW1w
-bGF0ZSBzdHJhbmRzIiwic3RhcnQiOjI4MDAwLCJlbmQiOjI4MD
-U2fSwiNVd4T0dxVnc5NkpoRGtFTSI6eyJ0ZXh0IjoiYnkgTk1N
-IHN0YWJpbGlzZWQgRzRzIGFwcGVhcnMiLCJzdGFydCI6MjgzMj
-ksImVuZCI6MjgzNTh9LCJvV1o5MWY4c0JvMkxvVjNDIjp7InRl
+bGF0ZSBzdHJhbmRzIiwic3RhcnQiOjI4MDEwLCJlbmQiOjI4MD
+Y2fSwiNVd4T0dxVnc5NkpoRGtFTSI6eyJ0ZXh0IjoiYnkgTk1N
+IHN0YWJpbGlzZWQgRzRzIGFwcGVhcnMiLCJzdGFydCI6MjgzMz
+ksImVuZCI6MjgzNjh9LCJvV1o5MWY4c0JvMkxvVjNDIjp7InRl
 eHQiOiJUaGlzIHdhcyBzdXJwcmlzaW5nIGFzIGl0IGlzIGluIG
 Rpc2FncmVlbWVudCB3aXRoIFBvbCBJSSBvY2N1cGFuY3kgcHJv
-ZmlsZXMgaW7igKYiLCJzdGFydCI6MjkzODYsImVuZCI6Mjk1Nj
+ZmlsZXMgaW7igKYiLCJzdGFydCI6MjkzOTYsImVuZCI6Mjk1Nz
 l9LCI0Z21IQ0h0alF2SXV0Y1h5Ijp7InRleHQiOiJ3YXMgZ3Jl
 YXRlciBQb2wgSUkgb2NjdXBhbmN5IGF0IHRoZSBUU1MgYW5kIG
 luIHRoZSBUU1MgcHJveGltYWwgcGFydCBvZiB0aGUgZ2Vu4oCm
-Iiwic3RhcnQiOjI5ODY4LCJlbmQiOjI5OTUzfSwiT1A3b3RFdl
+Iiwic3RhcnQiOjI5ODc4LCJlbmQiOjI5OTYzfSwiT1A3b3RFdl
 BZZnk1M0tDRyI6eyJ0ZXh0IjoibGFyZ2VzdCIsInN0YXJ0Ijoz
-MTgzMSwiZW5kIjozMTgzOH0sIm9uVWhpZExhbjdEUW4wZEsiOn
-sidGV4dCI6ImRhdGEgbm90IHNob3duIiwic3RhcnQiOjMxOTY0
-LCJlbmQiOjMxOTc4fSwiVlRSQjJVVVlpbEpwZTN2ViI6eyJ0ZX
-h0IjoiMDA5Iiwic3RhcnQiOjMyNjc5LCJlbmQiOjMyNjgyfSwi
+MTg0MSwiZW5kIjozMTg0OH0sIm9uVWhpZExhbjdEUW4wZEsiOn
+sidGV4dCI6ImRhdGEgbm90IHNob3duIiwic3RhcnQiOjMxOTc0
+LCJlbmQiOjMxOTg4fSwiVlRSQjJVVVlpbEpwZTN2ViI6eyJ0ZX
+h0IjoiMDA5Iiwic3RhcnQiOjMyNjg5LCJlbmQiOjMyNjkyfSwi
 U3k3dUxjdWtuNmxRYVZCdiI6eyJ0ZXh0IjoicHJlc2VudCBjb2
-RpbmcgYW5kIHRlbXBsYXRlIHN0cmFuZCIsInN0YXJ0IjozNDAx
-NywiZW5kIjozNDA1MX0sIkU2dmsxdlNPWnZWYmJhODEiOnsidG
+RpbmcgYW5kIHRlbXBsYXRlIHN0cmFuZCIsInN0YXJ0IjozNDAy
+NywiZW5kIjozNDA2MX0sIkU2dmsxdlNPWnZWYmJhODEiOnsidG
 V4dCI6IlNjYXR0ZXIgcGxvdCBzaG93aW5nIG1lYXN1cmVkIGV4
 cHJlc3Npb24gaW4gbG9nMiBjb3VudHMgcGVyIG1pbGxpb24gKG
-xvZ0NQTSkgZm/igKYiLCJzdGFydCI6MzM1NjEsImVuZCI6MzM3
-Nzd9LCI5QWczTVU3U0lvMjRjSHV1Ijp7InRleHQiOiIwLjkpIi
-wic3RhcnQiOjMzOTEzLCJlbmQiOjMzOTE3fSwiRWdRZGJUSkFt
+xvZ0NQTSkgZm/igKYiLCJzdGFydCI6MzM1NzEsImVuZCI6MzM3
+ODd9LCI5QWczTVU3U0lvMjRjSHV1Ijp7InRleHQiOiIwLjkpIi
+wic3RhcnQiOjMzOTIzLCJlbmQiOjMzOTI3fSwiRWdRZGJUSkFt
 T0V1b1pmVSI6eyJ0ZXh0IjoiKmQpKiogMycgVVRSLCIsInN0YX
-J0IjozOTUwMiwiZW5kIjozOTUxNX0sIlBhZWFweVBMdEl6ZFU3
-MWoiOnsidGV4dCI6InN0cm9uZyIsInN0YXJ0Ijo0MDQ1MSwiZW
-5kIjo0MDQ1N30sImkwVnY3NnkyWEFUY3JrelEiOnsidGV4dCI6
+J0IjozOTUxMiwiZW5kIjozOTUyNX0sIlBhZWFweVBMdEl6ZFU3
+MWoiOnsidGV4dCI6InN0cm9uZyIsInN0YXJ0Ijo0MDQ2MSwiZW
+5kIjo0MDQ2N30sImkwVnY3NnkyWEFUY3JrelEiOnsidGV4dCI6
 IipOTU0gZXhwcmVzc2lvbiBjaGFuZ2Ugb2YgQXJhYmlkb3BzaX
-MgYW5kICpaIiwic3RhcnQiOjQzMzc3LCJlbmQiOjQzNDIxfSwi
+MgYW5kICpaIiwic3RhcnQiOjQzMzg3LCJlbmQiOjQzNDMxfSwi
 UVZRQlNnZ3ZLS1Nyd2tTZiI6eyJ0ZXh0IjoiY2F1c2VkIiwic3
 RhcnQiOjMzMTMsImVuZCI6MzMxOX0sInRITnhGNllPSkVlcWFi
 ZWwiOnsidGV4dCI6IiMjIyBQbGFudCBHcm93dGggQ29uZGl0aW
@@ -292,8 +292,8 @@ Z0tiM2l6NDB3MFkiOnsidGV4dCI6Ik11cmFzaGlnZSAmIFNrb2
 9nIChNUykiLCJzdGFydCI6NDk0NCwiZW5kIjo0OTY2fSwiTVFH
 bzVRa1R4RDdrRnIyeCI6eyJ0ZXh0IjoiTVMgbGlxdWlkIG1lZG
 lhIiwic3RhcnQiOjUwODEsImVuZCI6NTA4MX0sImR0SXlNUUk2
-YWJzcGpWTHEiOnsidGV4dCI6Ik5NTSBhIiwic3RhcnQiOjUwOD
-EsImVuZCI6NTA4MX0sIklhUFRYOWJYNUdwdVFFYjciOnsidGV4
+YWJzcGpWTHEiOnsidGV4dCI6Ik5NTSBhIiwiZW5kIjo1MDgxLC
+JzdGFydCI6NTA4MX0sIklhUFRYOWJYNUdwdVFFYjciOnsidGV4
 dCI6IldoaXRlIGFuZCBLYXBlciIsInN0YXJ0Ijo1MjgxLCJlbm
 QiOjUyOTZ9LCJieVFvUGRhdUJvV1JWU3A1Ijp7InRleHQiOiJz
 dGVyaWxlIHdhdGVyIiwic3RhcnQiOjUzNTMsImVuZCI6NTM2Nn
@@ -341,7 +341,7 @@ I6MTczODl9LCJ1VEJoaGRSdXZQOU1FZzNHIjp7InRleHQiOiJO
 TU0gY2F1c2VzIGdsb2JhbCBjaGFuZ2UgaW4gZ2VuZSBleHByZX
 NzaW9uIiwic3RhcnQiOjE2NjgzLCJlbmQiOjE2NzI2fSwiQmJ5
 ZWRTSXpBbXNock9zdCI6eyJ0ZXh0IjoicHJvbW90ZXIgcmVnaW
-9uIiwic3RhcnQiOjQ1MTE2LCJlbmQiOjQ1MTMxfX0sImNvbW1l
+9uIiwic3RhcnQiOjQ1MTI2LCJlbmQiOjQ1MTQxfX0sImNvbW1l
 bnRzIjp7Inp3ekd2VHdUSjVPcVluc3EiOnsiZGlzY3Vzc2lvbk
 lkIjoicXpGazlPOXloRUxmMzA0eSIsInN1YiI6ImdvOjEwMjIw
 NTc5NzI3Njk0MTAxMDY3NyIsInRleHQiOiJ3aG8gaXMgXCJ3ZV
@@ -596,11 +596,11 @@ ZmZrUiI6eyJkaXNjdXNzaW9uSWQiOiJCYnllZFNJekFtc2hyT3
 N0Iiwic3ViIjoiZ286MTAyMjA1Nzk3Mjc2OTQxMDEwNjc3Iiwi
 dGV4dCI6IkRpZCB5b3UgZXZlciBjaGVjayBwcm9tb3RvciByZW
 dpb25zPyIsImNyZWF0ZWQiOjE1MzUzNTcwMDQ4ODF9fSwiaGlz
-dG9yeSI6Wy04NjgwMzUwNTksLTExMTExMTIwOTAsMTAzMzYxNT
-M2NCwtMTY5OTQ4MjM4LDEyODQ0MDcxMDksMzM0NjY1NDgwLDEx
-MDgwMzQxNTMsMTA1NzkwNTAxMSwtMTAyMzgyMjA1NywtNjA4OD
-UyNDEwLC0xNzAwNzA2NzEzLC0yMjI0MzU3ODEsLTUxNzI0MTE1
-MSwxMjMwMTA0NjAzLDgyMjkzNzk1MiwxMDcxMzk2NTg3LC0xMD
-cwNDY3OTAsLTE4Mzc3ODY3MTcsNzE3NzM0MjMwLC0xMjMyOTcx
-NDExXX0=
+dG9yeSI6Wzk0MzMzNjQ3MiwtODY4MDM1MDU5LC0xMTExMTEyMD
+kwLDEwMzM2MTUzNjQsLTE2OTk0ODIzOCwxMjg0NDA3MTA5LDMz
+NDY2NTQ4MCwxMTA4MDM0MTUzLDEwNTc5MDUwMTEsLTEwMjM4Mj
+IwNTcsLTYwODg1MjQxMCwtMTcwMDcwNjcxMywtMjIyNDM1Nzgx
+LC01MTcyNDExNTEsMTIzMDEwNDYwMyw4MjI5Mzc5NTIsMTA3MT
+M5NjU4NywtMTA3MDQ2NzkwLC0xODM3Nzg2NzE3LDcxNzczNDIz
+MF19
 -->
