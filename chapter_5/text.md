@@ -37,7 +37,7 @@ Processed Berberine expression data was downloaded from the supplementary materi
 
 Drought stress microarrays were downloaded from GSE65414 [@Linster2015]. Drought stressed plants were grown on soil for 6 weeks under with 8 hour light period, with normal watering, followed by 10 days drought stress. Data was generated using the Affymetrix Gene 1.1 ST Array.
 
-Raw drought stress microarray data was processed in R using `oligo` version 1.42.0 and `limma` [@Carvalho2010; @Ritchie2015]. CEL files were read into R using `oligo` and quantile normalised & median polished using Robust Multi-chip averaging. Linear modelling was then performed using `limma`, and p values were adjusted for multiple testing using Benjamini Hochberg correction. Strongly differentially expressed genes were produced using an absolute log2 fold change threshold of 1 and a FDR of 0.05, and moderately differentially expressed genes were produced using an absolute log2 fold change threshold of 0.5 and a FDR of 0.05. Annotation of microarray data was conducted using the `oligo` `getNetAffx` function and Ensembl annotations were extracted.
+Raw drought stress microarray data was processed in R using `oligo` and `limma` version 3.34.6 [@Carvalho2010; @Ritchie2015]. CEL files were read into R using `oligo` and quantile normalised & median polished using Robust Multi-chip averaging. Linear modelling was then performed using `limma`, and p values were adjusted for multiple testing using Benjamini Hochberg correction. Strongly differentially expressed genes were produced using an absolute log2 fold change threshold of 1 and a FDR of 0.05, and moderately differentially expressed genes were produced using an absolute log2 fold change threshold of 0.5 and a FDR of 0.05. Annotation of microarray data was conducted using the `oligo` `getNetAffx` function and Ensembl annotations were extracted.
 
 ### Genome and Annotations used
 
@@ -596,9 +596,9 @@ ZmZrUiI6eyJkaXNjdXNzaW9uSWQiOiJCYnllZFNJekFtc2hyT3
 N0Iiwic3ViIjoiZ286MTAyMjA1Nzk3Mjc2OTQxMDEwNjc3Iiwi
 dGV4dCI6IkRpZCB5b3UgZXZlciBjaGVjayBwcm9tb3RvciByZW
 dpb25zPyIsImNyZWF0ZWQiOjE1MzUzNTcwMDQ4ODF9fSwiaGlz
-dG9yeSI6Wzc2NTI0MTU2NCwxMTA4MDM0MTUzLDEwNTc5MDUwMT
-EsLTEwMjM4MjIwNTcsLTYwODg1MjQxMCwtMTcwMDcwNjcxMywt
-MjIyNDM1NzgxLC01MTcyNDExNTEsMTIzMDEwNDYwMyw4MjI5Mz
-c5NTIsMTA3MTM5NjU4NywtMTA3MDQ2NzkwLC0xODM3Nzg2NzE3
-LDcxNzczNDIzMCwtMTIzMjk3MTQxMV19
+dG9yeSI6Wy00MDkyNjE2MDUsMTEwODAzNDE1MywxMDU3OTA1MD
+ExLC0xMDIzODIyMDU3LC02MDg4NTI0MTAsLTE3MDA3MDY3MTMs
+LTIyMjQzNTc4MSwtNTE3MjQxMTUxLDEyMzAxMDQ2MDMsODIyOT
+M3OTUyLDEwNzEzOTY1ODcsLTEwNzA0Njc5MCwtMTgzNzc4Njcx
+Nyw3MTc3MzQyMzAsLTEyMzI5NzE0MTFdfQ==
 -->
