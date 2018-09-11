@@ -229,7 +229,7 @@ We hypothesise that G4s cause the exitronic splicing of Extensin genes, by slowi
 
 In order to perform junction level differential splicing analysis, we identified all spliced reads with the correct first-in-pair strand orientation overlapping each gene. Only splice junctions with at least 20 supporting reads total across the 6 samples were kept for analysis. Splice junctions were categorised into five types based on how they related to the flattened reference annotation in Araport11: constitutive, alternative, retained intron/exitronic, exon skipping, or other. See Fig \ref{diff_junc}a legend for an explanation of these different categories.
 
-We performed differential junction usage identification using `limma-voom` and `limma-diffSplice` [@Ritchie2015; @Law2014]. Unstrigent thresholds were used due to the low read counts associated with splice junctions. Using an FDR threshold of 0.2 and an absolute fold change threshold of 0.5, we identified 338 junctions in 302 genes with increased use during NMM treatment, and 189 junctions in 162 genes with decreased usage. 27 genes contained junctions which showed both increased and decreased usages, i.e. some type of switching. None of the junction isoforms identified in the Extensin genes were significantly differentially utilised, however.
+We performed differential junction usage identification using `limma-voom` and `limma-diffSplice` [@Ritchie2015; @Law2014]. Unstrigent thresholds were used due to the low read counts associated with splice junctions, to capture as many true positives as possible. Using an FDR threshold of 0.2 and an absolute fold change threshold of 0.5, we identified 338 junctions in 302 genes with increased use during NMM treatment, and 189 junctions in 162 genes with decreased usage. 27 genes contained junctions which showed both increased and decreased usages, i.e. some type of switching. None of the junction isoforms identified in the Extensin genes were significantly differentially utilised, however.
 
 \newpage
 
@@ -386,15 +386,15 @@ wiZW5kIjozOTA3Nn0sImpMNHVtQXVnYllHc1FIcHEiOnsidGV4
 dCI6ImcgYGxpbW1hLXZvb21gIGFuZCBgbGltbWEtZGlmZlNwbG
 ljZWAiLCJzdGFydCI6Mzk0MjcsImVuZCI6Mzk0NjR9LCJGcEI4
 Z2VLNERaTTJVT3p4Ijp7InRleHQiOiJhbiBGRFIgdGhyZXNob2
-xkIG9mIDAuMiIsInN0YXJ0IjozOTU5MCwiZW5kIjozOTYxM30s
+xkIG9mIDAuMiIsInN0YXJ0IjozOTYzNywiZW5kIjozOTY2MH0s
 InpuWFRnTFZST01qcjlqenYiOnsidGV4dCI6InBsaWNlZCBtYX
 BwaW5nIHRvIHRoZXNlIGdlbmVzIGlzIGEgc3lzdGVtYXRpYyBt
 YXBwaW5nIGVycm9yIHRoYXQgb2NjdXJzIGF0IGFwcHLigKYiLC
-JzdGFydCI6NDIwMzEsImVuZCI6NDIxNzJ9LCJmOWhGWmhEaFph
+JzdGFydCI6NDIwNzgsImVuZCI6NDIyMTl9LCJmOWhGWmhEaFph
 d3YzVnlJIjp7InRleHQiOiJEZXNwaXRlIHRoZXNlIG5lZ2F0aX
 ZlIHJlc3VsdHMsIHdlIHdlcmUgYWJsZSB0byBpZGVudGlmeSBQ
 Q1IgcHJvZHVjdHMgZnJvbSBjRE5B4oCmIiwic3RhcnQiOjQ3OT
-IzLCJlbmQiOjQ4MDYxfX0sImNvbW1lbnRzIjp7IkRxd2NWemU2
+cwLCJlbmQiOjQ4MTA4fX0sImNvbW1lbnRzIjp7IkRxd2NWemU2
 T2FzVzhNUVciOnsiZGlzY3Vzc2lvbklkIjoicnZJblF5VTRZUW
 5YOVd4OSIsInN1YiI6ImdvOjEwMjIwNTc5NzI3Njk0MTAxMDY3
 NyIsInRleHQiOiJlbnJpY2hlZCBhdCA/IiwiY3JlYXRlZCI6MT
@@ -618,6 +618,6 @@ Vzc2lvbklkIjoiZjloRlpoRGhaYXd2M1Z5SSIsInN1YiI6Imdv
 OjEwMjIwNTc5NzI3Njk0MTAxMDY3NyIsInRleHQiOiJJcyB0aG
 VyZSBhIGNoYW5nZSBpbiB0aGUgZGlzdHJpYnV0aW9uIG9mIFBD
 UiBiYW5kcyArTk1NPyIsImNyZWF0ZWQiOjE1MzY2NzQyNjQ0OD
-J9fSwiaGlzdG9yeSI6Wy0yNTM0NDAwNjQsNDQ3MTI3NDE5LC0x
-NTA1NzYwMDA4LC0xMjAzODQ0OTddfQ==
+J9fSwiaGlzdG9yeSI6Wy0yMTIwNDI3ODIwLDQ0NzEyNzQxOSwt
+MTUwNTc2MDAwOCwtMTIwMzg0NDk3XX0=
 -->
