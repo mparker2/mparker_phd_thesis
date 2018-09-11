@@ -61,14 +61,14 @@ Venn diagrams of geneset overlaps were produced in Python using the package `mat
 
 ### Pol II ChIP-tiling array analysis
 
-RNA Polymerase II ChIP-tiling array data was downloaded from GEO Accession GSE21673 [@Chodavarapu2010]. This data was from plants grown under 24hr light on soil for 10-14 days before being harvested. The authors conducted the ChIP using Abcam ab817 Pol II antibody and the GEO entry lists the tiling arrays used as Affymetrix Arabidopsis Tiling 1.0R Array. Pol II occupancy tracks were generated from CEL files in R version  using `STARR` version 1.28.0 [@Zacher2010]. Cyclic lowess method was used for probe intensity normalisation. The enrichment ratio of PolII signal intensity over control was calculated and saved in BigWig format using `rtracklayer` version 1.32.2 [@Lawrence2009]. Metagene profiles for all genes were produced using CGAT `bam2geneprofile` [@Sims2014]. Gene profiles of merged exons (without introns) were produced using 100 bins across the gene body, with an upstream and downstream extension of 500bp at 10bp resolution (i.e. binned in 10bp intervals).
+RNA Polymerase II ChIP-tiling array data was downloaded from GEO Accession GSE21673 [@Chodavarapu2010]. This data was from plants grown under 24hr light on soil for 10-14 days before being harvested. The authors conducted the ChIP using Abcam ab817 Pol II antibody and the GEO entry lists the tiling arrays used as Affymetrix Arabidopsis Tiling 1.0R Array. Pol II occupancy tracks were generated from CEL files in R version 3.3.2 using `STARR` version 1.28.0 [@Zacher2010]. Cyclic lowess method was used for probe intensity normalisation. The enrichment ratio of PolII signal intensity over control was calculated and saved in BigWig format using `rtracklayer` version 1.32.2 [@Lawrence2009]. Metagene profiles for all genes were produced using CGAT `bam2geneprofile` [@Sims2014]. Gene profiles of merged exons (without introns) were produced using 100 bins across the gene body, with an upstream and downstream extension of 500bp at 10bp resolution (i.e. binned in 10bp intervals).
 
 To compared Pol II occupancy of G4 containing genes with non-G4 containing genes, genesets with max G4seeqer scores greater than 0.95 and less than 0.05, or maximal PG4 density greater than 2 or equal to zero were used. Metagene profile matrices were read into Python using `pandas` and averaged profiles for each geneset were generated using `seaborn` bootstrapping to estimate central tendency and confidence intervals [@Mckinney2011; @Waskom2014]. Bootstrapped profiles were smoothed using a moving average of 20. 1000 iterations were used for all bootstraps. Profiles were normalised so that the absolute area under the curve was equal to one.
 
 ### GRO/RNA seq analysis
 
 Global Run On (GRO) and RNA sequencing data for 6-d-old Arabidopsis seedlings, grown at 22 °C on half Linsmaier and
-Skoog (LS) medium in constant light, was downloaded from the European Nucleotide Archive (ENA), GEO accession GSE83108 [@Hetzel2016]. Quality control analyses were performed using `FastQC` version 0.11.3 and `fastq-screen` version 0.5.1 [@Andrews2010; @Wingett2011]. Mapping to the TAIR10 genome with splice junction annotations from Araport11 [@Initiative2000; @Cheng2017] was conducted using `STAR` version 2.4.2a [@Dobin2013] with default parameters, and generated BAM files were sorted using `samtools` version 1.4.1 [@Li2009]. Exonic read counts per gene were then counted using `featureCounts` version 1.6.1 [@Liao2013]. Read counts were normalised for library depth in R [@RCoreTeam2013] using `DESeq2` version 1.18.1 [@Love2014] and log2 transformed to get log counts per million (logCPM). The ratio of GROseq to RNAseq reads was calculated by subtracting the average RNAseq logCPM from the average GROseq logCPM. Scatter plots of RNAseq logCPM vs GROseq logCPM were generated in Python using `seaborn` [@Waskom2014].
+Skoog (LS) medium in constant light, was downloaded from the European Nucleotide Archive (ENA), GEO accession GSE83108 [@Hetzel2016]. Quality control analyses were performed using `FastQC` version 0.11.3 and `fastq-screen` version 0.5.1 [@Andrews2010; @Wingett2011]. Mapping to the TAIR10 genome with splice junction annotations from Araport11 [@Initiative2000; @Cheng2017] was conducted using `STAR` version 2.4.2a [@Dobin2013] with default parameters, and generated BAM files were sorted using `samtools` version 1.4.1 [@Li2009]. Exonic read counts per gene were then counted using `featureCounts` version 1.6.1 [@Liao2013]. Read counts were normalised for library depth in R version 3.4.1 [@RCoreTeam2013] using `DESeq2` version 1.18.1 [@Love2014] and log2 transformed to get log counts per million (logCPM). The ratio of GROseq to RNAseq reads was calculated by subtracting the average RNAseq logCPM from the average GROseq logCPM. Scatter plots of RNAseq logCPM vs GROseq logCPM were generated in Python using `seaborn` [@Waskom2014].
 
 To contrast GRO/RNA seq ratios of G4 containing genes with non-G4 containing genes, genesets with max G4seeqer scores greater than 0.95 and less than 0.05, or maximal PG4 density greater than 2 or equal to zero were used. Overlayed histograms and kernel density estimate plots of GRO/RNA seq ratio for these genesets were generated using `seaborn` [@Waskom2014]. Statistical hypothesis testing was conducted using Welch's unpaired T-test.
 
@@ -209,77 +209,77 @@ Previous studies of PG4 localisation in Arabidopsis have highlighted a greater n
 \newpage
 <!--stackedit_data:
 eyJkaXNjdXNzaW9ucyI6eyJxekZrOU85eWhFTGYzMDR5Ijp7In
-RleHQiOiJ3ZSIsInN0YXJ0IjoxNjUxNSwiZW5kIjoxNjUxNX0s
+RleHQiOiJ3ZSIsInN0YXJ0IjoxNjUzNCwiZW5kIjoxNjUzNH0s
 IjVzWEhYN3V3MzZPTmU5aTciOnsidGV4dCI6IlBQTFIiLCJzdG
-FydCI6MTY4OTcsImVuZCI6MTY5MDF9LCJpb2hLM0FaU1hneEVa
+FydCI6MTY5MTYsImVuZCI6MTY5MjB9LCJpb2hLM0FaU1hneEVa
 aFlhIjp7InRleHQiOiJuIE1BIHBsb3Qgb2YgYXZlcmFnZSBnZW
 5lIGV4cHJlc3Npb24gdnMgbG9nIGZvbGQgY2hhbmdlLCB3aXRo
-IGxvd2VzcyBjdXJ2ZSBmaXR04oCmIiwic3RhcnQiOjE3MjA4LC
-JlbmQiOjE3NDE5fSwiSWt5c2VaWmw1NlFnWHRPdiI6eyJ0ZXh0
+IGxvd2VzcyBjdXJ2ZSBmaXR04oCmIiwic3RhcnQiOjE3MjI3LC
+JlbmQiOjE3NDM4fSwiSWt5c2VaWmw1NlFnWHRPdiI6eyJ0ZXh0
 IjoiVGhpcyBnbG9iYWwgcGF0dGVybiwgd2hpY2ggdmlvbGF0ZX
 Mgc29tZSBvZiB0aGUgYXNzdW1wdGlvbnMgdGhhdCBhcmUgdXN1
-YWxseSB1c+KApiIsInN0YXJ0IjoxNzcxMywiZW5kIjoxNzkyNn
+YWxseSB1c+KApiIsInN0YXJ0IjoxNzczMiwiZW5kIjoxNzk0NX
 0sInNyMlJ4ZHphTDFRa1Y2Sm0iOnsidGV4dCI6Ik1BIHBsb3Qg
 c2hvd2luZyByZWxhdGlvbnNoaXAgYmV0d2VlbiBhdmVyYWdlIG
 dlbmUgZXhwcmVzc2lvbiBhbmQgTG9nMiBmb2xkIGNoYW7igKYi
-LCJzdGFydCI6MTc5OTIsImVuZCI6MTgyNTR9LCIxTGJOcENEdn
+LCJzdGFydCI6MTgwMTEsImVuZCI6MTgyNzN9LCIxTGJOcENEdn
 ZueGZ2TTNQIjp7InRleHQiOiJCb3RoICBnZW5lc2V0cyBzaG93
 IGFuIGdyZWF0ZXIgZXhvbmljIEc0IGRlbnNpdHkgb24gdGhlIH
 RlbXBsYXRlIHN0cmFuZCB0aGFuIGdl4oCmIiwic3RhcnQiOjIw
-NDg3LCJlbmQiOjIwNjg0fSwiekNXSVdXM3RGaGNrb0QxdyI6ey
+NTA2LCJlbmQiOjIwNzAzfSwiekNXSVdXM3RGaGNrb0QxdyI6ey
 J0ZXh0IjoiY29kaW5nIGFuZCB0ZW1wbGF0ZSBzdHJhbmRzIiwi
-c3RhcnQiOjIwNDQ0LCJlbmQiOjIwNDcxfSwieGpNbFFISkdsMl
+c3RhcnQiOjIwNDYzLCJlbmQiOjIwNDkwfSwieGpNbFFISkdsMl
 dHUUtRSCI6eyJ0ZXh0Ijoic3RyaWtpbmciLCJzdGFydCI6MjE0
-NDAsImVuZCI6MjE0NDB9LCJnYVJGVU5TZmJvTVllTTg1Ijp7In
+NTksImVuZCI6MjE0NTl9LCJnYVJGVU5TZmJvTVllTTg1Ijp7In
 RleHQiOiIqRGlzdHJpYnV0aW9uIG9mIFBHNHMgaW4gZ2VuZXMg
 ZGlmZmVyZW50aWFsbHkgcmVndWxhdGVkIGJ5IE5NTS4qKiBCYX
-IgcGxvdHMgc2hv4oCmIiwic3RhcnQiOjIyNzgwLCJlbmQiOjIz
-NzkxfSwiSXV2Qno0ZkF4Vk13MmU4dyI6eyJ0ZXh0IjoiY29tcG
+IgcGxvdHMgc2hv4oCmIiwic3RhcnQiOjIyNzk5LCJlbmQiOjIz
+ODEwfSwiSXV2Qno0ZkF4Vk13MmU4dyI6eyJ0ZXh0IjoiY29tcG
 FyZWQgdG8gcGVybXV0ZWQgcHJvZmlsZXMgYWNyb3NzIGFsbCBn
-ZW5lcy4iLCJzdGFydCI6MjQ5NjYsImVuZCI6MjUwMTN9LCI2ck
+ZW5lcy4iLCJzdGFydCI6MjQ5ODUsImVuZCI6MjUwMzJ9LCI2ck
 FQeFJhRTFjQmNuVExvIjp7InRleHQiOiJwcm9wZWxsZXItbGlr
-ZSBwYXJhbGxlbCBHNHMiLCJzdGFydCI6MjU0MDgsImVuZCI6Mj
-U0MzV9LCJROWtHa3l3Z2h2em13TUhEIjp7InRleHQiOiJtYXkg
+ZSBwYXJhbGxlbCBHNHMiLCJzdGFydCI6MjU0MjcsImVuZCI6Mj
+U0NTR9LCJROWtHa3l3Z2h2em13TUhEIjp7InRleHQiOiJtYXkg
 YmUgc3VmZmljaWVudCB0byBjYXVzZSBkb3ducmVndWxhdGlvbi
 BvZiBhbiBvdGhlcndpc2UgRzQgZnJlZSBnZW5lIGR1cmluZyBO
-4oCmIiwic3RhcnQiOjI3MjU3LCJlbmQiOjI3MzQ5fSwiOFF2bU
+4oCmIiwic3RhcnQiOjI3Mjc2LCJlbmQiOjI3MzY4fSwiOFF2bU
 RQeDJMWkxFakdCTiI6eyJ0ZXh0IjoiVGhpcyBzdWdnZXN0cyB0
 aGF0IGNsdXN0ZXJzIG9mIEc0cyBkbyBoYXZlIGEgc3Ryb25nZX
 IgZWZmZWN0IG9uIGdlbmUgZXhwcmVzc2lvIiwic3RhcnQiOjI3
-MTMyLCJlbmQiOjI3MjEwfSwicGxESDFuSWFsTHdvejI4cSI6ey
-J0ZXh0IjoibWVhbiIsInN0YXJ0IjoyNzQzNywiZW5kIjoyNzQ0
-MX0sIjVieE5teUhmdjVORVJiZXciOnsidGV4dCI6IkxlZnQgYW
+MTUxLCJlbmQiOjI3MjI5fSwicGxESDFuSWFsTHdvejI4cSI6ey
+J0ZXh0IjoibWVhbiIsInN0YXJ0IjoyNzQ1NiwiZW5kIjoyNzQ2
+MH0sIjVieE5teUhmdjVORVJiZXciOnsidGV4dCI6IkxlZnQgYW
 5kIHJpZ2h0IHBhbmVscyBkZXBpY3QgY29kaW5nIGFuZCB0ZW1w
-bGF0ZSBzdHJhbmRzIiwic3RhcnQiOjI3Njc5LCJlbmQiOjI3Nz
-M1fSwiNVd4T0dxVnc5NkpoRGtFTSI6eyJ0ZXh0IjoiYnkgTk1N
-IHN0YWJpbGlzZWQgRzRzIGFwcGVhcnMiLCJzdGFydCI6MjgwMD
-gsImVuZCI6MjgwMzd9LCJvV1o5MWY4c0JvMkxvVjNDIjp7InRl
+bGF0ZSBzdHJhbmRzIiwic3RhcnQiOjI3Njk4LCJlbmQiOjI3Nz
+U0fSwiNVd4T0dxVnc5NkpoRGtFTSI6eyJ0ZXh0IjoiYnkgTk1N
+IHN0YWJpbGlzZWQgRzRzIGFwcGVhcnMiLCJzdGFydCI6MjgwMj
+csImVuZCI6MjgwNTZ9LCJvV1o5MWY4c0JvMkxvVjNDIjp7InRl
 eHQiOiJUaGlzIHdhcyBzdXJwcmlzaW5nIGFzIGl0IGlzIGluIG
 Rpc2FncmVlbWVudCB3aXRoIFBvbCBJSSBvY2N1cGFuY3kgcHJv
-ZmlsZXMgaW7igKYiLCJzdGFydCI6MjkwNjUsImVuZCI6MjkyND
-h9LCI0Z21IQ0h0alF2SXV0Y1h5Ijp7InRleHQiOiJ3YXMgZ3Jl
+ZmlsZXMgaW7igKYiLCJzdGFydCI6MjkwODQsImVuZCI6MjkyNj
+d9LCI0Z21IQ0h0alF2SXV0Y1h5Ijp7InRleHQiOiJ3YXMgZ3Jl
 YXRlciBQb2wgSUkgb2NjdXBhbmN5IGF0IHRoZSBUU1MgYW5kIG
 luIHRoZSBUU1MgcHJveGltYWwgcGFydCBvZiB0aGUgZ2Vu4oCm
-Iiwic3RhcnQiOjI5NTQ3LCJlbmQiOjI5NjMyfSwiT1A3b3RFdl
+Iiwic3RhcnQiOjI5NTY2LCJlbmQiOjI5NjUxfSwiT1A3b3RFdl
 BZZnk1M0tDRyI6eyJ0ZXh0IjoibGFyZ2VzdCIsInN0YXJ0Ijoz
-MTUxMCwiZW5kIjozMTUxN30sIm9uVWhpZExhbjdEUW4wZEsiOn
-sidGV4dCI6ImRhdGEgbm90IHNob3duIiwic3RhcnQiOjMxNjQz
-LCJlbmQiOjMxNjU3fSwiVlRSQjJVVVlpbEpwZTN2ViI6eyJ0ZX
-h0IjoiMDA5Iiwic3RhcnQiOjMyMzU4LCJlbmQiOjMyMzYxfSwi
+MTUyOSwiZW5kIjozMTUzNn0sIm9uVWhpZExhbjdEUW4wZEsiOn
+sidGV4dCI6ImRhdGEgbm90IHNob3duIiwic3RhcnQiOjMxNjYy
+LCJlbmQiOjMxNjc2fSwiVlRSQjJVVVlpbEpwZTN2ViI6eyJ0ZX
+h0IjoiMDA5Iiwic3RhcnQiOjMyMzc3LCJlbmQiOjMyMzgwfSwi
 U3k3dUxjdWtuNmxRYVZCdiI6eyJ0ZXh0IjoicHJlc2VudCBjb2
-RpbmcgYW5kIHRlbXBsYXRlIHN0cmFuZCIsInN0YXJ0IjozMzY5
-NiwiZW5kIjozMzczMH0sIkU2dmsxdlNPWnZWYmJhODEiOnsidG
+RpbmcgYW5kIHRlbXBsYXRlIHN0cmFuZCIsInN0YXJ0IjozMzcx
+NSwiZW5kIjozMzc0OX0sIkU2dmsxdlNPWnZWYmJhODEiOnsidG
 V4dCI6IlNjYXR0ZXIgcGxvdCBzaG93aW5nIG1lYXN1cmVkIGV4
 cHJlc3Npb24gaW4gbG9nMiBjb3VudHMgcGVyIG1pbGxpb24gKG
-xvZ0NQTSkgZm/igKYiLCJzdGFydCI6MzMyNDAsImVuZCI6MzM0
-NTZ9LCI5QWczTVU3U0lvMjRjSHV1Ijp7InRleHQiOiIwLjkpIi
-wic3RhcnQiOjMzNTkyLCJlbmQiOjMzNTk2fSwiRWdRZGJUSkFt
+xvZ0NQTSkgZm/igKYiLCJzdGFydCI6MzMyNTksImVuZCI6MzM0
+NzV9LCI5QWczTVU3U0lvMjRjSHV1Ijp7InRleHQiOiIwLjkpIi
+wic3RhcnQiOjMzNjExLCJlbmQiOjMzNjE1fSwiRWdRZGJUSkFt
 T0V1b1pmVSI6eyJ0ZXh0IjoiKmQpKiogMycgVVRSLCIsInN0YX
-J0IjozOTE4MSwiZW5kIjozOTE5NH0sIlBhZWFweVBMdEl6ZFU3
-MWoiOnsidGV4dCI6InN0cm9uZyIsInN0YXJ0Ijo0MDEzMCwiZW
-5kIjo0MDEzNn0sImkwVnY3NnkyWEFUY3JrelEiOnsidGV4dCI6
+J0IjozOTIwMCwiZW5kIjozOTIxM30sIlBhZWFweVBMdEl6ZFU3
+MWoiOnsidGV4dCI6InN0cm9uZyIsInN0YXJ0Ijo0MDE0OSwiZW
+5kIjo0MDE1NX0sImkwVnY3NnkyWEFUY3JrelEiOnsidGV4dCI6
 IipOTU0gZXhwcmVzc2lvbiBjaGFuZ2Ugb2YgQXJhYmlkb3BzaX
-MgYW5kICpaIiwic3RhcnQiOjQzMDU2LCJlbmQiOjQzMTAwfSwi
+MgYW5kICpaIiwic3RhcnQiOjQzMDc1LCJlbmQiOjQzMTE5fSwi
 UVZRQlNnZ3ZLS1Nyd2tTZiI6eyJ0ZXh0IjoiY2F1c2VkIiwic3
 RhcnQiOjMzMTMsImVuZCI6MzMxOX0sInRITnhGNllPSkVlcWFi
 ZWwiOnsidGV4dCI6IiMjIyBQbGFudCBHcm93dGggQ29uZGl0aW
@@ -330,18 +330,18 @@ UG9sIElJIENoSVAtdGlsaW5nIGFycmF5IGFuYWx5c2lzIiwic3
 RhcnQiOjEzMDg1LCJlbmQiOjEzMTE4fSwiTWRxaVNRY2JsOUlq
 Y2kzNiI6eyJ0ZXh0IjoiR2xvYmFsIFJ1biBPbiAoR1JPKSBhbm
 QgUk5BIHNlcXVlbmNpbmcgZGF0YSBmcm9tIEdFTyBBY2Nlc3Np
-b24gR1NFODMxIiwic3RhcnQiOjE0Nzc0LCJlbmQiOjE0OTI3fS
+b24gR1NFODMxIiwic3RhcnQiOjE0Nzc5LCJlbmQiOjE0OTMyfS
 widmMwZ2QyUkVMZU1zSVUzbSI6eyJ0ZXh0IjoibWljcm9hcnJh
 eSBhbmFseXNpcyB1c2luZyBSTkEgZnJvbSA3IGRheSBvbGQgc2
 VlZGxpbmdzIHRyZWF0ZWQgd2l0aCBOTU0gZm9yIDYgaOKApiIs
-InN0YXJ0IjoxNjUyNywiZW5kIjoxNjYxMX0sIm44RTdMWlRmZk
+InN0YXJ0IjoxNjU0NiwiZW5kIjoxNjYzMH0sIm44RTdMWlRmZk
 RPR0VEdWoiOnsidGV4dCI6IjM4ODIgZG93bnJlZ3VsYXRlZCwg
-MTkzMCB1cHJlZ3VsYXRlZCkiLCJzdGFydCI6MTcwNTMsImVuZC
-I6MTcwOTB9LCJ1VEJoaGRSdXZQOU1FZzNHIjp7InRleHQiOiJO
+MTkzMCB1cHJlZ3VsYXRlZCkiLCJzdGFydCI6MTcwNzIsImVuZC
+I6MTcxMDl9LCJ1VEJoaGRSdXZQOU1FZzNHIjp7InRleHQiOiJO
 TU0gY2F1c2VzIGdsb2JhbCBjaGFuZ2UgaW4gZ2VuZSBleHByZX
-NzaW9uIiwic3RhcnQiOjE2Mzg0LCJlbmQiOjE2NDI3fSwiQmJ5
+NzaW9uIiwic3RhcnQiOjE2NDAzLCJlbmQiOjE2NDQ2fSwiQmJ5
 ZWRTSXpBbXNock9zdCI6eyJ0ZXh0IjoicHJvbW90ZXIgcmVnaW
-9uIiwic3RhcnQiOjQ0Nzk1LCJlbmQiOjQ0ODEwfX0sImNvbW1l
+9uIiwic3RhcnQiOjQ0ODE0LCJlbmQiOjQ0ODI5fX0sImNvbW1l
 bnRzIjp7Inp3ekd2VHdUSjVPcVluc3EiOnsiZGlzY3Vzc2lvbk
 lkIjoicXpGazlPOXloRUxmMzA0eSIsInN1YiI6ImdvOjEwMjIw
 NTc5NzI3Njk0MTAxMDY3NyIsInRleHQiOiJ3aG8gaXMgXCJ3ZV
@@ -596,7 +596,7 @@ ZmZrUiI6eyJkaXNjdXNzaW9uSWQiOiJCYnllZFNJekFtc2hyT3
 N0Iiwic3ViIjoiZ286MTAyMjA1Nzk3Mjc2OTQxMDEwNjc3Iiwi
 dGV4dCI6IkRpZCB5b3UgZXZlciBjaGVjayBwcm9tb3RvciByZW
 dpb25zPyIsImNyZWF0ZWQiOjE1MzUzNTcwMDQ4ODF9fSwiaGlz
-dG9yeSI6Wy0xNjcyNTI0MjUwLC0xMDIzODIyMDU3LC02MDg4NT
+dG9yeSI6Wy0xNDE5MDM5MDQ0LC0xMDIzODIyMDU3LC02MDg4NT
 I0MTAsLTE3MDA3MDY3MTMsLTIyMjQzNTc4MSwtNTE3MjQxMTUx
 LDEyMzAxMDQ2MDMsODIyOTM3OTUyLDEwNzEzOTY1ODcsLTEwNz
 A0Njc5MCwtMTgzNzc4NjcxNyw3MTc3MzQyMzAsLTEyMzI5NzE0
