@@ -61,7 +61,7 @@ Venn diagrams of geneset overlaps were produced in Python 3.5 using the package 
 
 ### Pol II ChIP-tiling array analysis
 
-RNA Polymerase II ChIP-tiling array data was downloaded from GEO Accession GSE21673 [@Chodavarapu2010]. This data was from plants grown under 24hr light on soil for 10-14 days before being harvested. The authors conducted the ChIP using Abcam ab817 Pol II antibody and the GEO entry lists the tiling arrays used as Affymetrix Arabidopsis Tiling 1.0R Array. Pol II occupancy tracks were generated from CEL files in R version 3.3.2 using `STARR` version 1.28.0 [@Zacher2010]. Cyclic lowess method was used for probe intensity normalisation. The enrichment ratio of PolII signal intensity over control was calculated and saved in BigWig format using `rtracklayer` version 1.32.2 [@Lawrence2009]. Metagene profiles for all genes were produced using CGAT version 0.2 `bam2geneprofile` [@Sims2014]. Gene profiles of merged exons (without introns) were produced using 100 bins across the gene body, with an upstream and downstream extension of 500bp at 10bp resolution (i.e. binned in 10bp intervals).
+RNA Polymerase II ChIP-tiling array data was downloaded from GEO Accession GSE21673 [@Chodavarapu2010]. This data was from plants grown under 24hr light on soil for 10-14 days before being harvested. The authors conducted the ChIP using Abcam ab817 Pol II antibody and the GEO entry lists the tiling arrays used as Affymetrix Arabidopsis Tiling 1.0R Array. Pol II occupancy tracks were generated from CEL files in R version 3.3.2 using `STARR` version 1.28.0 [@Zacher2010]. Cyclic lowess method was used for probe intensity normalisation. The enrichment ratio of PolII signal intensity over control was calculated and saved in BigWig format using `rtracklayer` version 1.32.2 [@Lawrence2009]. Metagene profiles for all genes were produced using CGAT `bam2geneprofile` version 0.2 [@Sims2014]. Gene profiles of merged exons (without introns) were produced using 100 bins across the gene body, with an upstream and downstream extension of 500bp at 10bp resolution (i.e. binned in 10bp intervals).
 
 To compared Pol II occupancy of G4 containing genes with non-G4 containing genes, genesets with max G4seeqer scores greater than 0.95 and less than 0.05, or maximal PG4 density greater than 2 or equal to zero were used. Metagene profile matrices were read into Python using `pandas` and averaged profiles for each geneset were generated using `seaborn` bootstrapping to estimate central tendency and confidence intervals [@Mckinney2011; @Waskom2014]. Bootstrapped profiles were smoothed using a moving average of 20. 1000 iterations were used for all bootstraps. Profiles were normalised so that the absolute area under the curve was equal to one.
 
@@ -596,9 +596,9 @@ ZmZrUiI6eyJkaXNjdXNzaW9uSWQiOiJCYnllZFNJekFtc2hyT3
 N0Iiwic3ViIjoiZ286MTAyMjA1Nzk3Mjc2OTQxMDEwNjc3Iiwi
 dGV4dCI6IkRpZCB5b3UgZXZlciBjaGVjayBwcm9tb3RvciByZW
 dpb25zPyIsImNyZWF0ZWQiOjE1MzUzNTcwMDQ4ODF9fSwiaGlz
-dG9yeSI6Wy01NzY3NzYwMTgsMzM0NjY1NDgwLDExMDgwMzQxNT
-MsMTA1NzkwNTAxMSwtMTAyMzgyMjA1NywtNjA4ODUyNDEwLC0x
-NzAwNzA2NzEzLC0yMjI0MzU3ODEsLTUxNzI0MTE1MSwxMjMwMT
-A0NjAzLDgyMjkzNzk1MiwxMDcxMzk2NTg3LC0xMDcwNDY3OTAs
-LTE4Mzc3ODY3MTcsNzE3NzM0MjMwLC0xMjMyOTcxNDExXX0=
+dG9yeSI6WzcxMzM3MzkwLDMzNDY2NTQ4MCwxMTA4MDM0MTUzLD
+EwNTc5MDUwMTEsLTEwMjM4MjIwNTcsLTYwODg1MjQxMCwtMTcw
+MDcwNjcxMywtMjIyNDM1NzgxLC01MTcyNDExNTEsMTIzMDEwND
+YwMyw4MjI5Mzc5NTIsMTA3MTM5NjU4NywtMTA3MDQ2NzkwLC0x
+ODM3Nzg2NzE3LDcxNzczNDIzMCwtMTIzMjk3MTQxMV19
 -->
