@@ -20,6 +20,7 @@ pdf :
 	sort -k1,1 -t',' title_pages/acronyms.csv > title_pages/acronyms.sorted.csv
 	# pandoc doesn't accept markdown include-before-body with tex template
 	# SO we have to render the abstract first
+	python appendix/build_appendix.py
 	pandoc \
 		-o "title_pages/tmp.tex" \
 		--write=latex \
@@ -48,11 +49,13 @@ pdf :
 		chapter_5/tmp.md \
 		chapter_6/tmp.md \
 		discussion/tmp.md \
+		appendix/appendix.tex \
 		references/references.tex ;
 	rm */tmp.md
 	rm */tmp.tex
 	rm */figures/*.png
 	rm title_pages/acronyms.sorted.csv
+	rm appendix/appendix.tex
     
 docx :
 	# replace figure urls to include chapter directory and png
