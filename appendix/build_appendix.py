@@ -76,7 +76,7 @@ if __name__ == '__main__':
             chapter_title, chapter_ref = app_sect
             o.write('\\item{\n')
             o.write('\\textbf{{Chapter {}: {}}}\n'.format(i, chapter_title))
-            o.write('\\begin{enumerate}[label*=\\arabic*.]\n')
+            o.write('\\begin{enumerate}[label*=\\arabic*]\n')
             for description, filename, ref in notebooks:
                 o.write('\\item{\n')
                 o.write('{}:\\\\\n'.format(description))
