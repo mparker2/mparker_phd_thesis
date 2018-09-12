@@ -51,7 +51,7 @@ Tables of enriched GO terms were generated using `pandas` [@Mckinney2011] and fo
 
 ### Extensin gene family total PG4 estimation
 
-For estimated PG4 numbers in the table in Fig \ref{ext_table}, PG4s were predicted using three different methods. All instances of the dinucleotide `GG` were identified in each Extensin gene, and then a graph was built where each `GG` was a node and nodes were connected by an edge if dinucleotides were less than 7bp apart from each other. The number of overlapping PG4 conformations was then calculated as the number of subgraphs in the graph with exactly four members, whilst the number of merged PG4s was calculated as the number of unconnected subgraphs with four or more members. To identify the number of non-overlapping PG4s, a dynamic programming method was used [@Ray]. Overlapping PG4s were grouped and scored by inverse length, then filtered for the maximum number of high scoring, non-overlapping PG4s.
+For estimated PG4 numbers in the table in Fig \ref{ext_table}, PG4s were predicted using three different methods. All instances of the dinucleotide `GG` were identified in each Extensin gene, and then a graph was built where each `GG` was a node and nodes were connected by an edge if dinucleotides were less than 7bp apart from each other. The number of overlapping PG4 conformations was then calculated as the number of subgraphs in the graph with exactly four members, whilst the number of merged PG4s was calculated as the number of unconnected subgraphs with four or more members. To identify the number of non-overlapping PG4s, a interval scheduling method was used [@Ray]. Overlapping PG4s were grouped and scored by inverse length, then filtered for the maximum number of high scoring, non-overlapping PG4s.
 
 ### Quantitative PCR experiments
 
@@ -618,7 +618,7 @@ Vzc2lvbklkIjoiZjloRlpoRGhaYXd2M1Z5SSIsInN1YiI6Imdv
 OjEwMjIwNTc5NzI3Njk0MTAxMDY3NyIsInRleHQiOiJJcyB0aG
 VyZSBhIGNoYW5nZSBpbiB0aGUgZGlzdHJpYnV0aW9uIG9mIFBD
 UiBiYW5kcyArTk1NPyIsImNyZWF0ZWQiOjE1MzY2NzQyNjQ0OD
-J9fSwiaGlzdG9yeSI6Wy04MjgxNzc1ODUsLTIwMTY5MTExMDcs
+J9fSwiaGlzdG9yeSI6WzEzOTg4OTU5NzQsLTIwMTY5MTExMDcs
 LTE4MjgzNzgwNTgsNDQ3MTI3NDE5LC0xNTA1NzYwMDA4LC0xMj
 AzODQ0OTddfQ==
 -->
