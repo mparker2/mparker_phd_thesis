@@ -83,7 +83,7 @@ Mappability scores were generated for the TAIR10 genome using `gem-mappability` 
 
 ### Sanger sequencing analysis
 
-For Sanger sequencing, cDNA was produced using the Invitrogen High Capacity cDNA Reverse Transcription Kit with a PolyT primer. Gene specific primers were used to amplify transcripts of interest by PCR. Products were then cloned using the Thermo Scientific CloneJET PCR cloning kit, and transformed into DH5alpha competent cells. Colonies were grown overnight on ampicillin and tested by colony PCR. Picked colonies were then grown up for a further 24 hours in liquid media before miniprepping with Qiagen QIAprep Spin Miniprep Kit. Plasmids were sent, with pJet1.2 forward and reverse sequencing primers, for Sanger sequencing at the Sheffield Hallamshire Hospital Core Genomics Facility. Sequences were aligned to the TAIR10 genome using `BLAT` using the `-fine`  mode for identifying short initial and terminal exons [@Kent2002]. Figures were produced using `IGV` [@Thorvaldsdottir2013] and `Inkscape`.
+For Sanger sequencing, cDNA was produced using the Invitrogen High Capacity cDNA Reverse Transcription Kit with a PolyT primer. Gene specific primers were used to amplify transcripts of interest by PCR. Products were then cloned using the Thermo Scientific CloneJET PCR cloning kit, and transformed into DH5alpha competent cells. Colonies were grown overnight on ampicillin and tested by colony PCR. Picked colonies were then grown up for a further 24 hours in liquid media before miniprepping with Qiagen QIAprep Spin Miniprep Kit. Plasmids were sent, with pJet1.2 forward and reverse sequencing primers, for Sanger sequencing at the Sheffield Hallamshire Hospital Core Genomics Facility. Sequences were aligned to the TAIR10 genome using `BLAT` using the `-fine`  mode for identifying short initial and terminal exons [@Kent2002]. Figures were produced using `IGV` [@Thorvaldsdottir2013] and `inkscape`.
 
 ### Differential Splicing Analysis
 
@@ -611,9 +611,9 @@ IjoiZjloRlpoRGhaYXd2M1Z5SSIsInN1YiI6ImdvOjEwMjIwNT
 c5NzI3Njk0MTAxMDY3NyIsInRleHQiOiJJcyB0aGVyZSBhIGNo
 YW5nZSBpbiB0aGUgZGlzdHJpYnV0aW9uIG9mIFBDUiBiYW5kcy
 ArTk1NPyIsImNyZWF0ZWQiOjE1MzY2NzQyNjQ0ODJ9fSwiaGlz
-dG9yeSI6WzUxODc0NTAyNSwtMTM2NDE0NDA3OCwtNDYxMzE0MT
-czLDc1NzU1NzA3MiwtMjEwOTMyODAwNSwtNzQzMzU0NjI5LDEx
-NDM2ODgzMTgsLTE2NTk1NDAzNzcsLTE2MTA3NzMwNTMsNzk4OD
-g2ODQsLTIwMTY5MTExMDcsLTE4MjgzNzgwNTgsNDQ3MTI3NDE5
-LC0xNTA1NzYwMDA4LC0xMjAzODQ0OTddfQ==
+dG9yeSI6Wy0xMDU5OTEwNjg3LC0xMzY0MTQ0MDc4LC00NjEzMT
+QxNzMsNzU3NTU3MDcyLC0yMTA5MzI4MDA1LC03NDMzNTQ2Mjks
+MTE0MzY4ODMxOCwtMTY1OTU0MDM3NywtMTYxMDc3MzA1Myw3OT
+g4ODY4NCwtMjAxNjkxMTEwNywtMTgyODM3ODA1OCw0NDcxMjc0
+MTksLTE1MDU3NjAwMDgsLTEyMDM4NDQ5N119
 -->
