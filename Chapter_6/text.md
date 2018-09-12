@@ -195,7 +195,7 @@ As a further precaution against these erroneous spliced mappings, we performed r
 
 \newpage
 
-![**Splice junction motifs for EXT9 and LRX3** **a** & **b)** Frequency barplots showing number of In/Out of frame splice junctions for EXT9 and LRX3 respectively. **c)** Scatterplot showing percentage of reads with splicing versus log2 counts per million for EXT9. **d)** Bootstrapped splicing simulation showing number of unique EXT9 splice junctions discovered with increasing numbers of samples for real root RNAseq data versus paired simulated RNAseq data. Errorbars are 67% confidence intervals. \label{splice_frame}](figures/splice_site_frame_and_simulation.svg)
+![**Splice junction motifs for EXT9 and LRX3** **a** & **b)** Frequency barplots showing number of In/Out of frame splice junctions for EXT9 and LRX3 respectively. **c)** Bootstrapped splicing simulation showing number of unique EXT9 splice junctions discovered with increasing numbers of samples for real root RNAseq data versus paired simulated RNAseq data. Errorbars are 67% confidence intervals. \label{splice_frame}](figures/splice_site_frame_and_simulation.svg)
 
 \newpage
 
@@ -372,27 +372,27 @@ VkIGZyb20gdGhlIGludHJvbiBtb3RpZiIsInN0YXJ0IjozMDE2
 NiwiZW5kIjozMDE5NX0sIlJBV3Z1cTRiakZtWmtBU0giOnsidG
 V4dCI6Im9yIG5lZWRzIHRvIGJlISIsInN0YXJ0IjozMjUxMSwi
 ZW5kIjozMjUxMH0sIk1DZW9lQ24yTEVwcjVKSUwiOnsidGV4dC
-I6IkNUL0FDLiIsInN0YXJ0IjozNjg3NCwiZW5kIjozNjg4MH0s
+I6IkNUL0FDLiIsInN0YXJ0IjozNjc3MiwiZW5kIjozNjc3OH0s
 IlQyQUlyRW5sdjF5R1BYY0oiOnsidGV4dCI6IiFbKipTYW5nZX
 Igc2VxdWVuY2luZyBvZiBMUlgxIGFuZCBFWFQ5IGNETkEgaWRl
 bnRpZmllcyBzcGxpY2VkIGZvcm1zKiogKiphKSoqIEfigKYiLC
-JzdGFydCI6MzY4OTIsImVuZCI6MzczODJ9LCJHQ1dlWW9zUFJN
+JzdGFydCI6MzY3OTAsImVuZCI6MzcyODB9LCJHQ1dlWW9zUFJN
 eEozZldZIjp7InRleHQiOiJPbmx5IHNwbGljZSBqdW5jdGlvbn
 Mgd2l0aCBhdCBsZWFzdCAyMCBzdXBwb3J0aW5nIHJlYWRzIHRv
-dGFsIGFjcm9zcyB0aGUgNiBzYW1w4oCmIiwic3RhcnQiOjM5MT
-k1LCJlbmQiOjM5MzAxfSwiakw0dW1BdWdiWUdzUUhwcSI6eyJ0
+dGFsIGFjcm9zcyB0aGUgNiBzYW1w4oCmIiwic3RhcnQiOjM5MD
+kzLCJlbmQiOjM5MTk5fSwiakw0dW1BdWdiWUdzUUhwcSI6eyJ0
 ZXh0IjoiZyBgbGltbWEtdm9vbWAgYW5kIGBsaW1tYS1kaWZmU3
-BsaWNlYCIsInN0YXJ0IjozOTY1MiwiZW5kIjozOTY4OX0sIkZw
+BsaWNlYCIsInN0YXJ0IjozOTU1MCwiZW5kIjozOTU4N30sIkZw
 QjhnZUs0RFpNMlVPengiOnsidGV4dCI6ImFuIEZEUiB0aHJlc2
-hvbGQgb2YgMC4yIiwic3RhcnQiOjM5ODYyLCJlbmQiOjM5ODg1
+hvbGQgb2YgMC4yIiwic3RhcnQiOjM5NzYwLCJlbmQiOjM5Nzgz
 fSwiem5YVGdMVlJPTWpyOWp6diI6eyJ0ZXh0IjoicGxpY2VkIG
 1hcHBpbmcgdG8gdGhlc2UgZ2VuZXMgaXMgYSBzeXN0ZW1hdGlj
 IG1hcHBpbmcgZXJyb3IgdGhhdCBvY2N1cnMgYXQgYXBwcuKApi
-IsInN0YXJ0Ijo0MjMwMywiZW5kIjo0MjQ0NH0sImY5aEZaaERo
+IsInN0YXJ0Ijo0MjIwMSwiZW5kIjo0MjM0Mn0sImY5aEZaaERo
 WmF3djNWeUkiOnsidGV4dCI6IkRlc3BpdGUgdGhlc2UgbmVnYX
 RpdmUgcmVzdWx0cywgd2Ugd2VyZSBhYmxlIHRvIGlkZW50aWZ5
 IFBDUiBwcm9kdWN0cyBmcm9tIGNETkHigKYiLCJzdGFydCI6ND
-gxOTUsImVuZCI6NDgzMzN9fSwiY29tbWVudHMiOnsiRHF3Y1Z6
+gwOTMsImVuZCI6NDgyMzF9fSwiY29tbWVudHMiOnsiRHF3Y1Z6
 ZTZPYXNXOE1RVyI6eyJkaXNjdXNzaW9uSWQiOiJydkluUXlVNF
 lRblg5V3g5Iiwic3ViIjoiZ286MTAyMjA1Nzk3Mjc2OTQxMDEw
 Njc3IiwidGV4dCI6ImVucmljaGVkIGF0ID8iLCJjcmVhdGVkIj
@@ -616,8 +616,8 @@ NjdXNzaW9uSWQiOiJmOWhGWmhEaFphd3YzVnlJIiwic3ViIjoi
 Z286MTAyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6IklzIH
 RoZXJlIGEgY2hhbmdlIGluIHRoZSBkaXN0cmlidXRpb24gb2Yg
 UENSIGJhbmRzICtOTU0/IiwiY3JlYXRlZCI6MTUzNjY3NDI2ND
-Q4Mn19LCJoaXN0b3J5IjpbMTE0MzY4ODMxOCwtMTY1OTU0MDM3
-NywtMTYxMDc3MzA1Myw3OTg4ODY4NCwtMjAxNjkxMTEwNywtMT
-gyODM3ODA1OCw0NDcxMjc0MTksLTE1MDU3NjAwMDgsLTEyMDM4
-NDQ5N119
+Q4Mn19LCJoaXN0b3J5IjpbMTc2Mjk0MzY5NSwxMTQzNjg4MzE4
+LC0xNjU5NTQwMzc3LC0xNjEwNzczMDUzLDc5ODg4Njg0LC0yMD
+E2OTExMTA3LC0xODI4Mzc4MDU4LDQ0NzEyNzQxOSwtMTUwNTc2
+MDAwOCwtMTIwMzg0NDk3XX0=
 -->
