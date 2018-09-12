@@ -61,7 +61,7 @@ Total RNA was reverse transcribed into cDNA using the High Capacity cDNA Reverse
 
 Root RNAseq from PRJNA323955 [@Li2016] was downloaded in FASTQ format from ENA. Quality assessment was performed with `FastQC` version 0.11.3 [@Andrews2010] and `fastq-screen` version 0.5.1 [@Wingett2011], and adapter contamination was removed using `Cutadapt` version 1.9.1 [@Martin2011]. The data was mapped using `STAR` version 2.4.2a [@Dobin2013] with default settings, except than max intron length was set to 10000bp. Output BAM files were sorted and indexed using `samtools` version 1.4.1 [@Li2009].
 
-Normalised gene expression estimates were generated using `featureCounts` version 1.6.1 [@Liao2013] to get raw counts of alignments overlapping each gene in Araport11 [@Cheng2017], and `edgeR` [@Robinson2010; @McCarthy2012] to perform estimation of log2 counts per million.
+Normalised gene expression estimates were generated using `featureCounts` version 1.6.1 [@Liao2013] to get raw counts of alignments overlapping each gene in Araport11 [@Cheng2017], and `edgeR`  [@Robinson2010; @McCarthy2012] to perform estimation of log2 counts per million.
 
 ### Splice junction analyses
 
@@ -191,8 +191,6 @@ To remove this bias, we remapped reads from the Li et al. dataset using STAR wit
 
 Since the Extensin exitrons appear in coding regions of DNA, if the spliced out region is not a multiple of three, then the resulting mRNA would be frameshifted, producing truncated and potentially deleterious proteins. We therefore tested whether the spliced reads in EXT9 and LRX3 contained gaps which were multiples of three or not. For both genes, almost all of the unique splice junction pairs were multiples of three (Fig \ref{splice_frame}a-b). This could be evidence that these exitrons are genuine and produce function gene products. On the other hand, we noted that splicing tended to occur between regions with high protein and DNA sequence level homology. EXT9, for example, is an incredibly repetitive gene with high self-homology (Fig \ref{ext_mapp}a). These in frame splice junctions could therefore simply be the result of mapping errors from the spliced aligner `STAR` [@Dobin2013], which utilises heuristics which may result in some reads from contiguous parts of the genome being mapped as spliced. If the homologous regions which could cause mapping errors within a gene also have homology at the protein level, as is the case in EXT9, then it is probable that erroneously spliced reads would be a multiple of three in intron length.
 
-If spliced reads mapping to EXT9 were the result of some systematic error in mapping, one might not expect to see much variation in the percent of reads mapping to a gene being spliced. We therefore correlated the expression of EXT9 in each sample from the root RNAseq dataset (measured in log2 counts per million or needs to be!) with the percent of reads which mapped with a splice site. We found a slight positive correlation between expression and splicing (Fig \ref{splice_frame}c).
-
 As a further precaution against these erroneous spliced mappings, we performed read simulation for each sample in the root RNAseq dataset. Put simply, the expression of each gene was quantified for each sample by counting the number of mapped reads, then `Polyester` (an Illumina sequencing read simulator) was run to generate reads from the reference transcriptome with the same read counts [@Frazee2015]. These simulated reads were then remapped with `STAR` using the same parameters as the original mapping [@Dobin2013]. We then performed a bootstrap analysis for EXT9 where we sampled one or more real/simulated sample pairs, and counted the number of unique splice donor/acceptor pairs that occurred in each. Junctions with the same exonic flanking sequence (using 20bp overhangs) or with edit distance of only one base were collapsed. Any junctions with flanking sequence that appeared as a contiguous kmer in the reference sequence of EXT9 were also removed. Despite this, we saw a consistently larger number of unique donor/acceptor splice pairs in the real data than in the simulated data (Fig \ref{splice_frame}d).
 
 \newpage
@@ -316,85 +314,85 @@ sidGV4dCI6ImBDdXRhZGFwdGAiLCJzdGFydCI6MTIxMDIsImVu
 ZCI6MTIxMTJ9LCI0TVl5QzdnV0ljMFBkNnhYIjp7InRleHQiOi
 JTcGxpY2UganVuY3Rpb24gc2l0ZXMgd2VyZSBleHRyYWN0ZWQg
 ZnJvbSBhbGlnbmVkIHJlYWRzIHVzaW5nIGBweXNhbWAiLCJzdG
-FydCI6MTI2NjUsImVuZCI6MTI3MzR9LCJzUjl2c3c1RXZNNTJF
+FydCI6MTI2NjYsImVuZCI6MTI3MzV9LCJzUjl2c3c1RXZNNTJF
 WFVFIjp7InRleHQiOiJvciBhbGwgYW5hbHlzZXMsIHJlYWRzIH
 dlcmUgZmlsdGVyZWQgdG8gcHJvZHVjZSBhIHNldCBvZiB1bmlx
-dWUgZG9ub3IvYWNjZXB0b3LigKYiLCJzdGFydCI6MTI3NTAsIm
-VuZCI6MTI4Mzh9LCJTUUxlZTlNTE5ST3NNYjFiIjp7InRleHQi
-OiJgbWF0cGxvdGxpYl9sb2dvYCIsInN0YXJ0IjoxMzEwMiwiZW
-5kIjoxMzExOX0sIlNXZ0c1bkttN0xKSEFIbEoiOnsidGV4dCI6
+dWUgZG9ub3IvYWNjZXB0b3LigKYiLCJzdGFydCI6MTI3NTEsIm
+VuZCI6MTI4Mzl9LCJTUUxlZTlNTE5ST3NNYjFiIjp7InRleHQi
+OiJgbWF0cGxvdGxpYl9sb2dvYCIsInN0YXJ0IjoxMzEwMywiZW
+5kIjoxMzEyMH0sIlNXZ0c1bkttN0xKSEFIbEoiOnsidGV4dCI6
 IlVuaXF1ZSBzcGxpY2UganVuY3Rpb24gcGFpcnMiLCJzdGFydC
-I6MTMxOTEsImVuZCI6MTMyMzR9LCJlcGpJSGMwaXpWYkpVZkZE
+I6MTMxOTIsImVuZCI6MTMyMzV9LCJlcGpJSGMwaXpWYkpVZkZE
 Ijp7InRleHQiOiJudHJvcHkgc2NvcmUgaW4gYml0cyIsInN0YX
-J0IjoxMzUxMywiZW5kIjoxMzUzM30sIkJjakJGWWtGSjZnZHZD
+J0IjoxMzUxNCwiZW5kIjoxMzUzNH0sIkJjakJGWWtGSjZnZHZD
 eDMiOnsidGV4dCI6IlJOQXNlcSByZWFkIHNpbXVsYXRpb24gYW
 5kIGJvb3RzdHJhcHBpbmcgZXhwZXJpbWVudCIsInN0YXJ0Ijox
-MzU2NywiZW5kIjoxMzYxOH0sImNieFZGb1dVZXQ1VVJGVEgiOn
+MzU2OCwiZW5kIjoxMzYxOX0sImNieFZGb1dVZXQ1VVJGVEgiOn
 sidGV4dCI6IkZvciB0aGUgYm9vdHN0cmFwcGluZyBleHBlcmlt
 ZW50LCBvbmUgb3IgbW9yZSBwYWlycyBvZiByZWFsIGFuZCBzaW
-11bGF0ZWQgc2FtcGzigKYiLCJzdGFydCI6MTQwNzgsImVuZCI6
-MTQ1NDV9LCJSOFdRVmpZT296Z3QwSWViIjp7InRleHQiOiJgZ2
-VtLW1hcHBhYmlsaXR5YCIsInN0YXJ0IjoxNTEwMiwiZW5kIjox
-NTExOX0sIk9TWm5mWUdFQ1hGYW5uTlciOnsidGV4dCI6ImBweU
-JpZ1dpZ2AiLCJzdGFydCI6MTUzMTQsImVuZCI6MTUzMjR9LCI2
+11bGF0ZWQgc2FtcGzigKYiLCJzdGFydCI6MTQwNzksImVuZCI6
+MTQ1NDZ9LCJSOFdRVmpZT296Z3QwSWViIjp7InRleHQiOiJgZ2
+VtLW1hcHBhYmlsaXR5YCIsInN0YXJ0IjoxNTEwMywiZW5kIjox
+NTEyMH0sIk9TWm5mWUdFQ1hGYW5uTlciOnsidGV4dCI6ImBweU
+JpZ1dpZ2AiLCJzdGFydCI6MTUzMTUsImVuZCI6MTUzMjV9LCI2
 eXdaMUgxUzY1bExNcWJmIjp7InRleHQiOiJgQkxBVGAiLCJzdG
-FydCI6MTYxODEsImVuZCI6MTYxODd9LCJLeXdVOHNTUDhyYzlR
+FydCI6MTYxODIsImVuZCI6MTYxODh9LCJLeXdVOHNTUDhyYzlR
 TGpTIjp7InRleHQiOiJhdCBsZWFzdCAyMCByZWFkcyIsInN0YX
-J0IjoxNjU3MywiZW5kIjoxNjU5MH0sIndiOEhUa2V1YjV3c0xj
+J0IjoxNjU3NCwiZW5kIjoxNjU5MX0sIndiOEhUa2V1YjV3c0xj
 UTYiOnsidGV4dCI6IkRpZmZlcmVudGlhbCBzcGxpY2UganVuY3
 Rpb24gdXNhZ2UgYmV0d2VlbiBOTU0gYW5kIERNU08gdHJlYXRt
-ZW50cyB3YXMgdGhlbiBjb27igKYiLCJzdGFydCI6MTY2MTEsIm
-VuZCI6MTY3NjJ9LCJ3eGJReU1tbjZPUTgxTTNWIjp7InRleHQi
-OiJGRFIgb2YgMC4yLiIsInN0YXJ0IjoxNjk0MSwiZW5kIjoxNj
-k1Mn0sInh5eGwxbDBERnlaV0VLRDQiOnsidGV4dCI6InNpbmds
+ZW50cyB3YXMgdGhlbiBjb27igKYiLCJzdGFydCI6MTY2MTIsIm
+VuZCI6MTY3NjN9LCJ3eGJReU1tbjZPUTgxTTNWIjp7InRleHQi
+OiJGRFIgb2YgMC4yLiIsInN0YXJ0IjoxNjk0MiwiZW5kIjoxNj
+k1M30sInh5eGwxbDBERnlaV0VLRDQiOnsidGV4dCI6InNpbmds
 ZSBjb250aWd1b3VzIGV4b25pYyByZWdpb24iLCJzdGFydCI6MT
-c2ODMsImVuZCI6MTc3MTR9LCJ6MEo5Y2Jkdnk2OEo2cG1DIjp7
+c2ODQsImVuZCI6MTc3MTV9LCJ6MEo5Y2Jkdnk2OEo2cG1DIjp7
 InRleHQiOiJ1bmlxdWVseSBtYXBwZWQiLCJzdGFydCI6MTgzNj
-AsImVuZCI6MTgzNzV9LCJxOTNiVFFhd2IyVlNEWHRaIjp7InRl
+EsImVuZCI6MTgzNzZ9LCJxOTNiVFFhd2IyVlNEWHRaIjp7InRl
 eHQiOiJQcmltZXIgU2VxdWVuY2VzIHVzZWQiLCJzdGFydCI6MT
-g3MzUsImVuZCI6MTg3NTZ9LCJwRGhoU1ZnNTVYdGlHSElSIjp7
+g3MzYsImVuZCI6MTg3NTd9LCJwRGhoU1ZnNTVYdGlHSElSIjp7
 InRleHQiOiJvdXIgUk5Bc2VxIGRhdGFzZXQiLCJzdGFydCI6Mj
-AyMjMsImVuZCI6MjAyNDF9LCJkRm5JbFBpTUt0b1djSW9kIjp7
+AyMjQsImVuZCI6MjAyNDJ9LCJkRm5JbFBpTUt0b1djSW9kIjp7
 InRleHQiOiJUbyBkZW1vbnN0cmF0ZSB0aGF0IHRoZSBQRzQgZn
 JvbSBFeHRlbnNpbiBnZW5lcyBjb3VsZCBmb3JtIGEgRzQgc3Ry
-dWN0dXJlIGluIHZp4oCmIiwic3RhcnQiOjIzODk2LCJlbmQiOj
-I0MDIzfSwiZGEwUjc5TW5qemkxaEFOTiI6eyJ0ZXh0IjoiVG8g
+dWN0dXJlIGluIHZp4oCmIiwic3RhcnQiOjIzODk3LCJlbmQiOj
+I0MDI0fSwiZGEwUjc5TW5qemkxaEFOTiI6eyJ0ZXh0IjoiVG8g
 Y29uZmlybSB0aGF0IHRoZSBFeHRlbnNpbiBnZW5lcyBhcmUgZG
 93bnJlZ3VsYXRlZCBieSBOTU0sIHdlIHBlcmZvcm1lZCBSTkEg
-ZeKApiIsInN0YXJ0IjoyNTIyMiwiZW5kIjoyNTMzNH0sImJYU0
+ZeKApiIsInN0YXJ0IjoyNTIyMywiZW5kIjoyNTMzNX0sImJYU0
 huMlV1TXhXSVJKYWkiOnsidGV4dCI6ImMpKiogTk1NIGRvd25y
 ZWd1YXRpb24gb2YgRVhUMTMgYW5kIExSWDEgaXMgbm90IGFmZm
 VjdGVkIGJ5IGNvbmN1cnJlbnQgQ3ljbG9oZXjigKYiLCJzdGFy
-dCI6Mjc1OTIsImVuZCI6Mjc2ODF9LCJlSGh2V1NXRmNGY2JpT2
+dCI6Mjc1OTMsImVuZCI6Mjc2ODJ9LCJlSGh2V1NXRmNGY2JpT2
 wxIjp7InRleHQiOiJoYXQgbWFueSBvZiB0aGUgRXh0ZW5zaW4g
 Z2VuZXMgaGFkIGxhcmdlIG51bWJlcnMgb2Ygbm92ZWwgc3BsaW
-NlZCBpc29mb3Jtcy4iLCJzdGFydCI6MjgyMzIsImVuZCI6Mjgz
-MDd9LCJxZ1FvS0pYWGRRYWFXZmpQIjp7InRleHQiOiJkZXJpdm
+NlZCBpc29mb3Jtcy4iLCJzdGFydCI6MjgyMzMsImVuZCI6Mjgz
+MDh9LCJxZ1FvS0pYWGRRYWFXZmpQIjp7InRleHQiOiJkZXJpdm
 VkIGZyb20gdGhlIGludHJvbiBtb3RpZiIsInN0YXJ0IjozMDE2
-NSwiZW5kIjozMDE5NH0sIlJBV3Z1cTRiakZtWmtBU0giOnsidG
-V4dCI6Im9yIG5lZWRzIHRvIGJlISIsInN0YXJ0IjozMjgyNCwi
-ZW5kIjozMjgzOX0sIk1DZW9lQ24yTEVwcjVKSUwiOnsidGV4dC
-I6IkNUL0FDLiIsInN0YXJ0IjozNzM2MiwiZW5kIjozNzM2OH0s
+NiwiZW5kIjozMDE5NX0sIlJBV3Z1cTRiakZtWmtBU0giOnsidG
+V4dCI6Im9yIG5lZWRzIHRvIGJlISIsInN0YXJ0IjozMjUxMSwi
+ZW5kIjozMjUxMH0sIk1DZW9lQ24yTEVwcjVKSUwiOnsidGV4dC
+I6IkNUL0FDLiIsInN0YXJ0IjozNjg3NCwiZW5kIjozNjg4MH0s
 IlQyQUlyRW5sdjF5R1BYY0oiOnsidGV4dCI6IiFbKipTYW5nZX
 Igc2VxdWVuY2luZyBvZiBMUlgxIGFuZCBFWFQ5IGNETkEgaWRl
 bnRpZmllcyBzcGxpY2VkIGZvcm1zKiogKiphKSoqIEfigKYiLC
-JzdGFydCI6MzczODAsImVuZCI6Mzc4NzB9LCJHQ1dlWW9zUFJN
+JzdGFydCI6MzY4OTIsImVuZCI6MzczODJ9LCJHQ1dlWW9zUFJN
 eEozZldZIjp7InRleHQiOiJPbmx5IHNwbGljZSBqdW5jdGlvbn
 Mgd2l0aCBhdCBsZWFzdCAyMCBzdXBwb3J0aW5nIHJlYWRzIHRv
-dGFsIGFjcm9zcyB0aGUgNiBzYW1w4oCmIiwic3RhcnQiOjM5Nj
-gzLCJlbmQiOjM5Nzg5fSwiakw0dW1BdWdiWUdzUUhwcSI6eyJ0
+dGFsIGFjcm9zcyB0aGUgNiBzYW1w4oCmIiwic3RhcnQiOjM5MT
+k1LCJlbmQiOjM5MzAxfSwiakw0dW1BdWdiWUdzUUhwcSI6eyJ0
 ZXh0IjoiZyBgbGltbWEtdm9vbWAgYW5kIGBsaW1tYS1kaWZmU3
-BsaWNlYCIsInN0YXJ0Ijo0MDE0MCwiZW5kIjo0MDE3N30sIkZw
+BsaWNlYCIsInN0YXJ0IjozOTY1MiwiZW5kIjozOTY4OX0sIkZw
 QjhnZUs0RFpNMlVPengiOnsidGV4dCI6ImFuIEZEUiB0aHJlc2
-hvbGQgb2YgMC4yIiwic3RhcnQiOjQwMzUwLCJlbmQiOjQwMzcz
+hvbGQgb2YgMC4yIiwic3RhcnQiOjM5ODYyLCJlbmQiOjM5ODg1
 fSwiem5YVGdMVlJPTWpyOWp6diI6eyJ0ZXh0IjoicGxpY2VkIG
 1hcHBpbmcgdG8gdGhlc2UgZ2VuZXMgaXMgYSBzeXN0ZW1hdGlj
 IG1hcHBpbmcgZXJyb3IgdGhhdCBvY2N1cnMgYXQgYXBwcuKApi
-IsInN0YXJ0Ijo0Mjc5MSwiZW5kIjo0MjkzMn0sImY5aEZaaERo
+IsInN0YXJ0Ijo0MjMwMywiZW5kIjo0MjQ0NH0sImY5aEZaaERo
 WmF3djNWeUkiOnsidGV4dCI6IkRlc3BpdGUgdGhlc2UgbmVnYX
 RpdmUgcmVzdWx0cywgd2Ugd2VyZSBhYmxlIHRvIGlkZW50aWZ5
 IFBDUiBwcm9kdWN0cyBmcm9tIGNETkHigKYiLCJzdGFydCI6ND
-g2ODMsImVuZCI6NDg4MjF9fSwiY29tbWVudHMiOnsiRHF3Y1Z6
+gxOTUsImVuZCI6NDgzMzN9fSwiY29tbWVudHMiOnsiRHF3Y1Z6
 ZTZPYXNXOE1RVyI6eyJkaXNjdXNzaW9uSWQiOiJydkluUXlVNF
 lRblg5V3g5Iiwic3ViIjoiZ286MTAyMjA1Nzk3Mjc2OTQxMDEw
 Njc3IiwidGV4dCI6ImVucmljaGVkIGF0ID8iLCJjcmVhdGVkIj
@@ -618,7 +616,7 @@ NjdXNzaW9uSWQiOiJmOWhGWmhEaFphd3YzVnlJIiwic3ViIjoi
 Z286MTAyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6IklzIH
 RoZXJlIGEgY2hhbmdlIGluIHRoZSBkaXN0cmlidXRpb24gb2Yg
 UENSIGJhbmRzICtOTU0/IiwiY3JlYXRlZCI6MTUzNjY3NDI2ND
-Q4Mn19LCJoaXN0b3J5IjpbLTE2OTg1MzQzNCwtMTY1OTU0MDM3
+Q4Mn19LCJoaXN0b3J5IjpbMTE0MzY4ODMxOCwtMTY1OTU0MDM3
 NywtMTYxMDc3MzA1Myw3OTg4ODY4NCwtMjAxNjkxMTEwNywtMT
 gyODM3ODA1OCw0NDcxMjc0MTksLTE1MDU3NjAwMDgsLTEyMDM4
 NDQ5N119
