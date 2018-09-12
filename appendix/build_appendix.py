@@ -1,3 +1,5 @@
+# hackiest script ever to turn README.md into appendix.tex
+
 import os
 import re
 from collections import OrderedDict
@@ -8,7 +10,7 @@ PREAMBLE ='''\\newpage
 \\addcontentsline{toc}{chapter}{Appendix}
 This section contains links to all the code and Jupyter notebooks used for generating figures. 
 These can be found on GitHub at the base URL 
-\\texttt{https://www.github.com/mparker2/mparker\_phd\_thesis/appendix}. \\\\
+\\texttt{https://www.github.com/mparker2/mparker\_phd\_thesis/tree/master/appendix}.\\\\
 After navigating to this page, notebooks are organised by results chapter.
 '''
 
@@ -60,11 +62,12 @@ def extract_section_notebook_urls(sections, base_url=None):
         sections_with_url[(chapter_title, chapter_ref)] = notebooks_with_url
     return sections_with_url
 
+
 if __name__ == '__main__':
     appendix_sections = get_markdown_sections('appendix/README.md')
     appendix_sections = extract_section_notebook_urls(
         appendix_sections,
-        base_url='https://www.github.com/mparker2/mparker_phd_thesis/appendix'
+        base_url='https://www.github.com/mparker2/mparker_phd_thesis/tree/master/appendix'
     )
     with open('appendix/appendix.tex', 'w') as o:
         o.write(PREAMBLE)
@@ -73,7 +76,7 @@ if __name__ == '__main__':
             chapter_title, chapter_ref = app_sect
             o.write('\\item{\n')
             o.write('\\textbf{{Chapter {}: {}}}\n'.format(i, chapter_title))
-            o.write('\\begin{enumerate}[label*=\\arabic{*.}]\n')
+            o.write('\\begin{enumerate}[label*=\\arabic*.]\n')
             for description, filename, ref in notebooks:
                 o.write('\\item{\n')
                 o.write('{}:\\\\\n'.format(description))
