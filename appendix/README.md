@@ -20,13 +20,22 @@ This folder contains all the notebooks and code used to generate the figures for
 
 ### Chapter 3: Global analysis of Predicted G-Quadruplexes in the Arabidopsis thaliana genome
 
-1. pass: [00_h](www.mparkerbio.com)
-* pass: [00_h](www.mparkerbio.com)
+1. Analysis of PG4 densities in genomes from ENSEMBL plants, plus: [01_plant_g4_density_genome_size.ipynb](https://www.github.com/mparker2/mparker_phd_thesis/tree/master/appendix/chapter_3/01_plant_g4_density_genome_size.ipynb)
+* Plotting metagene profiles of two and three tetrad PG4 density across Arabidopsis genes: [02_g4_density_metagene_profiles.ipynb](https://www.github.com/mparker2/mparker_phd_thesis/tree/master/appendix/chapter_3/02_g4_density_metagene_profiles.ipynb)
+* Reverse translation analysis of PG4 enrichment through codon selection in Arabidopsis CDS regions: [03_reverse_translation_analysis.ipynb](https://www.github.com/mparker2/mparker_phd_thesis/tree/master/appendix/chapter_3/03_reverse_translation_analysis.ipynb)
+* Analysis of codons and protein motifs which contribute to the formation of PG4s in Arabidopsis CDS regions, plus analysis of tRNA adaptation index: [04_cds_codon_usage_analysis.ipynb](https://www.github.com/mparker2/mparker_phd_thesis/tree/master/appendix/chapter_3/04_cds_codon_usage_analysis.ipynb)
 
 ### Chapter 4: Global effect of G Quadruplex stabilisation on gene expression
 
-1. pass: [00_h](www.mparkerbio.com)
-* pass: [00_h](www.mparkerbio.com)
+1. Differential Expression analysis of NMM vs DMSO microarray dataset: [01_nmm_v_dmso_microarray_analysis.ipynb](https://www.github.com/mparker2/mparker_phd_thesis/tree/master/appendix/chapter_4/01_nmm_v_dmso_microarray_analysis.ipynb)
+* Differential Expression analysis of drought stress dataset: [02_drought_stress_microarray_analysis.ipynb](https://www.github.com/mparker2/mparker_phd_thesis/tree/master/appendix/chapter_4/02_drought_stress_microarray_analysis.ipynb)
+* Differential Expression analysis of DNA damage response dataset: [03_dna_damage_response_microarray_analysis.ipynb](https://www.github.com/mparker2/mparker_phd_thesis/tree/master/appendix/chapter_4/03_dna_damage_response_microarray_analysis.ipynb)
+* Correlation of NMM and Berberine Differential Expression with PG4 densities: [04_pg4_prediction_and_nmm_correlation.ipynb](https://www.github.com/mparker2/mparker_phd_thesis/tree/master/appendix/chapter_4/04_pg4_prediction_and_nmm_correlation.ipynb)
+* Self Organising Map analysis to identify PG4 types enriched in downregulated genes: [05_self_organising_map_analysis.ipynb](https://www.github.com/mparker2/mparker_phd_thesis/tree/master/appendix/chapter_4/05_self_organising_map_analysis.ipynb)
+* Normalisation of PolII ChIP-chip dataset: [06_polii_chip_microarray_analysis.ipynb](https://www.github.com/mparker2/mparker_phd_thesis/tree/master/appendix/chapter_4/06_polii_chip_microarray_analysis.ipynb)
+* Pol II occupancy bootstrap metagene plots: [07_polii_occupancy_metagene_profiles.ipynb](https://www.github.com/mparker2/mparker_phd_thesis/tree/master/appendix/chapter_4/07_polii_occupancy_metagene_profiles.ipynb)
+* Normalisation of GRO/RNAseq counts and correlation with PG4 density: [08_groseq_analysis.ipynb](https://www.github.com/mparker2/mparker_phd_thesis/tree/master/appendix/chapter_4/08_groseq_analysis.ipynb)
+* Differential Expression analysis of Maize NMM vs DMSO dataset and overlap with NMM regulated Arabidopsis orthologs: [09_zea_mays_nmm_analysis.ipynb](https://www.github.com/mparker2/mparker_phd_thesis/tree/master/appendix/chapter_4/09_zea_mays_nmm_analysis.ipynb)
 
 ### Chapter 5: Effect of G-Quadruplexes on expression and splicing of the Extensin gene family
 
