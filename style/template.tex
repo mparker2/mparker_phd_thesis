@@ -4,11 +4,8 @@ $if(fontfamily)$
 $else$
 \usepackage{lmodern}
 $endif$
-
-% MP: set font to helvetica (basically free arial) and margin size to 1.
 \usepackage{geometry}
 \geometry{a4paper, portrait, twoside, margin=1in, inner=1.57in}
-\usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
 
 % Overwrite \begin{figure}[htbp] with \begin{figure}[H]
@@ -52,7 +49,6 @@ $endif$
   % Add more content here, if needed.
 }
 \usepackage{enumitem}
-\usepackage{cleveref}
 
 $if(linestretch)$
 \usepackage{setspace}
@@ -89,6 +85,9 @@ $if(mathfont)$
     \setmathfont(Digits,Latin,Greek){$mathfont$}
 $endif$
 \fi
+
+\usepackage{unicode-math}
+
 % use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 % use microtype if available

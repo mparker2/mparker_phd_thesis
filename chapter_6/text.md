@@ -27,71 +27,75 @@ Here we identify a novel family of PG4 rich genes, which are downregulated by NM
 
 ### Plant growth conditions and drug treatments
 
-All experiments used Arabidopsis thaliana Columbia (Col-0) ecotype and all mutant plants used were of Col-0 background. For all experiments seeds were surface sterilised, stratified for 2-3 days at 4°C then sown on vertical plates containing Murashige & Skoog (MS) agar with 1% sucrose and 0.8% agar and transferred to growth cabinets at constant light at 23°C (growth time refers to the time after transfer to growth cabinet). Seedlings used for qPCR and RNAseq were grown for 7 days on MS plates, treated for 6 hours by flooding the plate with MS liquid media containing the drug after which roots and shoots are harvested separately. Drugs used were N-Methyl Mesoporphyrin (Frontier Scientific, NMM580), Berberine (Sigma B3251) and Cyclohexamide (Sigma C7698). For combined Cyclohexamide and NMM treatment, plants were pretreated for 2 hours with Cyclohexamide before adding NMM and treating for a further 6 hours.
+Plants for RNAseq and qPCR experiments were grown and treated by Colette Baxter. All experiments used Arabidopsis thaliana Columbia (Col-0) ecotype and all mutant plants used were of Col-0 background. For all experiments seeds were surface sterilised, stratified for 2-3 days at 4°C then sown on vertical plates containing Murashige & Skoog (MS) agar with 1% sucrose and 0.8% agar and transferred to growth cabinets at constant light at 23°C (growth time refers to the time after transfer to growth cabinet). Seedlings used for qPCR and RNAseq were grown for 7 days on MS plates, treated for 6 hours by flooding the plate with MS liquid media containing the drug after which roots and shoots are harvested separately. Drugs used were N-Methyl Mesoporphyrin (Frontier Scientific, NMM580), Berberine (Sigma B3251) and Cyclohexamide (Sigma C7698). For concentration gradient experiments, NMM concentrations used were 0 μM, 0.1 μM, 0.3 μM, 0.5 μM, 1 μM, 4 μM, and 8 μM. For Berberine, concentrations used were 0 μM, 5 μM, 8 μM and 20 μM. For combined Cyclohexamide and NMM treatment, plants were pretreated for 2 hours with 10 μM Cyclohexamide before adding 8 μM NMM and treating for a further 6 hours.
 
 ### RNA extraction for qPCR and RNAseq
 
-Total nucleic acid isolation protocol was carried out by phenol-chloroform extraction as described by White and Kaper [@White1989]. The resulting pellets were resuspended in sterile water and stored at -80C. The RNA concentration and quality was checked using the NanoDrop 1000 Spectrophotometer (ThermoScientific). DNA contamination was removed using DNase I (Sigma AMPD1).
+RNA extraction for RNAseq, qPCR, and Sanger sequencing experiments was performed by Colette Baxter.  Total nucleic acid isolation protocol was carried out by phenol-chloroform extraction as described by White and Kaper [@White1989]. The resulting pellets were resuspended in sterile water and stored at -80C. The RNA concentration and quality was checked using the NanoDrop 1000 Spectrophotometer (ThermoScientific). DNA contamination was removed using DNase I (Sigma AMPD1).
 
 ### RNAseq analysis
 
-RNA was sent to Sheffield Children's Hospital Genomics Facility for library preparation and sequencing. Polyadenylated RNA was enriched using NEBNext Poly(A) mRNA Magnetic Isolation, and libraries were produced using the NEBNext Ultra II Directional RNA kit for Illumina. The chemical fragmentation step was adjusted to increase estimated insert size to the 400-450bp range. Paired end sequencing was conducted across two lanes of an Illumina HiSeq 2500 in rapid run mode, with 220bp read length. The run returned 157 million pass filter reads in lane 1, and 154 million in lane 2. Initial read preprocessing and adaptor trimming was conducted by the Genomics Facility.
+For the NMM RNAseq experiment, plants were treated with either 8 μM NMM or DMSO. Three biological replicates of each condition were prepared. RNA was sent to Sheffield Children's Hospital Genomics Facility for library preparation and sequencing. Polyadenylated RNA was enriched using NEBNext Poly(A) mRNA Magnetic Isolation, and libraries were produced using the NEBNext Ultra II Directional RNA kit for Illumina. The chemical fragmentation step was adjusted to increase estimated insert size to the 400-450 bp range. Paired end sequencing was conducted across two lanes of an Illumina HiSeq 2500 in rapid run mode, with 220bp read length. The run returned 157 million pass filter reads in lane 1, and 154 million in lane 2. Initial read preprocessing and adaptor trimming was conducted by the Genomics Facility.
 
-Read quality was assessed locally using `FastQC` [@Andrews2010]. Differential expression analysis was conducted by using `salmon` pseudoalignment [@Patro2017] to estimate transcript abundance against Araport11 cDNA and ncRNA [@Cheng2017]. Mean insert size for each sample was assessed to be in the 400-500bp range. Gene level abundance was then aggregated from this using `tximport` [@Soneson2015] and differential expression testing was conducted using `edgeR` linear modelling [@Robinson2010; @McCarthy2012]. Normalised log2 counts per million (CPM) were calculated and used for plotting. P values were adjusted using the Benjamini Hochberg multiple testing correction. Barplots of NMM and DMSO expression were produced using `seaborn` [@Waskom2014].
+Read quality was assessed locally using `FastQC` version 0.11.3 [@Andrews2010]. Differential expression analysis was conducted by using `salmon` version 0.8.2 pseudoalignment [@Patro2017] to estimate transcript abundance against Araport11 cDNA and ncRNA [@Cheng2017]. Library type was automatically determined as ISR (Inward facing pairs, stranded, read one on reverse strand). Mean insert size for each sample was assessed to be in the 400-500 bp range. Gene level abundance was then aggregated from this using `tximport` version 1.6.0 [@Soneson2015] and differential expression testing was conducted using `edgeR` linear modelling (version 3.20.7) [@Robinson2010; @McCarthy2012]. Normalised log2 counts per million (CPM) were calculated and used for plotting. P values were adjusted using the Benjamini Hochberg multiple testing correction. Barplots of NMM and DMSO expression were produced using `seaborn` version 0.8.1 [@Waskom2014]. Code used to produce differential expression analysis can be found in Appendix \ref{nmm_dmso_rnaseq_differential_expression}.
 
-Spliced reads were mapped to the TAIR10 genome [@Initiative2000] using `STAR` [Dobin2013]. The parameters for spliced mapping were adjusted to increase precision. A minimum of 8bp overhang was used for unannotated splice junctions, and 5bp for annotated splice junctions, following ENCODE guidelines [@Encode2016]. Minimum intron size was set to 60bp and maximum intron size to 10000bp. Output BAM files were sorted and indexed using `samtools` [@Li2009].
+Spliced reads were mapped to the TAIR10 genome [@Initiative2000] using `STAR` version 2.4.2a [@Dobin2013]. The parameters for spliced mapping were adjusted to increase precision: a minimum of 8bp overhang was used for unannotated splice junctions, and 5bp for annotated splice junctions, following ENCODE guidelines [@Encode2016]. Minimum intron size was set to 60bp and maximum intron size to 10000bp. Output BAM files were sorted and indexed using `samtools` version 1.4.1 [@Li2009].
 
 ### Gene Ontology analysis
 
-For PG4 enrichment Ontology analysis, two tetrad Quadparser PG4s were predicted in the TAIR10 genome using `g4predict`. The number of PG4s overlapping each strand of the flattened exon models for each gene in Araport11 [@Cheng2017] was calculated using `bedtools intersect` [@Quinlan2010]. To calculate enrichment, a permutation test experiment was conducted, where each gene was assigned a weighting proportional to the total length of its exonic sequence. PG4s were then shuffled randomly amongst all genes. For each Ontology group, the number of PG4s observed in genes of that group was compared to the expected numbers if PG4s were distributed randomly across the transcriptome. 10000 permutations were used for testing, and two tailed P values were calculated as $max(min(\frac{\sum_{i=0}^nexp_i < obs}{n}, \frac{\sum_{i=0}^nexp_i > obs}{n}), \frac{1}{n})$, where $n$ is the total number of permutations and $exp_i$ is the expected value from the $i$th permutation. P values were adjusted using the Benjamini Hochberg multiple testing correction.
+For PG4 enrichment Ontology analysis, two tetrad Quadparser PG4s were predicted in the TAIR10 genome using `g4predict` (Appendix \ref{g4predict}). The number of PG4s overlapping each strand of the flattened exon supertranscript models [@Davidson2017] for each gene in Araport11 [@Cheng2017] was calculated using `bedtools intersect` version 2.27.1 [@Quinlan2010]. To calculate enrichment, a permutation test experiment was conducted, where each gene was assigned a weighting proportional to the total length of its exonic sequence. PG4s were then shuffled randomly amongst all genes. For each Ontology group, the number of PG4s observed in genes of that group was compared to the expected numbers if PG4s were distributed randomly across the transcriptome. 10000 permutations were used for testing, and two tailed P values were calculated as $max(min(\frac{\sum_{i=0}^nexp_i < obs}{n}, \frac{\sum_{i=0}^nexp_i > obs}{n}), \frac{1}{n})$, where $n$ is the total number of permutations and $exp_i$ is the expected value from the $i$th permutation. P values were adjusted using the Benjamini Hochberg multiple testing correction. Code used to conduct PG4 Gene Ontology enrichment is available in Appendix \ref{gene_ontology_pg4_enrichment}.
 
-For Gene Ontology analysis of differentially expressed genes, `GOseq` was used [@Young2010]. Up and downregulated genesets were produced using a log2 fold change threshold of 1 and an FDR of 0.05. Weighting factors used were the median transcript length for each gene. P values for enrichment were produced by `GOseq` using the Wallenius approximation method and were corrected for multiple testing using the Benjamini Hochberg method.
+For Gene Ontology analysis of differentially expressed genes, `GOseq` version 1.30.0 was used [@Young2010]. Up and downregulated genesets were produced using a log2 fold change threshold of 1 and an FDR of 0.05. Weighting factors used were the median transcript length for each gene. P values for enrichment were produced by `GOseq` using the Wallenius approximation method and were corrected for multiple testing using the Benjamini Hochberg method. Code is available in Appendix \ref{nmm_dmso_rnaseq_differential_expression}.
 
 Tables of enriched GO terms were generated using `pandas` [@Mckinney2011] and formatted with `inkscape`.
 
 ### Extensin gene family total PG4 estimation
 
-For estimated PG4 numbers in the table in Fig \ref{ext_table}, PG4s were predicted using three different methods. All instances of the dinucleotide `GG` were identified in each Extensin gene, and then a graph was built where each `GG` was a node and nodes were connected by an edge if dinucleotides were less than 7bp apart from each other. The number of overlapping PG4 conformations was then calculated as the number of subgraphs in the graph with exactly four members, whilst the number of merged PG4s was calculated as the number of unconnected subgraphs with four or more members. To identify the number of non-overlapping PG4s, a dynamic programming method was used. Overlapping PG4s were grouped and scored by inverse length, then filtered for the maximum number of high scoring, non-overlapping PG4s.
+For estimated PG4 numbers in the table in Fig \ref{ext_table}, PG4s were predicted using three different methods. All instances of the dinucleotide `GG` were identified in each Extensin gene, and then a graph was built where each `GG` was a node and nodes were connected by an edge if dinucleotides were less than 7bp apart from each other. The number of overlapping PG4 conformations was then calculated as the number of subgraphs in the graph with exactly four members, whilst the number of merged PG4s was calculated as the number of unconnected subgraphs with four or more members. To identify the number of non-overlapping PG4s, a dynamic programming method was used [@Ray]. Overlapping PG4s were grouped and scored by inverse length, then filtered for the maximum number of high scoring, non-overlapping PG4s. Code used to predict overlapping PG4s is available in Appendices \ref{g4netx} and \ref{extensin_gene_pg4_estimate_table}.
 
 ### Quantitative PCR experiments
 
-Total RNA was reverse transcribed into cDNA using the High Capacity cDNA Reverse Transcription Kit with a PolyT primer (Invitrogen Cat. No. 4368813). qPCR was carried out using SYBR® Green JumpStart™ Taq ReadyMix™ (Sigma-Aldrich Cat. No. S4438) using the Mx3000P qPCR System (Agilent Technologies). Thermal cycling conditions consist of a denaturation step at 94 °C for 2 minutes, 40 cycles of 15-second denaturation at 94 °C and 1-minute extension at 60 °C, then a final dissociation step of 2 minutes at 94°C, 1 minute at 60 °C and 2 minutes at 94 °C.
+Total RNA was reverse transcribed into cDNA using the High Capacity cDNA Reverse Transcription Kit with a PolyT primer (Invitrogen Cat. No. 4368813). qPCR was carried out using SYBR® Green JumpStart™ Taq ReadyMix™ (Sigma-Aldrich Cat. No. S4438) using the Mx3000P qPCR System (Agilent Technologies). Thermal cycling conditions consist of a denaturation step at 94 °C for 2 minutes, 40 cycles of 15-second denaturation at 94 °C and 1-minute extension at 60 °C, then a final dissociation step of 2 minutes at 94°C, 1 minute at 60 °C and 2 minutes at 94 °C. Analysis of qPCR data was conducted using the delta delta threshold Cycle (∆∆Ct) method, using `pandas` and `seaborn`. Code used for analysis is available in Appendix \ref{extensin_qpcr}.
+
+### Circular Dichroism of Extensin repeat
+
+Circular Dichroism spectroscopy was performed by Nick Zoulias. A typical EXT repeat containing a PG4, and with a single base substitution to remove the PG4, were analysed. A Jasco J-810 spectropolarimeter with a Peltier heating unit was used to obtain CD spectra between 200 and 300 nm. Samples were analysed at a volume of 200 µL in a 1 mm path-length cuvette. All oligos were analysed at 10 µM by using 20 µL of a 100 µM stock in the cuvette. 100 µL of 2X lithium cacodylate buffer stock was then added. Samples were either made up to 200 µL with ultrapure water (blank), or were made up to 50 mM K+ and 8 µM NMM by adding 10 µL of 1 M potassium hydroxide and 1.6 µL of 1 mM NMM before making up to 200 µL with ultrapure water. Baseline correction was done by subtracting CD spectra values for the same buffer, NMM, and potassium concentrations without DNA from experimental values. The 2X stock of lithium cacodylate buffer was prepared by dissolving 550 mg cacodylic acid in 200 mL water and adjusting the pH to 6.0 using lithium hydroxide. Data was exported in plain text format.
+
+Analysis of CD data was conducted in Python according to the methods in Villar-Guerra et al. 2017 [@DelVillar-Guerra2017]. CD signal was normalised by baseline subtraction. Results were expressed in the form $Δε(M^{−1}·cm^{−1}) = θ/(32980*c*l)$, where $θ$ is the CD ellipticity in millidegrees (mdeg), $c$ is the strand concentration in mol/L of G-quadruplex, and $l$ is the path length in cm. A Savitsky Golay smoothing filter was applied to the data with window size of 25nm and an order of 3. Code used to conduct normalisation is available in \ref{ext_repeat_cd_spectroscopy}.
 
 ### Analysis of public RNAseq data
 
-Root RNAseq from PRJNA323955 [@Li2016] was downloaded in FASTQ format from ENA. Quality assessment was performed with `FastQC` [@Andrews2010] and `fastq-screen` [@Wingett2011], and adapter contamination was removed using `Cutadapt` [@Martin2011]. The data was mapped using `STAR` [@Dobin2013] with default settings, except than max intron length was set to 10000bp. Output BAM files were sorted and indexed using `samtools` [@Li2009].
-
-Normalised gene expression estimates were generated using `featureCounts` [@Liao2013] to get raw counts of alignments overlapping each gene in Araport11 [@Cheng2017], and `edgeR` [@Robinson2010; @McCarthy2012] to perform estimation of log2 counts per million.
+Root RNAseq from PRJNA323955 [@Li2016] was downloaded in FASTQ format from ENA. Quality assessment was performed with `FastQC` version 0.11.3 [@Andrews2010] and `fastq-screen` version 0.5.1 [@Wingett2011], and adapter contamination was removed using `Cutadapt` version 1.9.1 [@Martin2011]. The data was mapped using `STAR` version 2.4.2a [@Dobin2013] with default settings, except than max intron length was set to 10000bp. Output BAM files were sorted and indexed using `samtools` version 1.4.1 [@Li2009].
 
 ### Splice junction analyses
 
-Splice junction sites were extracted from aligned reads using `pysam` [@Heger2014]. For all analyses, reads were filtered to produce a set of unique donor/acceptor site pairs. Scatter plots of spliced read percentages and frequency plots of in frame exitrons were produced using `matplotlib` and `seaborn` [@Hunter2007; @Waskom2014].
+Splice junction sites were extracted from aligned reads using `pysam` [@Heger2014], by identifying reads aligned with regions skipped from the reference, and extracting their coordinates. For all analyses, reads were filtered to produce a set of unique donor/acceptor site pairs. Scatter plots of spliced read percentages and frequency plots of in frame exitrons were produced using `matplotlib` and `seaborn` [@Hunter2007; @Waskom2014]. Code used for extracting splice junctions is available in Appendices \ref{exitron_splice_junction_logos} and \ref{splice_simulation}.
 
 ### Sequence logo generation
 
-Consensus sequence logos were generated using an in-house Python module `matplotlib_logo`. Unique splice junction pairs from spliced reads were identified, and the corresponding sequence information (8bp up and downstream of donor and acceptor) was extracted from the TAIR10 genome [@Initiative2000] using `pysam` [@Heger2014]. Position frequency matrices were generated from these sequences, and entropy score in bits was calculated and plotted.
+Consensus sequence logos were generated using an in-house Python module `matplotlib_logo` (Appendix \ref{matplotlib_logo}). Unique splice junction pairs from spliced reads were identified, and the corresponding sequence information (8bp up and downstream of donor and acceptor) was extracted from the TAIR10 genome [@Initiative2000] using `pysam` version 0.14.0 [@Heger2014]. Position frequency matrices were generated from these sequences, and entropy score in bits was calculated and plotted. Code used to generate logos is available in Appendix \ref{exitron_splice_junction_logos}.
 
 ### RNAseq read simulation and bootstrapping experiment
 
-For RNAseq read simulation, read counts generated using `featureCounts` [@Liao2013] for each file in the Li et al. 2016 dataset were used to inform a `polyester` [@Frazee2015] simulation of Illumina 125bp paired end reads, using the Araport11 annotation [@Cheng2017]. Fragment length was simulated using a normal distribution with mean 250bp and standard deviation of 25bp. Error rate was simulated at a uniform 0.5% across samples, reads, and nucleotides.
+For RNAseq read simulation, read counts generated using `featureCounts` [@Liao2013] for each file in the Li et al. 2016 dataset were used to inform a `polyester` version 1.10.1 [@Frazee2015] simulation of Illumina 125bp paired end reads, using the Araport11 annotation [@Cheng2017]. Fragment length was simulated using a normal distribution with mean 250bp and standard deviation of 25bp. Error rate was simulated at a uniform 0.5% across samples, reads, and nucleotides.
 
-For the bootstrapping experiment, one or more pairs of real and simulated samples were randomly sampled from the dataset and unique splice donor/acceptor pairs in EXT9 were identified. Only splice sites from primary alignments, with overhangs greater than 20bp, and with more than 2 supporting reads were kept. For each splice site, the exonic overhang sequence 20bp upstream of the donor site and 20bp downstream of the acceptor site were extracted from the read and concatenated. Any splice site whose concatenated sequence was present as a contiguous kmer in the reference EXT9 sequence was assumed to be a mapping error and filtered out. Finally, splice sites were deduplicated by directional clustering of sequences with edit distance of one or less using `umi_tools` directional clusterer [@Smith2017]. 500 iterations were used for bootstrapping. 67% confidence intervals were produced and plotted using `seaborn` [@Waskom2014].
+For the bootstrapping experiment, one or more pairs of real and simulated samples were randomly sampled from the dataset and unique splice donor/acceptor pairs in EXT9 were identified. Only splice sites from primary alignments, with overhangs greater than 20bp, and with more than 2 supporting reads were kept. For each splice site, the exonic overhang sequence 20bp upstream of the donor site and 20bp downstream of the acceptor site were extracted from the read and concatenated. Any splice site whose concatenated sequence was present as a contiguous kmer in the reference EXT9 sequence was assumed to be a mapping error and filtered out. Finally, splice sites were deduplicated by directional clustering of sequences with edit distance of one or less using `umi_tools` directional clusterer [@Smith2017]. 500 iterations were used for bootstrapping. 67% confidence intervals were produced and plotted using `seaborn` [@Waskom2014]. Code used for spliced read manipulation and plotting is available in Appendix \ref{splice_simulation}.
 
 ### Mappability analyses
 
-Mappability scores were generated for the TAIR10 genome using `gem-mappability` [@Derrien2012] with a kmer size of 75bp, and converted to `BigWig` format using `gem-2-wig` and `wigToBigWig` [@Kent2010]. Minimum mappability scores for each Extensin gene were extracted using `pyBigWig` [@Ryan2018] and plotted against spliced fraction using `matplotlib` [@Hunter2007].
+Dot plots of EXT9 cDNA were generated in Python using a window size of 15bp and the Hamming distance metric. Mappability scores were generated for the TAIR10 genome using `gem-mappability` build 1.315 [@Derrien2012] with a kmer size of 75bp, and converted to `BigWig` format using `gem-2-wig` build 1.423 and `wigToBigWig` [@Kent2010]. Minimum mappability scores for each Extensin gene were extracted using `pyBigWig` version 0.3.10 [@Ryan2018] and plotted against spliced fraction using `matplotlib` [@Hunter2007]. Code is available in \ref{ext9_dotplot_and_mappability}.
 
 ### Sanger sequencing analysis
 
-For Sanger sequencing, cDNA was produced using the Invitrogen High Capacity cDNA Reverse Transcription Kit with a PolyT primer. Gene specific primers were used to amplify transcripts of interest by PCR. Products were then cloned using the Thermo Scientific CloneJET PCR cloning kit, and transformed into DH5alpha competent cells. Colonies were grown overnight on ampicillin and tested by colony PCR. Picked colonies were then grown up for a further 24 hours in liquid media before miniprepping with Qiagen QIAprep Spin Miniprep Kit. Plasmids were sent, with pJet1.2 forward and reverse sequencing primers, for Sanger sequencing at the Sheffield Hallamshire Hospital Core Genomics Facility. Sequences were aligned to the TAIR10 genome using `BLAT` [@Kent2002].
+For Sanger sequencing, cDNA was produced using the Invitrogen High Capacity cDNA Reverse Transcription Kit with a PolyT primer. Gene specific primers were used to amplify transcripts of interest by PCR. Products were then cloned using the Thermo Scientific CloneJET PCR cloning kit, and transformed into DH5alpha competent cells. Colonies were grown overnight on ampicillin and tested by colony PCR. Picked colonies were then grown up for a further 24 hours in liquid media before miniprepping with Qiagen QIAprep Spin Miniprep Kit. Plasmids were sent, with pJet1.2 forward and reverse sequencing primers, for Sanger sequencing at the Sheffield Hallamshire Hospital Core Genomics Facility. Sequences were aligned to the TAIR10 genome using `BLAT` using the `-fine`  mode for identifying short initial and terminal exons [@Kent2002]. Code used for alignment is available in Appendix \ref{sanger_sequencing_splice_variants}. Figures were produced using `IGV` [@Robinson2011; @Thorvaldsdottir2013] and `inkscape`.
 
 ### Differential Splicing Analysis
 
-For differential splicing analysis, we identified novel splice junctions in our RNAseq dataset to augment the existing Araport11 annotation. Splice junctions for each gene were extracted from reads mapped to correct strand of the annotated gene body using Python and `pysam` [@Heger2014]. Junctions were kept if they were supported by at least 20 reads across all samples. Differential splice junction usage between NMM and DMSO treatments was then conducted in R using `limma-voom` and `DiffSplice` [@Ritchie2015; @Law2014], and P values were adjusted using Benjamini Hochberg correction. Differentially utilised junctions were identified using an absolute log2 fold change in expression of 0.5 and an FDR of 0.2.
+For differential splicing analysis, we identified novel splice junctions in our RNAseq dataset to augment the existing Araport11 annotation. Splice junctions for each gene were extracted from reads mapped to correct strand of the annotated gene body using Python and `pysam` version 0.14.0 [@Heger2014]. Junctions were kept if they were supported by at least 20 reads across all samples. Differential splice junction usage between NMM and DMSO treatments was then conducted in R using `limma-voom` and `DiffSplice` [@Ritchie2015; @Law2014], and P values were adjusted using Benjamini Hochberg correction. `limma` version 3.34.6 was used. Differentially utilised junctions were identified using an absolute log2 fold change in expression of 0.5 and an FDR of 0.2. Unstrigent thresholds were used due to the low read counts associated with splice junctions, to capture as many true positives as possible. Differential junction usage code is available in Appendix \ref{differential_splicing_analysis}.
 
-To produce junction categories based on relation to reference annotation, Araport11 GTF annotation [@Cheng2017] was flattened using the python module `CGAT.GTF` [@Sims2014] to produce a single model for each gene, which was converted to bed12 format. This was then used to identify junctions which shared one or both of their donor and acceptor sites with reference introns. These were labelled "alternate" and "constitutive" junctions, respectively. Constitutive junctions which spanned an internal exon where labelled "skipping" junctions. Junctions which were contained wholly within a single contiguous exonic region were labelled as "retained intronic / exitronic" (the distinction between these is whether retention or splicing of the region is more common). Finally, junctions which do not contain a donor or acceptor present in the reference, and which span a mixture of exonic and intronic regions, were labelled "other" junctions. Violin plots of distribution of junction type expression, and stacked barplots of class distribution amongst differentially utilised junctions, were produced using `seaborn` and `matplotlib` [@Hunter2007; @Waskom2014].
+To produce junction categories based on relation to reference annotation, Araport11 GTF annotation [@Cheng2017] was flattened using the python module `CGAT.GTF` version 0.2 [@Sims2014] to produce a single model for each gene, which was converted to bed12 format. This was then used to identify junctions which shared one or both of their donor and acceptor sites with reference introns. These were labelled "alternate" and "constitutive" junctions, respectively. Constitutive junctions which spanned an internal exon where labelled "skipping" junctions. Junctions which were contained wholly within a single contiguous exonic region were labelled as "retained intronic / exitronic" (the distinction between these is whether retention or splicing of the region is more common). Finally, junctions which do not contain a donor or acceptor present in the reference, and which span a mixture of exonic and intronic regions, were labelled "other" junctions. Violin plots of distribution of junction type expression, and stacked barplots of class distribution amongst differentially utilised junctions, were produced using `seaborn` and `matplotlib` [@Hunter2007; @Waskom2014]. Code is available in Appendix \ref{differential_splicing_analysis}.
 
-For barplots of spliced read percentages in Extensin genes, `pysam` [@Heger2014] was used to extract all uniquely mapped and properly paired reads covering each gene. Each read was counted separately (i.e. pairs were not counted as one fragment). Reads that were mapped across an exitronic splice junction were counted and divided by the total number of reads to get a percentage of exitronic reads. These percentages were compared between NMM and DMSO treatments.
+For barplots of spliced read percentages in Extensin genes, `pysam` [@Heger2014] was used to extract all uniquely mapped and properly paired reads covering each gene. Each read was counted separately (i.e. pairs were not counted as one fragment). Reads that were mapped across an exitronic splice junction were counted and divided by the total number of reads to get a percentage of exitronic reads. These percentages were compared between NMM and DMSO treatments. Code used for producing plots is available in Appendix \ref{extensin_percent_spliced_nmm_vs_dmso}.
 
 \newpage
 
@@ -181,7 +185,7 @@ We noted from studying *de novo* assembled splice isoforms from a root specific 
 
 A hallmark of most true splice junctions is the GT/AG intron motif, which is the conserved canonical sequence in all higher eukaryotes, including Arabidopsis (Fig \ref{splice_junct}a) [@Mount1982; @Shapiro1987]. To determine whether Extensin exitrons had canonical splice motifs, we produced splice junction sequence logos for predicted introns from the dataset produced by Li et al., for EXT9 and LRX3, both of which were highly spliced. We found that splice junctions in these genes had near universal GT/AG motifs (Fig \ref{splice_junct}b). Upon inspection of the methods for Li et al., however we discovered that `CuffLinks` was used for *de novo* transcript assembly [@Trapnell2012]. Since the RNAseq dataset is unstranded, `Cufflinks` requires the upstream mapping tool (here, `STAR` [@Dobin2013]) to annotate the orientation of spliced reads using the intron motif (i.e. positive strand for GT/AG and negative strand for CT/AC). This setting means reads which do not conform to the intron motif are discarded, leading to serious bias.
 
-To remove this bias, we remapped reads from the Li et al. dataset using STAR without filtering by intron motif. Since assemblers like `CuffLinks` and `StringTie` [@Pertea2015] require strandedness information derived from the intron motif, transcript assembly was not possible. Instead, we simply extracted spliced reads aligning to EXT3 and LRX3 and identified all unique splice site starts and ends. The corresponding sequences were then used to produce sequence logos (Fig \ref{splice_junct}c). These logos showed only a weak enrichment for the GT/AG motif in EXT9, and CT/AC in LRX1.
+To remove this bias, we remapped reads from the Li et al. dataset using STAR without filtering by intron motif. Since assemblers like `CuffLinks` and `StringTie` [@Pertea2015] require strandedness information derived from the intron motif when sequencing is unstranded, transcript assembly was not possible. Instead, we simply extracted spliced reads aligning to EXT3 and LRX3 and identified all unique splice site starts and ends. The corresponding sequences were then used to produce sequence logos (Fig \ref{splice_junct}c). These logos showed only a weak enrichment for the GT/AG motif in EXT9, and CT/AC in LRX1.
 
 \newpage
 
@@ -191,13 +195,11 @@ To remove this bias, we remapped reads from the Li et al. dataset using STAR wit
 
 Since the Extensin exitrons appear in coding regions of DNA, if the spliced out region is not a multiple of three, then the resulting mRNA would be frameshifted, producing truncated and potentially deleterious proteins. We therefore tested whether the spliced reads in EXT9 and LRX3 contained gaps which were multiples of three or not. For both genes, almost all of the unique splice junction pairs were multiples of three (Fig \ref{splice_frame}a-b). This could be evidence that these exitrons are genuine and produce function gene products. On the other hand, we noted that splicing tended to occur between regions with high protein and DNA sequence level homology. EXT9, for example, is an incredibly repetitive gene with high self-homology (Fig \ref{ext_mapp}a). These in frame splice junctions could therefore simply be the result of mapping errors from the spliced aligner `STAR` [@Dobin2013], which utilises heuristics which may result in some reads from contiguous parts of the genome being mapped as spliced. If the homologous regions which could cause mapping errors within a gene also have homology at the protein level, as is the case in EXT9, then it is probable that erroneously spliced reads would be a multiple of three in intron length.
 
-If spliced reads mapping to EXT9 were the result of some systematic error in mapping, one might not expect to see much variation in the percent of reads mapping to a gene being spliced. We therefore correlated the expression of EXT9 in each sample from the root RNAseq dataset (measured in log2 counts per million or needs to be!) with the percent of reads which mapped with a splice site. We found a slight positive correlation between expression and splicing (Fig \ref{splice_frame}c).
-
 As a further precaution against these erroneous spliced mappings, we performed read simulation for each sample in the root RNAseq dataset. Put simply, the expression of each gene was quantified for each sample by counting the number of mapped reads, then `Polyester` (an Illumina sequencing read simulator) was run to generate reads from the reference transcriptome with the same read counts [@Frazee2015]. These simulated reads were then remapped with `STAR` using the same parameters as the original mapping [@Dobin2013]. We then performed a bootstrap analysis for EXT9 where we sampled one or more real/simulated sample pairs, and counted the number of unique splice donor/acceptor pairs that occurred in each. Junctions with the same exonic flanking sequence (using 20bp overhangs) or with edit distance of only one base were collapsed. Any junctions with flanking sequence that appeared as a contiguous kmer in the reference sequence of EXT9 were also removed. Despite this, we saw a consistently larger number of unique donor/acceptor splice pairs in the real data than in the simulated data (Fig \ref{splice_frame}d).
 
 \newpage
 
-![**Splice junction motifs for EXT9 and LRX3** **a** & **b)** Frequency barplots showing number of In/Out of frame splice junctions for EXT9 and LRX3 respectively. **c)** Scatterplot showing percentage of reads with splicing versus log2 counts per million for EXT9. **d)** Bootstrapped splicing simulation showing number of unique EXT9 splice junctions discovered with increasing numbers of samples for real root RNAseq data versus paired simulated RNAseq data. Errorbars are 67% confidence intervals. \label{splice_frame}](figures/splice_site_frame_and_simulation.svg)
+![**Splice junction motifs for EXT9 and LRX3** **a** & **b)** Frequency barplots showing number of In/Out of frame splice junctions for EXT9 and LRX3 respectively. **c)** Bootstrapped splicing simulation showing number of unique EXT9 splice junctions discovered with increasing numbers of samples for real root RNAseq data versus paired simulated RNAseq data. Errorbars are 67% confidence intervals. \label{splice_frame}](figures/splice_site_frame_and_simulation.svg)
 
 \newpage
 
@@ -229,7 +231,7 @@ We hypothesise that G4s cause the exitronic splicing of Extensin genes, by slowi
 
 In order to perform junction level differential splicing analysis, we identified all spliced reads with the correct first-in-pair strand orientation overlapping each gene. Only splice junctions with at least 20 supporting reads total across the 6 samples were kept for analysis. Splice junctions were categorised into five types based on how they related to the flattened reference annotation in Araport11: constitutive, alternative, retained intron/exitronic, exon skipping, or other. See Fig \ref{diff_junc}a legend for an explanation of these different categories.
 
-We performed differential junction usage using `limma-voom` and `limma-diffSplice` [@Ritchie2015; @Law2014]. Using an FDR threshold of 0.2 and an absolute fold change threshold of 0.5, we identified 338 junctions in 302 genes with increased use during NMM treatment, and 189 junctions in 162 genes with decreased usage. 27 genes contained junctions which showed both increased and decreased usages, i.e. some type of switching. None of the junction isoforms identified in the Extensin genes were significantly differentially utilised, however.
+We performed differential junction usage identification using `limma-voom` and `limma-diffSplice` [@Ritchie2015; @Law2014]. Unstrigent thresholds were used due to the low read counts associated with splice junctions, to capture as many true positives as possible. Using an FDR threshold of 0.2 and an absolute fold change threshold of 0.5, we identified 338 junctions in 302 genes with increased use during NMM treatment, and 189 junctions in 162 genes with decreased usage. 27 genes contained junctions which showed both increased and decreased usages, i.e. some type of switching. None of the junction isoforms identified in the Extensin genes were significantly differentially utilised, however.
 
 \newpage
 
@@ -237,7 +239,7 @@ We performed differential junction usage using `limma-voom` and `limma-diffSplic
 
 \newpage
 
-The linear model fit by `diffSplice` is looking for differences in the usage of a junction relative to the usage of the rest of the junctions in that gene. It is possible therefore, if utilisation of all splice junctions in the Extensin genes were changed by a relatively similar amount, that `diffSplice` would not detect any differentially utilised junctions. We therefore examined the total percentage of reads mapping to each Extensin gene which were exitronic, and looked to see if this percentage changed during NMM treatment. Despite large gene-level effects on many Extensin genes with Extronic splicing (Fig \ref{perc_spliced}a, there was no strong effect on the overall level of spliced reads mapping to these genes (Fig \ref{perc_spliced}b), suggesting that either NMM does not affect the splicing of Extensins, only the expression, or that spliced mapping to these genes is a systematic mapping error that occurs at approximately the same rate per gene regardless of the read count.
+The linear model fit by `diffSplice` is looking for differences in the usage of a junction relative to the usage of the rest of the junctions in that gene. It is possible therefore, if utilisation of all splice junctions in the Extensin genes were changed by a relatively similar amount, that `diffSplice` would not detect any differentially utilised junctions. We therefore examined the total percentage of reads mapping to each Extensin gene which were exitronic, and looked to see if this percentage changed during NMM treatment. Despite large gene-level effects on many Extensin genes with Extronic splicing (Fig \ref{perc_spliced}a), there was no strong effect on the overall level of spliced reads mapping to these genes (Fig \ref{perc_spliced}b), suggesting that either NMM does not affect the splicing of Extensins, only the expression, or that spliced mapping to these genes is a systematic mapping error that occurs at approximately the same rate per gene regardless of the read count.
 
 \newpage
 
@@ -260,3 +262,362 @@ Examination of *de novo* assembled splice isoforms collated from many RNAseq sam
 To try to identify true splice isoforms of Extensin genes, we performed RNAseq, using longer 220bp paired end reads to attempt to capture more splice junctions and reduce the number of multimapping reads. Since splicing occurs co-transcriptionally, and Pol II elongation speed is linked to utilisation of weak splice sites, we hypothesised that splicing of Extensins might be controlled by formation of G4s which slow down transcription. We therefore also performed RNAseq with NMM treated plants to see how G4 stabilisation affects splicing. Our RNAseq dataset identified large numbers of potential splice variants, however again many of these did not have the hallmarks of canonical splice junctions, and their abundances were highly sensitive to changes in mapping parameters, suggesting the possibility of some technical defect. Furthermore we did not see any strong or consistent change in the percentage of spliced reads identified when plants were treated with NMM, despite some very strong changes in the expression of Extensin genes as a whole. Despite these negative results, we were able to identify PCR products from cDNA which appeared to be truncated forms of both EXT9 and LRX1. Again, these products did not have any consistent traits of splice variants. One explanation for these results, and the results of the RNAseq, could be artefacts introduced during PCR amplification. These can occur in repetitive regions due to incorrect annealing of single stranded DNA and can result in deletions or expansions. To overcome these issues in the future, the ideal techniques for detecting true splice forms would be Northern blots on a gene by gene basis, or using direct RNA Nanopore sequencing for global identification.
 
 \newpage
+<!--stackedit_data:
+eyJkaXNjdXNzaW9ucyI6eyJydkluUXlVNFlRblg5V3g5Ijp7In
+RleHQiOiJYUEQgaGFzIGFsc28gYmVlbiBhc3NvY2lhdGVkIHdp
+dGggaHVtYW4gVFNTcyBjb250YWluaW5nIFBHNHMgYnkgQ2hJUC
+1zZXEiLCJzdGFydCI6NzgyLCJlbmQiOjg1NH0sInM1Mmt0VWtC
+dFZOT1IxM3YiOnsidGV4dCI6ImhpZ2hlciIsInN0YXJ0IjoxND
+I5LCJlbmQiOjE0MzV9LCJrWTVvVE1ranpNQmQ4UUJ6Ijp7InRl
+eHQiOiJtb3JlIHN0cm9uZ2x5IGNhbm9uaWNhbCIsInN0YXJ0Ij
+oyMDMxLCJlbmQiOjIwNTR9LCJEcTlyUzBMaXBKcEhMVVgxIjp7
+InRleHQiOiJnICg+NDAlIG9mIEFTIGV4b25zKS4iLCJzdGFydC
+I6MzYzNiwiZW5kIjozNjgzfSwieUlaNVVCTWdhMlNIbjRHWSI6
+eyJ0ZXh0IjoiIyMgTWV0aG9kcyIsInN0YXJ0Ijo0OTk5LCJlbm
+QiOjUwMDl9LCIwNUJtR2xpWGRkMm5oNW82Ijp7InRleHQiOiJE
+cnVncyB1c2VkIHdlcmUgTi1NZXRoeWwgTWVzb3BvcnBoeXJpbi
+AoRnJvbnRpZXIgU2NpZW50aWZpYywgTk1NNTgwKSwgQmVyYmVy
+aW5l4oCmIiwic3RhcnQiOjU4MDgsImVuZCI6NTkzM30sIk9rbW
+1oRDRoaktuZzVkZFgiOnsidGV4dCI6IiMjIyBSTkFzZXEgYW5h
+bHlzaXMiLCJzdGFydCI6NjgyNiwiZW5kIjo2ODQ1fSwiQ09xcG
+RkYlNyZXlxUlBQUiI6eyJ0ZXh0IjoiUmVhZCBxdWFsaXR5IHdh
+cyBhc3Nlc3NlZCBsb2NhbGx5IHVzaW5nIGBGYXN0UUNgIiwic3
+RhcnQiOjc2NjEsImVuZCI6NzcwOX0sIlBBVEVaZ0FtS09aUzF1
+c2wiOnsidGV4dCI6InNpbmcgYHNhbG1vbmAgcHNldWRvYWxpZ2
+5tZW50IFtAUGF0cm8yMDE3XSIsInN0YXJ0Ijo3NzkyLCJlbmQi
+Ojc4NDh9LCIzTXV1RUJvSHVORnZsRDdjIjp7InRleHQiOiJNZW
+FuIGluc2VydCBzaXplIGZvciBlYWNoIHNhbXBsZSB3YXMgYXNz
+ZXNzZWQgdG8gYmUgaW4gdGhlIDQwMC01MDBicCByYW5nZS4iLC
+JzdGFydCI6ODAzOSwiZW5kIjo4MTE1fSwiY3hXbGdQMWltZUEz
+c2lRMCI6eyJ0ZXh0IjoiZW5lIGxldmVsIGFidW5kYW5jZSB3YX
+MgdGhlbiBhZ2dyZWdhdGVkIGZyb20gdGhpcyB1c2luZyBgdHhp
+bXBvcnRgIFtAU29uZXNvbjIwMeKApiIsInN0YXJ0Ijo4MTE3LC
+JlbmQiOjg0MjF9LCJnV3RBaXRzMFBPcWVZRGs0Ijp7InRleHQi
+OiJUaGUgcGFyYW1ldGVycyBmb3Igc3BsaWNlZCBtYXBwaW5nIH
+dlcmUgYWRqdXN0ZWQgdG8gaW5jcmVhc2UgcHJlY2lzaW9uIiwi
+c3RhcnQiOjg3MDcsImVuZCI6ODc3N30sIm5FZDRZbVZHSk1RTz
+E3OEIiOnsidGV4dCI6ImBTVEFSYCIsInN0YXJ0Ijo4NjcxLCJl
+bmQiOjg2Nzd9LCJJYWc4ZkRyM0NBUEo4Tm9VIjp7InRleHQiOi
+Jgc2FtdG9vbHNgIiwic3RhcnQiOjkwNTAsImVuZCI6OTA2MH0s
+ImxEV2l6YVZGTEE1TUtCVngiOnsidGV4dCI6ImZsYXR0ZW5lZC
+BleG9uIG1vZGVscyIsInN0YXJ0Ijo5MzQ5LCJlbmQiOjkzODZ9
+LCJia0JQdFNxU21GbEVCcGFUIjp7InRleHQiOiJGb3IgZWFjaC
+BPbnRvbG9neSBncm91cCwiLCJzdGFydCI6OTgwNywiZW5kIjo5
+ODMxfSwiRFFialN3UTc3cElheW5nbCI6eyJ0ZXh0IjoiVG8gY2
+FsY3VsYXRlIGVucmljaG1lbnQsIGEgcGVybXV0YXRpb24gdGVz
+dCBleHBlcmltZW50IHdhcyBjb25kdWN0ZWQsIHdoZXJlIGVhY+
+KApiIsInN0YXJ0Ijo5NTg3LCJlbmQiOjEwMzQ4fSwiMWpEck9X
+c21mTUtDZ0J4UyI6eyJ0ZXh0IjoiR09zZXFgIiwic3RhcnQiOj
+EwNDEzLCJlbmQiOjEwNDE5fSwiS2FJMnpqUGZZclBJNlhhMiI6
+eyJ0ZXh0IjoibWVkaWFuIHRyYW5zY3JpcHQgbGVuZ3RoIGZvci
+BlYWNoIGdlbmUuIiwic3RhcnQiOjEwNTk0LCJlbmQiOjEwNjMz
+fSwiUU01NUFpa1NWQ3ZBYXoyTCI6eyJ0ZXh0IjoiYSBkeW5hbW
+ljIHByb2dyYW1taW5nIG1ldGhvZCB3YXMgdXNlZCIsInN0YXJ0
+IjoxMTU4OSwiZW5kIjoxMTYyNn0sIkhKem0xZG1ITXVqVHVqeU
+EiOnsidGV4dCI6ImBDdXRhZGFwdGAiLCJzdGFydCI6MTI2Njgs
+ImVuZCI6MTI2Nzh9LCI0TVl5QzdnV0ljMFBkNnhYIjp7InRleH
+QiOiJTcGxpY2UganVuY3Rpb24gc2l0ZXMgd2VyZSBleHRyYWN0
+ZWQgZnJvbSBhbGlnbmVkIHJlYWRzIHVzaW5nIGBweXNhbWAiLC
+JzdGFydCI6MTI5NTYsImVuZCI6MTMwMjV9LCJzUjl2c3c1RXZN
+NTJFWFVFIjp7InRleHQiOiJvciBhbGwgYW5hbHlzZXMsIHJlYW
+RzIHdlcmUgZmlsdGVyZWQgdG8gcHJvZHVjZSBhIHNldCBvZiB1
+bmlxdWUgZG9ub3IvYWNjZXB0b3LigKYiLCJzdGFydCI6MTMwND
+EsImVuZCI6MTMxMjl9LCJTUUxlZTlNTE5ST3NNYjFiIjp7InRl
+eHQiOiJgbWF0cGxvdGxpYl9sb2dvYCIsInN0YXJ0IjoxMzM5My
+wiZW5kIjoxMzQxMH0sIlNXZ0c1bkttN0xKSEFIbEoiOnsidGV4
+dCI6IlVuaXF1ZSBzcGxpY2UganVuY3Rpb24gcGFpcnMiLCJzdG
+FydCI6MTM0ODIsImVuZCI6MTM1MjV9LCJlcGpJSGMwaXpWYkpV
+ZkZEIjp7InRleHQiOiJudHJvcHkgc2NvcmUgaW4gYml0cyIsIn
+N0YXJ0IjoxMzgwNCwiZW5kIjoxMzgyNH0sIkJjakJGWWtGSjZn
+ZHZDeDMiOnsidGV4dCI6IlJOQXNlcSByZWFkIHNpbXVsYXRpb2
+4gYW5kIGJvb3RzdHJhcHBpbmcgZXhwZXJpbWVudCIsInN0YXJ0
+IjoxMzg1OCwiZW5kIjoxMzkwOX0sImNieFZGb1dVZXQ1VVJGVE
+giOnsidGV4dCI6IkZvciB0aGUgYm9vdHN0cmFwcGluZyBleHBl
+cmltZW50LCBvbmUgb3IgbW9yZSBwYWlycyBvZiByZWFsIGFuZC
+BzaW11bGF0ZWQgc2FtcGzigKYiLCJzdGFydCI6MTQzODEsImVu
+ZCI6MTQ4NDh9LCJSOFdRVmpZT296Z3QwSWViIjp7InRleHQiOi
+JgZ2VtLW1hcHBhYmlsaXR5YCIsInN0YXJ0IjoxNTQwNSwiZW5k
+IjoxNTQyMn0sIk9TWm5mWUdFQ1hGYW5uTlciOnsidGV4dCI6Im
+BweUJpZ1dpZ2AiLCJzdGFydCI6MTU2MTcsImVuZCI6MTU2Mjd9
+LCI2eXdaMUgxUzY1bExNcWJmIjp7InRleHQiOiJgQkxBVGAiLC
+JzdGFydCI6MTY0ODQsImVuZCI6MTY0OTB9LCJLeXdVOHNTUDhy
+YzlRTGpTIjp7InRleHQiOiJhdCBsZWFzdCAyMCByZWFkcyIsIn
+N0YXJ0IjoxNzAzNywiZW5kIjoxNzA1NH0sIndiOEhUa2V1YjV3
+c0xjUTYiOnsidGV4dCI6IkRpZmZlcmVudGlhbCBzcGxpY2Ugan
+VuY3Rpb24gdXNhZ2UgYmV0d2VlbiBOTU0gYW5kIERNU08gdHJl
+YXRtZW50cyB3YXMgdGhlbiBjb27igKYiLCJzdGFydCI6MTcwNz
+UsImVuZCI6MTcyMjZ9LCJ3eGJReU1tbjZPUTgxTTNWIjp7InRl
+eHQiOiJGRFIgb2YgMC4yLiIsInN0YXJ0IjoxNzQwNSwiZW5kIj
+oxNzQxNn0sInh5eGwxbDBERnlaV0VLRDQiOnsidGV4dCI6InNp
+bmdsZSBjb250aWd1b3VzIGV4b25pYyByZWdpb24iLCJzdGFydC
+I6MTgxNDcsImVuZCI6MTgxNzh9LCJ6MEo5Y2Jkdnk2OEo2cG1D
+Ijp7InRleHQiOiJ1bmlxdWVseSBtYXBwZWQiLCJzdGFydCI6MT
+g4MjQsImVuZCI6MTg4Mzl9LCJxOTNiVFFhd2IyVlNEWHRaIjp7
+InRleHQiOiJQcmltZXIgU2VxdWVuY2VzIHVzZWQiLCJzdGFydC
+I6MTkxOTksImVuZCI6MTkyMjB9LCJwRGhoU1ZnNTVYdGlHSElS
+Ijp7InRleHQiOiJvdXIgUk5Bc2VxIGRhdGFzZXQiLCJzdGFydC
+I6MjA2ODcsImVuZCI6MjA3MDV9LCJkRm5JbFBpTUt0b1djSW9k
+Ijp7InRleHQiOiJUbyBkZW1vbnN0cmF0ZSB0aGF0IHRoZSBQRz
+QgZnJvbSBFeHRlbnNpbiBnZW5lcyBjb3VsZCBmb3JtIGEgRzQg
+c3RydWN0dXJlIGluIHZp4oCmIiwic3RhcnQiOjI0MzYwLCJlbm
+QiOjI0NDg3fSwiZGEwUjc5TW5qemkxaEFOTiI6eyJ0ZXh0Ijoi
+VG8gY29uZmlybSB0aGF0IHRoZSBFeHRlbnNpbiBnZW5lcyBhcm
+UgZG93bnJlZ3VsYXRlZCBieSBOTU0sIHdlIHBlcmZvcm1lZCBS
+TkEgZeKApiIsInN0YXJ0IjoyNTY4NiwiZW5kIjoyNTc5OH0sIm
+JYU0huMlV1TXhXSVJKYWkiOnsidGV4dCI6ImMpKiogTk1NIGRv
+d25yZWd1YXRpb24gb2YgRVhUMTMgYW5kIExSWDEgaXMgbm90IG
+FmZmVjdGVkIGJ5IGNvbmN1cnJlbnQgQ3ljbG9oZXjigKYiLCJz
+dGFydCI6MjgwNTYsImVuZCI6MjgxNDV9LCJlSGh2V1NXRmNGY2
+JpT2wxIjp7InRleHQiOiJoYXQgbWFueSBvZiB0aGUgRXh0ZW5z
+aW4gZ2VuZXMgaGFkIGxhcmdlIG51bWJlcnMgb2Ygbm92ZWwgc3
+BsaWNlZCBpc29mb3Jtcy4iLCJzdGFydCI6Mjg2OTYsImVuZCI6
+Mjg3NzF9LCJxZ1FvS0pYWGRRYWFXZmpQIjp7InRleHQiOiJkZX
+JpdmVkIGZyb20gdGhlIGludHJvbiBtb3RpZiIsInN0YXJ0Ijoz
+MDYyOSwiZW5kIjozMDY1OH0sIk1DZW9lQ24yTEVwcjVKSUwiOn
+sidGV4dCI6IkNUL0FDLiIsInN0YXJ0IjozNzI2NSwiZW5kIjoz
+NzI3MX0sIlQyQUlyRW5sdjF5R1BYY0oiOnsidGV4dCI6IiFbKi
+pTYW5nZXIgc2VxdWVuY2luZyBvZiBMUlgxIGFuZCBFWFQ5IGNE
+TkEgaWRlbnRpZmllcyBzcGxpY2VkIGZvcm1zKiogKiphKSoqIE
+figKYiLCJzdGFydCI6MzcyODMsImVuZCI6Mzc3NzN9LCJHQ1dl
+WW9zUFJNeEozZldZIjp7InRleHQiOiJPbmx5IHNwbGljZSBqdW
+5jdGlvbnMgd2l0aCBhdCBsZWFzdCAyMCBzdXBwb3J0aW5nIHJl
+YWRzIHRvdGFsIGFjcm9zcyB0aGUgNiBzYW1w4oCmIiwic3Rhcn
+QiOjM5NTg2LCJlbmQiOjM5NjkyfSwiakw0dW1BdWdiWUdzUUhw
+cSI6eyJ0ZXh0IjoiZyBgbGltbWEtdm9vbWAgYW5kIGBsaW1tYS
+1kaWZmU3BsaWNlYCIsInN0YXJ0Ijo0MDA0MywiZW5kIjo0MDA4
+MH0sIkZwQjhnZUs0RFpNMlVPengiOnsidGV4dCI6ImFuIEZEUi
+B0aHJlc2hvbGQgb2YgMC4yIiwic3RhcnQiOjQwMjUzLCJlbmQi
+OjQwMjc2fSwiem5YVGdMVlJPTWpyOWp6diI6eyJ0ZXh0IjoicG
+xpY2VkIG1hcHBpbmcgdG8gdGhlc2UgZ2VuZXMgaXMgYSBzeXN0
+ZW1hdGljIG1hcHBpbmcgZXJyb3IgdGhhdCBvY2N1cnMgYXQgYX
+BwcuKApiIsInN0YXJ0Ijo0MjY5NCwiZW5kIjo0MjgzNX0sImY5
+aEZaaERoWmF3djNWeUkiOnsidGV4dCI6IkRlc3BpdGUgdGhlc2
+UgbmVnYXRpdmUgcmVzdWx0cywgd2Ugd2VyZSBhYmxlIHRvIGlk
+ZW50aWZ5IFBDUiBwcm9kdWN0cyBmcm9tIGNETkHigKYiLCJzdG
+FydCI6NDg1ODYsImVuZCI6NDg3MjR9fSwiY29tbWVudHMiOnsi
+RHF3Y1Z6ZTZPYXNXOE1RVyI6eyJkaXNjdXNzaW9uSWQiOiJydk
+luUXlVNFlRblg5V3g5Iiwic3ViIjoiZ286MTAyMjA1Nzk3Mjc2
+OTQxMDEwNjc3IiwidGV4dCI6ImVucmljaGVkIGF0ID8iLCJjcm
+VhdGVkIjoxNTM2NjYzOTM3NDM2fSwiUnFZRnozaWVuNDk0UEVl
+NSI6eyJkaXNjdXNzaW9uSWQiOiJzNTJrdFVrQnRWTk9SMTN2Ii
+wic3ViIjoiZ286MTAyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4
+dCI6IldoYXQgYXJlIFwiaGlnaGVyXCIgZXVrYXJ5b3Rlcz8gRG
+8geW91IG1lYW4gcGxhbnRzIGFuZCBtZXRhem9hPyIsImNyZWF0
+ZWQiOjE1MzY2NjQ4NTQxNzV9LCJ4ckF3Y1Q4UjdWRnlZa21pIj
+p7ImRpc2N1c3Npb25JZCI6ImtZNW9UTWtqek1CZDhRQnoiLCJz
+dWIiOiJnbzoxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZXh0Ij
+oiRGVmaW5hdGUgXCJtb3JlIHN0cm9uZ2x5IGNhbm9uaWNhbFwi
+PyIsImNyZWF0ZWQiOjE1MzY2NjQ5NzM2NjF9LCI1czQyVlZPR2
+9nTmowaHlnIjp7ImRpc2N1c3Npb25JZCI6IkRxOXJTMExpcEpw
+SExVWDEiLCJzdWIiOiJnbzoxMDIyMDU3OTcyNzY5NDEwMTA2Nz
+ciLCJ0ZXh0IjoiSXMgdGhlIHJlZmVyZW5jZSBmb3IgdGhpcyB0
+aGUgb25lIGluIHRoZSBuZXh0IHNlbnRlbmNlPyIsImNyZWF0ZW
+QiOjE1MzY2NjUwNTkzNDZ9LCJJeGhkR25BYXJGSVkzTnA2Ijp7
+ImRpc2N1c3Npb25JZCI6InlJWjVVQk1nYTJTSG40R1kiLCJzdW
+IiOiJnbzoxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZXh0Ijoi
+V2UndmUgYWxyZWFkeSB0YWxrZWQgYWJvdXQgYmVpbmcgbW9yZS
+BleHBsaWNpdCBhYm91dCB3aG8gZGlkIHdoYXQuIFlvdSBuZWVk
+IG1vcmUgZGV0YWlsIHdoZXJlIHlvdSBkaWQgaXQsIGFuIHRvIH
+NheSB3aGVuIHlvdSBkaWRuJ3QuIiwiY3JlYXRlZCI6MTUzNjY2
+NTExOTc3OH0sIlRZMmxPWFgwUFZrdGNENlMiOnsiZGlzY3Vzc2
+lvbklkIjoiMDVCbUdsaVhkZDJuaDVvNiIsInN1YiI6ImdvOjEw
+MjIwNTc5NzI3Njk0MTAxMDY3NyIsInRleHQiOiJDb25jZW50cm
+F0aW9ucyBuZWVkZWQgaGVyZSwgZXZlbiBpZiB5b3UgZGlkbid0
+IGRvIGl0LiIsImNyZWF0ZWQiOjE1MzY2NjUxNjkxNzl9LCJwYm
+hPVjY3QnBkSWNBMTZtIjp7ImRpc2N1c3Npb25JZCI6Ik9rbW1o
+RDRoaktuZzVkZFgiLCJzdWIiOiJnbzoxMDIyMDU3OTcyNzY5ND
+EwMTA2NzciLCJ0ZXh0IjoiRXhwZXJpbWV0YWwgZGVzaWduLCBu
+dW1iZXIgb2YgcmVwbGljYXRlcywgd2hhdCB3ZXJlIHRoZSBjb2
+5kaXRpb25zIGV0Yy4iLCJjcmVhdGVkIjoxNTM2NjY1MjEwNzUz
+fSwiUlAxcVJ3Z2FxTll2dklUYyI6eyJkaXNjdXNzaW9uSWQiOi
+JDT3FwZGRiU3JleXFSUFBSIiwic3ViIjoiZ286MTAyMjA1Nzk3
+Mjc2OTQxMDEwNjc3IiwidGV4dCI6IldoYXQgd2VyZSB5b3VyIG
+NyaXRlcmlhPyAgRG8gd2UganVzdCBhY2NlcHQgdGhhdCB0aGUg
+c2FtcGxlcyBwYXNzZWQ/IiwiY3JlYXRlZCI6MTUzNjY2NTI0OT
+Y1Mn0sIlo5QkRPd0lwVGNDTXMyM1QiOnsiZGlzY3Vzc2lvbklk
+IjoiUEFURVpnQW1LT1pTMXVzbCIsInN1YiI6ImdvOjEwMjIwNT
+c5NzI3Njk0MTAxMDY3NyIsInRleHQiOiJXaGF0IHBhcmFtZXRl
+cnM/IiwiY3JlYXRlZCI6MTUzNjY2NTI2MzU4MH0sInFyR3FtWF
+VmOHRRbjFJS0UiOnsiZGlzY3Vzc2lvbklkIjoiM011dUVCb0h1
+TkZ2bEQ3YyIsInN1YiI6ImdvOjEwMjIwNTc5NzI3Njk0MTAxMD
+Y3NyIsInRleHQiOiJUYWJsZSB3aXRoIGluc2VydCBzaXplPyIs
+ImNyZWF0ZWQiOjE1MzY2NjUyODUwNTh9LCJ0aGpaUmxCa2ZGT1
+ZrSHY2Ijp7ImRpc2N1c3Npb25JZCI6ImN4V2xnUDFpbWVBM3Np
+UTAiLCJzdWIiOiJnbzoxMDIyMDU3OTcyNzY5NDEwMTA2NzciLC
+J0ZXh0IjoiUGFja2FnZSB2ZXJzaW9ucyBuZWVkZWQuIElkZWFs
+bHkgYWxzbyBzY3JpcHRzLiIsImNyZWF0ZWQiOjE1MzY2NjUzMT
+UyNzJ9LCJPM05YZVdaWHVzSTJsTmNwIjp7ImRpc2N1c3Npb25J
+ZCI6ImdXdEFpdHMwUE9xZVlEazQiLCJzdWIiOiJnbzoxMDIyMD
+U3OTcyNzY5NDEwMTA2NzciLCJ0ZXh0IjoiV2hhdCB3ZXJlIHRo
+ZSBuZXcgcGFyYW1ldGVycz8gUGVyaGFwcyBwcm92aWRlIHRoZS
+Bjb21tYW5kbGluZS4iLCJjcmVhdGVkIjoxNTM2NjY1MzU4NDM3
+fSwib0o5elZkMmJodEl0bTVBVyI6eyJkaXNjdXNzaW9uSWQiOi
+JuRWQ0WW1WR0pNUU8xNzhCIiwic3ViIjoiZ286MTAyMjA1Nzk3
+Mjc2OTQxMDEwNjc3IiwidGV4dCI6InZlcnNpb24iLCJjcmVhdG
+VkIjoxNTM2NjY1MzcyNTk4fSwiNVYyQ3diTUczUUJoVlVuZyI6
+eyJkaXNjdXNzaW9uSWQiOiJJYWc4ZkRyM0NBUEo4Tm9VIiwic3
+ViIjoiZ286MTAyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6
+InZlcnNpb24iLCJjcmVhdGVkIjoxNTM2NjY1MzgwMjk0fSwiNU
+1RZ29PbEhIQ1V4WDdyaSI6eyJkaXNjdXNzaW9uSWQiOiJsRFdp
+emFWRkxBNU1LQlZ4Iiwic3ViIjoiZ286MTAyMjA1Nzk3Mjc2OT
+QxMDEwNjc3IiwidGV4dCI6ImV4cGxhaW4gXCJmbGF0dGVuZWQg
+ZXhvbiBtb2RlbHNcIiIsImNyZWF0ZWQiOjE1MzY2NjU0MDg4Nz
+V9LCJhOUxHSFQyRDdXQXc1QmtQIjp7ImRpc2N1c3Npb25JZCI6
+ImJrQlB0U3FTbUZsRUJwYVQiLCJzdWIiOiJnbzoxMDIyMDU3OT
+cyNzY5NDEwMTA2NzciLCJ0ZXh0IjoiV2hlcmUgYXJlIHlvdSBn
+ZXR0ZXIgeW91ciBnZW5lOm9udG9sb2d5IG1hcHBpbmcgZnJvbT
+8iLCJjcmVhdGVkIjoxNTM2NjY1NDU5Njc1fSwiOGk0cVJsVWtl
+WmRpOVU5NCI6eyJkaXNjdXNzaW9uSWQiOiJEUWJqU3dRNzdwSW
+F5bmdsIiwic3ViIjoiZ286MTAyMjA1Nzk3Mjc2OTQxMDEwNjc3
+IiwidGV4dCI6InNjcmlwdHMgZm9yIGFsbCB0aGlzPyIsImNyZW
+F0ZWQiOjE1MzY2NjU0OTU2NDl9LCJoWU81V3p6ak1FYWFBelhl
+Ijp7ImRpc2N1c3Npb25JZCI6IjFqRHJPV3NtZk1LQ2dCeFMiLC
+JzdWIiOiJnbzoxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZXh0
+IjoiVmVyc2lvbiwgYW5ub3RhdGlvbiBzb3VyY2U/IiwiY3JlYX
+RlZCI6MTUzNjY2NTUxMzc2M30sImFFejV2aGtDc0R1VEVQRHki
+OnsiZGlzY3Vzc2lvbklkIjoiS2FJMnpqUGZZclBJNlhhMiIsIn
+N1YiI6ImdvOjEwMjIwNTc5NzI3Njk0MTAxMDY3NyIsInRleHQi
+OiJzY3JpcHQiLCJjcmVhdGVkIjoxNTM2NjY1NTMwMDcwfSwien
+hDWnE2WFA3TnozOVZ6YSI6eyJkaXNjdXNzaW9uSWQiOiJRTTU1
+QWlrU1ZDdkFhejJMIiwic3ViIjoiZ286MTAyMjA1Nzk3Mjc2OT
+QxMDEwNjc3IiwidGV4dCI6ImRlc2NyaWJlIG9yIHJlZmVyZW5j
+ZS4iLCJjcmVhdGVkIjoxNTM2NjY1NTQ3NzEwfSwiQVJpVmdXUz
+I3UjlsV3hRUSI6eyJkaXNjdXNzaW9uSWQiOiJISnptMWRtSE11
+alR1anlBIiwic3ViIjoiZ286MTAyMjA1Nzk3Mjc2OTQxMDEwNj
+c3IiwidGV4dCI6InBhcmFtZXRlcnMvb3B0aW9ucy4iLCJjcmVh
+dGVkIjoxNTM2NjY1NTg3MzE4fSwibmhrYzcwRUxScmZwQnNZYS
+I6eyJkaXNjdXNzaW9uSWQiOiI0TVl5QzdnV0ljMFBkNnhYIiwi
+c3ViIjoiZ286MTAyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dC
+I6Ikhvdz8iLCJjcmVhdGVkIjoxNTM2NjY1NjA0MjI2fSwiQW1h
+czU1d0t3UExBWWV6cSI6eyJkaXNjdXNzaW9uSWQiOiJzUjl2c3
+c1RXZNNTJFWFVFIiwic3ViIjoiZ286MTAyMjA1Nzk3Mjc2OTQx
+MDEwNjc3IiwidGV4dCI6Ikhvdz8iLCJjcmVhdGVkIjoxNTM2Nj
+Y1NjEyNDkzfSwibTRFc0U2ZGZCU01tbVdwdSI6eyJkaXNjdXNz
+aW9uSWQiOiJTUUxlZTlNTE5ST3NNYjFiIiwic3ViIjoiZ286MT
+AyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6IldoZXJlIGRv
+IEkgZmluZCB0aGlzPyIsImNyZWF0ZWQiOjE1MzY2NjU2NjI2Nj
+Z9LCJTVkJDd0hxVTBybk54RHRqIjp7ImRpc2N1c3Npb25JZCI6
+IlNXZ0c1bkttN0xKSEFIbEoiLCJzdWIiOiJnbzoxMDIyMDU3OT
+cyNzY5NDEwMTA2NzciLCJ0ZXh0IjoiV2hhdCBkbyB5b3UgbWVh
+biBieSBcInVuaXF1ZSBzcGxpY2UganVuY3Rpb24gcGFpcnNcIj
+8iLCJjcmVhdGVkIjoxNTM2NjY1Njg1OTA1fSwiNnFRVkNOVGJM
+RzJKUGZhRSI6eyJkaXNjdXNzaW9uSWQiOiJlcGpJSGMwaXpWYk
+pVZkZEIiwic3ViIjoiZ286MTAyMjA1Nzk3Mjc2OTQxMDEwNjc3
+IiwidGV4dCI6IkNhbGN1bGF0ZWQgaG93PyIsImNyZWF0ZWQiOj
+E1MzY2NjU5MzQ1NzF9LCJJZHVnYlBTTGVnZVpuOUg0Ijp7ImRp
+c2N1c3Npb25JZCI6IkJjakJGWWtGSjZnZHZDeDMiLCJzdWIiOi
+JnbzoxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZXh0IjoiU2Ny
+aXB0cyBuZWVkZWQiLCJjcmVhdGVkIjoxNTM2NjY1OTUyMTg2fS
+wiNndWOWFGdFM2V2Q4NXhObiI6eyJkaXNjdXNzaW9uSWQiOiJj
+YnhWRm9XVWV0NVVSRlRIIiwic3ViIjoiZ286MTAyMjA1Nzk3Mj
+c2OTQxMDEwNjc3IiwidGV4dCI6IkhvdyB3YXMgdGhpcyBkb25l
+PyBweXNhbT8gd2hlcmUgaXMgdGhlIGNvZGU/IiwiY3JlYXRlZC
+I6MTUzNjY2NTk3NzE4Nn0sIlF3bTVrdFBSZWYyYjF4TkQiOnsi
+ZGlzY3Vzc2lvbklkIjoiUjhXUVZqWU9vemd0MEllYiIsInN1Yi
+I6ImdvOjEwMjIwNTc5NzI3Njk0MTAxMDY3NyIsInRleHQiOiJ2
+ZXJzaW9uIiwiY3JlYXRlZCI6MTUzNjY2NjA0NTQ3Nn0sIkNrVk
+83TDVNUENHdXlVcE8iOnsiZGlzY3Vzc2lvbklkIjoiT1NabmZZ
+R0VDWEZhbm5OVyIsInN1YiI6ImdvOjEwMjIwNTc5NzI3Njk0MT
+AxMDY3NyIsInRleHQiOiJzY3JpcHQvY29kZSIsImNyZWF0ZWQi
+OjE1MzY2NjYwNTYzMDh9LCJDUGwyQkZ3Y29obHR1dFZaIjp7Im
+Rpc2N1c3Npb25JZCI6IjZ5d1oxSDFTNjVsTE1xYmYiLCJzdWIi
+OiJnbzoxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZXh0Ijoic2
+V0dGluZ3MvcGFyYW1ldGVycz8gT3Igd2Vic2l0ZSBhZGRyZXNz
+PyIsImNyZWF0ZWQiOjE1MzY2NjYwODk3MDZ9LCJiTXRWdTd3UW
+tKa1pHMlNTIjp7ImRpc2N1c3Npb25JZCI6Ikt5d1U4c1NQOHJj
+OVFMalMiLCJzdWIiOiJnbzoxMDIyMDU3OTcyNzY5NDEwMTA2Nz
+ciLCJ0ZXh0Ijoid2h5IDIwPyIsImNyZWF0ZWQiOjE1MzY2NjYx
+MTM3MzB9LCJGcTNJQUlqcEZlWjh5UVg2Ijp7ImRpc2N1c3Npb2
+5JZCI6IndiOEhUa2V1YjV3c0xjUTYiLCJzdWIiOiJnbzoxMDIy
+MDU3OTcyNzY5NDEwMTA2NzciLCJ0ZXh0IjoiSG93IGNvdW50ZW
+Q/IFZlcnNpb25zL3NjcmlwdHM/IiwiY3JlYXRlZCI6MTUzNjY2
+NjE2Mjk4M30sIjdDdWJtUWlXREVBRWRQaXciOnsiZGlzY3Vzc2
+lvbklkIjoid3hiUXlNbW42T1E4MU0zViIsInN1YiI6ImdvOjEw
+MjIwNTc5NzI3Njk0MTAxMDY3NyIsInRleHQiOiJZb3UgbmVlZC
+B0byBjb21tZW50IHNvbWV3aGVyZSBhYm91dCB0aGUgbGF4bmVz
+cyBvZiB0aGlzIHRocmVzaG9sZC4gTWF5YmUgaW4gdGhlIHJlc3
+VsdHMgb3IgdGhlIGRpc2N1c3Npb24uIiwiY3JlYXRlZCI6MTUz
+NjY2Njg2OTY1M30sIkpMNEZJQjNoTFhWVlFDa1EiOnsiZGlzY3
+Vzc2lvbklkIjoieHl4bDFsMERGeVpXRUtENCIsInN1YiI6Imdv
+OjEwMjIwNTc5NzI3Njk0MTAxMDY3NyIsInRleHQiOiJDb250aW
+d1b3VzIGluIHRoZSBmbGF0dGVuZWQgbW9kZWw/IiwiY3JlYXRl
+ZCI6MTUzNjY2NjkwNjU4OH0sIkZYeGtlTTFtSVM1WkVLTUQiOn
+siZGlzY3Vzc2lvbklkIjoiejBKOWNiZHZ5NjhKNnBtQyIsInN1
+YiI6ImdvOjEwMjIwNTc5NzI3Njk0MTAxMDY3NyIsInRleHQiOi
+JpZGVudGlmaWVkIGhvdz8gRnJvbSB0aGUgTkggdGFnPyBGcm9t
+IHRoZSBtYXBwaW5nIHF1YWxpdHk/IiwiY3JlYXRlZCI6MTUzNj
+Y2Njk1MTIxMH0sInVDcXhETjFaWndYekNuRnciOnsiZGlzY3Vz
+c2lvbklkIjoicTkzYlRRYXdiMlZTRFh0WiIsInN1YiI6ImdvOj
+EwMjIwNTc5NzI3Njk0MTAxMDY3NyIsInRleHQiOiJNYXliZSB5
+b3UgY291bGQgaGF2ZSBhbiBhcHBlbmRpeCB3aXRoIFByb2dyYW
+0gYW5kIHBhY2thZ2UgdmVyc2lvbi4gU2NyaXB0IG5hbWVzLCBs
+b2NhdGlvbnMgYW5kIHdoZXJlIHRoZXkgd2VyZSB1c2VkLiIsIm
+NyZWF0ZWQiOjE1MzY2NjcwMTAzNDd9LCJwaGRCVmZ4VUJRRGJP
+bzh6Ijp7ImRpc2N1c3Npb25JZCI6InBEaGhTVmc1NVh0aUdISV
+IiLCJzdWIiOiJnbzoxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0
+ZXh0IjoiV2hhdCBSTkFzZXEgZGF0YXNldD8gWW91IGhhdm4ndC
+BpbnRyb2R1Y2VkIHRoaXM/IFdoYXQgd2FzIHRoZSBkZXNpZ24/
+IERvZXMgaXQgcmVjYXB0aXVsYXRlIHRoZSBwYXR0ZXJucyB5b3
+UgZGlzY3Vzc2VkIGluIHRoZSBwcmV2aW91cyBjaGFwdGVyPyIs
+ImNyZWF0ZWQiOjE1MzY2NjcxNzk0MjZ9LCJneFZwWkhCZlJXeX
+pXNnBYIjp7ImRpc2N1c3Npb25JZCI6ImRGbklsUGlNS3RvV2NJ
+b2QiLCJzdWIiOiJnbzoxMDIyMDU3OTcyNzY5NDEwMTA2NzciLC
+J0ZXh0IjoiTm90IGluIG1ldGhvZHM/IiwiY3JlYXRlZCI6MTUz
+NjY2OTc1MzM2M30sIjZHbDl5eUFHbXc4dDlzOTciOnsiZGlzY3
+Vzc2lvbklkIjoiZGEwUjc5TW5qemkxaEFOTiIsInN1YiI6Imdv
+OjEwMjIwNTc5NzI3Njk0MTAxMDY3NyIsInRleHQiOiJXaGF0IG
+hhcHBlbnMgdG8gdGhlaXIgZXhwcmVzc2lvbiBpbiB0aGUgZGF0
+YXNldHMgZnJvbSB0aGUgcHJldmlvdXMgY2hhcHRlcj8iLCJjcm
+VhdGVkIjoxNTM2NjY5Nzg3MDc1fSwiZG8zVlZuZVhHclZFTlhY
+MyI6eyJkaXNjdXNzaW9uSWQiOiJiWFNIbjJVdU14V0lSSmFpIi
+wic3ViIjoiZ286MTAyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4
+dCI6IkludGVyc3RpbmcgdGhhdCB0byBzb21lIGV4dGVudCB0aG
+UgZWZmZWN0IGluIENIWCBpcyBldmVuIGhpZ2hlci4iLCJjcmVh
+dGVkIjoxNTM2NjY5ODIyNDE0fSwibUhSTzlMc3RpZTB2WnlSSi
+I6eyJkaXNjdXNzaW9uSWQiOiJlSGh2V1NXRmNGY2JpT2wxIiwi
+c3ViIjoiZ286MTAyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dC
+I6IklzIHRoaXMgaW4gdGhhdCBwYXBlciwgb3IgaXMgaXQgc29t
+ZXRoaW5nIHlvdSBleHRyYWN0ZWQgZnJvbSB0aGVpciByZXN1bH
+RzLiIsImNyZWF0ZWQiOjE1MzY2Njk4NTQ4MzZ9LCJqQVg0eW9E
+ZHJUTlYwNkcyIjp7ImRpc2N1c3Npb25JZCI6InFnUW9LSlhYZF
+FhYVdmalAiLCJzdWIiOiJnbzoxMDIyMDU3OTcyNzY5NDEwMTA2
+NzciLCJ0ZXh0IjoiT3IgZnJvbSBzdHJhbmRlZCBzZXF1ZW5jaW
+5nLiIsImNyZWF0ZWQiOjE1MzY2Njk4NzgwNTl9LCJGTlRFNmtD
+TVFnSm9DdUhyIjp7ImRpc2N1c3Npb25JZCI6Ik1DZW9lQ24yTE
+VwcjVKSUwiLCJzdWIiOiJnbzoxMDIyMDU3OTcyNzY5NDEwMTA2
+NzciLCJ0ZXh0Ijoid2VpcmQiLCJjcmVhdGVkIjoxNTM2NjcyMj
+Y2NTMxfSwicDlIVzRRcmFqTkd2c01UMCI6eyJkaXNjdXNzaW9u
+SWQiOiJUMkFJckVubHYxeUdQWGNKIiwic3ViIjoiZ286MTAyMj
+A1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6Ik1hcmsgb24gc2Vx
+dWVuY2luZy9jbG9uaW5nIHByaW1lcnMiLCJjcmVhdGVkIjoxNT
+M2NjcyOTU5Njc3fSwiTW15NUd1clVIVjhaczZNeCI6eyJkaXNj
+dXNzaW9uSWQiOiJHQ1dlWW9zUFJNeEozZldZIiwic3ViIjoiZ2
+86MTAyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6IldoeSAy
+MD8gV2hhdCBmcmFjdGlvbiBvZiBqdW5jdGlvbnMgd2VyZSBrZX
+B0PyBXaGF0IGZyYWN0aW9uIG9mIGp1bmN0aW9ucyBpbiB0aGUg
+RVhUIGdlbmVzLiIsImNyZWF0ZWQiOjE1MzY2NzMwMTE5ODd9LC
+JSc29VN3l6VDNCU1Zwd1B3Ijp7ImRpc2N1c3Npb25JZCI6ImpM
+NHVtQXVnYllHc1FIcHEiLCJzdWIiOiJnbzoxMDIyMDU3OTcyNz
+Y5NDEwMTA2NzciLCJ0ZXh0IjoiV2h5IHRoaXMgYW5kIG5vdCBE
+RVhTZXE/IiwiY3JlYXRlZCI6MTUzNjY3MzAzMTQ2N30sIkl2OG
+xPZVNwN3NxS1FqTkciOnsiZGlzY3Vzc2lvbklkIjoiRnBCOGdl
+SzREWk0yVU96eCIsInN1YiI6ImdvOjEwMjIwNTc5NzI3Njk0MT
+AxMDY3NyIsInRleHQiOiJOZWVkcyBjb21tZW5kLCBvdGhlcndp
+c2UgaXQgbG9va3MgbGlrZSB5b3VyIGp1c3QgdHJ5aW5nIHRvIG
+dldCBhd2F5IHdpdGggaXQuIiwiY3JlYXRlZCI6MTUzNjY3MzA1
+MTkxNn0sIkkzY2Z0VDdKNGxubG11eUYiOnsiZGlzY3Vzc2lvbk
+lkIjoiem5YVGdMVlJPTWpyOWp6diIsInN1YiI6ImdvOjEwMjIw
+NTc5NzI3Njk0MTAxMDY3NyIsInRleHQiOiJXaGF0IGFib3V0IG
+xpbWl0aW5nIHRoZSBhbmFsYXlzaXMgdG8gY2Fub25pY2FsIHNw
+bGljZSBqdW5jdGlvbnM/IiwiY3JlYXRlZCI6MTUzNjY3MzA5Nz
+Q4MX0sIndjRHduTTE1Um1QcUV2WXgiOnsiZGlzY3Vzc2lvbklk
+IjoiZjloRlpoRGhaYXd2M1Z5SSIsInN1YiI6ImdvOjEwMjIwNT
+c5NzI3Njk0MTAxMDY3NyIsInRleHQiOiJJcyB0aGVyZSBhIGNo
+YW5nZSBpbiB0aGUgZGlzdHJpYnV0aW9uIG9mIFBDUiBiYW5kcy
+ArTk1NPyIsImNyZWF0ZWQiOjE1MzY2NzQyNjQ0ODJ9fSwiaGlz
+dG9yeSI6Wy00ODM1MzExMjgsMTQ1MjU5MjY5OCwtMTM2NDE0ND
+A3OCwtNDYxMzE0MTczLDc1NzU1NzA3MiwtMjEwOTMyODAwNSwt
+NzQzMzU0NjI5LDExNDM2ODgzMTgsLTE2NTk1NDAzNzcsLTE2MT
+A3NzMwNTMsNzk4ODg2ODQsLTIwMTY5MTExMDcsLTE4MjgzNzgw
+NTgsNDQ3MTI3NDE5LC0xNTA1NzYwMDA4LC0xMjAzODQ0OTddfQ
+-->

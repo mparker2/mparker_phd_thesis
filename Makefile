@@ -35,6 +35,8 @@ pdf :
 		-V papersize=a4paper \
 		-V documentclass=report \
 		--pdf-engine=xelatex \
+		-V sansfont="CMU Sans Serif" \
+		-V mathfont="Latin Modern Math" \
 		-V secnumdepth=4 \
 		--filter ./pandoc-shortcaption/pandoc_shortcaption/__main__.py \
 		--read=markdown \
