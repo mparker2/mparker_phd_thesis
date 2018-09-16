@@ -8,7 +8,7 @@ This folder contains all the notebooks and code used to generate the figures for
 
 1. g4predict: A regular expression matching package for identifying putative G-Quadruplexes by the Quadparser method, plus methods for filtering them, including using interval scheduling algorithms to yield the maximum number of non-overlapping PG4s: [https://www.github.com/mparker2/g4predict](https://www.github.com/mparker2/g4predict)
 * g4seeqer: DNA and RNA G-Quadruplex prediction using an artificial neural network, plus Cython implementation of g4hunter and tools for interpretation of neural network scores using mutation mapping: [https://www.github.com/mparker2/g4seeqer](https://www.github.com/mparker2/g4seeqer)
-* g4netx: A package which identifies all possible overlapping registers of Quadparser PG4s using network analysis: [https://www.github.com/mparker2/g4predict](https://www.github.com/mparker2/g4predict)
+* g4netx: A package which identifies all possible overlapping registers of Quadparser PG4s using network analysis: [https://www.github.com/mparker2/g4netx](https://www.github.com/mparker2/g4netx)
 * matplotlib_logo: Plotting package for making sequence logos: [https://www.github.com/mparker2/matplotlib_logo](https://www.github.com/mparker2/matplotlib_logo)
 
 ### Chapter 2: A Recurrent Neural Network to Predict G Quadruplex Structure
