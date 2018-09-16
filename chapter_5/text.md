@@ -57,7 +57,7 @@ For analyses where G4seeqer was used, PG4 predictions were conducted on the TAIR
 
 ### Self Organising Map Analysis
 
-Loop lengths and total loop lengths for each Quadparser 2 tetrad PG4 in the TAIR10 genome were extracted from bed files output by g4predict. PG4s which did not overlap with gene bodies were discarded. Self Organising Maps were trained in R version 3.4.1 using the package `kohonen` version 3.0.6 on loop length data [@Wehrens2007]. 36 clusters were used. To identify enrichment of specific clusters of PG4s in NMM downregulated genes, the total number of PG4s from each cluster overlapping the geneset was calculated, and compared to an expected number of overlaps computed by permuting PG4s amongst all genes. Genes were weighted by length such that a 2kb gene was twice as likely to be assigned PG4s as a 1kb gene. Coding and template strand PG4s were permuted separately. The log fold change between observed and expected overlap was then calculated for each cluster. SOM plots were made in Python  using `matplotlib` version 2.1.0 [@Hunter2007].
+Loop lengths and total loop lengths for each Quadparser 2 tetrad PG4 in the TAIR10 genome were extracted from bed files output by g4predict. PG4s which did not overlap with gene bodies were discarded. Self Organising Maps were trained in R version 3.4.1 using the package `kohonen` version 3.0.6 on loop length data [@Wehrens2007]. 36 clusters were used. To identify enrichment of specific clusters of PG4s in NMM downregulated genes, the total number of PG4s from each cluster overlapping the geneset was calculated, and compared to an expected number of overlaps computed by permuting PG4s amongst all genes. Genes were weighted by length such that a 2kb gene was twice as likely to be assigned PG4s as a 1kb gene. Coding and template strand PG4s were permuted separately. The log fold change between observed and expected overlap was then calculated for each cluster. SOM plots were made in Python  using `matplotlib` version 2.1.0 [@Hunter2007]. Code is available in Appendix \ref{self_organising_map_analysis}.
 
 ### Venn diagrams
 
@@ -67,7 +67,7 @@ Venn diagrams of geneset overlaps were produced in Python 3.5 using the package 
 
 RNA Polymerase II ChIP-tiling array data was downloaded from GEO Accession GSE21673 [@Chodavarapu2010]. This data was from plants grown under 24hr light on soil for 10-14 days before being harvested. The authors conducted the ChIP using Abcam ab817 Pol II antibody and the GEO entry lists the tiling arrays used as Affymetrix Arabidopsis Tiling 1.0R Array. Pol II occupancy tracks were generated from CEL files in R version 3.3.2 using `STARR` version 1.28.0 [@Zacher2010]. Cyclic lowess method was used for probe intensity normalisation. The enrichment ratio of PolII signal intensity over control was calculated and saved in BigWig format using `rtracklayer` version 1.32.2 [@Lawrence2009]. Code used to normalize ChIP-chip data is available in Appendix \ref{polii_chip_microarray_analysis}. Metagene profiles for all genes were produced using CGAT `bam2geneprofile` version 0.2 [@Sims2014]. Gene profiles of merged exons (without introns) were produced using 100 bins across the gene body, with an upstream and downstream extension of 500bp at 10bp resolution (i.e. binned in 10bp intervals).
 
-To compared Pol II occupancy of G4 containing genes with non-G4 containing genes, genesets with max G4seeqer scores greater than 0.95 and less than 0.05, or maximal PG4 density greater than 2 or equal to zero were used. Metagene profile matrices were read into Python using `pandas` and averaged profiles for each geneset were generated using `seaborn` bootstrapping to estimate central tendency and confidence intervals [@Mckinney2011; @Waskom2014]. Bootstrapped profiles were smoothed using a moving average of 20. 1000 iterations were used for all bootstraps. Profiles were normalised so that the absolute area under the curve was equal to one.
+To compared Pol II occupancy of G4 containing genes with non-G4 containing genes, genesets with max G4seeqer scores greater than 0.95 and less than 0.05, or maximal PG4 density greater than 2 or equal to zero were used. Metagene profile matrices were read into Python using `pandas` and averaged profiles for each geneset were generated using `seaborn` bootstrapping to estimate central tendency and confidence intervals [@Mckinney2011; @Waskom2014]. Bootstrapped profiles were smoothed using a moving average of 20. 1000 iterations were used for all bootstraps. Profiles were normalised so that the absolute area under the curve was equal to one. Code used to generate metagene profiles is available in Appendix \ref{polii_occupancy_metagene_profiles}.
 
 ### GRO/RNA seq analysis
 
@@ -221,77 +221,77 @@ Previous studies of PG4 localisation in Arabidopsis have highlighted a greater n
 \newpage
 <!--stackedit_data:
 eyJkaXNjdXNzaW9ucyI6eyJxekZrOU85eWhFTGYzMDR5Ijp7In
-RleHQiOiJ3ZSIsInN0YXJ0IjoxOTQzMSwiZW5kIjoxOTQzMX0s
+RleHQiOiJ3ZSIsInN0YXJ0IjoxOTYwMywiZW5kIjoxOTYwM30s
 IjVzWEhYN3V3MzZPTmU5aTciOnsidGV4dCI6IlBQTFIiLCJzdG
-FydCI6MTk4MTMsImVuZCI6MTk4MTd9LCJpb2hLM0FaU1hneEVa
+FydCI6MTk5ODUsImVuZCI6MTk5ODl9LCJpb2hLM0FaU1hneEVa
 aFlhIjp7InRleHQiOiJuIE1BIHBsb3Qgb2YgYXZlcmFnZSBnZW
 5lIGV4cHJlc3Npb24gdnMgbG9nIGZvbGQgY2hhbmdlLCB3aXRo
-IGxvd2VzcyBjdXJ2ZSBmaXR04oCmIiwic3RhcnQiOjIwMTI0LC
-JlbmQiOjIwMzM1fSwiSWt5c2VaWmw1NlFnWHRPdiI6eyJ0ZXh0
+IGxvd2VzcyBjdXJ2ZSBmaXR04oCmIiwic3RhcnQiOjIwMjk2LC
+JlbmQiOjIwNTA3fSwiSWt5c2VaWmw1NlFnWHRPdiI6eyJ0ZXh0
 IjoiVGhpcyBnbG9iYWwgcGF0dGVybiwgd2hpY2ggdmlvbGF0ZX
 Mgc29tZSBvZiB0aGUgYXNzdW1wdGlvbnMgdGhhdCBhcmUgdXN1
-YWxseSB1c+KApiIsInN0YXJ0IjoyMDYyOSwiZW5kIjoyMDg1NH
+YWxseSB1c+KApiIsInN0YXJ0IjoyMDgwMSwiZW5kIjoyMTAyNn
 0sInNyMlJ4ZHphTDFRa1Y2Sm0iOnsidGV4dCI6Ik1BIHBsb3Qg
 c2hvd2luZyByZWxhdGlvbnNoaXAgYmV0d2VlbiBhdmVyYWdlIG
 dlbmUgZXhwcmVzc2lvbiBhbmQgTG9nMiBmb2xkIGNoYW7igKYi
-LCJzdGFydCI6MjA5MjAsImVuZCI6MjExODJ9LCIxTGJOcENEdn
+LCJzdGFydCI6MjEwOTIsImVuZCI6MjEzNTR9LCIxTGJOcENEdn
 ZueGZ2TTNQIjp7InRleHQiOiJCb3RoICBnZW5lc2V0cyBzaG93
 IGFuIGdyZWF0ZXIgZXhvbmljIEc0IGRlbnNpdHkgb24gdGhlIH
 RlbXBsYXRlIHN0cmFuZCB0aGFuIGdl4oCmIiwic3RhcnQiOjIz
-NjEyLCJlbmQiOjIzNjEyfSwiekNXSVdXM3RGaGNrb0QxdyI6ey
+Nzg0LCJlbmQiOjIzNzg0fSwiekNXSVdXM3RGaGNrb0QxdyI6ey
 J0ZXh0IjoiY29kaW5nIGFuZCB0ZW1wbGF0ZSBzdHJhbmRzIiwi
-c3RhcnQiOjIzNTY5LCJlbmQiOjIzNTk2fSwieGpNbFFISkdsMl
-dHUUtRSCI6eyJ0ZXh0Ijoic3RyaWtpbmciLCJzdGFydCI6MjQz
-NjcsImVuZCI6MjQzNjd9LCJnYVJGVU5TZmJvTVllTTg1Ijp7In
+c3RhcnQiOjIzNzQxLCJlbmQiOjIzNzY4fSwieGpNbFFISkdsMl
+dHUUtRSCI6eyJ0ZXh0Ijoic3RyaWtpbmciLCJzdGFydCI6MjQ1
+MzksImVuZCI6MjQ1Mzl9LCJnYVJGVU5TZmJvTVllTTg1Ijp7In
 RleHQiOiIqRGlzdHJpYnV0aW9uIG9mIFBHNHMgaW4gZ2VuZXMg
 ZGlmZmVyZW50aWFsbHkgcmVndWxhdGVkIGJ5IE5NTS4qKiBCYX
-IgcGxvdHMgc2hv4oCmIiwic3RhcnQiOjI1NzA3LCJlbmQiOjI2
-NzE4fSwiSXV2Qno0ZkF4Vk13MmU4dyI6eyJ0ZXh0IjoiY29tcG
+IgcGxvdHMgc2hv4oCmIiwic3RhcnQiOjI1ODc5LCJlbmQiOjI2
+ODkwfSwiSXV2Qno0ZkF4Vk13MmU4dyI6eyJ0ZXh0IjoiY29tcG
 FyZWQgdG8gcGVybXV0ZWQgcHJvZmlsZXMgYWNyb3NzIGFsbCBn
-ZW5lcy4iLCJzdGFydCI6Mjc4OTMsImVuZCI6MjgwMDN9LCI2ck
+ZW5lcy4iLCJzdGFydCI6MjgwNjUsImVuZCI6MjgxNzV9LCI2ck
 FQeFJhRTFjQmNuVExvIjp7InRleHQiOiJwcm9wZWxsZXItbGlr
-ZSBwYXJhbGxlbCBHNHMiLCJzdGFydCI6MjgzOTcsImVuZCI6Mj
-g0MjR9LCJROWtHa3l3Z2h2em13TUhEIjp7InRleHQiOiJtYXkg
+ZSBwYXJhbGxlbCBHNHMiLCJzdGFydCI6Mjg1NjksImVuZCI6Mj
+g1OTZ9LCJROWtHa3l3Z2h2em13TUhEIjp7InRleHQiOiJtYXkg
 YmUgc3VmZmljaWVudCB0byBjYXVzZSBkb3ducmVndWxhdGlvbi
 BvZiBhbiBvdGhlcndpc2UgRzQgZnJlZSBnZW5lIGR1cmluZyBO
-4oCmIiwic3RhcnQiOjMwMjgwLCJlbmQiOjMwMzcyfSwiOFF2bU
+4oCmIiwic3RhcnQiOjMwNDUyLCJlbmQiOjMwNTQ0fSwiOFF2bU
 RQeDJMWkxFakdCTiI6eyJ0ZXh0IjoiVGhpcyBzdWdnZXN0cyB0
 aGF0IGNsdXN0ZXJzIG9mIEc0cyBkbyBoYXZlIGEgc3Ryb25nZX
 IgZWZmZWN0IG9uIGdlbmUgZXhwcmVzc2lvIiwic3RhcnQiOjMw
-MTQ0LCJlbmQiOjMwMjIyfSwicGxESDFuSWFsTHdvejI4cSI6ey
-J0ZXh0IjoibWVhbiIsInN0YXJ0IjozMDQ2MCwiZW5kIjozMDQ2
-NH0sIjVieE5teUhmdjVORVJiZXciOnsidGV4dCI6IkxlZnQgYW
+MzE2LCJlbmQiOjMwMzk0fSwicGxESDFuSWFsTHdvejI4cSI6ey
+J0ZXh0IjoibWVhbiIsInN0YXJ0IjozMDYzMiwiZW5kIjozMDYz
+Nn0sIjVieE5teUhmdjVORVJiZXciOnsidGV4dCI6IkxlZnQgYW
 5kIHJpZ2h0IHBhbmVscyBkZXBpY3QgY29kaW5nIGFuZCB0ZW1w
-bGF0ZSBzdHJhbmRzIiwic3RhcnQiOjMwNzAyLCJlbmQiOjMwNz
-U4fSwiNVd4T0dxVnc5NkpoRGtFTSI6eyJ0ZXh0IjoiYnkgTk1N
-IHN0YWJpbGlzZWQgRzRzIGFwcGVhcnMiLCJzdGFydCI6MzEwMz
-EsImVuZCI6MzEwNjB9LCJvV1o5MWY4c0JvMkxvVjNDIjp7InRl
+bGF0ZSBzdHJhbmRzIiwic3RhcnQiOjMwODc0LCJlbmQiOjMwOT
+MwfSwiNVd4T0dxVnc5NkpoRGtFTSI6eyJ0ZXh0IjoiYnkgTk1N
+IHN0YWJpbGlzZWQgRzRzIGFwcGVhcnMiLCJzdGFydCI6MzEyMD
+MsImVuZCI6MzEyMzJ9LCJvV1o5MWY4c0JvMkxvVjNDIjp7InRl
 eHQiOiJUaGlzIHdhcyBzdXJwcmlzaW5nIGFzIGl0IGlzIGluIG
 Rpc2FncmVlbWVudCB3aXRoIFBvbCBJSSBvY2N1cGFuY3kgcHJv
-ZmlsZXMgaW7igKYiLCJzdGFydCI6MzIwODgsImVuZCI6MzIyNz
-F9LCI0Z21IQ0h0alF2SXV0Y1h5Ijp7InRleHQiOiJ3YXMgZ3Jl
+ZmlsZXMgaW7igKYiLCJzdGFydCI6MzIyNjAsImVuZCI6MzI0ND
+N9LCI0Z21IQ0h0alF2SXV0Y1h5Ijp7InRleHQiOiJ3YXMgZ3Jl
 YXRlciBQb2wgSUkgb2NjdXBhbmN5IGF0IHRoZSBUU1MgYW5kIG
 luIHRoZSBUU1MgcHJveGltYWwgcGFydCBvZiB0aGUgZ2Vu4oCm
-Iiwic3RhcnQiOjMyNTcwLCJlbmQiOjMyNjU1fSwiT1A3b3RFdl
+Iiwic3RhcnQiOjMyNzQyLCJlbmQiOjMyODI3fSwiT1A3b3RFdl
 BZZnk1M0tDRyI6eyJ0ZXh0IjoibGFyZ2VzdCIsInN0YXJ0Ijoz
-NDUzMywiZW5kIjozNDU0MH0sIm9uVWhpZExhbjdEUW4wZEsiOn
-sidGV4dCI6ImRhdGEgbm90IHNob3duIiwic3RhcnQiOjM0NjY2
-LCJlbmQiOjM0NjgwfSwiVlRSQjJVVVlpbEpwZTN2ViI6eyJ0ZX
-h0IjoiMDA5Iiwic3RhcnQiOjM1MzgxLCJlbmQiOjM1Mzg0fSwi
+NDcwNSwiZW5kIjozNDcxMn0sIm9uVWhpZExhbjdEUW4wZEsiOn
+sidGV4dCI6ImRhdGEgbm90IHNob3duIiwic3RhcnQiOjM0ODM4
+LCJlbmQiOjM0ODUyfSwiVlRSQjJVVVlpbEpwZTN2ViI6eyJ0ZX
+h0IjoiMDA5Iiwic3RhcnQiOjM1NTUzLCJlbmQiOjM1NTU2fSwi
 U3k3dUxjdWtuNmxRYVZCdiI6eyJ0ZXh0IjoicHJlc2VudCBjb2
-RpbmcgYW5kIHRlbXBsYXRlIHN0cmFuZCIsInN0YXJ0IjozNjcx
-OSwiZW5kIjozNjc1M30sIkU2dmsxdlNPWnZWYmJhODEiOnsidG
+RpbmcgYW5kIHRlbXBsYXRlIHN0cmFuZCIsInN0YXJ0IjozNjg5
+MSwiZW5kIjozNjkyNX0sIkU2dmsxdlNPWnZWYmJhODEiOnsidG
 V4dCI6IlNjYXR0ZXIgcGxvdCBzaG93aW5nIG1lYXN1cmVkIGV4
 cHJlc3Npb24gaW4gbG9nMiBjb3VudHMgcGVyIG1pbGxpb24gKG
-xvZ0NQTSkgZm/igKYiLCJzdGFydCI6MzYyNjMsImVuZCI6MzY0
-Nzl9LCI5QWczTVU3U0lvMjRjSHV1Ijp7InRleHQiOiIwLjkpIi
-wic3RhcnQiOjM2NjE1LCJlbmQiOjM2NjE5fSwiRWdRZGJUSkFt
+xvZ0NQTSkgZm/igKYiLCJzdGFydCI6MzY0MzUsImVuZCI6MzY2
+NTF9LCI5QWczTVU3U0lvMjRjSHV1Ijp7InRleHQiOiIwLjkpIi
+wic3RhcnQiOjM2Nzg3LCJlbmQiOjM2NzkxfSwiRWdRZGJUSkFt
 T0V1b1pmVSI6eyJ0ZXh0IjoiKmQpKiogMycgVVRSLCIsInN0YX
-J0Ijo0MjIwNCwiZW5kIjo0MjIxN30sIlBhZWFweVBMdEl6ZFU3
-MWoiOnsidGV4dCI6InN0cm9uZyIsInN0YXJ0Ijo0MzE1MywiZW
-5kIjo0MzE1OX0sImkwVnY3NnkyWEFUY3JrelEiOnsidGV4dCI6
+J0Ijo0MjM3NiwiZW5kIjo0MjM4OX0sIlBhZWFweVBMdEl6ZFU3
+MWoiOnsidGV4dCI6InN0cm9uZyIsInN0YXJ0Ijo0MzMyNSwiZW
+5kIjo0MzMzMX0sImkwVnY3NnkyWEFUY3JrelEiOnsidGV4dCI6
 IipOTU0gZXhwcmVzc2lvbiBjaGFuZ2Ugb2YgQXJhYmlkb3BzaX
-MgYW5kICpaIiwic3RhcnQiOjQ2MDc5LCJlbmQiOjQ2MTIzfSwi
+MgYW5kICpaIiwic3RhcnQiOjQ2MjUxLCJlbmQiOjQ2Mjk1fSwi
 UVZRQlNnZ3ZLS1Nyd2tTZiI6eyJ0ZXh0IjoiY2F1c2VkIiwic3
 RhcnQiOjMzMTMsImVuZCI6MzMxOX0sInRITnhGNllPSkVlcWFi
 ZWwiOnsidGV4dCI6IiMjIyBQbGFudCBHcm93dGggQ29uZGl0aW
@@ -339,21 +339,21 @@ ZCBpbiBpbuKApiIsInN0YXJ0IjoxMDUzNiwiZW5kIjoxMDYzMn
 YW5pc2luZyBNYXAgQW5hbHlzaXMiLCJzdGFydCI6MTMwMjEsIm
 VuZCI6MTMwNDl9LCJjWG1iRndUV2NLcVI5NmlqIjp7InRleHQi
 OiJQb2wgSUkgQ2hJUC10aWxpbmcgYXJyYXkgYW5hbHlzaXMiLC
-JzdGFydCI6MTQyNzIsImVuZCI6MTQzMDV9LCJNZHFpU1FjYmw5
+JzdGFydCI6MTQzMzgsImVuZCI6MTQzNzF9LCJNZHFpU1FjYmw5
 SWpjaTM2Ijp7InRleHQiOiJHbG9iYWwgUnVuIE9uIChHUk8pIG
 FuZCBSTkEgc2VxdWVuY2luZyBkYXRhIGZyb20gR0VPIEFjY2Vz
-c2lvbiBHU0U4MzEiLCJzdGFydCI6MTYwNzksImVuZCI6MTYyMz
-J9LCJ2YzBnZDJSRUxlTXNJVTNtIjp7InRleHQiOiJtaWNyb2Fy
+c2lvbiBHU0U4MzEiLCJzdGFydCI6MTYyNTEsImVuZCI6MTY0MD
+R9LCJ2YzBnZDJSRUxlTXNJVTNtIjp7InRleHQiOiJtaWNyb2Fy
 cmF5IGFuYWx5c2lzIHVzaW5nIFJOQSBmcm9tIDcgZGF5IG9sZC
 BzZWVkbGluZ3MgdHJlYXRlZCB3aXRoIE5NTSBmb3IgNiBo4oCm
-Iiwic3RhcnQiOjE5NDQzLCJlbmQiOjE5NTI3fSwibjhFN0xaVG
+Iiwic3RhcnQiOjE5NjE1LCJlbmQiOjE5Njk5fSwibjhFN0xaVG
 ZmRE9HRUR1aiI6eyJ0ZXh0IjoiMzg4MiBkb3ducmVndWxhdGVk
-LCAxOTMwIHVwcmVndWxhdGVkKSIsInN0YXJ0IjoxOTk2OSwiZW
-5kIjoyMDAwNn0sInVUQmhoZFJ1dlA5TUVnM0ciOnsidGV4dCI6
+LCAxOTMwIHVwcmVndWxhdGVkKSIsInN0YXJ0IjoyMDE0MSwiZW
+5kIjoyMDE3OH0sInVUQmhoZFJ1dlA5TUVnM0ciOnsidGV4dCI6
 Ik5NTSBjYXVzZXMgZ2xvYmFsIGNoYW5nZSBpbiBnZW5lIGV4cH
-Jlc3Npb24iLCJzdGFydCI6MTkzMDAsImVuZCI6MTkzNDN9LCJC
+Jlc3Npb24iLCJzdGFydCI6MTk0NzIsImVuZCI6MTk1MTV9LCJC
 YnllZFNJekFtc2hyT3N0Ijp7InRleHQiOiJwcm9tb3RlciByZW
-dpb24iLCJzdGFydCI6NDc4MTgsImVuZCI6NDc4MzN9fSwiY29t
+dpb24iLCJzdGFydCI6NDc5OTAsImVuZCI6NDgwMDV9fSwiY29t
 bWVudHMiOnsiend6R3ZUd1RKNU9xWW5zcSI6eyJkaXNjdXNzaW
 9uSWQiOiJxekZrOU85eWhFTGYzMDR5Iiwic3ViIjoiZ286MTAy
 MjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6IndobyBpcyBcIn
@@ -608,7 +608,7 @@ N0pmZmtSIjp7ImRpc2N1c3Npb25JZCI6IkJieWVkU0l6QW1zaH
 JPc3QiLCJzdWIiOiJnbzoxMDIyMDU3OTcyNzY5NDEwMTA2Nzci
 LCJ0ZXh0IjoiRGlkIHlvdSBldmVyIGNoZWNrIHByb21vdG9yIH
 JlZ2lvbnM/IiwiY3JlYXRlZCI6MTUzNTM1NzAwNDg4MX19LCJo
-aXN0b3J5IjpbNTU4NzQ3Njg0LC0xMDA3NDE1MDg2LDE4ODk4NT
+aXN0b3J5IjpbMjM0NTIwNTM1LC0xMDA3NDE1MDg2LDE4ODk4NT
 Q0NjUsNjY4MzY4OTczLDEzNDI1MzgxODQsLTE5MTQ1Nzg4OTMs
 MjI2NzY0NzksLTUyNzc0NjE2OSwtMzc5MTIyMTM3LC04NjgwMz
 UwNTksLTExMTExMTIwOTAsMTAzMzYxNTM2NCwtMTY5OTQ4MjM4
