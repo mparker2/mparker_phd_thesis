@@ -4,7 +4,7 @@ We have presented an in-depth analysis of the distribution of genic G4s in *Arab
 
 Our microarray and RNAseq datasets have shown reproducibly that treatment of Arabidopsis with the G4 stabilising ligand NMM causes widespread changes in gene expression. Genes which contain template stranded two tetrad G4s in their 5' UTRs and CDS regions tended to be downregulated by NMM treatment. Genes with coding strand G4s in the gene body were not as strongly affected, indicating a potential mechanism involving the template strand. Since the template, or non-transcribed, strand is the one scanned by Pol II during transcription, we hypothesised that stabilised G4s on the template strand may form blockages that prevent the elongation of Pol II, whilst coding strand G4s will not. These blockages may result in premature termination of transcription. We found that large numbers of clustered PG4s in a 200bp window were also indicative of reduced expression, suggesting that clusters of stabilised G4s are more problematic to Pol II than single G4s.
 
-Work by Mullen et al. and others previously identified drought stress and hypoxia stress genes as containing greater levels of genic PG4s, in Arabidopsis and other plants [@Mullen2010; @Mullen2012; @Yadav2017; @Andorf2014]. 
+Work by Mullen et al. and others previously identified drought stress and hypoxia stress genes as containing greater levels of genic PG4s [@Mullen2010; @Mullen2012; @Yadav2017; @Andorf2014]. 
 
 We analysed publicly available Pol II ChIP-chip data [@Chodvarupu2012] to show that PG4 dense genes have altered Pol II profiles, with greater Pol II density at the TSS proximal end of genes and lower Pol II density at the TSS distal end, compared to the profiles of most over genes. This could be considered indicative of a slowing or pausing of Pol II over G4 dense regions under normal conditions, i.e. not in the presence of G4 stabilising agents. We did not see higher ratios of reads originating from nascent to mature mRNAs on PG4 dense genes, however, suggesting that this slowing does not naturally result in premature termination or degradation. Despite this, it is well documented that Pol II elongation speed affects co-transcriptional processes such as splicing, and so Pol II slowing by G4s may affect these processes.
 
@@ -17,16 +17,16 @@ Because of the repetitiveness of the Extensin genes, it is possible that some of
 Overall, we have found good evidence that NMM is able to affect the expression of genes with template stranded G4s in their gene bodies. Whilst the mechanism for this action is not fully clear, there is some evidence that impairment of Pol II elongation is involved. This fits with the current literature which suggests that stabilised G4s are able to stall polymerases both *in vitro* and *in vivo* [@Han1999; @Siddiqui-Jain2002; @Dexheimer2006; @Cogoi2006; @Chambers2015; @Kwok2016; @Rodriguez2012]. Furthermore, the altered Pol II profile over PG4 dense genes in the absence of any G4 stabilising ligands indicates that slow Pol II progression at G4s may occur naturally in the plant. The effects of G4 location (i.e. position and strand) should therefore be considered in future when modelling transcription efficiency in Arabidopsis.
 <!--stackedit_data:
 eyJkaXNjdXNzaW9ucyI6eyJrOTk2RUJTbWQxdEFYaU11Ijp7In
-RleHQiOiJYIiwic3RhcnQiOjM3ODMsImVuZCI6Mzc4M30sIkhT
+RleHQiOiJYIiwic3RhcnQiOjM3NTAsImVuZCI6Mzc1MH0sIkhT
 QmtYM2V0QWtBY2dTM1ciOnsidGV4dCI6IkZ1cnRoZXJtb3JlLC
 Bkb3ducmVndWxhdGlvbiBieSBOTU0gdHJlYXRtZW50IHdhcyBu
 b3QgYWZmZWN0ZWQgYnkgcHJlLXRyZWF0bWVudOKApiIsInN0YX
-J0Ijo0MTE4LCJlbmQiOjQyNDJ9LCJ4SDhoeGFJVXlyYWFORTRm
-Ijp7InN0YXJ0Ijo1ODkxLCJlbmQiOjU5NzksInRleHQiOiJOb2
+J0Ijo0MDg1LCJlbmQiOjQyMDl9LCJ4SDhoeGFJVXlyYWFORTRm
+Ijp7InN0YXJ0Ijo1ODU4LCJlbmQiOjU5NDYsInRleHQiOiJOb2
 5lIG9mIHRoZXNlIHRydW5jYXRlZCB0cmFuc2NyaXB0cyBhcHBl
 YXJlZCB0byBoYXZlIGNhbm9uaWNhbCBzcGxpY2UganVuY3Rpb2
-7igKYifSwiRTdHblFQRVFaZEpqWmJSUiI6eyJzdGFydCI6NjI2
-NiwiZW5kIjo2MjgxLCJ0ZXh0Ijoib3IgYXJ0ZWZhY3R1YWwuIn
+7igKYifSwiRTdHblFQRVFaZEpqWmJSUiI6eyJzdGFydCI6NjIz
+MywiZW5kIjo2MjQ4LCJ0ZXh0Ijoib3IgYXJ0ZWZhY3R1YWwuIn
 19LCJjb21tZW50cyI6eyJZVHA0VWszMVZlU0ZBVkFKIjp7ImRp
 c2N1c3Npb25JZCI6Ims5OTZFQlNtZDF0QVhpTXUiLCJzdWIiOi
 JnaDo1MzkxNzU4IiwidGV4dCI6IkRvbid0IGZvcmdldCB0aGlz
@@ -46,7 +46,7 @@ MSI6eyJkaXNjdXNzaW9uSWQiOiJFN0duUVBFUVpkSmpaYlJSIi
 wic3ViIjoiZ2g6NTM5MTc1OCIsInRleHQiOiJZb3UgZG9uJ3Qg
 bWVudGlvbiBhbnl0aGluZyBhYm91dCB0aGUgbGFjayBvZiByZX
 Nwb25zZSB0byBOTU0uIiwiY3JlYXRlZCI6MTUzNzA4NjA4OTgz
-M319LCJoaXN0b3J5IjpbLTEyODU3NjIzNDYsLTQ1MDQ1NzIyMy
-wxMDc5OTgwNzk2LC0xMTE1ODExMDkzLC0xOTY3OTAyMjMxLDkw
-NzI1NDQ5MywxMTU3MjU4OThdfQ==
+M319LCJoaXN0b3J5IjpbNjI4MDMwNTY1LC00NTA0NTcyMjMsMT
+A3OTk4MDc5NiwtMTExNTgxMTA5MywtMTk2NzkwMjIzMSw5MDcy
+NTQ0OTMsMTE1NzI1ODk4XX0=
 -->
