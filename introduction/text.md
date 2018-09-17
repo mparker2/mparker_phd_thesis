@@ -63,15 +63,17 @@ Nuclear magnetic resonance spectroscopy (NMR), specifically Proton-exchange spec
 Finally, since folded G4s with short loops and flanking sequence are relatively globular, a number of G4 structures have been crystallised from oligomers. The structures of these crystals have then been solved by X-ray crystallography [@Parkinson2002; @Nicoludis2012].
 
 Studies of the structure of G4s has led to the development of a variety of G4-binding ligands, which might have potential as anti-cancer agents [@Mergny1998; @Neidle2010; @Balasubramanian2011]. These have a wide range of structures and bind to the various G4 topologies with different strengths [@Monchaud2008]. The three major classes of G4 binding ligands are:  
+
 *   **external stacking ligands**, which have delocalised pi electron systems, and stack on the the hydrophobic surfaces of the outer G4 tetrads;
-*   **intercalating ligands** , which bind in the groove between stacked tetrads;
+*   **intercalating ligands**, which bind in the groove between stacked tetrads;
 *   **external groove binding ligands**, which insert into the groove of the G4 helix, or interact with loop sequences [@Monchaud2008]. 
 
 Small molecules which bind G4s include:  
--   **N-methyl-mesoporphyrin (NMM)**, an external stacking porphyrin ligand [@Nicoludis2012]; TMPyP4, another porphyrin derived ligand with multiple binding modes including external stacking and intercalation [@Haq1999; @Phan2005] (Fig \ref{drugs}a).  NMM is known to prefer parallel G4s [@Nicoludis2012];
--   **TMPyP4**, a porphyrin derived ligand with multiple binding modes including external stacking and intercalation [@Haq1999; @Phan2005]. Externally stacked TMPyP4 has been reported to prefer parallel G4s over anti-parallel [@Arora2008; @Nagesh2010];
--   **Pyridostatin**, an external stacking molecule specifically designed for G4 binding [@Rodriguez2008] (Fig \ref{drugs}b).  Pyridostatin is thought to bind to all G4s equally well [@Muller2010];
--   **Berberine**, a naturally occurring alkaloid and G4 external stacking agent (Fig \ref{drugs}c) [@Wu1999; @Franceschin2006]. Berberine has been reported to bind to both parallel and anti-parallel G4s [@Bazzicalupi2013; @Li2017].
+
+*   **N-methyl-mesoporphyrin (NMM)**, an external stacking porphyrin ligand [@Nicoludis2012]; TMPyP4, another porphyrin derived ligand with multiple binding modes including external stacking and intercalation [@Haq1999; @Phan2005] (Fig \ref{drugs}a).  NMM is known to prefer parallel G4s [@Nicoludis2012];
+*   **TMPyP4**, a porphyrin derived ligand with multiple binding modes including external stacking and intercalation [@Haq1999; @Phan2005]. Externally stacked TMPyP4 has been reported to prefer parallel G4s over anti-parallel [@Arora2008; @Nagesh2010];
+*   **Pyridostatin**, an external stacking molecule specifically designed for G4 binding [@Rodriguez2008] (Fig \ref{drugs}b).  Pyridostatin is thought to bind to all G4s equally well [@Muller2010];
+*   **Berberine**, a naturally occurring alkaloid and G4 external stacking agent (Fig \ref{drugs}c) [@Wu1999; @Franceschin2006]. Berberine has been reported to bind to both parallel and anti-parallel G4s [@Bazzicalupi2013; @Li2017].
 
 These molecules have been used to study G4s *in vitro* and also *in vivo*. G4 binding ligands have been shown to have different binding affinities for G4s derived from different sequences, hinting at the potential of drugs targeting G4s in specific gene promoters [@Weldon2018].
 
@@ -177,8 +179,7 @@ Aside from their effects on Pol II speed, G-rich sequences with the potential to
 
 A model gene for the study of this G-rich motif dependent splicing is Bcl-X, a regulator of cell death which has two major spliced forms. The dominant isoform is the longer, Bcl-XL, which is anti-apoptotic. A switch in splicing leads to formation of the shorter form, Bcl-XS, which is pro-apoptotic [@Boise1993]. This switch involves differential donor site usage in the splicing of the second intron. Garneau et al. showed that alternative splicing of Bcl-X is mediated by hnRNP F/H binding to two exonic G-rich regions, one upstream of the Bcl-XL donor site, and another downstream of the Bcl-XS donor site [@Garneau2005]. Mutation of these G-runs abolished hnRNP binding and removed the effect of recombinant hnRNP F treatment on Bcl-X splicing. Weldon et al. recently demonstrated that both of the G-rich regions are capable of forming G4s *in vitro*, and that treatment of *in vitro* splicing assays with ellipticine derived G4 binding agents was able to alter the ratios of the spliced forms [@Weldon2017; @Weldon2018]. The RNA recognition domain of hnRNP F binds to single stranded DNA, suggesting that G4s modulate splicing by preventing hnRNP binding [@Dominguez2010; @Samatanga2013]. Furthermore, Weldon et al. modelled RNA structure constraining the nucleotides which form the G4s, and suggested that G4 formation near the Bcl-XS donor site may abolish a long stem loop structure in the pre-mRNA [@Weldon2018]. Stem loop structures are thought to inihibit donor-site usage [@Eperon1988; @Nasim2002], meaning that G4 formation at this site might promote Bcl-XS production. Weldon et al. suggested that  G4 upstream of the Bcl-XL donor site might overlap with the donor splice site itself, explaining how G4 formation at this site has an inhibitory effect on its usage, through blocking of U1 snRNP binding [@Weldon2018].
 
-* 3'UTR enconucleolytic
-* APA
+Another extremely important element of mRNA processing is the termination of transcription, which is followed by 3' polyadenylation. The canonical sequence signal (polyadenylation signal, or PAS) at which termination occurs is `AAUAAA` [@Proudfoot1991]. After termination, a poly(A) polymerase catalyses the addition of a poly(A) tail, in an untemplated manner [@Millevoi2010]. Beaudoin et al. have shown that G4 forming sequences in the 3'UTR of LRP5 and FXR1 mRNAs, close to the PAS, increased the efficiency of polyadenylation at that site [@Beaudoin2013]. Cloning of these G4s into the 3'UTR of a luciferase reporter increased the efficiency of PAS usage at a proximal site, resulting in general increase in luciferase expression. Mutations which abolished the G4 in the LRP5 and FXR1 mRNAs also reduced termination at proximal PASs, resulting in mRNAs with longer 3'UTRs [@Beaudoin2013].
 
 \newpage
 
