@@ -14,7 +14,7 @@ The Extensins have relatively high levels of spliced reads mapping to them, desp
 
 Because of the repetitiveness of the Extensin genes, it is possible that some of these spliced reads might result from mapping errors, however we did not find as many unique splice junctions in simulated datasets as in the real RNAseq data. Furthermore, were able to isolate, clone, and sanger sequence some of these spliced transcripts. None of these truncated transcripts appeared to have canonical splice junction sequences, however, possibly indicating that they may be PCR artefacts caused by mispriming. In future we could use Nanopore direct RNA sequencing, which has no PCR step and is able to sequence whole mRNA molecules regardless of repetitiveness, to identify whether the Extensin exitrons are real or artefactual. Regardless of whether the Extensin splice variants are real or not, the levels of splicing do not appear to be responsive to NMM. This could also be considered indicative of the splicing being artefactual, or alternatively that splicing is not linked to G4 formation.
 
-Overall, we have found good evidence that NMM is able to affect the expression of genes with template stranded G4s in their gene bodies. Whilst the mechanism for this action is not fully clear, there is some evidence that impairment of Pol II elongation is involved. This fits with the current literature which suggests that stabilised G4s are able to stall polymerases both *in vitro* and *in vivo* [@Han1999; @Siddiqui-Jain2002; @Dexheimer2006; @Cogoi2006; @Chambers2015; @Kwok2016; @Rodriguez2012]. Furthermore, the altered Pol II profile over PG4 dense genes in the absence of any G4 stabilising ligands indicates that slow Pol II progression at G4s may occur naturally in the plant. One condition during which this may occur is drought stress, when the cellular potassium concentration is greater [@Mullen2010; @Mullen2012; @Yadav2017]. The effects of G4 location (i.e. position and strand) should therefore be considered in future when modelling transcription efficiency in Arabidopsis.
+Overall, we have found good evidence that NMM is able to affect the expression of genes with template stranded G4s in their gene bodies. Whilst the mechanism for this action is not fully clear, there is some evidence that impairment of Pol II elongation is involved. This fits with the current literature which suggests that stabilised G4s are able to stall polymerases both *in vitro* and *in vivo* [@Han1999; @Siddiqui-Jain2002; @Dexheimer2006; @Cogoi2006; @Chambers2015; @Kwok2016; @Rodriguez2012]. Furthermore, the altered Pol II profile over PG4 dense genes in the absence of any G4 stabilising ligands indicates that slow Pol II progression at G4s may occur naturally in the plant. One condition during which this may occur is drought stress, when the cellular potassium concentration is greater [@Mullen2010; @Mullen2012; @Yadav2017]. The effects of G4 location (i.e. position and strand) should therefore be considered in future when modelling transcription efficiency and gene expression in Arabidopsis.
 <!--stackedit_data:
 eyJkaXNjdXNzaW9ucyI6eyJrOTk2RUJTbWQxdEFYaU11Ijp7In
 RleHQiOiJYIiwic3RhcnQiOjQzMTIsImVuZCI6NDMxMn0sIkhT
@@ -46,7 +46,7 @@ MSI6eyJkaXNjdXNzaW9uSWQiOiJFN0duUVBFUVpkSmpaYlJSIi
 wic3ViIjoiZ2g6NTM5MTc1OCIsInRleHQiOiJZb3UgZG9uJ3Qg
 bWVudGlvbiBhbnl0aGluZyBhYm91dCB0aGUgbGFjayBvZiByZX
 Nwb25zZSB0byBOTU0uIiwiY3JlYXRlZCI6MTUzNzA4NjA4OTgz
-M319LCJoaXN0b3J5IjpbLTc4ODgzMDQ4NiwtNDUwNDU3MjIzLD
-EwNzk5ODA3OTYsLTExMTU4MTEwOTMsLTE5Njc5MDIyMzEsOTA3
-MjU0NDkzLDExNTcyNTg5OF19
+M319LCJoaXN0b3J5IjpbMTYwOTcxMjgwLC00NTA0NTcyMjMsMT
+A3OTk4MDc5NiwtMTExNTgxMTA5MywtMTk2NzkwMjIzMSw5MDcy
+NTQ0OTMsMTE1NzI1ODk4XX0=
 -->
