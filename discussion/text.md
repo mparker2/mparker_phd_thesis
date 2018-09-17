@@ -8,7 +8,7 @@ We analysed publicly available Pol II ChIP-chip data [@Chodvarupu2012] to show t
 
 A family of poly-proline rich protein-coding genes, called the Extensins, were identified as strongly downregulated by NMM. The Extensins were found to be extremely PG4 rich on the template strand, with a number of genes containing as many as 200 different overlapping PG4 registers. The Extensin repeat was analysed by CD Spectroscopy and found to form a G4 structure *in vivo*.  We also found that Extensin genes are also downregulated by Berberine, another G4 binding agent, suggesting that downregulation is indeed caused by G4 stabilisation and not by any off-target effects. Furthermore, downregulation by NMM treatment was not affected by pre-treatment with the translation inhibitor cyclohexamide. Whilst this does not rule out regulation through post-translational effects such as phosphorylation of existing transcription factors, this is good evidence that NMM has a direct effect on Extensin gene expression, and is not simply affecting the expression of a transcription factor.
 
-The Extensins have relatively high levels of spliced reads mapping to them, despite their annotated transcript models having only single exons. These exitronic splice junctions tend to be over the PG4 rich regions of the gene. We hypothesised that these spliced reads may be the result of Pol II slowing at G4 rich regions of the gene, which allows co-transcriptional splicing to occur at weak splice junctions. Since the majority of exitrons were found to be a multiple of three in length, the resultant truncated transcripts would also result in shortened proteins. The diversity in truncated proteins, if regulated correctly, could potentially be beneficial to the plant in changing the properties of the plant cell wall (e.g. the number of glycosylation sites, the flexibility of the protein matrix). This hypothesis is supported by the work of Baumberger et al., who showed that truncated forms of the LRX1 gene, containing fewer Extensin repeats, were able to partially
+The Extensins have relatively high levels of spliced reads mapping to them, despite their annotated transcript models having only single exons. These exitronic splice junctions tend to be over the PG4 rich regions of the gene. We hypothesised that these spliced reads may be the result of Pol II slowing at G4 rich regions of the gene, which allows co-transcriptional splicing to occur at weak splice junctions. Since the majority of exitrons were found to be a multiple of three in length, the resultant truncated transcripts would also result in shortened proteins. The diversity in truncated proteins, if regulated correctly, could potentially be beneficial to the plant in changing the properties of the plant cell wall (e.g. the number of glycosylation sites, the flexibility of the protein matrix). This hypothesis is supported by the work of Baumberger et al., who showed that truncated forms of the LRX1 gene, containing fewer Extensin repeats, were able to partially complement an *lrx1* mutant [@Baumberger2001]
 
 Because of the repetitiveness of the Extensin genes, it is possible that some of these spliced reads might result from mapping errors, however we did not find as many unique splice junctions in simulated datasets as in the real RNAseq data. Furthermore, were able to isolate, clone, and sanger sequence some of these spliced transcripts. None of these truncated transcripts appeared to have canonical splice junction sequences, however, possibly indicating that they may be PCR artefacts caused by mispriming. In future we could use Nanopore direct RNA sequencing, which has no PCR step and is able to sequence whole mRNA molecules regardless of repetitiveness, to identify whether the Extensin exitrons are real or artefactual. Regardless of whether the Extensin splice variants are real or not, the levels of splicing do not appear to be responsive to NMM. This could also be considered indicative of the splicing being artefactual, or alternatively that splicing is not linked to G4 formation.
 
@@ -20,11 +20,11 @@ QmtYM2V0QWtBY2dTM1ciOnsidGV4dCI6IkZ1cnRoZXJtb3JlLC
 Bkb3ducmVndWxhdGlvbiBieSBOTU0gdHJlYXRtZW50IHdhcyBu
 b3QgYWZmZWN0ZWQgYnkgcHJlLXRyZWF0bWVudOKApiIsInN0YX
 J0IjozODk5LCJlbmQiOjQwMjN9LCJ4SDhoeGFJVXlyYWFORTRm
-Ijp7InN0YXJ0Ijo1NjI1LCJlbmQiOjU3MTMsInRleHQiOiJOb2
+Ijp7InN0YXJ0Ijo1NjcxLCJlbmQiOjU3NTksInRleHQiOiJOb2
 5lIG9mIHRoZXNlIHRydW5jYXRlZCB0cmFuc2NyaXB0cyBhcHBl
 YXJlZCB0byBoYXZlIGNhbm9uaWNhbCBzcGxpY2UganVuY3Rpb2
-7igKYifSwiRTdHblFQRVFaZEpqWmJSUiI6eyJzdGFydCI6NjAw
-MCwiZW5kIjo2MDE1LCJ0ZXh0Ijoib3IgYXJ0ZWZhY3R1YWwuIn
+7igKYifSwiRTdHblFQRVFaZEpqWmJSUiI6eyJzdGFydCI6NjA0
+NiwiZW5kIjo2MDYxLCJ0ZXh0Ijoib3IgYXJ0ZWZhY3R1YWwuIn
 19LCJjb21tZW50cyI6eyJZVHA0VWszMVZlU0ZBVkFKIjp7ImRp
 c2N1c3Npb25JZCI6Ims5OTZFQlNtZDF0QVhpTXUiLCJzdWIiOi
 JnaDo1MzkxNzU4IiwidGV4dCI6IkRvbid0IGZvcmdldCB0aGlz
@@ -44,7 +44,7 @@ MSI6eyJkaXNjdXNzaW9uSWQiOiJFN0duUVBFUVpkSmpaYlJSIi
 wic3ViIjoiZ2g6NTM5MTc1OCIsInRleHQiOiJZb3UgZG9uJ3Qg
 bWVudGlvbiBhbnl0aGluZyBhYm91dCB0aGUgbGFjayBvZiByZX
 Nwb25zZSB0byBOTU0uIiwiY3JlYXRlZCI6MTUzNzA4NjA4OTgz
-M319LCJoaXN0b3J5IjpbLTIwMjY0Mzg3NzcsLTQ1MDQ1NzIyMy
-wxMDc5OTgwNzk2LC0xMTE1ODExMDkzLC0xOTY3OTAyMjMxLDkw
-NzI1NDQ5MywxMTU3MjU4OThdfQ==
+M319LCJoaXN0b3J5IjpbMTUzMzY0NTAzMywtNDUwNDU3MjIzLD
+EwNzk5ODA3OTYsLTExMTU4MTEwOTMsLTE5Njc5MDIyMzEsOTA3
+MjU0NDkzLDExNTcyNTg5OF19
 -->
