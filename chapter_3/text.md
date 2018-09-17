@@ -155,11 +155,11 @@ To address this issue, we decided to retrain G4Seeqer using the rG4seq dataset p
 
 Because of the significantly smaller size of the rG4seq derived training set, we found that the method for training which yielded most optimal results was transfer learning from the G4Seeqer model. Weights of the initial convolutional feature extraction layers were therefore held constant, and only the weights of the LSTM layers (which find long range interactions) and dense output layers were retrained.
 
-Testing was first conducted on the held out set of 752 sequences using G4Hunter, G4Seeqer and the newly trained rG4Seeqer. G4Seeqer significantly outperformed G4Hunter (AUC 0.9 vs 0.83 respectively), suggesting that the information extracted from the G4Seq dataset is applicable to the rG4seq dataset (Fig. \ref{rG4seeqer_test}). rG4Seeqer outperformed both methods, however (AUC 0.95), demonstrating that domain specific information is better for predicting RNA G4s in the rG4seq dataset (Fig. \ref{rG4seeqer_test}).
+Testing was first conducted on the held out set of 752 sequences using G4Hunter, G4Seeqer and the newly trained rG4Seeqer. G4Seeqer significantly outperformed G4Hunter (AUC 0.9 vs 0.83 respectively), suggesting that the information extracted from the G4Seq dataset is applicable to the rG4seq dataset (Fig \ref{rG4seeqer_test}). rG4Seeqer outperformed both methods, however (AUC 0.95), demonstrating that domain specific information is better for predicting RNA G4s in the rG4seq dataset (Fig \ref{rG4seeqer_test}).
 
 \newpage
 
-![**Validation curves for rG4Seeqer method** **a)** Receiver Operator Characteristic (ROC) curves showing the performance of rG4Seeqer, G4Seeqer and the G4Hunter method (Bedrat et al. 2016), on a held out test set of the rG4Seq dataset (10% of total dataset). **b)** Precision-recall curves showing the performance of rG4Seeqer, G4Seeqer, and G4Hunter on the same dataset. \label{rG4seeqer_test}](figures/rg4seq_test_set_roc_pr.svg)
+![**Validation curves for rG4Seeqer method** **a)** Receiver Operator Characteristic (ROC) curves showing the performance of rG4Seeqer, G4Seeqer and the G4Hunter method (Bedrat et al. 2016), on a held out test set of the rG4Seq dataset (10% of total dataset). **b)** Precision-recall curves showing the performance of rG4Seeqer, G4Seeqer, and G4Hunter on the same dataset. \label{rG4seeqer_}](figures/rg4seq_test_set_roc_pr.svg)
 
 \newpage
 
@@ -167,7 +167,7 @@ We sought to test rG4Seeqer on G4s identified by a variety of physical methods, 
 
 \newpage
 
-![**Validation of rG4Seeqer on *in vitro* experimentally categorised RNA sequences** **a)** Receiver Operator Characteristic (ROC) curves showing the performance of rG4Seeqer, G4Seeqer and the G4RNA Screener method (Garant et al. 2017), on the G4RNA dataset curated by Garant et al. **b)** Precision-recall curves showing the performance of rG4Seeqer, G4Seeqer, and G4RNA Screener on the same dataset. \label{rG4seeqer_g4rnadb}](figures/g4rna_roc_pr.svg)
+![**Validation of rG4Seeqer on *in vitro* experimentally categorised RNA sequences** **a)** Receiver Operator Characteristic (ROC) curves showing the performance of rG4Seeqer, G4Seeqer and the G4RNA Screener method (Garant et al. 2017), on the G4RNA dataset curated by Garant et al. **b)** Precision-recall curves showing the performance of rG4Seeqer, G4Seeqer, and G4RNA Screener on the same dataset. \label{rG4seeqer_g4rnadbtest}](figures/g4rna_roc_pr.svg)
 
 \newpage
 
@@ -316,35 +316,35 @@ VyIE9wZXJhdG9yIENoYXJhY3RlcmlzdGljIChST0MpIGN1cnZl
 IHNob3dpbmcgdGhlIHBlcmZvcm1hbmNlIG9mIEc0U2VlcWXigK
 YiLCJzdGFydCI6MzQzMzUsImVuZCI6MzQ1NDV9LCJBd1Vld01y
 V0ZIS0hPUkZtIjp7InRleHQiOiJyRzRTZWVxZXIsIEc0U2VlcW
-VyIGFuZCB0aGUgRzRSTkEiLCJzdGFydCI6Mzg4NjEsImVuZCI6
-Mzg4OTR9LCJvdnlWNHUzTThXTzdCR1ZuIjp7InRleHQiOiJuZX
-VyYWwgbmV0d29yayIsInN0YXJ0IjozOTI0MywiZW5kIjozOTI1
-N30sIjlPdDFHV1dXZTBWeUJ0NHYiOnsidGV4dCI6IldlIGlkZW
+VyIGFuZCB0aGUgRzRSTkEiLCJzdGFydCI6Mzg4NTUsImVuZCI6
+Mzg4ODh9LCJvdnlWNHUzTThXTzdCR1ZuIjp7InRleHQiOiJuZX
+VyYWwgbmV0d29yayIsInN0YXJ0IjozOTI0MSwiZW5kIjozOTI1
+NX0sIjlPdDFHV1dXZTBWeUJ0NHYiOnsidGV4dCI6IldlIGlkZW
 50aWZpZWQgUEc0IHNlcXVlbmNlcyBzY29yaW5nIG1vcmUgdGhh
 biAwLjkgZm9yIHdoaWNoIGEgc2luZ2xlIEctPkggY2hhbmfigK
-YiLCJzdGFydCI6NDEwMzAsImVuZCI6NDEyMzl9LCJkc2txU2s5
+YiLCJzdGFydCI6NDEwMjgsImVuZCI6NDEyMzd9LCJkc2txU2s5
 eFhFQ1FodE5oIjp7InRleHQiOiJUaGlzIGNvdWxkIGJlIGR1ZS
 B0byBhIHJlZHVjdGlvbiBpbiBHNCBzdGFiaWxpdHkgd2l0aCBs
 b29wIGxlbmd0aCwgYnV0IGNvdWxkIGVx4oCmIiwic3RhcnQiOj
-QyNzgxLCJlbmQiOjQyOTc3fSwiZ3JzbEJGQjJGYTRpWGpHZiI6
+QyNzc5LCJlbmQiOjQyOTc1fSwiZ3JzbEJGQjJGYTRpWGpHZiI6
 eyJ0ZXh0IjoiQWdhaW4sIGRpc3RhbmNlIHdhcyBmb3VuZCB0by
 Bjb3JyZWxhdGUgbmVnYXRpdmVseSB3aXRoICVtbSBzY29yZSAo
-U3BlYXJtYW5zIHJob+KApiIsInN0YXJ0Ijo0NDc4NSwiZW5kIj
-o0NDk2OH0sIm9jWDZpMXlkYlRkdXpSRHEiOnsidGV4dCI6Im94
+U3BlYXJtYW5zIHJob+KApiIsInN0YXJ0Ijo0NDc4MywiZW5kIj
+o0NDk2Nn0sIm9jWDZpMXlkYlRkdXpSRHEiOnsidGV4dCI6Im94
 cGxvdCBzaG93aW5nIHRoZSByZWxhdGlvbnNoaXAgYmV0d2Vlbi
 AlbW0gc2NvcmUgYW5kIGRpc3RhbmNlIHRvIG5leHQgRy1oYWly
-cGnigKYiLCJzdGFydCI6NDU0NzUsImVuZCI6NDU3MzN9LCJ1bU
+cGnigKYiLCJzdGFydCI6NDU0NzMsImVuZCI6NDU3MzF9LCJ1bU
 tsRm5nODNVWGVpdlp1Ijp7InRleHQiOiJUaGUgUEc0IHNwYWNl
 IG9mIHRoZSAqTS4gbXVzY3VsdXMqIGdlbm9tZSB3YXMgYWxzby
 BtZWFzdXJlZCwgYW5kIGZvdW5kIHRvIGNvbnRh4oCmIiwic3Rh
-cnQiOjUxNjI4LCJlbmQiOjUxODIyfSwiY1FkUm5mclVabHFLVm
+cnQiOjUxNjI2LCJlbmQiOjUxODIwfSwiY1FkUm5mclVabHFLVm
 JSbiI6eyJ0ZXh0IjoiMkQgS2VybmVsIGRlbnNpdHkgZXN0aW1h
 dGUgcGxvdCBzaG93aW5nIGRpc3RyaWJ1dGlvbiBvZiBhbGwgcG
-9zc2libGUgIHRldHJhZCBRdeKApiIsInN0YXJ0Ijo1MzEyOSwi
-ZW5kIjo1MzM5Nn0sIml5ZDFhN0pRNXNZV2lmaXUiOnsidGV4dC
+9zc2libGUgIHRldHJhZCBRdeKApiIsInN0YXJ0Ijo1MzEyNywi
+ZW5kIjo1MzM5NH0sIml5ZDFhN0pRNXNZV2lmaXUiOnsidGV4dC
 I6Ikl0IGlzIGFibGUgdG8gcHJvY2VzcyB0aGUgd2hvbGUgaHVt
 YW4gZ2Vub21lIGluIGFwcHJveGltYXRlbHkgMSBob3VyIG9uIG
-EgOCBjb3LigKYiLCJzdGFydCI6NTM5NjgsImVuZCI6NTQwOTV9
+EgOCBjb3LigKYiLCJzdGFydCI6NTM5NjYsImVuZCI6NTQwOTN9
 fSwiY29tbWVudHMiOnsiNmx4WmJkSzBBNXo4cVp4ayI6eyJkaX
 NjdXNzaW9uSWQiOiJHdWtoM3JqY3h3dWhXSHRpIiwic3ViIjoi
 MTAyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6IkhvdyBtYW
@@ -553,11 +553,11 @@ IiwiY3JlYXRlZCI6MTUzMzE0MzkyOTkxNH0sIlhTd1VkQ0R2Sz
 dURVVuMkgiOnsiZGlzY3Vzc2lvbklkIjoiQjZid0hLQ1RLNGZX
 SEt5WiIsInN1YiI6IjEwODUyMDAyOTMwMjI5NDY1MDQxNyIsIn
 RleHQiOiJiZXR0ZXI/IiwiY3JlYXRlZCI6MTUzMzE0NDA0Mzg4
-N319LCJoaXN0b3J5IjpbLTI5NzcwOTk3OSw0MjI5MzA0MTMsLT
-E5ODU2NzIyMTYsLTEwODk4Njg3Nyw0OTAzNjQ0MTUsLTEzMTEw
-NDUwMzcsLTIwNzI5MzMwMDAsLTU1ODc5MTc0OSwtMTkyOTA0OD
-I5MCwxNDAwNjEyNjY4LC0xOTY4MjEzNzI4LDQyNjQyOTQ2Miwt
-MTYyODIxNDkyNCwxMzYyMjk4OTAzLDE0NjQ2MjQ5MiwtMTY4NT
-MxOTczMSwtMTQ3MDc2MzIwMiwtMTU1NzQyMjA0MiwxNjgxOTg0
-MzgxLDUxNTUwNzA2OV19
+N319LCJoaXN0b3J5IjpbMTczMzgzNjM1MywtMjk3NzA5OTc5LD
+QyMjkzMDQxMywtMTk4NTY3MjIxNiwtMTA4OTg2ODc3LDQ5MDM2
+NDQxNSwtMTMxMTA0NTAzNywtMjA3MjkzMzAwMCwtNTU4NzkxNz
+Q5LC0xOTI5MDQ4MjkwLDE0MDA2MTI2NjgsLTE5NjgyMTM3Mjgs
+NDI2NDI5NDYyLC0xNjI4MjE0OTI0LDEzNjIyOTg5MDMsMTQ2ND
+YyNDkyLC0xNjg1MzE5NzMxLC0xNDcwNzYzMjAyLC0xNTU3NDIy
+MDQyLDE2ODE5ODQzODFdfQ==
 -->
