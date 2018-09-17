@@ -10,9 +10,9 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="177.461mm"
-   height="181.44394mm"
-   viewBox="0 0 628.79881 642.91159"
+   width="167.08252mm"
+   height="177.40334mm"
+   viewBox="0 0 592.02467 628.59449"
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
@@ -66,21 +66,22 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.3096668"
-     inkscape:cx="385.23569"
-     inkscape:cy="343.43989"
+     inkscape:zoom="0.5"
+     inkscape:cx="332.88753"
+     inkscape:cy="345.31222"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     fit-margin-top="10"
-     fit-margin-left="10"
-     fit-margin-right="10"
-     fit-margin-bottom="10"
+     fit-margin-top="5"
+     fit-margin-left="5"
+     fit-margin-right="5"
+     fit-margin-bottom="5"
      inkscape:window-width="1875"
-     inkscape:window-height="1056"
+     inkscape:window-height="1051"
      inkscape:window-x="45"
      inkscape:window-y="0"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     showguides="false" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -89,7 +90,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -97,7 +98,8 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-47.572691,-52.930554)">
+     transform="translate(-65.289226,-70.64712)"
+     style="stroke-linecap:butt;stroke-linejoin:round">
     <g
        id="figure_1-3"
        transform="matrix(0.7168627,0,0,0.7168627,368.70264,113.5415)"
@@ -1248,5 +1250,29 @@
         </g>
       </g>
     </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="233.57269"
+       y="677.84216"
+       id="text4381"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4383"
+         style="font-size:17.5px;stroke-linecap:butt;stroke-linejoin:round"
+         x="233.57269"
+         y="677.84216">Coding</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4385"
+       y="677.84216"
+       x="499.57269"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="677.84216"
+         x="499.57269"
+         style="font-size:17.5px;stroke-linecap:butt;stroke-linejoin:round"
+         id="tspan4387"
+         sodipodi:role="line">Template</tspan></text>
   </g>
 </svg>
