@@ -29,6 +29,14 @@ $endif$
 % MP: make figure labels bold
 \captionsetup{labelfont=bf}
 
+% MP: add a blank page after title page
+\usepackage{afterpage}
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+
 % MP: packages for abbrv. list table
 \usepackage{longtable}
 \usepackage{datatool}
