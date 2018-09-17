@@ -160,7 +160,7 @@ We conducted the same analysis using genes containing three or more two tetrad P
 
 \newpage
 
-![**Log Ratio of GRO / RNA seq counts per million detects abortive transcription of PG4 dense genes.** **a)** Scatter plot showing measured expression in log2 counts per million (logCPM) for each gene from GRO-seq vs. RNAseq datasets. Genes which fall below and to the right of the orange line have positive log2 GRO/RNA ratios. **b)**  Histogram and kernel density estimates of GRO/RNA ratio for genes containing PG4 predicted by G4Seeqer (max G4seeqer score > 0.9) in orange, vs. genes containing no G4s (max G4seeqer score < 0.1) in blue. Left and right panels represent coding and template strand G4 rich genes, respectively. **c)** Histogram and kernel density estimates of GRO/RNA ratio for genes containing two tetrad maximal PG4 density per 200bp of 3 or greater in orange, vs. genes with maximal PG4 density of 0 (contain no PG4s) in blue. Left and right panels represent coding and template strand G4 rich genes, respectively. \label{gro}](figures/gro_g4s.svg)
+![**Log Ratio of GRO / RNA seq counts per million detects abortive transcription of PG4 dense genes.** **a)** Scatter plot showing measured expression in log2 counts per million (logCPM) for each gene from GRO-seq vs. RNAseq datasets. Genes which fall below and to the right of the orange line have positive log2 GRO/RNA ratios. **b)**  Histogram and kernel density estimates of GRO/RNA ratio for genes containing PG4 predicted by G4Seeqer (max G4seeqer score > 0.95) in orange, vs. genes containing no G4s (max G4seeqer score < 0.1) in blue. Left and right panels represent coding and template strand G4 rich genes, respectively. **c)** Histogram and kernel density estimates of GRO/RNA ratio for genes containing two tetrad maximal PG4 density per 200bp of 3 or greater in orange, vs. genes with maximal PG4 density of 0 (contain no PG4s) in blue. Left and right panels represent coding and template strand G4 rich genes, respectively. \label{gro}](figures/gro_g4s.svg)
 
 \newpage
 
@@ -280,18 +280,18 @@ LCJlbmQiOjM1MTIyfSwiVlRSQjJVVVlpbEpwZTN2ViI6eyJ0ZX
 h0IjoiMDA5Iiwic3RhcnQiOjM1ODIzLCJlbmQiOjM1ODI2fSwi
 U3k3dUxjdWtuNmxRYVZCdiI6eyJ0ZXh0IjoicHJlc2VudCBjb2
 RpbmcgYW5kIHRlbXBsYXRlIHN0cmFuZCIsInN0YXJ0IjozNzE2
-MSwiZW5kIjozNzE5NX0sIkU2dmsxdlNPWnZWYmJhODEiOnsidG
+MiwiZW5kIjozNzE5Nn0sIkU2dmsxdlNPWnZWYmJhODEiOnsidG
 V4dCI6IlNjYXR0ZXIgcGxvdCBzaG93aW5nIG1lYXN1cmVkIGV4
 cHJlc3Npb24gaW4gbG9nMiBjb3VudHMgcGVyIG1pbGxpb24gKG
 xvZ0NQTSkgZm/igKYiLCJzdGFydCI6MzY3MDUsImVuZCI6MzY5
 MjF9LCI5QWczTVU3U0lvMjRjSHV1Ijp7InRleHQiOiIwLjkpIi
-wic3RhcnQiOjM3MDU3LCJlbmQiOjM3MDYxfSwiRWdRZGJUSkFt
+wic3RhcnQiOjM3MDU3LCJlbmQiOjM3MDYyfSwiRWdRZGJUSkFt
 T0V1b1pmVSI6eyJ0ZXh0IjoiKmQpKiogMycgVVRSLCIsInN0YX
-J0Ijo0MjY0NiwiZW5kIjo0MjY1OX0sIlBhZWFweVBMdEl6ZFU3
-MWoiOnsidGV4dCI6InN0cm9uZyIsInN0YXJ0Ijo0MzU5NSwiZW
-5kIjo0MzYwMX0sImkwVnY3NnkyWEFUY3JrelEiOnsidGV4dCI6
+J0Ijo0MjY0NywiZW5kIjo0MjY2MH0sIlBhZWFweVBMdEl6ZFU3
+MWoiOnsidGV4dCI6InN0cm9uZyIsInN0YXJ0Ijo0MzU5NiwiZW
+5kIjo0MzYwMn0sImkwVnY3NnkyWEFUY3JrelEiOnsidGV4dCI6
 IipOTU0gZXhwcmVzc2lvbiBjaGFuZ2Ugb2YgQXJhYmlkb3BzaX
-MgYW5kICpaIiwic3RhcnQiOjQ2NTIxLCJlbmQiOjQ2NTY1fSwi
+MgYW5kICpaIiwic3RhcnQiOjQ2NTIyLCJlbmQiOjQ2NTY2fSwi
 UVZRQlNnZ3ZLS1Nyd2tTZiI6eyJ0ZXh0IjoiY2F1c2VkIiwic3
 RhcnQiOjMzMTMsImVuZCI6MzMxOX0sInRITnhGNllPSkVlcWFi
 ZWwiOnsidGV4dCI6IiMjIyBQbGFudCBHcm93dGggQ29uZGl0aW
@@ -304,8 +304,8 @@ Z0tiM2l6NDB3MFkiOnsidGV4dCI6Ik11cmFzaGlnZSAmIFNrb2
 9nIChNUykiLCJzdGFydCI6NDk0NCwiZW5kIjo0OTY2fSwiTVFH
 bzVRa1R4RDdrRnIyeCI6eyJ0ZXh0IjoiTVMgbGlxdWlkIG1lZG
 lhIiwic3RhcnQiOjUwODEsImVuZCI6NTA4MX0sImR0SXlNUUk2
-YWJzcGpWTHEiOnsidGV4dCI6Ik5NTSBhIiwic3RhcnQiOjUwOD
-EsImVuZCI6NTA4MX0sIklhUFRYOWJYNUdwdVFFYjciOnsidGV4
+YWJzcGpWTHEiOnsidGV4dCI6Ik5NTSBhIiwiZW5kIjo1MDgxLC
+JzdGFydCI6NTA4MX0sIklhUFRYOWJYNUdwdVFFYjciOnsidGV4
 dCI6IldoaXRlIGFuZCBLYXBlciIsInN0YXJ0Ijo1MjgxLCJlbm
 QiOjUyOTZ9LCJieVFvUGRhdUJvV1JWU3A1Ijp7InRleHQiOiJz
 dGVyaWxlIHdhdGVyIiwic3RhcnQiOjUzNTMsImVuZCI6NTM2Nn
@@ -324,8 +324,8 @@ aW91c2x5IHB1Ymxpc2hlZCBtaWNyb2FycmF5IGRhdGEiLCJzdG
 FydCI6NzMxMywiZW5kIjo3MzYxfSwiOFd6QkxEd2RrYVIxcEto
 ZSI6eyJ0ZXh0IjoiYG9saWdvYCBhbmQgYHB1bWFgIiwic3Rhcn
 QiOjYwMTcsImVuZCI6NjA1MH0sIjlnOW1JREdKbjNWMzRjT0Ii
-OnsidGV4dCI6IkVuc2VtYmwgYW5ub3RhdGlvbnMiLCJzdGFydC
-I6NzE2NCwiZW5kIjo3MTY0fSwiRjQ5V21hVTdPZzV1RGd4MiI6
+OnsidGV4dCI6IkVuc2VtYmwgYW5ub3RhdGlvbnMiLCJlbmQiOj
+cxNjQsInN0YXJ0Ijo3MTY0fSwiRjQ5V21hVTdPZzV1RGd4MiI6
 eyJ0ZXh0IjoiQXJhcG9ydDExIGdlbm9tZSBhbm5vdGF0aW9uIi
 wic3RhcnQiOjk3NjIsImVuZCI6OTc4OX0sIk1vY25DbkxHYm4w
 RDNqU3UiOnsidGV4dCI6Ik5NTSB0cmVhdG1lbnQgYXBwZWFyZW
@@ -353,7 +353,7 @@ LCAxOTMwIHVwcmVndWxhdGVkKSIsInN0YXJ0IjoyMDQxMSwiZW
 Ik5NTSBjYXVzZXMgZ2xvYmFsIGNoYW5nZSBpbiBnZW5lIGV4cH
 Jlc3Npb24iLCJzdGFydCI6MTk3NDIsImVuZCI6MTk3ODV9LCJC
 YnllZFNJekFtc2hyT3N0Ijp7InRleHQiOiJwcm9tb3RlciByZW
-dpb24iLCJzdGFydCI6NDgyNjAsImVuZCI6NDgyNzV9fSwiY29t
+dpb24iLCJzdGFydCI6NDgyNjEsImVuZCI6NDgyNzZ9fSwiY29t
 bWVudHMiOnsiend6R3ZUd1RKNU9xWW5zcSI6eyJkaXNjdXNzaW
 9uSWQiOiJxekZrOU85eWhFTGYzMDR5Iiwic3ViIjoiZ286MTAy
 MjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6IndobyBpcyBcIn
@@ -608,11 +608,11 @@ N0pmZmtSIjp7ImRpc2N1c3Npb25JZCI6IkJieWVkU0l6QW1zaH
 JPc3QiLCJzdWIiOiJnbzoxMDIyMDU3OTcyNzY5NDEwMTA2Nzci
 LCJ0ZXh0IjoiRGlkIHlvdSBldmVyIGNoZWNrIHByb21vdG9yIH
 JlZ2lvbnM/IiwiY3JlYXRlZCI6MTUzNTM1NzAwNDg4MX19LCJo
-aXN0b3J5IjpbODEyNjQ1MDk4LC0yMDcyNTY4NjQxLC0xMDA3ND
-E1MDg2LDE4ODk4NTQ0NjUsNjY4MzY4OTczLDEzNDI1MzgxODQs
-LTE5MTQ1Nzg4OTMsMjI2NzY0NzksLTUyNzc0NjE2OSwtMzc5MT
-IyMTM3LC04NjgwMzUwNTksLTExMTExMTIwOTAsMTAzMzYxNTM2
-NCwtMTY5OTQ4MjM4LDEyODQ0MDcxMDksMzM0NjY1NDgwLDExMD
-gwMzQxNTMsMTA1NzkwNTAxMSwtMTAyMzgyMjA1NywtNjA4ODUy
-NDEwXX0=
+aXN0b3J5IjpbMjAyMzQ3MjQ1MSw4MTI2NDUwOTgsLTIwNzI1Nj
+g2NDEsLTEwMDc0MTUwODYsMTg4OTg1NDQ2NSw2NjgzNjg5NzMs
+MTM0MjUzODE4NCwtMTkxNDU3ODg5MywyMjY3NjQ3OSwtNTI3Nz
+Q2MTY5LC0zNzkxMjIxMzcsLTg2ODAzNTA1OSwtMTExMTExMjA5
+MCwxMDMzNjE1MzY0LC0xNjk5NDgyMzgsMTI4NDQwNzEwOSwzMz
+Q2NjU0ODAsMTEwODAzNDE1MywxMDU3OTA1MDExLC0xMDIzODIy
+MDU3XX0=
 -->
