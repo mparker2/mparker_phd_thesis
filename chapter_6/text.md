@@ -91,7 +91,7 @@ For Sanger sequencing, cDNA was produced using the Invitrogen High Capacity cDNA
 
 ### Differential Splicing Analysis
 
-For differential splicing analysis, we identified novel splice junctions in our RNAseq dataset to augment the existing Araport11 annotation. Splice junctions for each gene were extracted from reads mapped to correct strand of the annotated gene body using Python and `pysam` version 0.14.0 [@Heger2014]. Junctions were kept if they were supported by at least 20 reads across all samples. Differential splice junction usage between NMM and DMSO treatments was then conducted in R using `limma-voom` and `DiffSplice` [@Ritchie2015; @Law2014], and P values were adjusted using Benjamini Hochberg correction. `limma` version 3.34.6 was used. Differentially utilised junctions were identified using an absolute log2 fold change in expression of 0.5 and an FDR of 0.2. Unstrigent thresholds were used due to the low read counts associated with splice junctions, to capture as many true positives as possible. Differential junction usage code is available in Appendix \ref{differential_splicing_analysis}.
+For differential splicing analysis, we identified novel splice junctions in our RNAseq dataset to augment the existing Araport11 annotation. Splice junctions for each gene were extracted from reads mapped to correct strand of the annotated gene body using Python and `pysam` version 0.14.0 [@Heger2014]. Junctions were kept if they were supported by at least 20 reads across all samples, to remove low frequency junctions. Differential splice junction usage between NMM and DMSO treatments was then conducted in R using `limma-voom` and `DiffSplice` [@Ritchie2015; @Law2014], and P values were adjusted using Benjamini Hochberg correction. `limma` version 3.34.6 was used. Differentially utilised junctions were identified using an absolute log2 fold change in expression of 0.5 and an FDR of 0.2. Unstrigent thresholds were used due to the low read counts associated with splice junctions, to capture as many true positives as possible. Differential junction usage code is available in Appendix \ref{differential_splicing_analysis}.
 
 To produce junction categories based on relation to reference annotation, Araport11 GTF annotation [@Cheng2017] was flattened using the python module `CGAT.GTF` version 0.2 [@Sims2014] to produce a single model for each gene, which was converted to bed12 format. This was then used to identify junctions which shared one or both of their donor and acceptor sites with reference introns. These were labelled "alternate" and "constitutive" junctions, respectively. Constitutive junctions which spanned an internal exon where labelled "skipping" junctions. Junctions which were contained wholly within a single contiguous exonic region were labelled as "retained intronic / exitronic" (the distinction between these is whether retention or splicing of the region is more common). Finally, junctions which do not contain a donor or acceptor present in the reference, and which span a mixture of exonic and intronic regions, were labelled "other" junctions. Violin plots of distribution of junction type expression, and stacked barplots of class distribution amongst differentially utilised junctions, were produced using `seaborn` and `matplotlib` [@Hunter2007; @Waskom2014]. Code is available in Appendix \ref{differential_splicing_analysis}.
 
@@ -356,45 +356,45 @@ g4NjcsImVuZCI6MTg4ODJ9LCJxOTNiVFFhd2IyVlNEWHRaIjp7
 InRleHQiOiJQcmltZXIgU2VxdWVuY2VzIHVzZWQiLCJzdGFydC
 I6MTkyNDIsImVuZCI6MTkyNjN9LCJwRGhoU1ZnNTVYdGlHSElS
 Ijp7InRleHQiOiJvdXIgUk5Bc2VxIGRhdGFzZXQiLCJzdGFydC
-I6MjA3MzAsImVuZCI6MjA3NDh9LCJkRm5JbFBpTUt0b1djSW9k
+I6MjA3NjUsImVuZCI6MjA3ODN9LCJkRm5JbFBpTUt0b1djSW9k
 Ijp7InRleHQiOiJUbyBkZW1vbnN0cmF0ZSB0aGF0IHRoZSBQRz
 QgZnJvbSBFeHRlbnNpbiBnZW5lcyBjb3VsZCBmb3JtIGEgRzQg
-c3RydWN0dXJlIGluIHZp4oCmIiwic3RhcnQiOjI0NDAzLCJlbm
-QiOjI0NTMwfSwiZGEwUjc5TW5qemkxaEFOTiI6eyJ0ZXh0Ijoi
+c3RydWN0dXJlIGluIHZp4oCmIiwic3RhcnQiOjI0NDM4LCJlbm
+QiOjI0NTY1fSwiZGEwUjc5TW5qemkxaEFOTiI6eyJ0ZXh0Ijoi
 VG8gY29uZmlybSB0aGF0IHRoZSBFeHRlbnNpbiBnZW5lcyBhcm
 UgZG93bnJlZ3VsYXRlZCBieSBOTU0sIHdlIHBlcmZvcm1lZCBS
-TkEgZeKApiIsInN0YXJ0IjoyNTcyOSwiZW5kIjoyNTg0MX0sIm
+TkEgZeKApiIsInN0YXJ0IjoyNTc2NCwiZW5kIjoyNTg3Nn0sIm
 JYU0huMlV1TXhXSVJKYWkiOnsidGV4dCI6ImMpKiogTk1NIGRv
 d25yZWd1YXRpb24gb2YgRVhUMTMgYW5kIExSWDEgaXMgbm90IG
 FmZmVjdGVkIGJ5IGNvbmN1cnJlbnQgQ3ljbG9oZXjigKYiLCJz
-dGFydCI6MjgwOTksImVuZCI6MjgxODh9LCJlSGh2V1NXRmNGY2
+dGFydCI6MjgxMzQsImVuZCI6MjgyMjN9LCJlSGh2V1NXRmNGY2
 JpT2wxIjp7InRleHQiOiJoYXQgbWFueSBvZiB0aGUgRXh0ZW5z
 aW4gZ2VuZXMgaGFkIGxhcmdlIG51bWJlcnMgb2Ygbm92ZWwgc3
-BsaWNlZCBpc29mb3Jtcy4iLCJzdGFydCI6Mjg3MzksImVuZCI6
-Mjg4MTR9LCJxZ1FvS0pYWGRRYWFXZmpQIjp7InRleHQiOiJkZX
+BsaWNlZCBpc29mb3Jtcy4iLCJzdGFydCI6Mjg3NzQsImVuZCI6
+Mjg4NDl9LCJxZ1FvS0pYWGRRYWFXZmpQIjp7InRleHQiOiJkZX
 JpdmVkIGZyb20gdGhlIGludHJvbiBtb3RpZiIsInN0YXJ0Ijoz
-MDY3MiwiZW5kIjozMDcwMX0sIk1DZW9lQ24yTEVwcjVKSUwiOn
-sidGV4dCI6IkNUL0FDLiIsInN0YXJ0IjozNzMwOCwiZW5kIjoz
-NzMxNH0sIlQyQUlyRW5sdjF5R1BYY0oiOnsidGV4dCI6IiFbKi
+MDcwNywiZW5kIjozMDczNn0sIk1DZW9lQ24yTEVwcjVKSUwiOn
+sidGV4dCI6IkNUL0FDLiIsInN0YXJ0IjozNzM0MywiZW5kIjoz
+NzM0OX0sIlQyQUlyRW5sdjF5R1BYY0oiOnsidGV4dCI6IiFbKi
 pTYW5nZXIgc2VxdWVuY2luZyBvZiBMUlgxIGFuZCBFWFQ5IGNE
 TkEgaWRlbnRpZmllcyBzcGxpY2VkIGZvcm1zKiogKiphKSoqIE
-figKYiLCJzdGFydCI6MzczMjYsImVuZCI6Mzc4MTZ9LCJHQ1dl
+figKYiLCJzdGFydCI6MzczNjEsImVuZCI6Mzc4NTF9LCJHQ1dl
 WW9zUFJNeEozZldZIjp7InRleHQiOiJPbmx5IHNwbGljZSBqdW
 5jdGlvbnMgd2l0aCBhdCBsZWFzdCAyMCBzdXBwb3J0aW5nIHJl
 YWRzIHRvdGFsIGFjcm9zcyB0aGUgNiBzYW1w4oCmIiwic3Rhcn
-QiOjM5NjI5LCJlbmQiOjM5NzM1fSwiakw0dW1BdWdiWUdzUUhw
+QiOjM5NjY0LCJlbmQiOjM5NzcwfSwiakw0dW1BdWdiWUdzUUhw
 cSI6eyJ0ZXh0IjoiZyBgbGltbWEtdm9vbWAgYW5kIGBsaW1tYS
-1kaWZmU3BsaWNlYCIsInN0YXJ0Ijo0MDA4NiwiZW5kIjo0MDEy
-M30sIkZwQjhnZUs0RFpNMlVPengiOnsidGV4dCI6ImFuIEZEUi
-B0aHJlc2hvbGQgb2YgMC4yIiwic3RhcnQiOjQwMjk2LCJlbmQi
-OjQwMzE5fSwiem5YVGdMVlJPTWpyOWp6diI6eyJ0ZXh0IjoicG
+1kaWZmU3BsaWNlYCIsInN0YXJ0Ijo0MDEyMSwiZW5kIjo0MDE1
+OH0sIkZwQjhnZUs0RFpNMlVPengiOnsidGV4dCI6ImFuIEZEUi
+B0aHJlc2hvbGQgb2YgMC4yIiwic3RhcnQiOjQwMzMxLCJlbmQi
+OjQwMzU0fSwiem5YVGdMVlJPTWpyOWp6diI6eyJ0ZXh0IjoicG
 xpY2VkIG1hcHBpbmcgdG8gdGhlc2UgZ2VuZXMgaXMgYSBzeXN0
 ZW1hdGljIG1hcHBpbmcgZXJyb3IgdGhhdCBvY2N1cnMgYXQgYX
-BwcuKApiIsInN0YXJ0Ijo0MjczNywiZW5kIjo0Mjg3OH0sImY5
+BwcuKApiIsInN0YXJ0Ijo0Mjc3MiwiZW5kIjo0MjkxM30sImY5
 aEZaaERoWmF3djNWeUkiOnsidGV4dCI6IkRlc3BpdGUgdGhlc2
 UgbmVnYXRpdmUgcmVzdWx0cywgd2Ugd2VyZSBhYmxlIHRvIGlk
 ZW50aWZ5IFBDUiBwcm9kdWN0cyBmcm9tIGNETkHigKYiLCJzdG
-FydCI6NDg2MjksImVuZCI6NDg3Njd9fSwiY29tbWVudHMiOnsi
+FydCI6NDg2NjQsImVuZCI6NDg4MDJ9fSwiY29tbWVudHMiOnsi
 RHF3Y1Z6ZTZPYXNXOE1RVyI6eyJkaXNjdXNzaW9uSWQiOiJydk
 luUXlVNFlRblg5V3g5Iiwic3ViIjoiZ286MTAyMjA1Nzk3Mjc2
 OTQxMDEwNjc3IiwidGV4dCI6ImVucmljaGVkIGF0ID8iLCJjcm
@@ -615,10 +615,10 @@ IjoiZjloRlpoRGhaYXd2M1Z5SSIsInN1YiI6ImdvOjEwMjIwNT
 c5NzI3Njk0MTAxMDY3NyIsInRleHQiOiJJcyB0aGVyZSBhIGNo
 YW5nZSBpbiB0aGUgZGlzdHJpYnV0aW9uIG9mIFBDUiBiYW5kcy
 ArTk1NPyIsImNyZWF0ZWQiOjE1MzY2NzQyNjQ0ODJ9fSwiaGlz
-dG9yeSI6Wy0xMjA1NzE1Mzk1LC0xMDE5MDYyMDAsLTQ4MzUzMT
-EyOCwxNDUyNTkyNjk4LC0xMzY0MTQ0MDc4LC00NjEzMTQxNzMs
-NzU3NTU3MDcyLC0yMTA5MzI4MDA1LC03NDMzNTQ2MjksMTE0Mz
-Y4ODMxOCwtMTY1OTU0MDM3NywtMTYxMDc3MzA1Myw3OTg4ODY4
-NCwtMjAxNjkxMTEwNywtMTgyODM3ODA1OCw0NDcxMjc0MTksLT
-E1MDU3NjAwMDgsLTEyMDM4NDQ5N119
+dG9yeSI6WzI2MTA5NjUzMywtMTIwNTcxNTM5NSwtMTAxOTA2Mj
+AwLC00ODM1MzExMjgsMTQ1MjU5MjY5OCwtMTM2NDE0NDA3OCwt
+NDYxMzE0MTczLDc1NzU1NzA3MiwtMjEwOTMyODAwNSwtNzQzMz
+U0NjI5LDExNDM2ODgzMTgsLTE2NTk1NDAzNzcsLTE2MTA3NzMw
+NTMsNzk4ODg2ODQsLTIwMTY5MTExMDcsLTE4MjgzNzgwNTgsND
+Q3MTI3NDE5LC0xNTA1NzYwMDA4LC0xMjAzODQ0OTddfQ==
 -->
