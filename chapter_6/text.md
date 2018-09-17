@@ -118,11 +118,13 @@ For barplots of spliced read percentages in Extensin genes, `pysam` [@Heger2014]
 
 \label{ssec:extensin_res}
 
+### RNAseq of NMM treated seedlings confirms microarray expression results
+
+In order to corroborate the results of our microarray study on the effect of NMM on gene expression, we performed RNAseq using three replicates of NMM treated plants and control DMSO treated plants. Using a FDR threshold of 0.05, and an absolute log2 fold change of 1, we identified 2015 upregulated and 1653 downregulated genes, respectively.
+
 ### Gene Ontology shows plant cell wall specific genes are enriched in PG4s and downregulated by NMM
 
 \label{ssec:extensin_go}
-
-In order to corroborate the results of our microarray study on the effect of NMM on gene expression, we performed RNAseq using three replicates of NMM treated plants and control DMSO treated plants. Using a FDR threshold of 0.05, and an absolute log2 fold change of 1, we identified 2015 upregulated and 1653 downregulated genes, respectively.
 
 To identify gene ontology groups which are specifically enriched with exonic PG4s, we compared the observed levels of PG4s per gene to expected levels if PG4s were randomly distributed across all genes (weighted by gene length). These observed and expected levels were summarised for each gene ontology group. Sorting the results for groups with the greatest positive observed/expected ratio of PG4s on the template strand, we discovered that gene ontology groups involved with functions at the cell periphery, particularly in the plasma membrane and cell wall, had strong enrichments (Fig \ref{go_table}). The log2 fold enrichment in `GO:0005199`, which contains structural cell wall genes, was +4.4 (FDR < 4.8e-4). This corresponded to an observed number of 992 PG4s in only 32 genes (the average expectation under the null hypothesis was 46 PG4s). These PG4 dense gene ontology groups were also strongly enriched in the set of genes which are significantly downregulated by NMM in our RNAseq dataset (Fig\ref{go_table}, 50% of expressed genes in `GO:0005199` were downregulated by NMM, FDR = 9.6e-7).
 
@@ -361,42 +363,42 @@ Ijp7InRleHQiOiJvdXIgUk5Bc2VxIGRhdGFzZXQiLCJzdGFydC
 I6MjA5MDgsImVuZCI6MjA5MjZ9LCJkRm5JbFBpTUt0b1djSW9k
 Ijp7InRleHQiOiJUbyBkZW1vbnN0cmF0ZSB0aGF0IHRoZSBQRz
 QgZnJvbSBFeHRlbnNpbiBnZW5lcyBjb3VsZCBmb3JtIGEgRzQg
-c3RydWN0dXJlIGluIHZp4oCmIiwic3RhcnQiOjI0OTI2LCJlbm
-QiOjI1MDUzfSwiZGEwUjc5TW5qemkxaEFOTiI6eyJ0ZXh0Ijoi
+c3RydWN0dXJlIGluIHZp4oCmIiwic3RhcnQiOjI1MDAyLCJlbm
+QiOjI1MTI5fSwiZGEwUjc5TW5qemkxaEFOTiI6eyJ0ZXh0Ijoi
 VG8gY29uZmlybSB0aGF0IHRoZSBFeHRlbnNpbiBnZW5lcyBhcm
 UgZG93bnJlZ3VsYXRlZCBieSBOTU0sIHdlIHBlcmZvcm1lZCBS
-TkEgZeKApiIsInN0YXJ0IjoyNjI1MiwiZW5kIjoyNjM2NH0sIm
+TkEgZeKApiIsInN0YXJ0IjoyNjMyOCwiZW5kIjoyNjQ0MH0sIm
 JYU0huMlV1TXhXSVJKYWkiOnsidGV4dCI6ImMpKiogTk1NIGRv
 d25yZWd1YXRpb24gb2YgRVhUMTMgYW5kIExSWDEgaXMgbm90IG
 FmZmVjdGVkIGJ5IGNvbmN1cnJlbnQgQ3ljbG9oZXjigKYiLCJz
-dGFydCI6Mjg2MjIsImVuZCI6Mjg3MTF9LCJlSGh2V1NXRmNGY2
+dGFydCI6Mjg2OTgsImVuZCI6Mjg3ODd9LCJlSGh2V1NXRmNGY2
 JpT2wxIjp7InRleHQiOiJoYXQgbWFueSBvZiB0aGUgRXh0ZW5z
 aW4gZ2VuZXMgaGFkIGxhcmdlIG51bWJlcnMgb2Ygbm92ZWwgc3
-BsaWNlZCBpc29mb3Jtcy4iLCJzdGFydCI6MjkyNjIsImVuZCI6
-MjkzMzd9LCJxZ1FvS0pYWGRRYWFXZmpQIjp7InRleHQiOiJkZX
+BsaWNlZCBpc29mb3Jtcy4iLCJzdGFydCI6MjkzMzgsImVuZCI6
+Mjk0MTN9LCJxZ1FvS0pYWGRRYWFXZmpQIjp7InRleHQiOiJkZX
 JpdmVkIGZyb20gdGhlIGludHJvbiBtb3RpZiIsInN0YXJ0Ijoz
-MTE5NSwiZW5kIjozMTIyNH0sIk1DZW9lQ24yTEVwcjVKSUwiOn
-sidGV4dCI6IkNUL0FDLiIsInN0YXJ0IjozNzgzMSwiZW5kIjoz
-NzgzN30sIlQyQUlyRW5sdjF5R1BYY0oiOnsidGV4dCI6IiFbKi
+MTI3MSwiZW5kIjozMTMwMH0sIk1DZW9lQ24yTEVwcjVKSUwiOn
+sidGV4dCI6IkNUL0FDLiIsInN0YXJ0IjozNzkwNywiZW5kIjoz
+NzkxM30sIlQyQUlyRW5sdjF5R1BYY0oiOnsidGV4dCI6IiFbKi
 pTYW5nZXIgc2VxdWVuY2luZyBvZiBMUlgxIGFuZCBFWFQ5IGNE
 TkEgaWRlbnRpZmllcyBzcGxpY2VkIGZvcm1zKiogKiphKSoqIE
-figKYiLCJzdGFydCI6Mzc4NDksImVuZCI6MzgzMzl9LCJHQ1dl
+figKYiLCJzdGFydCI6Mzc5MjUsImVuZCI6Mzg0MTV9LCJHQ1dl
 WW9zUFJNeEozZldZIjp7InRleHQiOiJPbmx5IHNwbGljZSBqdW
 5jdGlvbnMgd2l0aCBhdCBsZWFzdCAyMCBzdXBwb3J0aW5nIHJl
 YWRzIHRvdGFsIGFjcm9zcyB0aGUgNiBzYW1w4oCmIiwic3Rhcn
-QiOjQwMTUyLCJlbmQiOjQwMjU4fSwiakw0dW1BdWdiWUdzUUhw
+QiOjQwMjI4LCJlbmQiOjQwMzM0fSwiakw0dW1BdWdiWUdzUUhw
 cSI6eyJ0ZXh0IjoiZyBgbGltbWEtdm9vbWAgYW5kIGBsaW1tYS
-1kaWZmU3BsaWNlYCIsInN0YXJ0Ijo0MDYwOSwiZW5kIjo0MDY0
-Nn0sIkZwQjhnZUs0RFpNMlVPengiOnsidGV4dCI6ImFuIEZEUi
-B0aHJlc2hvbGQgb2YgMC4yIiwic3RhcnQiOjQwODE5LCJlbmQi
-OjQwODQyfSwiem5YVGdMVlJPTWpyOWp6diI6eyJ0ZXh0IjoicG
+1kaWZmU3BsaWNlYCIsInN0YXJ0Ijo0MDY4NSwiZW5kIjo0MDcy
+Mn0sIkZwQjhnZUs0RFpNMlVPengiOnsidGV4dCI6ImFuIEZEUi
+B0aHJlc2hvbGQgb2YgMC4yIiwic3RhcnQiOjQwODk1LCJlbmQi
+OjQwOTE4fSwiem5YVGdMVlJPTWpyOWp6diI6eyJ0ZXh0IjoicG
 xpY2VkIG1hcHBpbmcgdG8gdGhlc2UgZ2VuZXMgaXMgYSBzeXN0
 ZW1hdGljIG1hcHBpbmcgZXJyb3IgdGhhdCBvY2N1cnMgYXQgYX
-BwcuKApiIsInN0YXJ0Ijo0MzI2MCwiZW5kIjo0MzQwMX0sImY5
+BwcuKApiIsInN0YXJ0Ijo0MzMzNiwiZW5kIjo0MzQ3N30sImY5
 aEZaaERoWmF3djNWeUkiOnsidGV4dCI6IkRlc3BpdGUgdGhlc2
 UgbmVnYXRpdmUgcmVzdWx0cywgd2Ugd2VyZSBhYmxlIHRvIGlk
 ZW50aWZ5IFBDUiBwcm9kdWN0cyBmcm9tIGNETkHigKYiLCJzdG
-FydCI6NDkxNTIsImVuZCI6NDkyOTB9fSwiY29tbWVudHMiOnsi
+FydCI6NDkyMjgsImVuZCI6NDkzNjZ9fSwiY29tbWVudHMiOnsi
 RHF3Y1Z6ZTZPYXNXOE1RVyI6eyJkaXNjdXNzaW9uSWQiOiJydk
 luUXlVNFlRblg5V3g5Iiwic3ViIjoiZ286MTAyMjA1Nzk3Mjc2
 OTQxMDEwNjc3IiwidGV4dCI6ImVucmljaGVkIGF0ID8iLCJjcm
@@ -617,11 +619,11 @@ IjoiZjloRlpoRGhaYXd2M1Z5SSIsInN1YiI6ImdvOjEwMjIwNT
 c5NzI3Njk0MTAxMDY3NyIsInRleHQiOiJJcyB0aGVyZSBhIGNo
 YW5nZSBpbiB0aGUgZGlzdHJpYnV0aW9uIG9mIFBDUiBiYW5kcy
 ArTk1NPyIsImNyZWF0ZWQiOjE1MzY2NzQyNjQ0ODJ9fSwiaGlz
-dG9yeSI6WzcwMjQxMjIsLTEwMzAwMjU1ODUsLTIyNDgxMTY3OC
-wtMTIwNTcxNTM5NSwtMTAxOTA2MjAwLC00ODM1MzExMjgsMTQ1
-MjU5MjY5OCwtMTM2NDE0NDA3OCwtNDYxMzE0MTczLDc1NzU1Nz
-A3MiwtMjEwOTMyODAwNSwtNzQzMzU0NjI5LDExNDM2ODgzMTgs
-LTE2NTk1NDAzNzcsLTE2MTA3NzMwNTMsNzk4ODg2ODQsLTIwMT
-Y5MTExMDcsLTE4MjgzNzgwNTgsNDQ3MTI3NDE5LC0xNTA1NzYw
-MDA4XX0=
+dG9yeSI6WzIwNjcxMjg1OTEsNzAyNDEyMiwtMTAzMDAyNTU4NS
+wtMjI0ODExNjc4LC0xMjA1NzE1Mzk1LC0xMDE5MDYyMDAsLTQ4
+MzUzMTEyOCwxNDUyNTkyNjk4LC0xMzY0MTQ0MDc4LC00NjEzMT
+QxNzMsNzU3NTU3MDcyLC0yMTA5MzI4MDA1LC03NDMzNTQ2Mjks
+MTE0MzY4ODMxOCwtMTY1OTU0MDM3NywtMTYxMDc3MzA1Myw3OT
+g4ODY4NCwtMjAxNjkxMTEwNywtMTgyODM3ODA1OCw0NDcxMjc0
+MTldfQ==
 -->
