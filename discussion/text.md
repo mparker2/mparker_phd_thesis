@@ -8,7 +8,7 @@ We analysed publicly available Pol II ChIP-chip data (Chodvarupu et al. 2012) to
 
 A family of poly-proline rich protein-coding genes, called the Extensins, were identified as strongly downregulated by NMM. The Extensins were found to be extremely PG4 rich on the template strand, containing as many as X different overlapping PG4 registers per gene. We found that Extensin genes are also downregulated by Berberine, another G4 binding agent, suggesting that downregulation is indeed caused by G4 stabilisation and not by any off-target effects. Furthermore, downregulation by NMM treatment was not affected by pre-treatment with the translation inhibitor cyclohexamide, suggesting that NMM has a direct effect on Extensin gene expression.
 
-The Extensins have relatively high levels of spliced reads mapping to them, despite their anotated transcript models having only single exons. These exitronic splice junctions tend to be over the PG4 rich regions of the gene. We hypothesised that these spliced reads may be the result of Pol II slowing at G4 rich regions of the gene, which allows co-transcriptional splicing to occur at weak splice junctions. Because of the repetitiveness of the Extensin genes, it is possible that some of these spliced reads might result from mapping errors, however we did not find as many unique splice junctions in simulated datasets as in the real RNAseq data. Furthermore, were able to isolate, clone, and sanger sequence some of these spliced transcripts. None of these truncated transcripts appeared to have canonical splice junction sequences, however, possibly indicating that they may be PCR artefacts. In future we could use Nanopore direct RNA sequencing, which has no PCR step and is able to sequence whole mRNA molecules regardless of repetitiveness, to identify whether the Extensin exitrons are real or artefactual.
+The Extensins have relatively high levels of spliced reads mapping to them, despite their anotated transcript models having only single exons. These exitronic splice junctions tend to be over the PG4 rich regions of the gene. We hypothesised that these spliced reads may be the result of Pol II slowing at G4 rich regions of the gene, which allows co-transcriptional splicing to occur at weak splice junctions. Because of the repetitiveness of the Extensin genes, it is possible that some of these spliced reads might result from mapping errors, however we did not find as many unique splice junctions in simulated datasets as in the real RNAseq data. Furthermore, were able to isolate, clone, and sanger sequence some of these spliced transcripts. None of these truncated transcripts appeared to have canonical splice junction sequences, however, possibly indicating that they may be PCR artefacts. In future we could use Nanopore direct RNA sequencing, which has no PCR step and is able to sequence whole mRNA molecules regardless of repetitiveness, to identify whether the Extensin exitrons are real or artefactual. Regardless of whether the Extensin splice variants are real or not, there does 
 <!--stackedit_data:
 eyJkaXNjdXNzaW9ucyI6eyJrOTk2RUJTbWQxdEFYaU11Ijp7In
 RleHQiOiJYIiwic3RhcnQiOjM1NDUsImVuZCI6MzU0Nn0sIkhT
@@ -40,6 +40,6 @@ MSI6eyJkaXNjdXNzaW9uSWQiOiJFN0duUVBFUVpkSmpaYlJSIi
 wic3ViIjoiZ2g6NTM5MTc1OCIsInRleHQiOiJZb3UgZG9uJ3Qg
 bWVudGlvbiBhbnl0aGluZyBhYm91dCB0aGUgbGFjayBvZiByZX
 Nwb25zZSB0byBOTU0uIiwiY3JlYXRlZCI6MTUzNzA4NjA4OTgz
-M319LCJoaXN0b3J5IjpbLTE5Njc5MDIyMzEsOTA3MjU0NDkzLD
-ExNTcyNTg5OF19
+M319LCJoaXN0b3J5IjpbLTE0MDA4MzQxODMsLTE5Njc5MDIyMz
+EsOTA3MjU0NDkzLDExNTcyNTg5OF19
 -->
