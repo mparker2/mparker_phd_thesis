@@ -2,7 +2,7 @@
 
 We have presented an in-depth analysis of the distribution of genic G4s in *Arabidopsis thaliana*. As demonstrated by other groups, we found the levels of potential three tetrad G4s in Arabidopsis are low compared to the number of two tetrad PG4s [@Mullen2010]. Our analysis also shows that Arabidopsis genes have high levels of template stranded PG4 sequences, both in the 5' UTR and in the start codon proximal end of the CDS. These levels constitute an enrichment over what would be expected in random sequence with identical GC content and dinucleotide frequencies, and random sequences which could encode the same protein. Furthermore, we show that many G4s are fully or partially hardcoded by protein sequence, suggesting that in some cases protein sequence might be influenced by the G4 forming potential of the DNA. Poly-glycine and poly-proline motifs, which induce hardcoded PG4s on the coding and template strands respectively, were found to account for a large number of Arabidopsis CDS PG4s. We also showed, however, that the percentage of non-hardcoded template strand PG4s is greater at the start codon proximal end of the CDS, indicating codon selection to increase G4 forming potential in this part of the gene body. We hypothesised that G4s may arise in the start of CDSs when 5'UTRs are too short to contain them, however we did not find any correlation between the presence of G4s in the first 100bp of the CDS, and the length of the 5' UTR, suggesting that this is not the case.
 
-Our microarray and RNAseq datasets have shown reproducibly that treatment of Arabidopsis with the G4 stabilising ligand NMM causes widespread changes in gene expression. Genes which contain template stranded two tetrad G4s in their 5' UTRs and CDS regions tended to be downregulated by NMM treatment. Genes with coding strand G4s in the gene body were not as strongly affected, indicating a potential mechanism involving the template strand. Since the template, or non-transcribed, strand is the one scanned by Pol II during transcription, we hypothesised that stabilised G4s on the template strand may form blockages that prevent the elongation of PolII, whilst coding strand G4s will not. These blockages may result in premature termination of transcription. We found that large numbers of clustered PG4s in a 200bp window were also indicative of reduced expression, suggesting that clusters of stabilised G4s are more problematic to Pol II than single G4s. 
+Our microarray and RNAseq datasets have shown reproducibly that treatment of Arabidopsis with the G4 stabilising ligand NMM causes widespread changes in gene expression. Genes which contain template stranded two tetrad G4s in their 5' UTRs and CDS regions tended to be downregulated by NMM treatment. Genes with coding strand G4s in the gene body were not as strongly affected, indicating a potential mechanism involving the template strand. Since the template, or non-transcribed, strand is the one scanned by Pol II during transcription, we hypothesised that stabilised G4s on the template strand may form blockages that prevent the elongation of Pol II, whilst coding strand G4s will not. These blockages may result in premature termination of transcription. We found that large numbers of clustered PG4s in a 200bp window were also indicative of reduced expression, suggesting that clusters of stabilised G4s are more problematic to Pol II than single G4s. 
 
 We analysed publicly available Pol II ChIP-chip data [@Chodvarupu2012] to show that PG4 dense genes have altered Pol II profiles, with greater Pol II density at the TSS proximal end of genes and lower Pol II density at the TSS distal end, compared to the profiles of most over genes. This could be considered indicative of a slowing or pausing of Pol II over G4 dense regions under normal conditions, i.e. not in the presence of G4 stabilising agents. We did not see higher ratios of reads originating from nascent to mature mRNAs on PG4 dense genes, however, suggesting that this slowing does not naturally result in premature termination or degradation. Despite this, it is well documented that Pol II elongation speed affects co-transcriptional processes such as splicing, and so Pol II slowing by G4s may affect these processes.
 
@@ -15,16 +15,16 @@ Because of the repetitiveness of the Extensin genes, it is possible that some of
 Overall, we have found good evidence that NMM is able to affect the expression of genes with template stranded G4s in their gene bodies. Whilst the mechanism for this action is not fully clear, there is some evidence that impairment of Pol II elongation is involved. This fits with the current literature which suggests that stabilised G4s are able to stall polymerases both *in vitro* and *in vivo* [@Han1999; @Siddiqui-Jain2002; @Dexheimer2006; @Cogoi2006; @Chambers2015; @Kwok2016; @Rodriguez2012]. Furthermore, the altered Pol II profile over PG4 dense genes in the absence of any G4 stabilising ligands indicates that slow Pol II progression at G4s may occur naturally in the plant. The effects of G4 location (i.e. position and strand) should therefore be considered in future when modelling transcription efficiency in Arabidopsis.
 <!--stackedit_data:
 eyJkaXNjdXNzaW9ucyI6eyJrOTk2RUJTbWQxdEFYaU11Ijp7In
-RleHQiOiJYIiwic3RhcnQiOjM1NTcsImVuZCI6MzU1N30sIkhT
+RleHQiOiJYIiwic3RhcnQiOjM1NTgsImVuZCI6MzU1OH0sIkhT
 QmtYM2V0QWtBY2dTM1ciOnsidGV4dCI6IkZ1cnRoZXJtb3JlLC
 Bkb3ducmVndWxhdGlvbiBieSBOTU0gdHJlYXRtZW50IHdhcyBu
 b3QgYWZmZWN0ZWQgYnkgcHJlLXRyZWF0bWVudOKApiIsInN0YX
-J0IjozODkyLCJlbmQiOjQwMTZ9LCJ4SDhoeGFJVXlyYWFORTRm
-Ijp7InN0YXJ0Ijo1NjY1LCJlbmQiOjU3NTMsInRleHQiOiJOb2
+J0IjozODkzLCJlbmQiOjQwMTd9LCJ4SDhoeGFJVXlyYWFORTRm
+Ijp7InN0YXJ0Ijo1NjY2LCJlbmQiOjU3NTQsInRleHQiOiJOb2
 5lIG9mIHRoZXNlIHRydW5jYXRlZCB0cmFuc2NyaXB0cyBhcHBl
 YXJlZCB0byBoYXZlIGNhbm9uaWNhbCBzcGxpY2UganVuY3Rpb2
 7igKYifSwiRTdHblFQRVFaZEpqWmJSUiI6eyJzdGFydCI6NjA0
-MCwiZW5kIjo2MDU1LCJ0ZXh0Ijoib3IgYXJ0ZWZhY3R1YWwuIn
+MSwiZW5kIjo2MDU2LCJ0ZXh0Ijoib3IgYXJ0ZWZhY3R1YWwuIn
 19LCJjb21tZW50cyI6eyJZVHA0VWszMVZlU0ZBVkFKIjp7ImRp
 c2N1c3Npb25JZCI6Ims5OTZFQlNtZDF0QVhpTXUiLCJzdWIiOi
 JnaDo1MzkxNzU4IiwidGV4dCI6IkRvbid0IGZvcmdldCB0aGlz
@@ -44,7 +44,7 @@ MSI6eyJkaXNjdXNzaW9uSWQiOiJFN0duUVBFUVpkSmpaYlJSIi
 wic3ViIjoiZ2g6NTM5MTc1OCIsInRleHQiOiJZb3UgZG9uJ3Qg
 bWVudGlvbiBhbnl0aGluZyBhYm91dCB0aGUgbGFjayBvZiByZX
 Nwb25zZSB0byBOTU0uIiwiY3JlYXRlZCI6MTUzNzA4NjA4OTgz
-M319LCJoaXN0b3J5IjpbLTE2MjkwNzg4ODksLTQ1MDQ1NzIyMy
-wxMDc5OTgwNzk2LC0xMTE1ODExMDkzLC0xOTY3OTAyMjMxLDkw
-NzI1NDQ5MywxMTU3MjU4OThdfQ==
+M319LCJoaXN0b3J5IjpbLTUxNDAxNjcwOSwtNDUwNDU3MjIzLD
+EwNzk5ODA3OTYsLTExMTU4MTEwOTMsLTE5Njc5MDIyMzEsOTA3
+MjU0NDkzLDExNTcyNTg5OF19
 -->
