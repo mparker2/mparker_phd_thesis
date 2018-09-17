@@ -154,7 +154,7 @@ Since transcriptional downregulation by NMM stabilised G4s appears to occur most
 
 To test whether template G4 containing genes might produce abortive transcripts that are degraded by the exosome rather than maturing to mRNAs, we analysed publicly available GRO-seq data [@Hetzel2016]. Since GRO-seq captures nascent RNA irrespective of its stability, and RNAseq captures stable RNAs, the ratio between the normalised read counts in GROseq vs RNAseq represents an estimate of the amount of unstable products produced at each gene locus (Fig. \ref{gro}a). We found that the largest difference in ratio was between non-coding and protein coding RNAs, with non-coding RNAs having much greater GRO/RNA ratios (data not shown). This is likely explained by the higher rate of modification of many ncRNAs, e.g. tRNAs, which prevent reverse transcription and sequencing by RNAseq. Other ncRNAs such as natural antisense RNAs may also be unstable and degraded quickly.
 
-G4 predictions were calculated using G4Seeqer and the score of the maximum score region within the transcribed body of each gene was assigned to the gene. A G4 containing set was produced using genes which contained a maximum template strand G4seeqer score of more than 0.95, and a G4 negative set was produced using genes with a maximum score of only 0.05 or less. We found a small but significant positive increase in GRO/RNA ratio for G4 dense genes (p = 0.009), suggesting that some abortive transcripts are produced from these genes (Fig. \ref{gro}b, right panel). In contrast, genes with high scoring G4 regions on the coding strand did not have greater GRO/RNA ratios (p=0.4) (Fig. \ref{gro}b, left panel).
+G4 predictions were calculated using G4Seeqer and the score of the maximum score region within the transcribed body of each gene was assigned to the gene. A G4 containing set was produced using genes which contained a maximum template strand G4seeqer score of more than 0.95, and a G4 negative set was produced using genes with a maximum score of only 0.05 or less. We found a small but significant positive increase in GRO/RNA ratio for G4 dense genes (independent T-test p = 0.009), suggesting that some abortive transcripts are produced from these genes (Fig. \ref{gro}b, right panel). In contrast, genes with high scoring G4 regions on the coding strand did not have greater GRO/RNA ratios (p=0.4) (Fig. \ref{gro}b, left panel).
 
 We conducted the same analysis using genes containing three or more two tetrad PG4s in 200bp maximal density clusters, as described above (Fig. \ref{gro}c). For these genes, we did not find any significant increase in GRO/RNA ratio, suggesting that these two tetrad G4s are not sufficiently stable to cause abortive transcription. Since these genes do have higher promoter proximal Pol II occupancy, we suggest that elongation occurs more slowly across the genes, but does not cause premature termination.
 
@@ -277,21 +277,21 @@ BZZnk1M0tDRyI6eyJ0ZXh0IjoibGFyZ2VzdCIsInN0YXJ0Ijoz
 NDk3NSwiZW5kIjozNDk4Mn0sIm9uVWhpZExhbjdEUW4wZEsiOn
 sidGV4dCI6ImRhdGEgbm90IHNob3duIiwic3RhcnQiOjM1MTA4
 LCJlbmQiOjM1MTIyfSwiVlRSQjJVVVlpbEpwZTN2ViI6eyJ0ZX
-h0IjoiMDA5Iiwic3RhcnQiOjM1ODIzLCJlbmQiOjM1ODI2fSwi
+h0IjoiMDA5Iiwic3RhcnQiOjM1ODQyLCJlbmQiOjM1ODQ1fSwi
 U3k3dUxjdWtuNmxRYVZCdiI6eyJ0ZXh0IjoicHJlc2VudCBjb2
-RpbmcgYW5kIHRlbXBsYXRlIHN0cmFuZCIsInN0YXJ0IjozNzE2
-MiwiZW5kIjozNzE5Nn0sIkU2dmsxdlNPWnZWYmJhODEiOnsidG
+RpbmcgYW5kIHRlbXBsYXRlIHN0cmFuZCIsInN0YXJ0IjozNzE4
+MSwiZW5kIjozNzIxNX0sIkU2dmsxdlNPWnZWYmJhODEiOnsidG
 V4dCI6IlNjYXR0ZXIgcGxvdCBzaG93aW5nIG1lYXN1cmVkIGV4
 cHJlc3Npb24gaW4gbG9nMiBjb3VudHMgcGVyIG1pbGxpb24gKG
-xvZ0NQTSkgZm/igKYiLCJzdGFydCI6MzY3MDUsImVuZCI6MzY5
-MjF9LCI5QWczTVU3U0lvMjRjSHV1Ijp7InRleHQiOiIwLjkpIi
-wic3RhcnQiOjM3MDU3LCJlbmQiOjM3MDYyfSwiRWdRZGJUSkFt
+xvZ0NQTSkgZm/igKYiLCJzdGFydCI6MzY3MjQsImVuZCI6MzY5
+NDB9LCI5QWczTVU3U0lvMjRjSHV1Ijp7InRleHQiOiIwLjkpIi
+wic3RhcnQiOjM3MDc2LCJlbmQiOjM3MDgxfSwiRWdRZGJUSkFt
 T0V1b1pmVSI6eyJ0ZXh0IjoiKmQpKiogMycgVVRSLCIsInN0YX
-J0Ijo0MjY0NywiZW5kIjo0MjY2MH0sIlBhZWFweVBMdEl6ZFU3
-MWoiOnsidGV4dCI6InN0cm9uZyIsInN0YXJ0Ijo0MzU5NiwiZW
-5kIjo0MzYwMn0sImkwVnY3NnkyWEFUY3JrelEiOnsidGV4dCI6
+J0Ijo0MjY2NiwiZW5kIjo0MjY3OX0sIlBhZWFweVBMdEl6ZFU3
+MWoiOnsidGV4dCI6InN0cm9uZyIsInN0YXJ0Ijo0MzYxNSwiZW
+5kIjo0MzYyMX0sImkwVnY3NnkyWEFUY3JrelEiOnsidGV4dCI6
 IipOTU0gZXhwcmVzc2lvbiBjaGFuZ2Ugb2YgQXJhYmlkb3BzaX
-MgYW5kICpaIiwic3RhcnQiOjQ2NTIyLCJlbmQiOjQ2NTY2fSwi
+MgYW5kICpaIiwic3RhcnQiOjQ2NTQxLCJlbmQiOjQ2NTg1fSwi
 UVZRQlNnZ3ZLS1Nyd2tTZiI6eyJ0ZXh0IjoiY2F1c2VkIiwic3
 RhcnQiOjMzMTMsImVuZCI6MzMxOX0sInRITnhGNllPSkVlcWFi
 ZWwiOnsidGV4dCI6IiMjIyBQbGFudCBHcm93dGggQ29uZGl0aW
@@ -353,7 +353,7 @@ LCAxOTMwIHVwcmVndWxhdGVkKSIsInN0YXJ0IjoyMDQxMSwiZW
 Ik5NTSBjYXVzZXMgZ2xvYmFsIGNoYW5nZSBpbiBnZW5lIGV4cH
 Jlc3Npb24iLCJzdGFydCI6MTk3NDIsImVuZCI6MTk3ODV9LCJC
 YnllZFNJekFtc2hyT3N0Ijp7InRleHQiOiJwcm9tb3RlciByZW
-dpb24iLCJzdGFydCI6NDgyNjEsImVuZCI6NDgyNzZ9fSwiY29t
+dpb24iLCJzdGFydCI6NDgyODAsImVuZCI6NDgyOTV9fSwiY29t
 bWVudHMiOnsiend6R3ZUd1RKNU9xWW5zcSI6eyJkaXNjdXNzaW
 9uSWQiOiJxekZrOU85eWhFTGYzMDR5Iiwic3ViIjoiZ286MTAy
 MjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6IndobyBpcyBcIn
@@ -608,11 +608,11 @@ N0pmZmtSIjp7ImRpc2N1c3Npb25JZCI6IkJieWVkU0l6QW1zaH
 JPc3QiLCJzdWIiOiJnbzoxMDIyMDU3OTcyNzY5NDEwMTA2Nzci
 LCJ0ZXh0IjoiRGlkIHlvdSBldmVyIGNoZWNrIHByb21vdG9yIH
 JlZ2lvbnM/IiwiY3JlYXRlZCI6MTUzNTM1NzAwNDg4MX19LCJo
-aXN0b3J5IjpbMjAyMzQ3MjQ1MSw4MTI2NDUwOTgsLTIwNzI1Nj
-g2NDEsLTEwMDc0MTUwODYsMTg4OTg1NDQ2NSw2NjgzNjg5NzMs
-MTM0MjUzODE4NCwtMTkxNDU3ODg5MywyMjY3NjQ3OSwtNTI3Nz
-Q2MTY5LC0zNzkxMjIxMzcsLTg2ODAzNTA1OSwtMTExMTExMjA5
-MCwxMDMzNjE1MzY0LC0xNjk5NDgyMzgsMTI4NDQwNzEwOSwzMz
-Q2NjU0ODAsMTEwODAzNDE1MywxMDU3OTA1MDExLC0xMDIzODIy
-MDU3XX0=
+aXN0b3J5IjpbLTE3NzI4MzU4NzcsMjAyMzQ3MjQ1MSw4MTI2ND
+UwOTgsLTIwNzI1Njg2NDEsLTEwMDc0MTUwODYsMTg4OTg1NDQ2
+NSw2NjgzNjg5NzMsMTM0MjUzODE4NCwtMTkxNDU3ODg5MywyMj
+Y3NjQ3OSwtNTI3NzQ2MTY5LC0zNzkxMjIxMzcsLTg2ODAzNTA1
+OSwtMTExMTExMjA5MCwxMDMzNjE1MzY0LC0xNjk5NDgyMzgsMT
+I4NDQwNzEwOSwzMzQ2NjU0ODAsMTEwODAzNDE1MywxMDU3OTA1
+MDExXX0=
 -->
