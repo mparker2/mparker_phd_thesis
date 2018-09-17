@@ -6,21 +6,22 @@ Our microarray and RNAseq datasets have shown reproducibly that treatment of Ara
 
 We analysed publicly available Pol II ChIP-chip data (Chodvarupu et al. 2012) to show that PG4 dense genes have altered Pol II profiles, with greater Pol II density at the TSS proximal end of genes and lower Pol II density at the TSS distal end, compared to the profiles of most over genes. This could be considered indicative of a slowing or pausing of Pol II over G4 dense regions under normal conditions, i.e. not in the presence of G4 stabilising agents. We did not see higher ratios of reads originating from nascent to mature mRNAs on PG4 dense genes, however, suggesting that this slowing does not naturally result in premature termination or degradation. Despite this, it is well documented that Pol II elongation speed affects co-transcriptional processes such as splicing, and so Pol II slowing by G4s may affect these processes.
 
-A family of poly-proline rich protein-coding genes, called the Extensins, were identified as strongly downregulated by NMM. The Extensins were found to be extremely PG4 rich on the template strand, containing as many as X different overlapping PG4 registers per gene. We found that Extensin genes are also downregulated by Berberine, another G4 binding agent, suggesting that downregulation is indeed caused by G4 stabilisation and not by any off-target effects. Furthermore, downregulation by NMM treatment was not affected by pre-treatment with the translation inhibitor cyclohexamide, suggesting that NMM has a direct effect on Extensin gene expression.
+A family of poly-proline rich protein-coding genes, called the Extensins, were identified as strongly downregulated by NMM. The Extensins were found to be extremely PG4 rich on the template strand, containing as many as X different overlapping PG4 registers per gene. The Extensin  We found that Extensin genes are also downregulated by Berberine, another G4 binding agent, suggesting that downregulation is indeed caused by G4 stabilisation and not by any off-target effects. Furthermore, downregulation by NMM treatment was not affected by pre-treatment with the translation inhibitor cyclohexamide, suggesting that NMM has a direct effect on Extensin gene expression, and not via a .
 
-The Extensins have relatively high levels of spliced reads mapping to them, despite their anotated transcript models having only single exons. These exitronic splice junctions tend to be over the PG4 rich regions of the gene. We hypothesised that these spliced reads may be the result of Pol II slowing at G4 rich regions of the gene, which allows co-transcriptional splicing to occur at weak splice junctions. Because of the repetitiveness of the Extensin genes, it is possible that some of these spliced reads might result from mapping errors, however we did not find as many unique splice junctions in simulated datasets as in the real RNAseq data. Furthermore, were able to isolate, clone, and sanger sequence some of these spliced transcripts. None of these truncated transcripts appeared to have canonical splice junction sequences, however, possibly indicating that they may be PCR artefacts. In future we could use Nanopore direct RNA sequencing, which has no PCR step and is able to sequence whole mRNA molecules regardless of repetitiveness, to identify whether the Extensin exitrons are real or artefactual. Regardless of whether the Extensin splice variants are real or not, the levels of splicing do not appear to be responsive to NMM. This could be considered indicative of the splicing being artefactual, however may be 
+The Extensins have relatively high levels of spliced reads mapping to them, despite their anotated transcript models having only single exons. These exitronic splice junctions tend to be over the PG4 rich regions of the gene. We hypothesised that these spliced reads may be the result of Pol II slowing at G4 rich regions of the gene, which allows co-transcriptional splicing to occur at weak splice junctions. Because of the repetitiveness of the Extensin genes, it is possible that some of these spliced reads might result from mapping errors, however we did not find as many unique splice junctions in simulated datasets as in the real RNAseq data. Furthermore, were able to isolate, clone, and sanger sequence some of these spliced transcripts. None of these truncated transcripts appeared to have canonical splice junction sequences, however, possibly indicating that they may be PCR artefacts. In future we could use Nanopore direct RNA sequencing, which has no PCR step and is able to sequence whole mRNA molecules regardless of repetitiveness, to identify whether the Extensin exitrons are real or artefactual. Regardless of whether the Extensin splice variants are real or not, the levels of splicing do not appear to be responsive to NMM. This could be considered indicative of the splicing being artefactual, or alternatively that splicing is not linked to G4 formation.
+
 <!--stackedit_data:
 eyJkaXNjdXNzaW9ucyI6eyJrOTk2RUJTbWQxdEFYaU11Ijp7In
 RleHQiOiJYIiwic3RhcnQiOjM1NDUsImVuZCI6MzU0Nn0sIkhT
 QmtYM2V0QWtBY2dTM1ciOnsidGV4dCI6IkZ1cnRoZXJtb3JlLC
 Bkb3ducmVndWxhdGlvbiBieSBOTU0gdHJlYXRtZW50IHdhcyBu
 b3QgYWZmZWN0ZWQgYnkgcHJlLXRyZWF0bWVudOKApiIsInN0YX
-J0IjozNzg4LCJlbmQiOjM5ODF9LCJ4SDhoeGFJVXlyYWFORTRm
-Ijp7InN0YXJ0Ijo0NzMyLCJlbmQiOjQ4MjAsInRleHQiOiJOb2
+J0IjozODAyLCJlbmQiOjQwMTF9LCJ4SDhoeGFJVXlyYWFORTRm
+Ijp7InN0YXJ0Ijo0NzYyLCJlbmQiOjQ4NTAsInRleHQiOiJOb2
 5lIG9mIHRoZXNlIHRydW5jYXRlZCB0cmFuc2NyaXB0cyBhcHBl
 YXJlZCB0byBoYXZlIGNhbm9uaWNhbCBzcGxpY2UganVuY3Rpb2
-7igKYifSwiRTdHblFQRVFaZEpqWmJSUiI6eyJzdGFydCI6NTA4
-NiwiZW5kIjo1MTAxLCJ0ZXh0Ijoib3IgYXJ0ZWZhY3R1YWwuIn
+7igKYifSwiRTdHblFQRVFaZEpqWmJSUiI6eyJzdGFydCI6NTEx
+NiwiZW5kIjo1MTMxLCJ0ZXh0Ijoib3IgYXJ0ZWZhY3R1YWwuIn
 19LCJjb21tZW50cyI6eyJZVHA0VWszMVZlU0ZBVkFKIjp7ImRp
 c2N1c3Npb25JZCI6Ims5OTZFQlNtZDF0QVhpTXUiLCJzdWIiOi
 JnaDo1MzkxNzU4IiwidGV4dCI6IkRvbid0IGZvcmdldCB0aGlz
@@ -40,6 +41,6 @@ MSI6eyJkaXNjdXNzaW9uSWQiOiJFN0duUVBFUVpkSmpaYlJSIi
 wic3ViIjoiZ2g6NTM5MTc1OCIsInRleHQiOiJZb3UgZG9uJ3Qg
 bWVudGlvbiBhbnl0aGluZyBhYm91dCB0aGUgbGFjayBvZiByZX
 Nwb25zZSB0byBOTU0uIiwiY3JlYXRlZCI6MTUzNzA4NjA4OTgz
-M319LCJoaXN0b3J5IjpbNjI0ODYyMzEyLC0xOTY3OTAyMjMxLD
+M319LCJoaXN0b3J5IjpbMjQ4NTgxMTc1LC0xOTY3OTAyMjMxLD
 kwNzI1NDQ5MywxMTU3MjU4OThdfQ==
 -->
