@@ -25,11 +25,11 @@ Shuffled genomes were generated in Python using `ushuffle` to shuffle sequences 
 
 ### Reverse Translation Method
 
-Relative frequency of codon usage for all Arabidopsis CDS sequences was calculated in python. CDSs from multiple transcripts of the same gene were treated separately, since flattening may have resulted in frameshifts. Reverse translation was conducted by translating CDSs into protein, then randomly selecting codons to represent the protein, weighting each codon by its usage. 100 reverse translated potential coding sequences (PCSs) were generated per CDS. G content on each strand was calculated using 20bp windows and reinterpolated to 100 bins, for both real CDSs and PCSs.  Reinterpolation was conducted using piecewise linear interpolation with 100 evenly spaced positions along the length of the sequence. PG4 content was calculated using G4Seeqer and the overlapping Quadparser method. Overlapping PG4s were flattened into a single interval. PG4s were binned into 100 equally sized bins per gene, based on the midpoint of the PG4. Resultant profiles were stored in HDF5 format using `h5py` [@Collette2013]. Averaged profiles across all iterations of reverse translation, and all genes were generated and plotted using `matplotlib` [@Hunter2007].
+Relative frequency of codon usage for all Arabidopsis CDS sequences was calculated in python. CDSs from multiple transcripts of the same gene were treated separately, since flattening may have resulted in frameshifts. Reverse translation was conducted by translating CDSs into protein, then randomly selecting codons to represent the protein, weighting each codon by its usage. 100 reverse translated potential coding sequences (PCSs) were generated per CDS. G content on each strand was calculated using 20bp windows and reinterpolated to 100 bins, for both real CDSs and PCSs.  Reinterpolation was conducted using piecewise linear interpolation with 100 evenly spaced positions along the length of the sequence. PG4 content was calculated using G4Seeqer and the overlapping Quadparser method. Overlapping PG4s were flattened into a single interval. PG4s were binned into 100 equally sized bins per gene, based on the midpoint of the PG4. Resultant profiles were stored in HDF5 format using `h5py` [@Collette2013]. Averaged profiles across all iterations of reverse translation, and all genes were generated and plotted using `matplotlib` [@Hunter2007]. Code is available in \ref{reverse_translation_analysis}.
 
 ### tRNA Adaptation Index Calculations
 
-Relative tRNA Adaptation Index was calculated using the python module tAI (https://github.com/smsaladi/tAI). Metagene profiles and boxplots were created in python using `matplotlib` and `seaborn`  [@Hunter2007; @Waskom2014].
+Relative tRNA Adaptation Index was calculated using the python module tAI (https://github.com/smsaladi/tAI). Metagene profiles and boxplots were created in python using `matplotlib` and `seaborn`  [@Hunter2007; @Waskom2014]. Code for this analysis can be found in Appendix \ref{cds_codon_usage_analysis}.
 
 ### Hardcoded PG4 Analysis
 
@@ -172,54 +172,54 @@ o2OTExfSwiblZ1YkRvR1BIQUZmbm9CaCI6eyJ0ZXh0Ijoid2Vy
 ZSBnZW5lcmF0ZWQgcGVyIENEUyIsInN0YXJ0Ijo2Nzk4LCJlbm
 QiOjY4MjB9LCJSQVBaem5BWnZ4VG1ReUhZIjp7InRleHQiOiJw
 cmVkaWN0ZWQgdXNpbmcgbmV0d29yayBhbmFseXNpcyIsInN0YX
-J0Ijo3ODk1LCJlbmQiOjc5Mjd9LCJlQlNlS3pyUFdwTXE4cU5x
+J0Ijo4MDMyLCJlbmQiOjgwNjR9LCJlQlNlS3pyUFdwTXE4cU5x
 Ijp7InRleHQiOiJwb3NzaWJsZSB0byB1c2Ugc3lub255bW91cy
 Bjb2RvbnMgd2hpY2ggZG8gbm90IGNoYW5nZSB0aGUgcHJvdGVp
-biBzZXF1ZW5jZSwiLCJzdGFydCI6ODQ5NywiZW5kIjo4NTcyfS
+biBzZXF1ZW5jZSwiLCJzdGFydCI6ODYzNCwiZW5kIjo4NzA5fS
 widm5pVnFHTWVvM1h2Vm5yWiI6eyJ0ZXh0IjoidCBhbHNvIGhh
 cyBvbmUgb2YgdGhlIGxvd2VzdCB0aHJlZSB0ZXRyYWQgUEc0IG
-RlbnNpdGllcy4iLCJzdGFydCI6MTAyMjYsImVuZCI6MTAzMzh9
+RlbnNpdGllcy4iLCJzdGFydCI6MTAzNjMsImVuZCI6MTA0NzV9
 LCJ4RXdGUTlSa09ZNE05NVh0Ijp7InRleHQiOiIobWVkaWFuIG
 RlbnNpdHkgNTkgUEc0cy9NYiB2cy4gMy4zIFBHNHMvTWIiLCJz
-dGFydCI6MTA2NTMsImVuZCI6MTA2OTV9LCJTMHBkUElTNVVHWE
+dGFydCI6MTA3OTAsImVuZCI6MTA4MzJ9LCJTMHBkUElTNVVHWE
 1rQ3FKIjp7InRleHQiOiJTaW5jZSB0aGUgbWVsdGluZyB0ZW1w
 ZXJhdHVyZXMgb2YgdGhyZWUgdGV0cmFkIEc0cyBjYW4gcmVhY2
-ggdXAgdG8gMTAwIERlZ3JlZXPigKYiLCJzdGFydCI6MTE0Nzks
-ImVuZCI6MTE3NTV9LCJXZHdiVThNTlVlcThFNFZ1Ijp7InRleH
+ggdXAgdG8gMTAwIERlZ3JlZXPigKYiLCJzdGFydCI6MTE2MTYs
+ImVuZCI6MTE4OTJ9LCJXZHdiVThNTlVlcThFNFZ1Ijp7InRleH
 QiOiJXZSBzdWdnZXN0IHRoYXQgdGhpcyBpbmRpY2F0ZXMgdGhh
 dCB0d28gdGV0cmFkIFBHNHMgbWF5IHBsYXkgYSByZWd1bGF0b3
-J5IHJvbGXigKYiLCJzdGFydCI6MTMxMzYsImVuZCI6MTM0NzR9
+J5IHJvbGXigKYiLCJzdGFydCI6MTMyNzMsImVuZCI6MTM2MTF9
 LCJ4OUZxNVdQb2pZWnc5QXNiIjp7InRleHQiOiIhWyoqTWV0YW
 dlbmUgUHJvZmlsZSBvZiBHQyBjb250ZW50IGFuZCBQRzQgZGVu
 c2l0eSoqIE1ldGFnZW5lIHByb2ZpbGVzIHNob3dpbmfigKYiLC
-JzdGFydCI6MTYzMjYsImVuZCI6MTY5MTR9LCIyWmlpNlhJQVIz
+JzdGFydCI6MTY0NjMsImVuZCI6MTcwNTF9LCIyWmlpNlhJQVIz
 aUxUVldaIjp7InRleHQiOiJzcGVjaWZpYyBwcm90ZWluIG1vdG
-lmcyIsInN0YXJ0IjoxNzI5MywiZW5kIjoxNzMxNn0sInV1ajBa
+lmcyIsInN0YXJ0IjoxNzQzMCwiZW5kIjoxNzQ1M30sInV1ajBa
 akJIZzZ3YlhCQVIiOnsidGV4dCI6IlRoZSBHQyBjb250ZW50IG
-9mIiwic3RhcnQiOjE4MTcxLCJlbmQiOjE4MTg4fSwiYk1MSlA5
+9mIiwic3RhcnQiOjE4MzA4LCJlbmQiOjE4MzI1fSwiYk1MSlA5
 REVUSnBrSzg4eCI6eyJ0ZXh0IjoiVGhpcyBtYXkgYmUgZHVlIH
 RvIHRoZSByZXBldGl0aXZlIG5hdHVyZSBvZiBzb21lIHByb3Rl
 aW4gbW90aWZzLiBQQ1MgUEc0IGNvbnRlbuKApiIsInN0YXJ0Ij
-oxOTIyMiwiZW5kIjoxOTQ2NX0sIlpOU29HMm9EeW5SM1d1Nloi
+oxOTM1OSwiZW5kIjoxOTYwMn0sIlpOU29HMm9EeW5SM1d1Nloi
 OnsidGV4dCI6IihTcGVhcm1hbnMgcmhvIDAuMDE0KS4iLCJzdG
-FydCI6MjAwMTQsImVuZCI6MjAwMzZ9LCJqWHM4Nm5jdEtmdUcw
+FydCI6MjAxNTEsImVuZCI6MjAxNzN9LCJqWHM4Nm5jdEtmdUcw
 TFY5Ijp7InRleHQiOiIhWyoqUmV2ZXJzZSBUcmFuc2xhdGlvbi
 BTaW11bGF0aW9uIHNob3dzIHRoYXQgUEc0cyBhcmUgZW5yaWNo
-ZWQgYXQgdGhlIFN0YXJ0IENv4oCmIiwic3RhcnQiOjIwMDQ4LC
-JlbmQiOjIwNDE5fSwiNnRSazRqTTVvN0FITVlvSyI6eyJ0ZXh0
-IjoidGhhdCB0aGUiLCJzdGFydCI6MjMzNDUsImVuZCI6MjMzNj
-F9LCIyT2JhMHl5UU5peWlraEowIjp7InRleHQiOiJXZSBmb3Vu
+ZWQgYXQgdGhlIFN0YXJ0IENv4oCmIiwic3RhcnQiOjIwMTg1LC
+JlbmQiOjIwNTU2fSwiNnRSazRqTTVvN0FITVlvSyI6eyJ0ZXh0
+IjoidGhhdCB0aGUiLCJzdGFydCI6MjM0ODIsImVuZCI6MjM0OT
+h9LCIyT2JhMHl5UU5peWlraEowIjp7InRleHQiOiJXZSBmb3Vu
 ZCB0aGF0IG9uIGJvdGggc3RyYW5kcywgdGhlIGdyZWF0ZXN0IG
 51bWJlciBvZiBQRzRzIHdlcmUgY29tcGxldGVseSBoYXJk4oCm
-Iiwic3RhcnQiOjI0ODc2LCJlbmQiOjI1MDM5fSwiSWxDSHBVVz
+Iiwic3RhcnQiOjI1MDEzLCJlbmQiOjI1MTc2fSwiSWxDSHBVVz
 NaYzJEN3FlYyI6eyJ0ZXh0IjoiIVsqKk5vbi1oYXJkY29kZWQg
 UEc0cyBsZXZlbHMgYXJlIGdyZWF0ZXIgYXQgdGhlIHN0YXJ0IG
 NvZG9uIHByb3hpbWFsIHJlZ2lvbiBvZuKApiIsInN0YXJ0Ijoy
-NzYyNiwiZW5kIjoyNzk3MH0sIkR6SXU5VkVINzltd2tna2MiOn
+Nzc2MywiZW5kIjoyODEwN30sIkR6SXU5VkVINzltd2tna2MiOn
 sidGV4dCI6IkZ1cnRoZXJtb3JlLCB0aGUgcmF0aW8gb2YgdHdv
 IHRldHJhZCB0byB0aHJlZSB0ZXRyYWQgUEc0cyBpbiBwbGFudC
-BnZW5vbWVzIGlzIG3igKYiLCJzdGFydCI6MzE2OTYsImVuZCI6
-MzE5MTV9fSwiY29tbWVudHMiOnsiZTZhckw0dUd4d1JNOUp0WS
+BnZW5vbWVzIGlzIG3igKYiLCJzdGFydCI6MzE4MzMsImVuZCI6
+MzIwNTJ9fSwiY29tbWVudHMiOnsiZTZhckw0dUd4d1JNOUp0WS
 I6eyJkaXNjdXNzaW9uSWQiOiJDdkwzSDRhZ0ppbnFTU2ZtIiwi
 c3ViIjoiMTAyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6Ik
 lzIHRoaXMgc2ltaWxhciBvciBkaWZmZXJlbnQgdG8gaHVtYW4i
@@ -344,7 +344,7 @@ A1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6IkNvdWxkIG5vdCB0
 aGUgb3Bwb3NpdGUgYXJndWVtZW50IGJlIG1hZGU6IHRoaW5ncy
 B0aGF0IGFyZSBtb3JlIGNvbW1vbiBhcmUgbGVzcyBsaWtlbHkg
 dG8gaGF2ZSBhbiBlZmZlY3QuIiwiY3JlYXRlZCI6MTUzNDM1MD
-k3ODk3OH19LCJoaXN0b3J5IjpbLTcxNTQ4NjI4MSwtNjY0NDg2
+k3ODk3OH19LCJoaXN0b3J5IjpbMjAxNTE1MTc1NywtNjY0NDg2
 MjUxLDExMzc3MTk5NjcsMTE5NjUzMzc5OCwyODIzNDA0NDUsLT
 E1NzEyNzQ0MiwxNzQyNjgwOTgzLDE4MDcwMjgyMjYsMTk2MzY3
 OTY3MiwtNDU3MzAyMjAyLDQ3MTYxNjYzMSwtMTEzNDgyNDg3OC
