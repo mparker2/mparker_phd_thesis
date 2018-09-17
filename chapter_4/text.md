@@ -33,7 +33,7 @@ Relative tRNA Adaptation Index was calculated using the python module tAI (https
 
 ### Hardcoded PG4 Analysis
 
-For hardcoded PG4 analysis, all overlapping two tetrad PG4 registers in CDSs were predicted using network analysis with `networkx` [@Hagberg2008]. All overlapping G-runs in the Arabidopsis genome were identified and assigned to nodes. Nodes were connected if G-runs were non-overlapping were separated by a distance of 7bp or less. Connected components were then identified and all unique subgraphs containing four nodes were extracted to yield the complete set of overlapping PG4s. G-runs were extracted from these PG4s, and the position, frame, and resultant protein sequence coded for by each G-run was calculated. Hardcoded G-runs were identified by analysing whether it would be possible to use synonymous codons which do not change the protein sequence, which would abolish the G-run. PG4s which had G-runs which all code for the same amino-acid or pair of amino acids (which we refer two as the protein motif of a G-run) were labelled as repetitive. For G-run frequency plots, G-runs which contribute to multiple PG4s were deduplicated to give only one G-run per position. G-runs which contributed to both repetitive and non-repetitive PG4 registers were labelled as non-repetitive. For hardcoded PG4 metagene profiles, PG4s were binned into 100 equally sized bins per CDS, based on the midpoint of the PG4. All overlapping PG4s were counted in the profile. The total number of PG4s per bin was counted, and cumulative frequency metagene profiles were plotted using `matplotlib` [@Hunter2007]. Frequency plots of hardcoded PG4s/G-runs, repetitiveness, and protein motifs were produced using `seaborn` [@Waskom2014].
+For hardcoded PG4 analysis, all overlapping two tetrad PG4 registers in CDSs were predicted using network analysis with `networkx` [@Hagberg2008]. All overlapping G-runs in the Arabidopsis genome were identified and assigned to nodes. Nodes were connected if G-runs were non-overlapping were separated by a distance of 7bp or less. Connected components were then identified and all unique subgraphs containing four nodes were extracted to yield the complete set of overlapping PG4s. G-runs were extracted from these PG4s, and the position, frame, and resultant protein sequence coded for by each G-run was calculated. Hardcoded G-runs were identified by analysing whether it would be possible to use synonymous codons which do not change the protein sequence, which would abolish the G-run. PG4s which had G-runs which all code for the same amino-acid or pair of amino acids (which we refer two as the protein motif of a G-run) were labelled as repetitive. For G-run frequency plots, G-runs which contribute to multiple PG4s were deduplicated to give only one G-run per position. G-runs which contributed to both repetitive and non-repetitive PG4 registers were labelled as non-repetitive. For hardcoded PG4 metagene profiles, PG4s were binned into 100 equally sized bins per CDS, based on the midpoint of the PG4. All overlapping PG4s were counted in the profile. The total number of PG4s per bin was counted, and cumulative frequency metagene profiles were plotted using `matplotlib` [@Hunter2007]. Frequency plots of hardcoded PG4s/G-runs, repetitiveness, and protein motifs were produced using `seaborn` [@Waskom2014]. Code is available in Appendix \ref{cds_codon_usage_analysis}.
 
 \newpage
 
@@ -178,48 +178,48 @@ Bjb2RvbnMgd2hpY2ggZG8gbm90IGNoYW5nZSB0aGUgcHJvdGVp
 biBzZXF1ZW5jZSwiLCJzdGFydCI6ODYzNCwiZW5kIjo4NzA5fS
 widm5pVnFHTWVvM1h2Vm5yWiI6eyJ0ZXh0IjoidCBhbHNvIGhh
 cyBvbmUgb2YgdGhlIGxvd2VzdCB0aHJlZSB0ZXRyYWQgUEc0IG
-RlbnNpdGllcy4iLCJzdGFydCI6MTAzNjMsImVuZCI6MTA0NzV9
+RlbnNpdGllcy4iLCJzdGFydCI6MTA0MjUsImVuZCI6MTA1Mzd9
 LCJ4RXdGUTlSa09ZNE05NVh0Ijp7InRleHQiOiIobWVkaWFuIG
 RlbnNpdHkgNTkgUEc0cy9NYiB2cy4gMy4zIFBHNHMvTWIiLCJz
-dGFydCI6MTA3OTAsImVuZCI6MTA4MzJ9LCJTMHBkUElTNVVHWE
+dGFydCI6MTA4NTIsImVuZCI6MTA4OTR9LCJTMHBkUElTNVVHWE
 1rQ3FKIjp7InRleHQiOiJTaW5jZSB0aGUgbWVsdGluZyB0ZW1w
 ZXJhdHVyZXMgb2YgdGhyZWUgdGV0cmFkIEc0cyBjYW4gcmVhY2
-ggdXAgdG8gMTAwIERlZ3JlZXPigKYiLCJzdGFydCI6MTE2MTYs
-ImVuZCI6MTE4OTJ9LCJXZHdiVThNTlVlcThFNFZ1Ijp7InRleH
+ggdXAgdG8gMTAwIERlZ3JlZXPigKYiLCJzdGFydCI6MTE2Nzgs
+ImVuZCI6MTE5NTR9LCJXZHdiVThNTlVlcThFNFZ1Ijp7InRleH
 QiOiJXZSBzdWdnZXN0IHRoYXQgdGhpcyBpbmRpY2F0ZXMgdGhh
 dCB0d28gdGV0cmFkIFBHNHMgbWF5IHBsYXkgYSByZWd1bGF0b3
-J5IHJvbGXigKYiLCJzdGFydCI6MTMyNzMsImVuZCI6MTM2MTF9
+J5IHJvbGXigKYiLCJzdGFydCI6MTMzMzUsImVuZCI6MTM2NzN9
 LCJ4OUZxNVdQb2pZWnc5QXNiIjp7InRleHQiOiIhWyoqTWV0YW
 dlbmUgUHJvZmlsZSBvZiBHQyBjb250ZW50IGFuZCBQRzQgZGVu
 c2l0eSoqIE1ldGFnZW5lIHByb2ZpbGVzIHNob3dpbmfigKYiLC
-JzdGFydCI6MTY0NjMsImVuZCI6MTcwNTF9LCIyWmlpNlhJQVIz
+JzdGFydCI6MTY1MjUsImVuZCI6MTcxMTN9LCIyWmlpNlhJQVIz
 aUxUVldaIjp7InRleHQiOiJzcGVjaWZpYyBwcm90ZWluIG1vdG
-lmcyIsInN0YXJ0IjoxNzQzMCwiZW5kIjoxNzQ1M30sInV1ajBa
+lmcyIsInN0YXJ0IjoxNzQ5MiwiZW5kIjoxNzUxNX0sInV1ajBa
 akJIZzZ3YlhCQVIiOnsidGV4dCI6IlRoZSBHQyBjb250ZW50IG
-9mIiwic3RhcnQiOjE4MzA4LCJlbmQiOjE4MzI1fSwiYk1MSlA5
+9mIiwic3RhcnQiOjE4MzcwLCJlbmQiOjE4Mzg3fSwiYk1MSlA5
 REVUSnBrSzg4eCI6eyJ0ZXh0IjoiVGhpcyBtYXkgYmUgZHVlIH
 RvIHRoZSByZXBldGl0aXZlIG5hdHVyZSBvZiBzb21lIHByb3Rl
 aW4gbW90aWZzLiBQQ1MgUEc0IGNvbnRlbuKApiIsInN0YXJ0Ij
-oxOTM1OSwiZW5kIjoxOTYwMn0sIlpOU29HMm9EeW5SM1d1Nloi
+oxOTQyMSwiZW5kIjoxOTY2NH0sIlpOU29HMm9EeW5SM1d1Nloi
 OnsidGV4dCI6IihTcGVhcm1hbnMgcmhvIDAuMDE0KS4iLCJzdG
-FydCI6MjAxNTEsImVuZCI6MjAxNzN9LCJqWHM4Nm5jdEtmdUcw
+FydCI6MjAyMTMsImVuZCI6MjAyMzV9LCJqWHM4Nm5jdEtmdUcw
 TFY5Ijp7InRleHQiOiIhWyoqUmV2ZXJzZSBUcmFuc2xhdGlvbi
 BTaW11bGF0aW9uIHNob3dzIHRoYXQgUEc0cyBhcmUgZW5yaWNo
-ZWQgYXQgdGhlIFN0YXJ0IENv4oCmIiwic3RhcnQiOjIwMTg1LC
-JlbmQiOjIwNTU2fSwiNnRSazRqTTVvN0FITVlvSyI6eyJ0ZXh0
-IjoidGhhdCB0aGUiLCJzdGFydCI6MjM0ODIsImVuZCI6MjM0OT
-h9LCIyT2JhMHl5UU5peWlraEowIjp7InRleHQiOiJXZSBmb3Vu
+ZWQgYXQgdGhlIFN0YXJ0IENv4oCmIiwic3RhcnQiOjIwMjQ3LC
+JlbmQiOjIwNjE4fSwiNnRSazRqTTVvN0FITVlvSyI6eyJ0ZXh0
+IjoidGhhdCB0aGUiLCJzdGFydCI6MjM1NDQsImVuZCI6MjM1Nj
+B9LCIyT2JhMHl5UU5peWlraEowIjp7InRleHQiOiJXZSBmb3Vu
 ZCB0aGF0IG9uIGJvdGggc3RyYW5kcywgdGhlIGdyZWF0ZXN0IG
 51bWJlciBvZiBQRzRzIHdlcmUgY29tcGxldGVseSBoYXJk4oCm
-Iiwic3RhcnQiOjI1MDEzLCJlbmQiOjI1MTc2fSwiSWxDSHBVVz
+Iiwic3RhcnQiOjI1MDc1LCJlbmQiOjI1MjM4fSwiSWxDSHBVVz
 NaYzJEN3FlYyI6eyJ0ZXh0IjoiIVsqKk5vbi1oYXJkY29kZWQg
 UEc0cyBsZXZlbHMgYXJlIGdyZWF0ZXIgYXQgdGhlIHN0YXJ0IG
 NvZG9uIHByb3hpbWFsIHJlZ2lvbiBvZuKApiIsInN0YXJ0Ijoy
-Nzc2MywiZW5kIjoyODEwN30sIkR6SXU5VkVINzltd2tna2MiOn
+NzgyNSwiZW5kIjoyODE2OX0sIkR6SXU5VkVINzltd2tna2MiOn
 sidGV4dCI6IkZ1cnRoZXJtb3JlLCB0aGUgcmF0aW8gb2YgdHdv
 IHRldHJhZCB0byB0aHJlZSB0ZXRyYWQgUEc0cyBpbiBwbGFudC
-BnZW5vbWVzIGlzIG3igKYiLCJzdGFydCI6MzE4MzMsImVuZCI6
-MzIwNTJ9fSwiY29tbWVudHMiOnsiZTZhckw0dUd4d1JNOUp0WS
+BnZW5vbWVzIGlzIG3igKYiLCJzdGFydCI6MzE4OTUsImVuZCI6
+MzIxMTR9fSwiY29tbWVudHMiOnsiZTZhckw0dUd4d1JNOUp0WS
 I6eyJkaXNjdXNzaW9uSWQiOiJDdkwzSDRhZ0ppbnFTU2ZtIiwi
 c3ViIjoiMTAyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6Ik
 lzIHRoaXMgc2ltaWxhciBvciBkaWZmZXJlbnQgdG8gaHVtYW4i
@@ -344,11 +344,11 @@ A1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6IkNvdWxkIG5vdCB0
 aGUgb3Bwb3NpdGUgYXJndWVtZW50IGJlIG1hZGU6IHRoaW5ncy
 B0aGF0IGFyZSBtb3JlIGNvbW1vbiBhcmUgbGVzcyBsaWtlbHkg
 dG8gaGF2ZSBhbiBlZmZlY3QuIiwiY3JlYXRlZCI6MTUzNDM1MD
-k3ODk3OH19LCJoaXN0b3J5IjpbMjAxNTE1MTc1NywtNjY0NDg2
-MjUxLDExMzc3MTk5NjcsMTE5NjUzMzc5OCwyODIzNDA0NDUsLT
-E1NzEyNzQ0MiwxNzQyNjgwOTgzLDE4MDcwMjgyMjYsMTk2MzY3
-OTY3MiwtNDU3MzAyMjAyLDQ3MTYxNjYzMSwtMTEzNDgyNDg3OC
-wxNzA3NTg3Nzg4LC05MzkyODI4NzIsLTEwOTE5MjU3MTQsLTQ1
-ODk4NzM3OSwxNzE0OTg2NTg5LC0xNjg3NDQyNTgyLC0xNTc0Mz
-U0ODIwLC0xMjQwNDAwOTEwXX0=
+k3ODk3OH19LCJoaXN0b3J5IjpbLTIxMjQ2NTAxMTAsLTY2NDQ4
+NjI1MSwxMTM3NzE5OTY3LDExOTY1MzM3OTgsMjgyMzQwNDQ1LC
+0xNTcxMjc0NDIsMTc0MjY4MDk4MywxODA3MDI4MjI2LDE5NjM2
+Nzk2NzIsLTQ1NzMwMjIwMiw0NzE2MTY2MzEsLTExMzQ4MjQ4Nz
+gsMTcwNzU4Nzc4OCwtOTM5MjgyODcyLC0xMDkxOTI1NzE0LC00
+NTg5ODczNzksMTcxNDk4NjU4OSwtMTY4NzQ0MjU4MiwtMTU3ND
+M1NDgyMCwtMTI0MDQwMDkxMF19
 -->
