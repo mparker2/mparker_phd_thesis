@@ -7,7 +7,7 @@
 
 It is well characterised that G4s have the ability to stall polymerases, including both DNA and RNA polymerases [@Han1999; @Siddiqui-Jain2002; @Dexheimer2006; @Cogoi2006; @Chambers2015; @Kwok2016]. This has been demonstrated through *in vitro* Polymerase stop assays as well as by identifying transcriptionally dependent DNA breaks during G4 ligand treatment [@Rodriguez2012]. Furthermore a number of helicases which are associated with the transcription initiation factor (TFIIH) and elongation, including BLM, WRN and XPD, have been shown to preferentially bind and unwind G4 DNA *in vitro* [@Sun1998; @Mohaghegh2001; @Gray2014]. XPD has also been associated with human TSSs containing PG4s by ChIP-seq [@Gray2014]. This evidence points to an effect of G4s on elongation by Pol II. We showed in \autoref{chap:global_nmm} that PG4 dense genes appeared to have slower elongation of Pol II and hence increased Pol II occupancy at the start of the gene. This reduction in Pol II speed may have knock-on effects on co-transcriptional modifications, such as splicing of mRNA. Furthermore, if G4 stabilisation can be regulated, this could constitute a new mechanism for the regulation of splicing.
 
-It has been estimated that around 80% of all splicing occurs co-transcriptionally in higher eukaryotes [@CarrilloOesterreich2010; @Ameur2011; @Khodor2011; @Girard2012; @Tilgner2012; @Windhager2012]. This is likely due to the coupling of splicing to export and quality control mechanisms [@Straßer2002; @Reed2002; @Fan2017]. How splicing occurs is highly dependent on Pol II speed, since changes in speed can alter how strong and weak splice junctions compete for assembly of spliceosomes [@DelaMata2010; @Jonkers2015]. The classic mechanism involving differential acceptor site usage is shown in (Fig \ref{speed_splice}a). When Pol II is elongating at high speed, acceptor sites which are more strongly canonical but further from the donor in sequence space are favoured. This is because on average, the greater strength of the canonical junctions outweigh the extra time that weaker junctions which are closer in sequence space have to be spliced. When Pol II elongates more slowly, however, weak acceptor sites which are more proximal may have much more time to be utilised before stronger distal acceptors are transcribed into the nascent RNA. This tips the balance towards utilisation of weak splice junctions, and can result in alternative splicing (AS) [@DelaMata2010; @Jonkers2015].
+It has been estimated that around 80% of all splicing occurs co-transcriptionally in higher eukaryotes [@CarrilloOesterreich2010; @Ameur2011; @Khodor2011; @Girard2012; @Tilgner2012; @Windhager2012]. This is likely due to the coupling of splicing to export and quality control mechanisms [@Straßer2002; @Reed2002; @Fan2017]. Which splice sites are used is highly dependent on Pol II speed, since changes in speed can alter how strong and weak splice junctions compete for assembly of spliceosomes [@DelaMata2010; @Jonkers2015]. The classic model for differential acceptor site usage is shown in (Fig \ref{speed_splice}a). When Pol II is elongating at high speed, acceptor sites which are more strongly canonical but further from the donor in sequence space are favoured. This is because on average, the greater strength of the canonical junctions outweigh the extra time that weaker junctions, which are closer in sequence space, have to be spliced. When Pol II elongates more slowly, however, weak acceptor sites which are more proximal may have much more time to be utilised before stronger distal acceptors are transcribed into the nascent RNA. This tips the balance towards utilisation of weak splice junctions, and can result in alternative splicing (AS) [@DelaMata2010; @Jonkers2015].
 
 \newpage
 
@@ -59,9 +59,7 @@ Total RNA was reverse transcribed into cDNA using the High Capacity cDNA Reverse
 
 ### Analysis of public RNAseq data
 
-Root RNAseq from PRJNA323955 [@Li2016] was downloaded in FASTQ format from ENA. Quality assessment was performed with `FastQC` [@Andrews2010] and `fastq-screen` [@Wingett2011], and adapter contamination was removed using `Cutadapt` [@Martin2011]. The data was mapped using `STAR` [@Dobin2013] with default settings, except than max intron length was set to 10000bp. Output BAM files were sorted and indexed using `samtools` [@Li2009].
-
-Normalised gene expression estimates were generated using `featureCounts` [@Liao2013] to get raw counts of alignments overlapping each gene in Araport11 [@Cheng2017], and `edgeR` [@Robinson2010; @McCarthy2012] to perform estimation of log2 counts per million.
+Root RNAseq from PRJNA323955 [@Li2016] was downloaded in FASTQ format from ENA. Quality assessment was performed with `FastQC` version 0.11.3 [@Andrews2010] and `fastq-screen` version 0.5.1 [@Wingett2011], and adapter contamination was removed using `Cutadapt` version 1.9.1 [@Martin2011]. The data was mapped using `STAR` version 2.4.2a [@Dobin2013] with default settings, except than max intron length was set to 10000bp. Output BAM files were sorted and indexed using `samtools` version 1.4.1 [@Li2009].
 
 ### Splice junction analyses
 
@@ -73,17 +71,17 @@ Consensus sequence logos were generated using an in-house Python module `matplot
 
 ### RNAseq read simulation and bootstrapping experiment
 
-For RNAseq read simulation, read counts generated using `featureCounts` [@Liao2013] for each file in the Li et al. 2016 dataset were used to inform a `polyester` [@Frazee2015] simulation of Illumina 125bp paired end reads, using the Araport11 annotation [@Cheng2017]. Fragment length was simulated using a normal distribution with mean 250bp and standard deviation of 25bp. Error rate was simulated at a uniform 0.5% across samples, reads, and nucleotides.
+For RNAseq read simulation, read counts generated using `featureCounts` [@Liao2013] for each file in the Li et al. 2016 dataset were used to inform a `polyester` version 1.10.1 [@Frazee2015] simulation of Illumina 125bp paired end reads, using the Araport11 annotation [@Cheng2017]. Fragment length was simulated using a normal distribution with mean 250bp and standard deviation of 25bp. Error rate was simulated at a uniform 0.5% across samples, reads, and nucleotides.
 
-For the bootstrapping experiment, one or more pairs of real and simulated samples were randomly sampled from the dataset and unique splice donor/acceptor pairs in EXT9 were identified. Only splice sites from primary alignments, with overhangs greater than 20bp, and with more than 2 supporting reads were kept. For each splice site, the exonic overhang sequence 20bp upstream of the donor site and 20bp downstream of the acceptor site were extracted from the read and concatenated. Any splice site whose concatenated sequence was present as a contiguous kmer in the reference EXT9 sequence was assumed to be a mapping error and filtered out. Finally, splice sites were deduplicated by directional clustering of sequences with edit distance of one or less using `umi_tools` directional clusterer [@Smith2017]. 500 iterations were used for bootstrapping. 67% confidence intervals were produced and plotted using `seaborn` [@Waskom2014].
+For the bootstrapping experiment, one or more pairs of real and simulated samples were randomly sampled from the dataset and unique splice donor/acceptor pairs in EXT9 were identified. Only splice sites from primary alignments, with overhangs greater than 20bp, and with more than 2 supporting reads were kept. For each splice site, the exonic overhang sequence 20bp upstream of the donor site and 20bp downstream of the acceptor site were extracted from the read and concatenated. Any splice site whose concatenated sequence was present as a contiguous kmer in the reference EXT9 sequence was assumed to be a mapping error and filtered out. Finally, splice sites were deduplicated by directional clustering of sequences with edit distance of one or less using `umi_tools` directional clusterer [@Smith2017]. 500 iterations were used for bootstrapping. 67% confidence intervals were produced and plotted using `seaborn` [@Waskom2014]. Code used for spliced read manipulation and plotting is available in Appendix \ref{splice_simulation}.
 
 ### Mappability analyses
 
-Mappability scores were generated for the TAIR10 genome using `gem-mappability` [@Derrien2012] with a kmer size of 75bp, and converted to `BigWig` format using `gem-2-wig` and `wigToBigWig` [@Kent2010]. Minimum mappability scores for each Extensin gene were extracted using `pyBigWig` [@Ryan2018] and plotted against spliced fraction using `matplotlib` [@Hunter2007].
+Dot plots of EXT9 cDNA were generated in Python using a window size of 15bp and the Hamming distance metric. Mappability scores were generated for the TAIR10 genome using `gem-mappability` build 1.315 [@Derrien2012] with a kmer size of 75bp, and converted to `BigWig` format using `gem-2-wig` build 1.423 and `wigToBigWig` [@Kent2010]. Minimum mappability scores for each Extensin gene were extracted using `pyBigWig` version 0.3.10 [@Ryan2018] and plotted against spliced fraction using `matplotlib` [@Hunter2007]. Code is available in \ref{ext9_dotplot_and_mappability}.
 
 ### Sanger sequencing analysis
 
-For Sanger sequencing, cDNA was produced using the Invitrogen High Capacity cDNA Reverse Transcription Kit with a PolyT primer. Gene specific primers were used to amplify transcripts of interest by PCR. Products were then cloned using the Thermo Scientific CloneJET PCR cloning kit, and transformed into DH5alpha competent cells. Colonies were grown overnight on ampicillin and tested by colony PCR. Picked colonies were then grown up for a further 24 hours in liquid media before miniprepping with Qiagen QIAprep Spin Miniprep Kit. Plasmids were sent, with pJet1.2 forward and reverse sequencing primers, for Sanger sequencing at the Sheffield Hallamshire Hospital Core Genomics Facility. Sequences were aligned to the TAIR10 genome using `BLAT` [@Kent2002].
+For Sanger sequencing, cDNA was produced using the Invitrogen High Capacity cDNA Reverse Transcription Kit with a PolyT primer. Gene specific primers were used to amplify transcripts of interest by PCR. Products were then cloned using the Thermo Scientific CloneJET PCR cloning kit, and transformed into DH5alpha competent cells. Colonies were grown overnight on ampicillin and tested by colony PCR. Picked colonies were then grown up for a further 24 hours in liquid media before miniprepping with Qiagen QIAprep Spin Miniprep Kit. Plasmids were sent, with pJet1.2 forward and reverse sequencing primers, for Sanger sequencing at the Sheffield Hallamshire Hospital Core Genomics Facility. Sequences were aligned to the TAIR10 genome using `BLAT` using the `-fine`  mode for identifying short initial and terminal exons [@Kent2002]. Code used for alignment is available in Appendix \ref{sanger_sequencing_splice_variants}. Figures were produced using `IGV` [@Robinson2011; @Thorvaldsdottir2013] and `inkscape`.
 
 ### Differential Splicing Analysis
 
@@ -191,13 +189,11 @@ To remove this bias, we remapped reads from the Li et al. dataset using STAR wit
 
 Since the Extensin exitrons appear in coding regions of DNA, if the spliced out region is not a multiple of three, then the resulting mRNA would be frameshifted, producing truncated and potentially deleterious proteins. We therefore tested whether the spliced reads in EXT9 and LRX3 contained gaps which were multiples of three or not. For both genes, almost all of the unique splice junction pairs were multiples of three (Fig \ref{splice_frame}a-b). This could be evidence that these exitrons are genuine and produce function gene products. On the other hand, we noted that splicing tended to occur between regions with high protein and DNA sequence level homology. EXT9, for example, is an incredibly repetitive gene with high self-homology (Fig \ref{ext_mapp}a). These in frame splice junctions could therefore simply be the result of mapping errors from the spliced aligner `STAR` [@Dobin2013], which utilises heuristics which may result in some reads from contiguous parts of the genome being mapped as spliced. If the homologous regions which could cause mapping errors within a gene also have homology at the protein level, as is the case in EXT9, then it is probable that erroneously spliced reads would be a multiple of three in intron length.
 
-If spliced reads mapping to EXT9 were the result of some systematic error in mapping, one might not expect to see much variation in the percent of reads mapping to a gene being spliced. We therefore correlated the expression of EXT9 in each sample from the root RNAseq dataset (measured in log2 counts per million or needs to be!) with the percent of reads which mapped with a splice site. We found a slight positive correlation between expression and splicing (Fig \ref{splice_frame}c).
-
 As a further precaution against these erroneous spliced mappings, we performed read simulation for each sample in the root RNAseq dataset. Put simply, the expression of each gene was quantified for each sample by counting the number of mapped reads, then `Polyester` (an Illumina sequencing read simulator) was run to generate reads from the reference transcriptome with the same read counts [@Frazee2015]. These simulated reads were then remapped with `STAR` using the same parameters as the original mapping [@Dobin2013]. We then performed a bootstrap analysis for EXT9 where we sampled one or more real/simulated sample pairs, and counted the number of unique splice donor/acceptor pairs that occurred in each. Junctions with the same exonic flanking sequence (using 20bp overhangs) or with edit distance of only one base were collapsed. Any junctions with flanking sequence that appeared as a contiguous kmer in the reference sequence of EXT9 were also removed. Despite this, we saw a consistently larger number of unique donor/acceptor splice pairs in the real data than in the simulated data (Fig \ref{splice_frame}d).
 
 \newpage
 
-![**Splice junction motifs for EXT9 and LRX3** **a** & **b)** Frequency barplots showing number of In/Out of frame splice junctions for EXT9 and LRX3 respectively. **c)** Scatterplot showing percentage of reads with splicing versus log2 counts per million for EXT9. **d)** Bootstrapped splicing simulation showing number of unique EXT9 splice junctions discovered with increasing numbers of samples for real root RNAseq data versus paired simulated RNAseq data. Errorbars are 67% confidence intervals. \label{splice_frame}](figures/splice_site_frame_and_simulation.svg)
+![**Splice junction motifs for EXT9 and LRX3** **a** & **b)** Frequency barplots showing number of In/Out of frame splice junctions for EXT9 and LRX3 respectively. **c)** Bootstrapped splicing simulation showing number of unique EXT9 splice junctions discovered with increasing numbers of samples for real root RNAseq data versus paired simulated RNAseq data. Errorbars are 67% confidence intervals. \label{splice_frame}](figures/splice_site_frame_and_simulation.svg)
 
 \newpage
 
@@ -266,7 +262,7 @@ RleHQiOiJYUEQgaGFzIGFsc28gYmVlbiBhc3NvY2lhdGVkIHdp
 dGggaHVtYW4gVFNTcyBjb250YWluaW5nIFBHNHMgYnkgQ2hJUC
 1zZXEiLCJzdGFydCI6NzgyLCJlbmQiOjg1NH0sInM1Mmt0VWtC
 dFZOT1IxM3YiOnsidGV4dCI6ImhpZ2hlciIsInN0YXJ0IjoxND
-E2LCJlbmQiOjE0MjJ9LCJrWTVvVE1ranpNQmQ4UUJ6Ijp7InRl
+I5LCJlbmQiOjE0MzV9LCJrWTVvVE1ranpNQmQ4UUJ6Ijp7InRl
 eHQiOiJtb3JlIHN0cm9uZ2x5IGNhbm9uaWNhbCIsInN0YXJ0Ij
 oyMDMxLCJlbmQiOjIwNTR9LCJEcTlyUzBMaXBKcEhMVVgxIjp7
 InRleHQiOiJnICg+NDAlIG9mIEFTIGV4b25zKS4iLCJzdGFydC
@@ -334,65 +330,65 @@ giOnsidGV4dCI6IkZvciB0aGUgYm9vdHN0cmFwcGluZyBleHBl
 cmltZW50LCBvbmUgb3IgbW9yZSBwYWlycyBvZiByZWFsIGFuZC
 BzaW11bGF0ZWQgc2FtcGzigKYiLCJzdGFydCI6MTQzODEsImVu
 ZCI6MTQ4NDh9LCJSOFdRVmpZT296Z3QwSWViIjp7InRleHQiOi
-JgZ2VtLW1hcHBhYmlsaXR5YCIsInN0YXJ0IjoxNTM5NiwiZW5k
-IjoxNTQxM30sIk9TWm5mWUdFQ1hGYW5uTlciOnsidGV4dCI6Im
-BweUJpZ1dpZ2AiLCJzdGFydCI6MTU2MDgsImVuZCI6MTU2MTh9
+JgZ2VtLW1hcHBhYmlsaXR5YCIsInN0YXJ0IjoxNTQwNSwiZW5k
+IjoxNTQyMn0sIk9TWm5mWUdFQ1hGYW5uTlciOnsidGV4dCI6Im
+BweUJpZ1dpZ2AiLCJzdGFydCI6MTU2MTcsImVuZCI6MTU2Mjd9
 LCI2eXdaMUgxUzY1bExNcWJmIjp7InRleHQiOiJgQkxBVGAiLC
-JzdGFydCI6MTY0NzUsImVuZCI6MTY0ODF9LCJLeXdVOHNTUDhy
+JzdGFydCI6MTY0ODQsImVuZCI6MTY0OTB9LCJLeXdVOHNTUDhy
 YzlRTGpTIjp7InRleHQiOiJhdCBsZWFzdCAyMCByZWFkcyIsIn
-N0YXJ0IjoxNzAyOCwiZW5kIjoxNzA0NX0sIndiOEhUa2V1YjV3
+N0YXJ0IjoxNzAzNywiZW5kIjoxNzA1NH0sIndiOEhUa2V1YjV3
 c0xjUTYiOnsidGV4dCI6IkRpZmZlcmVudGlhbCBzcGxpY2Ugan
 VuY3Rpb24gdXNhZ2UgYmV0d2VlbiBOTU0gYW5kIERNU08gdHJl
-YXRtZW50cyB3YXMgdGhlbiBjb27igKYiLCJzdGFydCI6MTcwNj
-YsImVuZCI6MTcyMTd9LCJ3eGJReU1tbjZPUTgxTTNWIjp7InRl
-eHQiOiJGRFIgb2YgMC4yLiIsInN0YXJ0IjoxNzM5NiwiZW5kIj
-oxNzQwN30sInh5eGwxbDBERnlaV0VLRDQiOnsidGV4dCI6InNp
+YXRtZW50cyB3YXMgdGhlbiBjb27igKYiLCJzdGFydCI6MTcwNz
+UsImVuZCI6MTcyMjZ9LCJ3eGJReU1tbjZPUTgxTTNWIjp7InRl
+eHQiOiJGRFIgb2YgMC4yLiIsInN0YXJ0IjoxNzQwNSwiZW5kIj
+oxNzQxNn0sInh5eGwxbDBERnlaV0VLRDQiOnsidGV4dCI6InNp
 bmdsZSBjb250aWd1b3VzIGV4b25pYyByZWdpb24iLCJzdGFydC
-I6MTgxNDIsImVuZCI6MTgxNzN9LCJ6MEo5Y2Jkdnk2OEo2cG1D
+I6MTgxNDcsImVuZCI6MTgxNzh9LCJ6MEo5Y2Jkdnk2OEo2cG1D
 Ijp7InRleHQiOiJ1bmlxdWVseSBtYXBwZWQiLCJzdGFydCI6MT
-g4MTksImVuZCI6MTg4MzR9LCJxOTNiVFFhd2IyVlNEWHRaIjp7
+g4MjQsImVuZCI6MTg4Mzl9LCJxOTNiVFFhd2IyVlNEWHRaIjp7
 InRleHQiOiJQcmltZXIgU2VxdWVuY2VzIHVzZWQiLCJzdGFydC
-I6MTkxOTQsImVuZCI6MTkyMTV9LCJwRGhoU1ZnNTVYdGlHSElS
+I6MTkxOTksImVuZCI6MTkyMjB9LCJwRGhoU1ZnNTVYdGlHSElS
 Ijp7InRleHQiOiJvdXIgUk5Bc2VxIGRhdGFzZXQiLCJzdGFydC
-I6MjA2OTMsImVuZCI6MjA3MTF9LCJkRm5JbFBpTUt0b1djSW9k
+I6MjA2ODcsImVuZCI6MjA3MDV9LCJkRm5JbFBpTUt0b1djSW9k
 Ijp7InRleHQiOiJUbyBkZW1vbnN0cmF0ZSB0aGF0IHRoZSBQRz
 QgZnJvbSBFeHRlbnNpbiBnZW5lcyBjb3VsZCBmb3JtIGEgRzQg
-c3RydWN0dXJlIGluIHZp4oCmIiwic3RhcnQiOjI0MzY2LCJlbm
-QiOjI0NDkzfSwiZGEwUjc5TW5qemkxaEFOTiI6eyJ0ZXh0Ijoi
+c3RydWN0dXJlIGluIHZp4oCmIiwic3RhcnQiOjI0MzYwLCJlbm
+QiOjI0NDg3fSwiZGEwUjc5TW5qemkxaEFOTiI6eyJ0ZXh0Ijoi
 VG8gY29uZmlybSB0aGF0IHRoZSBFeHRlbnNpbiBnZW5lcyBhcm
 UgZG93bnJlZ3VsYXRlZCBieSBOTU0sIHdlIHBlcmZvcm1lZCBS
-TkEgZeKApiIsInN0YXJ0IjoyNTY5MiwiZW5kIjoyNTgwNH0sIm
+TkEgZeKApiIsInN0YXJ0IjoyNTY4NiwiZW5kIjoyNTc5OH0sIm
 JYU0huMlV1TXhXSVJKYWkiOnsidGV4dCI6ImMpKiogTk1NIGRv
 d25yZWd1YXRpb24gb2YgRVhUMTMgYW5kIExSWDEgaXMgbm90IG
 FmZmVjdGVkIGJ5IGNvbmN1cnJlbnQgQ3ljbG9oZXjigKYiLCJz
-dGFydCI6MjgwNjIsImVuZCI6MjgxNTF9LCJlSGh2V1NXRmNGY2
+dGFydCI6MjgwNTYsImVuZCI6MjgxNDV9LCJlSGh2V1NXRmNGY2
 JpT2wxIjp7InRleHQiOiJoYXQgbWFueSBvZiB0aGUgRXh0ZW5z
 aW4gZ2VuZXMgaGFkIGxhcmdlIG51bWJlcnMgb2Ygbm92ZWwgc3
-BsaWNlZCBpc29mb3Jtcy4iLCJzdGFydCI6Mjg3MDIsImVuZCI6
-Mjg3Nzd9LCJxZ1FvS0pYWGRRYWFXZmpQIjp7InRleHQiOiJkZX
+BsaWNlZCBpc29mb3Jtcy4iLCJzdGFydCI6Mjg2OTYsImVuZCI6
+Mjg3NzF9LCJxZ1FvS0pYWGRRYWFXZmpQIjp7InRleHQiOiJkZX
 JpdmVkIGZyb20gdGhlIGludHJvbiBtb3RpZiIsInN0YXJ0Ijoz
-MDYzNSwiZW5kIjozMDY2NH0sIk1DZW9lQ24yTEVwcjVKSUwiOn
-sidGV4dCI6IkNUL0FDLiIsInN0YXJ0IjozNzc2MCwiZW5kIjoz
-Nzc2Nn0sIlQyQUlyRW5sdjF5R1BYY0oiOnsidGV4dCI6IiFbKi
+MDYyOSwiZW5kIjozMDY1OH0sIk1DZW9lQ24yTEVwcjVKSUwiOn
+sidGV4dCI6IkNUL0FDLiIsInN0YXJ0IjozNzI2NSwiZW5kIjoz
+NzI3MX0sIlQyQUlyRW5sdjF5R1BYY0oiOnsidGV4dCI6IiFbKi
 pTYW5nZXIgc2VxdWVuY2luZyBvZiBMUlgxIGFuZCBFWFQ5IGNE
 TkEgaWRlbnRpZmllcyBzcGxpY2VkIGZvcm1zKiogKiphKSoqIE
-figKYiLCJzdGFydCI6Mzc3NzgsImVuZCI6MzgzNzB9LCJHQ1dl
+figKYiLCJzdGFydCI6MzcyODMsImVuZCI6Mzc3NzN9LCJHQ1dl
 WW9zUFJNeEozZldZIjp7InRleHQiOiJPbmx5IHNwbGljZSBqdW
 5jdGlvbnMgd2l0aCBhdCBsZWFzdCAyMCBzdXBwb3J0aW5nIHJl
 YWRzIHRvdGFsIGFjcm9zcyB0aGUgNiBzYW1w4oCmIiwic3Rhcn
-QiOjQwMTgzLCJlbmQiOjQwMjg5fSwiakw0dW1BdWdiWUdzUUhw
+QiOjM5NTg2LCJlbmQiOjM5NjkyfSwiakw0dW1BdWdiWUdzUUhw
 cSI6eyJ0ZXh0IjoiZyBgbGltbWEtdm9vbWAgYW5kIGBsaW1tYS
-1kaWZmU3BsaWNlYCIsInN0YXJ0Ijo0MDY0MCwiZW5kIjo0MDY3
-N30sIkZwQjhnZUs0RFpNMlVPengiOnsidGV4dCI6ImFuIEZEUi
-B0aHJlc2hvbGQgb2YgMC4yIiwic3RhcnQiOjQwODUwLCJlbmQi
-OjQwODczfSwiem5YVGdMVlJPTWpyOWp6diI6eyJ0ZXh0IjoicG
+1kaWZmU3BsaWNlYCIsInN0YXJ0Ijo0MDA0MywiZW5kIjo0MDA4
+MH0sIkZwQjhnZUs0RFpNMlVPengiOnsidGV4dCI6ImFuIEZEUi
+B0aHJlc2hvbGQgb2YgMC4yIiwic3RhcnQiOjQwMjUzLCJlbmQi
+OjQwMjc2fSwiem5YVGdMVlJPTWpyOWp6diI6eyJ0ZXh0IjoicG
 xpY2VkIG1hcHBpbmcgdG8gdGhlc2UgZ2VuZXMgaXMgYSBzeXN0
 ZW1hdGljIG1hcHBpbmcgZXJyb3IgdGhhdCBvY2N1cnMgYXQgYX
-BwcuKApiIsInN0YXJ0Ijo0MzI5MSwiZW5kIjo0MzQzMn0sImY5
+BwcuKApiIsInN0YXJ0Ijo0MjY5NCwiZW5kIjo0MjgzNX0sImY5
 aEZaaERoWmF3djNWeUkiOnsidGV4dCI6IkRlc3BpdGUgdGhlc2
 UgbmVnYXRpdmUgcmVzdWx0cywgd2Ugd2VyZSBhYmxlIHRvIGlk
 ZW50aWZ5IFBDUiBwcm9kdWN0cyBmcm9tIGNETkHigKYiLCJzdG
-FydCI6NDkxODMsImVuZCI6NDkzMjF9fSwiY29tbWVudHMiOnsi
+FydCI6NDg1ODYsImVuZCI6NDg3MjR9fSwiY29tbWVudHMiOnsi
 RHF3Y1Z6ZTZPYXNXOE1RVyI6eyJkaXNjdXNzaW9uSWQiOiJydk
 luUXlVNFlRblg5V3g5Iiwic3ViIjoiZ286MTAyMjA1Nzk3Mjc2
 OTQxMDEwNjc3IiwidGV4dCI6ImVucmljaGVkIGF0ID8iLCJjcm
@@ -613,6 +609,7 @@ IjoiZjloRlpoRGhaYXd2M1Z5SSIsInN1YiI6ImdvOjEwMjIwNT
 c5NzI3Njk0MTAxMDY3NyIsInRleHQiOiJJcyB0aGVyZSBhIGNo
 YW5nZSBpbiB0aGUgZGlzdHJpYnV0aW9uIG9mIFBDUiBiYW5kcy
 ArTk1NPyIsImNyZWF0ZWQiOjE1MzY2NzQyNjQ0ODJ9fSwiaGlz
+<<<<<<< HEAD
 dG9yeSI6WzY5MjQ5NDgzOSwxNzg2MDk3MTc1LC00ODM1MzExMj
 gsMTQ1MjU5MjY5OCwtMTM2NDE0NDA3OCwtNDYxMzE0MTczLDc1
 NzU1NzA3MiwtMjEwOTMyODAwNSwtNzQzMzU0NjI5LDExNDM2OD
@@ -620,3 +617,12 @@ gzMTgsLTE2NTk1NDAzNzcsLTE2MTA3NzMwNTMsNzk4ODg2ODQs
 LTIwMTY5MTExMDcsLTE4MjgzNzgwNTgsNDQ3MTI3NDE5LC0xNT
 A1NzYwMDA4LC0xMjAzODQ0OTddfQ==
 -->
+=======
+dG9yeSI6Wy00ODM1MzExMjgsMTQ1MjU5MjY5OCwtMTM2NDE0ND
+A3OCwtNDYxMzE0MTczLDc1NzU1NzA3MiwtMjEwOTMyODAwNSwt
+NzQzMzU0NjI5LDExNDM2ODgzMTgsLTE2NTk1NDAzNzcsLTE2MT
+A3NzMwNTMsNzk4ODg2ODQsLTIwMTY5MTExMDcsLTE4MjgzNzgw
+NTgsNDQ3MTI3NDE5LC0xNTA1NzYwMDA4LC0xMjAzODQ0OTddfQ
+-->
+
+>>>>>>> parent of b65df7f... chapter_6/text.md updated from https://stackedit.io/
