@@ -23,65 +23,65 @@ Here we present a new method for G4 prediction, which builds on the work of Bedr
 
 ### G4Hunter Algorithm
 
-The G4hunter algorithm from Bedrat et al. was reimplemented in Cython (Python superset which can be compiled to C) with some alterations [@Bedrat2016]. Input sequences were run length encoded, and each run of Gs was scored as the square of length of the run, with a maximum score per run of 16. These scores were summed to give a positive strand total score. Runs of Cs were scored equivalently but in a separate negative strand score. Scores were divided by the length of the input sequence to get a normalised score.
+The G4hunter algorithm from Bedrat et al. was reimplemented in Cython (Python superset which can be compiled to C) with some alterations [@Bedrat2016]. Input sequences were run length encoded, and each run of Gs was scored as the square of length of the run, with a maximum score per run of 16. These scores were summed to give a positive strand total score. Runs of Cs were scored equivalently but in a separate negative strand score. Scores were divided by the length of the input sequence to get a normalised score. Code can be found in Appendices \ref{g4seeqer} and \ref{g4seeqer_model_training_and_validation}.
 
 ### Training Data Preprocessing
 
-The modified G4Hunter method was run on the hg19 genome using a window size of 50bp, a step size of 5 and a threshold of 0.75 to generate a total of 7484506 candidate G4 intervals, which were output in bed format. Intervals were increased in size by 39bp in each direction using `bedtools slop` to introduce flanking sequence information for classification [@Quinlan2010]. Overlapping intervals were filtered to yield the greatest number of non-overlapping intervals. Intervals were weighted by their G4Hunter score, such that the maximum number of high scoring non-overlapping intervals was yielded.
+The modified G4Hunter method was run on the hg19 genome using a window size of 50bp, a step size of 5 and a threshold of 0.75 to generate a total of 7484506 candidate G4 intervals, which were output in bed format. Intervals were increased in size by 39bp in each direction using `bedtools slop` version 2.27.1 to introduce flanking sequence information for classification [@Quinlan2010]. Overlapping intervals were filtered to yield the greatest number of non-overlapping intervals. Intervals were weighted by their G4Hunter score, such that the maximum number of high scoring non-overlapping intervals was yielded.
 
 To ground truth score these sequences, `bedtools map` was used to intersect them with the G4Seq dataset [@Chambers2015], which was downloaded from GEO (GSE63874). Bedgraph files of this data contained percentage mismatch scores for each position of the human genome at 15bp resolution. The G4Seq dataset generated in the presence of potassium was chosen as it was deemed more likely to be of biological relevance than the dataset generated in the presence of Pyridostatin, a G4-binding drug.
 
 Intervals files and corresponding mismatch scores were read into Python using `pandas` and histograms of log transformed mismatch scores were plotted using `matplotlib` [@VanRossum1995; @Mckinney2011; @Hunter2007]. The threshold of approximately 3 for separating G4-forming and non-G4 forming sequences was chosen using `scipy` to determine the local minimum in the histogram [@Jones2001]. Joint plots of percentage mismatch score against G4Hunter score were plotted using `seaborn` [@Waskom2014].
 
-Since positive training examples were outweighed by negative ones in this dataset by a factor of 10:1, random under-sampling of negative examples was conducted using `imblanced-learn` to attain a ratio of 2:1 [@Lemaitre2001]. This filtered dataset was shuffled and written to disk in bed format, and `bedtools getfasta` was used to extract sequences for each interval from hg19 [@Quinlan2010]. Sequences were then one hot encoded, i.e. represented as binary matrices of size 128x4, and loaded into HDF5 format for training using `h5py` [@Collette2013]. For training of models on trinucleotide content, trinucleotide content statistics were extracted and loaded into HDF5 format.
+Since positive training examples were outweighed by negative ones in this dataset by a factor of 10:1, random under-sampling of negative examples was conducted using `imblanced-learn` version 0.3.2 to attain a ratio of 2:1 [@Lemaitre2001]. This filtered dataset was shuffled and written to disk in bed format, and `bedtools getfasta` was used to extract sequences for each interval from hg19 [@Quinlan2010]. Sequences were then one hot encoded, i.e. represented as binary matrices of size 128x4, and loaded into HDF5 format for training using `h5py` version 2.7.1 and HDF5 version 1.8.18 [@Collette2013]. For training of models on trinucleotide content, trinucleotide content statistics were extracted and loaded into HDF5 format. All code used for training data preprocessing is available in Appendix \ref{g4seeqer_model_training_and_validation}.
 
 ### Model Training and Validation
 
-All models were trained in Python using `Keras` with `TensorFlow` backend [@Chollet2018; @Abadi2016]. The trinucleotide Multi-Layer Perceptron (MLP) model contained three hidden layers with 16 units per layer. These were trained using the ADAM optimiser and binary crossentropy loss function, with a dropout rate of 0.2 on all layers. The convolutional portion of G4Seeqer was made up of two convolutional layers with 8 filters and kernel size of 3 and ReLu activation, followed by a maximum pooling layer with step size of 2. This was connected to a bidirectional Long Short Term Memory layer with 8 units and Tanh activation. The final hidden layer was a fully connected layer with 16 units, ReLu activation and a dropout rate of 0.5. G4Seeqer was trained using the RMSprop optimiser and binary crossentropy loss function.
+All models were trained in Python using `Keras` version 2.1.5 with `TensorFlow` version 1.4.1 backend [@Chollet2018; @Abadi2016]. The trinucleotide Multi-Layer Perceptron (MLP) model contained three hidden layers with 16 units per layer. These were trained using the ADAM optimiser and binary crossentropy loss function, with a dropout rate of 0.2 on all layers. The convolutional portion of G4Seeqer was made up of two convolutional layers with 8 filters and kernel size of 3 and ReLu activation, followed by a maximum pooling layer with step size of 2. This was connected to a bidirectional Long Short Term Memory layer with 8 units and Tanh activation. The final hidden layer was a fully connected layer with 16 units, ReLu activation and a dropout rate of 0.5. G4Seeqer was trained using the RMSprop optimiser and binary crossentropy loss function.
 
 All models were trained on 80% of the training data with 10% used for validation. Training was conducted for a maximum of 30 epochs, but with early stopping when the change in validation loss was less than 0.0005 for more than 3 Epochs. The densely connected network (also known as a Multi Layer Perceptron or MLP) trained on trinucleotide contents converged to this minimum change after 8 Epochs, whilst G4Seeqer converged after 15 Epochs.
 
-Models were validated on 10% of the total data held out for testing purposes. Receiver Operator Characteristic (ROC) and Precision Recall (PR) curves were generated using `scikit-learn` and plotted with `matplotlib` [@Pedregosa2011; @Hunter2007]. ROC/PR curves for G4Hunter are produced using the modified method. For comparison against Quadron, the Quadron source code was downloaded from GitHub and installed [@Sahakyan2017]. Since the flanking sequences required for Quadron are longer than those used for G4Seeqer, test set sequences were increased in size by 50bp in each direction to 228bp. Sequences were extracted using `bedtools getfasta` and run through Quadron [@Quinlan2010]. For intervals which contained multiple Quadron scoring motifs, the highest score was used. For intervals which had no motifs scored by Quadron, a score of zero was assigned.
+Models were validated on 10% of the total data held out for testing purposes. Receiver Operator Characteristic (ROC) and Precision Recall (PR) curves were generated using `scikit-learn` version 0.19.1 and plotted with `matplotlib` [@Pedregosa2011; @Hunter2007]. ROC/PR curves for G4Hunter are produced using the modified method. For comparison against Quadron, the Quadron source code was downloaded from GitHub and installed [@Sahakyan2017]. Since the flanking sequences required for Quadron are longer than those used for G4Seeqer, test set sequences were increased in size by 50bp in each direction to 228bp. Sequences were extracted using `bedtools getfasta` and run through Quadron [@Quinlan2010]. For intervals which contained multiple Quadron scoring motifs, the highest score was used. For intervals which had no motifs scored by Quadron, a score of zero was assigned. All code used for model training and validation is available in Appendix \ref{g4seeqer_model_training_and_validation}.
 
 ### BG4 Analysis
 
-NarrowPeak BED files of BG4 ChIP-seq peaks were downloaded from GEO accession GSE76688 [@Hansel2016]. To accommodate Quadron's flanking sequence requirements, the size of the BG4 intervals was increased by 50bp in each direction using `awk` [@Aho1988]. A BG4-negative peak set was generated using `bedtools shuffle` [@Quinlan2010]. Shuffling was performed such that an equal number of simliarly sized intervals were selected that excluded gaps in the genome or BG4-positive peaks. Positive and negative peaks were concatenated and sequences were extracted using `bedtools getfasta` [@Quinlan2010]. Predictions were made on these sequences using G4Seeqer/G4Hunter/Quadron, and the maximum scoring interval overlapping each peak was assigned as the overall score of the peak. Where a model did not make any predictions in a peak, it was assigned a score of zero. Receiver Operator Characteristic (ROC, false positive rate plotted against true positive rate) and Precision Recall (PR, precision plotted against recall) curves were generated using `scikit-learn` and plotted with `matplotlib` [@Pedregosa2011; @Hunter2007].
+NarrowPeak BED files of BG4 ChIP-seq peaks were downloaded from GEO accession GSE76688 [@Hansel2016]. To accommodate Quadron's flanking sequence requirements, the size of the BG4 intervals was increased by 50bp in each direction using `awk` [@Aho1988]. A BG4-negative peak set was generated using `bedtools shuffle` [@Quinlan2010]. Shuffling was performed such that an equal number of simliarly sized intervals were selected that excluded gaps in the genome or BG4-positive peaks. Positive and negative peaks were concatenated and sequences were extracted using `bedtools getfasta` [@Quinlan2010]. Predictions were made on these sequences using G4Seeqer/G4Hunter/Quadron, and the maximum scoring interval overlapping each peak was assigned as the overall score of the peak. Where a model did not make any predictions in a peak, it was assigned a score of zero. Receiver Operator Characteristic (ROC, false positive rate plotted against true positive rate) and Precision Recall (PR, precision plotted against recall) curves were generated using `scikit-learn` and plotted with `matplotlib` [@Pedregosa2011; @Hunter2007]. Code is available in Appendix \ref{g4seeqer_model_training_and_validation}.
 
 ### rG4seq Training Data Preprocessing
 
-To produce training data for rG4seeqer, G4hunter windows were predicted in hg19 using a window size of 50bp and a threshold of 0.75. These were intersected with human exons using `bedtools` to get a set of 186279 putative RNA G4 forming sequences. RNA G4s identified by rG4seq in the presence of potassium [@Kwok2016] were downloaded from GSE77282 (`GSE77282_K_hits.bed.gz`), and intersected with the G4hunter windows to identify RNA G4 positive and negative examples. Of the 3383 identified RNA G4s in the rG4seq dataset, 2811 (83%) overlapped with G4hunter windows. Since the ratio of negative to positive examples was extremely high, negative examples were undersampled to a ratio of 2:1 using `imbalanced-learn` [@Lemaitre2001]. These were then shuffled and written to disk in bed format, and `bedtools getfasta` was used to extract sequences for each interval from hg19 [@Quinlan2010]. Sequences were then one hot encoded and loaded into HDF5 format for training using `h5py` [@Collette2013].
+To produce training data for rG4seeqer, G4hunter windows were predicted in hg19 using a window size of 50bp and a threshold of 0.75. These were intersected with human exons using `bedtools` to get a set of 186279 putative RNA G4 forming sequences. RNA G4s identified by rG4seq in the presence of potassium [@Kwok2016] were downloaded from GSE77282 (`GSE77282_K_hits.bed.gz`), and intersected with the G4hunter windows to identify RNA G4 positive and negative examples. Of the 3383 identified RNA G4s in the rG4seq dataset, 2811 (83%) overlapped with G4hunter windows. Since the ratio of negative to positive examples was extremely high, negative examples were undersampled to a ratio of 2:1 using `imbalanced-learn` [@Lemaitre2001]. These were then shuffled and written to disk in bed format, and `bedtools getfasta` was used to extract sequences for each interval from hg19 [@Quinlan2010]. Sequences were then one hot encoded and loaded into HDF5 format for training using `h5py` [@Collette2013]. Code is available in Appendix \ref{rg4seeqer_model_training_and_validation}.
 
 ### rG4seq Transfer Learning
 
-Model weights trained on the G4Seq dataset were reloaded in the same architecture for training on the rG4seq dataset, using `Keras` and `tensorflow` [@Chollet2018; @Abadi2016]. Weights from the initial convolutional layers were fixed (i.e. made untrainable), and only LSTM weights and final dense weights were trained. The model was trained on 6014 samples (80%), validated on 752 samples (10%), and tested on 752 samples (10%). Training was conducted as for G4Seeqer, but for a maximum of 200 epochs, with early stopping after 25 epochs if validation loss did not improve. Initial learning rate was set at 0.001 but reduced by a factor of 1/3 after 15 epochs when no reduction in validation loss was seen.
+Model weights trained on the G4Seq dataset were reloaded in the same architecture for training on the rG4seq dataset, using `Keras` and `tensorflow` [@Chollet2018; @Abadi2016]. Weights from the initial convolutional layers were fixed (i.e. made untrainable), and only LSTM weights and final dense weights were trained. The model was trained on 6014 samples (80%), validated on 752 samples (10%), and tested on 752 samples (10%). Training was conducted as for G4Seeqer, but for a maximum of 200 epochs, with early stopping after 25 epochs if validation loss did not improve. Initial learning rate was set at 0.001 but reduced by a factor of 1/3 after 15 epochs when no reduction in validation loss was seen. Code used for training the rG4Seeqer model is available in Appendix \ref{rg4seeqer_model_training_and_validation}.
 
 ### Comparison to G4RNA Screener
 
-Supplementary data containing 368 RNA sequences, their experimentally determined G4 forming status, and their predicted score from G4RNA Screener were downloaded [@Garant2017]. Sequences greater than 128bp were filtered to give a total of 347 sequences. Average rG4Seeqer and G4Seeqer predictions for these sequences were made by generating 1000 randomly paddings for each sequence, one hot encoding, and performing forward pass through the network. G4RNA Screener scores used in the ROC curve were taken directly from the supplemental material [@Garant2017].
+Supplementary data containing 368 RNA sequences, their experimentally determined G4 forming status, and their predicted score from G4RNA Screener were downloaded [@Garant2017]. Sequences greater than 128bp were filtered to give a total of 347 sequences. Average rG4Seeqer and G4Seeqer predictions for these sequences were made by generating 1000 randomly paddings for each sequence, one hot encoding, and performing forward pass through the network. G4RNA Screener scores used in the ROC curve were taken directly from the supplemental material [@Garant2017]. Code is available in Appendix \ref{rg4seeqer_model_training_and_validation}.
 
 ### Mutation Mapping analysis
 
-Mutation mapping was applied to cell type independent human promoter regions from the ENSEMBL regulatory build [@Zerbino2015], which was originally generated using `ChromHMM` [@Ernst2017]. Promoter sequences were extracted from hg38. Mutation mapping was implemented as in Alipanahi et al. 2015: candidate sequences were edited at each position to each nucleotide, and the resulting sequences were scored for G4 formation using G4Seeqer [@Alipanahi2015]. Heatmaps were generated in Python using `seaborn` [@Waskom2014].
+Mutation mapping was applied to cell type independent human promoter regions from the ENSEMBL regulatory build [@Zerbino2015], which was originally generated using `ChromHMM` [@Ernst2017]. Promoter sequences were extracted from hg38. Mutation mapping was implemented as in Alipanahi et al. 2015: candidate sequences were edited at each position to each nucleotide, and the resulting sequences were scored for G4 formation using G4Seeqer [@Alipanahi2015]. Heatmaps were generated in Python using `seaborn` [@Waskom2014]. Code used to generate mutation maps is available in Appendices \ref{g4seeqer} and \ref{mutation_mapping_and_triplex_hairpin}.
 
 ### G-Triplex and Hairpin analyses
 
 G-triplex motifs were predicted in the hg19 genome using an in house script, using the pattern $G_XN_{1-4}G_XN_{1-4}G_X$ where $3 \leqslant X \leqslant 6$. Candidate triplexes which overlapped with or were contained within Quadparser motifs (pattern $G_{X}N_{1-7}G_{X}N_{1-7}G_{X}N_{1-7}G_{X}$ where $3 \leqslant X \leqslant 6$) were subtracted to produce only triplex motifs which could not form "classical" G4s. To assign mismatch scores to these sequences, they were increased in size by 50bp in each direction using `bedtools slop` [@Quinlan2010], and mismatch scores from the G4Seq dataset were mapped using `bedtools map`. Distances to next G-run were measured in python using `pyfaidx` [@Shirley2015].
 
-G-hairpin motifs were predicted in the hg19 genome using the same script, and the pattern $G_XN_{1-4}G_X$ where $4 \leqslant X \leqslant 6$. Candidate hairpins which overlapped with or were contained within Quadparser motifs or G-triplex motifs were filtered. Intervals were increased in size by 50bp in each direction using `bedtools slop` [@Quinlan2010], and mismatch scores from the G4Seq dataset were mapped using `bedtools map`. Distances to next G-hairpin were measured using `bedtools closest`. Triplex and hairpin histograms and boxplots were generated in Python using `matplotlib` and `seaborn` [@Hunter2007; @Waskom2014].
+G-hairpin motifs were predicted in the hg19 genome using the same script, and the pattern $G_XN_{1-4}G_X$ where $4 \leqslant X \leqslant 6$. Candidate hairpins which overlapped with or were contained within Quadparser motifs or G-triplex motifs were filtered. Intervals were increased in size by 50bp in each direction using `bedtools slop` [@Quinlan2010], and mismatch scores from the G4Seq dataset were mapped using `bedtools map`. Distances to next G-hairpin were measured using `bedtools closest`. Triplex and hairpin histograms and boxplots were generated in Python using `matplotlib` and `seaborn` [@Hunter2007; @Waskom2014]. Code is available in Appendix \ref{mutation_mapping_and_triplex_hairpin}.
 
 ### Median model score experiments
 
 For G4Seeqer scoring of experimentally validated G4s from Guédin et al 2010., sequences were recreated from the information in Table 1, and padded using uniformly sampled sequences to 128bp in length [@Guedin2010]. Left and right padding lengths were also varied at random. 1000 randomly padded sequences were generated and scored per input sequence. Scatter plots of UV melting temperature vs. median G4Seeqer score were produced using `matplotlib` [@Hunter2007]. Errorbars are 68% confidence intervals calculated from the variation in score for the same sequence with different random padding.
 
-Synthetic sequences used for loop length and G-register experiments were generated by combining uniformly sampled padding and loops with GGG trinucleotides to create 3 tetrad Quadparser conforming sequences. Each sample contained 5000 randomly generated sequences. Left and right padding sizes and nucleotide contents for loops were varied within random samples. Loop nucleotide contents were also varied. For G-register experiments, the extra G per run was randomly assigned to either the left of right side of the G-run. Loop lengths of 3 were used. Line plots for loop length experiments were generated using `matplotlib`. Errorbars are 68% confidence intervals showing the variation in G4Seeqer score caused by left and right padding size and padding/loop nucleotide content, when holding loop lengths constant [@Hunter2007]. Boxplots were generated using `seaborn` [@Waskom2014].
+Synthetic sequences used for loop length and G-register experiments were generated by combining uniformly sampled padding and loops with GGG trinucleotides to create 3 tetrad Quadparser conforming sequences. Each sample contained 5000 randomly generated sequences. Left and right padding sizes and nucleotide contents for loops were varied within random samples. Loop nucleotide contents were also varied. For G-register experiments, the extra G per run was randomly assigned to either the left of right side of the G-run. Loop lengths of 3 were used. Line plots for loop length experiments were generated using `matplotlib`. Errorbars are 68% confidence intervals showing the variation in G4Seeqer score caused by left and right padding size and padding/loop nucleotide content, when holding loop lengths constant [@Hunter2007]. Boxplots were generated using `seaborn` [@Waskom2014]. Code used for generating figures is in Appendix \ref{mutation_mapping_and_triplex_hairpin}.
 
 ### G-register Experiments
 
-For G-register mismatch experiments, 3 tetrad Quadparser conforming G4s from the hg19 genome were identified and the corresponding mismatch score was extracted using `bedtools map` [@Quinlan2010]. The number of tetrads with G-register (i.e. one or more extra adjacent guanines) was counted. Boxplots were generated using `seaborn` [@Waskom2014].
+For G-register mismatch experiments, 3 tetrad Quadparser conforming G4s from the hg19 genome were identified and the corresponding mismatch score was extracted using `bedtools map` [@Quinlan2010]. The number of tetrads with G-register (i.e. one or more extra adjacent guanines) was counted. Boxplots were generated using `seaborn` [@Waskom2014]. Code used for generating G-register figures is in Appendix \ref{mutation_mapping_and_triplex_hairpin}.
 
 ### Human and Mouse G4 Subpopulation Analyses
 
-Example Human and Mouse G4 populations were predicted in hg19 and mm10 using the Quadparser pattern with loop lengths of 3. All possible G4s conforming to this pattern were generated using python `itertools`. Venn diagrams were generated using `matplotlib_venn`. P-values were produced using hypergeometric tests. Dinucleotide complexity was defined as the total number of unique dinucleotides contained in the motif. Histograms and kernel density estimate plots were produced using `seaborn` [@Waskom2014]. For visualisation of PG4 distributions, a sample of 50000 motifs were randomly selected from the total population of all possible Quadparser motifs with loop lengths of three. These were transformed into two components using UMAP dimensionality reduction, with Hamming distance as the distance metric [@McInnes2018]. Sequences which appear in the human and mouse genome were extracted from the sample. 2D Kernel Density Estimate plots for the full sample, and hg19 and mm10 subsets, were generated using `seaborn`.
+Example Human and Mouse G4 populations were predicted in hg19 and mm10 using the Quadparser pattern with loop lengths of 3. All possible G4s conforming to this pattern were generated using python `itertools`. Venn diagrams were generated using `matplotlib_venn`. P-values were produced using hypergeometric tests. Dinucleotide complexity was defined as the total number of unique dinucleotides contained in the motif. Histograms and kernel density estimate plots were produced using `seaborn` [@Waskom2014]. For visualisation of PG4 distributions, a sample of 50000 motifs were randomly selected from the total population of all possible Quadparser motifs with loop lengths of three. These were transformed into two components using UMAP dimensionality reduction, with Hamming distance as the distance metric [@McInnes2018]. Sequences which appear in the human and mouse genome were extracted from the sample. 2D Kernel Density Estimate plots for the full sample, and hg19 and mm10 subsets, were generated using `seaborn`. Code used for generating figures is in Appendix \ref{human_mouse_pg4_overlap}.
 
 \newpage
 
@@ -236,3 +236,328 @@ Whilst the Human genome contains a large number of G4 forming sequences, this is
 We present G4Seeqer, the first Convolutional/Recurrent Neural Network model for prediction of G Quadruplex forming structures. G4Seeqer is implemented in Python, using Cython for speed-up of G4Hunter candidate region proposal, and `Keras` with `Tensorflow` backend for neural network prediction [@Chollet2018; @Abadi2016]. Weights have been trained on the G4Seq dataset [@Chambers2015] and transfer learned to the rG4Seq dataset [@Kwok2016], to produce models tailored for DNA and RNA G4s, respectively. It is able to make predictions on the whole human genome in approximately 1 hour on a 8 core i7 desktop computer with 16GB RAM. Because G4Seeqer is trained directly upon sequences from the human genome, rather than on derived sequence features, it is able to identify patterns in the G4Seq dataset that have not previously been reported, as well as removing false positive sequences which are flagged by pattern matching techniques. This greatly improves the accuracy of the model on various *in vitro* and *in vivo* datasets, from stabilities determined by UV melting to genomic regions identified by BG4 ChIP-seq [@Hansel2016].
 
 \newpage
+<!--stackedit_data:
+eyJkaXNjdXNzaW9ucyI6eyJHdWtoM3JqY3h3dWhXSHRpIjp7In
+RleHQiOiJwcm9kdWNpbmcgbWFueSBmYWxzZSBwb3NpdGl2ZXMi
+LCJzdGFydCI6MTU2MCwiZW5kIjoxNTkwfSwiV0RDM1lpQXdsak
+VxVERkVyI6eyJ0ZXh0IjoiaG93ZXZlciBhIGNvbnZvbHV0aW9u
+YWwgYW5kIHJlY3VycmVudCBuZXVyYWwgbmV0d29yayIsInN0YX
+J0Ijo2MDI2LCJlbmQiOjYwNzh9LCJtanZjN1ZHRUg3MTc3VG5t
+Ijp7InRleHQiOiJUaGUgY29udm9sdXRpb25hbCBwb3J0aW9uIG
+9mIEc0U2VlcWVyIHdhcyBtYWRlIHVwIG9mIHR3byBjb252b2x1
+dGlvbmFsIGxheWVycyB34oCmIiwic3RhcnQiOjEwMTg1LCJlbm
+QiOjEwNDc3fSwicjhWaWVPN2dQQzl1SE1iMCI6eyJ0ZXh0Ijoi
+aW50ZXJ2YWwgcGVyIiwic3RhcnQiOjEyODI5LCJlbmQiOjEyOD
+M4fSwiaVlGaXhaT2YwYktyclJkTiI6eyJ0ZXh0IjoiT2YgdGhl
+IDMzODMgaWRlbnRpZmllZCBSTkEgRzRzIGluIHRoZSByRzRzZX
+EgZGF0YXNldCwgMjgxMSAoODMlKSBvdmVybGFwcGVkIHdpdOKA
+piIsInN0YXJ0IjoxMzgzOSwiZW5kIjoxMzkzN30sIkJobk81Tz
+BQcHlKUkZFc0UiOnsidGV4dCI6Im9uZSBob3QgZW5jb2RlZCIs
+InN0YXJ0Ijo5MzY2LCJlbmQiOjkzODF9LCJTQlBmTm9FdEt5Y0
+FwTGJGIjp7InRleHQiOiJhcHBsaWVkIHRvIGh1bWFuIHByb21v
+dGVyIHJlZ2lvbnMgZnJvbSB0aGUgRU5TRU1CTCByZWd1bGF0b3
+J5IGJ1aWxkIiwic3RhcnQiOjE2MDIzLCJlbmQiOjE2MTEyfSwi
+b29WN0dwYTFpMUd1RmJ5ciI6eyJ0ZXh0IjoiUHl0aG9uIHNjcm
+lwdHMuIiwic3RhcnQiOjE3MzkyLCJlbmQiOjE3MzkzfSwiUk5y
+WjJNVElZb05WWGJveiI6eyJ0ZXh0IjoicGFkZGVkIHVzaW5nIH
+JhbmRvbWx5IGdlbmVyYXRlZCBzZXF1ZW5jZXMgdG8gMTI4YnAi
+LCJzdGFydCI6MTgyNzgsImVuZCI6MTgzMjd9LCJQcVBieU04OV
+hzZ0Z6MWpVIjp7InRleHQiOiJFcnJvcmJhcnMgYXJlIDY4JSBj
+b25maWRlbmNlIGludGVydmFscy4iLCJzdGFydCI6MTg2MDMsIm
+VuZCI6MTg3MzN9LCJiTFBiTXd5c1l6V09XZUxqIjp7InRleHQi
+OiI1MDAwIHJhbmRvbWx5IGdlbmVyYXRlZCBzZXF1ZW5jZXMuIi
+wic3RhcnQiOjE4OTY1LCJlbmQiOjE4OTk5fSwiQjZid0hLQ1RL
+NGZXSEt5WiI6eyJ0ZXh0IjoicnMgYXJlIDY4JSBjb25maWRlbm
+NlIGludGVydmFscyBbIiwic3RhcnQiOjE5MzY1LCJlbmQiOjE5
+NTUxfSwibk4xbzdwTHhTOWpLRDNLciI6eyJ0ZXh0IjoiRy1yZW
+dpc3RlciB3YXMgY291bnRlZCIsInN0YXJ0IjoxOTk2NSwiZW5k
+IjoyMDAzMH0sInV1MHJSVjdrMXBOU29Zc0YiOnsidGV4dCI6Ik
+luc3RlYWQgd2UgZGVjaWRlZCB0byB1c2UgYW4gZXhpc3Rpbmcg
+bWV0aG9kLCB0aGUgRzRodW50ZXIgYWxnb3JpdGhtIHByb3Bvc2
+VkIGLigKYiLCJzdGFydCI6MjE5MDQsImVuZCI6MjIxNDJ9LCJ4
+elNaSzAwQXFKVDFzQlR6Ijp7InRleHQiOiJTaW5jZSB3ZSB3aX
+NoZWQgdG8gbWFrZSBhcyBmZXcgYXNzdW1wdGlvbnMgYXMgcG9z
+c2libGUsIGFuZCBnaXZlbiB0aGF0IHRoZSBHNHNl4oCmIiwic3
+RhcnQiOjIyNjU1LCJlbmQiOjIyODQ3fSwiQnBtbFJHYWx3S0dy
+UFNnaCI6eyJ0ZXh0IjoidCBhbHNvIHByb2R1Y2VkIHNpZ25pZm
+ljYW50bHkgbW9yZSBzZXF1ZW5jZXMgdGhhdCBkaWQgbm90IGNv
+bmZvcm0gdG8gdGhlIFF1YWRwYeKApiIsInN0YXJ0IjoyMzUwNy
+wiZW5kIjoyMzY0Nn0sIkFJcW1zd0ZWQnp5RFhFeEYiOnsidGV4
+dCI6IjYsMjM3LDk0MyIsInN0YXJ0IjoyNDE1OCwiZW5kIjoyND
+E2N30sIkRoQnFiUlNuYjRzZm4zWDIiOnsidGV4dCI6IlNpbmNl
+IG1haW50YWluaW5nIHN1Y2ggYW4gaW1iYWxhbmNlIGluIHRoZS
+B0cmFpbmluZyBkYXRhIHdvdWxkIHByb2R1Y2UgYSBwb29yIGPi
+gKYiLCJzdGFydCI6MjUxNDIsImVuZCI6MjUzMjl9LCJTWGxNU2
+ozejY4cVNsTEVhIjp7InRleHQiOiJPcmFuZ2UgbGluZSBzaG93
+cyBsb3dlc3MgY3VydmUgZml0LiIsInN0YXJ0IjoyNTc4OSwiZW
+5kIjoyNTgyNH0sImRnS1U5ZXdnSlpmSmlzaFkiOnsidGV4dCI6
+Ik1vZGVsIHNlbGVjdGlvbiBhbmQgdHJhaW5pbmciLCJzdGFydC
+I6MjU4OTUsImVuZCI6MjU5MjN9LCJsMGNHd0JPMnpmd2VvR1d5
+Ijp7InRleHQiOiJXZSBmb3VuZCB0aGF0IG5laXRoZXIgRzRIdW
+50ZXIgW0BCZWRyYXQyMDE2XSBub3IgdGhlIEc0Uk5BLWxpa2Ug
+bWV0aG9kIHBlcmZvcm1l4oCmIiwic3RhcnQiOjI5ODMwLCJlbm
+QiOjMwMDMwfSwiM1NrU0RCbG52OFU5Nk1SNSI6eyJ0ZXh0Ijoi
+U2luY2UgdGhlc2Ugc2VxdWVuY2VzIG9ubHkgYWNjb3VudCBmb3
+IgYSAyNSUgb2YgYWxsIHRoZSBwb3RlbnRpYWwgUEc0IGZvcm1p
+bmcgc+KApiIsInN0YXJ0IjozMTM4NSwiZW5kIjozMTQ3N30sIm
+NYaFJWdTdTWXlLNm85V2UiOnsidGV4dCI6IkZvciBlYWNoIEJH
+NCBpbnRlcnZhbCwgdGhlIGhpZ2hlc3Qgc2NvcmluZyBvdmVybG
+FwcGluZyBwcmVkaWN0aW9uIGZvciBlYWNoIG1vZGXigKYiLCJz
+dGFydCI6MzM1MTYsImVuZCI6MzM2MTJ9LCJPZGRsb0c4ZHhEM1
+BGdDV2Ijp7InRleHQiOiJUaGVzZSByZXN1bHRzIHN1Z2dlc3Qg
+dGhhdCB0aGUgaW5mb3JtYXRpb24gd2l0aGluIHRoZSBHNFNlcS
+BkYXRhc2V0LCB3aGVuIGNhcHR14oCmIiwic3RhcnQiOjM0MTE0
+LCJlbmQiOjM0MjYzfSwiVk56aUtrV21IOFdzOHozYSI6eyJ0ZX
+h0IjoiVGhlc2UgcmVzdWx0cyBzdWdnZXN0IHRoYXQgdGhlIGlu
+Zm9ybWF0aW9uIHdpdGhpbiB0aGUgRzRTZXEgZGF0YXNldCwgd2
+hlbiBjYXB0deKApiIsInN0YXJ0IjozNDExNCwiZW5kIjozNDI2
+M30sImFZOG5CSVZQR2tMUVRyZVMiOnsidGV4dCI6IlJlY2Vpdm
+VyIE9wZXJhdG9yIENoYXJhY3RlcmlzdGljIChST0MpIGN1cnZl
+IHNob3dpbmcgdGhlIHBlcmZvcm1hbmNlIG9mIEc0U2VlcWXigK
+YiLCJzdGFydCI6MzQzMzUsImVuZCI6MzQ1NDV9LCJBd1Vld01y
+V0ZIS0hPUkZtIjp7InRleHQiOiJyRzRTZWVxZXIsIEc0U2VlcW
+VyIGFuZCB0aGUgRzRSTkEiLCJzdGFydCI6Mzg4NjEsImVuZCI6
+Mzg4OTR9LCJvdnlWNHUzTThXTzdCR1ZuIjp7InRleHQiOiJuZX
+VyYWwgbmV0d29yayIsInN0YXJ0IjozOTI0MywiZW5kIjozOTI1
+N30sIjlPdDFHV1dXZTBWeUJ0NHYiOnsidGV4dCI6IldlIGlkZW
+50aWZpZWQgUEc0IHNlcXVlbmNlcyBzY29yaW5nIG1vcmUgdGhh
+biAwLjkgZm9yIHdoaWNoIGEgc2luZ2xlIEctPkggY2hhbmfigK
+YiLCJzdGFydCI6NDEwMzAsImVuZCI6NDEyMzl9LCJkc2txU2s5
+eFhFQ1FodE5oIjp7InRleHQiOiJUaGlzIGNvdWxkIGJlIGR1ZS
+B0byBhIHJlZHVjdGlvbiBpbiBHNCBzdGFiaWxpdHkgd2l0aCBs
+b29wIGxlbmd0aCwgYnV0IGNvdWxkIGVx4oCmIiwic3RhcnQiOj
+QyNzgxLCJlbmQiOjQyOTc3fSwiZ3JzbEJGQjJGYTRpWGpHZiI6
+eyJ0ZXh0IjoiQWdhaW4sIGRpc3RhbmNlIHdhcyBmb3VuZCB0by
+Bjb3JyZWxhdGUgbmVnYXRpdmVseSB3aXRoICVtbSBzY29yZSAo
+U3BlYXJtYW5zIHJob+KApiIsInN0YXJ0Ijo0NDc4NSwiZW5kIj
+o0NDk2OH0sIm9jWDZpMXlkYlRkdXpSRHEiOnsidGV4dCI6Im94
+cGxvdCBzaG93aW5nIHRoZSByZWxhdGlvbnNoaXAgYmV0d2Vlbi
+AlbW0gc2NvcmUgYW5kIGRpc3RhbmNlIHRvIG5leHQgRy1oYWly
+cGnigKYiLCJzdGFydCI6NDU0NzUsImVuZCI6NDU3MzN9LCJ1bU
+tsRm5nODNVWGVpdlp1Ijp7InRleHQiOiJUaGUgUEc0IHNwYWNl
+IG9mIHRoZSAqTS4gbXVzY3VsdXMqIGdlbm9tZSB3YXMgYWxzby
+BtZWFzdXJlZCwgYW5kIGZvdW5kIHRvIGNvbnRh4oCmIiwic3Rh
+cnQiOjUxNjI4LCJlbmQiOjUxODIyfSwiY1FkUm5mclVabHFLVm
+JSbiI6eyJ0ZXh0IjoiMkQgS2VybmVsIGRlbnNpdHkgZXN0aW1h
+dGUgcGxvdCBzaG93aW5nIGRpc3RyaWJ1dGlvbiBvZiBhbGwgcG
+9zc2libGUgIHRldHJhZCBRdeKApiIsInN0YXJ0Ijo1MzEyOSwi
+ZW5kIjo1MzM5Nn0sIml5ZDFhN0pRNXNZV2lmaXUiOnsidGV4dC
+I6Ikl0IGlzIGFibGUgdG8gcHJvY2VzcyB0aGUgd2hvbGUgaHVt
+YW4gZ2Vub21lIGluIGFwcHJveGltYXRlbHkgMSBob3VyIG9uIG
+EgOCBjb3LigKYiLCJzdGFydCI6NTM5NjgsImVuZCI6NTQwOTV9
+fSwiY29tbWVudHMiOnsiNmx4WmJkSzBBNXo4cVp4ayI6eyJkaX
+NjdXNzaW9uSWQiOiJHdWtoM3JqY3h3dWhXSHRpIiwic3ViIjoi
+MTAyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6IkhvdyBtYW
+55IGZhbHNlIHBvc2l0aXZlcz8iLCJjcmVhdGVkIjoxNTMyNTE4
+NTcyMTExfSwicVp4NG82NlhwS25IVkVVVyI6eyJkaXNjdXNzaW
+9uSWQiOiJXREMzWWlBd2xqRXFURGRXIiwic3ViIjoiMTAyMjA1
+Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6IldoYXQgaXMgYSBjb2
+52b2x1dGlvbmFsIGFuZCByZWN1cnJlbnQgbmV1cmFsIG5ldHdv
+cms/IEhvdyBkb2VzIGl0IHdvcms/IEhvdyBpcyBpdCBkaWZmZX
+JlbnQgZnJvbSBvdGhlciBtYWNoaW5lIGxlYXJuaW5nIGFsZ29z
+IG9yIG90aGVyIE5Ocz8gXG5cbldoeSBkaWQgeW91IGNob29zZS
+B0byB1c2UgYSBDUk5OPyIsImNyZWF0ZWQiOjE1MzI1MTkyMTUz
+MTN9LCJqSE05eGxiVjNNOWI1RFBoIjp7ImRpc2N1c3Npb25JZC
+I6IldEQzNZaUF3bGpFcVREZFciLCJzdWIiOiIxMDIyMDU3OTcy
+NzY5NDEwMTA2NzciLCJ0ZXh0IjoiQWxtb3N0IGNlcnRhaW5seS
+B5b3VyIGF1ZGllbmNlIHdpbGwgbm90IGJlIGEgbWFjaGluZSBs
+ZWFybmluZyBleHBlcnQuIFlvdSBuZWVkIHRvIGV4cGxhaW4gdG
+hlIG1ldGhvZCwgYW5kIHdoeSB5b3UgYXJlIGRvaW5nIGl0IHRo
+aXMgd2F5LiIsImNyZWF0ZWQiOjE1MzI1MTkyNjQ5MjV9LCJJTE
+p1N1NQMDBqak5rZVE0Ijp7ImRpc2N1c3Npb25JZCI6Im1qdmM3
+VkdFSDcxNzdUbm0iLCJzdWIiOiIxMDIyMDU3OTcyNzY5NDEwMT
+A2NzciLCJ0ZXh0IjoiSG93IGRpZCB5b3UgZGVjaWRlIHRvIHVz
+ZSB0aGlzIGFyY2hldGVjdHVyZT8iLCJjcmVhdGVkIjoxNTMyOD
+c0ODM2NDc2fSwiUWY4T0t0QjROTk9ac2FrYyI6eyJkaXNjdXNz
+aW9uSWQiOiJyOFZpZU83Z1BDOXVITWIwIiwic3ViIjoiMTAyMj
+A1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6IklzIHRoaXMgYmVj
+YXVzZSBlYWNoIGFsZ29yaXRobSBwcmVkaWN0cyB0aGUgc2Nvcm
+UgZm9yIGFuIGludGVydmFsLCBhbmQgdGhlc2UgaW50ZXJ2YWxz
+IGFyZSBnZW5lcmFsbHkgc21hbGxlciB0aGFuIHRoZSBwZWFrcz
+8gQmUgbW9yZSBleHBsaWN0LiIsImNyZWF0ZWQiOjE1MzI4NzUx
+MDM2MTF9LCJ4aVMwZkRVWHRMSlVUc1JTIjp7ImRpc2N1c3Npb2
+5JZCI6ImlZRml4Wk9mMGJLcnJSZE4iLCJzdWIiOiIxMDIyMDU3
+OTcyNzY5NDEwMTA2NzciLCJ0ZXh0IjoiV2hhdCB3YXMgdGhpcy
+BudW1iZXIgZm9yIHRoZSBETkEgRzRzZXEgc2V0PyIsImNyZWF0
+ZWQiOjE1MzI4NzUzMjQzNzN9LCJYNXA0SVVCMTl1VU1QanM3Ij
+p7ImRpc2N1c3Npb25JZCI6IkJobk81TzBQcHlKUkZFc0UiLCJz
+dWIiOiIxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZXh0IjoiZG
+VmaW5lIiwiY3JlYXRlZCI6MTUzMjg3NTUzNDkyNn0sIks5TVVK
+dVVkNmlsdXhUMmwiOnsiZGlzY3Vzc2lvbklkIjoiU0JQZk5vRX
+RLeWNBcExiRiIsInN1YiI6IjEwMjIwNTc5NzI3Njk0MTAxMDY3
+NyIsInRleHQiOiJXaGljaCBjZWxsIHR5cGUsIG9yIHdhcyBpdC
+ByZWdpb25zIHRoYXQgd2VyZSBwcm9tb3RvcnMgaW4gYW55IGNl
+bGwgdHlwZT8iLCJjcmVhdGVkIjoxNTMyODc1NjMxNDA4fSwiR3
+lZYm1mb25DRUE2UHNjayI6eyJkaXNjdXNzaW9uSWQiOiJvb1Y3
+R3BhMWkxR3VGYnlyIiwic3ViIjoiMTAyMjA1Nzk3Mjc2OTQxMD
+EwNjc3IiwidGV4dCI6IldoZXJlIHdvdWxkIEkgZmluZCB0aGVz
+ZSBweXRob24gc2NyaXB0cz8iLCJjcmVhdGVkIjoxNTMyODc1Nj
+c4ODEyfSwicnh5UFE4TDY3RFlEb0FGVSI6eyJkaXNjdXNzaW9u
+SWQiOiJSTnJaMk1USVlvTlZYYm96Iiwic3ViIjoiMTAyMjA1Nz
+k3Mjc2OTQxMDEwNjc3IiwidGV4dCI6IlVuaWZyb21hbGx5IHNh
+bXBsZWQ/IiwiY3JlYXRlZCI6MTUzMjg3NTcxNDc4Mn0sImFrUk
+ZEZUxUU1lXa3M5aG0iOnsiZGlzY3Vzc2lvbklkIjoiUHFQYnlN
+ODlYc2dGejFqVSIsInN1YiI6IjEwMjIwNTc5NzI3Njk0MTAxMD
+Y3NyIsInRleHQiOiJDYWxjdWxhdGVkIGhvdz8iLCJjcmVhdGVk
+IjoxNTMyODc1NzI4MTQ2fSwic01hSklhQ1MycUVzdVg3RyI6ey
+JkaXNjdXNzaW9uSWQiOiJiTFBiTXd5c1l6V09XZUxqIiwic3Vi
+IjoiMTAyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6Ikdlbm
+VyYXRlZCBob3c/IiwiY3JlYXRlZCI6MTUzMjg3NTc0OTExOH0s
+Ik91RFZzbXl3TGRQSDgxcUkiOnsiZGlzY3Vzc2lvbklkIjoiQj
+Zid0hLQ1RLNGZXSEt5WiIsInN1YiI6IjEwMjIwNTc5NzI3Njk0
+MTAxMDY3NyIsInRleHQiOiJEaXR0by4iLCJjcmVhdGVkIjoxNT
+MyODc1Nzk0Nzk0fSwiNTZSQW9NUHVLd1c4VTVSTyI6eyJkaXNj
+dXNzaW9uSWQiOiJuTjFvN3BMeFM5aktEM0tyIiwic3ViIjoiMT
+AyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6IkRlZmluZSBv
+ciBYLXJlZiBzZWN0aW9uIHdpdGggZGVmaW5pdGlvbi4iLCJjcm
+VhdGVkIjoxNTMyODc1ODM3OTc1fSwiQ0I3NUN5Ymh2T1NuWGUy
+NCI6eyJkaXNjdXNzaW9uSWQiOiJ1dTByUlY3azFwTlNvWXNGIi
+wic3ViIjoiMTAyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6
+IldoYXQgd2FzIHRoZSBydW4gdGltZXM/IFdhcyBpdCByZWFsbH
+kgbm90IGZlYXNpbGJlIHRvIHJ1biB0aGUgd2hvbGUgZ2Vub21l
+IG9uIFNIQVJDPyIsImNyZWF0ZWQiOjE1MzI4NzU4OTc1ODl9LC
+JqSmdZdVBGZlc3V1E2dXdjIjp7ImRpc2N1c3Npb25JZCI6Inh6
+U1pLMDBBcUpUMXNCVHoiLCJzdWIiOiIxMDIyMDU3OTcyNzY5ND
+EwMTA2NzciLCJ0ZXh0IjoiQmV0dGVyICppbiB2aXRybyosIGJ1
+dCB3aGF0IGFib3V0ICppbiB2aXZvKj8iLCJjcmVhdGVkIjoxNT
+MyODc1OTUzNDU0fSwidDZnenRNVlNqN2xHUm5aRCI6eyJkaXNj
+dXNzaW9uSWQiOiJCcG1sUkdhbHdLR3JQU2doIiwic3ViIjoiMT
+AyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6IkhvdyBtYW55
+PyBXaGF0IHByb3BvcnRpb24gb2YgdGhlc2Ugb3ZlcmxhcHBlZC
+BHNFNlcSBwcmVkaWN0aW9ucz8iLCJjcmVhdGVkIjoxNTMyODc2
+MDQxNDIwfSwiYmJlckJHM1llNGtobWlQaiI6eyJkaXNjdXNzaW
+9uSWQiOiJCcG1sUkdhbHdLR3JQU2doIiwic3ViIjoiMTAyMjA1
+Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6IkFuZCB3aGF0IGZyYW
+N0aW9uIG9mIEc0U2VxIHBvc2l0aXZlIHJlZ2lvbnMgb3Zlcmxh
+cHBlZCBvbmUgb2YgdGhlc2U/IiwiY3JlYXRlZCI6MTUzMjg3Nj
+A2OTQzN30sIktJa1ZSRVBQdW02Q1RPb0wiOnsiZGlzY3Vzc2lv
+bklkIjoiQUlxbXN3RlZCenlEWEV4RiIsInN1YiI6IjEwMjIwNT
+c5NzI3Njk0MTAxMDY3NyIsInRleHQiOiJDb21tYSBmb3JtYXQg
+YmlnIG51bWJlcnMgbGlrZSB0aGVzZS4iLCJjcmVhdGVkIjoxNT
+MyODc2MDkwOTc0fSwiQkszNTEzYndCejR4S1lFTSI6eyJkaXNj
+dXNzaW9uSWQiOiJEaEJxYlJTbmI0c2ZuM1gyIiwic3ViIjoiMT
+AyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6IkhvdyBtYXkg
+RzRzZXEgcWluZG93cyB3aXRoIGEgc2NvcmUgbGlrZSB0aGlzIH
+dlcmUgbWlzc2VkIGJ5IHRoZSBHNEh1bnRlciBzY2FuPyIsImNy
+ZWF0ZWQiOjE1MzI4NzYxODI2MTJ9LCJnb3JVbVpIeFV5YnZwS2
+51Ijp7ImRpc2N1c3Npb25JZCI6IlNYbE1TajN6NjhxU2xMRWEi
+LCJzdWIiOiIxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZXh0Ij
+oiTG9va3MgbGlrZSB0d28gcG9wdWxhdGlvbnMgcmF0aGVyIHRo
+YW4gYSBjb250aW51b3VzIHJlbGF0aW9uc2hpcC4iLCJjcmVhdG
+VkIjoxNTMyODc2MzQ3MzUzfSwiakRDNmhLSXhFR0pqUVB2YyI6
+eyJkaXNjdXNzaW9uSWQiOiJkZ0tVOWV3Z0paZkppc2hZIiwic3
+ViIjoiMTAyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6Ikhv
+dyBsb25nIGRpZCB0cmFpbmluZyB0YWtlLCBhbmQgb24gd2hhdC
+BoYXJkd2FyZT8iLCJjcmVhdGVkIjoxNTMyODc2MzcxNjQyfSwi
+bHFFQUN6REQ2a2ZRRzBEQiI6eyJkaXNjdXNzaW9uSWQiOiJsMG
+NHd0JPMnpmd2VvR1d5Iiwic3ViIjoiMTAyMjA1Nzk3Mjc2OTQx
+MDEwNjc3IiwidGV4dCI6IldoYXQgYWJvdXQgcXVhZHBhcnNlcj
+8gSSB1bmRlcnN0YW5kIHlvdSBjYW4ndCBjYWxjdWxhdGVkIEFV
+QywgYnV0IGNvdWxkIGFkZCBhIHNpbmdsZSBwb2ludCBvbiBlYW
+NoIHBsb3QgdG8gc2hvdyBwZXJmb3JtYW5jZS4iLCJjcmVhdGVk
+IjoxNTMyODc2NDgxNDAxfSwialNUTnQwaElraEJ6VVBqMCI6ey
+JkaXNjdXNzaW9uSWQiOiIzU2tTREJsbnY4VTk2TVI1Iiwic3Vi
+IjoiMTAyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6IkFyZS
+B5b3Ugc2F5aW5nIHRoYXQgb25seSAyNSUgb2YgeW91ciB0ZXN0
+IHNlcXVlbmNlcyBjb25mb3JtIHRvIFF1YWRwYXJzZXI/IFdoYX
+QgaXMgdGhlIHNwbGljdCBiZXR3ZWVuIEc0c2VxICsvLT8iLCJj
+cmVhdGVkIjoxNTMyODc2NTQ5OTIwfSwicWg5eDNHazRxYnoxR1
+gyOSI6eyJkaXNjdXNzaW9uSWQiOiJjWGhSVnU3U1l5SzZvOVdl
+Iiwic3ViIjoiMTAyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dC
+I6IkFyZSB0aGVzZSBzZXF1ZW5jZXMgcGFzc2VkIHRocm91Z2gg
+dGhlIEc0SHVudGVyIHRocmVzaG9sZCBmaXJzdD8iLCJjcmVhdG
+VkIjoxNTMyODc2NjIxMjE5fSwiRkE2bFF5ellPb3RMem9tciI6
+eyJkaXNjdXNzaW9uSWQiOiJPZGRsb0c4ZHhEM1BGdDV2Iiwic3
+ViIjoiMTAyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6IkRv
+ZXMgaXQ/IElmIEc0SHVudGVyIHBlcmZvcm1zIHRoZSBzYW1lPy
+BIb3cgZG8geW91IGtub3cgaXQgaGFzbid0IGp1c3QgbGVhcm50
+IHRvIGRvIHRoZSBzYW1lIGFzIEc0SHVudGVyPyIsImNyZWF0ZW
+QiOjE1MzI4NzY2NTc2NjZ9LCJ3VExFTzA1Y0ZNbEtVUW51Ijp7
+ImRpc2N1c3Npb25JZCI6IlZOemlLa1dtSDhXczh6M2EiLCJzdW
+IiOiIxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZXh0IjoiQWxz
+byBpbnRlcmVzdGluZyB0aGF0IGZvciB0aGUgaGlnaGVzdCBwcm
+VjaXNpb25zLCBHNEh1bnRlciBoYXMgdGhlIGJlc3QgcmVjYWxs
+LiIsImNyZWF0ZWQiOjE1MzI4NzY3MzQ1NDZ9LCJpSlZRMGR1ZD
+Q1Mm9ENUhwIjp7ImRpc2N1c3Npb25JZCI6ImFZOG5CSVZQR2tM
+UVRyZVMiLCJzdWIiOiIxMDIyMDU3OTcyNzY5NDEwMTA2NzciLC
+J0ZXh0IjoiQXJlIHlvdSBnb2luZyB0byB0YWxrIGFib3V0IHRo
+ZSBkaWZmZXJlbmNlIGJldHdlZW4gYSBST0MgY3VydmUgYW5kIG
+FQUiBjdXJ2ZSwgd2hlbiBvbmUgaXMgdXNlZnVsIG92ZXIgdGhl
+IG90aGVyIGFuZCB3aGF0IHRoZSB0d28gdGVsbCB5b3UgaW4gY2
+9tcGFyaXNvbiB0byBlYWNoIG90aGVyIGluIHRoaXMgc3BlY2lm
+aWMgZXhhbXBsZT8iLCJjcmVhdGVkIjoxNTMyODc2Nzc5NjgzfS
+wiNWhXemNlYUw2NlZ6Tk5XUiI6eyJkaXNjdXNzaW9uSWQiOiJB
+d1Vld01yV0ZIS0hPUkZtIiwic3ViIjoiMTAyMjA1Nzk3Mjc2OT
+QxMDEwNjc3IiwidGV4dCI6IldoYXQgYWJvdXQgRzRIdW50ZXI/
+IiwiY3JlYXRlZCI6MTUzMjg3NjgyMjI3NH0sIlIwYnB6QzM5Nm
+l6N200eDIiOnsiZGlzY3Vzc2lvbklkIjoib3Z5VjR1M004V083
+QkdWbiIsInN1YiI6IjEwMjIwNTc5NzI3Njk0MTAxMDY3NyIsIn
+RleHQiOiIjbm90YWxsTUwiLCJjcmVhdGVkIjoxNTMyODc2ODU1
+ODY5fSwia1NNZnVtSEJRQ01jbnZtVyI6eyJkaXNjdXNzaW9uSW
+QiOiI5T3QxR1dXV2UwVnlCdDR2Iiwic3ViIjoiMTAyMjA1Nzk3
+Mjc2OTQxMDEwNjc3IiwidGV4dCI6IldoYXQgZnJhY3Rpb24gb2
+YgdGhlc2UgY29uZm9ybWVkIHRvIFF1YWRwYXJzZXI/IEhvdyBt
+YW55IHdlcmUgRzRIdW50ZXIgaGlnaD8gRGlkIHRoZSBjaGFuZ2
+UgaGF2ZSBhIGJpZyBlZmZlY3Qgb24gRzRIdW50ZXIgc2NvcmU/
+IFxuXG5XaGF0IGZyYWN0aW9uIG9mIHBvc2l0aXZlIHByZWRpY3
+Rpb25zIGRpZCB0aGlzIGVxdWF0ZSB0bz8iLCJjcmVhdGVkIjox
+NTMyODc2OTU0MDMyfSwiZE1tbWFJRGYxSXVuQXpxZSI6eyJkaX
+NjdXNzaW9uSWQiOiJkc2txU2s5eFhFQ1FodE5oIiwic3ViIjoi
+MTAyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6IkFyZSB0aG
+VyZSBCRzQgY2hpcCBwZWFrcyB0aGF0IGNvbnRhaW4gbm8gRzRT
+ZXEgaGlnaCBpbnRlcnZhbD8gQ291bGQgdGhlc2UgYmUgZXhwbG
+FpbmVkIGJ5IHRoaXM/IiwiY3JlYXRlZCI6MTUzMjg3NzA4MDkw
+NH0sInZlSmNESU5ZUGQwejJVdmYiOnsiZGlzY3Vzc2lvbklkIj
+oiZ3JzbEJGQjJGYTRpWGpHZiIsInN1YiI6IjEwMjIwNTc5NzI3
+Njk0MTAxMDY3NyIsInRleHQiOiJEaWQgeW91IGNoZWNrIHdoZX
+RoZXIgdGhlc2UgZmVhdHVyZXMgYXBwZWFyIGluIHNlcXVlbmNl
+cyBub3QgcHJlZGljdGVkIHRvIGJlIEc0cz8iLCJjcmVhdGVkIj
+oxNTMyODc3MjUxNTYyfSwiYVZtZTF1TE1jb2lFYUZrYyI6eyJk
+aXNjdXNzaW9uSWQiOiJvY1g2aTF5ZGJUZHV6UkRxIiwic3ViIj
+oiMTAyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6IklucHV0
+cyB0byBHNFNlZWtlciBhcmUgMTI4YnAgcmlnaHQ/IFNob3Vkbi
+d0IGh0ZXJlIGJlIGEgc2luZ2xlIHdpbmRvdyB0aGF0IGNvbnRh
+aW5zIGJvdGggdGhlIGNsdXN0ZXJlZCAyeCBvciAzeCBHLXJ1bn
+MgYW5kIHRoZSB0aGUgZGlzdGlsIEctcnVuLCBhdCBsZWFzdCBm
+b3IgdGhlIDEzLTUwIGNhdGVnb3J5PyIsImNyZWF0ZWQiOjE1Mz
+I4NzczMzA3NDB9LCJ2bjR1VXBCalhxQ1pGMmtIIjp7ImRpc2N1
+c3Npb25JZCI6InVtS2xGbmc4M1VYZWl2WnUiLCJzdWIiOiIxMD
+IyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZXh0IjoiSXNuJ3QgdGhp
+cyBjYWxjdWxhdGlvbiBmb3IgYXJhYmlkb3BzaXMgcmVsZXZhbn
+Q/IiwiY3JlYXRlZCI6MTUzMjg3NzQ1ODg5Mn0sInM4RlI1WjJU
+VXpiN3lRQ2kiOnsiZGlzY3Vzc2lvbklkIjoiY1FkUm5mclVabH
+FLVmJSbiIsInN1YiI6IjEwMjIwNTc5NzI3Njk0MTAxMDY3NyIs
+InRleHQiOiJJIGd1ZXNzIHlvdSBzaG91bGQgZWl0aGVyIGxhYm
+VsIHRoZSBheGVzIChkaW0xLCBkaW0yIGV0YyksIG9yIG5vdCBo
+YXZlIG51bWJlcnMgb24gYXhpcyAocG9zc2libGUgYm90aCkiLC
+JjcmVhdGVkIjoxNTMyODc3NTA2MTAzfSwicDdSZkgyWWJXU1Jo
+clRvUSI6eyJkaXNjdXNzaW9uSWQiOiJpeWQxYTdKUTVzWVdpZm
+l1Iiwic3ViIjoiMTAyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4
+dCI6IlRyYWlubmcgb3IgcHJlZGljdGlvbj8iLCJjcmVhdGVkIj
+oxNTMyODc3NTI2NDI0fSwiZ2VIS0dwcmFmenVTVkRmayI6eyJk
+aXNjdXNzaW9uSWQiOiJvY1g2aTF5ZGJUZHV6UkRxIiwic3ViIj
+oiMTA4NTIwMDI5MzAyMjk0NjUwNDE3IiwidGV4dCI6Inllcywg
+YnV0IHRoZSBtb2RlbCBkb2Vzbid0IHNlZW0gdG8gY29uc2lkZX
+IgdGhlIGRpc3RpbCBHLXJ1biBpbXBvcnRhbnQgZm9yIGEgaGln
+aCBzY29yZSwgcHJlc3VtYWJseSBjYXVzZSB0aGVyZSBhcmUgcX
+VpdGUgYSBsb3Qgb2YgY2FzZXMgd2hlcmUgaXQgY2Fubm90IHNl
+ZSBpdC4gSSB3aWxsIG1ha2UgdGhpcyBjbGVhcmVyIiwiY3JlYX
+RlZCI6MTUzMjk0NTUxNzE1Nn0sImZDUnhISVBRYW1yRllKMHgi
+OnsiZGlzY3Vzc2lvbklkIjoiUHFQYnlNODlYc2dGejFqVSIsIn
+N1YiI6IjEwODUyMDAyOTMwMjI5NDY1MDQxNyIsInRleHQiOiJp
+cyB0aGlzIGFueSBjbGVhcmVyPyIsImNyZWF0ZWQiOjE1MzMxND
+M4MjY0ODV9LCJTYzlob0t3QTFxM0I1bTFQIjp7ImRpc2N1c3Np
+b25JZCI6ImJMUGJNd3lzWXpXT1dlTGoiLCJzdWIiOiIxMDg1Mj
+AwMjkzMDIyOTQ2NTA0MTciLCJ0ZXh0IjoiYW55IGNsZWFyZXI/
+IiwiY3JlYXRlZCI6MTUzMzE0MzkyOTkxNH0sIlhTd1VkQ0R2Sz
+dURVVuMkgiOnsiZGlzY3Vzc2lvbklkIjoiQjZid0hLQ1RLNGZX
+SEt5WiIsInN1YiI6IjEwODUyMDAyOTMwMjI5NDY1MDQxNyIsIn
+RleHQiOiJiZXR0ZXI/IiwiY3JlYXRlZCI6MTUzMzE0NDA0Mzg4
+N319LCJoaXN0b3J5IjpbLTI5NzcwOTk3OSw0MjI5MzA0MTMsLT
+E5ODU2NzIyMTYsLTEwODk4Njg3Nyw0OTAzNjQ0MTUsLTEzMTEw
+NDUwMzcsLTIwNzI5MzMwMDAsLTU1ODc5MTc0OSwtMTkyOTA0OD
+I5MCwxNDAwNjEyNjY4LC0xOTY4MjEzNzI4LDQyNjQyOTQ2Miwt
+MTYyODIxNDkyNCwxMzYyMjk4OTAzLDE0NjQ2MjQ5MiwtMTY4NT
+MxOTczMSwtMTQ3MDc2MzIwMiwtMTU1NzQyMjA0MiwxNjgxOTg0
+MzgxLDUxNTUwNzA2OV19
+-->
