@@ -29,7 +29,7 @@ cDNA library preparation and microarray analysis were performed by the Genomics 
 
 ### Microarray Analysis
 
-NMM Microarray analysis was conducted in R version 3.3.2 using the packages `oligo` version 1.36.1 and `puma` version 3.14.0 [@Carvalho2010; @Pearson2009; @Liu2013]. `oligo/puma` was chosen over `oligo/limma` [@Ritchie2015] for this analysis as NMM treatment appeared to cause large consistent changes in gene expression which violated the assumptions used in Robust Multi-chip Averaging (RMA), namely that most genes do not change there expression and that there is no correlation between average expression and log fold change. CEL files were read into R using `oligo` but were not normalised using RMA. The `puma` Bayesian probabilistic method was used to normalise data and conduct differential expression analysis. `puma` Probability of Positive Log Ratio (PPLR) values were calculated for each contrast. Strongly differentially expressed genes were produced using an absolute log2 fold change threshold of 1 and a PPLR of 0.05 (or 0.95 for positively differentially expressed genes), and moderately differentially expressed genes were produced using an absolute log2 fold change threshold of 0.5 and a PPLR of 0.05. Annotation of microarray data was conducted using the `oligo getNetAffx` function and TAIR10 AGI ids were extracted. Code used for normalisation and differential expression analysis is available in Appendix \ref{nmm_v_dmso_microarray_analysis}.
+NMM Microarray analysis was conducted in R version 3.3.2 using the packages `oligo` version 1.36.1 and `puma` version 3.14.0 [@Carvalho2010; @Pearson2009; @Liu2013]. `oligo/puma` was chosen over `oligo/limma` [@Ritchie2015] for this analysis as NMM treatment appeared to cause large consistent changes in gene expression which violated the assumptions used in Robust Multi-chip Averaging (RMA), namely that most genes do not change their expression and that there is no correlation between average expression and log fold change. CEL files were read into R using `oligo` but were not normalised using RMA. The `puma` Bayesian probabilistic method was used to normalise data and conduct differential expression analysis. `puma` Probability of Positive Log Ratio (PPLR) values were calculated for each contrast. Strongly differentially expressed genes were produced using an absolute log2 fold change threshold of 1 and a PPLR of 0.05 (or 0.95 for positively differentially expressed genes), and moderately differentially expressed genes were produced using an absolute log2 fold change threshold of 0.5 and a PPLR of 0.05. Annotation of microarray data was conducted using the `oligo getNetAffx` function and TAIR10 AGI ids were extracted. Code used for normalisation and differential expression analysis is available in Appendix \ref{nmm_v_dmso_microarray_analysis}.
 
 ### Analysis of previously published microarray data
 
@@ -608,11 +608,11 @@ N0pmZmtSIjp7ImRpc2N1c3Npb25JZCI6IkJieWVkU0l6QW1zaH
 JPc3QiLCJzdWIiOiJnbzoxMDIyMDU3OTcyNzY5NDEwMTA2Nzci
 LCJ0ZXh0IjoiRGlkIHlvdSBldmVyIGNoZWNrIHByb21vdG9yIH
 JlZ2lvbnM/IiwiY3JlYXRlZCI6MTUzNTM1NzAwNDg4MX19LCJo
-aXN0b3J5IjpbLTM0Mzg2MzkzNywyMDIzNDcyNDUxLDgxMjY0NT
-A5OCwtMjA3MjU2ODY0MSwtMTAwNzQxNTA4NiwxODg5ODU0NDY1
-LDY2ODM2ODk3MywxMzQyNTM4MTg0LC0xOTE0NTc4ODkzLDIyNj
-c2NDc5LC01Mjc3NDYxNjksLTM3OTEyMjEzNywtODY4MDM1MDU5
-LC0xMTExMTEyMDkwLDEwMzM2MTUzNjQsLTE2OTk0ODIzOCwxMj
-g0NDA3MTA5LDMzNDY2NTQ4MCwxMTA4MDM0MTUzLDEwNTc5MDUw
-MTFdfQ==
+aXN0b3J5IjpbLTc3ODQ1ODM3OSwtMzQzODYzOTM3LDIwMjM0Nz
+I0NTEsODEyNjQ1MDk4LC0yMDcyNTY4NjQxLC0xMDA3NDE1MDg2
+LDE4ODk4NTQ0NjUsNjY4MzY4OTczLDEzNDI1MzgxODQsLTE5MT
+Q1Nzg4OTMsMjI2NzY0NzksLTUyNzc0NjE2OSwtMzc5MTIyMTM3
+LC04NjgwMzUwNTksLTExMTExMTIwOTAsMTAzMzYxNTM2NCwtMT
+Y5OTQ4MjM4LDEyODQ0MDcxMDksMzM0NjY1NDgwLDExMDgwMzQx
+NTNdfQ==
 -->
