@@ -6,12 +6,14 @@ clean :
 pdf :
 	# replace figure urls to include chapter directory and png
 	# also add bold text at end for pandoc-shortcaption
+	# finally add \num macros around standard form to render properly
 	for CHAPTER_TEXT in $$(ls */text.md); do \
 		CHAPTER_NAME="$${CHAPTER_TEXT%%/text.md}"; \
 		CHAPTER_TEMP="$${CHAPTER_NAME}/tmp.md"; \
 		sed -e "s/figures\/\(.*\).svg/$${CHAPTER_NAME}\/figures\/\1.png/" $$CHAPTER_TEXT | \
 		sed -e "/^!\[/s/%/\\\\\\\\%/g" -e "/^!\[/s/&/\\\\\\\\&/g" | \
-		perl -pe 's|(!\[\*\*(.*?)\*\*.*png)|\1 "\2"|' > $$CHAPTER_TEMP; \
+		perl -pe 's|(!\[\*\*(.*?)\*\*.*png)|\1 "\2"|' | \
+		perl -pe 's|(\d(?:\.\d+)?e-?\d+)|\\num{\1}|g' > $$CHAPTER_TEMP ; \
 	done
 	# create png versions of svgs
 	for IMG in $$(ls */figures/*.svg); do \

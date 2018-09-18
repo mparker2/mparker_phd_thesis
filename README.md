@@ -7,6 +7,7 @@
 * inkscape 0.91
 * pandoc 2.1.3
 * xelatex
+* texlive-science
 * [modified version of pandoc-shortcaption](https://www.github.com/mparker2/pandoc-shortcaption)
 * python 3.5
 * python-markdown
