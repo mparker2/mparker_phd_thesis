@@ -13,6 +13,7 @@ pdf :
 		sed -e "s/figures\/\(.*\).svg/$${CHAPTER_NAME}\/figures\/\1.png/" $$CHAPTER_TEXT | \
 		sed -e "/^!\[/s/%/\\\\\\\\%/g" -e "/^!\[/s/&/\\\\\\\\&/g" | \
 		perl -pe 's|(!\[\*\*(.*?)\*\*.*png)|\1 "\2"|' | \
+		perl -pe 's|( et al(?!\.))|\1.|g' | \
 		perl -pe 's|(\d(?:\.\d+)?e-?\d+)|\\num{\1}|g' > $$CHAPTER_TEMP ; \
 	done
 	# create png versions of svgs
