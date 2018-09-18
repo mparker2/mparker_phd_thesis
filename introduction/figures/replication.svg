@@ -10,8 +10,8 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="154.33376mm"
-   height="72.679878mm"
-   viewBox="0 0 546.85189 257.52713"
+   height="75.719711mm"
+   viewBox="0 0 546.85189 268.29819"
    id="svg6674"
    version="1.1"
    inkscape:version="0.91 r13725"
@@ -243,14 +243,14 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.064658"
-     inkscape:cx="88.904494"
-     inkscape:cy="98.609724"
+     inkscape:zoom="0.87731914"
+     inkscape:cx="46.303118"
+     inkscape:cy="96.731181"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1875"
-     inkscape:window-height="1056"
+     inkscape:window-height="1051"
      inkscape:window-x="45"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -274,7 +274,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-107.51422,-45.490977)">
+     transform="translate(-107.51422,-34.719912)">
     <g
        id="g87817"
        transform="translate(7.7973853,-33.216472)">
@@ -554,5 +554,27 @@
              sodipodi:role="line">Lagging Strand</tspan></text>
       </g>
     </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="186.16292"
+       y="73.911057"
+       id="text4284"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4286"
+         x="186.16292"
+         y="73.911057">a</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4288"
+       y="73.911057"
+       x="492.1629"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="73.911057"
+         x="492.1629"
+         id="tspan4290"
+         sodipodi:role="line">b</tspan></text>
   </g>
 </svg>
