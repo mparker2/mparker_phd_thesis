@@ -120,7 +120,7 @@ For barplots of spliced read percentages in Extensin genes, `pysam` [@Heger2014]
 
 ### RNAseq of NMM treated plants
 
-In order to corroborate the results of our microarray study on the effect of NMM on gene expression, and to extend our analyses, we performed RNAseq using three replicates of NMM treated plants and control DMSO treated plants. Using a FDR threshold of 0.05, and an absolute log2 fold change of 1, we identified 2015 upregulated and 1653 downregulated genes, respectively. The log fold changes showed good correlation with the previously conducted microarray experiment (Pearsons 0.507, Spearman 0.48).
+In order to corroborate the results of our microarray study on the effect of NMM on gene expression, and to extend our analyses, we performed RNAseq using three replicates of NMM treated plants and control DMSO treated plants. Using a FDR threshold of 0.05, and an absolute log2 fold change of 1, we identified 2015 upregulated and 1653 downregulated genes, respectively. The log fold changes showed good correlation with the previously conducted microarray experiment (Pearsons r=0.507, Spearmans ρ=0.48).
 
 ### Gene Ontology shows plant cell wall specific genes are enriched in PG4s and downregulated by NMM
 
