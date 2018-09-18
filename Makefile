@@ -3,6 +3,11 @@ clean :
 	rm -f */figures/*.png
 	rm -f title_pages/acronyms.sorted.csv
 
+spellcheck:
+	for CHAPTER_TEXT in $$(ls */text.md); do \
+		ispell $$CHAPTER_TEXT ; \
+	done
+
 pdf :
 	# replace figure urls to include chapter directory and png
 	# also add bold text at end for pandoc-shortcaption
