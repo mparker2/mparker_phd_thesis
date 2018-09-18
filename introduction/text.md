@@ -253,13 +253,19 @@ R loop formation has been identified as a key component of class switch recombin
 
 Whilst the majority of G4 studies have been performed in mammalian systems, particularly *H. sapiens*, there is a growing body of evidence for functions of G4s in plant species including *Arabidopsis thaliana*, *Zea mays*, and *Oryza sativa* [@Mullen2010; @Takahashi2012; @Andorf2014; @Wang2015; @Garg2016; @Yadav2017]. Monocotyledonous flowering plants such as *O. sativa* and *Z. mays* generally have higher GC content than dicotyledonous flowering plants and non-flowering plants [@Smarda2014]. Monocots also have higher PG4 content, presumably as a result of this [@Garg2016]. Three tetrad PG4 densities of plants tend to be lower than those of the well studied *H. sapiens* and *M. musculus*, however. *Arabidopsis thaliana*, the model plant, has a small genome and low PG4 density, with only 1200 three tetrad PG4s [@Mullen2010]. This represented a greater than two fold depletion of PG4s over what was expected in a windowed Markov chain modelled genome [@Mullen2010]. Mullen et al. noted that Arabidopsis contains 43000 two tetrad PG4s, however, which they suggested might be stable at the temperature ranges that Arabidopsis lives at [@Mullen2010; @Mullen2012]. Garg et al. identified 1331 genes which have conserved two tetrad or greater PG4s in all dicot species tested, suggesting functional conservation of these motifs [@Garg2016]. Takahashi et al. analysed the plant species *O. sativa*, *P. trichocarpa*, *V. vinifera* and *A. thaliana*, and found an enrichment of PG4s at the TSS of genes, particularly on the template strand of the gene [@Takahashi2012].
 
+\newpage
+
 ### G-Quadruplexes in plant telomeres
 
-Arabidopsis telomeres are made up of the heptameric sequence `TTTAGGG` [@Richards1988]. This is slightly different sequence repeat from that found in most vertebrates, including *H. sapiens* [@Kim2018]. A number of plants species have also been reported to contain the same `TTAGGG` repeat as vertebrates, however [@Kim2018]. Both Arabidopsis and *O. sativa* have been shown to be sensitive to the telomerase inhibitor telomestatin [@Zhang2006]. Telomestatin is a G4 binding agent which has been shown to interact with the human telomeric repeat, and inhibit telomerase causing telomere shortening *in vivo* [@Kim2002]. Zhang et al. showed that sensitivity of cultured Arabidopsis and *O. sativa* cells to telomestatin occurs via the same method of telomere shortening, suggesting that plant telomeres may also form G4s *in vivo* [@Zhang2006].
+Arabidopsis telomeres are made up of the heptameric sequence `TTTAGGG` [@Richards1988]. This is a slightly different sequence repeat from that found in most vertebrates, including *H. sapiens* (see \autoref{ssec:genome_stability}) [@Kim2018]. A number of plants species have also been reported to contain the same `TTAGGG` repeat as vertebrates, however [@Kim2018]. Both Arabidopsis and *O. sativa* have been shown to be sensitive to the telomerase inhibitor telomestatin [@Zhang2006]. Telomestatin is a G4 binding agent which has been shown to interact with the human telomeric repeat, and inhibit telomerase causing telomere shortening *in vivo* [@Kim2002]. Zhang et al. showed that sensitivity of cultured Arabidopsis and *O. sativa* cells to telomestatin occurs via the same method of telomere shortening, suggesting that plant telomeres may also form G4s *in vivo* [@Zhang2006].
+
+\newpage
 
 ### Transposable Elements
 
 Transposable elements (TEs) are discrete regions of DNA which are able to copy or translocate themselves from one region of the genome to another [@Kejnovsky2015]. The most common family of plant TEs are long terminal repeat (LTR) retrotransposons, which duplicate themselves through transcription followed by reverse transcription [@Kejnovsky2015]. Lexa et al. have shown that plant LTR retrotransposons are enriched in motifs which form G4s *in vitro* [@Lexa2014]. These are most commonly found in the LTRs of the TEs, at the 5' end in the positive strand and at the 3' end in the negative strand [@Lexa2014]. The authors also noted that younger TEs with greater homology between LTRs were also more likely to contain PG4s with longer G-runs. They argued that this suggests a function for G4s in the life cycle of the TE [@Lexa2014]. Tokan et al. also demonstrated that treatment of *Z. mays* with the G4 stabilising drug NMM caused downregulation of some highly expressed LTR retrotransposons [@Tokan2018]. Kejnovsky and Lexa identified that G4s are also common in LTR fragments which occur throughout plant genomes as a result of ectopic recombination [@Kejnovsky2014]. This is a potential mechanism for the introduction of G4s into new regions of the genome, where they may evolve some evolutionary purpose [@Kejnovsky2014].
+
+\newpage
 
 ### Translational Regulation
 
@@ -269,12 +275,16 @@ An enrichment of PG4s in 5' UTRs has been identified in a number of plant specie
 
 Cho et al. also identified an RNA G4 which forms in the 5'UTR of SMXL4/5, a gene involved in the differentiation of the phloem [@Cho2018]. They found that this G4 was bound and stabilised by the G4 binding protein JULGI. Using SELEX, they showed that JULGI was able to bind a number of PG4 forming sequences [@Cho2018]. G4 formation in the SMXL4/5 5'UTR resulted in a reduction of the translation of mRNA, and a restriction of the phloem, whilst knockout of JULGI strongly promoted phloem development [@Cho2018]. A PG4 motif was identified in the 5'UTR of SMXL4/5 in all vascular plants analysed, suggesting that this mechanism was evolved early in the development of vascular plants [@Cho2018]. 
 
+\newpage
+
 ### Plant Development
 
 \label{ssec:plant_dev}
 
 
 Given the evolutionarily ancient role of G4s in phloem development [@Cho2018], it is plausible that molecular mechanisms involving G4s are central to many plant development pathways. Nakagawa et al. analysed the effects of the G4 binding agents NMM and Berberine on Arabidopsis development, and found that both drugs caused defects in leaf polarity [@Nakagawa2012]. Furthermore, plants with double mutations in the genes *ASYMMETRIC LEAVES 1* and *2* were hypersensitive to G4 binding agents [@Nakagawa2012].
+
+\newpage
 
 ### Stress Response
 
