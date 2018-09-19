@@ -1,0 +1,110 @@
+acronym,definition
+AGI,Arabidopsis genome initiative
+AID,Activation-induced cytidine deaminase
+AS,Alternative splicing
+ATAC-seq,Assay for transposase-accessible chromatin using sequencing
+ATP,Adenosine triphosphate
+ATR-X/ATRX,Alpha-thalassemia mental retardation syndrome/protein
+AUC,Area under the curve
+BAM,Binary alignment map format
+BED,Browser extensible data format
+BG4,G-Quadruplex binding antibody
+BLAT,BLAT,BLAST-like alignment tool
+CD,Circular dichroism
+cDNA,Complementary DNA
+CDS,Coding sequence
+ChIP-seq,Chromatin immunoprecipitation with sequencing
+CHX,Cyclohexamide
+CPM,Counts per million
+CSR,Class switch recombination
+CTD,Carboxy-terminal domain
+dsDNA,Double stranded DNA
+DMS,Dimethyl sulphate
+DMSO,Dimethyl sulphoxide
+DNA,Deoxyribonucleic Acid
+DNase,Deoxyribonuclease
+DPE,Downstream promoter element
+DSB,Double strand break
+EMSA,Electrophoretic mobility shift assay
+ENA,European nucleotide archive
+ENCODE,Encyclopedia of DNA elements
+EXT,Extensin
+FDR,False discovery rate
+FPR,False positive rate
+FISH, Fluorescent in situ hybridisation
+FRET,Förster resonance energy transfer
+FTP,File transfer protocol
+G4,G-Quadruplex
+GC content/skew,Guanine and cytosine content/skew
+GEM,Genome multitool
+GEO,Gene expression omnibus
+GO,Gene ontology
+GRO-seq,Global Run On Sequencing
+GTF/GFF,Gene transfer format/General feature format
+gtRNAdb,Genomic tRNA database
+HDAC,Histone deacetylase
+HDF5,Hierarchical data format 5
+HEK,Human embryonic kidney
+hnRNP,Heterogeneous ribonucleoprotein particle
+IgH,Immunoglobulin Heavy Chain
+IGV,Intergrative genome viewer
+IRES,Internal ribosome entry site
+logCPM,Log counts per million
+logFC,Log fold change
+lncRNA,Long non-coding RNA
+LRX,Leucine rich repeat extensin
+LSTM,Long Short Term Memory
+LTR,Long terminal repeat
+MA plot,Mean average plot
+miRNA,MicroRNA
+MLP,Multi-layer perceptron
+%mm,Percent mismatch score (G4seq)
+mRNA,Messenger RNA
+MS,Murashige \& Skoog media
+MWU,Mann Whitney U Test
+ncRNA,Non-coding RNA
+NER,Nucleotide excision repair
+NHEIII,Nuclease hypersensitive element III
+NMM,N-Methyl Mesoporphyrin IX
+NMR,Nuclear magnetic resonance
+NOESY,Nuclear Overhauser effect spectroscopy
+PAS,Polyadenylation site
+PCR,Polymerase chain reaction
+PCS,Potential coding sequence
+PDB,Protein data bank
+PDS,Pyridostatin
+PG4,Putative G-Quadruplex
+PIC,Preinitiation complex
+Pol II,RNA polymerase II
+PPLR,Probability of positive log ratio
+PR,Precision recall
+pre-mRNA,Precursor mRNA
+qPCR,Quantitative polymerase chain reaction
+RMA,Robust Multi-chip Averaging
+RMA,Robust multichip average
+RNA,Ribonucleic acid
+RNA-seq,RNA sequencing
+RNase,Ribonuclease
+ROC,Receiver operator characteristic
+RT,Reverse transcriptase
+SCE,Sister chromatid exchange
+SELEX,Systematic evolution of ligands by exponential enrichment
+SHAPE,Selective 2'-hydroxyl acylation analyzed by primer extension 
+smFRET,Single molecule Förster resonance energy transfer
+snRNA,Small nuclear RNA
+SOM,Self organising map
+SP3/4/5,Serine proline 3/4/5 motif
+ssDNA,Single stranded DNA
+STAR,Spliced transcript alignment to a reference
+SWI/SNF,Switch/Sucrose non-fermentable
+tAI, tRNA adaptation index
+TAIR,The Arabidopsis information resource
+TE,Transposable element
+TFIIH,Transcription initiation factor complex
+TPR,True positive rate
+tRNA,transfer RNA
+TSS,Transcriptional start site
+TTS,Transcriptional termination site
+UMAP,Uniform manifold approximation and projection
+UTR,Untranslated region
+UV,Ultraviolet
