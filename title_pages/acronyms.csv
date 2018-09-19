@@ -58,6 +58,7 @@ LTR,Long terminal repeat
 MA plot,Mean average plot
 miRNA,MicroRNA
 MLP,Multi-layer perceptron
+%mm,Percent mismatch score (G4seq)
 mRNA,Messenger RNA
 MS,Murashige \& Skoog media
 MWU,Mann Whitney U Test
