@@ -17,6 +17,10 @@
       <name>Aurimas Vinckevicius</name>
       <email>aurimas.dev@gmail.com</email>
     </contributor>
+    <contributor>
+      <name>Matthew Parker</name>
+      <email>mparker2@sheffield.ac.uk</email>
+    </contributor>
     <category citation-format="author-date"/>
     <category field="biology"/>
     <issn>0092-8674</issn>
@@ -25,6 +29,12 @@
     <updated>2013-01-26T22:06:38+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
+  <locale xml:lang="en">
+    <terms>
+      <term name="nodate">without date</term>
+      <term name="nodate-short">n.d.</term>
+    </terms>
+  </locale>
   <macro name="author-short">
     <names variable="author">
       <name form="short" and="text"/>
@@ -40,10 +50,29 @@
       <name name-as-sort-order="all" initialize-with="." and="text" delimiter-precedes-last="always"/>
     </names>
   </macro>
+  <macro name="issued-short">
+    <choose>
+      <if variable="issued">
+        <date variable="issued">
+          <date-part name="year"/>
+        </date>
+      </if>
+      <else>
+        <text term="nodate-short"/>
+      </else>
+    </choose>
+  </macro>
   <macro name="issued">
-    <date variable="issued">
-      <date-part name="year"/>
-    </date>
+    <choose>
+      <if variable="issued">
+        <date variable="issued">
+          <date-part name="year"/>
+        </date>
+      </if>
+      <else>
+        <text term="nodate"/>
+      </else>
+    </choose>
   </macro>
   <macro name="publisher">
     <group prefix="(" delimiter=": " suffix=")">
@@ -68,7 +97,7 @@
     <layout prefix="(" suffix=")" delimiter="; ">
       <group delimiter=", ">
         <text macro="author-short"/>
-        <text macro="issued"/>
+        <text macro="issued-short"/>
       </group>
     </layout>
   </citation>

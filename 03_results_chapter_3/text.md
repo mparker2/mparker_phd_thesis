@@ -21,11 +21,11 @@ The genomes of 48 multicellular land plants were downloaded over FTP from Ensemb
 
 ### Metagene Profiles
 
-Shuffled genomes were generated in Python using `ushuffle` to shuffle sequences in 20bp windows, maintaining their nucleotide and dinucleotide contents [@Jiang2008]. G content on both strands was calculated in 20bp windows, using `bedtools makewindows`, `bedtools nuc` and `awk` [@Quinlan2010; @Aho1988]. Bed files of non-overlapping PG4s were converted into BigWig format using `bedtools genomecov` and `ucsc-bedGraphToBigWig` [@Kent2010]. Gene annotations were taken from Araport11. Overlapping transcripts of the same gene were flattened into a single bed12 interval per gene [@Davidson2017], with the leftmost TSS and start codon and the rightmost TTS and stop codon (or vice versa for genes on the negative strand). GC/PG4 coverage arrays for the 500bp upstream region, 5'UTR, CDS, 3'UTR and 500bp downstream region were then extracted for each gene using `pyBigWig` and reinterpolated to sizes of 50, 20, 100, 20, and 50 respectively [@Ryan2018]. These were then averaged across all genes to produce metaprofiles. Plots were generated using `matplotlib` and `seaborn` [@Waskom2014; @Hunter2007]. Code is available in \ref{g4_density_metagene_profiles}.
+Shuffled genomes were generated in Python using `ushuffle` to shuffle sequences in 20bp windows, maintaining their nucleotide and dinucleotide contents [@Jiang2008]. G content on both strands was calculated in 20bp windows, using `bedtools makewindows`, `bedtools nuc` and `awk` [@Quinlan2010; @Aho1988]. Bed files of non-overlapping PG4s were converted into BigWig format using `bedtools genomecov` and `ucsc-bedGraphToBigWig` [@Kent2010]. Gene annotations were taken from Araport11. Overlapping transcripts of the same gene were flattened into a single bed12 interval per gene [@Davidson2017], with the leftmost TSS and start codon and the rightmost TTS and stop codon (or vice versa for genes on the negative strand). GC/PG4 coverage arrays for the 500bp upstream region, 5'UTR, CDS, 3'UTR and 500bp downstream region were then extracted for each gene using `pyBigWig` and reinterpolated to sizes of 50, 20, 100, 20, and 50 respectively [@Ryan2018]. These were then averaged across all genes to produce metaprofiles. Plots were generated using `matplotlib` and `seaborn` [@Waskom2014; @Hunter2007]. Code is available in Appendix \ref{g4_density_metagene_profiles}.
 
 ### Reverse Translation Method
 
-Relative frequency of codon usage for all Arabidopsis CDS sequences was calculated in python. CDSs from multiple transcripts of the same gene were treated separately, since flattening may have resulted in frameshifts. Reverse translation was conducted by translating CDSs into protein, then randomly selecting codons to represent the protein, weighting each codon by its usage. 100 reverse translated potential coding sequences (PCSs) were generated per CDS. G content on each strand was calculated using 20bp windows and reinterpolated to 100 bins, for both real CDSs and PCSs.  Reinterpolation was conducted using piecewise linear interpolation with 100 evenly spaced positions along the length of the sequence. PG4 content was calculated using G4Seeqer and the overlapping Quadparser method. Overlapping PG4s were flattened into a single interval. PG4s were binned into 100 equally sized bins per gene, based on the midpoint of the PG4. Resultant profiles were stored in HDF5 format using `h5py` version 2.7.1 and `HDF5` version 1.8.18 [@Collette2013]. Averaged profiles across all iterations of reverse translation, and all genes were generated and plotted using `matplotlib` [@Hunter2007]. Code is available in \ref{reverse_translation_analysis}.
+Relative frequency of codon usage for all Arabidopsis CDS sequences was calculated in python. CDSs from multiple transcripts of the same gene were treated separately, since flattening may have resulted in frameshifts. Reverse translation was conducted by translating CDSs into protein, then randomly selecting codons to represent the protein, weighting each codon by its usage. 100 reverse translated potential coding sequences (PCSs) were generated per CDS. G content on each strand was calculated using 20bp windows and reinterpolated to 100 bins, for both real CDSs and PCSs.  Reinterpolation was conducted using piecewise linear interpolation with 100 evenly spaced positions along the length of the sequence. PG4 content was calculated using G4Seeqer and the overlapping Quadparser method. Overlapping PG4s were flattened into a single interval. PG4s were binned into 100 equally sized bins per gene, based on the midpoint of the PG4. Resultant profiles were stored in HDF5 format using `h5py` version 2.7.1 and `HDF5` version 1.8.18 [@Collette2013]. Averaged profiles across all iterations of reverse translation, and all genes were generated and plotted using `matplotlib` [@Hunter2007]. Code is available in Appendix \ref{reverse_translation_analysis}.
 
 ### tRNA Adaptation Index Calculations
 
@@ -39,7 +39,7 @@ For hardcoded PG4 analysis, all overlapping two tetrad PG4 registers in CDSs wer
 
 ## Results
 
-### The genome of *Arabidopsis thaliana* poor in three tetrad PG4s, but not two tetrad PG4s
+### The genome of *Arabidopsis thaliana* is poor in three tetrad PG4s, but not two tetrad PG4s
 
 To compare the PG4 density of the Arabidopsis genome to other organisms, we downloaded the set of 48 land plant genomes available in ENSEMBL Plants Release 39, which included 22 Monocotyledons, 23 Dicotyledons, and 3 Non-flowering plants. The genomes of the metazoans *Drosophila melanogaster* (fruit fly), *Danio rerio* (zebrafish), *Mus musculus* (mouse) and *Homo sapiens* (human), from ENSEMBL Release 92, were also analysed. PG4s with three or more tetrads were identified using the Quadparser method and the average density per Megabase was calculated for each genome. Arabidopsis has the smallest genome of any of the sequenced plants, estimated at 135Mb (119Mb in the golden path sequence). It also has one of the lowest three tetrad PG4 densities amongst all organisms analysed (Fig \ref{pg4_genomes}a). Only 1284 non-overlapping PG4s with three or more tetrads are predicted to form in the whole Arabidopsis genome, with an average density of 10.4 PG4s/Mb. In comparison, the human genome is extremely PG4 dense, with an average of 123 PG4s/Mb. Monocot plants also tend to have much greater PG4 densities than Dicots (median density 59 PG4s/Mb vs. 3.3 PG4s/Mb). This is likely to result from a greater GC content in Monocot genomes. Non-flowering plants such as the bryophyte *Physcomitrella patens* (5.5 PG4s/Mb) had PG4 densities which resembled those of the Dicots more closely. We did not find a correlation between PG4 density and genome size (Spearmans ρ=-0.02).
 
@@ -73,7 +73,7 @@ The enrichment of two tetrad PG4s inside coding regions in Arabidopsis could be 
 
 The GC content of CDSs is greatest towards the start and end of the interval, and dips in the middle (Fig \ref{revtrans}a). This is due to a greater G content close to the start codon  on the template strand, and a greater G content close to the stop codon on the coding strand. When we performed reverse translation using a single codon usage table, some of this bias was abolished. This indicates that most of the GC content of the CDS is not hardcoded into the sequence by the protein content. Codon usage is therefore presumably different at the start and end of the gene.
 
-As shown in Fig \ref{metagene}c, there is a higher density of PG4s at the start of the CDS on the template strand, and a higher density towards the end of the CDS on the coding strand. This is also seen in Fig \ref{revtrans}b&c. PCS sequences demonstrate the same biases in PG4 distribution using both Quadparser and G4Seeqer predictions. This demonstrates that unlike GC content, the PG4 content of some genes is hardcoded by protein sequence (Fig \ref{revtrans}b&c). This may be due to the repetitive nature of some protein motifs. PCS PG4 content is higher than the real PG4 levels across the coding strand however, suggesting that codons which reduce PG4 forming potential on this strand may be selected for. On the template strand, we see strong enrichment of PG4s in real sequences over expected levels from PCSs in the first 50% of the CDS (Fig \ref{revtrans}b&c). This suggests that C rich codons may be selected for at the start of genes to increase the G4 forming potential of the template strand. We wondered whether CDS G4s might be selected for in genes which have short 5'UTRs which might not be able to contain G4s, however we did not see any correlation between the length of 5' UTRs and the presence of G4s in the first 100bp of CDS regions (Spearmans ρ=0.014).
+As shown in Fig \ref{metagene}c, there is a higher density of PG4s at the start of the CDS on the template strand, and a higher density towards the end of the CDS on the coding strand. This is also seen in Fig \ref{revtrans}b&c. PCS sequences demonstrate similar biases in PG4 distribution using both Quadparser and G4Seeqer predictions. This demonstrates that unlike GC content, at least some of the PG4 content of some genes is hardcoded by protein sequence (Fig \ref{revtrans}b&c). This may be due to the repetitive nature of some protein motifs. PCS PG4 content is higher than the real PG4 levels across the coding strand however, suggesting that codons which reduce PG4 forming potential on this strand may be selected for. On the template strand, we see strong enrichment of PG4s in real sequences over expected levels from PCSs in the first 50% of the CDS (Fig \ref{revtrans}b&c). This suggests that C rich codons may be selected for at the start of genes to increase the G4 forming potential of the template strand. We wondered whether CDS G4s might be selected for in genes which have short 5'UTRs which might not be able to contain G4s, however we did not see any correlation between the length of 5' UTRs and the presence of G4s in the first 100bp of CDS regions (Spearmans ρ=0.014).
 
 \newpage
 
@@ -141,7 +141,7 @@ The dicotyledon *Arabidopsis thaliana* has a low three tetrad PG4 density but a 
 
 Since PG4 forming sequences in CDS regions must also code for protein sequence, we were interested in identifying the degree to which PG4s are determined by coding sequence. Some PG4 motifs cannot be removed from the CDS without changing the protein sequence. We refer to these as hardcoded PG4s. To explore this idea, we developed the reverse translation simulation, where codon usage across the whole genome was used to simulate potential coding sequences (PCSs) for each CDS, and the number of PG4s in the real CDS vs the average PCS was compared. This method identified that the G-content skew on both strands is heightened by codon choice, however some G-content skew is also hardcoded by protein sequence. This suggests that protein sequence may in fact be under selection to increase template strand G-content at the start of the CDS. We also found that the levels of PG4s on the coding strand of real CDSs were lower than was expected from PCSs, i.e. codon choice selectively removes non-hardcoded PG4s on the coding strand. This is possibly to remove obstacles to the ribosome during translation, since coding strand PG4s may also form in the mRNA, and RNA G4s are more stable than DNA G4s [@Collie2010]. The levels of coding strand PG4s were greater at the distal end of the CDS in both real CDSs and simulated PCSs, suggesting a greater level of hardcoded PG4s occur towards the end of CDSs.
 
-Reverse translation identifies that the levels of template strand PG4s are greater in real CDSs than expected from PCSs at the start codon proximal end. This enrichment falls through the CDS, and the second half of the template strand CDS is depleted in PG4s. This suggests that PG4s serve some purpose at the start of CDSs, perhaps in regulating Pol II speed. Furthermore, we see a peak of template strand PG4s at the proximal end of PCSs, suggesting that there are more hardcoded or partially hardcoded PG4s at the proximal end, and that N-terminal protein sequence may in fact be selected to allow PG4 formation in the DNA.
+Reverse translation identifies that the levels of template strand PG4s are greater in real CDSs than expected from PCSs at the start codon proximal end. This enrichment falls through the CDS, and the second half of the template strand CDS is depleted in PG4s. This suggests that PG4s serve some purpose at the start of CDSs, perhaps in regulating Pol II speed. Furthermore, we see a peak of template strand PG4s at the start codon proximal end of PCSs, suggesting that there are more hardcoded or partially hardcoded PG4s at the proximal end, and that N-terminal protein sequence may in fact be selected to allow PG4 formation in the DNA.
 
 To further explore the levels of hardcoded vs. non-hardcoded PG4s in Arabidopsis CDSs, we identified, for each overlapping PG4 register, whether each G-run was hardcoded or not. The one or two amino acid motif which was contributed to by each G-run was also determined. We found that greater than 50% of all PG4 G-runs are hardcoded, and 34% of all PG4s are totally hardcoded. The start codon proximal end of the template strand contains the greatest number of non-hardcoded PG4s, explaining the strong enrichment in this region compared to PCSs.
 
@@ -150,205 +150,3 @@ The most common amino acids which contribute to hardcoded PG4s are glycine (codo
 Poly-proline rich proteins are often structural proteins, and are a major constituent of the plant cell wall. Proline rich motifs form PG4s in the template strand of DNA. These will not form in the mRNA, but may cause issues for Pol II using transcription. This will be discussed further in \ref{chap:global_nmm} and \ref{chap:extensins}.
 
 \newpage
-<!--stackedit_data:
-eyJkaXNjdXNzaW9ucyI6eyJDdkwzSDRhZ0ppbnFTU2ZtIjp7In
-RleHQiOiI3MCUgb2YgdGhyZWUgdGV0cmFkIFBHNHMgd2VyZSBm
-b3VuZCBpbiBpbnRlcmdlbmljIHJlZ2lvbnMsIGFuZCBvZiB0aG
-VzZSwgMjAlIGNv4oCmIiwic3RhcnQiOjI2MTAsImVuZCI6Mjcz
-OH0sIjE4ajFmR3NhR0tGYVd6dXIiOnsidGV4dCI6Ik11bGxlbi
-BldCBhbC4gZm91bmQgdGhhdCB0aGUgUEc0IGRlbnNpdHkgb2Yg
-aW50ZXJnZW5pYyByZWdpb25zIHdhcyBzdGlsbCBoaWdoZXLigK
-YiLCJzdGFydCI6MjgyOSwiZW5kIjoyOTU0fSwiRXptYTI0c3B1
-MDJ0S0ZGVCI6eyJ0ZXh0IjoiSW4gdGhpcyBjaGFwdGVyLCB3ZS
-BicmllZmx5IGV4YW1pbmUgdGhlIFBHNCBkZW5zaXR5IG9mIEFy
-YWJpZG9wc2lzIGNvbXBhcmVkIHRv4oCmIiwic3RhcnQiOjM1MD
-QsImVuZCI6MzgxNH0sIkFudzZLVnVvd3VqQXd2NHEiOnsidGV4
-dCI6Ik92ZXJsYXBwaW5nIHRyYW5zY3JpcHRzIG9mIHRoZSBzYW
-1lIGdlbmUgd2VyZSBmbGF0dGVuZWQgaW50byBhIHNpbmdsZSBi
-ZWQxMiBpbnTigKYiLCJzdGFydCI6NTY1NiwiZW5kIjo1NzQ5fS
-wiUG5vZ2ZXV2hrT3NsOVIwaiI6eyJ0ZXh0IjoicmVpbnRlcnBv
-bGF0ZWQgdG8gMTAwIGJpbnMiLCJzdGFydCI6Njg4NSwiZW5kIj
-o2OTExfSwiblZ1YkRvR1BIQUZmbm9CaCI6eyJ0ZXh0Ijoid2Vy
-ZSBnZW5lcmF0ZWQgcGVyIENEUyIsInN0YXJ0Ijo2Nzk4LCJlbm
-QiOjY4MjB9LCJSQVBaem5BWnZ4VG1ReUhZIjp7InRleHQiOiJw
-cmVkaWN0ZWQgdXNpbmcgbmV0d29yayBhbmFseXNpcyIsInN0YX
-J0Ijo4MDMyLCJlbmQiOjgwNjR9LCJlQlNlS3pyUFdwTXE4cU5x
-Ijp7InRleHQiOiJwb3NzaWJsZSB0byB1c2Ugc3lub255bW91cy
-Bjb2RvbnMgd2hpY2ggZG8gbm90IGNoYW5nZSB0aGUgcHJvdGVp
-biBzZXF1ZW5jZSwiLCJzdGFydCI6ODYzNCwiZW5kIjo4NzA5fS
-widm5pVnFHTWVvM1h2Vm5yWiI6eyJ0ZXh0IjoidCBhbHNvIGhh
-cyBvbmUgb2YgdGhlIGxvd2VzdCB0aHJlZSB0ZXRyYWQgUEc0IG
-RlbnNpdGllcy4iLCJzdGFydCI6MTA0MjUsImVuZCI6MTA1Mzd9
-LCJ4RXdGUTlSa09ZNE05NVh0Ijp7InRleHQiOiIobWVkaWFuIG
-RlbnNpdHkgNTkgUEc0cy9NYiB2cy4gMy4zIFBHNHMvTWIiLCJz
-dGFydCI6MTA4NTIsImVuZCI6MTA4OTR9LCJTMHBkUElTNVVHWE
-1rQ3FKIjp7InRleHQiOiJTaW5jZSB0aGUgbWVsdGluZyB0ZW1w
-ZXJhdHVyZXMgb2YgdGhyZWUgdGV0cmFkIEc0cyBjYW4gcmVhY2
-ggdXAgdG8gMTAwIERlZ3JlZXPigKYiLCJzdGFydCI6MTE2Nzgs
-ImVuZCI6MTE5NTR9LCJXZHdiVThNTlVlcThFNFZ1Ijp7InRleH
-QiOiJXZSBzdWdnZXN0IHRoYXQgdGhpcyBpbmRpY2F0ZXMgdGhh
-dCB0d28gdGV0cmFkIFBHNHMgbWF5IHBsYXkgYSByZWd1bGF0b3
-J5IHJvbGXigKYiLCJzdGFydCI6MTMzMzUsImVuZCI6MTM2NzN9
-LCJ4OUZxNVdQb2pZWnc5QXNiIjp7InRleHQiOiIhWyoqTWV0YW
-dlbmUgUHJvZmlsZSBvZiBHQyBjb250ZW50IGFuZCBQRzQgZGVu
-c2l0eSoqIE1ldGFnZW5lIHByb2ZpbGVzIHNob3dpbmfigKYiLC
-JzdGFydCI6MTY1MjUsImVuZCI6MTcxMTN9LCIyWmlpNlhJQVIz
-aUxUVldaIjp7InRleHQiOiJzcGVjaWZpYyBwcm90ZWluIG1vdG
-lmcyIsInN0YXJ0IjoxNzQ5MiwiZW5kIjoxNzUxNX0sInV1ajBa
-akJIZzZ3YlhCQVIiOnsidGV4dCI6IlRoZSBHQyBjb250ZW50IG
-9mIiwic3RhcnQiOjE4MzcwLCJlbmQiOjE4Mzg3fSwiYk1MSlA5
-REVUSnBrSzg4eCI6eyJ0ZXh0IjoiVGhpcyBtYXkgYmUgZHVlIH
-RvIHRoZSByZXBldGl0aXZlIG5hdHVyZSBvZiBzb21lIHByb3Rl
-aW4gbW90aWZzLiBQQ1MgUEc0IGNvbnRlbuKApiIsInN0YXJ0Ij
-oxOTQyMSwiZW5kIjoxOTY2NH0sIlpOU29HMm9EeW5SM1d1Nloi
-OnsidGV4dCI6IihTcGVhcm1hbnMgcmhvIDAuMDE0KS4iLCJzdG
-FydCI6MjAyMTMsImVuZCI6MjAyMzV9LCJqWHM4Nm5jdEtmdUcw
-TFY5Ijp7InRleHQiOiIhWyoqUmV2ZXJzZSBUcmFuc2xhdGlvbi
-BTaW11bGF0aW9uIHNob3dzIHRoYXQgUEc0cyBhcmUgZW5yaWNo
-ZWQgYXQgdGhlIFN0YXJ0IENv4oCmIiwic3RhcnQiOjIwMjQ3LC
-JlbmQiOjIwNjE4fSwiNnRSazRqTTVvN0FITVlvSyI6eyJ0ZXh0
-IjoidGhhdCB0aGUiLCJzdGFydCI6MjM1NDQsImVuZCI6MjM1Nj
-B9LCIyT2JhMHl5UU5peWlraEowIjp7InRleHQiOiJXZSBmb3Vu
-ZCB0aGF0IG9uIGJvdGggc3RyYW5kcywgdGhlIGdyZWF0ZXN0IG
-51bWJlciBvZiBQRzRzIHdlcmUgY29tcGxldGVseSBoYXJk4oCm
-Iiwic3RhcnQiOjI1MDc1LCJlbmQiOjI1MjM4fSwiSWxDSHBVVz
-NaYzJEN3FlYyI6eyJ0ZXh0IjoiIVsqKk5vbi1oYXJkY29kZWQg
-UEc0cyBsZXZlbHMgYXJlIGdyZWF0ZXIgYXQgdGhlIHN0YXJ0IG
-NvZG9uIHByb3hpbWFsIHJlZ2lvbiBvZuKApiIsInN0YXJ0Ijoy
-NzgyNSwiZW5kIjoyODE2OX0sIkR6SXU5VkVINzltd2tna2MiOn
-sidGV4dCI6IkZ1cnRoZXJtb3JlLCB0aGUgcmF0aW8gb2YgdHdv
-IHRldHJhZCB0byB0aHJlZSB0ZXRyYWQgUEc0cyBpbiBwbGFudC
-BnZW5vbWVzIGlzIG3igKYiLCJzdGFydCI6MzE4OTUsImVuZCI6
-MzIxMTR9fSwiY29tbWVudHMiOnsiZTZhckw0dUd4d1JNOUp0WS
-I6eyJkaXNjdXNzaW9uSWQiOiJDdkwzSDRhZ0ppbnFTU2ZtIiwi
-c3ViIjoiMTAyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6Ik
-lzIHRoaXMgc2ltaWxhciBvciBkaWZmZXJlbnQgdG8gaHVtYW4i
-LCJjcmVhdGVkIjoxNTM0MzQ3OTA1MTMzfSwicG1tdVVtNjdhRT
-VXSVI3dSI6eyJkaXNjdXNzaW9uSWQiOiIxOGoxZkdzYUdLRmFX
-enVyIiwic3ViIjoiMTAyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidG
-V4dCI6IldoYXQgaXMgdGhpcyBsaWtlIGluIG90aGVyIG9yZ2Fu
-aXNtcz8iLCJjcmVhdGVkIjoxNTM0MzQ3OTI1MTY2fSwicDRoTk
-lWd0RuVEJCR2FPTyI6eyJkaXNjdXNzaW9uSWQiOiJFem1hMjRz
-cHUwMnRLRkZUIiwic3ViIjoiMTAyMjA1Nzk3Mjc2OTQxMDEwNj
-c3IiwidGV4dCI6IlRIaXMgYWltcyBwYXJhIGRvZXNuJ3QgcmVh
-bGx5IGV4cGxhaW4gd2h5IHlvdSB1bmRlcnRvb2sgdGhpcyBhbm
-FseXNpcywgYW5kIHdoYXQgeW91IGhvcGVkIHRvIHByb2R1Y2Ug
-YWJvdmUgYW5kIGJleW9uZCBwcmV2aW91cyBhbmFseXNlcy4iLC
-JjcmVhdGVkIjoxNTM0MzQ3OTk5NTQyfSwidmVQUlYzNWk3RUZa
-YVZuWiI6eyJkaXNjdXNzaW9uSWQiOiJBbnc2S1Z1b3d1akF3dj
-RxIiwic3ViIjoiMTAyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4
-dCI6IlRoaXMgaXMgc2ltaWxhciB0byB0aGUgc3VwZXJ0cmFuc2
-NyaXB0IGNvbmNlcHQgb3V0bGluZWQgaW4gRGF2aWRzb24sIE5N
-IGV0IGFsIDIwMTcsIGdlbm9tZSBiaW9sb2d5IiwiY3JlYXRlZC
-I6MTUzNDM0ODM3NTkxNX0sImRORGVXMnNYa1pYaE4zdkoiOnsi
-ZGlzY3Vzc2lvbklkIjoiUG5vZ2ZXV2hrT3NsOVIwaiIsInN1Yi
-I6IjEwMjIwNTc5NzI3Njk0MTAxMDY3NyIsInRleHQiOiJXaGF0
-IGRvZXMgdGhpcyBtZWFuPyBIb3cgd2FzIHRoaXMgZG9uZT8iLC
-JjcmVhdGVkIjoxNTM0MzQ4NTQ5OTIzfSwiR0N3cjNTTWVtUWd6
-TENoTiI6eyJkaXNjdXNzaW9uSWQiOiJuVnViRG9HUEhBRmZub0
-JoIiwic3ViIjoiMTAyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4
-dCI6Im9uIGEgcGVyIGdlbmUgb3IgcGVyIHRyYW5zY3JpcHQuIE
-RvIHlvdXIgc3VwZXJ0cmFuc2NyaXB0cywgdXNpbmcgZmlyc3Qg
-c3RhcnQgYW5kIGxhc3Qgc3RvcCBhbHdheXMgcHJlc2VydmUgZn
-JhbWU/IiwiY3JlYXRlZCI6MTUzNDM0ODU4OTYzNn0sInNMTkJK
-SGRaN2I1dEQzbEsiOnsiZGlzY3Vzc2lvbklkIjoiUkFQWnpuQV
-p2eFRtUXlIWSIsInN1YiI6IjEwMjIwNTc5NzI3Njk0MTAxMDY3
-NyIsInRleHQiOiJFeHBsYWluIHlvdXIgYWxnb3JpdGhtIGZvci
-Bkb2luZyB0aGlzLiBNaWdodCBhcyB3ZWxsIHNheSBcInVzaW5n
-IHNjaWVuY2VcIiBhcyBcInVzaW5nIG5ldHdvcmsgYW5hbHlzaX
-NcIi4iLCJjcmVhdGVkIjoxNTM0MzQ4NjU4ODM1fSwiNmZjWlNw
-RlVHbTZlUE1XQiI6eyJkaXNjdXNzaW9uSWQiOiJlQlNlS3pyUF
-dwTXE4cU5xIiwic3ViIjoiMTAyMjA1Nzk3Mjc2OTQxMDEwNjc3
-IiwidGV4dCI6IkhvdyBkaWQgeW91IGRvIHRoaXM/IFdoYXQgd2
-FzIHRoZSBhbGdvcml0aG0/LCB3aGVyZSBpcyB0aGUgY29kZT8i
-LCJjcmVhdGVkIjoxNTM0MzQ4NzEyMDE0fSwiZGt1VVV3eXl1VU
-FGdWQzYSI6eyJkaXNjdXNzaW9uSWQiOiJ2bmlWcUdNZW8zWHZW
-bnJaIiwic3ViIjoiMTAyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidG
-V4dCI6Ikxvb2tzIHRvIG1lIGxpa2UgaXQgaGFzIG9uZSBvZiB0
-aGUgaGlnaGVzdCBmb3IgRGljb3RzLiIsImNyZWF0ZWQiOjE1Mz
-QzNDg5MDI0NTJ9LCJQREZad2hFQ3E0TU1FTUtJIjp7ImRpc2N1
-c3Npb25JZCI6InhFd0ZROVJrT1k0TTk1WHQiLCJzdWIiOiIxMD
-IyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZXh0IjoiVGhpcyBtZWRp
-YW4gZG9lc24ndCBsb29rIHJpZ2h0IHRvIG1lIGZyb20gbG9va2
-luZyBhdCBmaWd1cmUgMy4xLiBBbHNvIGNvbW1lbnQgb24gaG93
-IEFUIGhhcyBhIG11Y2ggaGlnaGVyIGRlbnNpdHkgdGhhbiB0aG
-UgYXZlcmFnZS4iLCJjcmVhdGVkIjoxNTM0MzQ5MTE3NzIyfSwi
-ZGRoOER4amt0Um1nWGthdCI6eyJkaXNjdXNzaW9uSWQiOiJTMH
-BkUElTNVVHWE1rQ3FKIiwic3ViIjoiMTAyMjA1Nzk3Mjc2OTQx
-MDEwNjc3IiwidGV4dCI6IklzIGl0IHBvc3NpYmxlIHRvIHByZW
-RpY3QgdGhlIHN0YWJpbGl0eSBvZiBhIEc0IGF0IGRpZmZlcmVu
-dCB0ZW1wZXJhdHVyZXM/IFdoYXQgd291bGQgYmUgdGhlIGRpZm
-ZlcmVuY2UgaXMgJSBmb2xkZWQgYXQgdGhlIGRpZmZlcmVudCB0
-ZW1wZXJhdHVyZXMgd2UgYXJlIHRhbGtpbmcgYWJvdXQgaGVyZT
-8iLCJjcmVhdGVkIjoxNTM0MzQ5MjU5MDgzfSwiVGVLNVpVUTU3
-a0dvQlh3cSI6eyJkaXNjdXNzaW9uSWQiOiJXZHdiVThNTlVlcT
-hFNFZ1Iiwic3ViIjoiMTAyMjA1Nzk3Mjc2OTQxMDEwNjc3Iiwi
-dGV4dCI6IlRvbyBzdHJvbmc/IiwiY3JlYXRlZCI6MTUzNDM0OT
-YzMjk1Mn0sInowdThreU9XS3pwZnhTUHUiOnsiZGlzY3Vzc2lv
-bklkIjoieDlGcTVXUG9qWVp3OUFzYiIsInN1YiI6IjEwMjIwNT
-c5NzI3Njk0MTAxMDY3NyIsInRleHQiOiJZb3Ugc2hvdWxkIHBl
-cmhhcHMgbWFrZSB0aGUgbGluZXMgdGhpY2tlciBvbiB0aGVzZS
-BwbG90cy4gT3IgaGF2ZSBkYXNoZWQgbGluZXMgZm9yIHRoZSBz
-aHVmZmxlZC4gT3IgYm90aC4iLCJjcmVhdGVkIjoxNTM0MzQ5Nz
-QzMTQyfSwia0ZRUFVBbFp4MnRxaERHTiI6eyJkaXNjdXNzaW9u
-SWQiOiIyWmlpNlhJQVIzaUxUVldaIiwic3ViIjoiMTAyMjA1Nz
-k3Mjc2OTQxMDEwNjc3IiwidGV4dCI6Ik9yIGRpZmZlcmVuY2Vz
-IGluIGNvZG9uIGJpYXMgYWNyb3NzIHRoZSBnZW5lLiBIYXZlIH
-lvdSByZWFkIFR1bGxlciBldCBhbCwgQ2VsbCAyMDEwPyIsImNy
-ZWF0ZWQiOjE1MzQzNTAwMDYwNjJ9LCJkaFgzYTNnTlFLbk5MSl
-AzIjp7ImRpc2N1c3Npb25JZCI6InV1ajBaakJIZzZ3YlhCQVIi
-LCJzdWIiOiIxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZXh0Ij
-oiRG8geW91IG1lYW4gRy1jb250ZW50PyIsImNyZWF0ZWQiOjE1
-MzQzNTAxMzk0NTV9LCJyV3VIRmRBczFZYzdtcExrIjp7ImRpc2
-N1c3Npb25JZCI6ImJNTEpQOURFVEpwa0s4OHgiLCJzdWIiOiIx
-MDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZXh0IjoiVGhpcyBpcy
-Bvbmx5IHJlYWxseSBjbGVhciBpbiB0aGUgRzRTZWVrZXIgZGF0
-YS4gWW91IGRvbid0IHRhbGsgbXVjaCBhYm91dCB0aGUgZGlmZm
-VyZW5jZSBiZXR3ZWVuIEc0aHVudGVyIGFuZCBHNFNlZXFlciwg
-b3Igd2h5IHRoaXMgaXMgdGhlIG9ubHkgYW5hbHlzaXMgaW4gdG
-hlIGNoYXB0ZXIgdGhhdCB1c2VzIEc0U2VlcWVyLiIsImNyZWF0
-ZWQiOjE1MzQzNTAzMjI1MTl9LCJSaGF6ZURrajBLd0lRWnV1Ij
-p7ImRpc2N1c3Npb25JZCI6IlpOU29HMm9EeW5SM1d1NloiLCJz
-dWIiOiIxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZXh0IjoiZm
-lndXJlPyIsImNyZWF0ZWQiOjE1MzQzNTAzMzMzOTR9LCJpVFZn
-NkdpazF0aWEwYWQ4Ijp7ImRpc2N1c3Npb25JZCI6ImpYczg2bm
-N0S2Z1RzBMVjkiLCJzdWIiOiIxMDIyMDU3OTcyNzY5NDEwMTA2
-NzciLCJ0ZXh0IjoiTGFiZWwgdGhlIGxlZnQgYW5kIHJpZ2h0IH
-BhbmVscy4iLCJjcmVhdGVkIjoxNTM0MzUwMzU0MTE1fSwiMGxo
-enhGRnZaSmJNYm9SQiI6eyJkaXNjdXNzaW9uSWQiOiI2dFJrNG
-pNNW83QUhNWW9LIiwic3ViIjoiMTAyMjA1Nzk3Mjc2OTQxMDEw
-Njc3IiwidGV4dCI6Ik9uIHRoZSBjb2Rpbmcgc3RyYW5kLCBub3
-QgdGhlIHRlbXBsYXRlIHN0cmFuZC4iLCJjcmVhdGVkIjoxNTM0
-MzUwNDA4MDkzfSwiaHBsRDJlazdpR1FnME9WVCI6eyJkaXNjdX
-NzaW9uSWQiOiIyT2JhMHl5UU5peWlraEowIiwic3ViIjoiMTAy
-MjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6IlRoZXJlIGlzIG
-FjdGF1bGx5IHZlcnkgbGl0dGxlIGRpZmVyZW5jZSBvbiB0aGUg
-dGVtcGxhdGUgc3RyYW5kLiIsImNyZWF0ZWQiOjE1MzQzNTA1OD
-U3NzZ9LCJETVplenI0MXJ2NDl2SnBzIjp7ImRpc2N1c3Npb25J
-ZCI6IklsQ0hwVVczWmMyRDdxZWMiLCJzdWIiOiIxMDIyMDU3OT
-cyNzY5NDEwMTA2NzciLCJ0ZXh0IjoiSWYgdGhlIHB1cnBvc2Ug
-aGVyZSBpcyB0byBleGFtaW5lIGlmIHRoZXJlIGlzIGEgZGlmZm
-VyZW5jZSBpbiB0aGUgZnJhY3Rpb24gb2YgRy1ydW5zIHdoaWNo
-IGFyZSBoYXJkY29kZWQgaXMgZGlmZmVyZW50IGF0IHRoZSBkaW
-ZmZXJlbnQgZW5kcywgSSdtIG5vdCBzdXJlIGh0aXMgaXMgdGhl
-IGJlc3Qgd2F5IHRvIGRvIGl0OiBJIG1pZ2h0IG1ha2UgdGhlIG
-dyYXBoIGFkZCB1cCB0byAxMDAlIGF0IGFsbCB4IGxvY2F0aW9u
-cy4gXG5cbkFsdGVybmF0aXZlbHkgaWYgdGhlIHBvbml0IGlzIH
-RvIHNob3cgdGhhdCB0aGUgc3RhcnQtY29kb24gYmlhcyBpcyBv
-bmx5IHByZXNlbnQgaW4gdGhlIDAtaGFyZGNvZGVkIEctcnVucy
-wgdGhlbiBwZXJoYXBzIGl0IGlzIGJldHRlciB0byBzaG93IHRo
-ZSBsaW5lcyBub3Qgc3RhY2tlZC4iLCJjcmVhdGVkIjoxNTM0Mz
-UwODIxNjE0fSwiNHdPN1VnMkhYNTEzaEFjUSI6eyJkaXNjdXNz
-aW9uSWQiOiJEekl1OVZFSDc5bXdrZ2tjIiwic3ViIjoiMTAyMj
-A1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6IkNvdWxkIG5vdCB0
-aGUgb3Bwb3NpdGUgYXJndWVtZW50IGJlIG1hZGU6IHRoaW5ncy
-B0aGF0IGFyZSBtb3JlIGNvbW1vbiBhcmUgbGVzcyBsaWtlbHkg
-dG8gaGF2ZSBhbiBlZmZlY3QuIiwiY3JlYXRlZCI6MTUzNDM1MD
-k3ODk3OH19LCJoaXN0b3J5IjpbLTIxMjQ2NTAxMTAsLTY2NDQ4
-NjI1MSwxMTM3NzE5OTY3LDExOTY1MzM3OTgsMjgyMzQwNDQ1LC
-0xNTcxMjc0NDIsMTc0MjY4MDk4MywxODA3MDI4MjI2LDE5NjM2
-Nzk2NzIsLTQ1NzMwMjIwMiw0NzE2MTY2MzEsLTExMzQ4MjQ4Nz
-gsMTcwNzU4Nzc4OCwtOTM5MjgyODcyLC0xMDkxOTI1NzE0LC00
-NTg5ODczNzksMTcxNDk4NjU4OSwtMTY4NzQ0MjU4MiwtMTU3ND
-M1NDgyMCwtMTI0MDQwMDkxMF19
--->

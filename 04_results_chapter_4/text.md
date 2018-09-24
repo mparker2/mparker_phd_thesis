@@ -73,7 +73,7 @@ To compared Pol II occupancy of G4 containing genes with non-G4 containing genes
 
 Global Run On (GRO) and RNA sequencing data for 6-d-old Arabidopsis seedlings, grown at 22°C on half Linsmaier and Skoog (LS) medium in constant light, was downloaded from the European Nucleotide Archive (ENA), GEO accession GSE83108 [@Hetzel2016]. Quality control analyses were performed using `FastQC` version 0.11.3 and `fastq-screen` version 0.5.1 [@Andrews2010; @Wingett2011]. Mapping to the TAIR10 genome with splice junction annotations from Araport11 [@Initiative2000; @Cheng2017] was conducted using `STAR` version 2.4.2a [@Dobin2013] with default parameters, and generated BAM files were sorted using `samtools` version 1.4.1 [@Li2009]. Exonic read counts per gene were then counted using `featureCounts` version 1.6.1 [@Liao2013]. Read counts were normalised for library depth in R version 3.4.1 [@RCoreTeam2013] using `DESeq2` version 1.18.1 [@Love2014] and log2 transformed to get log counts per million (logCPM). The ratio of GROseq to RNAseq reads was calculated by subtracting the average RNAseq logCPM from the average GROseq logCPM. Scatter plots of RNAseq logCPM vs GROseq logCPM were generated in Python using `seaborn` [@Waskom2014].
 
-To contrast GRO/RNA seq ratios of G4 containing genes with non-G4 containing genes, genesets with max G4Seeqer scores greater than 0.95 and less than 0.05, or maximal PG4 density greater than 2 or equal to zero were used. Overlayed histograms and kernel density estimate plots of GRO/RNA seq ratio for these genesets were generated using `seaborn` version 0.8.1 [@Waskom2014]. Statistical hypothesis testing was conducted using Welch's unpaired T-test. Code used for all GROseq analysis is available in Appendix \ref{groseq_analysis}.
+To contrast GRO/RNA seq ratios of G4 containing genes with non-G4 containing genes, genesets with max G4Seeqer scores greater than 0.95 and less than 0.05, or maximal PG4 density greater than 2 or equal to zero were used. Overlayed histograms and kernel density estimate plots of GRO/RNA seq ratio for these genesets were generated using `seaborn` version 0.8.1 [@Waskom2014]. Statistical hypothesis testing was conducted using an unpaired T-test. Code used for all GROseq analysis is available in Appendix \ref{groseq_analysis}.
 
 ### *Zea mays* RNAseq data analysis.
 
@@ -89,7 +89,7 @@ Arabidopsis  orthologs of *Z. mays* genes were downloaded from Ensembl plants ge
 
 #### NMM causes global change in gene expression
 
-In order to test the effect of G4 stabilisation on gene expression in Arabidopsis, we conducted a microarray analysis using RNA from 7 day old whole seedlings treated with NMM for 6 hours. Control samples were treated with DMSO for 6 hours. Two biological replicates per condition were used for control samples, and three for treated samples. We found 1098 and 858 genes were differentially downregulated and upregulated respectively using a log fold change threshold of 1 (PPLR < 0.05). When a less stringent log fold change threshold of 0.5 was used (PPLR < 0.05), downregulated genes outnumbered upregulated by a ratio of 2:1 (3882 downregulated, 1930 upregulated), suggesting that NMM has a global effect on gene expression unlikely to be caused by a single transcription factor. An MA plot of average gene expression vs log fold change, with lowess curve fitting, showed that there appeared to be a slight skew towards downregulation in genes with higher average expression (Fig \ref{nmm}a). To more clearly visualise this skew we binned genes by average expression quartile (Fig \ref{nmm}b). This showed there was indeed a relationship between average expression and expression change upon NMM treatment, with highly expressed genes tending to be more downregulated by NMM treatment. This global pattern, which violates some of the assumptions that are usually used in microarray normalisation and analysis, potentially suggests a widespread effect of NMM directly upon either transcription or mRNA stability.
+In order to test the effect of G4 stabilisation on gene expression in Arabidopsis, we conducted a microarray analysis. RNA from 7 day old whole seedlings, treated with NMM for 6 hours, was collected by Manoj Valluru. Control samples were treated with DMSO for 6 hours. Two biological replicates were used for control samples, and three for treated samples. We found 1098 and 858 genes were differentially downregulated and upregulated respectively using a log fold change threshold of 1 (Probability of Positive Log Ratio (PPLR) < 0.05). When a less stringent log fold change threshold of 0.5 was used (PPLR < 0.05), downregulated genes outnumbered upregulated by a ratio of 2:1 (3882 downregulated, 1930 upregulated), suggesting that NMM has a global effect on gene expression unlikely to be caused by a single transcription factor. An MA plot of average gene expression vs log fold change, with lowess curve fitting, showed that there appeared to be a slight skew towards downregulation in genes with higher average expression (Fig \ref{nmm}a). To more clearly visualise this skew we binned genes by average expression quartile (Fig \ref{nmm}b). This showed there was indeed a relationship between average expression and expression change upon NMM treatment, with highly expressed genes tending to be more downregulated by NMM treatment. This global pattern, which violates some of the assumptions that are usually used in microarray normalisation and analysis, potentially suggests a widespread effect of NMM directly upon either transcription or mRNA stability.
 
 \newpage
 
@@ -97,7 +97,7 @@ In order to test the effect of G4 stabilisation on gene expression in Arabidopsi
 
 \newpage
 
-To support the hypothesis that NMM alters gene expression through G4 stabilisation, we correlated our results with processed data from a Berberine treatment array (Fig \ref{berberine}a) [@Nakagawa2012]. Berberine is another G4 stabilising drug, but with a very different structure. Despite the differences in structure of the two drugs, and the very different conditions (plants were grown on Berberine for 14 days, compared with 6 hour treatment of 7 day old seedlings with NMM), the log fold changes from our data correlated well with the Berberine dataset (Pearsons r=0.43, Spearmans ρ=0.44). There was a strong overlap between the genes downregulated by NMM and those downregulated by Berberine (Fig \ref{berberine}b, p=1.1e-36). Both genesets show an greater exonic G4 density on the template strand than genes not regulated by either drug, however genes which are regulated by both drugs had the greatest average exonic PG4. These results suggest that the main effects on gene expression were through G4 interaction, with any off target effects being less significant contributors.
+To support the hypothesis that NMM alters gene expression through G4 stabilisation, we correlated our results with processed data from a Berberine treatment array (Fig \ref{berberine}a) [@Nakagawa2012]. Berberine is another G4 stabilising drug, but with a very different structure. Despite the differences in structure of the two drugs, and the very different conditions (plants were grown on Berberine for 14 days, compared with 6 hour treatment of 7 day old seedlings with NMM), the log fold changes from our data correlated well with the Berberine dataset (Pearsons r=0.43, Spearmans ρ=0.44). There was a strong overlap between the genes downregulated by NMM and those downregulated by Berberine (Fig \ref{berberine}b, p=1.1e-36). Both genesets show an greater exonic G4 density on the template strand than genes not regulated by either drug, however genes which are regulated by both drugs had the greatest average exonic PG4. In fact, drugs which were regulated only by NMM did not appear to have greater PG4 density than genes not regulated by either drug. These results suggest that the main effects on gene expression were through G4 interaction, with any off target effects being less significant contributors.
 
 \newpage
 
@@ -131,11 +131,11 @@ Previous studies have shown that NMM is highly selective towards parallel G4s [@
 
 ### NMM downregulation is correlated with maximal G4 density
 
-Previous studies have suggested that G4s have the greatest ability to stall polymerases when grouped in clusters [@Yoshida2018]. This may be due to an increase in the likelihood of a single G4 being formed at any one time, or through increased polymorphism of G4 formation, causing entropic favourability. To identify whether NMM regulated genes tend to contain G4 clusters, we used a sliding window of 200bp to count two tetrad G4 density across the whole transcribed region of each gene, including introns. Each gene was then assigned the maximum density score for the gene. Genes were then binned by their maximal density, and expression change after NMM treatment was calculated (Fig. \ref{max_g4}). We found that genes with higher maximal G4 density tended to have more negative log fold changes during NMM treatment. This suggests that clusters of G4s do have a stronger effect on gene expression. It is possible that a single region of high G4 density may be sufficient to cause downregulation of an otherwise G4 free gene during NMM treatment.
+Previous studies have suggested that G4s have the greatest ability to stall polymerases when grouped in clusters [@Yoshida2018]. This may be due to an increase in the likelihood of a single G4 being formed at any one time, or through increased polymorphism of G4 formation, causing entropic favourability. To identify whether NMM regulated genes tend to contain G4 clusters, we used a sliding window of 200bp to count two tetrad G4 density across the whole transcribed region of each gene, including introns. Each gene was then assigned the maximum density score for the gene. Genes were then binned by their maximal density, and expression change after NMM treatment was calculated (Fig. \ref{max_g4}). We found that genes with higher maximal G4 density on the template strand tended to have more negative log fold changes during NMM treatment. This suggests that clusters of G4s do have a stronger effect on gene expression. It is possible that a single region of high G4 density may be sufficient to cause downregulation of an otherwise G4 free gene during NMM treatment.
 
 \newpage
 
-![**NMM regulates genes with large maximal PG4 density** Point plot showing mean log fold change in gene expression during NMM treatment for genes binned by "maximal PG4 density", defined as the greatest concentration of PG4 motifs within a 200bp sliding window anywhere in the body of the gene (i.e. exon or intron). Left and right panels depict coding and template strands, respectively. Errorbars are 68% confidence intervals for mean generated using 1000 bootstrapped samples. \label{max_g4}](figures/nmm_exprs_g4_max_density.svg)
+![**NMM regulates genes with large maximal PG4 density** Point plot showing mean log fold change in gene expression during NMM treatment for genes binned by maximal PG4 density, defined as the greatest concentration of PG4 motifs within a 200bp sliding window anywhere in the body of the gene (i.e. exon or intron). Left and right panels depict coding and template strands, respectively. Errorbars are 68% confidence intervals for mean generated using 1000 bootstrapped samples. \label{max_g4}](figures/nmm_exprs_g4_max_density.svg)
 
 \newpage
 
@@ -151,9 +151,9 @@ Since transcriptional downregulation by NMM stabilised G4s appears to occur most
 
 ### G Quadruplex stalling may result in abortive transcription
 
-Pol II stalling in template G4 containing genes might result in premature termination, producing abortive transcripts. These would likely be degraded by the exosome rather than maturing to mRNAs. To test whether this is the case, we analysed publicly available GRO-seq data [@Hetzel2016]. Since GRO-seq captures nascent RNA irrespective of its stability, and RNAseq captures stable RNAs, the ratio between the normalised read counts in GROseq and RNAseq represents an estimate of the amount of unstable products produced at each gene locus (Fig. \ref{gro}a). We found that the largest difference in ratio was between non-coding and protein coding RNAs, with non-coding RNAs (ncRNAs) having much greater GRO/RNA ratios (data not shown). This is likely explained by the higher rate of modification of many ncRNAs, e.g. tRNAs, which prevent reverse transcription and sequencing by RNAseq. Other ncRNAs such as natural antisense RNAs may also be unstable and degraded quickly.
+Pol II stalling in template G4 containing genes might result in premature termination, producing abortive transcripts. These would likely be degraded by the exosome rather than maturing to mRNAs. To test whether this is the case, we analysed publicly available GRO-seq data [@Hetzel2016]. Since GRO-seq captures nascent RNA irrespective of its stability, and RNAseq captures stable RNAs, the ratio between the normalised read counts in GROseq and RNAseq represents an estimate of the amount of unstable products produced at each gene locus (Fig. \ref{gro}a). We found that the largest difference in ratio was between non-coding and protein coding RNAs, with non-coding RNAs (ncRNAs) having much greater GRO/RNA ratios (data not shown). This is likely explained by the higher rate of modification of many ncRNAs, which prevent reverse transcription and sequencing by RNAseq. Other ncRNAs such as natural antisense RNAs are also unstable and degraded quickly.
 
-G4 predictions were calculated using G4Seeqer and the score of the maximum score region within the transcribed body of each gene was assigned to the gene. A G4 containing set was produced using genes which contained a maximum template strand G4seeqer score of more than 0.95, and a G4 negative set was produced using genes with a maximum score of only 0.05 or less. We found a small but significant positive increase in GRO/RNA ratio for G4 dense genes (t-test p = 0.009), suggesting that some abortive transcripts are produced from these genes (Fig. \ref{gro}b, right panel). In contrast, genes with high scoring G4 regions on the coding strand did not have greater GRO/RNA ratios (p=0.4) (Fig. \ref{gro}b, left panel).
+G4 predictions were calculated using G4Seeqer and the score of the maximum score region within the transcribed body of each gene was assigned to the gene. A G4 containing set was produced using genes which contained a maximum template strand G4seeqer score of more than 0.95, and a G4 negative set was produced using genes with a maximum score of only 0.05 or less. We found a small but significant positive increase in GRO/RNA ratio for G4 dense genes (t-test p = 0.009), suggesting that some abortive transcripts are produced from these genes (Fig. \ref{gro}b, right panel). In contrast, genes with high scoring G4 regions on the coding strand did not have greater GRO/RNA ratios (p=0.4) (Fig. \ref{gro}b, left panel). This is suggestive of abortive transcription caused by G4s, since only template stranded G4s will cause blockages preventing Pol II elongation.
 
 We conducted the same analysis using genes containing three or more two tetrad PG4s in 200bp maximal density clusters, as described above (Fig. \ref{gro}c). For these genes, we did not find any significant increase in GRO/RNA ratio, suggesting that these two tetrad G4s are not sufficiently stable to cause abortive transcription. Since these genes do have higher promoter proximal Pol II occupancy, we suggest that elongation occurs more slowly across the genes, but does not cause premature termination.
 
@@ -191,7 +191,7 @@ Next we investigated whether there were any similarities in the expression profi
 
 \newpage
 
-![**Overlap of genes downregulated by NMM with those downregulated by Drought stress.** **a)** Venn diagram reporting the overlap of genes downregulated by NMM with those downregulated by drought stress. **c)** Bar plot showing the average PG4 densities in 5' UTRs of NMM and drought stress downregulated genesets. Left and right panels show densities on the coding and template strands, respectively. Both  genesets show an greater exonic G4 density on the template strand than genes not regulated by either drug, however genes which are regulated by both drugs had the greatest average PG4 density in 5' UTRs. Bar colours match set colours from Fig 3b. Errorbars are 68% confidence intervals for mean generated using 1000 bootstrapped samples. \label{nmm_drought}](figures/nmm_drought_venn.svg){height=750px}
+![**Overlap of genes downregulated by NMM with those downregulated by Drought stress.** **a)** Venn diagram reporting the overlap of genes downregulated by NMM with those downregulated by drought stress. **b)** Bar plot showing the average PG4 densities in 5' UTRs of NMM and drought stress downregulated genesets. Left and right panels show densities on the coding and template strands, respectively. Both  genesets show an greater exonic G4 density on the template strand than genes not regulated by either drug, however genes which are regulated by both drugs had the greatest average PG4 density in 5' UTRs. Bar colours match set colours from Fig \ref{nmm_drought}a. Errorbars are 68% confidence intervals for mean generated using 1000 bootstrapped samples. \label{nmm_drought}](figures/nmm_drought_venn.svg){height=750px}
 
 \newpage
 
@@ -218,400 +218,3 @@ Since the effect of NMM on gene expression mainly appears to be confined to gene
 Previous studies of PG4 localisation in Arabidopsis have highlighted a greater number of two tetrad PG4s in genes annotated as responsive to drought than expected given the distribution across all genes [@Mullen2010; @Mullen2012]. Since intracellular potassium levels are increased during drought stress, it is possible that the stability of G4s could be increased. To investigate this potential G4 dependent regulatory mechanism, we analysed microarray data from drought stressed plants. We found that genes which are downregulated by drought stress contained more PG4s in the template strand, particularly in 5' UTRs and to a lesser extent in coding regions. This result matched closely to the enrichment of G4s in genes downregulated by NMM. Indeed, when we studied the overlap between drought stress downregulated genes and NMM downregulated genes, we found a strong overlap. Furthermore, the genes which were downregulated in both conditions were those which had the greatest PG4 density in their 5' UTRs. We suggest that during drought stress G4s in these genes form more strongly, causing blockages that pause Pol II, downregulating the expression of the gene. Finally, we found that genes upregulated by drought stress tended to contain higher levels of G4s in their 3' UTRs. This effect was not replicated by NMM treatment, suggesting an alternative mechanism of action. Since the 3' UTR is known to be an important regulator of mRNA stability and translation, we speculate these G4s form more strongly in the mRNA during drought stress and recruit some G4 binding factor which could enhance the stability of the mRNA.
 
 \newpage
-<!--stackedit_data:
-eyJkaXNjdXNzaW9ucyI6eyJxekZrOU85eWhFTGYzMDR5Ijp7In
-RleHQiOiJ3ZSIsInN0YXJ0IjoyMDIxMCwiZW5kIjoyMDIxMH0s
-IjVzWEhYN3V3MzZPTmU5aTciOnsidGV4dCI6IlBQTFIiLCJzdG
-FydCI6MjA1OTIsImVuZCI6MjA1OTZ9LCJpb2hLM0FaU1hneEVa
-aFlhIjp7InRleHQiOiJuIE1BIHBsb3Qgb2YgYXZlcmFnZSBnZW
-5lIGV4cHJlc3Npb24gdnMgbG9nIGZvbGQgY2hhbmdlLCB3aXRo
-IGxvd2VzcyBjdXJ2ZSBmaXR04oCmIiwic3RhcnQiOjIwOTAzLC
-JlbmQiOjIxMTE0fSwiSWt5c2VaWmw1NlFnWHRPdiI6eyJ0ZXh0
-IjoiVGhpcyBnbG9iYWwgcGF0dGVybiwgd2hpY2ggdmlvbGF0ZX
-Mgc29tZSBvZiB0aGUgYXNzdW1wdGlvbnMgdGhhdCBhcmUgdXN1
-YWxseSB1c+KApiIsInN0YXJ0IjoyMTQwOCwiZW5kIjoyMTYzM3
-0sInNyMlJ4ZHphTDFRa1Y2Sm0iOnsidGV4dCI6Ik1BIHBsb3Qg
-c2hvd2luZyByZWxhdGlvbnNoaXAgYmV0d2VlbiBhdmVyYWdlIG
-dlbmUgZXhwcmVzc2lvbiBhbmQgTG9nMiBmb2xkIGNoYW7igKYi
-LCJzdGFydCI6MjE2OTksImVuZCI6MjE5NjF9LCIxTGJOcENEdn
-ZueGZ2TTNQIjp7InRleHQiOiJCb3RoICBnZW5lc2V0cyBzaG93
-IGFuIGdyZWF0ZXIgZXhvbmljIEc0IGRlbnNpdHkgb24gdGhlIH
-RlbXBsYXRlIHN0cmFuZCB0aGFuIGdl4oCmIiwic3RhcnQiOjI0
-MzkxLCJlbmQiOjI0MzkxfSwiekNXSVdXM3RGaGNrb0QxdyI6ey
-J0ZXh0IjoiY29kaW5nIGFuZCB0ZW1wbGF0ZSBzdHJhbmRzIiwi
-c3RhcnQiOjI0MzQ4LCJlbmQiOjI0Mzc1fSwieGpNbFFISkdsMl
-dHUUtRSCI6eyJ0ZXh0Ijoic3RyaWtpbmciLCJzdGFydCI6MjUx
-NDYsImVuZCI6MjUxNDZ9LCJnYVJGVU5TZmJvTVllTTg1Ijp7In
-RleHQiOiIqRGlzdHJpYnV0aW9uIG9mIFBHNHMgaW4gZ2VuZXMg
-ZGlmZmVyZW50aWFsbHkgcmVndWxhdGVkIGJ5IE5NTS4qKiBCYX
-IgcGxvdHMgc2hv4oCmIiwic3RhcnQiOjI2NDg2LCJlbmQiOjI3
-NDk3fSwiSXV2Qno0ZkF4Vk13MmU4dyI6eyJ0ZXh0IjoiY29tcG
-FyZWQgdG8gcGVybXV0ZWQgcHJvZmlsZXMgYWNyb3NzIGFsbCBn
-ZW5lcy4iLCJzdGFydCI6Mjg2NzIsImVuZCI6Mjg3ODJ9LCI2ck
-FQeFJhRTFjQmNuVExvIjp7InRleHQiOiJwcm9wZWxsZXItbGlr
-ZSBwYXJhbGxlbCBHNHMiLCJzdGFydCI6MjkxNzYsImVuZCI6Mj
-kyMDN9LCJROWtHa3l3Z2h2em13TUhEIjp7InRleHQiOiJtYXkg
-YmUgc3VmZmljaWVudCB0byBjYXVzZSBkb3ducmVndWxhdGlvbi
-BvZiBhbiBvdGhlcndpc2UgRzQgZnJlZSBnZW5lIGR1cmluZyBO
-4oCmIiwic3RhcnQiOjMxMDU5LCJlbmQiOjMxMTUxfSwiOFF2bU
-RQeDJMWkxFakdCTiI6eyJ0ZXh0IjoiVGhpcyBzdWdnZXN0cyB0
-aGF0IGNsdXN0ZXJzIG9mIEc0cyBkbyBoYXZlIGEgc3Ryb25nZX
-IgZWZmZWN0IG9uIGdlbmUgZXhwcmVzc2lvIiwic3RhcnQiOjMw
-OTIzLCJlbmQiOjMxMDAxfSwicGxESDFuSWFsTHdvejI4cSI6ey
-J0ZXh0IjoibWVhbiIsInN0YXJ0IjozMTIzOSwiZW5kIjozMTI0
-M30sIjVieE5teUhmdjVORVJiZXciOnsidGV4dCI6IkxlZnQgYW
-5kIHJpZ2h0IHBhbmVscyBkZXBpY3QgY29kaW5nIGFuZCB0ZW1w
-bGF0ZSBzdHJhbmRzIiwic3RhcnQiOjMxNDgxLCJlbmQiOjMxNT
-M3fSwiNVd4T0dxVnc5NkpoRGtFTSI6eyJ0ZXh0IjoiYnkgTk1N
-IHN0YWJpbGlzZWQgRzRzIGFwcGVhcnMiLCJzdGFydCI6MzE4MT
-AsImVuZCI6MzE4Mzl9LCJvV1o5MWY4c0JvMkxvVjNDIjp7InRl
-eHQiOiJUaGlzIHdhcyBzdXJwcmlzaW5nIGFzIGl0IGlzIGluIG
-Rpc2FncmVlbWVudCB3aXRoIFBvbCBJSSBvY2N1cGFuY3kgcHJv
-ZmlsZXMgaW7igKYiLCJzdGFydCI6MzI4NjcsImVuZCI6MzMwNT
-B9LCI0Z21IQ0h0alF2SXV0Y1h5Ijp7InRleHQiOiJ3YXMgZ3Jl
-YXRlciBQb2wgSUkgb2NjdXBhbmN5IGF0IHRoZSBUU1MgYW5kIG
-luIHRoZSBUU1MgcHJveGltYWwgcGFydCBvZiB0aGUgZ2Vu4oCm
-Iiwic3RhcnQiOjMzMzQ5LCJlbmQiOjMzNDM0fSwiT1A3b3RFdl
-BZZnk1M0tDRyI6eyJ0ZXh0IjoibGFyZ2VzdCIsInN0YXJ0Ijoz
-NTMxMiwiZW5kIjozNTMxOX0sIm9uVWhpZExhbjdEUW4wZEsiOn
-sidGV4dCI6ImRhdGEgbm90IHNob3duIiwic3RhcnQiOjM1NDQ1
-LCJlbmQiOjM1NDU5fSwiVlRSQjJVVVlpbEpwZTN2ViI6eyJ0ZX
-h0IjoiMDA5Iiwic3RhcnQiOjM2MTY3LCJlbmQiOjM2MTcwfSwi
-U3k3dUxjdWtuNmxRYVZCdiI6eyJ0ZXh0IjoicHJlc2VudCBjb2
-RpbmcgYW5kIHRlbXBsYXRlIHN0cmFuZCIsInN0YXJ0IjozNzUw
-NiwiZW5kIjozNzU0MH0sIkU2dmsxdlNPWnZWYmJhODEiOnsidG
-V4dCI6IlNjYXR0ZXIgcGxvdCBzaG93aW5nIG1lYXN1cmVkIGV4
-cHJlc3Npb24gaW4gbG9nMiBjb3VudHMgcGVyIG1pbGxpb24gKG
-xvZ0NQTSkgZm/igKYiLCJzdGFydCI6MzcwNDksImVuZCI6Mzcy
-NjV9LCI5QWczTVU3U0lvMjRjSHV1Ijp7InRleHQiOiIwLjkpIi
-wic3RhcnQiOjM3NDAxLCJlbmQiOjM3NDA2fSwiRWdRZGJUSkFt
-T0V1b1pmVSI6eyJ0ZXh0IjoiKmQpKiogMycgVVRSLCIsInN0YX
-J0Ijo0Mjk5MSwiZW5kIjo0MzAwNH0sIlBhZWFweVBMdEl6ZFU3
-MWoiOnsidGV4dCI6InN0cm9uZyIsInN0YXJ0Ijo0Mzk0MCwiZW
-5kIjo0Mzk0Nn0sImkwVnY3NnkyWEFUY3JrelEiOnsidGV4dCI6
-IipOTU0gZXhwcmVzc2lvbiBjaGFuZ2Ugb2YgQXJhYmlkb3BzaX
-MgYW5kICpaIiwic3RhcnQiOjQ2ODY2LCJlbmQiOjQ2OTEwfSwi
-UVZRQlNnZ3ZLS1Nyd2tTZiI6eyJ0ZXh0IjoiY2F1c2VkIiwic3
-RhcnQiOjMzMTMsImVuZCI6MzMxOX0sInRITnhGNllPSkVlcWFi
-ZWwiOnsidGV4dCI6IiMjIyBQbGFudCBHcm93dGggQ29uZGl0aW
-9ucyIsInN0YXJ0Ijo0NTgxLCJlbmQiOjQ2MDh9LCJTaFVsTVlq
-aFdtNVkxclN6Ijp7InRleHQiOiJzdXJmYWNlIHN0ZXJpbGlzZW
-QsIiwic3RhcnQiOjQ4NTQsImVuZCI6NDg3M30sIndmMW5Ccm42
-MWRRWDRUd1MiOnsidGV4dCI6InN0cmF0aWZpZWQgZm9yIDItMy
-BkYXlzIiwic3RhcnQiOjQ4NzQsImVuZCI6NDg5N30sImV2Sjh0
-Z0tiM2l6NDB3MFkiOnsidGV4dCI6Ik11cmFzaGlnZSAmIFNrb2
-9nIChNUykiLCJzdGFydCI6NDk0NCwiZW5kIjo0OTY2fSwiTVFH
-bzVRa1R4RDdrRnIyeCI6eyJ0ZXh0IjoiTVMgbGlxdWlkIG1lZG
-lhIiwic3RhcnQiOjUwODEsImVuZCI6NTA4MX0sImR0SXlNUUk2
-YWJzcGpWTHEiOnsidGV4dCI6Ik5NTSBhIiwiZW5kIjo1MDgxLC
-JzdGFydCI6NTA4MX0sIklhUFRYOWJYNUdwdVFFYjciOnsidGV4
-dCI6IldoaXRlIGFuZCBLYXBlciIsInN0YXJ0Ijo1MjgxLCJlbm
-QiOjUyOTZ9LCJieVFvUGRhdUJvV1JWU3A1Ijp7InRleHQiOiJz
-dGVyaWxlIHdhdGVyIiwic3RhcnQiOjUzNTMsImVuZCI6NTM2Nn
-0sImp2VWxNck50bGFla0RsT3oiOnsidGV4dCI6IkFyYWJpZG9w
-c2lzIEdlbmUgMS4wIFNUIiwic3RhcnQiOjU2NjMsImVuZCI6NT
-Y4Nn0sIk96SUhsQ0NNVHFHTzl0anIiOnsidGV4dCI6IlJOQSBp
-bnRlZ3JpdHkgYW5kIGFidW5kYW5jZSB3YXMgbWVhc3VyZWQgdX
-NpbmcgYW4gQWxpZ2VudCBCaW9hbmFseXNlciAyMTAwIiwic3Rh
-cnQiOjU3MDMsImVuZCI6NTc3N30sIjZTMWFjV1h4WkFGdGFvVn
-UiOnsidGV4dCI6Ik5hbm9Ecm9wIDEwMDAgU3BlY3Ryb3Bob3Rv
-bWV0ZXIiLCJzdGFydCI6NTQ0MywiZW5kIjo1NDc0fSwiaDBkdV
-BOMVhuVXdVN2lBNyI6eyJ0ZXh0IjoiTWljcm9hcnJheSBBbmFs
-eXNpcyIsInN0YXJ0Ijo1OTIwLCJlbmQiOjU5Mzl9LCJHdEw0aG
-1lMXVQeGNDRFpyIjp7InRleHQiOiJBbmFseXNpcyBvZiBwcmV2
-aW91c2x5IHB1Ymxpc2hlZCBtaWNyb2FycmF5IGRhdGEiLCJzdG
-FydCI6NzY1MCwiZW5kIjo3Njk4fSwiOFd6QkxEd2RrYVIxcEto
-ZSI6eyJ0ZXh0IjoiYG9saWdvYCBhbmQgYHB1bWFgIiwic3Rhcn
-QiOjYwMTcsImVuZCI6NjA1MH0sIjlnOW1JREdKbjNWMzRjT0Ii
-OnsidGV4dCI6IkVuc2VtYmwgYW5ub3RhdGlvbnMiLCJlbmQiOj
-c1MDEsInN0YXJ0Ijo3NTAxfSwiRjQ5V21hVTdPZzV1RGd4MiI6
-eyJ0ZXh0IjoiQXJhcG9ydDExIGdlbm9tZSBhbm5vdGF0aW9uIi
-wic3RhcnQiOjEwMDk5LCJlbmQiOjEwMTI2fSwiTW9jbkNuTEdi
-bjBEM2pTdSI6eyJ0ZXh0IjoiTk1NIHRyZWF0bWVudCBhcHBlYX
-JlZCB0byBjYXVzZSBsYXJnZSBjb25zaXN0ZW50IGNoYW5nZXMg
-aW4gZ2VuZSBleHByZXNzaW9uIHdoaeKApiIsInN0YXJ0Ijo2MT
-g2LCJlbmQiOjYzMjh9LCJnaGx1TDZDZDlnelNmMVFRIjp7InRl
-eHQiOiJSZXN1bHRzIHdlcmUgZmlsdGVyZWQgdXNpbmcgYSBkeW
-5hbWljIHByb2dyYW1taW5nIGFwcHJvYWNoLCBjb21tb25seSB1
-c2VkIGluIGlu4oCmIiwic3RhcnQiOjExMDIyLCJlbmQiOjExMT
-E4fSwiREFraWJWQk9pU0pKbXdGUyI6eyJ0ZXh0IjoiU2VsZiBP
-cmdhbmlzaW5nIE1hcCBBbmFseXNpcyIsInN0YXJ0IjoxMzYyOC
-wiZW5kIjoxMzY1Nn0sImNYbWJGd1RXY0txUjk2aWoiOnsidGV4
-dCI6IlBvbCBJSSBDaElQLXRpbGluZyBhcnJheSBhbmFseXNpcy
-IsInN0YXJ0IjoxNDk0NSwiZW5kIjoxNDk3OH0sIk1kcWlTUWNi
-bDlJamNpMzYiOnsidGV4dCI6Ikdsb2JhbCBSdW4gT24gKEdSTy
-kgYW5kIFJOQSBzZXF1ZW5jaW5nIGRhdGEgZnJvbSBHRU8gQWNj
-ZXNzaW9uIEdTRTgzMSIsInN0YXJ0IjoxNjg1OCwiZW5kIjoxNz
-AxMX0sInZjMGdkMlJFTGVNc0lVM20iOnsidGV4dCI6Im1pY3Jv
-YXJyYXkgYW5hbHlzaXMgdXNpbmcgUk5BIGZyb20gNyBkYXkgb2
-xkIHNlZWRsaW5ncyB0cmVhdGVkIHdpdGggTk1NIGZvciA2IGji
-gKYiLCJzdGFydCI6MjAyMjIsImVuZCI6MjAzMDZ9LCJuOEU3TF
-pUZmZET0dFRHVqIjp7InRleHQiOiIzODgyIGRvd25yZWd1bGF0
-ZWQsIDE5MzAgdXByZWd1bGF0ZWQpIiwic3RhcnQiOjIwNzQ4LC
-JlbmQiOjIwNzg1fSwidVRCaGhkUnV2UDlNRWczRyI6eyJ0ZXh0
-IjoiTk1NIGNhdXNlcyBnbG9iYWwgY2hhbmdlIGluIGdlbmUgZX
-hwcmVzc2lvbiIsInN0YXJ0IjoyMDA3OSwiZW5kIjoyMDEyMn0s
-IkJieWVkU0l6QW1zaHJPc3QiOnsidGV4dCI6InByb21vdGVyIH
-JlZ2lvbiIsInN0YXJ0Ijo0ODYwNSwiZW5kIjo0ODYyMH19LCJj
-b21tZW50cyI6eyJ6d3pHdlR3VEo1T3FZbnNxIjp7ImRpc2N1c3
-Npb25JZCI6InF6Rms5Tzl5aEVMZjMwNHkiLCJzdWIiOiJnbzox
-MDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZXh0Ijoid2hvIGlzIF
-wid2VcIi4gU2F5IGlmIHRoaXMgaXMgeW91IGFyZSBzb21lb25l
-IGVsc2UuIiwiY3JlYXRlZCI6MTUzNTEyNzY0Mjg2Mn0sImZCVk
-lNa3dzRnRLMGN0eDkiOnsiZGlzY3Vzc2lvbklkIjoiNXNYSFg3
-dXczNk9OZTlpNyIsInN1YiI6ImdvOjEwMjIwNTc5NzI3Njk0MT
-AxMDY3NyIsInRleHQiOiJZb3UgbmVlZCB0byBleHBsYWluIHdo
-YXQgUFBMUiBpcyBhbmQgd2h5IGl0IGlzIG1vcmUgYXBwcm9wcm
-lhdGUgdGhhbiBub3JtYWwgbWV0cmljcyBoZXJlLiIsImNyZWF0
-ZWQiOjE1MzUxMjc2OTk0Mzl9LCJCQWEzR2dkell4b0VvRDM4Ij
-p7ImRpc2N1c3Npb25JZCI6ImlvaEszQVpTWGd4RVpoWWEiLCJz
-dWIiOiJnbzoxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZXh0Ij
-oiSG93IGRvIHlvdSBrbm93IHRoaXMgaXNuJ3QgYSBub3JtYWxp
-emF0aW9uIGFydGlmYWN0LCBwYXJ0aWN1bGFybHkgYXMgeW91IG
-FyZSB1c2luZyBhIHdlaXJkIG5vcm1hbGlzYXRpb24gdGVjaG5p
-cXVlPyIsImNyZWF0ZWQiOjE1MzUxMjc3MzI3MjZ9LCJWUGNWY3
-NZM1IwaGhVeFIwIjp7ImRpc2N1c3Npb25JZCI6IklreXNlWlps
-NTZRZ1h0T3YiLCJzdWIiOiJnbzoxMDIyMDU3OTcyNzY5NDEwMT
-A2NzciLCJ0ZXh0IjoiRXhwYW5kIGFuZCBleHBsYWluLiIsImNy
-ZWF0ZWQiOjE1MzUxMjc3NjAyODV9LCJLZU45SmRIeGV5Mk40U2
-dtIjp7ImRpc2N1c3Npb25JZCI6InNyMlJ4ZHphTDFRa1Y2Sm0i
-LCJzdWIiOiJnbzoxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZX
-h0IjoiVGhlIHN0cmFpZ2h0IGxpbmUgYXQgdGhlIGxlZnQgaGFu
-ZCBlbmQgb2YgdGhpcyBwbG90IGlzIGEgYml0IHdlaXJkLiBUaG
-lzIGlzIHByZXN1bWFibHkgZ2VuZXMgd2hlcmUgdGhlIGV4cHJl
-c3Npb24gaW4gb24gY29uZGl0aW9uIGlzIDAgYW5kIGlzIFwibm
-90IHplcm9cIiBpbiB0aGUgb3RoZXIgY29uZGl0aW9uLiIsImNy
-ZWF0ZWQiOjE1MzUxMjc4NTY3ODF9LCJNNDZ3UHJKbmhJMXVuUn
-RFIjp7ImRpc2N1c3Npb25JZCI6IjFMYk5wQ0R2dm54ZnZNM1Ai
-LCJzdWIiOiJnbzoxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZX
-h0IjoiYSkgdGhpcyBkb2Vzbid0IGxvb2sgdHJ1ZSB0byBtZSBm
-cm9tIGxvb2tpbmcgYXQgdGhlIGZpZ3VyZS5cblxuYikgVGhpcy
-BpcyBpbnRlcnByZXRhdGlvbiBhbmQgc2hvdWxkIGJlIGluIHRo
-ZSB0ZXh0LCBub3QgdGhlIGZpZ3VyZSBsZWdlbmQuIiwiY3JlYX
-RlZCI6MTUzNTEyNzk2MDA5MX0sImxDTVFoUHpXZWd6QzVLeXMi
-OnsiZGlzY3Vzc2lvbklkIjoiekNXSVdXM3RGaGNrb0QxdyIsIn
-N1YiI6ImdvOjEwMjIwNTc5NzI3Njk0MTAxMDY3NyIsInRleHQi
-OiJsYWJlbCBvbiBwbG90IiwiY3JlYXRlZCI6MTUzNTEyNzk3Mz
-cwMn0sInN6SFNzUnc4VXZ5UG9HS2QiOnsiZGlzY3Vzc2lvbklk
-IjoieGpNbFFISkdsMldHUUtRSCIsInN1YiI6ImdvOjEwMjIwNT
-c5NzI3Njk0MTAxMDY3NyIsInRleHQiOiJXaHkgaXMgdGhpcyBh
-bnkgbW9yZSBcInN0cmlraW5nXCIgdGhhbiBvbiB0aGUgY29kaW
-5nIHN0cmFuZCwgd2hlcmUgdGhlIGRpZmZlcmVuY2UgaXMgMTEl
-PyIsImNyZWF0ZWQiOjE1MzUxMjgwNjQ2MTF9LCJMbTlsdUx2NF
-N4OGlUbDQyIjp7ImRpc2N1c3Npb25JZCI6ImdhUkZVTlNmYm9N
-WWVNODUiLCJzdWIiOiJnbzoxMDIyMDU3OTcyNzY5NDEwMTA2Nz
-ciLCJ0ZXh0IjoiTGFiZWwgZnVsbC1nZW5lL2Nkcy81JyB1dHIv
-IDMnIHV0ci9pbnRyb25zLiBMYWJlbCBjb2RpbmcvdGVtcGxhdG
-UuXG5cblAtdmFsdWVzPyBIYXZlIHlvdSB0cmllZCBNYW5uLVdo
-aXRuZXktVSB0ZXN0cyBpZiB5b3UgdGhpbmsgdC10ZXN0cyBhcm
-VuJ3QgYXBwcm9wcmlhdGU/IiwiY3JlYXRlZCI6MTUzNTEyODIw
-ODI4N30sIkx4Mkp6cGFObUNUeXpBZTEiOnsiZGlzY3Vzc2lvbk
-lkIjoiSXV2Qno0ZkF4Vk13MmU4dyIsInN1YiI6ImdvOjEwMjIw
-NTc5NzI3Njk0MTAxMDY3NyIsInRleHQiOiJOb3QgY2xlYXIgd2
-hhdCBpcyBoYXBwZW5pbmcgaGVyZS4iLCJjcmVhdGVkIjoxNTM1
-MTI4MzMzNjQ1fSwiQUNuYk8wNWJKeWNVcEJjNSI6eyJkaXNjdX
-NzaW9uSWQiOiI2ckFQeFJhRTFjQmNuVExvIiwic3ViIjoiZ286
-MTAyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6IlJlZmVyZW
-5jZSB0byBmaWd1cmUgaW4gaW50cm9kdWN0aW9uIHRoYXQgZXhw
-bGFpbnMgd2hhdCB0aGlzIGlzLiIsImNyZWF0ZWQiOjE1MzUxMj
-gzNDk4MDN9LCJaM0M4NzNqUGl6dncySlFUIjp7ImRpc2N1c3Np
-b25JZCI6IlE5a0dreXdnaHZ6bXdNSEQiLCJzdWIiOiJnbzoxMD
-IyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZXh0IjoiSSdtIG5vdCBz
-dXJlIHlvdSBzaG93IHRoaXMuIiwiY3JlYXRlZCI6MTUzNTEyOD
-M4MzM4OX0sIk0wMkRtUjBZM2Ewa0lHYnAiOnsiZGlzY3Vzc2lv
-bklkIjoiOFF2bURQeDJMWkxFakdCTiIsInN1YiI6ImdvOjEwMj
-IwNTc5NzI3Njk0MTAxMDY3NyIsInRleHQiOiJXaGF0IGlzIHRo
-ZSByZWxhdGlvbnNoaXAgYmV0d2VlbiBnZW5lcyB3aXRoIGxhcm
-dlIGhpZ2hlc3QgZGVuc2l0eSBhbmQgZ2VuZXMgd2l0aCBqdXN0
-IGEgbGFyZ2UgYW1vdW50IG9mIEc0cyBpbiBnZW5lcmFsPyIsIm
-NyZWF0ZWQiOjE1MzUxMjg0NTc2MzB9LCJXTHlGUkduazBtaFRX
-MEVFIjp7ImRpc2N1c3Npb25JZCI6InBsREgxbklhbEx3b3oyOH
-EiLCJzdWIiOiJnbzoxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0
-ZXh0IjoieS1heGlzIGxhYmVsIHNob3VsZCBzYXkgbWVhbi4iLC
-JjcmVhdGVkIjoxNTM1MTI4NTE5MDg5fSwiYW5IUEladEtQTUo5
-TFI1MCI6eyJkaXNjdXNzaW9uSWQiOiI1YnhObXlIZnY1TkVSYm
-V3Iiwic3ViIjoiZ286MTAyMjA1Nzk3Mjc2OTQxMDEwNjc3Iiwi
-dGV4dCI6ImxhYmVsIG9uIHBsb3QuIiwiY3JlYXRlZCI6MTUzNT
-EyODUzMTc4OX0sIkVQcWZBZTJad29aS1N5Z0oiOnsiZGlzY3Vz
-c2lvbklkIjoiNVd4T0dxVnc5NkpoRGtFTSIsInN1YiI6ImdvOj
-EwMjIwNTc5NzI3Njk0MTAxMDY3NyIsInRleHQiOiJncmFtbWVy
-IiwiY3JlYXRlZCI6MTUzNTEyODYzODU0Nn0sIkpvN3J2aEc0OH
-RyZ3hsSFMiOnsiZGlzY3Vzc2lvbklkIjoib1daOTFmOHNCbzJM
-b1YzQyIsInN1YiI6ImdvOjEwMjIwNTc5NzI3Njk0MTAxMDY3Ny
-IsInRleHQiOiJIdW1hbiBwcm9maWxlcyBhY3RhdWxseSB0ZW5k
-IHRvIHNob3cgYSBwYXVzZSBhdCBib3RoIHRoZSBzdGFydCBhbm
-QgdGhlIGZpbmlzaC4iLCJjcmVhdGVkIjoxNTM1MTI4NjY0NTY5
-fSwiWXFsUndrZkFmTHQ0anE0YiI6eyJkaXNjdXNzaW9uSWQiOi
-I0Z21IQ0h0alF2SXV0Y1h5Iiwic3ViIjoiZ286MTAyMjA1Nzk3
-Mjc2OTQxMDEwNjc3IiwidGV4dCI6IkhvdyBhcmUgdGhlc2UgcG
-xvdHMgbm9ybWFsaXNlZD8gRG9lcyB0aGUgYXJlYSB1bmRlciBl
-YWNoIGN1cnZlIGhhdmUgdG8gc3VtIHRvIDA/IFRodXMgY291bG
-QgdGhlIGFwcGFyZW50IGluY3Jhc2UgYXQgdGhlIDUnIGVuZCBi
-ZSBkdWUgdG8gYSBkZWNyYXNlIGF0IHRoZSAzJyBlbmQ/IiwiY3
-JlYXRlZCI6MTUzNTEyODc5MjMyMH0sIk52SXlmNVhBWWM3VTR3
-RkwiOnsiZGlzY3Vzc2lvbklkIjoiT1A3b3RFdlBZZnk1M0tDRy
-IsInN1YiI6ImdvOjEwMjIwNTc5NzI3Njk0MTAxMDY3NyIsInRl
-eHQiOiJsYXJnZXN0PyBXaGF0IG90aGVyIHRoaW5ncyBkaWQgeW
-91IHRyeT8iLCJjcmVhdGVkIjoxNTM1MTMwNzc0Mzc3fSwiTVUx
-VTl6aWZmZnBRNTJDTyI6eyJkaXNjdXNzaW9uSWQiOiJvblVoaW
-RMYW43RFFuMGRLIiwic3ViIjoiZ286MTAyMjA1Nzk3Mjc2OTQx
-MDEwNjc3IiwidGV4dCI6IldoeSBub3Q/IFRoaXMgc2VlbXMgbG
-lrZSBhbiBpbXBvcnRhbnQgcG9zaXRpdmUgY29udHJvbC4gRXZl
-cnlvbmUga25vd3MgdGhhdCBuY1JOQXMgYXJlIHVuc3RhYmxlLi
-IsImNyZWF0ZWQiOjE1MzUxMzA4MDE4MDB9LCJxTGRNczFhQ2ph
-eXVwaU9qIjp7ImRpc2N1c3Npb25JZCI6IlZUUkIyVVVZaWxKcG
-UzdlYiLCJzdWIiOiJnbzoxMDIyMDU3OTcyNzY5NDEwMTA2Nzci
-LCJ0ZXh0IjoidGVzdD8iLCJjcmVhdGVkIjoxNTM1MTMwODIwOD
-AyfSwiYnBTbDRQcEZvUnpTaGMycCI6eyJkaXNjdXNzaW9uSWQi
-OiJTeTd1TGN1a242bFFhVkJ2Iiwic3ViIjoiZ286MTAyMjA1Nz
-k3Mjc2OTQxMDEwNjc3IiwidGV4dCI6ImxhYmVsIiwiY3JlYXRl
-ZCI6MTUzNTEzMDg1NjM5NX0sInRYREZ5RGM0QkRuakxZZjAiOn
-siZGlzY3Vzc2lvbklkIjoiRTZ2azF2U09adlZiYmE4MSIsInN1
-YiI6ImdvOjEwMjIwNTc5NzI3Njk0MTAxMDY3NyIsInRleHQiOi
-JJcyBpdCB3b3J0aCBzaG93aW5nIGNvbnRybCBhbmQgTk1NIFJO
-QXNlcSBleHByZXNzaW9uIHNlcGVyYXRlbHkuIERvZXMgdGhlIE
-dSTy9STkFzZXEgcmF0aW9uIGNoYW5nZSBmb3IgRzQgZ2VuZXM/
-IiwiY3JlYXRlZCI6MTUzNTEzMDkyNTE3NX0sImpGWU1rVEVQMj
-BmeVRLRlYiOnsiZGlzY3Vzc2lvbklkIjoiOUFnM01VN1NJbzI0
-Y0h1dSIsInN1YiI6ImdvOjEwMjIwNTc5NzI3Njk0MTAxMDY3Ny
-IsInRleHQiOiJpbiB0ZXh0IHRoaXMgc2F5cyAwLjk1IiwiY3Jl
-YXRlZCI6MTUzNTEzMDk1NzY4N30sIkQ2Qm5vaTJ5ekpmc1Nydm
-0iOnsiZGlzY3Vzc2lvbklkIjoiRWdRZGJUSkFtT0V1b1pmVSIs
-InN1YiI6ImdvOjEwMjIwNTc5NzI3Njk0MTAxMDY3NyIsInRleH
-QiOiJJZiB0aGUgZXJyb3IgYmFycyBhcmUgNjglIENJLCBJJ20g
-Z29pZ24gdG8gc2F5IHRoYXQgdGhlc2UgZGlmZmVyZW5jZSBkb2
-4ndCBsb29rIHBhcnRpY3VhbHJseSBzaWduaWZpY2FudC4iLCJj
-cmVhdGVkIjoxNTM1MTMxMDMzMDg3fSwiS3VPYlhXdHVqVWJudW
-1vdCI6eyJkaXNjdXNzaW9uSWQiOiJQYWVhcHlQTHRJemRVNzFq
-Iiwic3ViIjoiZ286MTAyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidG
-V4dCI6IklzIHRoaXMgYW55IHN0cm9uZ2VyIHRoYW4gdGhlIG92
-ZXJsYXAgYmV0d2VlbiBETkEgZGFtYWdlIGFuZCBOTU0/IFF1YW
-50aWZ5IHlvdXIgb3ZlcmxhcHMgd2l0aCBmb2xkIGVucmljaG1l
-bnRzIG9yIE9kZHMgUmF0aW9zLiIsImNyZWF0ZWQiOjE1MzUxMz
-EwODk2NDF9LCJQM29SbmljM3hpUHNmVzNlIjp7ImRpc2N1c3Np
-b25JZCI6ImkwVnY3NnkyWEFUY3JrelEiLCJzdWIiOiJnbzoxMD
-IyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZXh0IjoiUm93IGFuZCBj
-b2x1bW4gbGFiZWxzLiBcblxuTVdVIHRlc3RzLiIsImNyZWF0ZW
-QiOjE1MzUxMzExMzIyNzN9LCJReUkyOVFsMlFXSDhoNnNIIjp7
-ImRpc2N1c3Npb25JZCI6IlFWUUJTZ2d2S0tTcndrU2YiLCJzdW
-IiOiJnbzoxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZXh0Ijoi
-dG9vIG1hbnkgY2F1c2VkcyIsImNyZWF0ZWQiOjE1MzUzNTU5MT
-k3OTN9LCI0QlBGa3pGMTdBS0VqWFFkIjp7ImRpc2N1c3Npb25J
-ZCI6InRITnhGNllPSkVlcWFiZWwiLCJzdWIiOiJnbzoxMDIyMD
-U3OTcyNzY5NDEwMTA2NzciLCJ0ZXh0IjoiRGlkIHlvdSBkbyBh
-bGwgdGhpcyBsYWIgd29yaywgb3IgZGlkIHNvbWVvbmUgZWxzZS
-4gSWYgeW91IGRpZCBpdCwgdGhlbiB0aGVzZSBtZXRob2RzIG5l
-ZWQgdG8gYmUgbXVjaCBtb3JlIGRldGFpbGVkLiBJZiBzb21lb2
-5lIGVsc2UgZGlkIGl0IHRoZW4geW91IG5lZWQgdG8gc2F5IHNv
-LiIsImNyZWF0ZWQiOjE1MzUzNTU5OTkwMjV9LCIxQWI5U2QzZD
-U1WUdtaW9LIjp7ImRpc2N1c3Npb25JZCI6IlNoVWxNWWpoV201
-WTFyU3oiLCJzdWIiOiJnbzoxMDIyMDU3OTcyNzY5NDEwMTA2Nz
-ciLCJ0ZXh0IjoiSG93PyIsImNyZWF0ZWQiOjE1MzUzNTYwMTE1
-MjB9LCI5RHA4V0liWHg0ZE1wT1JDIjp7ImRpc2N1c3Npb25JZC
-I6IndmMW5Ccm42MWRRWDRUd1MiLCJzdWIiOiJnbzoxMDIyMDU3
-OTcyNzY5NDEwMTA2NzciLCJ0ZXh0IjoiSG93PyIsImNyZWF0ZW
-QiOjE1MzUzNTYwMjQ0Mjd9LCJSTmhua3pER3NiUVdNT1c2Ijp7
-ImRpc2N1c3Npb25JZCI6ImV2Sjh0Z0tiM2l6NDB3MFkiLCJzdW
-IiOiJnbzoxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZXh0Ijoi
-UmVjaXBlPyIsImNyZWF0ZWQiOjE1MzUzNTYwNDA1OTZ9LCJVQV
-dBTkVwbW9Xdk5IMlExIjp7ImRpc2N1c3Npb25JZCI6Ik1RR281
-UWtUeEQ3a0ZyMngiLCJzdWIiOiJnbzoxMDIyMDU3OTcyNzY5ND
-EwMTA2NzciLCJ0ZXh0IjoiUmVjaXBlPyIsImNyZWF0ZWQiOjE1
-MzUzNTYwNTc1NzZ9LCJJZ2ptcGJ2Wk9Ubkhwcm1aIjp7ImRpc2
-N1c3Npb25JZCI6ImR0SXlNUUk2YWJzcGpWTHEiLCJzdWIiOiJn
-bzoxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZXh0IjoiQ29uY2
-VudHJhdGlvbj8gQWRkZWQgd2hlbiB0byBtZWRpYSBhdCB3aGF0
-IHBvaW50cz8iLCJjcmVhdGVkIjoxNTM1MzU2MTUwMDMxfSwic0
-V4Tzhwd1lVTnFPa1h2SSI6eyJkaXNjdXNzaW9uSWQiOiJJYVBU
-WDliWDVHcHVRRWI3Iiwic3ViIjoiZ286MTAyMjA1Nzk3Mjc2OT
-QxMDEwNjc3IiwidGV4dCI6IklmIHlvdSBkaWQgdGhpcywgdGhl
-biBcImFzIGRlc2NyaWJlZCBpblwiIGlzbid0IGdvb2QgZW5vdW
-doLiIsImNyZWF0ZWQiOjE1MzUzNTYyMjEwMzV9LCJpU3BROHNY
-eHg2bHhEc2FtIjp7ImRpc2N1c3Npb25JZCI6ImJ5UW9QZGF1Qm
-9XUlZTcDUiLCJzdWIiOiJnbzoxMDIyMDU3OTcyNzY5NDEwMTA2
-NzciLCJ0ZXh0IjoiSG93IG11Y2g/IiwiY3JlYXRlZCI6MTUzNT
-M1NjIzMjQ3MH0sIlNKRE1lc1hQakh0RmRLVmsiOnsiZGlzY3Vz
-c2lvbklkIjoianZVbE1yTnRsYWVrRGxPeiIsInN1YiI6ImdvOj
-EwMjIwNTc5NzI3Njk0MTAxMDY3NyIsInRleHQiOiJTdXBwbGll
-cnMsIHBhcnQgbnVtYmVyIiwiY3JlYXRlZCI6MTUzNTM1NjI1NT
-U4Mn0sIjRJWjRweTlhTHJWNkhla2giOnsiZGlzY3Vzc2lvbklk
-IjoiT3pJSGxDQ01UcUdPOXRqciIsInN1YiI6ImdvOjEwMjIwNT
-c5NzI3Njk0MTAxMDY3NyIsInRleHQiOiJQcm90b2NvbCIsImNy
-ZWF0ZWQiOjE1MzUzNTYyNzIyMDl9LCI5UWNVZWxSSWg3Y2FYSm
-5JIjp7ImRpc2N1c3Npb25JZCI6IjZTMWFjV1h4WkFGdGFvVnUi
-LCJzdWIiOiJnbzoxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZX
-h0IjoiSG93IG11Y2ggd2FzIHVzZWQgZm9yIHF1YW50aWZpY2F0
-aW9uPyIsImNyZWF0ZWQiOjE1MzUzNTYyODk3Mjh9LCI3bXZia1
-g0cTNKNENJWGtQIjp7ImRpc2N1c3Npb25JZCI6ImgwZHVQTjFY
-blV3VTdpQTciLCJzdWIiOiJnbzoxMDIyMDU3OTcyNzY5NDEwMT
-A2NzciLCJ0ZXh0IjoiV2hlcmUgYXJlIHRoZSBhbmFseXNpcyBz
-Y3JpcHRzPyIsImNyZWF0ZWQiOjE1MzUzNTYzMzU2Nzl9LCJlSz
-E2cllQZWlaTG9oN1dnIjp7ImRpc2N1c3Npb25JZCI6Ikd0TDRo
-bWUxdVB4Y0NEWnIiLCJzdWIiOiJnbzoxMDIyMDU3OTcyNzY5ND
-EwMTA2NzciLCJ0ZXh0IjoiRGl0dG8iLCJjcmVhdGVkIjoxNTM1
-MzU2MzQ0ODU5fSwiMjluSk9kdXBtdjRFeXRHSiI6eyJkaXNjdX
-NzaW9uSWQiOiI4V3pCTER3ZGthUjFwS2hlIiwic3ViIjoiZ286
-MTAyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6IlZlcnNpb2
-5zPyIsImNyZWF0ZWQiOjE1MzUzNTYzNTg3Nzd9LCI3MVQ3WHJx
-UHBCejFWczNBIjp7ImRpc2N1c3Npb25JZCI6IjlnOW1JREdKbj
-NWMzRjT0IiLCJzdWIiOiJnbzoxMDIyMDU3OTcyNzY5NDEwMTA2
-NzciLCJ0ZXh0IjoiRW5zZW1ibCB2ZXJzaW9uPyIsImNyZWF0ZW
-QiOjE1MzUzNTYzODAyNzJ9LCJqWWpNN0hDVGJUYVBkR0lCIjp7
-ImRpc2N1c3Npb25JZCI6IkY0OVdtYVU3T2c1dURneDIiLCJzdW
-IiOiJnbzoxMDIyMDU3OTcyNzY5NDEwMTA2NzciLCJ0ZXh0Ijoi
-WW91IHNhaWQgYWJvdmUgdGhhdCBFbnNlbWJsIHdhcyB1c2VkPy
-BJcyBFbnNlbWJsIGJhc2VkIG9uIEFyYXBvcnQ/IiwiY3JlYXRl
-ZCI6MTUzNTM1NjQzMzc4Nn0sInFXRnRqUURreUhaZHhiU1AiOn
-siZGlzY3Vzc2lvbklkIjoiTW9jbkNuTEdibjBEM2pTdSIsInN1
-YiI6ImdvOjEwMjIwNTc5NzI3Njk0MTAxMDY3NyIsInRleHQiOi
-JIb3cgZGlkIHlvdSBkZXRlcm1pbmUgdGhpcz8iLCJjcmVhdGVk
-IjoxNTM1MzU2NDcxMjkyfSwieTFGdHdleHFuRmR3VmlsNyI6ey
-JkaXNjdXNzaW9uSWQiOiJnaGx1TDZDZDlnelNmMVFRIiwic3Vi
-IjoiZ286MTAyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6Ik
-Rlc2NyaWJlZCwgb3IgYXQgbGVhc3QgbmFtZSBhbmQgcmVmZXJl
-bmNlIHRoZSBhbGdvLiIsImNyZWF0ZWQiOjE1MzUzNTY1MjMwMj
-d9LCJDVlpZb3JHTnlSQWtmZ1dmIjp7ImRpc2N1c3Npb25JZCI6
-IkRBa2liVkJPaVNKSm13RlMiLCJzdWIiOiJnbzoxMDIyMDU3OT
-cyNzY5NDEwMTA2NzciLCJ0ZXh0IjoiU2NyaXB0cz8iLCJjcmVh
-dGVkIjoxNTM1MzU2NTY1ODQ1fSwidXBTVmJTRTRIa3JGemphai
-I6eyJkaXNjdXNzaW9uSWQiOiJjWG1iRndUV2NLcVI5NmlqIiwi
-c3ViIjoiZ286MTAyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dC
-I6IlBhY2thZ2UgdmVyc2lvbnMgYW5kIHNjcmlwdHMuIiwiY3Jl
-YXRlZCI6MTUzNTM1NjcxOTAzMX0sIjhFakhuTFNGSTV5QXA0SV
-EiOnsiZGlzY3Vzc2lvbklkIjoiTWRxaVNRY2JsOUlqY2kzNiIs
-InN1YiI6ImdvOjEwMjIwNTc5NzI3Njk0MTAxMDY3NyIsInRleH
-QiOiJJbmNvbnNpc3RlbnQuIFlvdSBsaXN0ZWQgdGhlIGdvd3Ro
-IGNvbmRpdGlvbnMgYWJvdmUsIGJ1dCBub3QgaGVyZS4iLCJjcm
-VhdGVkIjoxNTM1MzU2NzY1NzU4fSwiYmdtUGtGNmRsOVVPZkxp
-cCI6eyJkaXNjdXNzaW9uSWQiOiJNZHFpU1FjYmw5SWpjaTM2Ii
-wic3ViIjoiZ286MTAyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4
-dCI6Ik5lZWRzIHBhY2thZ2UgdmVyc2lvbnMgYW5kIHNjcmlwdH
-MgdXNlZC4iLCJjcmVhdGVkIjoxNTM1MzU2NzkyMTQ4fSwidmtK
-alR3Z2hCdFZ0YlJFRiI6eyJkaXNjdXNzaW9uSWQiOiJ2YzBnZD
-JSRUxlTXNJVTNtIiwic3ViIjoiZ286MTAyMjA1Nzk3Mjc2OTQx
-MDEwNjc3IiwidGV4dCI6IkhvdyBtYW55IHJlcHM/IFdoZXJlIG
-lzIHRoZSBRQz8iLCJjcmVhdGVkIjoxNTM1MzU2ODUxMzk5fSwi
-R1dmWWtBSUxlejM3YnVIMCI6eyJkaXNjdXNzaW9uSWQiOiJuOE
-U3TFpUZmZET0dFRHVqIiwic3ViIjoiZ286MTAyMjA1Nzk3Mjc2
-OTQxMDEwNjc3IiwidGV4dCI6IlRoZXNlIGFyZSB0aGUgb3RoZX
-Igd2F5IGFyb3VuZCB0byBhYm92ZS4iLCJjcmVhdGVkIjoxNTM1
-MzU2ODcyMTU5fSwiNmVndEdqS01FTEhiYlR4cSI6eyJkaXNjdX
-NzaW9uSWQiOiJ1VEJoaGRSdXZQOU1FZzNHIiwic3ViIjoiZ286
-MTAyMjA1Nzk3Mjc2OTQxMDEwNjc3IiwidGV4dCI6IllvdSBuZW
-VkIHRvIHRhbGsgc29tZXdoZXJlIGFib3V0IHRoZSBkZWNpc2lv
-biB0byBub3JtYWxpc2UgdXNpbmcgUFVNQSByYXRoZXIgdGhhbi
-BsaW1tYS4gSG93IGRvIHlvdSBrbm93IHRoYXQgUFVNQSBpc24n
-dCBqdXN0IGdldHRpbmcgdGhlIG5vcm1hbGlzYWl0b24gd3Jvbm
-c/IiwiY3JlYXRlZCI6MTUzNTM1NjkxNzYwMH0sIjdJTHdoTFNJ
-T1g3SmZma1IiOnsiZGlzY3Vzc2lvbklkIjoiQmJ5ZWRTSXpBbX
-Nock9zdCIsInN1YiI6ImdvOjEwMjIwNTc5NzI3Njk0MTAxMDY3
-NyIsInRleHQiOiJEaWQgeW91IGV2ZXIgY2hlY2sgcHJvbW90b3
-IgcmVnaW9ucz8iLCJjcmVhdGVkIjoxNTM1MzU3MDA0ODgxfX0s
-Imhpc3RvcnkiOlsxMzY0OTQ0ODksLTIwNTQ2MTYxNTMsLTM0Mz
-g2MzkzNywyMDIzNDcyNDUxLDgxMjY0NTA5OCwtMjA3MjU2ODY0
-MSwtMTAwNzQxNTA4NiwxODg5ODU0NDY1LDY2ODM2ODk3MywxMz
-QyNTM4MTg0LC0xOTE0NTc4ODkzLDIyNjc2NDc5LC01Mjc3NDYx
-NjksLTM3OTEyMjEzNywtODY4MDM1MDU5LC0xMTExMTEyMDkwLD
-EwMzM2MTUzNjQsLTE2OTk0ODIzOCwxMjg0NDA3MTA5LDMzNDY2
-NTQ4MF19
--->
