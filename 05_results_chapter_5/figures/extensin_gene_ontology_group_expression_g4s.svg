@@ -15,7 +15,7 @@
    viewBox="0 0 711.74191 747.1977"
    id="svg41178"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
    sodipodi:docname="extensin_gene_ontology_group_expression_g4s.svg">
   <defs
      id="defs41180"
@@ -309,20 +309,20 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="6.5990719"
-     inkscape:cx="107.18105"
-     inkscape:cy="78.895029"
+     inkscape:zoom="0.58976447"
+     inkscape:cx="432.986"
+     inkscape:cy="402.25004"
      inkscape:document-units="px"
-     inkscape:current-layer="g69294"
+     inkscape:current-layer="xtick_13"
      showgrid="false"
      fit-margin-top="5"
      fit-margin-left="5"
      fit-margin-right="5"
      fit-margin-bottom="5"
-     inkscape:window-width="1875"
-     inkscape:window-height="1056"
-     inkscape:window-x="45"
-     inkscape:window-y="0"
+     inkscape:window-width="1200"
+     inkscape:window-height="1871"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata41183">
@@ -332,7 +332,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -7338,7 +7338,6 @@
                          x="107.52466"
                          y="-615.40082"
                          id="text69600"
-                         sodipodi:linespacing="125%"
                          transform="scale(1.4318467,0.69839879)"><tspan
                            sodipodi:role="line"
                            id="tspan69602"
@@ -7347,7 +7346,6 @@
                            y="-615.40082">a</tspan></text>
                       <text
                          transform="scale(1.4318467,0.69839879)"
-                         sodipodi:linespacing="125%"
                          id="text69604"
                          y="26.307522"
                          x="107.52466"
@@ -9214,61 +9212,51 @@
                         </g>
                       </g>
                       <g
-                         id="xtick_7"
-                         style="stroke-linecap:butt;stroke-linejoin:round">
+                         style="stroke-linecap:butt;stroke-linejoin:round"
+                         id="line2d_70">
                         <g
-                           id="line2d_70"
-                           style="stroke-linecap:butt;stroke-linejoin:round">
-                          <g
-                             id="g72469"
-                             style="stroke-linecap:butt;stroke-linejoin:round">
-                            <use
-                               id="use72471"
-                               y="614.6333"
-                               xlink:href="#maedd9df49c"
-                               x="411.27521"
-                               style="fill:#262626;stroke:#262626;stroke-linecap:butt;stroke-linejoin:round"
-                               width="100%"
-                               height="100%" />
-                          </g>
-                        </g>
-                        <g
-                           id="text_42"
-                           style="stroke-linecap:butt;stroke-linejoin:round">
-                          <text
-                             id="text72474"
-                             transform="matrix(0.8660254,-0.5,0.5,0.8660254,315.91122,689.94196)"
-                             style="font-style:normal;font-weight:normal;font-size:20px;font-family:Arial;fill:#262626;stroke-linecap:butt;stroke-linejoin:round">AT2G43150</text>
+                           style="stroke-linecap:butt;stroke-linejoin:round"
+                           id="g72469">
+                          <use
+                             height="100%"
+                             width="100%"
+                             style="fill:#262626;stroke:#262626;stroke-linecap:butt;stroke-linejoin:round"
+                             x="411.27521"
+                             xlink:href="#maedd9df49c"
+                             y="614.6333"
+                             id="use72471" />
                         </g>
                       </g>
                       <g
-                         id="xtick_8"
-                         style="stroke-linecap:butt;stroke-linejoin:round">
+                         style="stroke-linecap:butt;stroke-linejoin:round"
+                         id="text_42">
+                        <text
+                           style="font-style:normal;font-weight:normal;font-size:20px;font-family:Arial;fill:#262626;stroke-linecap:butt;stroke-linejoin:round"
+                           transform="rotate(-30,1445.4048,-244.52737)"
+                           id="text72474">AT2G43150</text>
+                      </g>
+                      <g
+                         style="stroke-linecap:butt;stroke-linejoin:round"
+                         id="line2d_71">
                         <g
-                           id="line2d_71"
-                           style="stroke-linecap:butt;stroke-linejoin:round">
-                          <g
-                             id="g72478"
-                             style="stroke-linecap:butt;stroke-linejoin:round">
-                            <use
-                               id="use72480"
-                               y="614.6333"
-                               xlink:href="#maedd9df49c"
-                               x="457.77774"
-                               style="fill:#262626;stroke:#262626;stroke-linecap:butt;stroke-linejoin:round"
-                               width="100%"
-                               height="100%" />
-                          </g>
-                        </g>
-                        <g
-                           id="text_43"
-                           style="stroke-linecap:butt;stroke-linejoin:round">
-                          <text
-                             id="text72483"
-                             transform="matrix(0.8660254,-0.5,0.5,0.8660254,362.41377,689.94196)"
-                             style="font-style:normal;font-weight:normal;font-size:20px;font-family:Arial;fill:#262626;stroke-linecap:butt;stroke-linejoin:round">AT3G28550</text>
+                           style="stroke-linecap:butt;stroke-linejoin:round"
+                           id="g72478">
+                          <use
+                             height="100%"
+                             width="100%"
+                             style="fill:#262626;stroke:#262626;stroke-linecap:butt;stroke-linejoin:round"
+                             x="457.77774"
+                             xlink:href="#maedd9df49c"
+                             y="614.6333"
+                             id="use72480" />
                         </g>
                       </g>
+                      <text
+                         id="text72483"
+                         transform="rotate(-30)"
+                         style="font-style:normal;font-weight:normal;font-size:20px;font-family:Arial;fill:#262626;stroke-linecap:butt;stroke-linejoin:round"
+                         x="-102.42296"
+                         y="777.62726">AT3G28550 (EXT9)</text>
                       <g
                          id="xtick_9"
                          style="stroke-linecap:butt;stroke-linejoin:round">
@@ -9383,7 +9371,8 @@
                       </g>
                       <g
                          id="xtick_13"
-                         style="stroke-linecap:butt;stroke-linejoin:round">
+                         style="stroke-linecap:butt;stroke-linejoin:round"
+                         transform="translate(3.893814,-3.893814)">
                         <g
                            id="line2d_76"
                            style="stroke-linecap:butt;stroke-linejoin:round">
@@ -9402,11 +9391,14 @@
                         </g>
                         <g
                            id="text_48"
-                           style="stroke-linecap:butt;stroke-linejoin:round">
+                           style="stroke-linecap:butt;stroke-linejoin:round"
+                           transform="translate(7.787628,-3.893814)">
                           <text
                              id="text72528"
-                             transform="matrix(0.8660254,-0.5,0.5,0.8660254,594.92651,689.94196)"
-                             style="font-style:normal;font-weight:normal;font-size:20px;font-family:Arial;fill:#262626;stroke-linecap:butt;stroke-linejoin:round">AT5G06630</text>
+                             transform="rotate(-30)"
+                             style="font-style:normal;font-weight:normal;font-size:20px;font-family:Arial;fill:#262626;stroke-linecap:butt;stroke-linejoin:round"
+                             x="84.763832"
+                             y="895.07288">AT5G06630 (EXT13)</text>
                         </g>
                       </g>
                       <g
@@ -9517,8 +9509,10 @@
                            style="stroke-linecap:butt;stroke-linejoin:round">
                           <text
                              id="text72564"
-                             transform="matrix(0.8660254,-0.5,0.5,0.8660254,780.93671,689.94196)"
-                             style="font-style:normal;font-weight:normal;font-size:20px;font-family:Arial;fill:#262626;stroke-linecap:butt;stroke-linejoin:round">AT1G12040</text>
+                             transform="rotate(-30)"
+                             style="font-style:normal;font-weight:normal;font-size:20px;font-family:Arial;fill:#262626;stroke-linecap:butt;stroke-linejoin:round"
+                             x="259.8638"
+                             y="987.17438">AT1G12040 (LRX1)</text>
                         </g>
                       </g>
                       <g
@@ -11251,7 +11245,6 @@
                  x="462.2807"
                  y="716.83179"
                  id="text53698"
-                 sodipodi:linespacing="125%"
                  transform="scale(0.79643826,1.2555901)"><tspan
                    sodipodi:role="line"
                    id="tspan53700"
@@ -11260,7 +11253,6 @@
                    y="716.83179">Extensin</tspan></text>
               <text
                  transform="scale(0.79643826,1.2555901)"
-                 sodipodi:linespacing="125%"
                  id="text53702"
                  y="716.83179"
                  x="1134.749"
