@@ -55,6 +55,10 @@ Finally, we correlated the density of two and three or more tetrad PG4s in diffe
 
 \newpage
 
+![**PG4 density of Plant Genomes** Table showing Genome size, total PG4 counts and average PG4 density per megabase for 22 Monocotyledons, 21 Dicotyledons, 2 Non-flowering plants and 4 metazoans. \label{pg4_genomes_table}](figures/genomic_g4_table.svg){height=750px}
+
+\newpage
+
 ### PG4s are non-uniformly distributed in the *Arabidopsis thaliana* genome
 
 It is well documented that PG4s are not randomly distributed in the human genome, with an enrichment of PG4s in promoter sequences. We therefore used metagene profiles to identify the localisation of PG4s in the Arabidopsis genome. The distribution of G content (in 20bp windows), two tetrad PG4s, and three or more tetrad PG4s was calculated and averaged across all all protein coding genes. The density in UTRs and CDS regions (including introns) was reinterpolated into 20 and 100 bins, respectively, and an upstream and downstream size of 500bp was used. PG4s identified on the coding and template strands were analysed separately. The GC content of genic regions is greater than intergenic sequence, with the greatest coding strand G content towards the TSS distal end of the CDS, and the greatest template strand C content in the 5' UTR and at the TSS proximal end of the CDS (Fig \ref{metagene}a). This translates into a greater density of two tetrad PG4s localised at the beginning of genes on the template strand and towards the end of genes on the coding strand (Fig \ref{metagene}c). The number of three or more tetrad PG4s is extremely low in the Arabidopsis genome, however there is a slight increase around the TSS and in the 5' UTR on the template strand, and at the TSS distal end in the coding strand (Fig \ref{metagene}b).
