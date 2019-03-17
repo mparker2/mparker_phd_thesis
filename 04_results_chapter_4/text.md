@@ -1,6 +1,10 @@
 # Global effect of G Quadruplex stabilisation on gene expression
 \label{chap:global_nmm}
 
+\section*{Acknowledgements}
+
+The microarray experiments used for the analyses in this chapter were performed by Manoj Valluru. Many thanks to Manoj.
+
 ## Introduction
 
 As was shown in \autoref{chap:g4_distribution}, the distribution of PG4s around and within genic regions is not uniform. In the *Arabidopsis thaliana* genome, template stranded PG4s are enriched in the 5' UTRs and promoter proximal regions, whilst coding strand PG4s are enriched in 3' UTRs and promoter distal regions. These enrichments do not appear to be explained simply by the GC content of these sequences, nor by the requirement to code for particular amino acids. These features may be deliberately conserved, indicating a biological function for PG4s within gene bodies. As G4s are formed from single stranded DNA, it has been previously hypothesised that coding strand G4s might function to promote transcription by competing with double stranded DNA to produce regions of open chromatin which could easily become transcription bubbles (Fig. \ref{mech}a) [@Rhodes2015]. G4s in the coding strand also have an opportunity to form in mRNA and regulate stability, splicing or translation. Template stranded G4s which occur downstream of translocating RNA Polymerase II (Pol II), on the other hand, might cause blockages which prevent elongation, causing downregulation of the gene (Fig. \ref{mech}b) [@Rhodes2015].

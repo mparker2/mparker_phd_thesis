@@ -1,6 +1,10 @@
 # Effect of G-Quadruplexes on expression and splicing of the Extensin gene family
 \label{chap:extensins}
 
+\section*{Acknowledgements}
+
+The RNA-seq experiment, as well as all qPCR data and Sanger sequencing presented in this chapter were conducted by Colette Baxter. Many thanks to Colette for all her help and support in the project.
+
 ## Introduction
 
 \label{sec:extensin_intro}
